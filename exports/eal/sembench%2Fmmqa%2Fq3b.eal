@@ -1,0 +1,35 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/mmqa/q3b" {
+  let n002 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q3b",
+    node_id = "n002",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan lizzy_caplan_text_data",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n001 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q3b",
+    node_id = "n001",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 描述表明：科幻",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q3b",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π title",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

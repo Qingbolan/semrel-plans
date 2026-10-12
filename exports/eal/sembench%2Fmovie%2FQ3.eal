@@ -1,0 +1,45 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/movie/Q3" {
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/movie/Q3",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan reviews",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n002 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "sembench/movie/Q3",
+    node_id = "n002",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ id = taken_3",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/movie/Q3",
+    node_id = "n001",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 明显正面",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.aggregate" on "semrel-worker" with {
+    query_id = "sembench/movie/Q3",
+    node_id = "n000",
+    operator_type = "AGGREGATE",
+    family = "relational",
+    label = "γ COUNT(*) → positive_review_cnt",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

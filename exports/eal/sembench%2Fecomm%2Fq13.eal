@@ -1,0 +1,75 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/ecomm/q13" {
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan STYLES_DETAILS",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGE_MAPPING",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n003",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ imageURL = link",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output,
+    input_1 = n005.output
+  } on_failure abort
+
+  let n006 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n006",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGES",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n002 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n002",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ filename = basename(uri)",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output,
+    input_1 = n006.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n001",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 男士圆领短袖跑步衫；颜色/条纹/天气需求",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q13",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π id",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

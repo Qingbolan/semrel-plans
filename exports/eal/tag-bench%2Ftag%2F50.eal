@@ -1,0 +1,85 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "tag-bench/tag/50" {
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan schools",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n003",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ Magnet=1",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n004.output
+  } on_failure abort
+
+  let n007 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n007",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan satscores",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n006 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n006",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ rtype=S",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n007.output
+  } on_failure abort
+
+  let n005 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n005",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ NumTstTakr>500",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n006.output
+  } on_failure abort
+
+  let n002 = call "semrel.join" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n002",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ CDSCode=cds",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n003.output,
+    input_1 = n005.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_topk" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n001",
+    operator_type = "SEM_TOPK",
+    family = "semantic",
+    label = "SEM_TOPK 名称未来感; k=1",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "tag-bench/tag/50",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π School",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

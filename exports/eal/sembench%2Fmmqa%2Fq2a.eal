@@ -1,0 +1,45 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/mmqa/q2a" {
+  let n002 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q2a",
+    node_id = "n002",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan ap_warrior",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q2a",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan images",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n001 = call "semrel.sem_join" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q2a",
+    node_id = "n001",
+    operator_type = "SEM_JOIN",
+    family = "semantic",
+    label = "SEM_JOIN 图片是赛马场 logo",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output,
+    input_1 = n003.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/mmqa/q2a",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π ID, uri",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

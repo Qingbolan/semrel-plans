@@ -1,0 +1,75 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/movie/Q6" {
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan reviews r1",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n004 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n004",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ r1.id = ant_man_and_the_wasp_quantumania",
+    plan_origin = "source_reconstruction",
+    input_0 = n005.output
+  } on_failure abort
+
+  let n006 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n006",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan reviews r2",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n003",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ r1.id=r2.id AND r1.reviewId≠r2.reviewId",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output,
+    input_1 = n006.output
+  } on_failure abort
+
+  let n002 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n002",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 一正一负",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n001",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π r1.id, r1.reviewId, r2.reviewId",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.limit" on "semrel-worker" with {
+    query_id = "sembench/movie/Q6",
+    node_id = "n000",
+    operator_type = "LIMIT",
+    family = "relational",
+    label = "LIMIT 10",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

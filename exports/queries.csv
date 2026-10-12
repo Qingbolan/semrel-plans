@@ -1,0 +1,89 @@
+query_id,benchmark_id,scenario_id,source_query_id,title,plan_origin,plan_status_label,source_id,root_node_id,notes,display_order,group_label,mixed_label
+sembench/movie/Q1,sembench,movie,Q1,任意电影：取5条明显正面影评,source_reconstruction,源码重建逻辑计划,src_1b997f60e28b8aad,n000,,0,SemBench / movie,实质混合
+sembench/movie/Q2,sembench,movie,Q2,Taken 3：取5条正面影评,source_reconstruction,源码重建逻辑计划,src_ab1290f0e4e5426f,n000,,1,SemBench / movie,实质混合
+sembench/movie/Q3,sembench,movie,Q3,Taken 3：正面影评数,source_reconstruction,源码重建逻辑计划,src_6a4be224b7bd451f,n000,,2,SemBench / movie,实质混合
+sembench/movie/Q4,sembench,movie,Q4,Taken 3：正面影评占比,source_reconstruction,源码重建逻辑计划,src_e8315cf465d63500,n000,分母必须保留全部影评，不能先过滤只保留正面。,3,SemBench / movie,实质混合
+sembench/movie/Q5,sembench,movie,Q5,10对蚁人影评：同为正面或同为负面,source_reconstruction,源码重建逻辑计划,src_a9887949df3af49c,n000,二元语义谓词也可表示为受结构化键约束的 SEM_JOIN；保留有向配对和原 SQL 的重复语义。,4,SemBench / movie,实质混合
+sembench/movie/Q6,sembench,movie,Q6,10对蚁人影评：一正一负,source_reconstruction,源码重建逻辑计划,src_790cf514415e4d3c,n000,二元语义谓词也可表示为受结构化键约束的 SEM_JOIN；保留有向配对和原 SQL 的重复语义。,5,SemBench / movie,实质混合
+sembench/movie/Q7,sembench,movie,Q7,全部蚁人影评：一正一负,source_reconstruction,源码重建逻辑计划,src_a97b24f762aaf0dd,n000,二元语义谓词也可表示为受结构化键约束的 SEM_JOIN；保留有向配对和原 SQL 的重复语义。,6,SemBench / movie,实质混合
+sembench/movie/Q8,sembench,movie,Q8,Taken 3：按正面/负面统计影评,source_reconstruction,源码重建逻辑计划,src_43027fdabae82446,n000,这是源码二值映射；并不等于独立识别全部负面/中性。,7,SemBench / movie,实质混合
+sembench/movie/Q9,sembench,movie,Q9,蚁人影评：逐条给1–5分,source_reconstruction,源码重建逻辑计划,src_0b714017ae45aee3,n000,,8,SemBench / movie,实质混合
+sembench/movie/Q10,sembench,movie,Q10,逐电影计算影评平均分,source_reconstruction,源码重建逻辑计划,src_e9d1b62b3401fd3f,n000,自然语言用 rank；此 SQL 仅分组求均值，没有 ORDER BY，图不补排序。,9,SemBench / movie,实质混合
+sembench/animals/Q1,sembench,animals,Q1,统计斑马图片数量,source_reconstruction,源码重建逻辑计划,src_fc6464c2dd1332ce,n000,,10,SemBench / animals,实质混合
+sembench/animals/Q2,sembench,animals,Q2,统计大象录音数量,source_reconstruction,源码重建逻辑计划,src_59b9b3fafbb714b6,n000,,11,SemBench / animals,实质混合
+sembench/animals/Q3,sembench,animals,Q3,斑马图片最多的城市,source_reconstruction,源码重建逻辑计划,src_64e75b1a1e71ebb3,n000,,12,SemBench / animals,实质混合
+sembench/animals/Q4,sembench,animals,Q4,大象录音最多的城市,source_reconstruction,源码重建逻辑计划,src_de916771e7d263c5,n000,,13,SemBench / animals,实质混合
+sembench/animals/Q5,sembench,animals,Q5,有大象图片或录音的城市,source_reconstruction,源码重建逻辑计划,src_41b85cfa6b62dbfb,n000,,14,SemBench / animals,实质混合
+sembench/animals/Q6,sembench,animals,Q6,有猴子图片但没有猴子录音的城市,source_reconstruction,源码重建逻辑计划,src_2a9e5bb8de81bed7,n000,,15,SemBench / animals,实质混合
+sembench/animals/Q7,sembench,animals,Q7,同时有斑马和黑斑羚图片的城市,source_reconstruction,源码重建逻辑计划,src_1c7acc8c5cb23dbf,n000,,16,SemBench / animals,实质混合
+sembench/animals/Q8,sembench,animals,Q8,大象和猴子均有至少一种模态证据的城市,source_reconstruction,源码重建逻辑计划,src_83e7561ffdf5aa64,n000,,17,SemBench / animals,实质混合
+sembench/animals/Q9,sembench,animals,Q9,同时有猴子图片和录音的城市,source_reconstruction,源码重建逻辑计划,src_26b0640765ce7182,n000,,18,SemBench / animals,实质混合
+sembench/animals/Q10,sembench,animals,Q10,斑马图片最多的城市—站点,source_reconstruction,源码重建逻辑计划,src_0e7796444be6f782,n000,,19,SemBench / animals,实质混合
+sembench/cars/Q1,sembench,cars,Q1,找出投诉中提到发生碰撞的车,source_reconstruction,源码重建逻辑计划,src_2b97671a71a8f061,n000,,20,SemBench / cars,实质混合
+sembench/cars/Q2,sembench,cars,Q2,找出录音表明电池耗尽的电动车,source_reconstruction,源码重建逻辑计划,src_bdf8b7d4efbe4b03,n000,,21,SemBench / cars,实质混合
+sembench/cars/Q3,sembench,cars,Q3,找10辆图片显示无损伤的手动挡车,source_reconstruction,源码重建逻辑计划,src_dcb5af6548cf33eb,n000,,22,SemBench / cars,实质混合
+sembench/cars/Q4,sembench,cars,Q4,发动机有问题车辆的平均年龄,source_reconstruction,源码重建逻辑计划,src_8e2f7ddb7f73a51b,n000,依源码按连接后的投诉行求平均；多投诉车辆可能重复计权，不擅自改成去重车辆均值。,23,SemBench / cars,实质混合
+sembench/cars/Q5,sembench,cars,Q5,图像与录音均表明损伤的自动挡车数量,source_reconstruction,源码重建逻辑计划,src_6ffc7e46616e60f5,n000,,24,SemBench / cars,实质混合
+sembench/cars/Q6,sembench,cars,Q6,找跨模态损伤判断不一致的车,source_reconstruction,源码重建逻辑计划,src_53841634996b5c4b,n000,图中 CTE REF 引用同一中间关系，是 DAG 的树形展开。SQL 按 car_id 回连阳性集合；多条模态记录可能放大行数。源码还有括号可执行性风险，本次不修复、不运行。,25,SemBench / cars,实质混合
+sembench/cars/Q7,sembench,cars,Q7,凹陷、刹车磨损或电气故障任一成立的车,source_reconstruction,源码重建逻辑计划,src_af56bc547cf96cc1,n000,,26,SemBench / cars,实质混合
+sembench/cars/Q8,sembench,cars,Q8,找100条图片同时有穿孔和漆面划痕的车记录,source_reconstruction,源码重建逻辑计划,src_1d0edba68795d8ce,n000,源码没有 DISTINCT，不能保证100个不同车辆。,27,SemBench / cars,实质混合
+sembench/cars/Q9,sembench,cars,Q9,图片撕裂且录音点火异常的车,source_reconstruction,源码重建逻辑计划,src_f6ccb146192f0383,n000,,28,SemBench / cars,实质混合
+sembench/cars/Q10,sembench,cars,Q10,将投诉分类到故障部件,source_reconstruction,源码重建逻辑计划,src_76f0c7ecd655a6c4,n000,,29,SemBench / cars,实质混合
+sembench/ecomm/q1,sembench,ecomm,q1,筛出 Reebok 背包,source_reconstruction,源码重建逻辑计划,src_79e6460cc8e19073,n000,,30,SemBench / ecomm,轻混合（仅投影）
+sembench/ecomm/q2,sembench,ecomm,q2,筛出黄银双色运动鞋图片,source_reconstruction,源码重建逻辑计划,src_fcd521eabea727cd,n000,,31,SemBench / ecomm,轻混合（仅投影）
+sembench/ecomm/q3,sembench,ecomm,q3,从描述抽取商品品牌,source_reconstruction,源码重建逻辑计划,src_5fe241a644e3d6b9,n000,,32,SemBench / ecomm,轻混合（仅投影）
+sembench/ecomm/q4,sembench,ecomm,q4,在简单颜色子集抽取图片主色,source_reconstruction,源码重建逻辑计划,src_04a3b38b00947ceb,n000,,33,SemBench / ecomm,实质混合
+sembench/ecomm/q5,sembench,ecomm,q5,将商品描述分类为五种服装类别,source_reconstruction,源码重建逻辑计划,src_62a94c5c8df7b6ce,n000,,34,SemBench / ecomm,实质混合
+sembench/ecomm/q6,sembench,ecomm,q6,将商品图片分类为五种服装类别,source_reconstruction,源码重建逻辑计划,src_9854f9c4705dc994,n000,,35,SemBench / ecomm,实质混合
+sembench/ecomm/q7,sembench,ecomm,q7,配对500以内同品牌同类别商品,source_reconstruction,源码重建逻辑计划,src_5c6682525cb0d3ba,n000,SQL 未排除自身配对；图保留该语义。,36,SemBench / ecomm,实质混合
+sembench/ecomm/q8,sembench,ecomm,q8,长商品描述与匹配图片连接,source_reconstruction,源码重建逻辑计划,src_3f7182e65cf39cac,n000,源码输出两次使用同一图片 ID，未输出商品 ID；图忠实记录，不能冒称正确 pair key。,37,SemBench / ecomm,实质混合
+sembench/ecomm/q9,sembench,ecomm,q9,低价单色商品：左外语义连接相同类别/颜色图片,source_reconstruction,源码重建逻辑计划,src_846e99bb1112fa46,n000,保留 LEFT OUTER JOIN 的无匹配行语义。,38,SemBench / ecomm,实质混合
+sembench/ecomm/q10,sembench,ecomm,q10,组合相同品牌及主色的鞋、下装、上装,source_reconstruction,源码重建逻辑计划,src_703c1bf105b5c8cb,n000,,39,SemBench / ecomm,实质混合
+sembench/ecomm/q11,sembench,ecomm,q11,黑色鞋/下装/上装，加500以内同品牌配饰,source_reconstruction,源码重建逻辑计划,src_1511580218451e08,n000,,40,SemBench / ecomm,实质混合
+sembench/ecomm/q12,sembench,ecomm,q12,Adidas/Puma 商品抽取品牌与大类JSON,source_reconstruction,源码重建逻辑计划,src_e7f3b3ac1e5eb5b9,n000,,41,SemBench / ecomm,实质混合
+sembench/ecomm/q13,sembench,ecomm,q13,按复杂跑步衫需求筛选图文商品,source_reconstruction,源码重建逻辑计划,src_6a4c70dc857ccc03,n000,需求中的偏好、排除和条件句按原查询保留，不擅自化简成新 gold。,42,SemBench / ecomm,实质混合
+sembench/ecomm/q14,sembench,ecomm,q14,130以下商品：匹配白袜图片并按分数取一个,source_reconstruction,源码重建逻辑计划,src_356d822f1722423b,n000,源码按 score ASC 取首项；不能画成“最高分”。,43,SemBench / ecomm,实质混合
+sembench/mmqa/q1,sembench,mmqa,q1,Ben Piazza 饰演 Bob Whitewood 的电影导演,source_reconstruction,源码重建逻辑计划,src_24f5c9b84d5af623,n000,,44,SemBench / mmqa,实质混合
+sembench/mmqa/q2a,sembench,mmqa,q2a,将赛马场连接到对应logo图片,source_reconstruction,源码重建逻辑计划,src_606bb263384e43b0,n000,,45,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q2b,sembench,mmqa,q2b,连接赛马场logo并抽取颜色,source_reconstruction,源码重建逻辑计划,src_ccb00af5595ce65a,n000,,46,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3a,sembench,mmqa,q3a,筛选喜剧电影,source_reconstruction,源码重建逻辑计划,src_c397f8568bdaf063,n000,,47,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3b,sembench,mmqa,q3b,筛选科幻电影,source_reconstruction,源码重建逻辑计划,src_eab6f47b768f6af0,n000,,48,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3c,sembench,mmqa,q3c,筛选爱情电影,source_reconstruction,源码重建逻辑计划,src_30f9f32e7ce2a60b,n000,,49,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3d,sembench,mmqa,q3d,筛选恐怖电影,source_reconstruction,源码重建逻辑计划,src_6b468d7d5c5f778d,n000,,50,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3e,sembench,mmqa,q3e,筛选盗窃题材电影,source_reconstruction,源码重建逻辑计划,src_174559a8f2b3571b,n000,,51,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3f,sembench,mmqa,q3f,筛选浪漫喜剧电影,source_reconstruction,源码重建逻辑计划,src_37a2e99705e2a122,n000,,52,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q3g,sembench,mmqa,q3g,筛选传记喜剧电影,source_reconstruction,源码重建逻辑计划,src_e2a9a1fe5861fca0,n000,,53,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q4,sembench,mmqa,q4,按多标签电影类型组织电影列表,source_reconstruction,源码重建逻辑计划,src_a5ffc0ba17a699fb,n000,,54,SemBench / mmqa,实质混合
+sembench/mmqa/q5,sembench,mmqa,q5,找出参演给定16部电影的共同演员,proposed_missing_sql,拟议逻辑计划；SQL缺失,src_2ea58bb11993768f,n000,此 BigQuery 文件为空。这里是按自然语言重建的关系除法候选计划，不是现有实现。自然语言来源见同目录 natural_language/q5.json。,55,SemBench / mmqa,实质混合
+sembench/mmqa/q6a,sembench,mmqa,q6a,找有航线到 Frankfurt 的航空公司,source_reconstruction,源码重建逻辑计划,src_b4c7295b60719564,n000,,56,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q6b,sembench,mmqa,q6b,找有航线到 Germany 的航空公司,source_reconstruction,源码重建逻辑计划,src_868e6ecfd4f500a2,n000,,57,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q6c,sembench,mmqa,q6c,找有航线到 Europe 的航空公司,source_reconstruction,源码重建逻辑计划,src_700af3144021c883,n000,,58,SemBench / mmqa,轻混合（仅投影）
+sembench/mmqa/q7,sembench,mmqa,q7,有欧洲航线的航空公司及logo,intent_sql_mismatch,查询意图计划；SQL存在差异,src_5d548db193049a12,n000,图按自然语言补足欧洲条件；当前 BigQuery SQL 缺少该过滤，不能称与源码等价。,59,SemBench / mmqa,实质混合
+tag-bench/tag/0,tag-bench,tag,0,数学均分>560的学校中，有多少位于湾区,baseline_reconstruction,手写基线源码重建,src_7ec95a7021d5c77f,n000,去重后按县判断，再回连学校；两个 f 是同一中间关系引用，不代表必须扫描两次。,60,TAG-Bench,实质混合
+tag-bench/tag/1,tag-bench,tag,1,南加州阅读均分最低学校的电话,baseline_reconstruction,手写基线源码重建,src_29b102d821d94893,n000,,61,TAG-Bench,实质混合
+tag-bench/tag/3,tag-bench,tag,3,人口超过200万的县中学校考生总数,baseline_reconstruction,手写基线源码重建,src_6ece85cad678f849,n000,源码要求模型猜人口并解析数字；没有冻结年份，不当成可靠人口事实查询。,62,TAG-Bench,实质混合
+tag-bench/tag/4,tag-bench,tag,4,硅谷地区经度最高学校的年级范围,baseline_reconstruction,手写基线源码重建,src_d342f47f3128384e,n000,CSV自然语言说 cities，手写源码按 County 判断；图对应实现，存在语义差异。,63,TAG-Bench,实质混合
+tag-bench/tag/5,tag-bench,tag,5,最常见的两个女性管理员名字,baseline_reconstruction,手写基线源码重建,src_8b3f772ef456daae,n000,源码先截频率前20再判断名字，可能漏掉真正答案；姓名推断不等于真实自报性别，非人员决策建议。,64,TAG-Bench,实质混合
+tag-bench/tag/6,tag-bench,tag,6,csgillespie 的根帖中提及学术论文的数量,baseline_reconstruction,手写基线源码重建,src_0232341649026a7d,n000,,65,TAG-Bench,实质混合
+tag-bench/tag/8,tag-bench,tag,8,分数17的评论中，关于统计学的数量,baseline_reconstruction,手写基线源码重建,src_d59bf501367c4d1d,n000,,66,TAG-Bench,实质混合
+tag-bench/tag/10,tag-bench,tag,10,浏览量超过80000的帖子中，讨论R语言的数量,baseline_reconstruction,手写基线源码重建,src_823e3a12e8bce1c6,n000,,67,TAG-Bench,实质混合
+tag-bench/tag/11,tag-bench,tag,11,中东面积最小国家的赛道举办的比赛名称,baseline_reconstruction,手写基线源码重建,src_e550244a7f13a6ce,n000,,68,TAG-Bench,实质混合
+tag-bench/tag/48,tag-bench,tag,48,三个指定赛道中哪个离首都最近,baseline_reconstruction,手写基线源码重建,src_7f3fe735235e88b8,n000,,69,TAG-Bench,实质混合
+tag-bench/tag/50,tag-bench,tag,50,500以上考生的磁校中名称最有未来感者,baseline_reconstruction,手写基线源码重建,src_06b121355ea4b067,n000,,70,TAG-Bench,实质混合
+tag-bench/tag/85,tag-bench,tag,85,总结 csgillespie 帖子标题的共同特点,baseline_reconstruction,手写基线源码重建,src_a3a0da021b98d018,n000,SEM_AGG 是跨行语义归纳；区别于普通 COUNT/SUM/GROUP BY。,71,TAG-Bench,实质混合
+uda-bench/uda/Art/Mixed/1,uda-bench,uda,Art/Mixed/1,19–20世纪艺术家按领域求平均年龄,end_to_end_interpretation,端到端解释计划,src_84ad11c93d6969a7,n000,"端到端重建：SEM_MAP 是抽取阶段的解释，不在原SQL中；已有物化表时该查询为纯SQL。原SQL：SELECT field, AVG(age) AS avg_age FROM art WHERE century = '19th-20th' GROUP BY field;",72,UDA-Bench,实质混合
+uda-bench/uda/CSPaper/Mixed/1,uda-bench,uda,CSPaper/Mixed/1,多跳推理论文按是否用知识图谱计数,end_to_end_interpretation,端到端解释计划,src_cc01d84109da07c3,n000,"端到端重建：SEM_MAP 是抽取阶段的解释，不在原SQL中；已有物化表时该查询为纯SQL。原SQL：SELECT uses_knowledge_graph, COUNT(evaluation_metric) AS count_evaluation_metric FROM cspaper WHERE reasoning_depth = 'multi-hop' GROUP BY uses_knowledge_graph;",73,UDA-Bench,实质混合
+uda-bench/uda/Finan/Mixed/1,uda-bench,uda,Finan/Mixed/1,绩效薪酬公司按审计师求平均营业利润,end_to_end_interpretation,端到端解释计划,src_14d0165635ea9736,n000,"端到端重建：SEM_MAP 是抽取阶段的解释，不在原SQL中；已有物化表时该查询为纯SQL。原SQL：SELECT auditor, AVG(bussiness_profit) AS avg_bussiness_profit FROM finance WHERE remuneration_policy = 'Performance-based' GROUP BY auditor;",74,UDA-Bench,实质混合
+uda-bench/uda/Legal/Mixed/1,uda-bench,uda,Legal/Mixed/1,原告状态非Activist的案件按判决求最小案件号,end_to_end_interpretation,端到端解释计划,src_f63c510e87f10f17,n000,"端到端重建：SEM_MAP 是抽取阶段的解释，不在原SQL中；已有物化表时该查询为纯SQL。原SQL：SELECT verdict, MIN(case_number) AS min_case_number FROM legal WHERE plaintiff_current_status != 'Activist' GROUP BY verdict;",75,UDA-Bench,实质混合
+uda-bench/uda/Player/FilterJoin/2,uda-bench,uda,Player/FilterJoin/2,指定出生日期球员，连接球队、老板和城市,end_to_end_interpretation,端到端解释计划,src_36ee9315849ddfd2,n000,原文件Query 2；SEM_MAP为端到端解释节点；不能把四个等值连接叫语义连接。,76,UDA-Bench,实质混合
+uda-bench/uda/Med/FilterJoin/2,uda-bench,uda,Med/FilterJoin/2,先天性疾病，连接研究机构和药物属性,end_to_end_interpretation,端到端解释计划,src_644e9d7cd7d08bfc,n000,原文件Query 2混用Med_*限定名与未带前缀表名；图归一化标识，不宣称原SQL可直接运行。,77,UDA-Bench,实质混合
+local-derived/derived/TAR/CD005139,local-derived,derived,TAR/CD005139,按综述协议生成进入全文筛查的论文清单,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_3d087e5f06d96fdf,n000,沿用摘要初筛标签；全文最终纳入是另一任务。协议是SEM_FILTER参数，不是可枚举的关系表。,78,近期派生工作负载,实质混合
+local-derived/derived/TREC-Legal/301,local-derived,derived,TREC-Legal/301,按Topic301披露请求筛邮件家族,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_3d087e5f06d96fdf,n000,邮件正文随分组保留；家族构造是关系化表达。qrels及全文可获取性尚未闭合。,79,近期派生工作负载,实质混合
+local-derived/derived/ContractNLI/conjunction,local-derived,derived,ContractNLI/conjunction,筛出全部指定NDA假设均被支持的合同,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_3d087e5f06d96fdf,n000,本仓拟议派生；NotMentioned与模型ABSTAIN单列；多假设合取不产生新的人工gold。,80,近期派生工作负载,实质混合
+local-derived/derived/MAUD/MAE,local-derived,derived,MAUD/MAE,筛出MAE前瞻标准作用于完成交易能力的条款,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_3d087e5f06d96fdf,n000,人工已提取条款；轻混合仅投影，不假装系统从合同全文定位条款。,81,近期派生工作负载,轻混合（仅投影）
+local-derived/derived/ShARC/YES,local-derived,derived,ShARC/YES,同一固定规则下筛出明确YES个案,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_3d087e5f06d96fdf,n000,MORE、IRRELEVANT不能归为NO；同对话变体不是独立记录。,82,近期派生工作负载,实质混合
+local-derived/derived/ClinGen/Q1,local-derived,derived,ClinGen/Q1,筛出SOP8下至少1分的动物模型证据,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_bf28b8d7791e5894,n000,保持当前最终用户SEM_FILTER契约；typed抽取/机制对齐是候选内部物理分解，并非已发现计划。,83,近期派生工作负载,轻混合（仅投影）
+local-derived/derived/TalentCLEF/29243,local-derived,derived,TalentCLEF/29243,为Healthcare Data Analyst职位筛简历,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_02f4521a8699b555,n000,共10职位是参数实例，此处逐条展示当前SQL明确指定的29243；仅正向qrels，未判项不是负例。,84,近期派生工作负载,轻混合（仅投影）
+local-derived/derived/Trial/Q1,local-derived,derived,Trial/Q1,判断每个已评判患者—试验对,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_d0d826176f9cb287,n000,本仓Q1逻辑SQL；不把所有笛卡尔积对当作有gold。,85,近期派生工作负载,实质混合
+local-derived/derived/Trial/Q2,local-derived,derived,Trial/Q2,指定试验的eligible患者清单,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_bca557814a996c61,n000,这里展示从原输入端到端展开；只读Q1预测物化表时Q2本身是纯SQL。,86,近期派生工作负载,实质混合
+local-derived/derived/Trial/Q3,local-derived,derived,Trial/Q3,每个试验按资格标签计数,derived_workload,本仓逻辑任务；非上游原生混合SQL,src_705563f190dc1e29,n000,展示Q3按试验统计分支；按患者统计是另一参数化分组。未完成组需标记不完整。,87,近期派生工作负载,实质混合

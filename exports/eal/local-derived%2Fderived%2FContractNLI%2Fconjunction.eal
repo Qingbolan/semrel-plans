@@ -1,0 +1,75 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "local-derived/derived/ContractNLI/conjunction" {
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan 合同全文",
+    plan_origin = "derived_workload"
+  } on_failure abort
+
+  let n006 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n006",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan 预先冻结的原17项假设子集",
+    plan_origin = "derived_workload"
+  } on_failure abort
+
+  let n004 = call "semrel.cross_join" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n004",
+    operator_type = "CROSS_JOIN",
+    family = "relational",
+    label = "CROSS JOIN",
+    plan_origin = "derived_workload",
+    input_0 = n005.output,
+    input_1 = n006.output
+  } on_failure abort
+
+  let n003 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n003",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 全文×假设→E/C/NotMentioned",
+    plan_origin = "derived_workload",
+    input_0 = n004.output
+  } on_failure abort
+
+  let n002 = call "semrel.aggregate" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n002",
+    operator_type = "AGGREGATE",
+    family = "relational",
+    label = "γ GROUP BY contract_id; 聚合状态并核对假设覆盖",
+    plan_origin = "derived_workload",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n001",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ 所有所需假设都有标签且全为Entailment",
+    plan_origin = "derived_workload",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "local-derived/derived/ContractNLI/conjunction",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π contract_id",
+    plan_origin = "derived_workload",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

@@ -1,0 +1,135 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "uda-bench/uda/Player/FilterJoin/2" {
+  let n006 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n006",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan player 文档",
+    plan_origin = "end_to_end_interpretation"
+  } on_failure abort
+
+  let n005 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n005",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 球员文档→球员属性",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n006.output
+  } on_failure abort
+
+  let n008 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n008",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan team 文档",
+    plan_origin = "end_to_end_interpretation"
+  } on_failure abort
+
+  let n007 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n007",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 球队文档→球队属性",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n008.output
+  } on_failure abort
+
+  let n004 = call "semrel.join" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n004",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ player.team=team.team_name",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n005.output,
+    input_1 = n007.output
+  } on_failure abort
+
+  let n010 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n010",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan manager 文档",
+    plan_origin = "end_to_end_interpretation"
+  } on_failure abort
+
+  let n009 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n009",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 老板文档→老板属性",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n010.output
+  } on_failure abort
+
+  let n003 = call "semrel.join" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n003",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ team.ownership=manager.name",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n004.output,
+    input_1 = n009.output
+  } on_failure abort
+
+  let n012 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n012",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan city 文档",
+    plan_origin = "end_to_end_interpretation"
+  } on_failure abort
+
+  let n011 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n011",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 城市文档→城市属性",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n012.output
+  } on_failure abort
+
+  let n002 = call "semrel.join" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n002",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ team.location=city.city_name",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n003.output,
+    input_1 = n011.output
+  } on_failure abort
+
+  let n001 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n001",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ player.birth_date='1994/2/2'",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "uda-bench/uda/Player/FilterJoin/2",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π manager.age, team.founded_year, player.name, city.city_name",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

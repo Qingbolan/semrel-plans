@@ -1,0 +1,145 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/ecomm/q9" {
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan STYLES_DETAILS",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n004 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n004",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ 简单六色 AND colour1=空 AND colour2=空 AND price<800",
+    plan_origin = "source_reconstruction",
+    input_0 = n005.output
+  } on_failure abort
+
+  let n006 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n006",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGE_MAPPING",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n003",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ imageURL = link",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output,
+    input_1 = n006.output
+  } on_failure abort
+
+  let n007 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n007",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGES",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n002 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n002",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ filename = basename(uri)",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output,
+    input_1 = n007.output
+  } on_failure abort
+
+  let n011 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n011",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan STYLES_DETAILS",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n010 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n010",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ 简单六色 AND colour1=空 AND colour2=空 AND price<800",
+    plan_origin = "source_reconstruction",
+    input_0 = n011.output
+  } on_failure abort
+
+  let n012 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n012",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGE_MAPPING",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n009 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n009",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ imageURL = link",
+    plan_origin = "source_reconstruction",
+    input_0 = n010.output,
+    input_1 = n012.output
+  } on_failure abort
+
+  let n013 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n013",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGES",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n008 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n008",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ filename = basename(uri)",
+    plan_origin = "source_reconstruction",
+    input_0 = n009.output,
+    input_1 = n013.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_left_join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n001",
+    operator_type = "SEM_LEFT_JOIN",
+    family = "semantic",
+    label = "SEM_LEFT_JOIN 不同URI AND 图像同类别同主色",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output,
+    input_1 = n008.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q9",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π p1.id-p2.id",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

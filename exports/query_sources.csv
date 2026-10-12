@@ -1,0 +1,216 @@
+query_id,source_id,role,locator,attribution_note
+sembench/movie/Q1,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q1,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q2,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q2,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q3,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q3,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q4,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q4,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q5,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q5,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q6,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q6,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q7,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q7,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q8,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q8,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q9,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q9,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/movie/Q10,src_0127a1876cee83f3,paper,§4.1,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/movie/Q10,src_b38b1590c0b10568,dataset,§4.1,影评与电影数据；当前使用子集、处理和 gold 以固定代码为准。
+sembench/animals/Q1,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q1,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q1,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q2,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q2,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q2,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q3,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q3,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q3,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q4,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q4,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q4,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q5,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q5,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q5,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q6,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q6,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q6,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q7,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q7,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q7,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q8,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q8,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q8,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q9,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q9,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q9,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q10,src_0127a1876cee83f3,paper,§4.2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/animals/Q10,src_d8cb06dca20c35e1,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/animals/Q10,src_88203b326ed5752b,dataset,§4.2,真实图像/音频加随机生成的 city、stationID；不是真实站点联合观测。
+sembench/cars/Q1,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q1,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q1,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q1,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q1,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q2,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q2,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q2,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q2,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q2,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q3,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q3,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q3,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q3,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q3,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q4,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q4,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q4,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q4,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q4,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q5,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q5,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q5,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q5,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q5,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q6,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q6,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q6,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q6,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q6,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q7,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q7,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q7,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q7,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q7,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q8,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q8,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q8,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q8,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q8,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q9,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q9,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q9,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q9,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q9,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q10,src_0127a1876cee83f3,paper,§4.4,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/cars/Q10,src_833d7ba5dadddd01,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q10,src_6383dc2b6a42f0e0,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q10,src_884120c47340922a,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/cars/Q10,src_6effd21f473aca0f,dataset,§4.4,真实多模态素材与合成车辆属性/关联组合；不是真实车辆的联合理赔记录。
+sembench/ecomm/q1,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q1,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q2,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q2,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q3,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q3,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q4,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q4,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q5,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q5,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q6,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q6,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q7,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q7,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q8,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q8,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q9,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q9,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q10,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q10,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q11,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q11,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q12,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q12,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q13,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q13,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/ecomm/q14,src_0127a1876cee83f3,paper,§4.3,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/ecomm/q14,src_85d018df21fe456b,dataset,§4.3,商品图像、描述与结构化字段；gold 使用源结构化标签。
+sembench/mmqa/q1,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q1,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q2a,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q2a,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q2b,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q2b,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3a,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3a,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3b,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3b,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3c,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3c,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3d,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3d,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3e,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3e,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3f,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3f,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q3g,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q3g,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q4,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q4,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q5,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q5,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q6a,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q6a,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q6b,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q6b,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q6c,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q6c,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+sembench/mmqa/q7,src_0127a1876cee83f3,paper,§4.5,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+sembench/mmqa/q7,src_81810a7ce0dc902a,dataset,§4.5,基于 MultiModalQA 重新组织关系表；论文 11 个问题，当前代码含 16 个查询变体。
+tag-bench/tag/0,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/0,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/1,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/1,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/3,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/3,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/4,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/4,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/5,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/5,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/6,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/6,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/8,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/8,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/10,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/10,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/11,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/11,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/48,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/48,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/50,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/50,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+tag-bench/tag/85,src_f997f97d463736f9,paper,§4.1–4.2；Appendix A,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。
+tag-bench/tag/85,src_1373ef25652bbe52,dataset,TAG §4.1,TAG 在 BIRD 数据库上修改问题并制作答案；具体数据库由本条查询定义确定。此处仅收录 12 个选例。
+uda-bench/uda/Art/Mixed/1,src_6e4090daa6d7519c,paper,§3.1–3.3；Table 2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。 论文 v1 为 5 数据集/240 查询；固定仓库含 CSPaper 等扩展共 608 SQL，不能混同。
+uda-bench/uda/Art/Mixed/1,src_499b59b30adc7452,dataset,UDA §3.2 / Table 2,艺术家文档与作品图像。
+uda-bench/uda/CSPaper/Mixed/1,src_6e4090daa6d7519c,paper,§3.1–3.3；Table 2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。 论文 v1 为 5 数据集/240 查询；固定仓库含 CSPaper 等扩展共 608 SQL，不能混同。 CSPaper 不在该版论文 Table 2 中，论文仅作为系统背景，不能证明此查询/数据来源。
+uda-bench/uda/CSPaper/Mixed/1,src_cc01d84109da07c3,dataset,仓库扩展,仓库扩展；原始论文集合、许可、下载版本未在当前快照中核实。
+uda-bench/uda/Finan/Mixed/1,src_6e4090daa6d7519c,paper,§3.1–3.3；Table 2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。 论文 v1 为 5 数据集/240 查询；固定仓库含 CSPaper 等扩展共 608 SQL，不能混同。
+uda-bench/uda/Finan/Mixed/1,src_f1f50b8294a1fdda,dataset,UDA §3.2 / Table 2,2022 年企业报告；所用处理版本以仓库为准。
+uda-bench/uda/Legal/Mixed/1,src_6e4090daa6d7519c,paper,§3.1–3.3；Table 2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。 论文 v1 为 5 数据集/240 查询；固定仓库含 CSPaper 等扩展共 608 SQL，不能混同。
+uda-bench/uda/Legal/Mixed/1,src_78d6a8a726414e68,dataset,UDA §3.2 / Table 2,论文 Table 2 为 566 文件，正文为 570；数量不一致保留。
+uda-bench/uda/Player/FilterJoin/2,src_6e4090daa6d7519c,paper,§3.1–3.3；Table 2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。 论文 v1 为 5 数据集/240 查询；固定仓库含 CSPaper 等扩展共 608 SQL，不能混同。
+uda-bench/uda/Player/FilterJoin/2,src_1424b9ce834d4658,dataset,UDA §3.2 / Table 2,Wikipedia 抓取文档，非实时球员数据库。
+uda-bench/uda/Med/FilterJoin/2,src_6e4090daa6d7519c,paper,§3.1–3.3；Table 2,论文提供 benchmark 背景；本图册依据链接的查询代码重建逻辑计划，不是论文原图或实际 EXPLAIN。 论文 v1 为 5 数据集/240 查询；固定仓库含 CSPaper 等扩展共 608 SQL，不能混同。
+uda-bench/uda/Med/FilterJoin/2,src_ce426dc16601edbc,dataset,UDA §3.2 / Table 2,论文说明来自 MMedC；原始文件子集、抽样版本尚未逐文件核验。
+local-derived/derived/TAR/CD005139,src_3c12a77f2e968514,paper,2019 Task 1 / CD005139,论文/协议提供筛查任务；批量过滤与逻辑树由本项目构造，进入全文筛查不等于最终纳入。
+local-derived/derived/TAR/CD005139,src_9fd081ff9f06b9ff,dataset,2019 Task 1 / CD005139,论文/协议提供筛查任务；批量过滤与逻辑树由本项目构造，进入全文筛查不等于最终纳入。
+local-derived/derived/TREC-Legal/301,src_9aa87ee3fb30e84d,paper,Topic 301,原任务为法律检索；邮件家族过滤 plan 为本项目派生。历史记录中 qrels 获取受限，未声称完整复现。
+local-derived/derived/TREC-Legal/301,src_7a7cbc914f7d8216,dataset,Topic 301,原任务为法律检索；邮件家族过滤 plan 为本项目派生。历史记录中 qrels 获取受限，未声称完整复现。
+local-derived/derived/ContractNLI/conjunction,src_211c5fd36a694c29,paper,合同级 NLI / 指定假设 conjunction,原文提供合同—假设标签；多个假设全部成立的选择查询由本项目派生。
+local-derived/derived/ContractNLI/conjunction,src_f6d7bf9e222b342b,dataset,合同级 NLI / 指定假设 conjunction,原文提供合同—假设标签；多个假设全部成立的选择查询由本项目派生。
+local-derived/derived/MAUD/MAE,src_0783e2f41e3d01a0,paper,MAE / 完成交易能力,原文为专家标注条款问答；批量过滤由本项目派生，输入条款不能写成系统自行定位的完整合同。
+local-derived/derived/MAUD/MAE,src_b4463057cffadf15,dataset,MAE / 完成交易能力,原文为专家标注条款问答；批量过滤由本项目派生，输入条款不能写成系统自行定位的完整合同。
+local-derived/derived/ShARC/YES,src_f6380f8307382975,paper,YES label,原文为规则对话任务；固定规则下批量筛选 YES 为本项目派生；众包场景不等于真实申请记录。
+local-derived/derived/ShARC/YES,src_43d949faa3ce5781,dataset,YES label,原文为规则对话任务；固定规则下批量筛选 YES 为本项目派生；众包场景不等于真实申请记录。
+local-derived/derived/ClinGen/Q1,src_da22b82d8bf4aca4,protocol,Experimental evidence / model systems,规则来源；不是 benchmark 论文。当前 local SQL 仅给出字段与规则，逐条动物模型证据论文、DOI、补充材料与数据快照仍缺失。设计阶段，不能声称论文提供此查询。
+local-derived/derived/TalentCLEF/29243,src_c1beb3843ce6782e,paper,Task A；本地 job 29243,岗位与简历文本由真实结构化资料合成并人工核查；论文提供匹配任务，当前过滤 plan 是本项目派生。29243 与发布包的逐文件校验尚未补齐。
+local-derived/derived/TalentCLEF/29243,src_12e0576a3cc13554,dataset,Task A；本地 job 29243,岗位与简历文本由真实结构化资料合成并人工核查；论文提供匹配任务，当前过滤 plan 是本项目派生。29243 与发布包的逐文件校验尚未补齐。
+local-derived/derived/Trial/Q1,src_57105624463c0c00,paper,Clinical Trials track；Q1/Q2/Q3,源任务为给定患者检索试验；逐对判断、反向患者清单与标签计数由本项目派生。qrels：0 不相关、1 排除、2 eligible；不是实际临床入组结果。
+local-derived/derived/Trial/Q1,src_4adbcc7b4de828b2,dataset,Clinical Trials track；Q1/Q2/Q3,源任务为给定患者检索试验；逐对判断、反向患者清单与标签计数由本项目派生。qrels：0 不相关、1 排除、2 eligible；不是实际临床入组结果。
+local-derived/derived/Trial/Q2,src_57105624463c0c00,paper,Clinical Trials track；Q1/Q2/Q3,源任务为给定患者检索试验；逐对判断、反向患者清单与标签计数由本项目派生。qrels：0 不相关、1 排除、2 eligible；不是实际临床入组结果。
+local-derived/derived/Trial/Q2,src_4adbcc7b4de828b2,dataset,Clinical Trials track；Q1/Q2/Q3,源任务为给定患者检索试验；逐对判断、反向患者清单与标签计数由本项目派生。qrels：0 不相关、1 排除、2 eligible；不是实际临床入组结果。
+local-derived/derived/Trial/Q3,src_57105624463c0c00,paper,Clinical Trials track；Q1/Q2/Q3,源任务为给定患者检索试验；逐对判断、反向患者清单与标签计数由本项目派生。qrels：0 不相关、1 排除、2 eligible；不是实际临床入组结果。
+local-derived/derived/Trial/Q3,src_4adbcc7b4de828b2,dataset,Clinical Trials track；Q1/Q2/Q3,源任务为给定患者检索试验；逐对判断、反向患者清单与标签计数由本项目派生。qrels：0 不相关、1 排除、2 eligible；不是实际临床入组结果。

@@ -1,0 +1,115 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "tag-bench/tag/3" {
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan satscores",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n002 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n002",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ rtype=S",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan schools",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n010 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n010",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan schools",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n009 = call "semrel.project" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n009",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π County",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n010.output
+  } on_failure abort
+
+  let n008 = call "semrel.distinct" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n008",
+    operator_type = "DISTINCT",
+    family = "relational",
+    label = "δ DISTINCT",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n009.output
+  } on_failure abort
+
+  let n007 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n007",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 县→人口估计",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n008.output
+  } on_failure abort
+
+  let n006 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n006",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ parsed_population > 2000000",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n007.output
+  } on_failure abort
+
+  let n004 = call "semrel.semi_join" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n004",
+    operator_type = "SEMI_JOIN",
+    family = "relational",
+    label = "SEMI JOIN County",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n005.output,
+    input_1 = n006.output
+  } on_failure abort
+
+  let n001 = call "semrel.join" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n001",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ cds=CDSCode",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n002.output,
+    input_1 = n004.output
+  } on_failure abort
+
+  let n000 = call "semrel.aggregate" on "semrel-worker" with {
+    query_id = "tag-bench/tag/3",
+    node_id = "n000",
+    operator_type = "AGGREGATE",
+    family = "relational",
+    label = "γ SUM(NumTstTakr)",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

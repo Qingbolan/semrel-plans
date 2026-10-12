@@ -1,0 +1,55 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "tag-bench/tag/85" {
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/85",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan users",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n002 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "tag-bench/tag/85",
+    node_id = "n002",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ DisplayName = csgillespie",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "tag-bench/tag/85",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan posts",
+    plan_origin = "baseline_reconstruction"
+  } on_failure abort
+
+  let n001 = call "semrel.join" on "semrel-worker" with {
+    query_id = "tag-bench/tag/85",
+    node_id = "n001",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ Id=OwnerUserId",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n002.output,
+    input_1 = n004.output
+  } on_failure abort
+
+  let n000 = call "semrel.sem_agg" on "semrel-worker" with {
+    query_id = "tag-bench/tag/85",
+    node_id = "n000",
+    operator_type = "SEM_AGG",
+    family = "semantic",
+    label = "SEM_AGG 总结Title共同特点",
+    plan_origin = "baseline_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

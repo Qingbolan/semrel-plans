@@ -1,0 +1,85 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/animals/Q6" {
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan ImageData",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n003",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 猴子存在",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output
+  } on_failure abort
+
+  let n002 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n002",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π city",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n007 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n007",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan AudioData",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n006 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n006",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 猴子存在",
+    plan_origin = "source_reconstruction",
+    input_0 = n007.output
+  } on_failure abort
+
+  let n005 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n005",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π city",
+    plan_origin = "source_reconstruction",
+    input_0 = n006.output
+  } on_failure abort
+
+  let n001 = call "semrel.anti_join" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n001",
+    operator_type = "ANTI_JOIN",
+    family = "relational",
+    label = "ANTI JOIN on city",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output,
+    input_1 = n005.output
+  } on_failure abort
+
+  let n000 = call "semrel.distinct" on "semrel-worker" with {
+    query_id = "sembench/animals/Q6",
+    node_id = "n000",
+    operator_type = "DISTINCT",
+    family = "relational",
+    label = "δ DISTINCT",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

@@ -1,0 +1,65 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "local-derived/derived/TAR/CD005139" {
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "local-derived/derived/TAR/CD005139",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan 候选PMID关系",
+    plan_origin = "derived_workload"
+  } on_failure abort
+
+  let n003 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "local-derived/derived/TAR/CD005139",
+    node_id = "n003",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ review_id=CD005139",
+    plan_origin = "derived_workload",
+    input_0 = n004.output
+  } on_failure abort
+
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "local-derived/derived/TAR/CD005139",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan 论文 title/abstract",
+    plan_origin = "derived_workload"
+  } on_failure abort
+
+  let n002 = call "semrel.join" on "semrel-worker" with {
+    query_id = "local-derived/derived/TAR/CD005139",
+    node_id = "n002",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ PMID",
+    plan_origin = "derived_workload",
+    input_0 = n003.output,
+    input_1 = n005.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "local-derived/derived/TAR/CD005139",
+    node_id = "n001",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER title/abstract 满足初筛协议 CD005139",
+    plan_origin = "derived_workload",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "local-derived/derived/TAR/CD005139",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π PMID",
+    plan_origin = "derived_workload",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

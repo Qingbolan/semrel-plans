@@ -1,0 +1,95 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/ecomm/q12" {
+  let n006 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n006",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan STYLES_DETAILS",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n005 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n005",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ masterCategory ∈ Accessories/Apparel/Footwear",
+    plan_origin = "source_reconstruction",
+    input_0 = n006.output
+  } on_failure abort
+
+  let n007 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n007",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGE_MAPPING",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n004 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n004",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ imageURL = link",
+    plan_origin = "source_reconstruction",
+    input_0 = n005.output,
+    input_1 = n007.output
+  } on_failure abort
+
+  let n008 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n008",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan IMAGES",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n003",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ filename = basename(uri)",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output,
+    input_1 = n008.output
+  } on_failure abort
+
+  let n002 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n002",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 描述：Adidas 或 Puma",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n001",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 图文→id/brand/category JSON",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q12",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π 生成JSON（SQL 别名 id）",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

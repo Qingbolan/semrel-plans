@@ -1,0 +1,618 @@
+[
+  {
+    "query_id": "sembench/movie/Q1",
+    "path": "exports/eal/sembench%2Fmovie%2FQ1.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q2",
+    "path": "exports/eal/sembench%2Fmovie%2FQ2.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q3",
+    "path": "exports/eal/sembench%2Fmovie%2FQ3.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q4",
+    "path": "exports/eal/sembench%2Fmovie%2FQ4.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q5",
+    "path": "exports/eal/sembench%2Fmovie%2FQ5.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q6",
+    "path": "exports/eal/sembench%2Fmovie%2FQ6.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q7",
+    "path": "exports/eal/sembench%2Fmovie%2FQ7.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q8",
+    "path": "exports/eal/sembench%2Fmovie%2FQ8.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q9",
+    "path": "exports/eal/sembench%2Fmovie%2FQ9.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/movie/Q10",
+    "path": "exports/eal/sembench%2Fmovie%2FQ10.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/animals/Q1",
+    "path": "exports/eal/sembench%2Fanimals%2FQ1.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/animals/Q2",
+    "path": "exports/eal/sembench%2Fanimals%2FQ2.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/animals/Q3",
+    "path": "exports/eal/sembench%2Fanimals%2FQ3.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/animals/Q4",
+    "path": "exports/eal/sembench%2Fanimals%2FQ4.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/animals/Q5",
+    "path": "exports/eal/sembench%2Fanimals%2FQ5.eal",
+    "status": "logical-plan",
+    "nodes": 8,
+    "semantic": 2
+  },
+  {
+    "query_id": "sembench/animals/Q6",
+    "path": "exports/eal/sembench%2Fanimals%2FQ6.eal",
+    "status": "logical-plan",
+    "nodes": 8,
+    "semantic": 2
+  },
+  {
+    "query_id": "sembench/animals/Q7",
+    "path": "exports/eal/sembench%2Fanimals%2FQ7.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 2
+  },
+  {
+    "query_id": "sembench/animals/Q8",
+    "path": "exports/eal/sembench%2Fanimals%2FQ8.eal",
+    "status": "logical-plan",
+    "nodes": 17,
+    "semantic": 4
+  },
+  {
+    "query_id": "sembench/animals/Q9",
+    "path": "exports/eal/sembench%2Fanimals%2FQ9.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 2
+  },
+  {
+    "query_id": "sembench/animals/Q10",
+    "path": "exports/eal/sembench%2Fanimals%2FQ10.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q1",
+    "path": "exports/eal/sembench%2Fcars%2FQ1.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q2",
+    "path": "exports/eal/sembench%2Fcars%2FQ2.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q3",
+    "path": "exports/eal/sembench%2Fcars%2FQ3.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q4",
+    "path": "exports/eal/sembench%2Fcars%2FQ4.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q5",
+    "path": "exports/eal/sembench%2Fcars%2FQ5.eal",
+    "status": "logical-plan",
+    "nodes": 10,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q6",
+    "path": "exports/eal/sembench%2Fcars%2FQ6.eal",
+    "status": "logical-plan",
+    "nodes": 22,
+    "semantic": 3
+  },
+  {
+    "query_id": "sembench/cars/Q7",
+    "path": "exports/eal/sembench%2Fcars%2FQ7.eal",
+    "status": "logical-plan",
+    "nodes": 16,
+    "semantic": 3
+  },
+  {
+    "query_id": "sembench/cars/Q8",
+    "path": "exports/eal/sembench%2Fcars%2FQ8.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q9",
+    "path": "exports/eal/sembench%2Fcars%2FQ9.eal",
+    "status": "logical-plan",
+    "nodes": 8,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/cars/Q10",
+    "path": "exports/eal/sembench%2Fcars%2FQ10.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q1",
+    "path": "exports/eal/sembench%2Fecomm%2Fq1.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q2",
+    "path": "exports/eal/sembench%2Fecomm%2Fq2.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q3",
+    "path": "exports/eal/sembench%2Fecomm%2Fq3.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q4",
+    "path": "exports/eal/sembench%2Fecomm%2Fq4.eal",
+    "status": "logical-plan",
+    "nodes": 8,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q5",
+    "path": "exports/eal/sembench%2Fecomm%2Fq5.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q6",
+    "path": "exports/eal/sembench%2Fecomm%2Fq6.eal",
+    "status": "logical-plan",
+    "nodes": 8,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q7",
+    "path": "exports/eal/sembench%2Fecomm%2Fq7.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q8",
+    "path": "exports/eal/sembench%2Fecomm%2Fq8.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q9",
+    "path": "exports/eal/sembench%2Fecomm%2Fq9.eal",
+    "status": "logical-plan",
+    "nodes": 14,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q10",
+    "path": "exports/eal/sembench%2Fecomm%2Fq10.eal",
+    "status": "logical-plan",
+    "nodes": 24,
+    "semantic": 5
+  },
+  {
+    "query_id": "sembench/ecomm/q11",
+    "path": "exports/eal/sembench%2Fecomm%2Fq11.eal",
+    "status": "logical-plan",
+    "nodes": 29,
+    "semantic": 7
+  },
+  {
+    "query_id": "sembench/ecomm/q12",
+    "path": "exports/eal/sembench%2Fecomm%2Fq12.eal",
+    "status": "logical-plan",
+    "nodes": 9,
+    "semantic": 2
+  },
+  {
+    "query_id": "sembench/ecomm/q13",
+    "path": "exports/eal/sembench%2Fecomm%2Fq13.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/ecomm/q14",
+    "path": "exports/eal/sembench%2Fecomm%2Fq14.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 3
+  },
+  {
+    "query_id": "sembench/mmqa/q1",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq1.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q2a",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq2a.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q2b",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq2b.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 2
+  },
+  {
+    "query_id": "sembench/mmqa/q3a",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3a.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q3b",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3b.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q3c",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3c.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q3d",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3d.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q3e",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3e.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q3f",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3f.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q3g",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq3g.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q4",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq4.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q5",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq5.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q6a",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq6a.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q6b",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq6b.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q6c",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq6c.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "sembench/mmqa/q7",
+    "path": "exports/eal/sembench%2Fmmqa%2Fq7.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 2
+  },
+  {
+    "query_id": "tag-bench/tag/0",
+    "path": "exports/eal/tag-bench%2Ftag%2F0.eal",
+    "status": "logical-plan",
+    "nodes": 11,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/1",
+    "path": "exports/eal/tag-bench%2Ftag%2F1.eal",
+    "status": "logical-plan",
+    "nodes": 12,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/3",
+    "path": "exports/eal/tag-bench%2Ftag%2F3.eal",
+    "status": "logical-plan",
+    "nodes": 11,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/4",
+    "path": "exports/eal/tag-bench%2Ftag%2F4.eal",
+    "status": "logical-plan",
+    "nodes": 10,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/5",
+    "path": "exports/eal/tag-bench%2Ftag%2F5.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/6",
+    "path": "exports/eal/tag-bench%2Ftag%2F6.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/8",
+    "path": "exports/eal/tag-bench%2Ftag%2F8.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/10",
+    "path": "exports/eal/tag-bench%2Ftag%2F10.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/11",
+    "path": "exports/eal/tag-bench%2Ftag%2F11.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/48",
+    "path": "exports/eal/tag-bench%2Ftag%2F48.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/50",
+    "path": "exports/eal/tag-bench%2Ftag%2F50.eal",
+    "status": "logical-plan",
+    "nodes": 8,
+    "semantic": 1
+  },
+  {
+    "query_id": "tag-bench/tag/85",
+    "path": "exports/eal/tag-bench%2Ftag%2F85.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 1
+  },
+  {
+    "query_id": "uda-bench/uda/Art/Mixed/1",
+    "path": "exports/eal/uda-bench%2Fuda%2FArt%2FMixed%2F1.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "uda-bench/uda/CSPaper/Mixed/1",
+    "path": "exports/eal/uda-bench%2Fuda%2FCSPaper%2FMixed%2F1.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "uda-bench/uda/Finan/Mixed/1",
+    "path": "exports/eal/uda-bench%2Fuda%2FFinan%2FMixed%2F1.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "uda-bench/uda/Legal/Mixed/1",
+    "path": "exports/eal/uda-bench%2Fuda%2FLegal%2FMixed%2F1.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "uda-bench/uda/Player/FilterJoin/2",
+    "path": "exports/eal/uda-bench%2Fuda%2FPlayer%2FFilterJoin%2F2.eal",
+    "status": "logical-plan",
+    "nodes": 13,
+    "semantic": 4
+  },
+  {
+    "query_id": "uda-bench/uda/Med/FilterJoin/2",
+    "path": "exports/eal/uda-bench%2Fuda%2FMed%2FFilterJoin%2F2.eal",
+    "status": "logical-plan",
+    "nodes": 10,
+    "semantic": 3
+  },
+  {
+    "query_id": "local-derived/derived/TAR/CD005139",
+    "path": "exports/eal/local-derived%2Fderived%2FTAR%2FCD005139.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/TREC-Legal/301",
+    "path": "exports/eal/local-derived%2Fderived%2FTREC-Legal%2F301.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/ContractNLI/conjunction",
+    "path": "exports/eal/local-derived%2Fderived%2FContractNLI%2Fconjunction.eal",
+    "status": "logical-plan",
+    "nodes": 7,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/MAUD/MAE",
+    "path": "exports/eal/local-derived%2Fderived%2FMAUD%2FMAE.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/ShARC/YES",
+    "path": "exports/eal/local-derived%2Fderived%2FShARC%2FYES.eal",
+    "status": "logical-plan",
+    "nodes": 4,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/ClinGen/Q1",
+    "path": "exports/eal/local-derived%2Fderived%2FClinGen%2FQ1.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/TalentCLEF/29243",
+    "path": "exports/eal/local-derived%2Fderived%2FTalentCLEF%2F29243.eal",
+    "status": "logical-plan",
+    "nodes": 3,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/Trial/Q1",
+    "path": "exports/eal/local-derived%2Fderived%2FTrial%2FQ1.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/Trial/Q2",
+    "path": "exports/eal/local-derived%2Fderived%2FTrial%2FQ2.eal",
+    "status": "logical-plan",
+    "nodes": 6,
+    "semantic": 1
+  },
+  {
+    "query_id": "local-derived/derived/Trial/Q3",
+    "path": "exports/eal/local-derived%2Fderived%2FTrial%2FQ3.eal",
+    "status": "logical-plan",
+    "nodes": 5,
+    "semantic": 1
+  }
+]

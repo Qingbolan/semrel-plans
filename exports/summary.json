@@ -1,0 +1,14 @@
+{
+  "queries": 88,
+  "nodes": 580,
+  "edges": 492,
+  "sources": 117,
+  "operator_types": 29,
+  "benchmarks": {
+    "local-derived": 10,
+    "sembench": 60,
+    "tag-bench": 12,
+    "uda-bench": 6
+  },
+  "measurement": "logical_plan_nodes; not runtime calls or independent benchmark counts"
+}

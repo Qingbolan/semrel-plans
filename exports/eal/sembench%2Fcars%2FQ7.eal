@@ -1,0 +1,165 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/cars/Q7" {
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan cars",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan audio_mm 录音",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n003 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n003",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output,
+    input_1 = n005.output
+  } on_failure abort
+
+  let n002 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n002",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 录音：刹车磨损",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n001",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n009 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n009",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan cars",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n010 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n010",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan complaints",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n008 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n008",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n009.output,
+    input_1 = n010.output
+  } on_failure abort
+
+  let n007 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n007",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 投诉：电气故障",
+    plan_origin = "source_reconstruction",
+    input_0 = n008.output
+  } on_failure abort
+
+  let n006 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n006",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n007.output
+  } on_failure abort
+
+  let n014 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n014",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan cars",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n015 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n015",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan car_mm 图片",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n013 = call "semrel.join" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n013",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n014.output,
+    input_1 = n015.output
+  } on_failure abort
+
+  let n012 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n012",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 图片：凹陷",
+    plan_origin = "source_reconstruction",
+    input_0 = n013.output
+  } on_failure abort
+
+  let n011 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n011",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n012.output
+  } on_failure abort
+
+  let n000 = call "semrel.union_distinct" on "semrel-worker" with {
+    query_id = "sembench/cars/Q7",
+    node_id = "n000",
+    operator_type = "UNION_DISTINCT",
+    family = "relational",
+    label = "UNION DISTINCT car_id",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output,
+    input_1 = n006.output,
+    input_2 = n011.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

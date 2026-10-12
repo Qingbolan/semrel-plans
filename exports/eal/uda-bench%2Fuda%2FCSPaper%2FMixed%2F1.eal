@@ -1,0 +1,45 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "uda-bench/uda/CSPaper/Mixed/1" {
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "uda-bench/uda/CSPaper/Mixed/1",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan CSPaper 原始文档",
+    plan_origin = "end_to_end_interpretation"
+  } on_failure abort
+
+  let n002 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "uda-bench/uda/CSPaper/Mixed/1",
+    node_id = "n002",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 文档→reasoning_depth, uses_knowledge_graph, evaluation_metric",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "uda-bench/uda/CSPaper/Mixed/1",
+    node_id = "n001",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ reasoning_depth = 'multi-hop'",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.aggregate" on "semrel-worker" with {
+    query_id = "uda-bench/uda/CSPaper/Mixed/1",
+    node_id = "n000",
+    operator_type = "AGGREGATE",
+    family = "relational",
+    label = "γ GROUP BY uses_knowledge_graph; COUNT(evaluation_metric)",
+    plan_origin = "end_to_end_interpretation",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

@@ -1,0 +1,45 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/ecomm/q5" {
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q5",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan STYLES_DETAILS",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n002 = call "semrel.filter" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q5",
+    node_id = "n002",
+    operator_type = "FILTER",
+    family = "relational",
+    label = "σ masterCategory=Apparel; 排除 Saree/Apparel Set/Loungewear and Nightwear",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_classify" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q5",
+    node_id = "n001",
+    operator_type = "SEM_CLASSIFY",
+    family = "semantic",
+    label = "SEM_CLASSIFY 描述→Dress/Bottomwear/Socks/Topwear/Innerwear",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/ecomm/q5",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π id, category",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

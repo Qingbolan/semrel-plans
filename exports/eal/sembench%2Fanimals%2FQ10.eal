@@ -1,0 +1,65 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "sembench/animals/Q10" {
+  let n005 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "sembench/animals/Q10",
+    node_id = "n005",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan ImageData",
+    plan_origin = "source_reconstruction"
+  } on_failure abort
+
+  let n004 = call "semrel.sem_filter" on "semrel-worker" with {
+    query_id = "sembench/animals/Q10",
+    node_id = "n004",
+    operator_type = "SEM_FILTER",
+    family = "semantic",
+    label = "SEM_FILTER 图像含斑马",
+    plan_origin = "source_reconstruction",
+    input_0 = n005.output
+  } on_failure abort
+
+  let n003 = call "semrel.aggregate" on "semrel-worker" with {
+    query_id = "sembench/animals/Q10",
+    node_id = "n003",
+    operator_type = "AGGREGATE",
+    family = "relational",
+    label = "γ GROUP BY city, stationID; COUNT(*) → count",
+    plan_origin = "source_reconstruction",
+    input_0 = n004.output
+  } on_failure abort
+
+  let n002 = call "semrel.sort" on "semrel-worker" with {
+    query_id = "sembench/animals/Q10",
+    node_id = "n002",
+    operator_type = "SORT",
+    family = "relational",
+    label = "τ count DESC",
+    plan_origin = "source_reconstruction",
+    input_0 = n003.output
+  } on_failure abort
+
+  let n001 = call "semrel.limit" on "semrel-worker" with {
+    query_id = "sembench/animals/Q10",
+    node_id = "n001",
+    operator_type = "LIMIT",
+    family = "relational",
+    label = "LIMIT 1",
+    plan_origin = "source_reconstruction",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.project" on "semrel-worker" with {
+    query_id = "sembench/animals/Q10",
+    node_id = "n000",
+    operator_type = "PROJECT",
+    family = "relational",
+    label = "π city, stationID",
+    plan_origin = "source_reconstruction",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}

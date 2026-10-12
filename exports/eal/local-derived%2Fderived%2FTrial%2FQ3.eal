@@ -1,0 +1,55 @@
+// Logical-plan representation; requires SemRel operator abilities.
+// Labels are preserved, not parsed into executable predicates.
+// input_0, input_1, ... preserve the source input positions.
+mission "local-derived/derived/Trial/Q3" {
+  let n003 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "local-derived/derived/Trial/Q3",
+    node_id = "n003",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan Pairs（含患者文本路径）",
+    plan_origin = "derived_workload"
+  } on_failure abort
+
+  let n004 = call "semrel.scan" on "semrel-worker" with {
+    query_id = "local-derived/derived/Trial/Q3",
+    node_id = "n004",
+    operator_type = "SCAN",
+    family = "input",
+    label = "Scan Trials（入排标准）",
+    plan_origin = "derived_workload"
+  } on_failure abort
+
+  let n002 = call "semrel.join" on "semrel-worker" with {
+    query_id = "local-derived/derived/Trial/Q3",
+    node_id = "n002",
+    operator_type = "JOIN",
+    family = "relational",
+    label = "⋈ trial_id",
+    plan_origin = "derived_workload",
+    input_0 = n003.output,
+    input_1 = n004.output
+  } on_failure abort
+
+  let n001 = call "semrel.sem_map" on "semrel-worker" with {
+    query_id = "local-derived/derived/Trial/Q3",
+    node_id = "n001",
+    operator_type = "SEM_MAP",
+    family = "semantic",
+    label = "SEM_MAP 患者×试验→eligible/excluded/not_relevant",
+    plan_origin = "derived_workload",
+    input_0 = n002.output
+  } on_failure abort
+
+  let n000 = call "semrel.aggregate" on "semrel-worker" with {
+    query_id = "local-derived/derived/Trial/Q3",
+    node_id = "n000",
+    operator_type = "AGGREGATE",
+    family = "relational",
+    label = "γ GROUP BY trial_id,value; COUNT(*)",
+    plan_origin = "derived_workload",
+    input_0 = n001.output
+  } on_failure abort
+
+  emit "result" kind answer value n000.output
+}
