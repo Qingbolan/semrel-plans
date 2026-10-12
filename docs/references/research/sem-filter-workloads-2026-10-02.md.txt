@@ -1,0 +1,115 @@
+# 外部要求驱动的 SEM_FILTER：五个可审查构造方案
+
+研究版本 RV017/s01；2026-10-02，Asia/Singapore。范围是本次用户例子：固定要求文件作用于多条记录。没有额外套用历史“环境必须超上下文、路径不可枚举”等条件，也没有将这些条件宣称已成立。
+
+## 判断
+
+五类有既有 gold 的筛选任务可以构造：CLEF TAR、TREC Legal、ContractNLI、MAUD、ShARC。独立模拟 VLDB 审稿子 agent 对修订方案给出有条件构造准入；这不是实际同行评审、已完成数据构造或方法验证。前两项更适合规模候选，后三项适合中小规模语义与复用边界。**尚未找到五类都同时满足丰富外部要求、固定条件下大量独立后续记录、完整且可立即获取 gold 的任务。**
+
+关键不是把 prompt 放到 HTML，而是保持已有标注所定义的谓词：`gold_select(record, requirement) = deterministic_projection(original_annotation)`。任意扩写要求、加入未标注条件、笛卡尔积生成记录—要求组合都不能自动继承 gold。没有发现可在此轮直接推荐的真实招聘四字段+完整岗位资格 gold，不能将简历主题分类或录用结果代替“满足要求”。
+
+本次没有运行模型。两项来源的统计已在主 agent 复算：[脚本](evidence/sem-filter-scout-2026-10-02/audit_sources.py)、[收据](evidence/sem-filter-scout-2026-10-02/source-counts.json)。完整原始数据只在网络/内存读取，未复制进仓库；统计不是输入充分性或语义验证。
+
+## W1 / D-SF-TAR：综述协议筛论文
+
+**场景与用途。** 证据团队按固定 review protocol 筛选新获得论文，生成需进入全文审查的清单。具体实例 CD005139 是新生血管性年龄相关黄斑变性相关抗 VEGF 干预综述；协议对研究设计、人群、干预/对照、随访及排除组合作规定。不是只判断主题相关。
+
+```sql
+SEM_FILTER(ROW(p.title, p.abstract),
+  'Should this article proceed to full-text screening under /protocols/CD005139.html?')
+```
+
+**来源与规模。** [官方仓库](https://github.com/CLEF-TAR/tar)、[protocol](https://github.com/CLEF-TAR/tar/blob/master/2019-TAR/Task1/Training/Intervention/protocols/CD005139.xml)。本次实数：2019 Intervention training 20个review、31,645对；testing 20个review、41,996对、41,183 distinct PMIDs，其中937阳性。CD005139位于training，有5,392篇候选，112阳性、5,280阴性。training/testing并不能自动解释为新研究的D/R，须审核topic及实体重合。
+
+**构造。** 冻结同版本协议中目标、设计、人群、干预、结局条件；不要把综述结果、纳入文献表给模型。候选PMID连接可恢复的title/abstract，公开文本只按字段投影，不用gold挑出证据句。私有gold取同topic的`abs.qrels`：1进入全文筛查、0不进入；未判断项不补0。登记缺失摘要和恢复率，缺失不静默剔除。数据量以取回文本且有对应标签的交集重新统计。
+
+**划分与评分。** 同一study的不同论文聚类，同一PMID跨review不跨独立分区。固定protocol内切x0/V/R及模拟批次；按review宏平均precision、positive recall、漏审数、送全文阅读数、ABSTAIN和累计成本。不能声称真实前瞻到达。
+
+**审查条件。** 标题摘要对应初筛gold；不能预测最终全文纳入却仍只给摘要。[2018官方overview](https://ceur-ws.org/Vol-2125/invited_paper_6.pdf)披露部分负例是从原review筛选/引用状态构造的，不能称每个负例都经过独立双专家逐篇确认。需要抽样检查协议与标签阶段一致性。该场景可测试大量行，但不预设探索增益。
+
+## W2 / D-SF-LEGAL：诉讼披露请求筛邮件及附件
+
+**场景与用途。** 法务按固定production request筛应提交审查的邮件家族。具体用2010 Interactive Topic301：与公司油气钻探/开采业务、收入计划或风险分析有关的材料；泛行业新闻与缺少实质内容的通知可能不符合。这是一份有边界和例外的真实benchmark请求。
+
+```sql
+SEM_FILTER(ROW(m.headers, m.subject, m.body, m.attachments),
+  'Is this email family responsive to /requests/topic301.html?')
+```
+
+**来源。** [官方任务](https://trec-legal.umiacs.umd.edu/)、[overview](https://trec-legal.umiacs.umd.edu/other/legal10m.pdf)、[22页多topic评审指南](https://trec.nist.gov/data/legal/10/AssessmentGuidelines_leg_int_2010.pdf)、[NIST gold入口](https://trec.nist.gov/data/legal10.html)。全语料有455,449 canonical messages和230,143附件，共685,592文档；**不是685,592条有gold邮件家族**。本次未成功以Python取回qrels（HTTP403），不报本地实测gold数或完整文本可用性。
+
+**构造。** 锁定TREC2010所用EDRM版本及canonical映射。按Interactive单位把邮件和附件成组，给足对应内容，用post-adjudication message qrels评分；不混用Learning的独立文档qrels。要求文件保留原请求及可用解释；topic authority解释是人工经验H，需要披露来源和可用时点，不能称纯零监督。规则举例涉及的具体文档如可识别，应列为开发暴露并隔离。
+
+**划分与评分。** 邮件family、转发/引用链和近重复整体分区。评判子集用精确名单precision/recall；全库采用原抽样权重/评价协议，未评判项不能当负例。破损/不可读取对象另计，不当语义NO。输入恢复、canonical连接、qrel码解释核验是物化前验收门槛。
+
+**审查条件。** 不把responsive扩成完整法律披露义务（如还需独立privilege审查）。原标注存在争议和后审修订，必须冻结版本。该场景在多字段、共享要求、批量清单上最接近用户例子，但全量资源当前可获取性仍需验证。
+
+## W3 / D-SF-CNLI：NDA条件清单筛选
+
+**场景与用途。** 法务筛出满足既定条款检查项的保密协议，形成进一步审核的合同清单。例：合同是否明确要求保密信息须由披露方标识。不能据此说整份合同已经合规。
+
+```sql
+SEM_FILTER(ROW(c.full_text),
+  'Does the NDA affirmatively support the requirements in /playbooks/nda-v1.html?')
+```
+
+**来源与规模。** [官方数据规格](https://stanfordnlp.github.io/contract-nli/)、[论文](https://aclanthology.org/2021.findings-emnlp.164/)。607份NDA、17个固定假设、三值标签和支持/反驳span。607是文档数；10,319是文档—假设对数上限，不是独立合同数。使用需遵守官方数据条款；本轮未取完整数据。
+
+**构造。** 要求文件原样引用一个或少量原假设；合同ROW保留完整文本/公开分段，不提供gold spans。中间结果保留Entailment / Contradiction / NotMentioned；最终选择仅Entailment。多假设合取预先冻结，全部E才选择，存在C为反驳，其余未决；是确定性派生gold，不是新专家标注。NotMentioned不是明确禁止，模型自身ABSTAIN与原文未提及也分别记录。
+
+**划分与评分。** 同合同全部命题同分区；近模板合同聚类。既报告三值分类及证据指标，也报告合同选择precision/recall、未决率和批次成本。若交集阳性过少，应报告而非根据结果另选规则。
+
+**审查条件。** 只能使用17项覆盖的语义，不允许凭空写长谈判手册后继承原gold。适合中等规模复用/否定与例外判断，不证明巨大外部环境必要。假设放成HTML只是接口形式。
+
+## W4 / D-SF-MAUD：并购交易条款筛选
+
+**场景与用途。** 并购顾问从历史交易建立条款可比集，例如筛出MAE前瞻标准作用于交易完成能力的条款；另可将“全现金支付”作为简单控制项。需求在每个批次固定。
+
+```sql
+SEM_FILTER(ROW(d.deal_point_text),
+  'Does this deal point meet the requirement in /screens/mae-scope.html?')
+```
+
+**来源与规模。** [作者代码与数据](https://github.com/The-Atticus-Project/maud)、[原论文](https://aclanthology.org/2023.emnlp-main.1019.pdf)。152原始协议、92问题；论文main20,623 QA，总39,231 QA还包含14,928 abridged与3,680专家编辑rare样本。main与其他发布README有计数口径差异，实施时以锁定版本实际统计，不以总QA作合同数。
+
+**构造。** 以原`FLS (MAE) applies to`问题及`Ability to consummate transaction`选项构造单条件；要求文件保留官方问题和解释，gold为原答案集合是否包含目标选项。简单项`Type of Consideration`→`All Cash`的投影在原论文有直接例子。行使用发布的完整deal-point文本，明确它是人工预提取输入；不是系统从全文发现的条款。仅main作为自然文本主实验。组合只取全部相关问题被明确标注且适用的记录；条件问题缺失不当NO。
+
+**划分与评分。** 按原合同聚类，删节、编辑、重复片段与原本整体分配，主实验不混入扩增样本。报告每个固定问题实际行数、独立合同数、阳性数，以及selected-set precision/recall和原答案准确率。完整合同模式必须另核全文—deal point—QA映射及聚合规则，本轮不宣称完成。
+
+**审查条件。** 这是给定条款的判读，范围比用户的多文档档案窄；152合同不支持无限扩容。与ContractNLI是不同数据来源和工作流程，但仍属同一法律领域，不能伪装成两个独立行业。
+
+## W5 / D-SF-SHARC：政府规则下的个案资格与补材料筛选
+
+**场景与用途。** 服务台根据固定政策规则处理申请描述及补充答复，将明确满足规则的个案列入下一步队列，将信息不足者列入补材料队列。可选冬季燃料补贴规则树作为具体任务。
+
+```sql
+SEM_FILTER(ROW(a.scenario, a.history),
+  'Under /policies/frozen-rule.html, is the answer to the fixed eligibility question yes?')
+```
+
+**来源与规模。** [官方schema](https://sharc-data.github.io/data.html)、[原论文](https://aclanthology.org/D18-1233.pdf)。官方包本次复算32,436轮、948 tree IDs、933不同规则字符串；10,433 YES、10,303 NO、9,804 MORE、1,896 IRRELEVANT。论文原报948 snippets/6,637 scenarios与当前文件字符串计数不是同口径。
+
+**构造。** 固定原snippet及question，ROW仅scenario/history；不输入evidence/answer。规则来自实际网页，但场景由众包撰写，对话由程序沿分支展开，必须标为受控构造，不称真实申请档案。YES选择，NO不满足，追问UNKNOWN_NEEDS_INFO，IRRELEVANT域外；后两者不归并为NO。不抓现行政策替换历史规则。预先排除官方negative-sample IDs与空scenario可形成一个明确子集，同时保留全量边界评价。
+
+**实际规模边界。** 上述过滤后22,232轮、6,842不同scenario字符串、943树；每树scenario数中位4、最大57。字符串不同还不保证独立。所谓32k样本不能支撑固定政策后32k独立个案的摊销曲线。
+
+**划分与评分。** 同scenario及其history变体必须成组；同规则复用实验允许同tree横跨分区但scenario组独立；跨规则实验另按snippet/source隔离。不能按gold或模型容易程度选状态。全量四态指标加YES清单precision/recall、补材料率及成本。此项只通过中小规模语义/边界方案审查，大规模固定政策主实验不通过。
+
+## 额外候选与淘汰原因
+
+- **n2c2 2018 Track1**最贴近原例：288患者、每人2–5份纵向记录、13固定条件、202/86划分。ADVANCED-CAD有多条件聚合，DIETSUPP-2MOS有时间与例外；专家met/not-met标签。原论文已指出KETO-1YR唯一阳性是标注错误。当前[官方portal](https://portal.dbmi.hms.harvard.edu/projects/n2c2-2018-t1/)不开放新注册；列受限候选，不计立即可构造。条件组合不能称某真实试验完整资格。来源：[组织者论文](https://pmc.ncbi.nlm.nih.gov/articles/PMC6798568/)。
+- **ACORD**有114律师查询、126,662 query-clause评分对，可冻结原query和星级阈值筛先例条款。[官方仓库](https://github.com/The-Atticus-Project/acord)。这是原评分的确定性投影；相关不等于满足全部要求，需严格用对应评级语义。尚未在本轮单独终审或复算，不替代以上五项。
+- **TrialGPT/TREC CT**原方向是固定患者筛试验；倒置固定试验筛患者后标注稀疏。75k以上配对不是75k患者，原三cohort总183合成患者。未做每trial密度审计前不列主力。
+- **ESCI**多字段商品有人工ESCI标签，但每query最多40候选。可做短要求匹配控制，不能将query扩写成复杂采购规范后沿用gold。[官方仓库](https://github.com/amazon-science/esci-data)。
+
+## 模拟审稿收据与实验设计
+
+本轮用户明确请求子agent审查：两个来源侦察agent（clinical_scout、requirements_scout），一个独立审稿agent（vldb_reviewer）；均继承当前模型配置，未指定模型覆盖。审稿agent初审后，因TrialGPT方向、MAUD人工条款输入、ShARC轮次依赖和n2c2访问问题修订，再作终审。最终允许五个限定任务构造，拒绝“五个均支持丰富环境大批摊销”。本节是审查结论摘要，不是真实VLDB评审或概率预测。
+
+共同构造产物：`public/records.jsonl`、`public/requirements/<id>.html`、任务契约、`private/gold.jsonl`、源ID/版本/hash/许可清单、实体组split、数据恢复/泄漏审计。HTML转换只做格式处理，保留原文与span对应，不能让模型补写需求。
+
+必须比较完整必要输入静态SEM_FILTER、同资源固定检索/抽取、一次抽取所有属性后SQL、E-only代码生成、一次Coding Agent持久化、同资源批量Agent，再决定是否有必要测单轨迹提取。固定predicate支持一次抽取复用是自然强对照；不能为了探索收益让静态臂拿不到要求。
+
+下一步先完成TAR一个protocol的title/abstract恢复和gold阶段审计；并测TREC family原件/qrels可恢复性。输入/标签映射失败则停止该任务，不能用生成答案补洞。随后才在冻结D/V上比较质量，R不参与选择。未定义统一数值质量阈值；应按漏审/误纳的具体下游代价预注册。完整成本包含要求预处理、示范、提取、验证、执行、失败、补材料/人工复核；未知金额不填零。
+
+实际限制：五个任务不是五个独立领域；来源可核验不等于已物化；现有公开样本有预训练污染可能；没有同资源探索或轨迹提取增益证据；没有为这轮建立模型运行器或独立确认集。既有湖、实验产物与冻结正册保持原状态。

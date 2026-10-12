@@ -1,0 +1,18 @@
+{
+  "id": "tag",
+  "name": "TAG-Bench",
+  "query_ids": [
+    "tag-bench/tag/0",
+    "tag-bench/tag/1",
+    "tag-bench/tag/3",
+    "tag-bench/tag/4",
+    "tag-bench/tag/5",
+    "tag-bench/tag/6",
+    "tag-bench/tag/8",
+    "tag-bench/tag/10",
+    "tag-bench/tag/11",
+    "tag-bench/tag/48",
+    "tag-bench/tag/50",
+    "tag-bench/tag/85"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-12T16:16:11.202198+08:00",
+  "source": "heterogeneous-data-env-batch-works/research/mixed-query-plans-2026-10-05",
+  "reference_sembench_commit": "8c2cac89b21c6782239e8e5b03d326d0c029b655",
+  "queries": 88,
+  "local_references": [
+    {
+      "path": "docs/references/research/sem-filter-workloads-2026-10-02.md.txt",
+      "original_path": "research/sem-filter-workloads-2026-10-02.md",
+      "sha256": "7287f622683582bd88de2b33928b6a00267301c26957c1f15b1ac2a0ff77dd03"
+    },
+    {
+      "path": "docs/references/query/clingen-model-evidence/queries.sql.txt",
+      "original_path": "query/clingen-model-evidence/queries.sql",
+      "sha256": "50b4b06f39a46f4fda80809c83f55a54a6e3ec3194ca8cd722dfd2ca331f5c55"
+    },
+    {
+      "path": "docs/references/query/talentclef-job-fit/query.sql.txt",
+      "original_path": "query/talentclef-job-fit/query.sql",
+      "sha256": "9a4b9feaa717670b83f7d7110a550d195724a3036d169de395120a7067cae01a"
+    },
+    {
+      "path": "docs/references/query/trial-prescreen/Q-TP-1.md.txt",
+      "original_path": "query/trial-prescreen/Q-TP-1.md",
+      "sha256": "ed52fdd8cbf75ffa97ab3918db76c9a16726c6c7b26dcaa55be995964f5c08ab"
+    },
+    {
+      "path": "docs/references/query/trial-prescreen/Q-TP-2.md.txt",
+      "original_path": "query/trial-prescreen/Q-TP-2.md",
+      "sha256": "1daa7f7ab432876bd79129c4efc4288acec1ead9a337479b6a15719b6ff7ad7e"
+    },
+    {
+      "path": "docs/references/query/trial-prescreen/Q-TP-3.md.txt",
+      "original_path": "query/trial-prescreen/Q-TP-3.md",
+      "sha256": "fef64724accbe6014446925b394dc682ce7cc380ae5755d1e3d56ef0987734ad"
+    }
+  ],
+  "source_atlas_sha256": "db436f17c101f76eead887dc0c848a49fc7d8dd710210273b539a1baaeb8a9a7"
+}

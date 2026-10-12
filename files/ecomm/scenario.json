@@ -1,0 +1,20 @@
+{
+  "id": "ecomm",
+  "name": "SemBench / ecomm",
+  "query_ids": [
+    "sembench/ecomm/q1",
+    "sembench/ecomm/q2",
+    "sembench/ecomm/q3",
+    "sembench/ecomm/q4",
+    "sembench/ecomm/q5",
+    "sembench/ecomm/q6",
+    "sembench/ecomm/q7",
+    "sembench/ecomm/q8",
+    "sembench/ecomm/q9",
+    "sembench/ecomm/q10",
+    "sembench/ecomm/q11",
+    "sembench/ecomm/q12",
+    "sembench/ecomm/q13",
+    "sembench/ecomm/q14"
+  ]
+}

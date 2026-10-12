@@ -1,0 +1,3 @@
+# Q-TP-2 — 指定试验的预测 eligible 患者清单
+
+机器任务ID：`trial-prescreen-Q2-v1`。由Q1预测派生，不是独立gold。协调员用途：某试验开放后，得到候选入组患者名单。执行：`tools/run_batch_queries.py --target eligible`，再按 source_entity（试验）过滤。

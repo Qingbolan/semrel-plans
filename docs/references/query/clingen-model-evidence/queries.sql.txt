@@ -1,0 +1,10 @@
+-- Logical query. Paths resolve relative to the exported public dataset root.
+-- paper/supplements/background bind to the supplied public assets, not gold.
+SELECT r.record_id, r.gene, r.disease, r.inheritance
+FROM animal_model_evidence AS r
+WHERE SEM_FILTER(
+  ROW(r.paper, r.supplements, r.background,
+      r.evidence_target, r.gene, r.disease, r.inheritance),
+  'Does the specified animal-model evidence merit at least 1 point '
+  'for this gene-disease-inheritance context under environment/SOP8.pdf?'
+);

@@ -1,0 +1,16 @@
+{
+  "id": "cars",
+  "name": "SemBench / cars",
+  "query_ids": [
+    "sembench/cars/Q1",
+    "sembench/cars/Q2",
+    "sembench/cars/Q3",
+    "sembench/cars/Q4",
+    "sembench/cars/Q5",
+    "sembench/cars/Q6",
+    "sembench/cars/Q7",
+    "sembench/cars/Q8",
+    "sembench/cars/Q9",
+    "sembench/cars/Q10"
+  ]
+}

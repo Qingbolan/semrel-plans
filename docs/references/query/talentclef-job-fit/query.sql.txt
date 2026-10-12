@@ -1,0 +1,7 @@
+-- Logical SQL; execute the equivalent predicate with run_lotus.py or a file-reading agent.
+SELECT c.candidate_id
+FROM candidates AS c
+WHERE SEM_FILTER(
+  ROW(c.resume, c.profile, c.projects, c.notes),
+  'Does this candidate satisfy the requirements in jobs/29243.html?'
+);

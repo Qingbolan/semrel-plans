@@ -1,0 +1,16 @@
+{
+  "id": "animals",
+  "name": "SemBench / animals",
+  "query_ids": [
+    "sembench/animals/Q1",
+    "sembench/animals/Q2",
+    "sembench/animals/Q3",
+    "sembench/animals/Q4",
+    "sembench/animals/Q5",
+    "sembench/animals/Q6",
+    "sembench/animals/Q7",
+    "sembench/animals/Q8",
+    "sembench/animals/Q9",
+    "sembench/animals/Q10"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-12T16:18:00.770769+08:00",
+  "query_count": 88,
+  "scenario_count": 8,
+  "checks": {
+    "original_query_content": "PASS",
+    "local_markdown_links": "PASS",
+    "deterministic_build": "PASS",
+    "catalog_validation": "PASS",
+    "javascript_syntax": "PASS"
+  },
+  "model_execution": "not performed",
+  "upstream_queries_executed": false
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-12",
+  "scope": "为 88 条现有计划补充论文、数据与规则来源，不修改计划节点或查询选择",
+  "query_count": 88,
+  "relationship_count": 215,
+  "paper_count": 10,
+  "verification": "逐条核对状态见 sources.verification；代码固定版本沿用 2026-10-05 收据，未重新执行上游 benchmark",
+  "known_gaps": [
+    "TREC Legal 2010 PDF 本轮打开失败，保留历史引用并标注",
+    "ClinGen 缺少逐条证据论文及数据快照",
+    "UDA CSPaper 不在论文 v1 的五个数据集中",
+    "TalentCLEF job 29243 尚未与发布包逐文件核验",
+    "原始数据版本、下载完整性和许可没有在本轮统一核验"
+  ],
+  "validation": [
+    "88 plans validated",
+    "8 unittest cases passed"
+  ]
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "operator_type": "AGGREGATE",
+    "family": "relational"
+  },
+  {
+    "operator_type": "ANTI_JOIN",
+    "family": "relational"
+  },
+  {
+    "operator_type": "ARGMIN",
+    "family": "relational"
+  },
+  {
+    "operator_type": "COMPUTE",
+    "family": "relational"
+  },
+  {
+    "operator_type": "CROSS_JOIN",
+    "family": "relational"
+  },
+  {
+    "operator_type": "CTE",
+    "family": "relational"
+  },
+  {
+    "operator_type": "CTE_REF",
+    "family": "relational"
+  },
+  {
+    "operator_type": "DISTINCT",
+    "family": "relational"
+  },
+  {
+    "operator_type": "DROP_NULL",
+    "family": "relational"
+  },
+  {
+    "operator_type": "FILTER",
+    "family": "relational"
+  },
+  {
+    "operator_type": "INTERSECT",
+    "family": "relational"
+  },
+  {
+    "operator_type": "JOIN",
+    "family": "relational"
+  },
+  {
+    "operator_type": "LEFT_JOIN",
+    "family": "relational"
+  },
+  {
+    "operator_type": "LIMIT",
+    "family": "relational"
+  },
+  {
+    "operator_type": "PROJECT",
+    "family": "relational"
+  },
+  {
+    "operator_type": "SCAN",
+    "family": "input"
+  },
+  {
+    "operator_type": "SEMI_JOIN",
+    "family": "relational"
+  },
+  {
+    "operator_type": "SEM_AGG",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SEM_CLASSIFY",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SEM_FILTER",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SEM_JOIN",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SEM_LEFT_JOIN",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SEM_MAP",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SEM_TOPK",
+    "family": "semantic"
+  },
+  {
+    "operator_type": "SORT",
+    "family": "relational"
+  },
+  {
+    "operator_type": "TAKE_FIRST",
+    "family": "relational"
+  },
+  {
+    "operator_type": "UNION_ALL",
+    "family": "relational"
+  },
+  {
+    "operator_type": "UNION_DISTINCT",
+    "family": "relational"
+  },
+  {
+    "operator_type": "UNNEST",
+    "family": "relational"
+  }
+]

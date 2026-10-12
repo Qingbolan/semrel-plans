@@ -1,0 +1,75 @@
+# Scout: semantic-operator systems and benchmarks, checked against C1–C10 (2026-10-01)
+
+Labels: [核验] = read in primary source (arXiv HTML or abstract); [推断] = my judgment; 未核验 = not checked. C6 (Agent gain) is ❌/未知 everywhere: no paper below compares adaptive per-row exploration against a strong static baseline on a shared-E task.
+
+## 1. LOTUS (arXiv 2407.11418, https://arxiv.org/html/2407.11418) [核验]
+| Workload | C1 | C2 | C3 | C4 | C5 | C9 | Note |
+|---|---|---|---|---|---|---|---|
+| FEVER fact-check, 1,000 claims + 5.5M Wikipedia | ✅ | ✅ | ⚠️ the Wikipedia corpus is shared E, and the gold evidence is Wikipedia sentences | ⚠️ multi-hop claims need the next retrieval to depend on what was read, but the LOTUS pipeline is fixed map→search→filter | ⚠️ | ✅ human | The closest to E in LOTUS. E is an open corpus, not a rulebook, and paths recur only weakly. |
+| BioDEX, 250 articles × 24k reaction labels | ✅ | ✅ | ⚠️ shared MedDRA-style label vocabulary; the gold labels are terms from that vocabulary | ❌ sem_join/top-k is retrieval over the label space, with no branching | ❌ | ✅ official reports | E is a label space, not decision rules. |
+| SciFact search, 300 claims; HellaSwag-bench ranking, 200 abstracts | ⚠️ | ✅ | ⚠️ corpus as retrieval pool | ❌ | ❌ | ✅ | Ranking only. |
+| ArXiv topic group-by, 647 papers | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ no gold | — |
+
+## 2. Palimpzest (CIDR'25, https://arxiv.org/html/2405.14696) and Abacus (PVLDB 19, https://arxiv.org/html/2505.14661v1) [核验]
+- **Legal discovery** (1,000 Enron emails, fraud filter, hand-curated gold): C1✅ C2✅ C3❌ (no shared rules; "fraud" is a prompt concept) C4❌ C9✅ but small.
+- **Real estate** (100 listings, text and images): C3❌ C4❌, N=100.
+- **Medical schema matching** (49 tables mapped to 15 target attributes): the target schema is a small shared E (C3⚠️). The task is per-table mapping, and C10❌ with 49 tables.
+- **Abacus: BioDEX, CUAD, MMQA.** BioDEX: same as LOTUS above. CUAD: per-contract extraction of 41 clauses. The clause definitions act as a short codebook, so C3⚠️ only as "E as extra context", and C4❌. MMQA: diverse questions over Wikipedia tables, text and images. C1❌ because these are not one operator. Abacus optimizes on a validation sample and reuses the plan on held-out test data, which is the reuse pattern but with no agent trace.
+
+## 3. DocETL (PVLDB 2025, https://arxiv.org/html/2410.12189) and MOAR (https://arxiv.org/html/2512.02289) [核验]
+| Workload | C1 | C2 | C3 | C4 | C9 | Note |
+|---|---|---|---|---|---|---|
+| CUAD (510 contracts, 41 clause types) | ✅ | ✅ | ⚠️ clause guideline only | ❌ | ✅ expert | Per-document extraction |
+| Game reviews (Steam, about 300 reviews per doc) | ✅ | ✅ | ❌ | ❌ | ⚠️ task-specific | — |
+| BlackVault declassified (733) | ✅ | ✅ | ❌ | ❌ | ⚠️ recall of locations | — |
+| BioDEX | ✅ | ✅ | ⚠️ label vocab | ❌ | ✅ | — |
+| Police misconduct (case study) | ✅ | ✅ | ❌ | ❌ | ❌ no formal eval | — |
+| MOAR: MEDEC (3,848 clinical notes, error detection) | ✅ | ✅ | ❌ uses no external guideline | ❌ | ✅ | — |
+| MOAR: Sustainability | ✅ | ✅ | ❌ | ❌ | ⚠️ P@10 | — |
+
+MOAR optimizes on 40 documents and reports on 100 held-out documents. Its agent rewrites the pipeline using 30+ directives, including code synthesis. That is plan-level optimization from samples, not from a single exploratory execution trace, and without a shared E.
+
+## 4. Benchmarks and other engines
+- **SemBench** (PVLDB 2026, https://arxiv.org/html/2511.01716) [核验]: 5 scenarios and 55 queries: Movies, Wildlife, E-commerce, Cars, MMQA. The gold comes from Kaggle or dataset labels. The paper states that no scenario needs a shared external KB beyond the rows (MMQA uses Wikipedia tables as data). C3❌ C4❌ for all.
+- **UDA-Bench** (https://arxiv.org/html/2510.27119v1) [核验]: WikiArt (1,000), NBA (225), Legal LCR (566), Finance (100), Healthcare (100k). 147 attributes and 240 queries; the gold is human-built with LLM cross-checks. Attribute extraction is per document, so C3❌. LCR ("deep semantic deduction") might implicitly need legal rules, but this is 未核验.
+- **TAG-Bench** (https://arxiv.org/pdf/2408.14717): 80 queries over BIRD needing world knowledge. Diverse questions, so C1❌. A database is the E, but the questions are not one operator applied to many rows.
+- **ZenDB** (https://arxiv.org/pdf/2405.04674): 3 datasets, 221 documents, 27 queries, and gold not public (as reported by UDA-Bench). C3❌, C10❌.
+- **UQE** (NeurIPS'24): images, dialogs and reviews with conditional aggregation; C3❌ [推断, 未核验 in detail].
+- **ELT-Bench** (https://arxiv.org/html/2504.04808v2): 100 pipelines and 835 source tables. Agents build ELT pipelines, so this is not a row-wise semantic operator (C1❌). The structured-data E is real.
+- **CAESURA, ThalamusDB, Galois, SUQL, Aryn/Sycamore/Luna, BiTe**: diverse NL or multimodal queries, or proprietary demos. 未核验 at workload level; none is known to me to have a shared rulebook.
+- **Compilation line**: Vision paper (https://arxiv.org/html/2607.13407v1), SemBaker (https://arxiv.org/html/2608.06677), SemPiper/SemPipes (https://arxiv.org/html/2606.14361v1) [核验]. They are evaluated on SemBench movies, ManyModalQA, HybridQA, MMQA, Steam, SMS spam, and ML-pipeline scenarios (fraud, Met museum, real estate). None has a shared E. Compilation is a single LLM call with no exploration trace.
+- **Compositional Online Learning** (https://arxiv.org/html/2608.27244) [核验]: ArXiv, BoolQ, IMDB, MMLU, NYT, SST-2, with oracle-LLM gold. Learning stays within a query (filter order, cascade thresholds). C3❌.
+
+## 5. EvoOntology (https://arxiv.org/html/2609.15779v1) [核验]
+Confirmed benchmarks: DDR-Bench (10-K scenario), InsightBench, and BIRD (Oracle Knowledge setting). The protocol is two-fold: build the ontology on 70% of fold A, validate on 30%, freeze, then test on fold B. Tasks are diverse NL questions, so C1❌. The shared E (databases and files) is real, and the ontology is reusable across tasks. That is environment knowledge reuse, not a per-operator plan.
+
+## 6. Agentic plan or trace reuse (2025–2026)
+- **Agentic Plan Caching** (NeurIPS'25, https://arxiv.org/html/2506.14852) [核验]: evaluated on FinanceBench, QASPER, TabMWP, AIME 2024/25, and GAIA. It extracts a plan template from each completed execution, matches by keyword, and adapts with a small LM. It reports −50% cost while keeping 96.6% of optimal accuracy. FinanceBench/QASPER have a document E, but questions differ (C1⚠️/❌). There is no fixed operator and no evaluation of reusing one template across a batch.
+- **TraceCompiler** (arXiv 2608.02680, https://arxiv.org/html/2608.02680) [核验]: evaluated on T1 travel dialogues, AppWorld, and Hermes-FC. It mines clusters of many traces (not one) and compiles "mostly deterministic workflows". Held-out evaluation is leave-one-out on the Venmo intent: 15/21 tests pass. Compilation cost is not counted, so it makes no net-efficiency claim. AppWorld is a shared simulated environment, but this is not batch data processing.
+- Others (Agent Workflow Memory, AgenticData https://arxiv.org/pdf/2508.05002, Structure-then-Query https://arxiv.org/pdf/2608.13384): 未核验 for batch workloads.
+
+## (a) Workloads satisfying C3 and C4 (strong sense)
+None. The nearest candidates:
+- LOTUS FEVER: shared Wikipedia E, and multi-hop claims make evidence paths depend on what was read. However, the evaluated pipeline is fixed, and E is an open corpus rather than rules.
+- BioDEX: shared label vocabulary, but it is used as a retrieval target, not as branch logic.
+- CUAD: clause guidelines act as a short codebook, but this is "E as extra context".
+
+The other workloads are per-document extraction, filtering or ranking with no external environment, or diverse NL questions (MMQA, TAG, BIRD, DDR, FinanceBench) that fail C1.
+
+## (b) Adaptable tasks and what to add [推断]
+1. **BioDEX → MedDRA hierarchy coding.** Supply the MedDRA LLT→PT→HLT hierarchy and coding conventions (for example, MedDRA "Points to Consider") as E. Require coding to the PT with rule-driven choices such as the most specific term or signs versus diagnosis. Gold stays the official reports. Licensing is a risk: MedDRA needs a licence.
+2. **CUAD → playbook review.** Add a shared negotiation playbook (acceptable/unacceptable positions per clause, with exceptions), so the label becomes compliant, deviation or escalate. Gold would need new annotation (C9 risk).
+3. **MEDEC → guideline-grounded error detection.** Add the clinical guidelines or drug references needed to judge the errors. Gold exists, but it was not derived from E, so it would fail the C3 "gold references E" test unless re-annotated.
+4. **FEVER/SciFact → frozen evidence corpus.** Use a frozen corpus and a fixed verdict operator, and measure exploration against fixed top-k retrieval on multi-hop subsets. Gold and scale exist, but whether path structures recur (C7) is doubtful.
+5. **Enron legal discovery → policy-grounded responsiveness.** Add a written responsiveness or privilege protocol, as in TREC Legal Track-style topic guidelines (未核验 availability).
+
+## (c) Overlap with "agent explores once → reusable cheaper plan for a fixed semantic operator"
+- **LOTUS**: low overlap. Static operators plus approximation guarantees; no exploration or trace.
+- **Palimpzest/Abacus**: medium overlap. They optimize a plan on samples and reuse it on held-out data. There is no agent trace, the plan space is a predefined operator catalogue, and there is no shared E.
+- **DocETL/MOAR**: high overlap on "agent produces a cheaper, better pipeline reused on held-out documents", including code-synthesis directives. Differences: MOAR searches with many evaluations over 40 labelled documents rather than one exploratory execution, and its tasks have no shared E. This is the main reviewer threat.
+- **Compilation line (Vision paper, SemBaker, SemPipes)**: high overlap on "make the operator cheaper via generated code reused over rows". Differences: no exploration and no environment. This is exactly the "E-only / no-trace codegen" baseline we must beat.
+- **Agentic Plan Caching**: medium overlap. It extracts a template from a completed execution and reuses it. Differences: it targets heterogeneous agent queries rather than a fixed operator over a batch, it caches plans rather than executable operators, and there is no admission validation.
+- **TraceCompiler**: high conceptual overlap ("compile traces into mostly deterministic workflows; agents keep novel semantic decisions"). Differences: it uses clusters of many traces, is not batch data processing, and reports no net cost.
+- **EvoOntology**: medium overlap. It reuses a learned environment layer across tasks; the reused artifact is knowledge, not an execution plan.
+
+Net: the open gap is a shared, decision-relevant E combined with a fixed operator, single-trace extraction, and full-cost evaluation on an independent batch. None of the surveyed benchmarks supplies such a workload, so we would have to construct it or adapt one (see b).

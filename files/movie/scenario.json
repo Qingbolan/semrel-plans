@@ -1,0 +1,16 @@
+{
+  "id": "movie",
+  "name": "SemBench / movie",
+  "query_ids": [
+    "sembench/movie/Q1",
+    "sembench/movie/Q2",
+    "sembench/movie/Q3",
+    "sembench/movie/Q4",
+    "sembench/movie/Q5",
+    "sembench/movie/Q6",
+    "sembench/movie/Q7",
+    "sembench/movie/Q8",
+    "sembench/movie/Q9",
+    "sembench/movie/Q10"
+  ]
+}

@@ -1,0 +1,545 @@
+{
+  "date": "2026-10-05T14:40:32+08:00",
+  "scope": "回顾2026-10-01至10-02记录，2026-10-05核对源码；非全量文献查询普查",
+  "source_commits": {
+    "SemBench": "8c2cac89b21c6782239e8e5b03d326d0c029b655",
+    "TAG-Bench": "f97b0b5ca211573837cf3236224ac658b4a959bc",
+    "UDA-Bench": "50039a527f156eeb9cad80118637da47db94b976"
+  },
+  "count": 88,
+  "source_files": [
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q1.sql",
+      "path": "files/movie/query/bigquery/Q1.sql",
+      "sha256": "9e6d611a40efa149461fab53fe715ffe4f68173db42832e84712a099d50bbf82",
+      "bytes": 351
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q2.sql",
+      "path": "files/movie/query/bigquery/Q2.sql",
+      "sha256": "10fbde262c35072064639ac1e17b4ff3543fb8319dce61e2dc72efa0faaa9415",
+      "bytes": 372
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q3.sql",
+      "path": "files/movie/query/bigquery/Q3.sql",
+      "sha256": "813b74f6c4367325230f4404a7569e43296def6a7d47abd82f012c6db6938d08",
+      "bytes": 387
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q4.sql",
+      "path": "files/movie/query/bigquery/Q4.sql",
+      "sha256": "a12f51cfce0d7f8753e4dddae84d48c8ea1aabe522b44e782cc32a6c61a820ce",
+      "bytes": 432
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q5.sql",
+      "path": "files/movie/query/bigquery/Q5.sql",
+      "sha256": "0b118c31478a33ae9e30e44943b208e200de7bf7884af38661eb829d006fa91a",
+      "bytes": 580
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q6.sql",
+      "path": "files/movie/query/bigquery/Q6.sql",
+      "sha256": "37163d277aa72ad54f55432a5a35408cb8b3b15ed6833bc5b7f03b984670ca1e",
+      "bytes": 576
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q7.sql",
+      "path": "files/movie/query/bigquery/Q7.sql",
+      "sha256": "e3da020149acc9bd823c56fc2af595a1492c17d827d0a82f6a573f7e6c2b7dab",
+      "bytes": 567
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q8.sql",
+      "path": "files/movie/query/bigquery/Q8.sql",
+      "sha256": "bba022688927969e5090e82805b5b50436cf804d2c9125c0662b0de6fdd249cd",
+      "bytes": 565
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q9.sql",
+      "path": "files/movie/query/bigquery/Q9.sql",
+      "sha256": "e0d9f8c1558404861c042565fa667e48779ebce5a63fd93635daf8b6eff86597",
+      "bytes": 994
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/movie/query/bigquery/Q10.sql",
+      "path": "files/movie/query/bigquery/Q10.sql",
+      "sha256": "9f158be9bf46ad98890e2d612519018dd4d187c470391652e945fd230e625522",
+      "bytes": 1076
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q1.sql",
+      "path": "files/animals/query/bigquery/Q1.sql",
+      "sha256": "5bda418a1c4afccaff42038651ad175f55b02d2151eeaaf4f50762a257ff8d3c",
+      "bytes": 470
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q2.sql",
+      "path": "files/animals/query/bigquery/Q2.sql",
+      "sha256": "16092fab3b51d0e9d5b44c77b9700ef8f64ccdeee5cd283ae0f8948b02e1c724",
+      "bytes": 470
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q3.sql",
+      "path": "files/animals/query/bigquery/Q3.sql",
+      "sha256": "f71309550aa662dcc0448919c42f3a50566933f632ce8b2c30c9a78443364549",
+      "bytes": 557
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q4.sql",
+      "path": "files/animals/query/bigquery/Q4.sql",
+      "sha256": "632ccf2b29f07457bb954c8024d3f37ee9860c6b22e4810c5eec6fc6d6e2e79c",
+      "bytes": 593
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q5.sql",
+      "path": "files/animals/query/bigquery/Q5.sql",
+      "sha256": "1942674941e5364a3d62ef4e540fc3f6aeb0e6676e8d45f1fd8df85563244ee8",
+      "bytes": 1016
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q6.sql",
+      "path": "files/animals/query/bigquery/Q6.sql",
+      "sha256": "7e615242e219f6c6cd1b38d3d732b77d7f2c69385a78ca2d4b494f347757f06b",
+      "bytes": 993
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q7.sql",
+      "path": "files/animals/query/bigquery/Q7.sql",
+      "sha256": "78180b2986efca30fefce82c15efc6ff9b4d03a0c7485e4bb6e20d870574e15f",
+      "bytes": 971
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q8.sql",
+      "path": "files/animals/query/bigquery/Q8.sql",
+      "sha256": "6150e92b004d0d8d0e2770cc07def504494a56e0120f567939754a4dfc14f9b6",
+      "bytes": 2097
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q9.sql",
+      "path": "files/animals/query/bigquery/Q9.sql",
+      "sha256": "445909bcbfd2f734f3f8b6b2cd46b9b06c2e197d4a037f56ef59397364b85c0f",
+      "bytes": 1009
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/animals/query/bigquery/Q10.sql",
+      "path": "files/animals/query/bigquery/Q10.sql",
+      "sha256": "e35d9a4f0ca7b16eaa569818678f4a88c22698951938e2c6e54dcd584a281e1e",
+      "bytes": 631
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q1.sql",
+      "path": "files/cars/query/bigquery/Q1.sql",
+      "sha256": "a8bb19c1d56ecce707cc14a71af5c2c7a7b5dfdaaec2b0fecd380bbaa4a9d499",
+      "bytes": 430
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q2.sql",
+      "path": "files/cars/query/bigquery/Q2.sql",
+      "sha256": "5577fadf0964f87eeb0b6aa3e636c7d3cdd8a7074adb71cbdab7384c3e716304",
+      "bytes": 559
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q3.sql",
+      "path": "files/cars/query/bigquery/Q3.sql",
+      "sha256": "b528fde5da64311d141b38e09b5c3dbb24b5f379812136eb8776f154c5cd44d6",
+      "bytes": 506
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q4.sql",
+      "path": "files/cars/query/bigquery/Q4.sql",
+      "sha256": "bcbd8ea701813559cc0c49b822fdf8f8cf2ae0b48870397c7e7d5af5ee312214",
+      "bytes": 482
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q5.sql",
+      "path": "files/cars/query/bigquery/Q5.sql",
+      "sha256": "24fa83becabf2b0b2a00bf4aa772d24c3f33336c2d4e4b9c3bdb83ab1e48a80d",
+      "bytes": 1081
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q6.sql",
+      "path": "files/cars/query/bigquery/Q6.sql",
+      "sha256": "0716d1be8ab00a160dfb51a7b8be3137f9cb0ed3c09466ffca6049b6d18c486c",
+      "bytes": 2657
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q7.sql",
+      "path": "files/cars/query/bigquery/Q7.sql",
+      "sha256": "eaed03c3e0106896534ffb7cc2d9141d024ff07af35eef9db3598a4b3e7c461b",
+      "bytes": 1677
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q8.sql",
+      "path": "files/cars/query/bigquery/Q8.sql",
+      "sha256": "6704dcef433fab6f385221556cf77c2b2bc3fc2812573156ff7c48fde7c86050",
+      "bytes": 490
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q9.sql",
+      "path": "files/cars/query/bigquery/Q9.sql",
+      "sha256": "0cee23acb8ef7c510ecabfa0599a7457f69cd99600f563a4c762ac71a10b857b",
+      "bytes": 606
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/cars/query/bigquery/Q10.sql",
+      "path": "files/cars/query/bigquery/Q10.sql",
+      "sha256": "e5e39c20f7a27f63d1215af6bd69153bcf2796bfd3c71070e870140aaeffc881",
+      "bytes": 962
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q1.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q1.sql",
+      "sha256": "61f9cf1981a70cf3c1168eecf884920636f6a40c8912e8ed413852c3db9ed796",
+      "bytes": 446
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q2.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q2.sql",
+      "sha256": "2d74df0d835eeecbc2f77c11163bf534ca9dc6bf5b0b752704edb8a8251199c4",
+      "bytes": 517
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q3.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q3.sql",
+      "sha256": "74b4deadb1dc0831db8de72618443a6df6349e5cc941855824eb63fd213bac66",
+      "bytes": 518
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q4.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q4.sql",
+      "sha256": "ca2f393fe53558518870479268111ba4364f0820e7a8fc023afce437f4a64a07",
+      "bytes": 981
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q5.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q5.sql",
+      "sha256": "e92c164864a405f5687ade102fc79f58c654f0583571cf6fe7920bff3e27bc14",
+      "bytes": 1568
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q6.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q6.sql",
+      "sha256": "6ce654ec7c6b16d05cb03ca82e4a7a726a87c51f61812b73d2e6137297450126",
+      "bytes": 1769
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q7.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q7.sql",
+      "sha256": "89ede48243400014b48b4362ae005cab94902dbb1f01949198ba7be92fcaef71",
+      "bytes": 893
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q8.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q8.sql",
+      "sha256": "cd3c7f96cfc824f5edda49337d405d63393e09c820b8dce25f01730e8505e03b",
+      "bytes": 859
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q9.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q9.sql",
+      "sha256": "c178f32f7c7a2b1a3a1cbd582d9c2b227ff252f063d5a33e780f6f4efa96db50",
+      "bytes": 1476
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q10.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q10.sql",
+      "sha256": "2655b7836794af4f5577df09b411cb7010a9e9889d9b9ef277fce5ca46e9a899",
+      "bytes": 3562
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q11.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q11.sql",
+      "sha256": "941514a4720b854b2947b83c4774e9faf5c42d17b080a987c226985e98f5a8ca",
+      "bytes": 5581
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q12.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q12.sql",
+      "sha256": "77d88516cfd72cfe0f2f8804bacd6688d81dd5dc110fb4f40fba7a8f275250ac",
+      "bytes": 2343
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q13.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q13.sql",
+      "sha256": "751bdb2cfbb9acb24ffa7b3f9bb0e8d64cb056855fabd7542b249a50e0709186",
+      "bytes": 1266
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/ecomm/queries/dialects/bigquery/q14.sql",
+      "path": "files/ecomm/queries/dialects/bigquery/q14.sql",
+      "sha256": "5940df9d5b604d012e48bccd5ca5ca8cdf794647e30e3a8e909af1b7899f5572",
+      "bytes": 1419
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q1.sql",
+      "path": "files/mmqa/query/bigquery/q1.sql",
+      "sha256": "5b87c917be3cbc999ad2af732473f8dc3422c053bd8a6849f47d39eb74ca6adb",
+      "bytes": 569
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q2a.sql",
+      "path": "files/mmqa/query/bigquery/q2a.sql",
+      "sha256": "8d76f17759216d3ac2bc19930d42469d74bcf40e5e5e79febb60a55bdfd79847",
+      "bytes": 476
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q2b.sql",
+      "path": "files/mmqa/query/bigquery/q2b.sql",
+      "sha256": "2c4d9f03fed80620ff0ea94ac2cfe2bc9e1fb2e93ce44c6992cdb7e6e758ef97",
+      "bytes": 991
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3a.sql",
+      "path": "files/mmqa/query/bigquery/q3a.sql",
+      "sha256": "7e26c430f62b9381874f73a0e34226ad7ac7fb183fce6072e5f308d73baf8dfd",
+      "bytes": 342
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3b.sql",
+      "path": "files/mmqa/query/bigquery/q3b.sql",
+      "sha256": "93053f935ee868d516c3a6bec518302137258583606ad6bc6936232163b3508a",
+      "bytes": 202
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3c.sql",
+      "path": "files/mmqa/query/bigquery/q3c.sql",
+      "sha256": "c5535f0725e86501c62eff3a219bf93a02f68b377e27c80628ec40e41df244b8",
+      "bytes": 203
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3d.sql",
+      "path": "files/mmqa/query/bigquery/q3d.sql",
+      "sha256": "06ba23ab4a669ed3fa9cb6eaded3950d721135669ab4e17056ea6cdc19bae600",
+      "bytes": 202
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3e.sql",
+      "path": "files/mmqa/query/bigquery/q3e.sql",
+      "sha256": "a34a6be3ab1871293ebc5f1ae3f3d9797ec92e105b1687c86f9a744c876ce08b",
+      "bytes": 201
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3f.sql",
+      "path": "files/mmqa/query/bigquery/q3f.sql",
+      "sha256": "0d5720cf0d3121d0c4c4e0b19e4b3380273278ce000737f6d190161370824d02",
+      "bytes": 345
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q3g.sql",
+      "path": "files/mmqa/query/bigquery/q3g.sql",
+      "sha256": "fc3e942fd51cbaccbefd5a0e4406faccb43dea3e03db0b7fddf01f727df0b8e2",
+      "bytes": 209
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q4.sql",
+      "path": "files/mmqa/query/bigquery/q4.sql",
+      "sha256": "3e5672442725e438e848bcea13e94e6a737543548e4cb97e80ae08b8d6b9c59b",
+      "bytes": 1360
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q5.sql",
+      "path": "files/mmqa/query/bigquery/q5.sql",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q6a.sql",
+      "path": "files/mmqa/query/bigquery/q6a.sql",
+      "sha256": "f5dee3caff9adbfab95331b41fed2715c5b67d4b86ea7fb2c08eec4dabd68c6d",
+      "bytes": 393
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q6b.sql",
+      "path": "files/mmqa/query/bigquery/q6b.sql",
+      "sha256": "ade9d1f2caa498e6f75ae57d576a5f3ba149b6992dd2f811d459ad13bbb4cab1",
+      "bytes": 391
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q6c.sql",
+      "path": "files/mmqa/query/bigquery/q6c.sql",
+      "sha256": "84d142dade87b3e4925b01e8a5c3dfeb2b8264d567c7eeb3c9662bd2d12e8e61",
+      "bytes": 406
+    },
+    {
+      "source": "https://github.com/sembench/SemBench/blob/8c2cac89b21c6782239e8e5b03d326d0c029b655/files/mmqa/query/bigquery/q7.sql",
+      "path": "files/mmqa/query/bigquery/q7.sql",
+      "sha256": "1c5a1e184c0866281aae1a4c0a00066c1459578c68f11ed5ce298a5393c97a6e",
+      "bytes": 512
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L18",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L33",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L53",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L77",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L91",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L104",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L118",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L129",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L140",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L624",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L656",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/TAG-Research/TAG-Bench/blob/f97b0b5ca211573837cf3236224ac658b4a959bc/tag/hand_written.py#L952",
+      "path": "tag/hand_written.py",
+      "sha256": "aa6870ef0530cb918f808b7f302518fd5e5f50db593533d965acca49bd9b25e3",
+      "bytes": 60477
+    },
+    {
+      "source": "https://github.com/unimib-datAI/UDA-Bench/blob/50039a527f156eeb9cad80118637da47db94b976/Query/Art/Mixed/mixed_queries.sql",
+      "path": "Query/Art/Mixed/mixed_queries.sql",
+      "sha256": "70ad88c89d0bc2fea8678d05725a907db17d3201347bb4e2d29f8f8620ce73f8",
+      "bytes": 1104
+    },
+    {
+      "source": "https://github.com/unimib-datAI/UDA-Bench/blob/50039a527f156eeb9cad80118637da47db94b976/Query/CSPaper/Mixed/mixed_queries.sql",
+      "path": "Query/CSPaper/Mixed/mixed_queries.sql",
+      "sha256": "4e8fe7fc5aa64c616d454f91aa745570854ddebcf4cb8699d660412431659dfb",
+      "bytes": 1425
+    },
+    {
+      "source": "https://github.com/unimib-datAI/UDA-Bench/blob/50039a527f156eeb9cad80118637da47db94b976/Query/Finan/Mixed/mixed_queries.sql",
+      "path": "Query/Finan/Mixed/mixed_queries.sql",
+      "sha256": "fd9862a69cd9ea616369c6c97aae5509dd5e7ee871a5b26473da180d12af0700",
+      "bytes": 1502
+    },
+    {
+      "source": "https://github.com/unimib-datAI/UDA-Bench/blob/50039a527f156eeb9cad80118637da47db94b976/Query/Legal/Mixed/mixed_queries.sql",
+      "path": "Query/Legal/Mixed/mixed_queries.sql",
+      "sha256": "4bb7c16a18e19fce7576d6768486a52639170277ebd626a6b757e1fe896ec6de",
+      "bytes": 1366
+    },
+    {
+      "source": "https://github.com/unimib-datAI/UDA-Bench/blob/50039a527f156eeb9cad80118637da47db94b976/Query/Player/Mixed/mixed_queries_filter_join.sql",
+      "path": "Query/Player/Mixed/mixed_queries_filter_join.sql",
+      "sha256": "6e13f23b76f3766aafb949f8e7a77b83932589e914d8a0511b7fcf9a46ed83e1",
+      "bytes": 3678
+    },
+    {
+      "source": "https://github.com/unimib-datAI/UDA-Bench/blob/50039a527f156eeb9cad80118637da47db94b976/Query/Med/Mixed/mixed_queries_filter_join.sql",
+      "path": "Query/Med/Mixed/mixed_queries_filter_join.sql",
+      "sha256": "25f259b20348b1514f9944c4c02c7c0318de26935decf2eee95deba0733711c0",
+      "bytes": 4769
+    },
+    {
+      "source": "../sem-filter-workloads-2026-10-02.md",
+      "path": "research/sem-filter-workloads-2026-10-02.md",
+      "sha256": "7287f622683582bd88de2b33928b6a00267301c26957c1f15b1ac2a0ff77dd03",
+      "bytes": 14735
+    },
+    {
+      "source": "../sem-filter-workloads-2026-10-02.md",
+      "path": "research/sem-filter-workloads-2026-10-02.md",
+      "sha256": "7287f622683582bd88de2b33928b6a00267301c26957c1f15b1ac2a0ff77dd03",
+      "bytes": 14735
+    },
+    {
+      "source": "../sem-filter-workloads-2026-10-02.md",
+      "path": "research/sem-filter-workloads-2026-10-02.md",
+      "sha256": "7287f622683582bd88de2b33928b6a00267301c26957c1f15b1ac2a0ff77dd03",
+      "bytes": 14735
+    },
+    {
+      "source": "../sem-filter-workloads-2026-10-02.md",
+      "path": "research/sem-filter-workloads-2026-10-02.md",
+      "sha256": "7287f622683582bd88de2b33928b6a00267301c26957c1f15b1ac2a0ff77dd03",
+      "bytes": 14735
+    },
+    {
+      "source": "../sem-filter-workloads-2026-10-02.md",
+      "path": "research/sem-filter-workloads-2026-10-02.md",
+      "sha256": "7287f622683582bd88de2b33928b6a00267301c26957c1f15b1ac2a0ff77dd03",
+      "bytes": 14735
+    },
+    {
+      "source": "../../query/clingen-model-evidence/queries.sql",
+      "path": "query/clingen-model-evidence/queries.sql",
+      "sha256": "50b4b06f39a46f4fda80809c83f55a54a6e3ec3194ca8cd722dfd2ca331f5c55",
+      "bytes": 509
+    },
+    {
+      "source": "../../query/talentclef-job-fit/query.sql",
+      "path": "query/talentclef-job-fit/query.sql",
+      "sha256": "9a4b9feaa717670b83f7d7110a550d195724a3036d169de395120a7067cae01a",
+      "bytes": 274
+    },
+    {
+      "source": "../../query/trial-prescreen/Q-TP-1.md",
+      "path": "query/trial-prescreen/Q-TP-1.md",
+      "sha256": "ed52fdd8cbf75ffa97ab3918db76c9a16726c6c7b26dcaa55be995964f5c08ab",
+      "bytes": 1559
+    },
+    {
+      "source": "../../query/trial-prescreen/Q-TP-2.md",
+      "path": "query/trial-prescreen/Q-TP-2.md",
+      "sha256": "1daa7f7ab432876bd79129c4efc4288acec1ead9a337479b6a15719b6ff7ad7e",
+      "bytes": 312
+    },
+    {
+      "source": "../../query/trial-prescreen/Q-TP-3.md",
+      "path": "query/trial-prescreen/Q-TP-3.md",
+      "sha256": "fef64724accbe6014446925b394dc682ce7cc380ae5755d1e3d56ef0987734ad",
+      "bytes": 242
+    }
+  ],
+  "method": "人工读源码和查询，逻辑计划重建；局部过滤下推是展示选择，不是实测物理计划。",
+  "validation": "88个唯一(group,id)，全部树同时含语义与关系节点（含轻混合投影）；所有本地链接检查。",
+  "no_model_calls": true,
+  "private_gold_access": false,
+  "cost": "未计量网络/CPU/整理成本；没有推理实验成本。"
+}

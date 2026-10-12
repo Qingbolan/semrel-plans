@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-12T16:22:48.929054+08:00",
+  "schema_version": 1,
+  "original_88_trees_preserved": true,
+  "local_links": "PASS",
+  "deterministic_csv_json_markdown": "PASS",
+  "integrity_and_statistics_tests": 5,
+  "summary": {
+    "queries": 88,
+    "nodes": 580,
+    "edges": 492,
+    "sources": 84,
+    "operator_types": 29,
+    "benchmarks": {
+      "local-derived": 10,
+      "sembench": 60,
+      "tag-bench": 12,
+      "uda-bench": 6
+    },
+    "measurement": "logical_plan_nodes; not runtime calls or independent benchmark counts"
+  },
+  "execution_quality": "not measured"
+}

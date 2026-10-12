@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-05T14:40:32+08:00",
+  "scope": "回顾2026-10-01至10-02记录，2026-10-05核对源码；非全量文献查询普查",
+  "source_commits": {
+    "SemBench": "8c2cac89b21c6782239e8e5b03d326d0c029b655",
+    "TAG-Bench": "f97b0b5ca211573837cf3236224ac658b4a959bc",
+    "UDA-Bench": "50039a527f156eeb9cad80118637da47db94b976"
+  },
+  "scenarios": [
+    "files/movie/scenario.json",
+    "files/animals/scenario.json",
+    "files/cars/scenario.json",
+    "files/ecomm/scenario.json",
+    "files/mmqa/scenario.json",
+    "files/tag/scenario.json",
+    "files/uda/scenario.json",
+    "files/derived/scenario.json"
+  ],
+  "provenance_updated_on": "2026-10-12"
+}

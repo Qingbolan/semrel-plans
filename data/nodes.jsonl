@@ -1,0 +1,580 @@
+{"query_id": "sembench/movie/Q1", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 5"}
+{"query_id": "sembench/movie/Q1", "node_id": "n001", "operator_type": "PROJECT", "label": "π reviewId"}
+{"query_id": "sembench/movie/Q1", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 明显正面"}
+{"query_id": "sembench/movie/Q1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/movie/Q2", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 5"}
+{"query_id": "sembench/movie/Q2", "node_id": "n001", "operator_type": "PROJECT", "label": "π reviewId"}
+{"query_id": "sembench/movie/Q2", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 明显正面"}
+{"query_id": "sembench/movie/Q2", "node_id": "n003", "operator_type": "FILTER", "label": "σ id = taken_3"}
+{"query_id": "sembench/movie/Q2", "node_id": "n004", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/movie/Q3", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*) → positive_review_cnt"}
+{"query_id": "sembench/movie/Q3", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 明显正面"}
+{"query_id": "sembench/movie/Q3", "node_id": "n002", "operator_type": "FILTER", "label": "σ id = taken_3"}
+{"query_id": "sembench/movie/Q3", "node_id": "n003", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/movie/Q4", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ SUM(positive ? 1 : 0) / COUNT(*)"}
+{"query_id": "sembench/movie/Q4", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP positive := 明显正面"}
+{"query_id": "sembench/movie/Q4", "node_id": "n002", "operator_type": "FILTER", "label": "σ id = taken_3"}
+{"query_id": "sembench/movie/Q4", "node_id": "n003", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/movie/Q5", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 10"}
+{"query_id": "sembench/movie/Q5", "node_id": "n001", "operator_type": "PROJECT", "label": "π r1.id, r1.reviewId, r2.reviewId"}
+{"query_id": "sembench/movie/Q5", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 同为正面或同为负面"}
+{"query_id": "sembench/movie/Q5", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ r1.id=r2.id AND r1.reviewId≠r2.reviewId"}
+{"query_id": "sembench/movie/Q5", "node_id": "n004", "operator_type": "FILTER", "label": "σ r1.id = ant_man_and_the_wasp_quantumania"}
+{"query_id": "sembench/movie/Q5", "node_id": "n005", "operator_type": "SCAN", "label": "Scan reviews r1"}
+{"query_id": "sembench/movie/Q5", "node_id": "n006", "operator_type": "SCAN", "label": "Scan reviews r2"}
+{"query_id": "sembench/movie/Q6", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 10"}
+{"query_id": "sembench/movie/Q6", "node_id": "n001", "operator_type": "PROJECT", "label": "π r1.id, r1.reviewId, r2.reviewId"}
+{"query_id": "sembench/movie/Q6", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 一正一负"}
+{"query_id": "sembench/movie/Q6", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ r1.id=r2.id AND r1.reviewId≠r2.reviewId"}
+{"query_id": "sembench/movie/Q6", "node_id": "n004", "operator_type": "FILTER", "label": "σ r1.id = ant_man_and_the_wasp_quantumania"}
+{"query_id": "sembench/movie/Q6", "node_id": "n005", "operator_type": "SCAN", "label": "Scan reviews r1"}
+{"query_id": "sembench/movie/Q6", "node_id": "n006", "operator_type": "SCAN", "label": "Scan reviews r2"}
+{"query_id": "sembench/movie/Q7", "node_id": "n000", "operator_type": "PROJECT", "label": "π r1.id, r1.reviewId, r2.reviewId"}
+{"query_id": "sembench/movie/Q7", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 一正一负"}
+{"query_id": "sembench/movie/Q7", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ r1.id=r2.id AND r1.reviewId≠r2.reviewId"}
+{"query_id": "sembench/movie/Q7", "node_id": "n003", "operator_type": "FILTER", "label": "σ r1.id = ant_man_and_the_wasp_quantumania"}
+{"query_id": "sembench/movie/Q7", "node_id": "n004", "operator_type": "SCAN", "label": "Scan reviews r1"}
+{"query_id": "sembench/movie/Q7", "node_id": "n005", "operator_type": "SCAN", "label": "Scan reviews r2"}
+{"query_id": "sembench/movie/Q8", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY sentiment; COUNT(*)"}
+{"query_id": "sembench/movie/Q8", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP AI.IF 为真→POSITIVE，否则→NEGATIVE"}
+{"query_id": "sembench/movie/Q8", "node_id": "n002", "operator_type": "FILTER", "label": "σ id = taken_3"}
+{"query_id": "sembench/movie/Q8", "node_id": "n003", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/movie/Q9", "node_id": "n000", "operator_type": "PROJECT", "label": "π reviewId, reviewScore"}
+{"query_id": "sembench/movie/Q9", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP reviewScore := 情绪评分1–5"}
+{"query_id": "sembench/movie/Q9", "node_id": "n002", "operator_type": "FILTER", "label": "σ id = ant_man_and_the_wasp_quantumania"}
+{"query_id": "sembench/movie/Q9", "node_id": "n003", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/movie/Q10", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY id; AVG(score)"}
+{"query_id": "sembench/movie/Q10", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP score := 情绪评分1–5"}
+{"query_id": "sembench/movie/Q10", "node_id": "n002", "operator_type": "SCAN", "label": "Scan reviews"}
+{"query_id": "sembench/animals/Q1", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*)"}
+{"query_id": "sembench/animals/Q1", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像含斑马"}
+{"query_id": "sembench/animals/Q1", "node_id": "n002", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q2", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*)"}
+{"query_id": "sembench/animals/Q2", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 音频含大象"}
+{"query_id": "sembench/animals/Q2", "node_id": "n002", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q3", "node_id": "n000", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q3", "node_id": "n001", "operator_type": "LIMIT", "label": "LIMIT 1"}
+{"query_id": "sembench/animals/Q3", "node_id": "n002", "operator_type": "SORT", "label": "τ count DESC"}
+{"query_id": "sembench/animals/Q3", "node_id": "n003", "operator_type": "AGGREGATE", "label": "γ GROUP BY city; COUNT(*) → count"}
+{"query_id": "sembench/animals/Q3", "node_id": "n004", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像含斑马"}
+{"query_id": "sembench/animals/Q3", "node_id": "n005", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q4", "node_id": "n000", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q4", "node_id": "n001", "operator_type": "LIMIT", "label": "LIMIT 1"}
+{"query_id": "sembench/animals/Q4", "node_id": "n002", "operator_type": "SORT", "label": "τ count DESC"}
+{"query_id": "sembench/animals/Q4", "node_id": "n003", "operator_type": "AGGREGATE", "label": "γ GROUP BY city; COUNT(*) → count"}
+{"query_id": "sembench/animals/Q4", "node_id": "n004", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 音频含大象"}
+{"query_id": "sembench/animals/Q4", "node_id": "n005", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q5", "node_id": "n000", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/animals/Q5", "node_id": "n001", "operator_type": "UNION_ALL", "label": "UNION ALL"}
+{"query_id": "sembench/animals/Q5", "node_id": "n002", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q5", "node_id": "n003", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 大象存在"}
+{"query_id": "sembench/animals/Q5", "node_id": "n004", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q5", "node_id": "n005", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q5", "node_id": "n006", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 大象存在"}
+{"query_id": "sembench/animals/Q5", "node_id": "n007", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q6", "node_id": "n000", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/animals/Q6", "node_id": "n001", "operator_type": "ANTI_JOIN", "label": "ANTI JOIN on city"}
+{"query_id": "sembench/animals/Q6", "node_id": "n002", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q6", "node_id": "n003", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 猴子存在"}
+{"query_id": "sembench/animals/Q6", "node_id": "n004", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q6", "node_id": "n005", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q6", "node_id": "n006", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 猴子存在"}
+{"query_id": "sembench/animals/Q6", "node_id": "n007", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q7", "node_id": "n000", "operator_type": "INTERSECT", "label": "INTERSECT DISTINCT"}
+{"query_id": "sembench/animals/Q7", "node_id": "n001", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q7", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 斑马存在"}
+{"query_id": "sembench/animals/Q7", "node_id": "n003", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q7", "node_id": "n004", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q7", "node_id": "n005", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 黑斑羚存在"}
+{"query_id": "sembench/animals/Q7", "node_id": "n006", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q8", "node_id": "n000", "operator_type": "INTERSECT", "label": "INTERSECT DISTINCT"}
+{"query_id": "sembench/animals/Q8", "node_id": "n001", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/animals/Q8", "node_id": "n002", "operator_type": "UNION_ALL", "label": "UNION ALL"}
+{"query_id": "sembench/animals/Q8", "node_id": "n003", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q8", "node_id": "n004", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 大象存在"}
+{"query_id": "sembench/animals/Q8", "node_id": "n005", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q8", "node_id": "n006", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q8", "node_id": "n007", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 大象存在"}
+{"query_id": "sembench/animals/Q8", "node_id": "n008", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q8", "node_id": "n009", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/animals/Q8", "node_id": "n010", "operator_type": "UNION_ALL", "label": "UNION ALL"}
+{"query_id": "sembench/animals/Q8", "node_id": "n011", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q8", "node_id": "n012", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 猴子存在"}
+{"query_id": "sembench/animals/Q8", "node_id": "n013", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q8", "node_id": "n014", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q8", "node_id": "n015", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 猴子存在"}
+{"query_id": "sembench/animals/Q8", "node_id": "n016", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q9", "node_id": "n000", "operator_type": "INTERSECT", "label": "INTERSECT DISTINCT"}
+{"query_id": "sembench/animals/Q9", "node_id": "n001", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q9", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 猴子存在"}
+{"query_id": "sembench/animals/Q9", "node_id": "n003", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/animals/Q9", "node_id": "n004", "operator_type": "PROJECT", "label": "π city"}
+{"query_id": "sembench/animals/Q9", "node_id": "n005", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 猴子存在"}
+{"query_id": "sembench/animals/Q9", "node_id": "n006", "operator_type": "SCAN", "label": "Scan AudioData"}
+{"query_id": "sembench/animals/Q10", "node_id": "n000", "operator_type": "PROJECT", "label": "π city, stationID"}
+{"query_id": "sembench/animals/Q10", "node_id": "n001", "operator_type": "LIMIT", "label": "LIMIT 1"}
+{"query_id": "sembench/animals/Q10", "node_id": "n002", "operator_type": "SORT", "label": "τ count DESC"}
+{"query_id": "sembench/animals/Q10", "node_id": "n003", "operator_type": "AGGREGATE", "label": "γ GROUP BY city, stationID; COUNT(*) → count"}
+{"query_id": "sembench/animals/Q10", "node_id": "n004", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像含斑马"}
+{"query_id": "sembench/animals/Q10", "node_id": "n005", "operator_type": "SCAN", "label": "Scan ImageData"}
+{"query_id": "sembench/cars/Q1", "node_id": "n000", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/cars/Q1", "node_id": "n001", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q1", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 投诉表明碰撞/事故"}
+{"query_id": "sembench/cars/Q1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan complaints"}
+{"query_id": "sembench/cars/Q2", "node_id": "n000", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/cars/Q2", "node_id": "n001", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q2", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 录音表明 dead battery"}
+{"query_id": "sembench/cars/Q2", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q2", "node_id": "n004", "operator_type": "FILTER", "label": "σ fuel_type = Electric"}
+{"query_id": "sembench/cars/Q2", "node_id": "n005", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q2", "node_id": "n006", "operator_type": "SCAN", "label": "Scan audio_mm 录音"}
+{"query_id": "sembench/cars/Q3", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 10"}
+{"query_id": "sembench/cars/Q3", "node_id": "n001", "operator_type": "PROJECT", "label": "π vin"}
+{"query_id": "sembench/cars/Q3", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图片显示无损伤"}
+{"query_id": "sembench/cars/Q3", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q3", "node_id": "n004", "operator_type": "FILTER", "label": "σ transmission = Manual"}
+{"query_id": "sembench/cars/Q3", "node_id": "n005", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q3", "node_id": "n006", "operator_type": "SCAN", "label": "Scan car_mm 图片"}
+{"query_id": "sembench/cars/Q4", "node_id": "n000", "operator_type": "PROJECT", "label": "π 2026 - avg_year"}
+{"query_id": "sembench/cars/Q4", "node_id": "n001", "operator_type": "AGGREGATE", "label": "γ AVG(year) → avg_year"}
+{"query_id": "sembench/cars/Q4", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 投诉涉及发动机问题"}
+{"query_id": "sembench/cars/Q4", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q4", "node_id": "n004", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q4", "node_id": "n005", "operator_type": "SCAN", "label": "Scan complaints"}
+{"query_id": "sembench/cars/Q5", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY transmission; COUNT(*)"}
+{"query_id": "sembench/cars/Q5", "node_id": "n001", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/cars/Q5", "node_id": "n002", "operator_type": "PROJECT", "label": "π car_id, transmission"}
+{"query_id": "sembench/cars/Q5", "node_id": "n003", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图片损伤 AND 录音损伤"}
+{"query_id": "sembench/cars/Q5", "node_id": "n004", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q5", "node_id": "n005", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q5", "node_id": "n006", "operator_type": "FILTER", "label": "σ transmission = Automatic"}
+{"query_id": "sembench/cars/Q5", "node_id": "n007", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q5", "node_id": "n008", "operator_type": "SCAN", "label": "Scan audio_mm 录音"}
+{"query_id": "sembench/cars/Q5", "node_id": "n009", "operator_type": "SCAN", "label": "Scan car_mm 图片"}
+{"query_id": "sembench/cars/Q6", "node_id": "n000", "operator_type": "FILTER", "label": "σ 至少一个标志=1 AND 至少一个标志=0"}
+{"query_id": "sembench/cars/Q6", "node_id": "n001", "operator_type": "COMPUTE", "label": "构造各模态 1/0/NULL 标志"}
+{"query_id": "sembench/cars/Q6", "node_id": "n002", "operator_type": "LEFT_JOIN", "label": "LEFT JOIN sick_* on car_id"}
+{"query_id": "sembench/cars/Q6", "node_id": "n003", "operator_type": "CTE", "label": "CTE two_more_modalities"}
+{"query_id": "sembench/cars/Q6", "node_id": "n004", "operator_type": "FILTER", "label": "σ 至少两种模态输入存在"}
+{"query_id": "sembench/cars/Q6", "node_id": "n005", "operator_type": "LEFT_JOIN", "label": "LEFT JOIN ×3 on car_id"}
+{"query_id": "sembench/cars/Q6", "node_id": "n006", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q6", "node_id": "n007", "operator_type": "SCAN", "label": "Scan car_mm 图片"}
+{"query_id": "sembench/cars/Q6", "node_id": "n008", "operator_type": "SCAN", "label": "Scan audio_mm 录音"}
+{"query_id": "sembench/cars/Q6", "node_id": "n009", "operator_type": "SCAN", "label": "Scan complaints"}
+{"query_id": "sembench/cars/Q6", "node_id": "n010", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q6", "node_id": "n011", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 录音表明损伤"}
+{"query_id": "sembench/cars/Q6", "node_id": "n012", "operator_type": "FILTER", "label": "σ 对应模态 ID 非空"}
+{"query_id": "sembench/cars/Q6", "node_id": "n013", "operator_type": "CTE_REF", "label": "CTE REF two_more_modalities"}
+{"query_id": "sembench/cars/Q6", "node_id": "n014", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q6", "node_id": "n015", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图片表明损伤"}
+{"query_id": "sembench/cars/Q6", "node_id": "n016", "operator_type": "FILTER", "label": "σ 对应模态 ID 非空"}
+{"query_id": "sembench/cars/Q6", "node_id": "n017", "operator_type": "CTE_REF", "label": "CTE REF two_more_modalities"}
+{"query_id": "sembench/cars/Q6", "node_id": "n018", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q6", "node_id": "n019", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 投诉表明起火"}
+{"query_id": "sembench/cars/Q6", "node_id": "n020", "operator_type": "FILTER", "label": "σ 对应模态 ID 非空"}
+{"query_id": "sembench/cars/Q6", "node_id": "n021", "operator_type": "CTE_REF", "label": "CTE REF two_more_modalities"}
+{"query_id": "sembench/cars/Q7", "node_id": "n000", "operator_type": "UNION_DISTINCT", "label": "UNION DISTINCT car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n001", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 录音：刹车磨损"}
+{"query_id": "sembench/cars/Q7", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n004", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q7", "node_id": "n005", "operator_type": "SCAN", "label": "Scan audio_mm 录音"}
+{"query_id": "sembench/cars/Q7", "node_id": "n006", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n007", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 投诉：电气故障"}
+{"query_id": "sembench/cars/Q7", "node_id": "n008", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n009", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q7", "node_id": "n010", "operator_type": "SCAN", "label": "Scan complaints"}
+{"query_id": "sembench/cars/Q7", "node_id": "n011", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n012", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图片：凹陷"}
+{"query_id": "sembench/cars/Q7", "node_id": "n013", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q7", "node_id": "n014", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q7", "node_id": "n015", "operator_type": "SCAN", "label": "Scan car_mm 图片"}
+{"query_id": "sembench/cars/Q8", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 100"}
+{"query_id": "sembench/cars/Q8", "node_id": "n001", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q8", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图片：穿孔 AND 漆面划痕"}
+{"query_id": "sembench/cars/Q8", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q8", "node_id": "n004", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q8", "node_id": "n005", "operator_type": "SCAN", "label": "Scan car_mm 图片"}
+{"query_id": "sembench/cars/Q9", "node_id": "n000", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "sembench/cars/Q9", "node_id": "n001", "operator_type": "PROJECT", "label": "π car_id"}
+{"query_id": "sembench/cars/Q9", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图片撕裂 AND 录音点火异常（联合判断）"}
+{"query_id": "sembench/cars/Q9", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q9", "node_id": "n004", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q9", "node_id": "n005", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q9", "node_id": "n006", "operator_type": "SCAN", "label": "Scan car_mm 图片"}
+{"query_id": "sembench/cars/Q9", "node_id": "n007", "operator_type": "SCAN", "label": "Scan audio_mm 录音"}
+{"query_id": "sembench/cars/Q10", "node_id": "n000", "operator_type": "PROJECT", "label": "π car_id, problem_category"}
+{"query_id": "sembench/cars/Q10", "node_id": "n001", "operator_type": "SEM_CLASSIFY", "label": "SEM_CLASSIFY 投诉→24个部件类别"}
+{"query_id": "sembench/cars/Q10", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ car_id"}
+{"query_id": "sembench/cars/Q10", "node_id": "n003", "operator_type": "SCAN", "label": "Scan cars"}
+{"query_id": "sembench/cars/Q10", "node_id": "n004", "operator_type": "SCAN", "label": "Scan complaints"}
+{"query_id": "sembench/ecomm/q1", "node_id": "n000", "operator_type": "PROJECT", "label": "π id"}
+{"query_id": "sembench/ecomm/q1", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述：Reebok 背包"}
+{"query_id": "sembench/ecomm/q1", "node_id": "n002", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q2", "node_id": "n000", "operator_type": "PROJECT", "label": "π 从图片 URI 解析 id"}
+{"query_id": "sembench/ecomm/q2", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像：黄银双色运动鞋"}
+{"query_id": "sembench/ecomm/q2", "node_id": "n002", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q3", "node_id": "n000", "operator_type": "PROJECT", "label": "π id, category=品牌"}
+{"query_id": "sembench/ecomm/q3", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP 描述→品牌"}
+{"query_id": "sembench/ecomm/q3", "node_id": "n002", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n000", "operator_type": "PROJECT", "label": "π id, category=主色"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP 图像→主色"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n004", "operator_type": "FILTER", "label": "σ baseColour ∈ Black/Blue/Red/White/Orange/Green"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n005", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n006", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q4", "node_id": "n007", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q5", "node_id": "n000", "operator_type": "PROJECT", "label": "π id, category"}
+{"query_id": "sembench/ecomm/q5", "node_id": "n001", "operator_type": "SEM_CLASSIFY", "label": "SEM_CLASSIFY 描述→Dress/Bottomwear/Socks/Topwear/Innerwear"}
+{"query_id": "sembench/ecomm/q5", "node_id": "n002", "operator_type": "FILTER", "label": "σ masterCategory=Apparel; 排除 Saree/Apparel Set/Loungewear and Nightwear"}
+{"query_id": "sembench/ecomm/q5", "node_id": "n003", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n000", "operator_type": "PROJECT", "label": "π id, category"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n001", "operator_type": "SEM_CLASSIFY", "label": "SEM_CLASSIFY 图片→五种服装类别"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n004", "operator_type": "FILTER", "label": "σ masterCategory=Apparel; 排除 Saree/Apparel Set/Loungewear and Nightwear"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n005", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n006", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q6", "node_id": "n007", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q7", "node_id": "n000", "operator_type": "PROJECT", "label": "π p1.id-p2.id"}
+{"query_id": "sembench/ecomm/q7", "node_id": "n001", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 描述：同品牌 AND 同类别"}
+{"query_id": "sembench/ecomm/q7", "node_id": "n002", "operator_type": "FILTER", "label": "σ price ≤ 500"}
+{"query_id": "sembench/ecomm/q7", "node_id": "n003", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q7", "node_id": "n004", "operator_type": "FILTER", "label": "σ price ≤ 500"}
+{"query_id": "sembench/ecomm/q7", "node_id": "n005", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q8", "node_id": "n000", "operator_type": "PROJECT", "label": "π 源码拼接 imageID-imageID"}
+{"query_id": "sembench/ecomm/q8", "node_id": "n001", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 图像符合描述"}
+{"query_id": "sembench/ecomm/q8", "node_id": "n002", "operator_type": "FILTER", "label": "σ description 长度 ≥ 3000"}
+{"query_id": "sembench/ecomm/q8", "node_id": "n003", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q8", "node_id": "n004", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n000", "operator_type": "PROJECT", "label": "π p1.id-p2.id"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n001", "operator_type": "SEM_LEFT_JOIN", "label": "SEM_LEFT_JOIN 不同URI AND 图像同类别同主色"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n004", "operator_type": "FILTER", "label": "σ 简单六色 AND colour1=空 AND colour2=空 AND price<800"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n005", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n006", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n007", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n008", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n009", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n010", "operator_type": "FILTER", "label": "σ 简单六色 AND colour1=空 AND colour2=空 AND price<800"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n011", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n012", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q9", "node_id": "n013", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n000", "operator_type": "PROJECT", "label": "π 三商品 id 拼接"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n001", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 下装与上装同主色同品牌"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n002", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 鞋与下装同主色同品牌"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n003", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像：鞋类"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n004", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n005", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n006", "operator_type": "FILTER", "label": "σ baseColour ∈ Black/Blue/Red/White AND price≤1000"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n007", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n008", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n009", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n010", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像：下装"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n011", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n012", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n013", "operator_type": "FILTER", "label": "σ baseColour ∈ Black/Blue/Red/White AND price≤1000"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n014", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n015", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n016", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n017", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像：上装，非连衣裙"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n018", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n019", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n020", "operator_type": "FILTER", "label": "σ baseColour ∈ Black/Blue/Red/White AND price≤1000"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n021", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n022", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q10", "node_id": "n023", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n000", "operator_type": "PROJECT", "label": "π 四商品 id 拼接"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n001", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 上装与配饰同品牌"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n002", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 下装与上装同品牌"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n003", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 鞋与下装同品牌"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n004", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图文：黑色鞋"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n005", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n006", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n007", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n008", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n009", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n010", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图文：黑色下装，非泳装"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n011", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n012", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n013", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n014", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n015", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n016", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图文：黑色上装，非泳装/连衣裙"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n017", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n018", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n019", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n020", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n021", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n022", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图文：手表/珠宝/包"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n023", "operator_type": "FILTER", "label": "σ price≤500"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n024", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n025", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n026", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n027", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q11", "node_id": "n028", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n000", "operator_type": "PROJECT", "label": "π 生成JSON（SQL 别名 id）"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP 图文→id/brand/category JSON"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述：Adidas 或 Puma"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n004", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n005", "operator_type": "FILTER", "label": "σ masterCategory ∈ Accessories/Apparel/Footwear"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n006", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n007", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q12", "node_id": "n008", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n000", "operator_type": "PROJECT", "label": "π id"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 男士圆领短袖跑步衫；颜色/条纹/天气需求"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ filename = basename(uri)"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ imageURL = link"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n004", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n005", "operator_type": "SCAN", "label": "Scan IMAGE_MAPPING"}
+{"query_id": "sembench/ecomm/q13", "node_id": "n006", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY 商品id/标题/描述; ARRAY_AGG(imageID ORDER BY score ASC LIMIT 1)"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP score := 图像与描述匹配度"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 图像：白袜"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n003", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 图像符合描述"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n004", "operator_type": "FILTER", "label": "σ price<130"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n005", "operator_type": "SCAN", "label": "Scan STYLES_DETAILS"}
+{"query_id": "sembench/ecomm/q14", "node_id": "n006", "operator_type": "SCAN", "label": "Scan IMAGES"}
+{"query_id": "sembench/mmqa/q1", "node_id": "n000", "operator_type": "PROJECT", "label": "π director"}
+{"query_id": "sembench/mmqa/q1", "node_id": "n001", "operator_type": "JOIN", "label": "⋈ Title = title"}
+{"query_id": "sembench/mmqa/q1", "node_id": "n002", "operator_type": "FILTER", "label": "σ Role = Bob Whitewood"}
+{"query_id": "sembench/mmqa/q1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan ben_piazza"}
+{"query_id": "sembench/mmqa/q1", "node_id": "n004", "operator_type": "SEM_MAP", "label": "SEM_MAP 文本→导演名"}
+{"query_id": "sembench/mmqa/q1", "node_id": "n005", "operator_type": "SCAN", "label": "Scan ben_piazza_text_data"}
+{"query_id": "sembench/mmqa/q2a", "node_id": "n000", "operator_type": "PROJECT", "label": "π ID, uri"}
+{"query_id": "sembench/mmqa/q2a", "node_id": "n001", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 图片是赛马场 logo"}
+{"query_id": "sembench/mmqa/q2a", "node_id": "n002", "operator_type": "SCAN", "label": "Scan ap_warrior"}
+{"query_id": "sembench/mmqa/q2a", "node_id": "n003", "operator_type": "SCAN", "label": "Scan images"}
+{"query_id": "sembench/mmqa/q2b", "node_id": "n000", "operator_type": "PROJECT", "label": "π ID, uri, color"}
+{"query_id": "sembench/mmqa/q2b", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP logo图像→颜色"}
+{"query_id": "sembench/mmqa/q2b", "node_id": "n002", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 图片是赛马场 logo"}
+{"query_id": "sembench/mmqa/q2b", "node_id": "n003", "operator_type": "SCAN", "label": "Scan ap_warrior"}
+{"query_id": "sembench/mmqa/q2b", "node_id": "n004", "operator_type": "SCAN", "label": "Scan images"}
+{"query_id": "sembench/mmqa/q3a", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3a", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：喜剧"}
+{"query_id": "sembench/mmqa/q3a", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q3b", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3b", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：科幻"}
+{"query_id": "sembench/mmqa/q3b", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q3c", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3c", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：爱情"}
+{"query_id": "sembench/mmqa/q3c", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q3d", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3d", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：恐怖"}
+{"query_id": "sembench/mmqa/q3d", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q3e", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3e", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：盗窃题材"}
+{"query_id": "sembench/mmqa/q3e", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q3f", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3f", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：浪漫喜剧"}
+{"query_id": "sembench/mmqa/q3f", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q3g", "node_id": "n000", "operator_type": "PROJECT", "label": "π title"}
+{"query_id": "sembench/mmqa/q3g", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 描述表明：传记喜剧"}
+{"query_id": "sembench/mmqa/q3g", "node_id": "n002", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q4", "node_id": "n000", "operator_type": "SORT", "label": "τ genre ASC"}
+{"query_id": "sembench/mmqa/q4", "node_id": "n001", "operator_type": "AGGREGATE", "label": "γ GROUP BY genre; STRING_AGG(title)"}
+{"query_id": "sembench/mmqa/q4", "node_id": "n002", "operator_type": "UNNEST", "label": "UNNEST genres[]"}
+{"query_id": "sembench/mmqa/q4", "node_id": "n003", "operator_type": "SEM_MAP", "label": "SEM_MAP 文本→全部genres[]"}
+{"query_id": "sembench/mmqa/q4", "node_id": "n004", "operator_type": "FILTER", "label": "σ title ∈ 原SQL的24部电影"}
+{"query_id": "sembench/mmqa/q4", "node_id": "n005", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n000", "operator_type": "PROJECT", "label": "π actor"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n001", "operator_type": "FILTER", "label": "σ COUNT(DISTINCT title)=16"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n002", "operator_type": "AGGREGATE", "label": "γ GROUP BY actor; COUNT(DISTINCT title)"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n003", "operator_type": "UNNEST", "label": "UNNEST actors[]"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n004", "operator_type": "SEM_MAP", "label": "SEM_MAP 文本→演员列表"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n005", "operator_type": "FILTER", "label": "σ title ∈ 指定16部电影"}
+{"query_id": "sembench/mmqa/q5", "node_id": "n006", "operator_type": "SCAN", "label": "Scan lizzy_caplan_text_data"}
+{"query_id": "sembench/mmqa/q6a", "node_id": "n000", "operator_type": "PROJECT", "label": "π Airlines"}
+{"query_id": "sembench/mmqa/q6a", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER Destinations 包含 Frankfurt 的目的地"}
+{"query_id": "sembench/mmqa/q6a", "node_id": "n002", "operator_type": "SCAN", "label": "Scan tampa_international_airport"}
+{"query_id": "sembench/mmqa/q6b", "node_id": "n000", "operator_type": "PROJECT", "label": "π Airlines"}
+{"query_id": "sembench/mmqa/q6b", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER Destinations 包含 Germany 的目的地"}
+{"query_id": "sembench/mmqa/q6b", "node_id": "n002", "operator_type": "SCAN", "label": "Scan tampa_international_airport"}
+{"query_id": "sembench/mmqa/q6c", "node_id": "n000", "operator_type": "PROJECT", "label": "π Airlines"}
+{"query_id": "sembench/mmqa/q6c", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER Destinations 包含 Europe 的目的地"}
+{"query_id": "sembench/mmqa/q6c", "node_id": "n002", "operator_type": "SCAN", "label": "Scan tampa_international_airport"}
+{"query_id": "sembench/mmqa/q7", "node_id": "n000", "operator_type": "PROJECT", "label": "π Airlines, uri"}
+{"query_id": "sembench/mmqa/q7", "node_id": "n001", "operator_type": "SEM_JOIN", "label": "SEM_JOIN 图像是航空公司logo"}
+{"query_id": "sembench/mmqa/q7", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 有欧洲目的地"}
+{"query_id": "sembench/mmqa/q7", "node_id": "n003", "operator_type": "SCAN", "label": "Scan tampa_international_airport"}
+{"query_id": "sembench/mmqa/q7", "node_id": "n004", "operator_type": "SCAN", "label": "Scan images"}
+{"query_id": "tag-bench/tag/0", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*)"}
+{"query_id": "tag-bench/tag/0", "node_id": "n001", "operator_type": "SEMI_JOIN", "label": "SEMI JOIN cname"}
+{"query_id": "tag-bench/tag/0", "node_id": "n002", "operator_type": "FILTER", "label": "σ AvgScrMath > 560"}
+{"query_id": "tag-bench/tag/0", "node_id": "n003", "operator_type": "FILTER", "label": "σ rtype=S"}
+{"query_id": "tag-bench/tag/0", "node_id": "n004", "operator_type": "SCAN", "label": "Scan satscores"}
+{"query_id": "tag-bench/tag/0", "node_id": "n005", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 县位于湾区"}
+{"query_id": "tag-bench/tag/0", "node_id": "n006", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "tag-bench/tag/0", "node_id": "n007", "operator_type": "PROJECT", "label": "π cname"}
+{"query_id": "tag-bench/tag/0", "node_id": "n008", "operator_type": "FILTER", "label": "σ AvgScrMath > 560"}
+{"query_id": "tag-bench/tag/0", "node_id": "n009", "operator_type": "FILTER", "label": "σ rtype=S"}
+{"query_id": "tag-bench/tag/0", "node_id": "n010", "operator_type": "SCAN", "label": "Scan satscores"}
+{"query_id": "tag-bench/tag/1", "node_id": "n000", "operator_type": "PROJECT", "label": "π Phone"}
+{"query_id": "tag-bench/tag/1", "node_id": "n001", "operator_type": "JOIN", "label": "⋈ cds=CDSCode"}
+{"query_id": "tag-bench/tag/1", "node_id": "n002", "operator_type": "ARGMIN", "label": "ARGMIN AvgScrRead"}
+{"query_id": "tag-bench/tag/1", "node_id": "n003", "operator_type": "SEMI_JOIN", "label": "SEMI JOIN cname"}
+{"query_id": "tag-bench/tag/1", "node_id": "n004", "operator_type": "FILTER", "label": "σ rtype=S"}
+{"query_id": "tag-bench/tag/1", "node_id": "n005", "operator_type": "SCAN", "label": "Scan satscores"}
+{"query_id": "tag-bench/tag/1", "node_id": "n006", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 县位于南加州"}
+{"query_id": "tag-bench/tag/1", "node_id": "n007", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "tag-bench/tag/1", "node_id": "n008", "operator_type": "PROJECT", "label": "π cname"}
+{"query_id": "tag-bench/tag/1", "node_id": "n009", "operator_type": "FILTER", "label": "σ rtype=S"}
+{"query_id": "tag-bench/tag/1", "node_id": "n010", "operator_type": "SCAN", "label": "Scan satscores"}
+{"query_id": "tag-bench/tag/1", "node_id": "n011", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/3", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ SUM(NumTstTakr)"}
+{"query_id": "tag-bench/tag/3", "node_id": "n001", "operator_type": "JOIN", "label": "⋈ cds=CDSCode"}
+{"query_id": "tag-bench/tag/3", "node_id": "n002", "operator_type": "FILTER", "label": "σ rtype=S"}
+{"query_id": "tag-bench/tag/3", "node_id": "n003", "operator_type": "SCAN", "label": "Scan satscores"}
+{"query_id": "tag-bench/tag/3", "node_id": "n004", "operator_type": "SEMI_JOIN", "label": "SEMI JOIN County"}
+{"query_id": "tag-bench/tag/3", "node_id": "n005", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/3", "node_id": "n006", "operator_type": "FILTER", "label": "σ parsed_population > 2000000"}
+{"query_id": "tag-bench/tag/3", "node_id": "n007", "operator_type": "SEM_MAP", "label": "SEM_MAP 县→人口估计"}
+{"query_id": "tag-bench/tag/3", "node_id": "n008", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "tag-bench/tag/3", "node_id": "n009", "operator_type": "PROJECT", "label": "π County"}
+{"query_id": "tag-bench/tag/3", "node_id": "n010", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/4", "node_id": "n000", "operator_type": "PROJECT", "label": "π GSoffered"}
+{"query_id": "tag-bench/tag/4", "node_id": "n001", "operator_type": "LIMIT", "label": "LIMIT 1"}
+{"query_id": "tag-bench/tag/4", "node_id": "n002", "operator_type": "SORT", "label": "τ Longitude DESC"}
+{"query_id": "tag-bench/tag/4", "node_id": "n003", "operator_type": "SEMI_JOIN", "label": "SEMI JOIN County"}
+{"query_id": "tag-bench/tag/4", "node_id": "n004", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/4", "node_id": "n005", "operator_type": "SEM_FILTER", "label": "SEM_FILTER County 位于硅谷"}
+{"query_id": "tag-bench/tag/4", "node_id": "n006", "operator_type": "DROP_NULL", "label": "DROP NULL"}
+{"query_id": "tag-bench/tag/4", "node_id": "n007", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "tag-bench/tag/4", "node_id": "n008", "operator_type": "PROJECT", "label": "π County"}
+{"query_id": "tag-bench/tag/4", "node_id": "n009", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/5", "node_id": "n000", "operator_type": "LIMIT", "label": "LIMIT 2"}
+{"query_id": "tag-bench/tag/5", "node_id": "n001", "operator_type": "PROJECT", "label": "π AdmFName1"}
+{"query_id": "tag-bench/tag/5", "node_id": "n002", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 名字被判断为女性名字"}
+{"query_id": "tag-bench/tag/5", "node_id": "n003", "operator_type": "LIMIT", "label": "LIMIT 20"}
+{"query_id": "tag-bench/tag/5", "node_id": "n004", "operator_type": "SORT", "label": "τ count DESC"}
+{"query_id": "tag-bench/tag/5", "node_id": "n005", "operator_type": "AGGREGATE", "label": "γ GROUP BY AdmFName1; COUNT(*) → count"}
+{"query_id": "tag-bench/tag/5", "node_id": "n006", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/6", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*)"}
+{"query_id": "tag-bench/tag/6", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER Body 提及学术论文"}
+{"query_id": "tag-bench/tag/6", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ Id=OwnerUserId"}
+{"query_id": "tag-bench/tag/6", "node_id": "n003", "operator_type": "FILTER", "label": "σ DisplayName = csgillespie"}
+{"query_id": "tag-bench/tag/6", "node_id": "n004", "operator_type": "SCAN", "label": "Scan users"}
+{"query_id": "tag-bench/tag/6", "node_id": "n005", "operator_type": "FILTER", "label": "σ ParentId IS NULL"}
+{"query_id": "tag-bench/tag/6", "node_id": "n006", "operator_type": "SCAN", "label": "Scan posts"}
+{"query_id": "tag-bench/tag/8", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*)"}
+{"query_id": "tag-bench/tag/8", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER Text 关于统计学"}
+{"query_id": "tag-bench/tag/8", "node_id": "n002", "operator_type": "FILTER", "label": "σ Score=17"}
+{"query_id": "tag-bench/tag/8", "node_id": "n003", "operator_type": "SCAN", "label": "Scan comments"}
+{"query_id": "tag-bench/tag/10", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ COUNT(*)"}
+{"query_id": "tag-bench/tag/10", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER Body 讨论R语言"}
+{"query_id": "tag-bench/tag/10", "node_id": "n002", "operator_type": "FILTER", "label": "σ ViewCount>80000"}
+{"query_id": "tag-bench/tag/10", "node_id": "n003", "operator_type": "SCAN", "label": "Scan posts"}
+{"query_id": "tag-bench/tag/11", "node_id": "n000", "operator_type": "TAKE_FIRST", "label": "TAKE FIRST"}
+{"query_id": "tag-bench/tag/11", "node_id": "n001", "operator_type": "DISTINCT", "label": "δ DISTINCT"}
+{"query_id": "tag-bench/tag/11", "node_id": "n002", "operator_type": "PROJECT", "label": "π name_race"}
+{"query_id": "tag-bench/tag/11", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ circuitId"}
+{"query_id": "tag-bench/tag/11", "node_id": "n004", "operator_type": "SEM_FILTER", "label": "SEM_FILTER country 是中东面积最小国家"}
+{"query_id": "tag-bench/tag/11", "node_id": "n005", "operator_type": "SCAN", "label": "Scan circuits"}
+{"query_id": "tag-bench/tag/11", "node_id": "n006", "operator_type": "SCAN", "label": "Scan races"}
+{"query_id": "tag-bench/tag/48", "node_id": "n000", "operator_type": "PROJECT", "label": "π name"}
+{"query_id": "tag-bench/tag/48", "node_id": "n001", "operator_type": "SEM_TOPK", "label": "SEM_TOPK 距首都近; k=1"}
+{"query_id": "tag-bench/tag/48", "node_id": "n002", "operator_type": "FILTER", "label": "σ name ∈ Silverstone/Hockenheimring/Hungaroring"}
+{"query_id": "tag-bench/tag/48", "node_id": "n003", "operator_type": "SCAN", "label": "Scan circuits"}
+{"query_id": "tag-bench/tag/50", "node_id": "n000", "operator_type": "PROJECT", "label": "π School"}
+{"query_id": "tag-bench/tag/50", "node_id": "n001", "operator_type": "SEM_TOPK", "label": "SEM_TOPK 名称未来感; k=1"}
+{"query_id": "tag-bench/tag/50", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ CDSCode=cds"}
+{"query_id": "tag-bench/tag/50", "node_id": "n003", "operator_type": "FILTER", "label": "σ Magnet=1"}
+{"query_id": "tag-bench/tag/50", "node_id": "n004", "operator_type": "SCAN", "label": "Scan schools"}
+{"query_id": "tag-bench/tag/50", "node_id": "n005", "operator_type": "FILTER", "label": "σ NumTstTakr>500"}
+{"query_id": "tag-bench/tag/50", "node_id": "n006", "operator_type": "FILTER", "label": "σ rtype=S"}
+{"query_id": "tag-bench/tag/50", "node_id": "n007", "operator_type": "SCAN", "label": "Scan satscores"}
+{"query_id": "tag-bench/tag/85", "node_id": "n000", "operator_type": "SEM_AGG", "label": "SEM_AGG 总结Title共同特点"}
+{"query_id": "tag-bench/tag/85", "node_id": "n001", "operator_type": "JOIN", "label": "⋈ Id=OwnerUserId"}
+{"query_id": "tag-bench/tag/85", "node_id": "n002", "operator_type": "FILTER", "label": "σ DisplayName = csgillespie"}
+{"query_id": "tag-bench/tag/85", "node_id": "n003", "operator_type": "SCAN", "label": "Scan users"}
+{"query_id": "tag-bench/tag/85", "node_id": "n004", "operator_type": "SCAN", "label": "Scan posts"}
+{"query_id": "uda-bench/uda/Art/Mixed/1", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY field; AVG(age)"}
+{"query_id": "uda-bench/uda/Art/Mixed/1", "node_id": "n001", "operator_type": "FILTER", "label": "σ century = '19th-20th'"}
+{"query_id": "uda-bench/uda/Art/Mixed/1", "node_id": "n002", "operator_type": "SEM_MAP", "label": "SEM_MAP 文档→century, field, age"}
+{"query_id": "uda-bench/uda/Art/Mixed/1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan Art 原始文档"}
+{"query_id": "uda-bench/uda/CSPaper/Mixed/1", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY uses_knowledge_graph; COUNT(evaluation_metric)"}
+{"query_id": "uda-bench/uda/CSPaper/Mixed/1", "node_id": "n001", "operator_type": "FILTER", "label": "σ reasoning_depth = 'multi-hop'"}
+{"query_id": "uda-bench/uda/CSPaper/Mixed/1", "node_id": "n002", "operator_type": "SEM_MAP", "label": "SEM_MAP 文档→reasoning_depth, uses_knowledge_graph, evaluation_metric"}
+{"query_id": "uda-bench/uda/CSPaper/Mixed/1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan CSPaper 原始文档"}
+{"query_id": "uda-bench/uda/Finan/Mixed/1", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY auditor; AVG(bussiness_profit)"}
+{"query_id": "uda-bench/uda/Finan/Mixed/1", "node_id": "n001", "operator_type": "FILTER", "label": "σ remuneration_policy = 'Performance-based'"}
+{"query_id": "uda-bench/uda/Finan/Mixed/1", "node_id": "n002", "operator_type": "SEM_MAP", "label": "SEM_MAP 文档→remuneration_policy, auditor, bussiness_profit"}
+{"query_id": "uda-bench/uda/Finan/Mixed/1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan Finan 原始文档"}
+{"query_id": "uda-bench/uda/Legal/Mixed/1", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY verdict; MIN(case_number)"}
+{"query_id": "uda-bench/uda/Legal/Mixed/1", "node_id": "n001", "operator_type": "FILTER", "label": "σ plaintiff_current_status != 'Activist'"}
+{"query_id": "uda-bench/uda/Legal/Mixed/1", "node_id": "n002", "operator_type": "SEM_MAP", "label": "SEM_MAP 文档→plaintiff_current_status, verdict, case_number"}
+{"query_id": "uda-bench/uda/Legal/Mixed/1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan Legal 原始文档"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n000", "operator_type": "PROJECT", "label": "π manager.age, team.founded_year, player.name, city.city_name"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n001", "operator_type": "FILTER", "label": "σ player.birth_date='1994/2/2'"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ team.location=city.city_name"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ team.ownership=manager.name"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n004", "operator_type": "JOIN", "label": "⋈ player.team=team.team_name"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n005", "operator_type": "SEM_MAP", "label": "SEM_MAP 球员文档→球员属性"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n006", "operator_type": "SCAN", "label": "Scan player 文档"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n007", "operator_type": "SEM_MAP", "label": "SEM_MAP 球队文档→球队属性"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n008", "operator_type": "SCAN", "label": "Scan team 文档"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n009", "operator_type": "SEM_MAP", "label": "SEM_MAP 老板文档→老板属性"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n010", "operator_type": "SCAN", "label": "Scan manager 文档"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n011", "operator_type": "SEM_MAP", "label": "SEM_MAP 城市文档→城市属性"}
+{"query_id": "uda-bench/uda/Player/FilterJoin/2", "node_id": "n012", "operator_type": "SCAN", "label": "Scan city 文档"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n000", "operator_type": "PROJECT", "label": "π key_achievements, manufacturer, funding_sources, disease_type"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n001", "operator_type": "FILTER", "label": "σ pathogenesis='congenital'"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ disease_name"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ disease.disease_name=institution.research_diseases"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n004", "operator_type": "SEM_MAP", "label": "SEM_MAP 疾病文档→属性"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n005", "operator_type": "SCAN", "label": "Scan disease 文档"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n006", "operator_type": "SEM_MAP", "label": "SEM_MAP 机构文档→属性"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n007", "operator_type": "SCAN", "label": "Scan institution 文档"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n008", "operator_type": "SEM_MAP", "label": "SEM_MAP 药物文档→属性"}
+{"query_id": "uda-bench/uda/Med/FilterJoin/2", "node_id": "n009", "operator_type": "SCAN", "label": "Scan drug 文档"}
+{"query_id": "local-derived/derived/TAR/CD005139", "node_id": "n000", "operator_type": "PROJECT", "label": "π PMID"}
+{"query_id": "local-derived/derived/TAR/CD005139", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER title/abstract 满足初筛协议 CD005139"}
+{"query_id": "local-derived/derived/TAR/CD005139", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ PMID"}
+{"query_id": "local-derived/derived/TAR/CD005139", "node_id": "n003", "operator_type": "FILTER", "label": "σ review_id=CD005139"}
+{"query_id": "local-derived/derived/TAR/CD005139", "node_id": "n004", "operator_type": "SCAN", "label": "Scan 候选PMID关系"}
+{"query_id": "local-derived/derived/TAR/CD005139", "node_id": "n005", "operator_type": "SCAN", "label": "Scan 论文 title/abstract"}
+{"query_id": "local-derived/derived/TREC-Legal/301", "node_id": "n000", "operator_type": "PROJECT", "label": "π message_id"}
+{"query_id": "local-derived/derived/TREC-Legal/301", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 邮件家族 responsive to Topic301"}
+{"query_id": "local-derived/derived/TREC-Legal/301", "node_id": "n002", "operator_type": "AGGREGATE", "label": "γ GROUP BY message_id; COLLECT(attachments)"}
+{"query_id": "local-derived/derived/TREC-Legal/301", "node_id": "n003", "operator_type": "LEFT_JOIN", "label": "LEFT JOIN message_id"}
+{"query_id": "local-derived/derived/TREC-Legal/301", "node_id": "n004", "operator_type": "SCAN", "label": "Scan canonical messages"}
+{"query_id": "local-derived/derived/TREC-Legal/301", "node_id": "n005", "operator_type": "SCAN", "label": "Scan attachments"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n000", "operator_type": "PROJECT", "label": "π contract_id"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n001", "operator_type": "FILTER", "label": "σ 所有所需假设都有标签且全为Entailment"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n002", "operator_type": "AGGREGATE", "label": "γ GROUP BY contract_id; 聚合状态并核对假设覆盖"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n003", "operator_type": "SEM_MAP", "label": "SEM_MAP 全文×假设→E/C/NotMentioned"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n004", "operator_type": "CROSS_JOIN", "label": "CROSS JOIN"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n005", "operator_type": "SCAN", "label": "Scan 合同全文"}
+{"query_id": "local-derived/derived/ContractNLI/conjunction", "node_id": "n006", "operator_type": "SCAN", "label": "Scan 预先冻结的原17项假设子集"}
+{"query_id": "local-derived/derived/MAUD/MAE", "node_id": "n000", "operator_type": "PROJECT", "label": "π deal_id"}
+{"query_id": "local-derived/derived/MAUD/MAE", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 原问题选项包含 Ability to consummate transaction"}
+{"query_id": "local-derived/derived/MAUD/MAE", "node_id": "n002", "operator_type": "SCAN", "label": "Scan 给定deal-point文本"}
+{"query_id": "local-derived/derived/ShARC/YES", "node_id": "n000", "operator_type": "PROJECT", "label": "π case_id"}
+{"query_id": "local-derived/derived/ShARC/YES", "node_id": "n001", "operator_type": "FILTER", "label": "σ state=YES"}
+{"query_id": "local-derived/derived/ShARC/YES", "node_id": "n002", "operator_type": "SEM_MAP", "label": "SEM_MAP scenario/history + 固定rule/question → 四态"}
+{"query_id": "local-derived/derived/ShARC/YES", "node_id": "n003", "operator_type": "SCAN", "label": "Scan 同规则个案"}
+{"query_id": "local-derived/derived/ClinGen/Q1", "node_id": "n000", "operator_type": "PROJECT", "label": "π record_id,gene,disease,inheritance"}
+{"query_id": "local-derived/derived/ClinGen/Q1", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER paper/supplements/background/context 按 SOP8 至少1分"}
+{"query_id": "local-derived/derived/ClinGen/Q1", "node_id": "n002", "operator_type": "SCAN", "label": "Scan animal_model_evidence"}
+{"query_id": "local-derived/derived/TalentCLEF/29243", "node_id": "n000", "operator_type": "PROJECT", "label": "π candidate_id"}
+{"query_id": "local-derived/derived/TalentCLEF/29243", "node_id": "n001", "operator_type": "SEM_FILTER", "label": "SEM_FILTER 简历/公开投影满足 jobs/29243.html"}
+{"query_id": "local-derived/derived/TalentCLEF/29243", "node_id": "n002", "operator_type": "SCAN", "label": "Scan candidates"}
+{"query_id": "local-derived/derived/Trial/Q1", "node_id": "n000", "operator_type": "PROJECT", "label": "π record_id,value"}
+{"query_id": "local-derived/derived/Trial/Q1", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP 患者×试验→eligible/excluded/not_relevant"}
+{"query_id": "local-derived/derived/Trial/Q1", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ trial_id"}
+{"query_id": "local-derived/derived/Trial/Q1", "node_id": "n003", "operator_type": "SCAN", "label": "Scan Pairs（含患者文本路径）"}
+{"query_id": "local-derived/derived/Trial/Q1", "node_id": "n004", "operator_type": "SCAN", "label": "Scan Trials（入排标准）"}
+{"query_id": "local-derived/derived/Trial/Q2", "node_id": "n000", "operator_type": "PROJECT", "label": "π patient_id"}
+{"query_id": "local-derived/derived/Trial/Q2", "node_id": "n001", "operator_type": "FILTER", "label": "σ trial_id=:trial AND value=eligible"}
+{"query_id": "local-derived/derived/Trial/Q2", "node_id": "n002", "operator_type": "SEM_MAP", "label": "SEM_MAP 患者×试验→eligible/excluded/not_relevant"}
+{"query_id": "local-derived/derived/Trial/Q2", "node_id": "n003", "operator_type": "JOIN", "label": "⋈ trial_id"}
+{"query_id": "local-derived/derived/Trial/Q2", "node_id": "n004", "operator_type": "SCAN", "label": "Scan Pairs（含患者文本路径）"}
+{"query_id": "local-derived/derived/Trial/Q2", "node_id": "n005", "operator_type": "SCAN", "label": "Scan Trials（入排标准）"}
+{"query_id": "local-derived/derived/Trial/Q3", "node_id": "n000", "operator_type": "AGGREGATE", "label": "γ GROUP BY trial_id,value; COUNT(*)"}
+{"query_id": "local-derived/derived/Trial/Q3", "node_id": "n001", "operator_type": "SEM_MAP", "label": "SEM_MAP 患者×试验→eligible/excluded/not_relevant"}
+{"query_id": "local-derived/derived/Trial/Q3", "node_id": "n002", "operator_type": "JOIN", "label": "⋈ trial_id"}
+{"query_id": "local-derived/derived/Trial/Q3", "node_id": "n003", "operator_type": "SCAN", "label": "Scan Pairs（含患者文本路径）"}
+{"query_id": "local-derived/derived/Trial/Q3", "node_id": "n004", "operator_type": "SCAN", "label": "Scan Trials（入排标准）"}

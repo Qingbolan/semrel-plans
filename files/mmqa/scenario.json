@@ -1,0 +1,22 @@
+{
+  "id": "mmqa",
+  "name": "SemBench / mmqa",
+  "query_ids": [
+    "sembench/mmqa/q1",
+    "sembench/mmqa/q2a",
+    "sembench/mmqa/q2b",
+    "sembench/mmqa/q3a",
+    "sembench/mmqa/q3b",
+    "sembench/mmqa/q3c",
+    "sembench/mmqa/q3d",
+    "sembench/mmqa/q3e",
+    "sembench/mmqa/q3f",
+    "sembench/mmqa/q3g",
+    "sembench/mmqa/q4",
+    "sembench/mmqa/q5",
+    "sembench/mmqa/q6a",
+    "sembench/mmqa/q6b",
+    "sembench/mmqa/q6c",
+    "sembench/mmqa/q7"
+  ]
+}

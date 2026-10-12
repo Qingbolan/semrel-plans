@@ -1,0 +1,16 @@
+{
+  "id": "derived",
+  "name": "近期派生工作负载",
+  "query_ids": [
+    "local-derived/derived/TAR/CD005139",
+    "local-derived/derived/TREC-Legal/301",
+    "local-derived/derived/ContractNLI/conjunction",
+    "local-derived/derived/MAUD/MAE",
+    "local-derived/derived/ShARC/YES",
+    "local-derived/derived/ClinGen/Q1",
+    "local-derived/derived/TalentCLEF/29243",
+    "local-derived/derived/Trial/Q1",
+    "local-derived/derived/Trial/Q2",
+    "local-derived/derived/Trial/Q3"
+  ]
+}

@@ -1,0 +1,24 @@
+# 招聘SEM_FILTER benchmark准入审计
+
+用户选择优先真实招聘，不足时明确报告。本次没有找到同时满足：实际可取回候选人内容、外部职位要求、与满足要求对齐的gold、足够固定职位批量规模的已认可公开benchmark。未改用其他领域，未生成假简历或模型gold。这里是本轮核验结论，不声称不存在任何合适数据。
+
+| 来源 | 学术依据/可取内容 | 不准入完整任务的原因 |
+| --- | --- | --- |
+| ConFit / IntelliPro / AliYun | RecSys2024官方仓库；ConFit v2 ACL Findings2025继续使用 | 作者README明确全部正文替换成占位符；需向作者取得内容。历史面试接受/拒绝不等价逐项资格真值 |
+| Emory CRC / ECLAIR | EMNLP2020任务、2024后续；公开job_description与T2标签 | 未发布本批对应简历；后续职位为反向构造；固定repo另有14冲突对、跨split候选人重合 |
+| Vanetik & Kogan 2023 | 65匿名简历、5职位；30简历双人排序 | 相对职位排名不是资格通过/不通过。原文件部分数组甚至不是1–5排列，不能自动投影成可靠二元gold |
+| JobResQA | 作者2026公开benchmark及QA | 明确105组synthetic resume/JD、581 QA；不是本次优先真实招聘，也不能将局部QA自动等同整体满足要求 |
+| CareerCorpus | 真实/公开来源简历、专家职业类别 | 职业类别标签不是某份职位要求的满足标签，不能沿用为匹配gold |
+
+已构造CRC**不完整来源包**：701原文HTML、4110源配对标签、4042唯一对、537缺失候选人ID、逐职位逻辑SQL、冲突清单和完整manifest。0可运行配对，未建可执行模型适配。按字段白名单隔离public/private；HTML转义仅格式变换。每职位候选人中位6、最大11，不支持大批固定职位摊销主张。原始split按发布保留并报告泄漏，不称独立R。
+
+来源：
+
+- [ConFit官方说明](https://github.com/jasonyux/ConFit#data)，固定commit1187bf4273aa27f2c562a43ec4bb5316876b7198。
+- [ConFit v2 ACL2025](https://aclanthology.org/2025.findings-acl.661/)。
+- [CRC EMNLP2020](https://aclanthology.org/2020.emnlp-main.679/)、[2024后续](https://southnlp.github.io/southnlp2024/papers/southnlp2024-poster-58.pdf)、[作者repo](https://github.com/emorynlp/eclair-transformer/tree/86636054dbc9394f3c0af5bf48b22b4c76924a1e)。
+- [招聘排名数据作者repo](https://github.com/NataliaVanetik/vacancy-resume-matching-dataset/tree/7ee8f043c6e31ee94cb67f5e60b069901b533adf)。
+- [JobResQA作者repo](https://github.com/Avature/jobresqa-benchmark/tree/1dbe6ffcf82cb06ec00f29bb0e4aeebde556addf)。
+- [CareerCorpus作者数据卡](https://data.mendeley.com/datasets/wzzwn37gmd/1)。
+
+[实测源审计](evidence/recruitment-scout-2026-10-02/source-audit.json) · [CRC数据入口](../lakes/crc-job-fit/README.md)。没有联系人外发、模型实验、算子学习或质量/成本结果。下一步要么取得原招聘benchmark授权正文并修订冲突/划分，要么在用户另行选择后改用其他领域同构任务；不靠更复杂的实现绕过数据缺失。

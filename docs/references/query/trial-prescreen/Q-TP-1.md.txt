@@ -1,0 +1,22 @@
+# Q-TP-1 — 对每个已评判（患者，试验）对判断 eligible / excluded / not_relevant
+
+机器任务ID：`trial-prescreen-Q1-v1`。关联D025；[数据湖](../../lakes/trial-prescreen/README.md)、[冻结Query定义](../../lakes/trial-prescreen/experiment/dev-v1/public/queries.json)、[claim条件](../../lakes/trial-prescreen/CLAIM.md)。
+
+## 显式查询与任务边界
+
+下列SQL仅作语义表示，不冒充已实现LOTUS接口。
+
+```sql
+SELECT p.record_id,
+       SEM_MAP('Is this patient eligible, excluded, or not relevant for this trial?',
+               READ(p.text_path), t.inclusion_criteria, t.exclusion_criteria) AS value
+FROM Pairs p JOIN Trials t ON p.trial_id = t.trial_id;
+```
+
+同一语义也可写成 RV014 的改写形态（假设，未实现）：先物化 `PatientAttr(patient_id, attribute, value, time_anchor, evidence)`，再把每个试验的标准改写为 PatientAttr 上的谓词，残余部分保留 SEM_FILTER。
+
+批量35,811对：75名患者、26,149个试验。gold为TREC 2021 CT池化判断，未评判对不在批内。评分计划：三类macro-F1、eligible精确率/召回、按试验/患者聚类、coverage；未实现。
+
+## 跨记录重复结构与主张
+
+同一患者对数百个试验被反复判断（每名患者被评判301–616个试验）；不同试验标准引用的患者事实可能重叠。这是 RV014 要检验的共享结构，重叠比例未测。强对照：逐对 LLM、逐条标准判断、固定结构化概念抽取；均允许缓存。不因已有输入而跨过 S1/S2 门槛。

@@ -1,0 +1,12 @@
+{
+  "id": "uda",
+  "name": "UDA-Bench",
+  "query_ids": [
+    "uda-bench/uda/Art/Mixed/1",
+    "uda-bench/uda/CSPaper/Mixed/1",
+    "uda-bench/uda/Finan/Mixed/1",
+    "uda-bench/uda/Legal/Mixed/1",
+    "uda-bench/uda/Player/FilterJoin/2",
+    "uda-bench/uda/Med/FilterJoin/2"
+  ]
+}
