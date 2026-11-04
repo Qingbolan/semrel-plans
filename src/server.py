@@ -1,23 +1,27 @@
-"""Loopback atlas server with a compile-only EAL endpoint."""
+"""Atlas file server with explicit public origins and compile-only EAL endpoints."""
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
+import html
+import io
 from pathlib import Path
 import threading
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlsplit, quote
+from hosting import HostingPolicy
+from plan_store import PlanStore, PlanReadError
 from eal_reader import EalCompiler, CompileError, MAX_SOURCE_BYTES
 
 
 class AtlasServer(ThreadingHTTPServer):
     daemon_threads = True
 
-    def __init__(self, address, root, compiler=None):
+    def __init__(self, address, root, compiler=None, public_origins=()):
         self.root = Path(root).resolve()
         self.compiler = compiler or EalCompiler()
         self.compile_slots = threading.BoundedSemaphore(2)
-        manifest = json.loads((self.root / 'exports/eal/manifest.json').read_text())
-        self.paths = {e['query_id']: e['path'] for e in manifest}
+        self.plans = PlanStore(self.root)
         super().__init__(address, partial(AtlasHandler, directory=str(self.root)))
+        self.hosting = HostingPolicy(self.root, self.server_port, public_origins)
 
 
 class AtlasHandler(SimpleHTTPRequestHandler):
@@ -36,45 +40,78 @@ class AtlasHandler(SimpleHTTPRequestHandler):
 
     def compile_source(self, source):
         if not self.server.compile_slots.acquire(blocking=False):
-            return self.respond(503, {'error': '编译器忙，请稍后重新加载。', 'source': source})
+            return self.respond(503, {'error': '编译器忙，请稍后重新加载。', 'source': source, 'error_kind': 'busy'})
         try:
             self.respond(200, self.server.compiler.compile(source))
         except CompileError as exc:
-            self.respond(422, {'error': str(exc), 'source': source})
+            self.respond(422, {'error': str(exc), 'source': source, 'error_kind': 'compile'})
         finally:
             self.server.compile_slots.release()
 
-    def local_request(self):
-        host = self.headers.get('Host', '')
-        allowed = {f'127.0.0.1:{self.server.server_port}', f'localhost:{self.server.server_port}'}
-        return host in allowed and self.headers.get('Origin', f'http://{host}') == f'http://{host}'
+    def permitted_request(self):
+        return self.server.hosting.permits_request(self.headers.get('Host', ''), self.headers.get('Origin'))
+
+    def list_directory(self, path):
+        directory = Path(path)
+        relative = directory.relative_to(self.server.root)
+        if not relative.parts or relative.parts[0] not in {'data', 'environment', 'query', 'exports'}:
+            self.send_error(404, 'Directory listing is disabled')
+            return None
+        links = []
+        for child in sorted(directory.iterdir()):
+            if not self.server.hosting.permits_file(child):
+                continue
+            name = child.name + ('/' if child.is_dir() else '')
+            links.append(f'<li><a href="{quote(name)}">{html.escape(name)}</a></li>')
+        title = html.escape(relative.as_posix())
+        payload = (f'<!doctype html><meta charset="utf-8"><title>{title}</title>'
+                   f'<h1>{title}</h1><ul>{"".join(links)}</ul>').encode()
+        self.send_response(200)
+        self.send_header('Content-Type', 'text/html; charset=utf-8')
+        self.send_header('Content-Length', str(len(payload)))
+        self.end_headers()
+        return io.BytesIO(payload)
+
+    def send_head(self):
+        path = Path(self.translate_path(self.path))
+        if path == self.server.root:
+            path = path / 'index.html'
+        if not self.permitted_request() or not self.server.hosting.permits_file(path):
+            self.send_error(403, 'Not a published resource')
+            return None
+        return super().send_head()
 
     def do_GET(self):
         url = urlsplit(self.path)
+        if url.path == '/api/health':
+            if not self.permitted_request():
+                return self.respond(403, {'error': 'Origin is not configured'})
+            # Catalog plans ship as build-time snapshots, so a missing compiler only disables EAL import.
+            ready = (self.server.root / 'index.html').is_file() and (self.server.root / 'assets/plans.js').is_file()
+            return self.respond(200 if ready else 503, {'status': 'ready' if ready else 'missing_catalog',
+                                                        'eal_import': bool(getattr(self.server.compiler, 'executable', True))})
         if url.path != '/api/plan':
             return super().do_GET()
-        if not self.local_request():
-            return self.respond(403, {'error': '仅支持本地图册请求。'})
+        if not self.permitted_request():
+            return self.respond(403, {'error': '请求域名或 Origin 未配置。'})
         query_id = parse_qs(url.query).get('query_id', [''])[0]
-        relative = self.server.paths.get(query_id)
-        if relative is None:
-            return self.respond(404, {'error': '查询不在 EAL 清单中。'})
-        path = (self.server.root / relative).resolve()
-        if not path.is_relative_to(self.server.root / 'exports/eal'):
-            return self.respond(400, {'error': '无效 EAL 路径。'})
+        try:
+            path = self.server.plans.resolve(query_id)
+        except PlanReadError as exc:
+            return self.respond(exc.status, {'error': str(exc), 'error_kind': exc.kind})
         try:
             if path.stat().st_size > MAX_SOURCE_BYTES:
                 raise CompileError('EAL 文件不能超过 1 MiB。')
             source = path.read_text(encoding='utf-8')
         except (OSError, UnicodeError, CompileError) as exc:
-            return self.respond(422, {'error': f'无法读取 EAL：{exc}'})
+            return self.respond(422, {'error': f'无法读取 EAL：{exc}', 'error_kind': 'file'})
         self.compile_source(source)
 
     def do_POST(self):
         if self.path != '/api/compile':
             return self.respond(404, {'error': '未知接口。'})
-        if not self.local_request():
-            return self.respond(403, {'error': '仅支持本地图册请求。'})
+        if not self.permitted_request():
+            return self.respond(403, {'error': '请求域名或 Origin 未配置。'})
         try:
             length = int(self.headers.get('Content-Length', '0'))
             if not 0 < length <= MAX_SOURCE_BYTES * 2:
