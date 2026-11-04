@@ -1,22 +1,9 @@
-# Deep Research is the New Analytics System
+# Deep Research is the New Analytics System: Towards Building the Runtime for AI-Driven Analytics
 
-**Deep Research is the New Analytics System: Towards Building the Runtime for AI-Driven Analytics**
+语义算子能被优化，但按迭代器逐条处理，不适合需要跨文件推理的交互式分析；Deep Research 智能体规划灵活，却常走捷径、过早停止。本文在 Palimpzest 中加入 Context 抽象（迭代、索引、自定义工具与自然语言描述）和由 CodeAgent 实现的 compute/search 算子，让智能体能写出并执行经过优化的语义算子程序。
 
-- 作者：Matthew Russo、Tim Kraska（MIT）。
-- 来源：[原文 PDF](2509.02751v1.pdf)，arXiv:2509.02751v1，2025-09-02。
-- 会议：PDF 首页明确标注 CIDR 2026（2026-01-18 至 21）；按此归档，阅读版本仍为上述 v1，未外部核验最终会议版。
-- 性质：研究愿景与初步原型；基于 Palimpzest，将 Deep Research 的动态执行与语义算子优化结合。
+两条查询、各跑 3 次：KramaBench 身份盗窃比值查询上误差 0.02%（手写语义程序 17.00%、CodeAgent 27.56%），但更慢；Enron 邮件筛选上 F1 98.67%，比纯 CodeAgent 高 1.95 倍，并比把语义算子当工具的 CodeAgent+ 省 76.8% 费用、72.7% 时间。
 
-## 阅读入口
+[原文](https://www.vldb.org/cidrdb/papers/2026/p30-russo.pdf)
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty、Strong points 与 Weak points](Novelty分析.md)
-
-## 对本项目的直接影响
-
-“Agent 动态探索 + 优化语义算子 + 中间 Context 复用”已被本文提出并部分实现。后续研究需要明确尚未解决的执行决策或复用条件，不能仅以组合这些能力为贡献。本文未评估逐记录 Agent 的跨记录探索复用。
-
-- [workload分析](workload分析.md)
-
-2026-10-07补充核读实验设置与对照条件，已完成工作负载分析；未复现实验。
+版本：CIDR 2026（Russo, Kraska，MIT），愿景论文加初步原型；本地全文为 arXiv 2509.02751v1（已带 CIDR'26 版式），共 §1–6、Figures 1–2、Tables 1–2。数字已对照该全文核对，未运行作者代码；文中的逻辑重写等优化多为未来工作，不能当作已实现能力。

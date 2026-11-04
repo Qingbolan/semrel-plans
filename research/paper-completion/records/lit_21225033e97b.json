@@ -1,0 +1,71 @@
+{
+ "id": "lit_21225033e97b",
+ "url": "https://arxiv.org/abs/2502.13897",
+ "title": "Zhang et al. — DataSciBench: An LLM Agent Benchmark for Data Science",
+ "version": "arXiv:2502.13897v1（2025-02-19），40 页（正文 9 页 + 附录）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2502.13897v1",
+ "retrieved_at": "2026-11-04T05:12:01.081201+00:00",
+ "fulltext": "research/paper-completion/papers/lit_21225033e97b.pdf",
+ "sha256": "f45cd799a6379f74380775ba637799cda27a44d096b2075709f21590cb1bf722",
+ "format": "pdf",
+ "pages": 40,
+ "note_directory": "research/paper-completion/notes/lit_21225033e97b",
+ "note": "research/paper-completion/notes/lit_21225033e97b/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2、Table 1，PDF pp.1–3",
+  "method": "§3、Figure 2–3，附录 A.3–A.5、Table 4，PDF pp.3–5、11–13",
+  "evaluation": "§4–5、Table 2、Figure 4–6，附录 A.2 Table 3，PDF pp.5–8、11；Table 2（p.6）已渲染核对",
+  "limitations": "Limitations、§5.4、附录 A.5，PDF pp.8–9、12"
+ },
+ "evidence": [
+  {
+   "id": "lit_21225033e97b:E01",
+   "claim": "已有 benchmark 多为单一任务、真值易得、指标简单；DataSciBench 面向多子任务、真值不确定的数据科学提示。",
+   "locator": "§1–2、Table 1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_21225033e97b:E02",
+   "claim": "评测由 TFC 元组 (T,F,C) 构成；评价代码输出布尔值或 0–1 小数，按阈值（如轮廓系数 0.5）转为布尔值后与真值比较。",
+   "locator": "§3.3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_21225033e97b:E03",
+   "claim": "规模为 222 个提示、519 个测试用例、6 类任务、25 个聚合函数；167 个来自 BigCodeBench；难度划分为 easy 167、medium 30、hard 25。",
+   "locator": "§3.2–3.3、§5.2，PDF pp.4–5、7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_21225033e97b:E04",
+   "claim": "Score = 0.05×ΣF1..5 + 0.05×VLM + 0.05×SR + 0.65×CR；SR 为 10 次运行的 pass@1。",
+   "locator": "§4.2，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_21225033e97b:E05",
+   "claim": "Table 2：GPT-4o Score 64.51（SR 66.31、CR 68.44），Deepseek-Coder-33B-Instruct 56.76，GPT-4-Turbo 54.65，o1-mini 38.78，CodeLlama-34B-Instruct 1.33。",
+   "locator": "Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_21225033e97b:E06",
+   "claim": "摘要说 API 模型在所有指标上优于开源模型，与 Table 2 中 Deepseek-Coder-33B 高于多款 API 模型不一致；§5.1 的“平均而言”更准确。",
+   "locator": "Abstract、Table 2、§5.1，PDF pp.1、6–7",
+   "basis": "inference",
+   "basis_note": "数值来自原文；不一致是阅读者比较得出的。"
+  },
+  {
+   "id": "lit_21225033e97b:E07",
+   "claim": "与 LiveCodeBench 的相关为 Pearson 0.853 / Spearman 0.673，与 BigCodeBench 为 0.823 / 0.808；Limitations 承认可视化评价与 VLM-as-a-judge 可能不精确。",
+   "locator": "附录 A.2 Table 3、Limitations，PDF pp.9、11",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

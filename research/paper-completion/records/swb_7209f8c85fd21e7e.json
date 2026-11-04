@@ -1,0 +1,71 @@
+{
+ "id": "swb_7209f8c85fd21e7e",
+ "url": "https://arxiv.org/abs/2510.11985",
+ "title": "Queen, Zhang, Zou — CGBench: Benchmarking Language Model Scientific Reasoning for Clinical Genetics Research",
+ "version": "arXiv:2510.11985v1（2025-10-13，NeurIPS 2025 Datasets & Benchmarks），37 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2510.11985v1",
+ "retrieved_at": "2026-11-04T04:50:04+00:00",
+ "fulltext": "research/paper-completion/papers/swb_7209f8c85fd21e7e.pdf",
+ "sha256": "f346e4cdc68e04ff21c52649908abefc6a3e07cf4eff3ee6ab44d92878fb95d0",
+ "format": "pdf",
+ "pages": 37,
+ "note_directory": "research/paper-completion/notes/swb_7209f8c85fd21e7e",
+ "note": "research/paper-completion/notes/swb_7209f8c85fd21e7e/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1–3.3，PDF pp.1–5",
+  "method": "§3.3、§4，附录 D.1–D.2，PDF pp.4–6、16–17",
+  "evaluation": "§5、Tables 1–4、Figure 3，PDF pp.7–9；附录 F.3–F.4 部分，PDF pp.20–22",
+  "limitations": "§6、附录 B、附录 C，PDF pp.9、15–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_7209f8c85fd21e7e:E01",
+   "claim": "现有科学文献基准多为多选题或简单断言验证，难以反映真实转化研究；CGBench 从 ClinGen 专家整理记录构造任务。",
+   "locator": "§1–2，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7209f8c85fd21e7e:E02",
+   "claim": "三个任务：E-Score（预测 VCEP 证据代码）、E-Ver（判断给定代码 met/not met）、GCI 证据抽取（输出类别、解释、分数、改分理由）。",
+   "locator": "§3.3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7209f8c85fd21e7e:E03",
+   "claim": "E-Score 共 239 条、评估 205 条；E-Ver 共 286 条、评估 242 条；GCI 共 2,155 条，按 2024-07-07 之后录入切出 336 条评估，其余 1,819 条作为 ICL 示例池。",
+   "locator": "§3.3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7209f8c85fd21e7e:E04",
+   "claim": "只保留 PMC 可抓取全文的论文：VCI 约 19.2%、GCI 约 22.6% 的论文有全文；E-Ver 只保留单篇论文即可判定的样本。",
+   "locator": "附录 D.1、Figure 4，PDF pp.16–17",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7209f8c85fd21e7e:E05",
+   "claim": "三级代码 Precision@5 最高为 o4-mini 0.420；E-Ver F1 最高为 GPT-4o 0.634；模型约将 2/3 样本判为 met，而真实正例率为 0.434。",
+   "locator": "Tables 1–2、§5.2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7209f8c85fd21e7e:E06",
+   "claim": "GCI 中 GPT-4o 类别精确率 0.493，o4-mini 召回 0.835、ΔStrength 0.445；DeepSeek R1 结构化输出解析成功率 61.61%。",
+   "locator": "Table 3，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7209f8c85fd21e7e:E07",
+   "claim": "VCI 任务规模小、每个 VCEP 样本中位数为 5，且样本偏向开放获取、单篇可判定的证据；LM 评审衡量的是与人类解释的对应程度而非正确性。",
+   "locator": "§4.3、附录 C、附录 D.1，PDF pp.6、16–17",
+   "basis": "inference",
+   "basis_note": "样本数与筛选规则为原文事实；“样本偏向”的影响判断为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

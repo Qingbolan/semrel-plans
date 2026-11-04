@@ -1,0 +1,65 @@
+{
+ "id": "lit_32a430b05d64",
+ "url": "https://arxiv.org/abs/2503.06902",
+ "title": "Yao et al. — A Query Optimization Method Utilizing Large Language Models (LLMOpt)",
+ "version": "arXiv:2503.06902v1（2025-03-10，cs.DB；PVLDB 模板，卷期为占位符），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2503.06902v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_32a430b05d64.pdf",
+ "sha256": "1c10f55dc3c9f42f8a9744f0213ade359bc84349e666a73c8cd19648cef3e6eb",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/lit_32a430b05d64",
+ "note": "research/paper-completion/notes/lit_32a430b05d64/README.md",
+ "read_sections": {
+  "problem": "§1、§4.1，PDF pp.1–2、5",
+  "method": "§3.2–3.3、§4.2、§5–§7（生成、选择、统计信息与标签收集、微调），PDF pp.4–8",
+  "evaluation": "§8.1–8.7、Tables 1–5、Figure 6，PDF pp.8–12",
+  "limitations": "无独立局限性章节；§8.1 Query Execution、§8.6、§9，PDF pp.9–12（局限由阅读者归纳）"
+ },
+ "evidence": [
+  {
+   "id": "lit_32a430b05d64:E01",
+   "claim": "作者认为搜索—选择流水线有两个短板：n 表查询计划空间达 O(n!)，启发式搜索可能剪掉最优计划；学习型代价模型即使候选包含最优计划也常选错，如 JOB 18c 上 BAO 与执行全部候选的 Optimal 差 20%。",
+   "locator": "§1、Figure 2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_32a430b05d64:E02",
+   "claim": "LLMOpt(G) 用微调 LLM 采样 16 次生成 pg_hint_plan 提示，再用 Tree-CNN 选最小预测时延；LLMOpt(S) 输入查询、统计信息和 BAO 5 个 arm 的候选提示，单次推理输出最优候选下标；标签来自在 PG 中实际执行候选取最快者。",
+   "locator": "§4.2、§5–§7、Algorithms 1–4，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_32a430b05d64:E03",
+   "claim": "实验基于 PostgreSQL 16.1：JOB（IMDb 21 表，113 查询/33 模板）、JOB-EXT（额外 24 查询/14 模板）、Stack（100GB，11 模板，测试 76 条）；训练查询分别为 8,592、9,722、4,850 条，3 分钟超时，两次预热；不处理嵌套查询。",
+   "locator": "§8.1，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_32a430b05d64:E04",
+   "claim": "Table 1 中 LLMOpt(S) 执行时延在 JOB 为 36.45 秒（PG 129.26、BAO 70.68），端到端时延在三个基准都最低；LLMOpt(G) 执行时延低但 JOB 端到端时延 148.78 秒高于 PG 的 129.34。",
+   "locator": "§8.2–8.3、Table 1，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_32a430b05d64:E05",
+   "claim": "LLM_S 的选择准确率为 76.10%/66.66%/63.16%，高于 Tree-CNN 与 Tree-LSTM；组合 LLMOpt(G+S) 只在 JOB-EXT 优于 LLMOpt(S)，作者归因于训练/推理候选分布偏移。",
+   "locator": "§8.5–8.6、Tables 4–5，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_32a430b05d64:E06",
+   "claim": "正文计算 JOB-EXT 提升时使用 46.72 而 Table 1 为 45.22；消融中贪心/多数投票优于默认采样+Tree-CNN，去掉 Main_Value 时 LLMOpt(S) 反而更快；结果均为单次测量、无方差。",
+   "locator": "§8.2、§8.7、Tables 1、3，PDF pp.9–11",
+   "basis": "inference",
+   "basis_note": "数值来自原文；不一致与稳健性判断为阅读者比对分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

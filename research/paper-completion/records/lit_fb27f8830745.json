@@ -1,0 +1,78 @@
+{
+ "id": "lit_fb27f8830745",
+ "url": "https://arxiv.org/abs/2603.06503",
+ "title": "Gulati et al. — Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing",
+ "version": "arXiv:2603.06503v1（2026-03-06，cs.CL），15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2603.06503",
+ "retrieved_at": "2026-11-04T04:45:22Z",
+ "fulltext": "research/paper-completion/papers/lit_fb27f8830745.pdf",
+ "sha256": "9bd485d973ab8e4022b62c1b0da1a0822dacff9ddd6a758ffa60524f0c99c536",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "research/paper-completion/notes/lit_fb27f8830745",
+ "note": "research/paper-completion/notes/lit_fb27f8830745/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，PDF pp.1–4",
+  "method": "§3.1–3.3、Algorithm 1、附录 D，PDF pp.4–5、14–15",
+  "evaluation": "§4.1–4.5、Tables 1–5、附录 A–C，PDF pp.5–10、13–14",
+  "limitations": "无独立局限节；§4.2 讨论、§4.3 失败分析、§4.5 成本、附录 B，PDF pp.8–10、14"
+ },
+ "evidence": [
+  {
+   "id": "lit_fb27f8830745:E01",
+   "claim": "压缩式与检索式电子表格方法都只做单次检索，无法像分析师那样重新查询、探索相邻区域或依中间结果修正；朴素全文注入超出上下文。",
+   "locator": "摘要、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fb27f8830745:E02",
+   "claim": "BRTR 沿用 FRTR 的行/列/窗口/图像四类块，以 NeMo Retriever 1B 嵌入，稠密 + BM25 用 RRF（k=60）融合取 top-10；五个检索工具，每次调用最多 50 次工具迭代；新图像到来时剪除旧图像 base64。",
+   "locator": "§3.1–3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fb27f8830745:E03",
+   "claim": "规划器生成子任务 DAG，就绪子任务并行交给类型特定执行器，最后综合；附录 D 的提示限制为 1–6 个子任务，类型为 search/excel/io/web。",
+   "locator": "§3.3、Algorithm 1，PDF pp.4–5；附录 D，PDF pp.14–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fb27f8830745:E04",
+   "claim": "FRTR-Bench：159 查询、30 个工作簿、155 张表、近 400 万单元格、53 张图像；SpreadsheetLLM 基准 298 个单表问题；FINCH 172 个工作流、1,710 个表格、2,700 万单元格；正确性由人工终判，共 200 余人时。",
+   "locator": "§4.2–4.3，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fb27f8830745:E05",
+   "claim": "FRTR-Bench 上 BRTR 前沿模型达 0.98–0.99，单次 FRTR 最佳 0.74，Claude in Excel 0.84；FINCH 上 Opus 4.6 为 95.3%，GPT-5.2 为 94.8%。",
+   "locator": "Tables 2、4，PDF pp.6、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fb27f8830745:E06",
+   "claim": "50 任务 FINCH 消融：完整 0.88、无规划器 0.68、朴素 0.46、全文注入 0.52、无 agent 循环 0.00；规划器使 token 从 521K 降到 312K。",
+   "locator": "§4.4、Table 5，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fb27f8830745:E07",
+   "claim": "在 SpreadsheetLLM 基准上，Gemini 2.5 Pro、GPT-4o、LLaMA 4 Maverick 使用 BRTR 后不如 FRTR 和压缩法，因此摘要中的整体 SOTA 只对前沿模型成立。",
+   "locator": "Table 3、§4.2 讨论，PDF pp.7–8",
+   "basis": "inference",
+   "basis_note": "由表格数值得出的阅读者判断；作者在讨论中承认存在能力阈值。"
+  },
+  {
+   "id": "lit_fb27f8830745:E08",
+   "claim": "文中不一致：§3.3 称有六类执行器，附录只列四类；§4.3 称全量失败 8 个任务，§4.4 称子集包含全部 6 个失败任务；未报告人工评审一致性与运行方差。",
+   "locator": "§3.3、§4.3–4.4，PDF pp.5、8–9；附录 A、D，PDF pp.13–15",
+   "basis": "inference",
+   "basis_note": "为阅读者对原文内部一致性的核对。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

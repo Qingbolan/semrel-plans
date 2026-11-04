@@ -1,0 +1,71 @@
+{
+ "id": "swb_b28d778e560a376d",
+ "url": "https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf",
+ "title": "Lao, Zimmerer, Ovcharenko, et al. (… Kipf, Trummer) — SemBench: A Benchmark for Semantic Query Processing Engines",
+ "version": "PVLDB 19(8): 1754–1767, 2026，doi:10.14778/3811243.3811249，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf",
+ "retrieved_at": "2026-11-04T05:55:23.142609+00:00",
+ "fulltext": "research/paper-completion/papers/swb_b28d778e560a376d.pdf",
+ "sha256": "491a14d3b9e52873edb68e4b35332c0aca57d96da5140373e4819d24c25fe59f",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/swb_b28d778e560a376d",
+ "note": "research/paper-completion/notes/swb_b28d778e560a376d/README.md",
+ "read_sections": {
+  "problem": "§1、§2.4，PDF pp.1–3",
+  "method": "§3、§4，Tables 1–2，PDF pp.3–7",
+  "evaluation": "§5、Tables 3–5、Figure 1，PDF pp.6–12；Tables 2、3、5 已渲染核对",
+  "limitations": "§4.6、§5.3–5.5、§6，PDF pp.7–12"
+ },
+ "evidence": [
+  {
+   "id": "swb_b28d778e560a376d:E01",
+   "claim": "语义查询处理引擎用 LLM 求值自然语言配置的 SQL 算子；优化目标变为在最小化 LLM 成本/延迟的同时最大化准确率，而 TPC-H/DS 不含此类算子。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b28d778e560a376d:E02",
+   "claim": "SemBench 含 5 个场景（Movie 10、Wildlife 10、E-Commerce 14、MMQA 11、Cars 10）共 55 条查询，算子计数为过滤 50、连接 15、映射 7、排序 3、分类 4，数据含 1,582,560 文本、84,295 图像、2,037 音频行。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b28d778e560a376d:E03",
+   "claim": "真值通过用原数据集人工标签替换 LLM 调用得到；质量指标按查询类型取 1/(1+相对误差)、F1、Spearman、ARI。",
+   "locator": "§3.3、§5.1，PDF pp.4、7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b28d778e560a376d:E04",
+   "claim": "统一使用 gemini-2.5-flash 评测 LOTUS 1.1.3、Palimpzest 0.8.2、ThalamusDB 0.1.15、BigQuery；没有系统支持全部查询。",
+   "locator": "§5.1–5.2、§6，PDF pp.6–7、12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b28d778e560a376d:E05",
+   "claim": "按算子聚合：连接质量 Palimpzest 0.703、LOTUS 0.614、BigQuery 0.601、ThalamusDB 0.487，成本分别为 $3.29、$2.74、$1.02、$0.14；ThalamusDB 平均成本最低（$0.17）。",
+   "locator": "Table 5，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b28d778e560a376d:E06",
+   "claim": "多模态语义连接调用数随规模平方增长，E-Commerce 与 MMQA 中除 BigQuery 外都不能扩展到大规模；E-Commerce Q8 内存可达约 250 GB。",
+   "locator": "§5.4、Figure 1，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b28d778e560a376d:E07",
+   "claim": "正文与表格口径不一致：E-Commerce 正文说 10 条查询而表中为 14，MMQA 说十条而表中为 11，Movie 说规模 500 而基础规模为 2,000。",
+   "locator": "§4.6、§5.3、Tables 2–3，PDF pp.7–8",
+   "basis": "inference",
+   "basis_note": "阅读者对正文与表格的比对。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

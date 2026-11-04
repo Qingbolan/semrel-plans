@@ -1,0 +1,13 @@
+{
+ "id": "lit_4db0a475bd36",
+ "title": "IterClean: An Iterative Data Cleaning Framework with Large Language Models",
+ "url": "https://doi.org/10.1145/3674399.3674436",
+ "attempts": [
+  {"url": "https://dl.acm.org/doi/pdf/10.1145/3674399.3674436", "result": "HTTP 403 bot-check HTML page instead of PDF (2026-11-04)"},
+  {"url": "https://dl.acm.org/doi/10.1145/3674399.3674436", "result": "HTTP 403"},
+  {"url": "https://api.openalex.org/works/doi:10.1145/3674399.3674436", "result": "oa_status hybrid but only location is the ACM DOI; no repository full text"},
+  {"url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3674399.3674436", "result": "openAccessPdf points back to the ACM DOI only"},
+  {"url": "http://export.arxiv.org/api/query?search_query=ti:IterClean", "result": "no arXiv preprint found"}
+ ],
+ "reason": "Full text is only hosted on ACM DL, which returns a 403 bot-check page to automated download; no preprint or repository copy found. Not circumventing the bot check."
+}

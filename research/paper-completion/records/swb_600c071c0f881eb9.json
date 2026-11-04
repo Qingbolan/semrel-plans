@@ -1,0 +1,65 @@
+{
+ "id": "swb_600c071c0f881eb9",
+ "url": "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf",
+ "title": "Mayfield & Black — Analyzing Wikipedia Deletion Debates with a Group Decision-Making Forecast Model",
+ "version": "Proc. ACM HCI 3(CSCW), Article 206（2019 年 11 月），26 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_600c071c0f881eb9.pdf",
+ "sha256": "f5cb32e24564dd1d1a1a518183c73b156a01755bcc1315fe6f37230852e00fcf",
+ "format": "pdf",
+ "pages": 26,
+ "note_directory": "research/paper-completion/notes/swb_600c071c0f881eb9",
+ "note": "research/paper-completion/notes/swb_600c071c0f881eb9/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–6",
+  "method": "§3–4，附录 A，PDF pp.7–12、24–26",
+  "evaluation": "§4.1 Table 3、§5–6，Table 4，Figures 7–12，PDF pp.11–19",
+  "limitations": "§4.3、§6.1，PDF pp.12–13、19–20"
+ },
+ "evidence": [
+  {
+   "id": "swb_600c071c0f881eb9:E01",
+   "claim": "群体决策的定量研究往往忽略讨论过程的话语细节；已有 AfD 研究的数据较旧或规模较小。作者希望用预测模型给出标准化的贡献度量。",
+   "locator": "§1–2，Table 1，PDF pp.1–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_600c071c0f881eb9:E02",
+   "claim": "从 2005–2018 年英文维基百科 AfD 抽取 402,440 场讨论，去掉无结局的 20,669 场和无投票的 12,179 场后分析 369,592 场；政策分类体系含 2,111 个别名。",
+   "locator": "§3，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_600c071c0f881eb9:E03",
+   "claim": "BERT（不微调）加票数特征的逻辑回归，在约 5% 子集上 10 折交叉验证，全讨论准确率 93.5%（κ=0.83），增量预测 79.7%（κ=0.55）；结果转引自作者先前工作。",
+   "locator": "§4–4.1，Table 3，PDF pp.10–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_600c071c0f881eb9:E04",
+   "claim": "预测偏移定义为相邻时刻结局后验变化绝对值之和的一半；政策引用的成功率与平均预测偏移之间无整体相关（r=−0.04）。",
+   "locator": "§4.2、§5，PDF pp.12–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_600c071c0f881eb9:E05",
+   "claim": "首票 Delete 成功率 84.5%（基线 63.9%），首票 Keep 62.2%（基线 20.7%）；多次发言用户成功率较低，但其首条发言的预测偏移约为一次性发言者的两倍。",
+   "locator": "§5.1、§5.3，PDF pp.14、16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_600c071c0f881eb9:E06",
+   "claim": "预测偏移是描述性、非因果的度量，并且受票数特征主导；摘要（超过 40 万）、正文（402,440）与 Table 1（423k）对语料规模的表述不一致。",
+   "locator": "§4.3、§3，Table 1，PDF pp.1、6–7、12",
+   "basis": "inference",
+   "basis_note": "非因果性为作者原话；“受票数主导”和规模口径不一致为阅读者分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

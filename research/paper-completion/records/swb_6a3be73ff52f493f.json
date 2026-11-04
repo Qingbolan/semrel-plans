@@ -1,0 +1,65 @@
+{
+ "id": "swb_6a3be73ff52f493f",
+ "url": "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf",
+ "title": "Wiebe, Wilson & Cardie — Annotating Expressions of Opinions and Emotions in Language",
+ "version": "作者主页预印本（wiebeetal.tex，2005-04-26，对应 Language Resources and Evaluation 2005），50 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_6a3be73ff52f493f.pdf",
+ "sha256": "84b4629fa2c39be1c598d3139127b7cdd504663fcf72c5dd64b34a7b065ca131",
+ "format": "pdf",
+ "pages": 50,
+ "note_directory": "research/paper-completion/notes/swb_6a3be73ff52f493f",
+ "note": "research/paper-completion/notes/swb_6a3be73ff52f493f/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–4",
+  "method": "§2–3，PDF pp.4–25",
+  "evaluation": "§4–6，Tables III–IX，PDF pp.25–42",
+  "limitations": "§2.2、§4.4、§8，PDF pp.6、29–30、45–46"
+ },
+ "evidence": [
+  {
+   "id": "swb_6a3be73ff52f493f:E01",
+   "claim": "文档/句级情感分类不足以支持信息抽取、多视角问答和摘要；需要定位句内意见、来源、强度和态度类型。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6a3be73ff52f493f:E02",
+   "claim": "方案定义直接主观框架、表达性主观成分框架、客观言语事件框架和主体框架，用以 writer 开头的嵌套来源链表示转述关系。",
+   "locator": "§2.1–2.6，PDF pp.4–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6a3be73ff52f493f:E03",
+   "claim": "语料含 535 篇、10,657 句英文世界新闻，来自 187 个新闻源，时间为 2001 年 6 月至 2002 年 5 月，在 2002 年 NRRC MPQA 研讨会期间标注。",
+   "locator": "§5，PDF pp.30–31",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6a3be73ff52f493f:E04",
+   "claim": "在 1,341 句子集中，1,689 个直接主观框架有 69% 无极性；521 个有极性的框架中 73% 为负。",
+   "locator": "§4、§4.4，PDF pp.25–30",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6a3be73ff52f493f:E05",
+   "claim": "3 名标注者在 13 篇 210 句上：表达性主观成分平均 agr 0.72，显式框架锚点 0.82，框架类型 κ 0.81（去边界后 0.89），句级 κ 0.77（去边界后 0.87）。",
+   "locator": "§6.3，Tables III、V、VII、IX，PDF pp.33–42",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6a3be73ff52f493f:E06",
+   "claim": "目标只标注部分子集，态度类型只有极性；一致性研究规模小（210 句），锚点重叠即算匹配，§2.2 与 §4.4 的态度取值名称不一致。",
+   "locator": "§2.2、§4.4、§6.3.1、§8，PDF pp.6、29–30、34–35、45–46",
+   "basis": "inference",
+   "basis_note": "局限来自原文；规模评价与取值名称不一致为阅读者分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,72 @@
+{
+ "id": "lit_e403f19e396e",
+ "url": "https://arxiv.org/abs/2602.07371",
+ "title": "Fan, Fan, Zhang, Zhang, Du, Song, Li, Jiang, Zhang, Chen — DeepPrep: An LLM-Powered Agentic System for Autonomous Data Preparation",
+ "version": "arXiv 2602.07371v1（2026-02-07），PVLDB 格式稿，13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2602.07371v1",
+ "retrieved_at": "2026-11-04T05:02:21.471704+00:00",
+ "fulltext": "research/paper-completion/papers/lit_e403f19e396e.pdf",
+ "sha256": "ef3b1377504fa78e7f3d41d7f260fde38d2197a88d4f30db66e48668e5eb1d8a",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/lit_e403f19e396e",
+ "note": "research/paper-completion/notes/lit_e403f19e396e/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1，PDF pp.1–3",
+  "method": "§2.2–§5、Figs.3–4，PDF pp.3–8",
+  "evaluation": "§6、Tables 1–3、Figs.5–8，PDF pp.9–12",
+  "limitations": "无独立章节；§6.1、§7，pp.9–12（阅读者推断）"
+ },
+ "evidence": [
+  {
+   "id": "lit_e403f19e396e:E01",
+   "claim": "ADP 问题：给定源表集合 S、目标 schema Σ*（表级与列级自然语言描述）和 31 种算子类型，寻找流水线把 S 变换为满足 Σ* 的目标表；真值目标表只用于评测。",
+   "locator": "§2.1–2.2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e403f19e396e:E02",
+   "claim": "推理在物化中间表状态树上进行，智能体输出 plan/expand/execute/answer 动作；expand 用根到父节点的完整算子序列做前缀匹配指定父节点，执行失败时在父节点记录错误轨迹。",
+   "locator": "§4.1–4.2、Fig.4，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e403f19e396e:E03",
+   "claim": "训练包括冷启动课程（算子语法学习 + 教师轨迹蒸馏）、多轮 GRPO 与混合奖励（结果、部分相似度、LLM 过程评审）；训练任务由 NL2SQL 查询结果合成，并通过可逆噪声注入生成脏源表。",
+   "locator": "§5.1–5.3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e403f19e396e:E04",
+   "claim": "数据集：Synth-Spider 6,788 训练 / 2,008 测试（流水线长 1–28）、Synth-Bird 1,150 测试（2–25）、Parrot 13,965 / 1,365（1–8，17 种算子）；所有方法只在 Synth-Spider 训练集上训练。",
+   "locator": "§6.1、Table 1，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e403f19e396e:E05",
+   "claim": "Qwen3-14B 版 DeepPrep 准确率/完成率：Synth-Spider 67.18/97.21%、Synth-Bird 54.09/92.26%、Parrot 40.44/96.41%；比 CodeGen 高 21.71 点、比最强训练基线高 5.48 点。",
+   "locator": "Table 2a，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e403f19e396e:E06",
+   "claim": "作者称与 GPT-5 上 ReAct（67.03）准确率相当而成本约低 15 倍，但文中 GPT-5 指 gpt-5-mini-2025-08-07，开源模型成本按 A800 每小时 0.91 美元的 GPU 时间换算，与 API 计价口径不同。",
+   "locator": "§6.1–6.2、Fig.5，PDF pp.9–10",
+   "basis": "inference",
+   "basis_note": "数值与设置为原文；口径差异为阅读者分析。"
+  },
+  {
+   "id": "lit_e403f19e396e:E07",
+   "claim": "Table 3a 的“w/o OSL”一行（59.65/90.54%、43.30/80.43%、36.15/91.08%）与 Table 2b 的 IL 一行数值完全相同，论文未说明二者关系。",
+   "locator": "Table 2b，PDF p.10；Table 3a，PDF p.11",
+   "basis": "inference",
+   "basis_note": "阅读者比对两表发现。"
+  }
+ ],
+ "batch": "r02",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

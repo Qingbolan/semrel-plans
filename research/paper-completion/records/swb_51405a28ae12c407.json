@@ -1,0 +1,65 @@
+{
+ "id": "swb_51405a28ae12c407",
+ "url": "https://aclanthology.org/2021.eacl-main.187",
+ "title": "Process-Level Representation of Scientific Protocols with Interactive Annotation",
+ "version": "EACL 2021 主会论文，ACL Anthology 2021.eacl-main.187，pp.2190–2202，13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2021.eacl-main.187.pdf",
+ "retrieved_at": "2026-11-04T05:54:04.992485+00:00",
+ "fulltext": "research/paper-completion/papers/swb_51405a28ae12c407.pdf",
+ "sha256": "ee74f559eb15b947ad34abe4b5c168962c8e94d861fda549c521d03a824c14a9",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/swb_51405a28ae12c407",
+ "note": "research/paper-completion/notes/swb_51405a28ae12c407/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3–5、附录 A，PDF pp.3–7、12–13",
+  "evaluation": "§6、Tables 8–11，PDF pp.7–9",
+  "limitations": "§4.3、§6.1、§8，PDF pp.5–6、8–9"
+ },
+ "evidence": [
+  {
+   "id": "swb_51405a28ae12c407:E01",
+   "claim": "PEG 是锚定原文 span 的文档级有向无环带标签图，节点分为 13 类操作谓词与 8 类论元，边分核心角色、非核心角色和 succ 时序边，操作本体基于 Autoprotocol。",
+   "locator": "§3、Tables 1–3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51405a28ae12c407:E02",
+   "claim": "X-WLP 含 279 篇协议、3,708 句、54.1K 词，是 WLP 的 44.8% 子集；关系 20,013 条，其中跨句 4,073 条（20%）。",
+   "locator": "§4、Tables 4、6，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51405a28ae12c407:E03",
+   "claim": "4 名本科生用 TextWorld 文本模拟器标注，44 篇双人标注，Smatch 84.99、reentrancy 一致度 73.12；每篇约 53 分钟，总预算约 3,200 美元。",
+   "locator": "§4.2–4.3、Table 5，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51405a28ae12c407:E04",
+   "claim": "5 折交叉验证中 2 折（112 篇）作开发、3 折（167 篇）报告结果；另有 344 篇 WLP 协议只用于训练提及标注器。",
+   "locator": "§6，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51405a28ae12c407:E05",
+   "claim": "核心角色标注 F1：MULTI-TASK 57.9、PIPELINE 53.7、PIPELINE 金标提及 76.5；跨句核心角色仅 32.5/39.1，句内 63.4/58.2。",
+   "locator": "Tables 10–11，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51405a28ae12c407:E06",
+   "claim": "Table 7 中 X-WLP 缺核心论元比例为 0% 部分源于模拟器的输入校验；PEG 到 Autoprotocol 的转换只作示意、未评测。",
+   "locator": "§4.3、Figure 1，PDF pp.1、6",
+   "basis": "inference",
+   "basis_note": "缺核心论元与输入校验的关联为原文陈述；'转换未评测'为阅读者对全文实验范围的判断。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

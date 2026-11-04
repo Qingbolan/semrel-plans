@@ -1,0 +1,71 @@
+{
+ "id": "lit_94a1c139819b",
+ "url": "https://arxiv.org/abs/2411.07763",
+ "title": "Lei, Chen et al. — Spider 2.0: Evaluating Language Models on Real-World Enterprise Text-to-SQL Workflows",
+ "version": "arXiv:2411.07763v2（2025-03-17，ICLR 2025 会议版排版），45 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2411.07763",
+ "retrieved_at": "2026-11-04T05:31:49.521477+00:00",
+ "fulltext": "research/paper-completion/papers/lit_94a1c139819b.pdf",
+ "sha256": "b27bcee967778e864809adf241acd4c250a52d59f4ff301a34b4f4f3e6be7908",
+ "format": "pdf",
+ "pages": 45,
+ "note_directory": "research/paper-completion/notes/lit_94a1c139819b",
+ "note": "research/paper-completion/notes/lit_94a1c139819b/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1、Figs. 1–2，PDF pp.1–3",
+  "method": "§2.2–2.3、Tables 1–3，PDF pp.3–6；附录 A，pp.15–16",
+  "evaluation": "§3–4、Tables 4–11、Figs. 4–5，PDF pp.6–10；附录 Tables 20–21，pp.38–39；p.9 已渲染核对",
+  "limitations": "无独立局限节；§4、附录 A，PDF pp.8–10、15"
+ },
+ "evidence": [
+  {
+   "id": "lit_94a1c139819b:E01",
+   "claim": "Spider 2.0 含 632 个来自真实企业用例的 text-to-SQL 工作流任务，数据库位于 BigQuery、Snowflake、SQLite、DuckDB、PostgreSQL、ClickHouse，平均每库 743.5 列、每条 SQL 148.3 token、7.1 个函数。",
+   "locator": "摘要、Table 2–3，PDF pp.1、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_94a1c139819b:E02",
+   "claim": "完整版为代码智能体任务：输入问题、数据库接口与代码库，迭代修改并执行代码，最终观察作为答案，以成功率 SR 评测；lite/snow 为自包含 text-to-SQL，输入模式、问题与文档，输出 SQL，以执行准确率 EX 评测。",
+   "locator": "§2.1、Fig. 2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_94a1c139819b:E03",
+   "claim": "构造流程：8 名作者从 1,021 条复杂 SQL 与 157 个转换项目中保留 547 条 SQL 与 78 个 DBT 项目；84.2% 做表层改写、42% 做语义改写防泄漏；每例至少三人复核，首轮 45% 有错，二轮降至 5% 后全部修正。",
+   "locator": "§2.2，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_94a1c139819b:E04",
+   "claim": "表格答案采用聚焦评测：金标准结果的每一列都出现在预测结果中即判正确，可忽略多余列与行顺序。",
+   "locator": "附录 A，Eqs. 1–2、Fig. 6，PDF pp.15–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_94a1c139819b:E05",
+   "claim": "Spider-Agent + o1-preview 在 Spider 2.0 上 SR 为 21.36%；DAIL-SQL + GPT-4o 在 lite 上 EX 仅 5.68%，而在 Spider 1.0、BIRD 上为 86.6%、57.4%。",
+   "locator": "Tables 5–6，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_94a1c139819b:E06",
+   "claim": "300 个错误样本中，数据分析错误 35.5%、模式链接错误 27.6%、JOIN 错误 8.3%；含嵌套列、外部文档、DBT 项目的子集 SR 分别为 10.34%、11.54%、12.82%。",
+   "locator": "§4.1–4.2、Tables 7–9、Fig. 4，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_94a1c139819b:E07",
+   "claim": "论文口径存在不一致：632−78=554 与 lite 的 547 例不符；Table 10 中 o1-preview 加 oracle 函数后 EX 由 12.60% 降到 9.51% 而正文称略有提升；Table 20 总体 SR 17.0% 与 Table 6 的 21.36% 不同。",
+   "locator": "Tables 2–3、6、10、20，PDF pp.5、7、9、38",
+   "basis": "inference",
+   "basis_note": "数值来自原文；不一致为阅读者比对得出。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

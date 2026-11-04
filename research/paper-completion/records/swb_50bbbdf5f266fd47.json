@@ -1,0 +1,72 @@
+{
+ "id": "swb_50bbbdf5f266fd47",
+ "url": "https://arxiv.org/abs/2509.23291",
+ "title": "Scaling Policy Compliance Assessment in Language Models with Policy Reasoning Traces",
+ "version": "arXiv:2509.23291v1（2025-09-27 预印本），34 页（正文 10 页，附录至 p.34）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2509.23291v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_50bbbdf5f266fd47.pdf",
+ "sha256": "0a34ea3786932a7795fcbf9e6ac4234ae3a70bcef08753725eea7f3afd111bea",
+ "format": "pdf",
+ "pages": 34,
+ "note_directory": "research/paper-completion/notes/swb_50bbbdf5f266fd47",
+ "note": "research/paper-completion/notes/swb_50bbbdf5f266fd47/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.2，PDF pp.1–3",
+  "method": "§2.3–2.4、§3，PDF pp.3–6",
+  "evaluation": "§4、Fig.3–4、Table 1–2，PDF pp.6–9；附录 A Table 3–4，pp.17–18",
+  "limitations": "§6、伦理声明，pp.9–10；附录 B，p.18"
+ },
+ "evidence": [
+  {
+   "id": "swb_50bbbdf5f266fd47:E01",
+   "claim": "现有政策合规数据只有案例和合规/不合规标签，缺少专家逐条推理；作者用前沿推理模型在已知金标准结论的条件下生成条款级推理链（PRT），作为推理桥。",
+   "locator": "§1、§2.1、§2.3，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_50bbbdf5f266fd47:E02",
+   "claim": "任务输入为叙述性案例与政策全文，输出二元结论 COMPLIANT/NON-COMPLIANT；ICL 使用 3 个 (案例, 结论, PRT) 示例，SFT 时只提供每个案例相关的条款子集。",
+   "locator": "§2.2–2.4、§3，PDF pp.2–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_50bbbdf5f266fd47:E03",
+   "claim": "HIPAA 使用 GoldCoin 309 训练/107 测试合成案例；GDPR 为作者从 GDPRHub 收集的 764/326 个真实 DPA 案件；ModelSpec 训练 64 例、测试使用 XSTest 450 条。",
+   "locator": "§3，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_50bbbdf5f266fd47:E04",
+   "claim": "GDPR 上 DeepSeek-R1（Specialist PRT）和 GPT-5-mini（Generalist PRT）均达 81.0% 准确率；HIPAA 上 SFT 后 Qwen2.5-7B 加 PRT 达 80.4/81.3%，高于 GoldCoin 的 79.9%。",
+   "locator": "§4，p.7；Table 3–4，pp.17–18",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_50bbbdf5f266fd47:E05",
+   "claim": "ModelSpec 上 GPT-OSS-20B 与 GPT-5-mini 加 PRT 后准确率平均下降 4.7，作者归因于这些模型已用 ModelSpec 做过对齐（doubly-optimized）。",
+   "locator": "§4，p.7；Table 3，p.17",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_50bbbdf5f266fd47:E06",
+   "claim": "条款引用 Recall 的正文概述（+2.0–9.0）与 Table 1 中实际增量（+1.9 至 +30.0）不一致；Exact-Match 在多数设置下接近 0。",
+   "locator": "§4，p.8；Table 1，p.8",
+   "basis": "inference",
+   "basis_note": "表中数值来自原文；正文与表格的不一致由阅读者比对得出。"
+  },
+  {
+   "id": "swb_50bbbdf5f266fd47:E07",
+   "claim": "PRT 是在给定正确结论条件下生成的理由，原文未评估其推理正确性；ModelSpec 训练示例与 XSTest 测试集来源和标注口径不同，GDPR“新 SOTA”缺少同数据上的先前方法对照。",
+   "locator": "§2.3、§3–4，PDF pp.3–7",
+   "basis": "inference",
+   "basis_note": "实验设置来自原文；对评测有效性的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "lit_936a1f24d404",
+ "url": "https://link.springer.com/chapter/10.1007/978-3-032-05281-0_8",
+ "title": "Korini & Bizer — Evaluating Knowledge Generation and Self-refinement Strategies for LLM-Based Column Type Annotation",
+ "version": "arXiv:2503.02718v1（2025-03-04 预印本），14 页；ADBIS 2025 Springer 正式版未获取",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2503.02718v1",
+ "retrieved_at": "2026-11-04T05:11:16.209065+00:00",
+ "fulltext": "research/paper-completion/papers/lit_936a1f24d404.pdf",
+ "sha256": "5de5241752a3cf1e7740660d89a9a7091ef30558886fce12d54423adfcae4277",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_936a1f24d404",
+ "note": "research/paper-completion/notes/lit_936a1f24d404/README.md",
+ "read_sections": {
+  "problem": "§1、Fig. 1，PDF pp.1–2",
+  "method": "§3、§5.1、§6、§7，PDF pp.3–4、6、8–11",
+  "evaluation": "§4–7、Tables 2–13，PDF pp.4–12",
+  "limitations": "§4–7 成本与失败分析、§8，PDF pp.5、8–12；无单独局限章节"
+ },
+ "evidence": [
+  {
+   "id": "lit_936a1f24d404:E01",
+   "claim": "CTA 目标是把表格列链接到预定义词表的语义类型；本文在训练数据少、无列名与表格说明的场景下比较知识生成、自我精炼、自我纠错与微调的 F1 与 token/美元成本。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_936a1f24d404:E02",
+   "claim": "SOTAB V2-ds 为 698/199/239 张训练/验证/测试表、50 个标签、824 个测试列；WikiTURL-ds 为 809/416/379、66 标签、878 测试列；Limaye 105 训练、107 测试、26 标签、107 测试列。表格只取前 5 行，列名替换为 Column 1 等。",
+   "locator": "§3、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_936a1f24d404:E03",
+   "claim": "基线中 gpt-4o 零样本 Micro-F1 为 SOTAB V2 80.9、Limaye 82.6；Limaye 五样本使各模型升至约 90，作者归因于示例相似度更高（0.755 对比 0.654/0.648）。",
+   "locator": "§4、Table 2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_936a1f24d404:E04",
+   "claim": "基于验证集错误精炼标签定义在 12 个设置中的 10 个平均比未精炼定义高 3.9% F1，但生成 token 超过 40 倍；仅凭模型背景知识的初始定义在三个数据集上都劣于零样本。",
+   "locator": "§1、§5.2、Tables 5–6、8，PDF pp.2、7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_936a1f24d404:E05",
+   "claim": "两步自我纠错在 36 个情形中半数以上降低效果，仅 gpt-4o 配示例定义在 SOTAB V2 与 Limaye 至少 +1.7%。",
+   "locator": "§1、§6、Table 9，PDF pp.2、9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_936a1f24d404:E06",
+   "claim": "微调使 F1 提升 6.3–32.3%；微调 gpt-4o 加精炼定义在 SOTAB V2 达 91.8 F1；按 SOTAB V2 成本计算，列数超过约 9,400（结论写 >9000）时微调比精炼定义提示更便宜。",
+   "locator": "§7、Tables 11、13、§8，PDF pp.10–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_936a1f24d404:E07",
+   "claim": "方法多为已有提示技术在 CTA 上的组合，贡献主要是效果与成本的系统对照；降采样到 5 个领域、每标签 20 列、单一 gpt-4o 生成定义，限制了结论外推。",
+   "locator": "§3、§5.1，PDF pp.3、6",
+   "basis": "inference",
+   "basis_note": "降采样与定义生成设置来自原文；贡献性质与外推限制为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

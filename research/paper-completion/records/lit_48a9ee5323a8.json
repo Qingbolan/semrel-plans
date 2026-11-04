@@ -1,0 +1,79 @@
+{
+ "id": "lit_48a9ee5323a8",
+ "url": "https://link.springer.com/article/10.1007/s00778-025-00912-0",
+ "title": "Li et al. — Prompt4Vis: Prompting Large Language Models with Example Mining (and Schema Filtering) for Tabular Data Visualization",
+ "version": "arXiv:2402.07909v1 预印本（2024-01-29），10 页；VLDB Journal 2025 正式版 PDF 未能获取",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2402.07909v1",
+ "retrieved_at": "2026-11-04T05:21:32.364832+00:00",
+ "fulltext": "research/paper-completion/papers/lit_48a9ee5323a8.pdf",
+ "sha256": "e26a7fb32b5d94b9bf86ba140db72653d77a3a1590d833bff140ca4b35079fc6",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "research/paper-completion/notes/lit_48a9ee5323a8",
+ "note": "research/paper-completion/notes/lit_48a9ee5323a8/README.md",
+ "read_sections": {
+  "problem": "§1–§2、Figure 1，PDF pp.1–3",
+  "method": "§3、Algorithm 1、Figures 2–3、Table 1，PDF pp.3–5",
+  "evaluation": "§4、Tables 2–4、Figures 4–5，PDF pp.5–8",
+  "limitations": "无独立局限一节；§4.2.1 末段、§6，PDF pp.6、9"
+ },
+ "evidence": [
+  {
+   "id": "lit_48a9ee5323a8:E01",
+   "claim": "已有 text-to-vis 方法（Seq2Vis、ncNet、RGVisNet 等）跨领域表现不足；LLM 上下文学习对示例选择敏感，且完整模式编码昂贵并引入无关信息。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E02",
+   "claim": "任务是给定自然语言问题与数据库模式生成数据可视化查询 DVQ；DVQ 先查询数据再定义可视化，可转换为 Vega-Lite 等语言。",
+   "locator": "§2、Figure 1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E03",
+   "claim": "示例挖掘综合相似度（句向量欧氏距离）、影响力（以单示例提示下 LLM 生成结果的相似度与准确率构造正负例、对比学习训练的 BERT 模型）与多样性，先按 αC+(1−α)I 排序再贪心最大化多样性。",
+   "locator": "§3.2、Algorithm 1、Figure 3，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E04",
+   "claim": "模式过滤以表为单位，由 GPT-3.5-Turbo 配 10 个固定示例选出相关表。",
+   "locator": "§3.3、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E05",
+   "claim": "NVBench 含 7,247 个 DVQ；按数据库划分训练/开发/测试为 98/29/14 个数据库，并做 5 折交叉验证。",
+   "locator": "§4.1.1，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E06",
+   "claim": "5 折平均整体准确率：Prompt4Vis 测试 52.69%、开发 60.39%，RGVisNet 为 30.75%、44.44%；71.3%/35.9% 为相对提升。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "inference",
+   "basis_note": "数值来自 Table 2；“相对提升”的核算为阅读者计算，与 §4.2.1 表述一致。"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E07",
+   "claim": "消融中随机 5 示例测试整体准确率仅 33.51%，相似示例 50.15%；去掉影响力、多样性或相似度各下降约 0.5–2 个百分点；示例不带模式、只给目标问题模式（w/o schema，50.78%）与示例给完整模式（50.42%）接近。",
+   "locator": "Table 3，PDF p.7",
+   "basis": "inference",
+   "basis_note": "数值来自 Table 3；各组件贡献幅度的归纳为阅读者分析。"
+  },
+  {
+   "id": "lit_48a9ee5323a8:E08",
+   "claim": "阅读的是 arXiv 预印本而非 VLDBJ 正式版；预印本无局限一节，未给出 α、λ、L、M 等超参数取值，也未与 Chat2Vis、LIDA 等 LLM 方法做实验比较。",
+   "locator": "全文；§5.2，PDF p.9",
+   "basis": "inference",
+   "basis_note": "基于对预印本全文的检索与阅读；正式版是否不同未能核对。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

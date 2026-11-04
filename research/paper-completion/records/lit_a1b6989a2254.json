@@ -1,0 +1,65 @@
+{
+ "id": "lit_a1b6989a2254",
+ "url": "https://doi.org/10.1109/tkde.2022.3148237",
+ "title": "Chai, Wang, Luo, Niu & Li — Data Management for Machine Learning: A Survey",
+ "version": "IEEE TKDE Vol.35 No.5（2023-05），pp.4646–4667，出版版 PDF（作者主页），22 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://dbgroup.cs.tsinghua.edu.cn/ligl/papers/DM4ML_Survey.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_a1b6989a2254.pdf",
+ "sha256": "0164d1959b82c16c736826f6a57dc45f4bba51f1fd9c7bb5cb4d0a0b6e1c69c7",
+ "format": "pdf",
+ "pages": 22,
+ "note_directory": "research/paper-completion/notes/lit_a1b6989a2254",
+ "note": "research/paper-completion/notes/lit_a1b6989a2254/README.md",
+ "read_sections": {
+  "problem": "§1（含 1.4），PDF pp.1–4",
+  "method": "§2–4、Fig. 1、Tables 1–6，PDF pp.3–17（§3–4 选择性阅读）",
+  "evaluation": "无原创实验；Table 3 转述 CleanML，PDF p.7",
+  "limitations": "§5，PDF pp.17–18"
+ },
+ "evidence": [
+  {
+   "id": "lit_a1b6989a2254:E01",
+   "claim": "作者归纳 ML 的三个挑战：高质量训练数据获取昂贵、数据与模型规模导致训练推理低效、迭代产生的大量模型难以管理，并按 Pre-ML / In-ML / Post-ML 组织数据库技术。",
+   "locator": "摘要、§1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a1b6989a2254:E02",
+   "claim": "表级数据发现形式化为：给定带预测列的基表 Tb、可连接候选表集合 T 和模型 M，选出子集 T′ 与 Tb 连接使 M 效果提升最多。",
+   "locator": "§2.1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a1b6989a2254:E03",
+   "claim": "CleanML 含 13 个真实数据集、5 类错误、7 种模型；Table 3 汇总：清洗重复值有负面影响但可由模型选择缓解，离群值影响视数据集而定，修正错误标签与填补缺失值有正面影响。",
+   "locator": "§2.2、Table 3，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a1b6989a2254:E04",
+   "claim": "Table 4 定性比较标注方法：主动学习质量、成本、延迟均为高；数据编程质量高、成本与延迟低；众包三项为中。",
+   "locator": "Table 4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a1b6989a2254:E05",
+   "claim": "§5 提出的挑战包括面向 ML 的元组级发现、通用清洗、标注理论保证、端到端 ML 优化器、库内深度学习、DB/ML 混合优化器、流式模型管理和协作式流水线调试。",
+   "locator": "§5，PDF pp.17–18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a1b6989a2254:E06",
+   "claim": "本文没有原创实验，比较表中的高/中/低是定性判断；稿件 2021 年 6 月收到、2022 年 1 月修订，不覆盖 LLM 用于数据准备的工作。",
+   "locator": "PDF p.1、Tables 4–6，PDF pp.8–11",
+   "basis": "inference",
+   "basis_note": "收稿日期来自原文；关于定性等级与时间覆盖范围的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

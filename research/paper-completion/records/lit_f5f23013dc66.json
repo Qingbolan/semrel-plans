@@ -1,0 +1,65 @@
+{
+ "id": "lit_f5f23013dc66",
+ "url": "https://arxiv.org/abs/2509.06298",
+ "title": "Yan, Xi, Hou — MCTuner: Spatial Decomposition-Enhanced Database Tuning via LLM-Guided Exploration",
+ "version": "arXiv:2509.06298v1（2025-09-08），16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2509.06298v1",
+ "retrieved_at": "2026-11-04T05:09:47+00:00",
+ "fulltext": "research/paper-completion/papers/lit_f5f23013dc66.pdf",
+ "sha256": "be3d7bc48b745ce6dfc8e4056ecbb03cffffc9d6c3380aacbb1bb2a829d0c09c",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/lit_f5f23013dc66",
+ "note": "research/paper-completion/notes/lit_f5f23013dc66/README.md",
+ "read_sections": {
+  "problem": "§1（挑战 C1–C3）、§3 问题定义，PDF pp.1–4",
+  "method": "§4–6、Figure 1–5、Algorithm 1–2，PDF pp.4–9",
+  "evaluation": "§7.1–7.4、Figure 6–11、Table 1–3，PDF pp.9–14",
+  "limitations": "无独立局限章节；§8 结论，p.14；§7.4.1，p.13"
+ },
+ "evidence": [
+  {
+   "id": "lit_f5f23013dc66:E01",
+   "claim": "作者提出三项挑战：无效配置探索浪费资源（C1）、knob 选择效率与可解释性不足（C2）、新负载下运行样本稀缺（C3）。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f5f23013dc66:E02",
+   "claim": "MoE 由 7 个领域 LLM 专家组成，Manager 分类赋权，专家打 1–100 分，按 S_final=Σ Wi×Si 选前 N 个 knob；知识来自手册、网页与 LLM，范围取交集。",
+   "locator": "§5.1–5.2，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f5f23013dc66:E03",
+   "claim": "空间分解按样本数 τ=50 切换谱聚类与 Kernel PCA+K-medoids，用软间隔 SVM 划分，UCB 选叶节点并在其中做 BO；每次迭代重建搜索树。",
+   "locator": "§6.2–6.3、Algorithm 1–2，PDF pp.7–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f5f23013dc66:E04",
+   "claim": "实验用 PostgreSQL 14.9、8 个基准、统一 60 个初始 knob、每方法 100 次迭代（BO 类前 10 次 LHS）。",
+   "locator": "§7.1，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f5f23013dc66:E05",
+   "claim": "相对最强基线，延迟提升 TPC-H 6.6%、JOB 5.4%、CH-benCHmark 19.2%、HyAdapt 2.4%；吞吐提升 TPC-C 9.4%、Twitter 6.2%、YCSB 12.3%、SmallBank 4.6%、HyAdapt 13.6%；单次迭代算法耗时 5.54 s。",
+   "locator": "§7.2、Table 1，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f5f23013dc66:E06",
+   "claim": "§7.1.3 称使用 GPT-4，§7.1.5 称使用 gpt-4o-mini；正文引用的附录在 arXiv v1 中缺失；摘要的 1.4× 未写比较对象，相对 GPTuner 约 1.35×，而 LlamaTune、SMAC、CDBTune 单次耗时更短。",
+   "locator": "§7.1.3、§7.1.5，pp.9–10；§7.3.1，p.11；Table 1，p.11",
+   "basis": "inference",
+   "basis_note": "不一致与比值为阅读者对照原文计算与比较得出。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

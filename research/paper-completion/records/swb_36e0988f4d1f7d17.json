@@ -1,0 +1,71 @@
+{
+ "id": "swb_36e0988f4d1f7d17",
+ "url": "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf",
+ "title": "Towards Building a Discourse-annotated Corpus of Russian",
+ "version": "Dialogue 2017 会议论文集（Computational Linguistics and Intellectual Technologies）PDF，12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_36e0988f4d1f7d17.pdf",
+ "sha256": "f8d884730d46f189d6f0078be829b0458ec0a797afbbfe74417a7bf617f7b710",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "research/paper-completion/notes/swb_36e0988f4d1f7d17",
+ "note": "research/paper-completion/notes/swb_36e0988f4d1f7d17/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–§1.1，PDF pp.1–3",
+  "method": "§2–§2.2，PDF pp.4–8",
+  "evaluation": "§2.2–§2.3、Fig. 4，PDF pp.8–9；Fig. 4 已渲染核对",
+  "limitations": "§2.3、§3，PDF pp.8–10"
+ },
+ "evidence": [
+  {
+   "id": "swb_36e0988f4d1f7d17:E01",
+   "claim": "当时俄语书面语没有公开的篇章标注语料；唯一的俄语相关项目 TED-MDB 采用 PDTB 框架且未公开，因此作者选择 RST。",
+   "locator": "§1–§1.1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_36e0988f4d1f7d17:E02",
+   "claim": "EDU 大致等于小句，例外为“для/из-за”名词化结构算 EDU、限制性关系从句不算；初始手册有 16 种单核心和 6 种多核心关系，共 22 种。",
+   "locator": "§2.1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_36e0988f4d1f7d17:E03",
+   "claim": "IAA 采用 Krippendorff 单元化 α，以拼接文本片段为 key，并忽略 span 关系；代码公开在 GitHub。",
+   "locator": "§2.2，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_36e0988f4d1f7d17:E04",
+   "claim": "第一轮 3 篇短新闻（34/26/38 句，约 190 个 EDU）的 α 为 0.2792/0.3173/0.4965，低于作者期望的约 0.8。",
+   "locator": "§2.1–§2.2，PDF pp.5、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_36e0988f4d1f7d17:E05",
+   "claim": "作者删除 Motivation、Antithesis、Conclusion 和意愿性子类，合并 Cause+Effect、Interpretation+Evaluation、Attribution1+2；在另 3 篇新闻（37/44/28 句）上 α 为 0.7768/0.691/0.7615。",
+   "locator": "§2.3、Fig. 4，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_36e0988f4d1f7d17:E06",
+   "claim": "“3 年内超过 10 万 token”是计划；后续改为单人标注加他人检查，自动分析实验待约 100 篇文本后开展。",
+   "locator": "§2、§3，PDF pp.4、10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_36e0988f4d1f7d17:E07",
+   "claim": "按 Fig. 4 计数，最终叶子关系约 17 种。两轮 IAA 使用不同文本且各仅 3 篇，前后提升不能完全归因于关系集修改。",
+   "locator": "§2.2–§2.3、Fig. 4，PDF pp.8–9",
+   "basis": "inference",
+   "basis_note": "17 种为阅读者根据渲染的 Fig. 4 自行计数；归因判断为阅读者分析，原文仅称提升显著。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

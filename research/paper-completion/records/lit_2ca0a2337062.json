@@ -1,0 +1,78 @@
+{
+ "id": "lit_2ca0a2337062",
+ "url": "https://aclanthology.org/2024.naacl-long.335/",
+ "title": "Zhang et al. — TableLlama: Towards Open Large Generalist Models for Tables",
+ "version": "NAACL 2024 Long Papers，pp.6024–6044（2024.naacl-long.335），21 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.naacl-long.335.pdf",
+ "retrieved_at": "2026-11-04T05:25:12+00:00",
+ "fulltext": "research/paper-completion/papers/lit_2ca0a2337062.pdf",
+ "sha256": "ad95141254b2db870d9da935df0316f7fd4278d4656f9aff31b2e6e094dde48a",
+ "format": "pdf",
+ "pages": 21,
+ "note_directory": "research/paper-completion/notes/lit_2ca0a2337062",
+ "note": "research/paper-completion/notes/lit_2ca0a2337062/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，PDF pp.1–3",
+  "method": "§2.1–2.2、§3、Figure 2、Table 1，PDF pp.3–5",
+  "evaluation": "§4.1–4.2、Tables 2–4，PDF pp.6–8",
+  "limitations": "§7 Limitations、§4.1 行填充误差分析，PDF pp.6、9"
+ },
+ "evidence": [
+  {
+   "id": "lit_2ca0a2337062:E01",
+   "claim": "现有表格方法需要表格预训练或特制结构、只支持特定表格/任务、或对表格和任务做强简化假设；作者希望用 LLM 加指令微调构建可泛化到未见任务的通用表格模型。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ca0a2337062:E02",
+   "claim": "TableInstruct 含 14 个数据集、11 类任务；8 个数据集（8 任务）用于训练与域内评测，6 个数据集（4 任务）留作域外评测；训练数据来自 1.24M 张表、2.6M 个实例。",
+   "locator": "§1、§2.1、Table 1，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ca0a2337062:E03",
+   "claim": "每个实例为 <instruction, table input, question> → output；以 LongLoRA 7B（Llama 2）全参数微调、8192 输入长度，在 48 张 A100 上训练 2 个 epoch；FeTaQA、HiTab、TabFact 重复 6 次。",
+   "locator": "§2.2、§3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ca0a2337062:E04",
+   "claim": "列类型标注与实体链接从原测试集均匀抽样子集，行填充过滤掉候选超过 500 的样本后抽样，并在这些子集上重新运行 SOTA；GPT-4 每任务仅 500 例。因此 SOTA 对照与原论文报告值不完全同口径。",
+   "locator": "§3、Table 2 注，PDF pp.5–6",
+   "basis": "inference",
+   "basis_note": "下采样与复现 SOTA 为原文事实；'不完全同口径'为阅读者分析。"
+  },
+  {
+   "id": "lit_2ca0a2337062:E05",
+   "claim": "域内 Table 2：TableLlama 在实体链接 93.65（SOTA 84.90）、HiTab 64.71（SOTA 47.00）、FeTaQA 39.05（SOTA 33.44）上超过 SOTA；行填充 MAP 58.44 远低于 SOTA 73.31。",
+   "locator": "Table 2、§4.1，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ca0a2337062:E06",
+   "claim": "域外 Table 3：相对基座提升 +5.75（WikiTQ）到 +44.09（FEVEROUS）；WikiTQ 35.01 低于 GPT-3.5 的 53.13 和 GPT-4 的 68.40；SOTA 为全量有监督结果，仅作参考。",
+   "locator": "Table 3、§4.1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ca0a2337062:E07",
+   "claim": "FEVEROUS 属已训练的事实核验任务类型，作者也认为同任务换数据集更易泛化，故'跨任务泛化'证据主要来自其余 5 个数据集。",
+   "locator": "§4.1，PDF p.7",
+   "basis": "inference",
+   "basis_note": "作者对 FEVEROUS 增益的解释为原文；对跨任务泛化证据范围的限定为阅读者分析。"
+  },
+  {
+   "id": "lit_2ca0a2337062:E08",
+   "claim": "局限：未覆盖数据填补、表格分类等任务，在新的未见表格任务上效果可能变化。",
+   "locator": "§7，PDF p.9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

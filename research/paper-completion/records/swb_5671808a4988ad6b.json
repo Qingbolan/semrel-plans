@@ -1,0 +1,71 @@
+{
+ "id": "swb_5671808a4988ad6b",
+ "url": "https://arxiv.org/abs/2311.09105",
+ "title": "Wang et al. — MAVEN-Arg: Completing the Puzzle of All-in-One Event Understanding Dataset with Event Argument Annotation",
+ "version": "arXiv:2311.09105v2（2024-06-18），20 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2311.09105v2",
+ "retrieved_at": "2026-11-04T05:48:41.580048+00:00",
+ "fulltext": "research/paper-completion/papers/swb_5671808a4988ad6b.pdf",
+ "sha256": "e1050449ae56de5305c6db41d60ab411ddc7147c704924c13edd954dcf09bec7",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "research/paper-completion/notes/swb_5671808a4988ad6b",
+ "note": "research/paper-completion/notes/swb_5671808a4988ad6b/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1，PDF pp.1–2",
+  "method": "§2.1–2.3、§3，Tables 1–2，PDF pp.2–5；附录 A–B，Tables 7–9，PDF pp.15–16",
+  "evaluation": "§4–5，Tables 3–6，Figure 4，PDF pp.5–8；附录 C–E，PDF pp.15–20",
+  "limitations": "Limitations，PDF p.9；§4.1 评测设置，PDF pp.5–6"
+ },
+ "evidence": [
+  {
+   "id": "swb_5671808a4988ad6b:E01",
+   "claim": "现有事件数据集分别覆盖 ED/EAE 或 ERE，规模多为数千事件且 schema 不一致；MAVEN-Arg 为 MAVEN 补齐论元，与 MAVEN-ERE 合成覆盖 ED、EAE、ERE 的一体化数据集。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5671808a4988ad6b:E02",
+   "claim": "Schema 含 162 个事件类型、612 个定义不同的论元角色（143 个独立角色名）、14,655 词定义；基于 FrameNet 并按 5W1H 扩展。",
+   "locator": "§2.1，Table 1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5671808a4988ad6b:E03",
+   "claim": "全集 4,480 文档、98,591 事件、107,507 触发词、290,613 论元（实体 116,024、非实体 174,589）；划分 Train/Dev/Test 文档 2,913/710/857，论元 190,479/46,458/53,676。",
+   "locator": "Table 2，PDF p.4；附录 Table 8，PDF p.16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5671808a4988ad6b:E04",
+   "claim": "论元标注 202 人三阶段，抽 100 篇双标的 Fleiss' κ 68.6%；实体识别/共指 κ 73.2%/78.4%；总标注成本约 85,000 美元。",
+   "locator": "§2.2–2.3，PDF p.4；附录 A.2，PDF p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5671808a4988ad6b:E05",
+   "claim": "微调模型最佳为 PAIE，提及级 F1 35.6、实体/事件共指级 F1 40.5/40.3；GPT-4 两例上下文学习提及级 F1 25.1，加角色定义后 26.6。",
+   "locator": "Tables 3–4，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5671808a4988ad6b:E06",
+   "claim": "微调模型用预测触发词（PAIE 用 CLEVE 触发词）并在全测试集评测，LLM 用金标准触发词且只抽 50 篇测试文档，两组数字不可直接比较；§4.6 分类错误 0.02% 与其余三类合计 100.0% 不一致。",
+   "locator": "§4.1、§4.6，PDF pp.5–7；附录 C.1，PDF p.15",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；评价、比较或口径提示为阅读者分析。"
+  },
+  {
+   "id": "swb_5671808a4988ad6b:E07",
+   "claim": "未来事件预测：100 条 3–5 事件的因果链，GPT-3.5/GPT-4 预测合理率 92.7%/95.2%，与真实后续匹配率 7.8%/12.2%。",
+   "locator": "§5，Table 6，PDF p.8",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

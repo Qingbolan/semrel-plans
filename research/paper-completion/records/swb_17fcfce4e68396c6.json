@@ -1,0 +1,65 @@
+{
+ "id": "swb_17fcfce4e68396c6",
+ "url": "https://aclanthology.org/J17-1004",
+ "title": "Habernal & Gurevych — Argumentation Mining in User-Generated Web Discourse",
+ "version": "Computational Linguistics 43(1):125–179, 2017（ACL Anthology J17-1004），55 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/J17-1004.pdf",
+ "retrieved_at": "2026-11-04T04:50:04+00:00",
+ "fulltext": "research/paper-completion/papers/swb_17fcfce4e68396c6.pdf",
+ "sha256": "19c403cc1aa3ef94f9c67db38349b928893fb36588dd9049eec9d770ca6bef87",
+ "format": "pdf",
+ "pages": 55,
+ "note_directory": "research/paper-completion/notes/swb_17fcfce4e68396c6",
+ "note": "research/paper-completion/notes/swb_17fcfce4e68396c6/README.md",
+ "read_sections": {
+  "problem": "§1–1.1，PDF pp.1–4",
+  "method": "§4.1–4.3、§4.4.1–4.4.2、§4.4.4–4.4.6、§5.1.1–5.1.3、附录 A，PDF pp.14–22、33–36、43–44",
+  "evaluation": "§4.4.6–4.4.7、§5.1.4–5.1.7、Tables 4–6、8–13，PDF pp.22–25、35–42",
+  "limitations": "§4.4.8（开头）、§5.1 脚注 28–30、§5.1.7、§6，PDF pp.25、32–33、41–43"
+ },
+ "evidence": [
+  {
+   "id": "swb_17fcfce4e68396c6:E01",
+   "claim": "动机是帮助用户在争议话题上从用户生成内容中获取论证要点；现有工作受限于单一领域或体裁、与论证理论脱节、缺少可靠标注语料。",
+   "locator": "§1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_17fcfce4e68396c6:E02",
+   "claim": "采用改造的 Toulmin 模型（claim、premise、backing、rebuttal、refutation），去掉 qualifier 与 warrant，新增 refutation；标注以句子为默认单位，必要时改用 token 级。",
+   "locator": "§4.4.2、§4.4.5，PDF pp.18、21–22",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_17fcfce4e68396c6:E03",
+   "claim": "研究 1 在 990 篇评论/论坛帖上标注说服性，Fleiss κ=0.59，524 篇（53%）为说服性；研究 2 金标准为 340 篇、84,673 tokens、3,899 句。",
+   "locator": "§4.3、Tables 2–3，PDF pp.15、21",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_17fcfce4e68396c6:E04",
+   "claim": "logos 维度联合 αU：全部数据 0.48，评论 + 论坛帖 0.60，文章 + 博客 0.09。",
+   "locator": "Table 4、§4.4.6，PDF pp.22–23",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_17fcfce4e68396c6:E05",
+   "claim": "全数据 10 折下最佳 Macro-F1 为 0.251（FS01234/FS234），基线 0.156，人类 0.602；跨领域时只用词向量特征为 0.209。",
+   "locator": "Tables 9、11，PDF pp.37–38",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_17fcfce4e68396c6:E06",
+   "claim": "原文规模与一致性表述有出入：摘要写 90k tokens，Table 3 为 84,673；§4.3 写 Fleiss’ κ，§4.5 写 Fleiss’ π；可靠标注实际集中在短文本，作者只推荐在短文档上使用该方案。",
+   "locator": "摘要、Table 3、§4.3、§4.5、§6，PDF pp.1、15、21、32、43",
+   "basis": "inference",
+   "basis_note": "数值与表述来自原文；对不一致及“可靠性集中在短文本”的归纳为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

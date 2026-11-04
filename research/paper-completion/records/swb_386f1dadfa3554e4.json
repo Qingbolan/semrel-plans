@@ -1,0 +1,65 @@
+{
+ "id": "swb_386f1dadfa3554e4",
+ "url": "https://aclanthology.org/2026.acl-long.1760",
+ "title": "Refining and Reusing Annotation Guidelines for LLM Annotation",
+ "version": "ACL 2026 长文，ACL Anthology 2026.acl-long.1760，pp.37951–37964，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2026.acl-long.1760.pdf",
+ "retrieved_at": "2026-11-04T05:54:04.992485+00:00",
+ "fulltext": "research/paper-completion/papers/swb_386f1dadfa3554e4.pdf",
+ "sha256": "0f0b205eea63f7bf4855fa9453423bc46c36f2c9261af50e49024cf60f40e15f",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/swb_386f1dadfa3554e4",
+ "note": "research/paper-completion/notes/swb_386f1dadfa3554e4/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–3",
+  "method": "§3.2–3.4、Figures 1–2，PDF pp.3–5",
+  "evaluation": "§4–5、Tables 1–3、附录 Tables 4–7，PDF pp.5–9、11、14",
+  "limitations": "§6.2、Limitations，PDF pp.8–10"
+ },
+ "evidence": [
+  {
+   "id": "swb_386f1dadfa3554e4:E01",
+   "claim": "论文检验三个假设：H1 加入标注指南提升 LLM 标注；H2 推理模型优于非推理模型；H3 指南可在极少监督下经审核循环改进。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_386f1dadfa3554e4:E02",
+   "claim": "审核循环：标注 10 篇开发文档→严格 span+类型 F1 评测→若未达阈值且仍提升，则按（金标,预测）有向分组选最频繁差异组，依次做模式解释、IF/THEN 原则生成和指南修订。",
+   "locator": "§3.2–3.4、Figure 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_386f1dadfa3554e4:E03",
+   "claim": "修订集为各基准训练集随机 10 篇；评测集为开发集 100 篇（BC5CDR 从 500 篇中抽 100）；原测试集不用。评测实体数 NCBI 791、BC5CDR 2,146、BioRED 3,531。",
+   "locator": "§4.2、Tables 1、5，PDF pp.6–7、14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_386f1dadfa3554e4:E04",
+   "claim": "加入原指南后严格 F1 提升 0.02–0.27（如 NCBI GPT-5 0.46→0.73），审核修订再提升 0.01–0.06（BioRED GPT-5 0.76→0.82）。",
+   "locator": "Table 1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_386f1dadfa3554e4:E05",
+   "claim": "单侧 bootstrap 与近似随机化检验中，Gemini 三个数据集均 p<0.05，GPT 仅 BioRED 显著，DeepSeek 均不显著。",
+   "locator": "§5.3、Table 6，PDF pp.7、14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_386f1dadfa3554e4:E06",
+   "claim": "摘要称三个假设均得到确认，但 H3 的显著性随模型而异，且小模型试点中 Llama3-8B 加入指南后 F1 由 0.101 降到 0.067，说明结论依赖模型能力。",
+   "locator": "Abstract、Tables 4、6，PDF pp.1、13–14",
+   "basis": "inference",
+   "basis_note": "数值来自原文表格；'措辞偏强'与'依赖模型能力'为阅读者对比摘要与表格得出的评价。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "lit_0c450f719a09",
+ "url": "https://www.usenix.org/conference/osdi24/presentation/lin-chaofan",
+ "title": "Lin et al. — Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
+ "version": "OSDI 2024 会议论文集 pp.929–946，USENIX 开放获取 PDF 18 页（含封面页）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.usenix.org/system/files/osdi24-lin-chaofan.pdf",
+ "retrieved_at": "2026-11-04T05:24:17+00:00",
+ "fulltext": "research/paper-completion/papers/lit_0c450f719a09.pdf",
+ "sha256": "ce334df62516ea037233b77650cd5303c6ae254e0cf7c267f86a92f69f2386ff",
+ "format": "pdf",
+ "pages": 18,
+ "note_directory": "research/paper-completion/notes/lit_0c450f719a09",
+ "note": "research/paper-completion/notes/lit_0c450f719a09/README.md",
+ "read_sections": {
+  "problem": "§1、§3、Figures 1–5、Table 1，PDF pp.2–5",
+  "method": "§4–§5、§7、Algorithm 1、Figures 6–9，PDF pp.5–10",
+  "evaluation": "§8、Table 2、Figures 10–19，PDF pp.10–14",
+  "limitations": "§6 Discussion、§8.1 末段，PDF pp.8–9、11"
+ },
+ "evidence": [
+  {
+   "id": "lit_0c450f719a09:E01",
+   "claim": "公共 LLM 服务只提供请求级补全 API，看不到同一应用中多次调用间的依赖、调度偏好与共同提示；生产链式应用中 30–50%（最差超 70%）的调用延迟来自引擎之外，Table 1 中重复 token 段落比例在生产搜索 94%、MetaGPT 72%、AutoGen 99%。",
+   "locator": "§1、§3、Figure 3a、Table 1，PDF pp.2–5（论文集 pp.929–932）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0c450f719a09:E02",
+   "claim": "Semantic Variable 是提示中带语义用途的占位符，作为请求的输入/输出变量并连接多个请求形成数据流；Parrot 拆分 submit/get，get 可标注端到端延迟或吞吐目标，服务端用 GetProducer/GetConsumers/GetPerfObj/PrefixHash 进行请求间分析。",
+   "locator": "§4.1–4.2、Figures 7–8，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0c450f719a09:E03",
+   "claim": "优化包括：服务端图执行器串接依赖请求；从延迟敏感的最终变量逆拓扑传播并把并行请求归为 task group；按变量边界前缀哈希检测共享并用结合 FlashAttention 与 PagedAttention 的新 kernel；Algorithm 1 应用感知调度。",
+   "locator": "§5.1–5.4、§7、Algorithm 1，PDF pp.7–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0c450f719a09:E04",
+   "claim": "评测使用 1×A100 80GB 或 4×A6000 48GB、LLaMA 7B/13B；工作负载为 Arxiv-March 10 篇 >20k token 文档摘要、按 Bing Copilot 分布合成的 64 个请求（系统提示约 6,000 token）、4 个 GPTs 应用、MetaGPT 编程和 ShareGPT 混合负载；注入 200–300 ms 网络延迟。",
+   "locator": "§8.1–8.5，PDF pp.10–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0c450f719a09:E05",
+   "claim": "相对 FastChat+vLLM 基线：链式摘要背景负载下 2.38×、map-reduce 2.37×、MetaGPT 相对延迟型基线最高 11.7×、相对吞吐型基线 2.45×；GPTs 场景相对无共享基线可承受 12× 请求率，关闭亲和调度只剩 3×；混合负载中聊天归一化延迟改善 5.5×/1.23×。",
+   "locator": "§8.2–8.5、Figures 11–19，PDF pp.11–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0c450f719a09:E06",
+   "claim": "Parrot 不支持动态控制流与原生函数（出于安全考虑留在客户端）；32k 以上长上下文不在范围内；FindEngine 细节因篇幅省略。",
+   "locator": "§5.4、§6、§8.1，PDF pp.8–9、11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0c450f719a09:E07",
+   "claim": "评测只衡量延迟、吞吐与显存，不评估输出质量；网络延迟为注入模拟；§8.2 正文与 Figure 11 子图标注（输出长度/块大小）相反。",
+   "locator": "§8.1–8.2、Figure 11，PDF pp.10–11",
+   "basis": "inference",
+   "basis_note": "子图标注不一致与“未评估质量”为阅读者对照正文与图注得出的分析。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

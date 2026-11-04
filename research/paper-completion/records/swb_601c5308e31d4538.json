@@ -1,0 +1,71 @@
+{
+ "id": "swb_601c5308e31d4538",
+ "url": "https://aclanthology.org/W17-2711",
+ "title": "Caselli & Vossen — The Event StoryLine Corpus: A New Benchmark for Causal and Temporal Relation Extraction",
+ "version": "Events and Stories in the News Workshop 2017（ACL Anthology W17-2711，pp.77–86），10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/W17-2711.pdf",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "research/paper-completion/papers/swb_601c5308e31d4538.pdf",
+ "sha256": "401771b9a6e66f2f2e4725802c4606381ab2a280c17bd0936d4f870c816e3d61",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "research/paper-completion/notes/swb_601c5308e31d4538",
+ "note": "research/paper-completion/notes/swb_601c5308e31d4538/README.md",
+ "read_sections": {
+  "problem": "摘要、§1、§2 开头，PDF pp.1–2",
+  "method": "§2.1–§2.4，PDF pp.2–5",
+  "evaluation": "§2.5、§3、Tables 1–3，PDF pp.5–8",
+  "limitations": "§3 结果讨论、§5，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_601c5308e31d4538:E01",
+   "claim": "StoryLine Extraction 由事件检测分类、时间锚定（到时间表达式与 DCT）、解释关系识别分类三个子任务组成。",
+   "locator": "§2 开头，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_601c5308e31d4538:E02",
+   "claim": "PLOT LINK 不对称、非传递，分 rising_action 与 falling_action，只在 OCCURRENCE/PERCEPTION/STATE 类事件间标注，另有 cause/caused_by 与 signal 属性。",
+   "locator": "§2.3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_601c5308e31d4538:E03",
+   "claim": "ESC v0.9：22 个 ECB+ 话题、258 篇文档、7,275 个事件提及、1,297 个时间表达式、6,904 条 TLINK；PLOT LINK 人工 2,265 条，经文档内共指扩展为 5,519 条，显式因果 117 条。",
+   "locator": "§2.5、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_601c5308e31d4538:E04",
+   "claim": "IAA（token 级 Dice）：TLINK 识别 0.767、分类 0.744；PLOT LINK 均为 0.638，话题间从 0.48 到 0.723。",
+   "locator": "§2.5、Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_601c5308e31d4538:E05",
+   "claim": "划分为 6 个开发话题、16 个测试话题（扩展后 4,027 条 PLOT LINK），使用金标准事件、时间与共指。",
+   "locator": "§3，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_601c5308e31d4538:E06",
+   "claim": "三个基线检测 F1：OP 0.265、PPMI1 0.137、PPMI-CONTAINS 0.121；分类 F1：0.14、0.068、0.064；分类一律赋 rising_action。",
+   "locator": "§3、Table 3，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_601c5308e31d4538:E07",
+   "claim": "Table 1 五项合计 6,833 少于正文 6,904；扩展后 2,653+2,844=5,497 少于 5,519；正文 PPMI1 召回降幅 0.841 与表中 0.814 不符。",
+   "locator": "§2.5、§3、Tables 1、3，PDF pp.5–7",
+   "basis": "inference",
+   "basis_note": "事实及定位来自原文；数字核算、版本比较或用途边界为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

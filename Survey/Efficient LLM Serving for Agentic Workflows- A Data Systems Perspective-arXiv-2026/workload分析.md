@@ -1,13 +1,21 @@
-# Workload 分析
+# 工作负载
 
-**要验证的问题。** 检验看见完整工作流的结果缓存、KV缓存和调度能否减少重复计算与依赖等待。
+**原语工作流**（§7.1，pp.7–8，Figure 2、Table 1）：五种模式，每种代表一类 agent 交互。
 
-**数据、任务单位与gold。** 五种构造的primitive workflows：MapRed、Debate、Reflect、Iterative、Parallel，使用MMLU、TAT-QA、Amazon Reviews；Amazon分别采200/100个商品，每项60评论分6块。Trading组合19个Agent、88个LLM算子，模拟财务/新闻/社交/价格分析。单位是工作流请求/批次，主要指标端到端墙钟延迟，非投资收益或最终答案准确率。
+| 工作流 | 数据集 | 配置 | 输入规模 |
+|---|---|---|---|
+| MapRed | MMLU、TAT-QA | MMLU 14 个专家，TAT-QA 7 个专家，7 种角色 | 200 道 MMLU 题；100 个 TAT-QA context（每个 6 题） |
+| Debate | MMLU、TAT-QA | 3 个不同角色 agent，2 轮辩论 | 同上 |
+| Reflect | TAT-QA | 1 个专家 + 2 个批评者 | 200 个 context（每个 6 题） |
+| Iterative | Amazon Reviews | 6 个评论块，每块 10 条，逐块精炼摘要 | 200 个商品，每个 60 条评论 |
+| Parallel | Amazon Reviews | 7 个专家各处理 6 个评论块，再由 writer 汇总 | 100 个商品，每个 60 条评论 |
 
-**具体use case：输入目标 → 使用前 → 使用后。** 原文图6/§7：多次交易分析请求中的公司基本面和部分社交分析已有缓存。使用前重复执行整个分支；使用后CacheFetch替换可复用结果，其他分支继续推理并安排KV局部性。缓存命中是假定输入和确定性条件满足的场景，不意味着昨日行情能当今日行情。
+微基准只跑单个批次，因此只启用主动 KV 缓存和缓存感知调度，提示（结果）缓存不起作用（§7.1，p.7）。
 
-**Baseline与比较条件。** vLLM、OpWise、LangGraph、AgentScope、Parrot和KVFlow；除KVFlow外共享vLLM0.16.0并启用prefix caching/chunked prefill，greedy sampling，同机H100。延迟包括Helium优化/调度开销。最高约100倍来自朴素vLLM串行基线，面向KVFlow的最大值为1.56倍（表2），不可混说。
+**Trading 端到端工作流**（§7.2，pp.9–10）：组合 Parallel、Debate、MapRed，共 19 个 agent、88 个 LLM 算子；数据为 100 支股票连续两天的公司简介、股价历史、社交帖子等，第一天预热、第二天评测。批大小 8/16/32/64/80 个查询（每个查询是一支股票）。主动 KV/提示缓存只用于超过 200 token 的前缀（Figure 6）。
 
-**证据边界。** 模拟工作流验证服务效率，不独立验证业务质量；§9承认动态loop/map表达及外部API成本限制，同时指出可加入控制流原语静态表达。
+**单位**：一个“查询”= 一个输入实例走完整个工作流；Iterative 中“10 条评论/块”是记录分块，不是批大小。模型批处理由各 worker 的 vLLM 引擎在运行时完成。
 
-来源：[阅读版本](https://arxiv.org/abs/2603.16104v1)，§6–7、表1–3、图6–8、§9。本文为原文工作负载分析，未复现实验。
+阅读者分析：所有工作负载的共享都来自完全相同的提示前缀或相同的算子输入；数据是离线采集的金融资料，不是实时交易环境。
+
+依据：[arXiv 2603.16104v1](https://arxiv.org/abs/2603.16104v1)，§7.1–7.2、Table 1、Figures 2、6，PDF pp.3、7–10。

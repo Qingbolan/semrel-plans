@@ -1,0 +1,65 @@
+{
+ "id": "swb_23422ddeb78a2f5c",
+ "url": "https://ceur-ws.org/Vol-2645/paper5.pdf",
+ "title": "Holzenberger, Blair-Stanek & Van Durme — A Dataset for Statutory Reasoning in Tax Law Entailment and Question Answering",
+ "version": "NLLP Workshop 2020（KDD 2020 同期），CEUR-WS Vol-2645 paper5，8 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://ceur-ws.org/Vol-2645/paper5.pdf",
+ "retrieved_at": "2026-11-04T05:36:55+00:00",
+ "fulltext": "research/paper-completion/papers/swb_23422ddeb78a2f5c.pdf",
+ "sha256": "6afd458693443837f2d82b1cc038a8f6e417320a9d9250aaa9fa5767ff8ac631",
+ "format": "pdf",
+ "pages": 8,
+ "note_directory": "research/paper-completion/notes/swb_23422ddeb78a2f5c",
+ "note": "research/paper-completion/notes/swb_23422ddeb78a2f5c/README.md",
+ "read_sections": {
+  "problem": "摘要、§1、§2.1，PDF pp.1–2",
+  "method": "§2 数据构造、§3 Prolog 求解器、§4 法律语料与模型、§5.1–5.2，PDF pp.2–5",
+  "evaluation": "§5.3、Table 5（已渲染核对），PDF p.5",
+  "limitations": "§2.1 简化说明、§2.2 任务边界、§3.2 Prolog 三项局限、§7，PDF pp.2–4、6"
+ },
+ "evidence": [
+  {
+   "id": "swb_23422ddeb78a2f5c:E01",
+   "claim": "法条推理指依据自然语言法条对自然语言案例作判断；判案信息往往只在法条中声明一次，而非从分布统计中学得。",
+   "locator": "摘要、§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_23422ddeb78a2f5c:E02",
+   "claim": "SARA 选取并简化 9 个 IRC section；每个子节手写一正一负蕴含案例，共 176 训练 / 100 测试；另有 100 个应纳税额数值题，80/20 划分。",
+   "locator": "§2.1，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_23422ddeb78a2f5c:E03",
+   "claim": "数值题指标为 Δ=|y−ŷ|/max(0.1y,5000)<1 的比例，类比 §6662(d) 的重大少报。",
+   "locator": "§5.1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_23422ddeb78a2f5c:E04",
+   "claim": "手写 Prolog（61 个新戴维森式谓词）在全部案例上 100% 正确，但需要专家手工转写。",
+   "locator": "§3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_23422ddeb78a2f5c:E05",
+   "claim": "Table 5 中 BERT/前馈模型蕴含准确率在 47–55 之间，基线 50；去掉法条后性能基本不变，Legal BERT 与税法向量无明显作用。",
+   "locator": "§5.3、Table 5，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_23422ddeb78a2f5c:E06",
+   "claim": "测试集仅 100/20 例，蕴含置信区间约 ±8.3，模型间差异难以判定显著。",
+   "locator": "Table 5 注释，PDF p.5",
+   "basis": "inference",
+   "basis_note": "置信区间为原文数值，显著性判断为阅读者分析。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

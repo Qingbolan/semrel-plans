@@ -1,22 +1,17 @@
-# CADENZA
+# CADENZA: Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing
 
-**CADENZA: Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing**
+语义查询引擎（LOTUS、Palimpzest 等）把一个语义算子实例当作黑盒 LLM 调用，中间结果无法被过滤、重排、按行路由或联合调参。CADENZA（Ha、Park、Han，POSTECH/UIUC）把每个语义算子实例编译成带类型的任务 DAG（如 OCR → TxtQA → 关系过滤），逻辑层由 LLM 生成并修复种子计划、再做依赖检查的结构重写与语义替代，物理层为每个任务算子合成按行分流的 router，并用贝叶斯优化联合调整切点、后端参数和关系阈值。
 
-- 作者：Jaehyun Ha、Yongjoo Park、Wook-Shin Han。
-- 来源：[本地原文](2606.29151v3.pdf)，arXiv:2606.29151v3；PDF 标注版本日期为 2026-07-13，共 27 页。
-- 发表状态：按 arXiv 预印本归档。首页虽出现 SIGMOD ’27，但同时保留 2018 年、Woodstock 和占位 DOI；不能据此确认录用或正式会议年份。本次依据用户提供的 PDF，未核验外部发表记录。
-- 定位：将单个语义算子实例编译为 typed task DAG，并联合优化质量、延迟和成本。
+在 SemBench 55 条查询上，相对 LOTUS 平均质量 +0.10、延迟 3.80×、费用 4.88×，相对 Palimpzest +0.11/4.42×/21.83×（Table 3）；摘要中的 +0.49/165.7×/310.3× 是单个场景的最大值。已通读正文 §1–9 与附录 A–J，数字已对照本地 PDF。
 
-## 阅读入口
+[原文](https://arxiv.org/abs/2606.29151v3)
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty 分析](Novelty分析.md)
+版本：arXiv 2606.29151v3（2026-07-13，cs.DB），27 页；[本地 PDF](2606.29151v3.pdf)。首页为 SIGMOD ’27 模板，年份与 DOI 仍是 2018/占位，不能据此认定已录用。只优化单个语义算子实例，跨算子联合优化不在本文范围（§1）。
 
-## 与本项目的关系
-
-它是“显式暴露中间任务输出以实现数据系统优化”的直接相关工作。比较重点应是已绑定输入上的任务优化与执行中发现数据、补充证据的边界，不能把 CADENZA 描述为没有逐记录适应、批量执行或复用能力。
-
-- [Workload：问题、数据、具体用例与Baseline](workload分析.md)
-
-阅读更新（2026-10-07）：补充核读实验设置、基线、案例与结论边界；未复现实验。
+| 阅读内容 | 位置 |
+|---|---|
+| problem | §1–2、Figures 1–2，PDF pp.1–4 |
+| method | §3 TxRA，pp.4–5；§4 逻辑规划，pp.5–7；§5 物理规划，pp.7–8；§6 实现，pp.8–9 |
+| evaluation | §7、Tables 2–6、Figures 4–5，pp.9–13；附录 A–I、Tables 7–20，pp.16–23 |
+| queries | 附录 J，pp.24–27 |
+| limitations | 无独立章节；见 §1（单算子范围）、§6.2（漂移需重优化）、§7.3.2（BO 预算留待未来工作）、附录 G（只测一个查询的标签噪声） |

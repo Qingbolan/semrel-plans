@@ -1,0 +1,71 @@
+{
+ "id": "swb_59fa88912bffc0a1",
+ "url": "https://aclanthology.org/2024.nllp-1.7",
+ "title": "The CLC-UKET Dataset: Benchmarking Case Outcome Prediction for the UK Employment Tribunal",
+ "version": "NLLP Workshop 2024 论文集 pp.81–96（ACL Anthology 2024.nllp-1.7），16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.nllp-1.7.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_59fa88912bffc0a1.pdf",
+ "sha256": "992f69e4c6fd59bdc32fe383a9b38c6f48a4d1098c2b1fc68e9c09cb3bfeb9a7",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/swb_59fa88912bffc0a1",
+ "note": "research/paper-completion/notes/swb_59fa88912bffc0a1/README.md",
+ "read_sections": {
+  "problem": "§1–2、§5.1，PDF pp.1–2、4",
+  "method": "§4、§5.2–5.3、§6.1–6.2，PDF pp.3–6",
+  "evaluation": "§6.3、Tables 2–5，PDF pp.6–8",
+  "limitations": "§7、Limitations、附录 B–C，PDF pp.8–9、14–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_59fa88912bffc0a1:E01",
+   "claim": "CLC 原始 UKET 子集 52,339 案，去掉单页判决后 19,090 案（CLC-UKETanno），再去掉 GPT-4 未抽到实质事实/诉求的案件得到 14,582 案（CLC-UKETpred）。",
+   "locator": "§4.1、§5.3，PDF pp.3、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_59fa88912bffc0a1:E02",
+   "claim": "任务输入为事实与诉求，输出四类结果标签：claimant wins / loses / partly wins / other。",
+   "locator": "§5.1–5.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_59fa88912bffc0a1:E03",
+   "claim": "划分为 train 11,838、val 1,373、test 1,371；训练/验证集的标签由 GPT-4 抽取，测试集结果标签由法律专家人工标注。",
+   "locator": "§5.3、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_59fa88912bffc0a1:E04",
+   "claim": "测试集标签分布为胜 437、败 618、部分胜 305、其他 11；两名专家预测的 Cohen's κ 为 0.421。",
+   "locator": "§6.2、Table 3，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_59fa88912bffc0a1:E05",
+   "claim": "微调 T5 加权 F 值 0.564 为模型最佳，GPT-4 最佳 0.551，人类专家 0.672。",
+   "locator": "§6.3、Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_59fa88912bffc0a1:E06",
+   "claim": "合并胜与部分胜后 T5 F 值 0.713，专家 0.810。",
+   "locator": "§6.3、Table 5，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_59fa88912bffc0a1:E07",
+   "claim": "输入来自结果已知时法官撰写的判决，作者承认可能泄露倾向信息；正文未报告 GPT-4 抽取事实/诉求的质量评估，训练标签为银标准。",
+   "locator": "§5.3、Limitations，PDF pp.5、9",
+   "basis": "inference",
+   "basis_note": "第一部分为原文所述；关于缺乏抽取质量评估和银标准的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

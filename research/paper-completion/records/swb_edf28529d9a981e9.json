@@ -1,0 +1,65 @@
+{
+ "id": "swb_edf28529d9a981e9",
+ "url": "https://aclanthology.org/2023.argmining-1.8",
+ "title": "Schaefer, Knaebel & Stede — Towards Fine-Grained Argumentation Strategy Analysis in Persuasive Essays",
+ "version": "ArgMining 2023 论文集 pp.76–88（ACL Anthology 2023.argmining-1.8），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2023.argmining-1.8.pdf",
+ "retrieved_at": "2026-11-04T05:59:19+00:00",
+ "fulltext": "research/paper-completion/papers/swb_edf28529d9a981e9.pdf",
+ "sha256": "e11a1d44e97cd20793d42b50b0e6a5a6e6158f441adc551a78e65c525ec18610",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/swb_edf28529d9a981e9",
+ "note": "research/paper-completion/notes/swb_edf28529d9a981e9/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，PDF pp.1–2",
+  "method": "§3–5，PDF pp.2–8；附录 A，p.12",
+  "evaluation": "Tables 2–6、Figures 2–4，PDF pp.4–8、12",
+  "limitations": "Discussion、Limitations、Ethics Statement，PDF pp.8–10"
+ },
+ "evidence": [
+  {
+   "id": "swb_edf28529d9a981e9:E01",
+   "claim": "作者为 AAE 全部 402 篇学生议论文的 claim 标注 policy/value/fact 三类、premise 标注 testimony/statistics/hypothetical-instance/real-example/common-ground 五类（另有 other），扩展了 Carlile et al. 仅 102 篇的标注。",
+   "locator": "§1、§3.1–3.2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_edf28529d9a981e9:E02",
+   "claim": "Krippendorff’s α：Policy 0.78、Value 0.52、Fact 0.34、claim 整体 0.52；Statistics 0.16、Hypothetical-Instance 0.70、Real-Example 0.58、Common-Ground 0.42、premise 整体 0.53；Testimony 因样本不足无法计算。最终 IAA 基于 3 人共同标注的 40 篇，其余为单人标注。",
+   "locator": "§3.3–3.4、Table 2，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_edf28529d9a981e9:E03",
+   "claim": "标注分布不均衡：Value 1,502（0.67）、Fact 411（0.18）、Policy 344（0.15）；Common-Ground 1,774（0.46）、Testimony 仅 22（0.01）、Other 2。",
+   "locator": "§3.5、Table 3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_edf28529d9a981e9:E04",
+   "claim": "RoBERTa-base 仅以 ADU 片段为输入，80/10/10 随机划分、10 次重复；宏 F1：major claim 75.9、claim 77.2、premise 56.6；多数类基线分别为 26.2、26.9、13.5。",
+   "locator": "§4、附录 A Table 6，PDF pp.5–6、12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_edf28529d9a981e9:E05",
+   "claim": "全文级最常见 claim change flow 为 (M:Value, C:Value, M:Value)（0.09）；policy 题目下 policy claim 比例 0.33，fact 题目下 fact claim 比例 0.28。",
+   "locator": "§5、Table 4、Figure 3，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_edf28529d9a981e9:E06",
+   "claim": "模式结论基于低一致性类别上的频率统计，未做显著性检验；“作者效应”只是每篇作文相对中位数的偏离，而 AAE 不含作者身份信息；ADU 级随机划分可能让同一作文的成分同时出现在训练与测试中。",
+   "locator": "§3.4、§4–5、Ethics Statement，PDF pp.4–8、10",
+   "basis": "inference",
+   "basis_note": "依据原文的 IAA、划分说明与伦理声明，由阅读者推断其局限；原文未讨论划分泄漏。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

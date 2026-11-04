@@ -1,0 +1,66 @@
+{
+ "id": "swb_ca7762b13d0be676",
+ "url": "https://aclanthology.org/2025.findings-acl.887",
+ "title": "Shen et al. — A Law Reasoning Benchmark for LLM with Tree-Organized Structures including Factum Probandum, Evidence and Experiences",
+ "version": "Findings of ACL 2025, pp.17252–17274，ACL Anthology 2025.findings-acl.887 PDF，23 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2025.findings-acl.887.pdf",
+ "retrieved_at": "2026-11-04T05:36:55+00:00",
+ "fulltext": "research/paper-completion/papers/swb_ca7762b13d0be676.pdf",
+ "sha256": "24feeba05303c5a90fad4df7a6e330196e67f2044be243dc98702b0b7b9be540",
+ "format": "pdf",
+ "pages": 23,
+ "note_directory": "research/paper-completion/notes/swb_ca7762b13d0be676",
+ "note": "research/paper-completion/notes/swb_ca7762b13d0be676/README.md",
+ "read_sections": {
+  "problem": "摘要、§1、§2，PDF pp.1–4",
+  "method": "§3、§4，附录 B、E，PDF pp.4–6、13–17",
+  "evaluation": "§5、Table 2（已渲染），附录 A、F（Table 4）、G（Table 5，已渲染），PDF pp.7–8、12、16–18",
+  "limitations": "Limitations 节、附录 D、H，PDF pp.9、14、17"
+ },
+ "evidence": [
+  {
+   "id": "swb_ca7762b13d0be676:E01",
+   "claim": "TL 任务输入案件描述，输出由待证事实、证据、经验和推理边构成的树；分为待证事实生成、证据推理（句子级 span + 连接）、经验生成三个子任务。",
+   "locator": "§2，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ca7762b13d0be676:E02",
+   "claim": "数据来自中国裁判文书网，453 案（训练 253、验证 100、测试 100），2,627 个待证事实、14,578 条证据；45 名法学生标注。",
+   "locator": "§3.2、Table 1、附录 B，PDF pp.4–5、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ca7762b13d0be676:E03",
+   "claim": "Table 1 中经验总数 9,550+1,863+4,450=15,863，正文写 16,414；指令数据规模正文先后写“超过 40,000”与“5w”。",
+   "locator": "§3.2、§5.1、Table 1，PDF pp.5、7",
+   "basis": "inference",
+   "basis_note": "数值来自原文，差异为阅读者核算。"
+  },
+  {
+   "id": "swb_ca7762b13d0be676:E04",
+   "claim": "TL Agent 以 GPT-4o-mini 为基座，结合知识检索、法律知识、多角色检查与反思；Table 2 测试集综合分 Sc 为 31.50，Qwen-max 30.94，GPT-4o 25.74。",
+   "locator": "§4、§5、Table 2，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ca7762b13d0be676:E05",
+   "claim": "子任务 II 精确率普遍很低（最高 12.28），原文归因于模型冗余地连接证据与中间事实。",
+   "locator": "§5.2、Table 2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ca7762b13d0be676:E06",
+   "claim": "Table 4/5 只在随机 10% 测试数据上评测；TL Agent（4o-mini）Sc 36.62，GPT-4o 3-shot 36.52，差距很小且无方差报告。",
+   "locator": "附录 F–G、Tables 4–5，PDF pp.16–18",
+   "basis": "inference",
+   "basis_note": "数值来自原文，对结论强度的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

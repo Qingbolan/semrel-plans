@@ -1,0 +1,71 @@
+{
+ "id": "swb_d71b9c022df6a37b",
+ "url": "https://aclanthology.org/2025.cl-1.3",
+ "title": "Zeldes et al. — eRST: A Signaled Graph Theory of Discourse Relations and Organization",
+ "version": "Computational Linguistics 51(1), 2025, pp.23–72, DOI 10.1162/coli_a_00538；ACL Anthology 2025.cl-1.3 PDF，50 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2025.cl-1.3.pdf",
+ "retrieved_at": "2026-11-04T04:51:47.246607+00:00",
+ "fulltext": "research/paper-completion/papers/swb_d71b9c022df6a37b.pdf",
+ "sha256": "f04807264324631d1ad79aade3529215afc7729cf874ef311edf5094ab52a6da",
+ "format": "pdf",
+ "pages": 50,
+ "note_directory": "research/paper-completion/notes/swb_d71b9c022df6a37b",
+ "note": "research/paper-completion/notes/swb_d71b9c022df6a37b/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.6，PDF pp.1–10",
+  "method": "§3、§4.1、§5.1–5.2，PDF pp.10–22、28–33",
+  "evaluation": "§4.1 Tables 3、5，§4.2 Table 6，§5.3 Tables 8–9，§6 Table 10，PDF pp.19–27、33–37",
+  "limitations": "§3.4、§5.3 末、§7，PDF pp.17、34–36、40–41"
+ },
+ "evidence": [
+  {
+   "id": "swb_d71b9c022df6a37b:E01",
+   "claim": "eRST 分析由三部分组成：单根投射 n 元主树（与 RST 一致，保留 nuclearity）、受信号授权的次级边（可非投射/成环，不得新建节点、同一有向路径不重复）、以及锚定到 token 并关联到某条边的分类信号。",
+   "locator": "§3、§3.1–3.3，PDF pp.10–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d71b9c022df6a37b:E02",
+   "claim": "GUM v9 含 213 篇、12 个语体、203,879 token、26,352 EDU；另为 RST-DT 测试集 38 篇补标 DM、orphan 与次级边（不含非 DM 信号）。",
+   "locator": "§4、Table 2，PDF pp.17–18",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d71b9c022df6a37b:E03",
+   "claim": "GUM 中 29,950 个关系、895 个 orphan DM、1,008 条次级边（3.37%）；RST-DT 测试次级边比例同为 3.37%；vlog 6.56% 最高、how-to 1.95% 最低。",
+   "locator": "§4.2、Table 6，PDF p.24",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d71b9c022df6a37b:E04",
+   "claim": "次级边人工一致性修订指南后 S/N/R=.529/.49/.412；DM 识别 mutual F1 在 RST-DT 为 95、GUM 为 92.3。",
+   "locator": "§4.1.1，PDF pp.19–20",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d71b9c022df6a37b:E05",
+   "claim": "流水线基线在金标准主树与金标准 NLP 下次级边 Full=0.184；改用 DMRST 预测主树 + DisCoDisCo 后降至 0.030，主树 Relation=0.492；作者称预测主树对次级边是灾难性的。",
+   "locator": "§5.3、Table 8，PDF pp.33–34",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d71b9c022df6a37b:E06",
+   "claim": "secondary 边在 causal-result（14.1%）、explanation-justify（11.7%）、adversative-concession（10.3%）中占比最高，说明仅用主树会漏掉相当部分这类关系。",
+   "locator": "§6、Table 10，PDF p.37",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d71b9c022df6a37b:E07",
+   "claim": "图谱派生任务要求输出 EDU 区间、主树与次级边并抽取 attribution-positive 等标签；这些标签属本文 GUM 关系集，但任务设定与评分为项目派生，非本文直接评测。",
+   "locator": "Table 10，PDF p.37；§5.1，PDF pp.28–31",
+   "basis": "inference",
+   "basis_note": "原文提供标签集与解析任务定义；与项目查询的对应关系为阅读者根据仓库 workload-registry 推断。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

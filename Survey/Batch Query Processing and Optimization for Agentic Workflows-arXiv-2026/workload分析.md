@@ -1,13 +1,28 @@
-# Workload 分析
+# 工作负载
 
-**要验证的问题。** 检验固定逻辑工作流下跨查询调度、工具调用合并、CPU/GPU协同能否降低整批延迟并提高在线吞吐。
+**6 个 workflow**（Table 3，p.7）：作者构造，节点数记为 GPU（LLM）/CPU（工具）。
 
-**数据、任务单位与gold。** 六种明确标注为synthetic yet representative的DAG：IMDb Diamond/TripleChain、FineWiki LongChain/Bridge、TPC-H Trident/Fanout（名称以表3为准）。底层FineWiki/IMDb是公共数据，IMDb关系库超过2亿行；TPC-H为合成分析数据。主批量N=1024，并测扩展至2K。单位是一条工作流请求；主要指标延迟、吞吐、GPU时间、优化耗时，不提供独立业务答案gold准确率实验。
+| ID | 名称 | LLM/工具节点 | 结构 |
+|---|---|---|---|
+| W1 | IMDb-Diamond | 8/9 | 菱形拓扑，并行的多表连接 SQL，考验同步 |
+| W2 | IMDb-TripleChain | 10/3 | 电影、人物、演职员三条并行链后合并 |
+| W3 | FineWiki-LongChain | 9/6 | 深的串行链，频繁穿插阻塞式数据库检索 |
+| W4 | FineWiki-Bridge | 9/3 | 主推理链加周期性辅助 DB 查询，依赖不规则 |
+| W5 | TPCH-Trident | 7/9 | 三条并发的计算密集分析 SQL 分支（Q1–Q22 模板） |
+| W6 | TPCH-Fanout | 9/12 | 分两阶段把查询参数广播给多个 agent，再汇总指标 |
 
-**具体use case：输入目标 → 使用前 → 使用后。** 原文表3/图5的TPC-H Fanout作说明：输入一批参数化分析请求，目标汇总多个SQL分支的分析结果。使用前各Agent重复同一SQL调用并等待LLM；使用后同签名调用合并、相同提示前缀共享，并安排模型与工具重叠。这是作者设计的调度负载，不是真实用户执行日志。
+在线实验另加 W+：只含 3 个 LLM 节点的线性链，没有工具调用（§6.4，p.10）。
 
-**Baseline与比较条件。** 比较逐查询串行驱动的vLLM、逐层最大batch的OpWise、LangGraph1.0.4、AgentScope1.0.9、Parrot0.1.0；还有MILP优化oracle和消融。vLLM基线缺少跨查询并行，不能用其差距代表所有优化serving。关注相同DAG上的OpWise/Parrot等比较，并计入优化时间。
+**数据环境**（§6.1，p.8）：三个 PostgreSQL 库，均来自公开数据集。
 
-**证据边界。** 固定逻辑DAG、不在线改变结构、单机多GPU；真实底层数据不等于真实开放探索任务。不能由此推断Data Maze普遍或Agent无法批处理。
+| 库 | 规模 | 说明 |
+|---|---|---|
+| FineWiki | 2 万条英文页面级记录（含元数据与原始 wikitext） | 主键与 title 建 B-tree，模拟以点查为主的 RAG |
+| IMDb | 规范化后超过 2 亿行 | 片目/演员/剧组多对多关系，外键全部建索引 |
+| TPC-H | SF=10，8 张标准表，数千万元组 | SQL 由标准 TPC-H 模板按 agent 上下文实例化参数 |
 
-来源：[阅读版本](https://arxiv.org/abs/2509.02121v2)，§6.1–6.8、表3、图5–6。本文为原文工作负载分析，未复现实验。
+**批量与单位**：一次输入 = workflow 定义 + 一批用户查询。主实验 N=1024（§6.2）；调度器对比与消融 N=256（§6.3、§6.5）；规模实验 256–2048，敏感性实验用 W3 变体、N=256（§6.6）。图 10 中的 Processor batch size 是执行时每次处理的 LLM 或 SQL 请求数，与输入批量 N 及引擎内 continuous batching 是三个不同层次。
+
+阅读者分析：正文没有列出每条用户查询的原文和全部参数，不能根据 workflow 名称还原原始输入。数据库是查询可访问的环境数据，用户查询批次并不是 2 万篇页面本身。
+
+依据：[arXiv 2509.02121v2](https://arxiv.org/abs/2509.02121v2)，§6.1–6.6、Table 3、Figures 5、10，PDF pp.7–11。

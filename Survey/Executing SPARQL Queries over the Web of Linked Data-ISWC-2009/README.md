@@ -1,14 +1,9 @@
-# Executing SPARQL Queries over the Web of Linked Data
+# Hartig, Bizer, Freytag — Executing SPARQL Queries over the Web of Linked Data
 
-**来源。** [作者原文](https://olafhartig.de/files/HartigEtAl_QueryTheWeb_ISWC09_Preprint.pdf)；[出版信息](https://doi.org/10.1007/978-3-642-04930-9_19)，ISWC 2009:293–309。
+开放的 Linked Data Web 上无法预先列出回答一个查询所需的全部数据源。本文提出“链接遍历式”查询执行：从查询中的 URI 和部分结果中的 URI 出发，在执行过程中通过 HTTP 解引用取回 RDF，不断扩充被查询的本地数据集；实现上用迭代器流水线做基本图模式（BGP）匹配，并加入 URI 预取和可暂时“拒绝”输入解的非阻塞迭代器。
 
-**阅读状态（2026-10-07）。** 核读§1–2、§4–6、§8；检查§3形式化，未逐式证明或复现实验。
+在 4 个真实 Web 查询上，系统在 46 秒到 3 分 47 秒内返回 2–27 个结果（Table 1）；在模拟的 BSBM Linked Data 服务器上，预取把查询混合执行时间降到约 80%，非阻塞迭代器约减半（§6.2，Fig. 6a）。
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty 与强弱点](Novelty分析.md)
-- [本地原文](原文.pdf)
+[原文](https://olafhartig.de/files/HartigEtAl_QueryTheWeb_ISWC09_Preprint.pdf)；[出版信息](https://doi.org/10.1007/978-3-642-04930-9_19)
 
-- [Workload分析](workload分析.md)
-
-**本轮补充核验（2026-10-07）。** 已核对原文workload、实例与实验/理论目标，补充数据规模、对照信息条件及评价边界；详见Workload分析。未复现实验；理论论文未逐行复核全部证明，综述未逐篇重读所有引文。
+版本：作者预印本（TeX 生成于 2009-08-13），16 页；正式版 ISWC 2009，LNCS 5823，pp.293–309。阅读范围：2026-11-04 对照预印本全文重读 §1–8 并核对数字；§3 形式化未逐式证明，未复现实验。

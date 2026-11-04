@@ -1,0 +1,77 @@
+{
+ "id": "lit_2df02020374e",
+ "url": "https://arxiv.org/abs/2412.01661",
+ "title": "Sun et al. — R-Bot: An LLM-based Query Rewrite System",
+ "version": "arXiv:2412.01661v2（2025-07-22），PVLDB 模板，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2412.01661v2",
+ "retrieved_at": "2026-11-04T05:24:17+00:00",
+ "fulltext": "research/paper-completion/papers/lit_2df02020374e.pdf",
+ "sha256": "e757f5b6cf7a83fa41e2d148a9a214f443b2415ebc765e3fef843db43fbfb515",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_2df02020374e",
+ "note": "research/paper-completion/notes/lit_2df02020374e/README.md",
+ "read_sections": {
+  "problem": "§1、§2、Tables 1–3，PDF pp.1–3",
+  "method": "§3–§6、Figures 2–4，PDF pp.3–9",
+  "evaluation": "§7、Tables 4–9、Figures 5–10，PDF pp.9–12；p.10–11 已渲染核对",
+  "limitations": "§7.3（top-k、反思开销）、§8，PDF pp.11–12；无独立局限章节"
+ },
+ "evidence": [
+  {
+   "id": "lit_2df02020374e:E01",
+   "claim": "查询改写是 NP-hard 的规则选择与排序问题；固定顺序启发式质量不足，学习方法需在新 schema 上再训练，直接用 GPT-4 改写 DSB 查询仅 5.3% 成功率。",
+   "locator": "§1、§2.1、Table 1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E02",
+   "claim": "R-Bot 让 LLM 选择并排序 Calcite 规则（不直接生成 SQL），以保证可执行与等价；在线流程为证据检索与 recipe 生成、问答打分加 recipe 过滤的分步规则选择、规则引擎改写、基于代价和 recipe 完成度的四分支反思。",
+   "locator": "§1、§2、§3，PDF pp.2–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E03",
+   "claim": "证据库含 67 条专家确认的规则说明（30 条来自 80k+ token 文档，37 条来自 30k+ 行代码）和 2,091 条过滤后的改写问答；规则代码用符号引用树分层摘要，文档规则用 SBERT+UMAP+GMM 聚类后汇总。",
+   "locator": "§4、§7.1、Figure 5，PDF pp.5–7、10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E04",
+   "claim": "评测数据：TPC-H 62 列 44 条查询、DSB 429 列 76 条查询（10x/50x）、Calcite 测试套件 44 条（按改写收益前 11% 选取，uni/zipf 10G）；PostgreSQL v14，5 次执行去最高最低取平均。",
+   "locator": "§7.1、脚注 2，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E05",
+   "claim": "Table 4 平均查询延迟：TPC-H 10x 原始 104.86 s，R-Bot (GPT-3.5) 55.71 s、(GPT-4) 57.60 s；DSB 10x 37.76→25.35 s；Calcite (uni) 109.73→12.45 s；LearnedRewrite 分别为 69.60、30.47、79.07 s。",
+   "locator": "§7.2、Table 4，PDF p.10（已渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E06",
+   "claim": "消融（Calcite uni）：完整结构-语义检索平均 12.45 s，仅结构 31.96 s、仅语义 39.45 s、朴素 RAG 39.13 s、GPT-4 60.86 s；一步式改写 36.47 s；k=10 时 Precision@10 为 19.8%。",
+   "locator": "§7.3、Tables 7–9、Figure 7，PDF p.11（已渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E07",
+   "claim": "华为部署使用 DeepSeek-R1-Distill-Qwen-32B 与 gte-Qwen2-1.5B-instruct，在 ICBC 190 列、74GB 数据、20 条慢查询上改进 70% 查询，总延迟从 9.23 小时降至 4.37 小时。",
+   "locator": "§3、§7.5、Figure 10，PDF pp.5、12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2df02020374e:E08",
+   "claim": "多处 p90 恰为 300 s，推测为超时上限；Table 6 GPT-4 的“↑41.9%”实际为下降；TPC-H 平均值上 GPT-3.5 版 R-Bot 优于 GPT-4 版；Calcite 子集按收益挑选，结果可能偏乐观。",
+   "locator": "§7.1–7.2、Tables 4、6，PDF pp.10–11",
+   "basis": "inference",
+   "basis_note": "数值来自原文表格；超时推测、箭头错误和选样偏差判断为阅读者分析。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_60eb3e86900adc8b",
+ "url": "https://aclanthology.org/2025.acl-industry.29",
+ "title": "Kwon et al. — LogicQA: Logical Anomaly Detection with Vision Language Model Generated Questions",
+ "version": "ACL 2025 Industry Track，pages 411–432，22 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2025.acl-industry.29.pdf",
+ "retrieved_at": "2026-11-04T05:48:41.580048+00:00",
+ "fulltext": "research/paper-completion/papers/swb_60eb3e86900adc8b.pdf",
+ "sha256": "d3a0cdc00b989ea3edcdc1c3495c87dbbc45d8b7dcd603db6aed7aa60c2ceb70",
+ "format": "pdf",
+ "pages": 22,
+ "note_directory": "research/paper-completion/notes/swb_60eb3e86900adc8b",
+ "note": "research/paper-completion/notes/swb_60eb3e86900adc8b/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–2",
+  "method": "§3.1–3.5，Figures 2–3，PDF pp.2–4；附录 A–B，PDF pp.9–12",
+  "evaluation": "§4–5，Tables 1–3，PDF pp.4–6；附录 C–G，Tables 4–6，PDF pp.13–22",
+  "limitations": "Limitations、Ethics，PDF p.7"
+ },
+ "evidence": [
+  {
+   "id": "swb_60eb3e86900adc8b:E01",
+   "claim": "逻辑异常违反物体存在、数量、排列等约束且可能视觉上正常；现有热图方法不能解释原因，LogicAD 依赖逐类 Guided CoT 提示，LogiCode 依赖人工标注。",
+   "locator": "Abstract、§1–2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_60eb3e86900adc8b:E02",
+   "claim": "LogicQA 四阶段：用 VLM 描述 3 张正常图、汇总共性、生成主问题清单（在正常图上准确率<80% 的问题被过滤）、测试时每个主问题生成 5 个子问题多数投票，任一主问题为 No 即判异常；异常分数由投票一致子问题的最大 log-prob 取中位数得到。",
+   "locator": "§3.2–3.5、§5.2，Figure 2，PDF pp.2–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_60eb3e86900adc8b:E03",
+   "claim": "MVTec LOCO AD 逻辑异常测试：575 张测试正常、561 张测试逻辑异常（5 类）；每张测试图像只用 3 张随机训练正常图，每类 3 次取均值。SEM 企业数据：训练正常 342、测试正常 169、测试异常 413（Spot 290、Bridge 123），不公开。",
+   "locator": "§5.1，附录 Tables 4、6，PDF pp.5、13、19",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_60eb3e86900adc8b:E04",
+   "claim": "Table 1：LogicQA（GPT-4o）平均 AUROC 87.6、F1-max 87.0，LogicAD 为 86.0/83.7；Screw Bag 上 LogicQA AUROC 71.5 低于 LogicAD 83.8。SEM 上 AUROC 90.3、F1-max 92.4，高于 PatchCore 79.2/77.8。",
+   "locator": "Tables 1–2，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_60eb3e86900adc8b:E05",
+   "claim": "换用 Gemini-1.5 Flash 和 InternVL-2.5 38B 时平均 F1-max 降为 79.7 和 77.6；两名标注者对主问题的回答与模型一致率为正常 98%、异常 85%/86%。",
+   "locator": "§5.4，Table 3，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_60eb3e86900adc8b:E06",
+   "claim": "'SOTA' 限于少样本无标注设置：附录 Table 5 中使用标注的 LogiCode（98.8）与 PSAD（98.1）平均 AUROC 远高于 LogicQA 87.6；Lang-SAM 需按类文本提示，BPM/Lang-SAM 只用于部分类别，主问题过滤用到额外正常图像。",
+   "locator": "附录 B.3、C.5 Table 5、D、G，PDF pp.12、18、22",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；评价、比较或口径提示为阅读者分析。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,66 @@
+{
+ "id": "lit_f2458194d8e6",
+ "url": "https://arxiv.org/abs/2502.20657",
+ "title": "Gao, Luo — Automatic Database Description Generation for Text-to-SQL",
+ "version": "arXiv:2502.20657v1（2025-02-28，技术报告），5 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2502.20657v1",
+ "retrieved_at": "2026-11-04T05:07:18.457550+00:00",
+ "fulltext": "research/paper-completion/papers/lit_f2458194d8e6.pdf",
+ "sha256": "b31bd72bdbbb20205a30456a58d8b0ced2aad575ac19c1de68de98e40f106eb7",
+ "format": "pdf",
+ "pages": 5,
+ "note_directory": "research/paper-completion/notes/lit_f2458194d8e6",
+ "note": "research/paper-completion/notes/lit_f2458194d8e6/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§2.1–2.5、Fig.1，PDF pp.2–3",
+  "evaluation": "§3、Table 1、Fig.2，PDF pp.3–5",
+  "limitations": "§3–4（无独立局限节），PDF pp.4"
+ },
+ "evidence": [
+  {
+   "id": "lit_f2458194d8e6:E01",
+   "claim": "缺少表/列注释会造成 NL2SQL 冷启动，因为表描述帮助选表、列描述帮助在同义或相似字段间做映射；人工编写复杂库的描述费时且易错。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f2458194d8e6:E02",
+   "claim": "方法先由整库 schema 识别领域，再逐表理解；列被分为 Code、Enum、DateTime、Text 维度和度量，并对比同类列；列描述限 20 词，表描述限 100 词。",
+   "locator": "§2.1–2.4，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f2458194d8e6:E03",
+   "claim": "实验只在 BIRD dev 上进行且不使用 evidence，SQL 生成器为 Qwen2.5-Coder-14B、Codestral-22B、Llama3.1-8B，指标为执行准确率。",
+   "locator": "§3，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f2458194d8e6:E04",
+   "claim": "Table 1 中生成描述把 EX 从 37.82/39.07/31.87 提高到 39.37/39.49/32.68，人工描述为 40.18/41.07/34.51。",
+   "locator": "§3、Table 1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f2458194d8e6:E05",
+   "claim": "摘要写提升 0.93%、达到人工水平 37%，§1 写 0.98%，§3 写 39%；按 Table 1 复算，平均增益约 0.93 个百分点，与人工增益之比约 0.39–0.40。",
+   "locator": "摘要、§1、§3–4、Table 1，PDF pp.1–4",
+   "basis": "inference",
+   "basis_note": "各处数字为原文；复算与不一致判断为阅读者分析。"
+  },
+  {
+   "id": "lit_f2458194d8e6:E06",
+   "claim": "报告没有消融、没有其他自动描述基线，也未说明生成描述所用的 LLM。",
+   "locator": "§2–3，PDF pp.2–4",
+   "basis": "inference",
+   "basis_note": "依据通读全文未见相应内容；对证据强度的评价为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

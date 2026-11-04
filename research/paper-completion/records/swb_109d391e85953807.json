@@ -1,0 +1,71 @@
+{
+ "id": "swb_109d391e85953807",
+ "url": "https://arxiv.org/abs/2505.17654",
+ "title": "EVADE-Bench: Multimodal Benchmark for Evaluating and Enhancing Evasive Content Detection",
+ "version": "arXiv 2505.17654v4（2026-05-27），SIGIR '26 论文版，8 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2505.17654v4",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_109d391e85953807.pdf",
+ "sha256": "ea95d494fbcb0a8daf0aa7c932ad1d382d13b9228aa5fa454ac762ffb40788be",
+ "format": "pdf",
+ "pages": 8,
+ "note_directory": "research/paper-completion/notes/swb_109d391e85953807",
+ "note": "research/paper-completion/notes/swb_109d391e85953807/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–3",
+  "method": "§3.2、Algorithm 1、§4.1–4.2，PDF pp.4–5",
+  "evaluation": "§5.1–5.5、Tables 2–6、Fig.2，PDF pp.5–7",
+  "limitations": "无独立 Limitations 节；§5.4 错误分析、§6，PDF pp.6–7"
+ },
+ "evidence": [
+  {
+   "id": "swb_109d391e85953807:E01",
+   "claim": "规避内容检测要求模型同时理解复杂法规规则，并推断被拆字、委婉语、图片裁剪等手段遮掩的违规意图；此前两类研究没有统一基准。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_109d391e85953807:E02",
+   "claim": "基准含 2,833 条文本和 13,961 张图片，覆盖六个违规类别，各类规则 prompt 为 614–3,379 token；原始数据为 25,380 条文本和 48,000 张图片。",
+   "locator": "§3.1–3.2、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_109d391e85953807:E03",
+   "claim": "样本经 CLIP+KMeans（K=300，每簇最多 60 条）均衡抽样，剔除所有模型预测一致的简单样本，再由专家对照最强 LLM/VLM 预测迭代标注。",
+   "locator": "§3.2、Algorithm 1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_109d391e85953807:E04",
+   "claim": "All-in-One 把六类规则合并成约 7K token 的单一指令、26 个类别；Full Accuracy 要求预测集合等于金标准，Partial Accuracy 只要求交集非空。",
+   "locator": "§4.1–4.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_109d391e85953807:E05",
+   "claim": "Single-Violation 中最佳 VLM Claude-3.7 为 58.79/23.42（Partial/Full），人类在文本和图像上为 69.34/57.03 和 69.20/51.41；Krippendorff's α 文本 0.6867、图像 0.7513。",
+   "locator": "Table 2，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_109d391e85953807:E06",
+   "claim": "All-in-One 下多数模型提升，如 Qwen2.5-7B 从 38.48/27.18 升至 53.18/50.60，Partial 与 Full 差距从 10 个百分点以上缩小到约 5 个百分点。",
+   "locator": "§5.2、Table 4，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_109d391e85953807:E07",
+   "claim": "基准难度与金标准修订都参照了参评模型的预测，All-in-One 同时改变 prompt、类别数和规则合并，不是单因素消融；Table 6 中 GPT-4o 不分解的结果与 Table 2 不一致且未说明任务轨。",
+   "locator": "§3.2、§5.2、Tables 2、6，PDF pp.4–7",
+   "basis": "inference",
+   "basis_note": "所依据的事实与数值来自原文；偏差、混杂因素和口径不一致的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

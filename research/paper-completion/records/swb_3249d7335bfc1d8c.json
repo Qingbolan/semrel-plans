@@ -1,0 +1,66 @@
+{
+ "id": "swb_3249d7335bfc1d8c",
+ "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444",
+ "title": "SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks",
+ "version": "Data in Brief 21 (2018) 起始页 1664，doi:10.1016/j.dib.2018.11.015，PMC6247444 全文 HTML 版（PDF 入口被 Cloudflare 拦截）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444/",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_3249d7335bfc1d8c.html",
+ "sha256": "aaa02c9d439373760d7bbcd4b3f8d1d0eb1b1e0ff7d298be66244f124e345f74",
+ "format": "html",
+ "pages": null,
+ "note_directory": "research/paper-completion/notes/swb_3249d7335bfc1d8c",
+ "note": "research/paper-completion/notes/swb_3249d7335bfc1d8c/README.md",
+ "read_sections": {
+  "problem": "Abstract、Value of the data、§1 Data 第 1 段（PMC HTML）",
+  "method": "Specifications table、§1 Data、§2 Experimental design, materials, and methods",
+  "evaluation": "§2、Table 2（AlexNet 基准）",
+  "limitations": "原文无局限章节；依据 Table 1–2 与 §2 设置由阅读者推断"
+ },
+ "evidence": [
+  {
+   "id": "swb_3249d7335bfc1d8c:E01",
+   "claim": "作者称持续推进 DCNN 裂缝检测需要多样化的标注图像集，而此前不存在；数据集刻意包含阴影、污渍、粗糙表面等干扰。",
+   "locator": "Abstract、Value of the data、§1（PMC HTML）",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3249d7335bfc1d8c:E02",
+   "claim": "SDNET2018 共 56,092 张 256×256 子图：有裂缝 8,484 张，无裂缝 47,608 张；桥面 13,620、墙 18,138、路面 24,334；切自 230 张原图。",
+   "locator": "Specifications table、§1、Table 1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3249d7335bfc1d8c:E03",
+   "claim": "采集使用 16 MP Nikon 相机，距离 500 mm，ISO 125，照度 1500–3000 lx；原图分辨率 4068×3456，约覆盖 1000×850 mm，子图约覆盖 60×60 mm；标签按 D/W/P 和 C/U 目录存储。",
+   "locator": "§1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3249d7335bfc1d8c:E04",
+   "claim": "AlexNet 测试准确率：桥面 FT 90.45 / TL 91.92，墙 87.54 / 89.31，路面 94.86 / 95.52。",
+   "locator": "§2、Table 2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3249d7335bfc1d8c:E05",
+   "claim": "训练与测试之和等于各构件总数，约 9:1 划分；论文未说明验证集，也未说明是否按原图分组划分。",
+   "locator": "Tables 1–2、§2",
+   "basis": "inference",
+   "basis_note": "比例与等式由阅读者从两表计算；未说明划分方式是阅读者核对全文后的判断。"
+  },
+  {
+   "id": "swb_3249d7335bfc1d8c:E06",
+   "claim": "路面无裂缝占比约 89%，95.52% 的准确率只比全判负类高约 6.7 个百分点；论文只报告准确率，没有报告召回率和 F1。",
+   "locator": "Tables 1–2",
+   "basis": "inference",
+   "basis_note": "由阅读者根据表格计算，原文未讨论类别不平衡。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

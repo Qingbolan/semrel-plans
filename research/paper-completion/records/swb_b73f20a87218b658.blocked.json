@@ -1,0 +1,11 @@
+{
+ "id": "swb_b73f20a87218b658",
+ "title": "[Expressions of matrix metalloproteinase-9 and tissue inhibitor of metalloproteinase-1 in ectopic and eutopic endometrium] (Zhonghua Fu Chan Ke Za Zhi 2004;39(12), PMID 15733405)",
+ "url": "https://pubmed.ncbi.nlm.nih.gov/15733405",
+ "attempts": [
+  {"url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=15733405&retmode=json", "result": "仅题录：无 PMC/DOI 标识，只有 pubmed:15733405"},
+  {"url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:15733405%20AND%20SRC:MED&resultType=core&format=json", "result": "isOpenAccess=N、hasPDF=N，无 fullTextUrlList，仅英文摘要"},
+  {"url": "https://pubmed.ncbi.nlm.nih.gov/15733405/", "result": "HTTP 200，仅摘要页，无全文/LinkOut 链接"}
+ ],
+ "reason": "中华妇产科杂志 2004 年中文论文，无开放获取全文、无 DOI/PMC；可得的只有 PubMed 英文摘要，按规则不能作为全文解析。"
+}

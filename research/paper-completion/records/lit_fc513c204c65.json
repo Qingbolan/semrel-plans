@@ -1,0 +1,65 @@
+{
+ "id": "lit_fc513c204c65",
+ "url": "https://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf",
+ "title": "Liu et al. — SERAG: Self-Evolving RAG System for Query Optimization",
+ "version": "aiDM ’25（SIGMOD 2025 工作坊），DOI 10.1145/3735403.3735997，作者主页 PDF，5 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "http://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf",
+ "retrieved_at": "2026-11-04T05:21:13.846962+00:00",
+ "fulltext": "research/paper-completion/papers/lit_fc513c204c65.pdf",
+ "sha256": "d8542208e2e1760a960bef2bfe4900f52e40ea13ce1ea60b891db1f638ef57f6",
+ "format": "pdf",
+ "pages": 5,
+ "note_directory": "research/paper-completion/notes/lit_fc513c204c65",
+ "note": "research/paper-completion/notes/lit_fc513c204c65/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§3、§3.1–3.4、Figures 1–3、Algorithm 1，PDF pp.2–3",
+  "evaluation": "§4.1–4.5、Tables 1–2、Figures 4–5，PDF pp.3–4；p.4 已渲染核对",
+  "limitations": "无专门章节；§6 未来工作及 §4 设置，PDF p.4"
+ },
+ "evidence": [
+  {
+   "id": "lit_fc513c204c65:E01",
+   "claim": "作者认为 LQO 应能从错误中学习、无冷启动、无需重训适应变化；Bao 需数小时训练，FASTgres 负载变化需重训，微调 LLM 的方法纠错成本过高，现有系统最多满足两条。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fc513c204c65:E02",
+   "claim": "SERAG 对重复查询：首次按默认计划执行入库；之后取统计信息与默认计划，用 SentenceTransformer 嵌入从静态集合 C_p 检索 k 条相似查询，与历史最佳计划及收益 η 组成动态提示，由 LLM 生成 pg_hint_plan hint，执行结果写回向量库；η<0 时作为负例。",
+   "locator": "§3、§3.1–3.3、Algorithm 1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fc513c204c65:E03",
+   "claim": "JOB 执行记录用于准备阶段参考样例和 SFT；评测用 CEB（每模板 2 条、超时 10 s）与 Stack（每模板 5 条、超时 30 s）；PostgreSQL 16.4、Milvus、A6000；每轮跑完整负载，重复 50 轮。",
+   "locator": "§4.1，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fc513c204c65:E04",
+   "claim": "Table 2 中 SERAG（SFT 3B、NoRef）在 CEB 上 Join Order 收益 63.62%、Complete Hint 45.31%，Bao 为 22.60%；JOB 上 SERAG 50.79%/62.32%，Bao 47.48%。",
+   "locator": "§4.2、Table 2，PDF p.4（已渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fc513c204c65:E05",
+   "claim": "SFT LLaMA3.2-3B、NoRef、Join Order 下平均检索 0.7 ms、推理约 236 ms（A6000）或 160 ms（A100）；CEB 计划平均执行 520.67 ms，PostgreSQL 为 922.86 ms。Figure 4 中 vanilla LLaMA 最好 RET 0.87，DS-Chat/DS-Coder 为 0.97/0.96。",
+   "locator": "§4.4–4.5，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fc513c204c65:E06",
+   "claim": "Table 1/2 的收益取自 50 轮中每条查询的最优计划，属事后选择；摘要“少 36%”与 520.67/922.86 ms 折算的约 43.6% 不一致，论文未说明口径；§4.2 的“LLaMA3.1-3B”疑为笔误。",
+   "locator": "摘要、§4.2–4.4，PDF pp.1、3–4",
+   "basis": "inference",
+   "basis_note": "原文数值与设置；口径差异与事后选择判断为阅读者计算和分析。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

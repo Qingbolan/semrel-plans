@@ -1,0 +1,71 @@
+{
+ "id": "lit_e433d1101cc8",
+ "url": "https://arxiv.org/abs/2310.03302",
+ "title": "Huang et al. — MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation",
+ "version": "arXiv:2310.03302v2（2024-04-14），39 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2310.03302v2",
+ "retrieved_at": "2026-11-04T05:33:05.268040+00:00",
+ "fulltext": "research/paper-completion/papers/lit_e433d1101cc8.pdf",
+ "sha256": "09837c2813668ee6dcb00abdf22b6293a9ad6ef4c135774bc504e233db017702",
+ "format": "pdf",
+ "pages": 39,
+ "note_directory": "research/paper-completion/notes/lit_e433d1101cc8",
+ "note": "research/paper-completion/notes/lit_e433d1101cc8/README.md",
+ "read_sections": {
+  "problem": "§1，pp.1–2",
+  "method": "§2–3、Tables 1–2，pp.2–6",
+  "evaluation": "§4、Tables 3–5、Figures 3–6，pp.6–9、15；附录 B–E；Tables 3–4 已渲染核对",
+  "limitations": "§4.1–4.3 失败模式与成本，pp.7–8；附录 D.2–D.3，pp.17–18"
+ },
+ "evidence": [
+  {
+   "id": "lit_e433d1101cc8:E01",
+   "claim": "每个任务由任务描述、起始文件（数据、说明、起始代码）与评测器组成；智能体可读写文件、执行 Python，并通过理解文件、编辑脚本等调用 LM 的复合动作操作工作区，全部轨迹与工作区快照被记录。",
+   "locator": "§2.1–2.3、Table 1，pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e433d1101cc8:E02",
+   "claim": "13 个任务分五类：经典任务、经典 Kaggle、2022-08 至 2023-05 的 Kaggle 挑战、近期研究（CLRS、BabyLM）、代码提速。",
+   "locator": "§2.4、Table 2，pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e433d1101cc8:E03",
+   "claim": "成功定义为最终指标比起始代码基线提升至少 10%；每设置 8 次运行，多数限 50 个动作与 5 小时，GPT-4 限 30 个动作。",
+   "locator": "§2.3、§4，pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e433d1101cc8:E04",
+   "claim": "平均成功率：Claude v3 Opus 37.5%、GPT-4-turbo 26.0%、Claude v2.1 26.0%、GPT-4 19.2%、Gemini Pro 18.3%、Claude v1.0 16.3%、Mixtral 3.8%；house-price 上 Opus 为 100%，BabyLM 上所有模型为 0。",
+   "locator": "Table 3，p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e433d1101cc8:E05",
+   "claim": "GPT-4-turbo 下本文智能体/AutoGPT/LangChain 平均成功率 26.0/2.9/1.0，Claude v3 Opus 下 37.5/13.5/33.7。",
+   "locator": "Table 5，p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e433d1101cc8:E06",
+   "claim": "用 GPT-4-turbo 跑完整个基准约 600 万 token、约 60 美元；按 26% 成功率，完成一个任务的期望成本约 231 美元。",
+   "locator": "§4.3，p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e433d1101cc8:E07",
+   "claim": "house-price 等 4 个任务起始代码无法运行，以随机预测为基线；Table 4 标题残留关于无基线任务提升如何计算的作者批注；Table 3 的 Baseline 列在 identify-contrails 和 CLRS 上非零。这些削弱了 10% 成功阈值的可比性。",
+   "locator": "附录 B，p.15；Tables 3–4，pp.7–8",
+   "basis": "inference",
+   "basis_note": "事实来自原文与渲染核对；对可比性的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

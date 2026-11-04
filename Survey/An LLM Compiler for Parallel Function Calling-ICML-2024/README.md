@@ -1,11 +1,7 @@
 # An LLM Compiler for Parallel Function Calling
 
-来源：[论文](https://www.stat.berkeley.edu/~mmahoney/pubs/icml2024_kim24y.pdf)；ICML2024正式版（作者镜像）；核对主要表格与arXiv v3一致，目录已按ICML-2024归档。
+ReAct 式智能体每次只决定一个工具调用，互不依赖的查找也要串行等待，延迟和 token 成本随调用次数增长。LLMCompiler 借鉴编译器思路：Planner 一次生成带 `$1` 占位依赖的任务 DAG，Task Fetching Unit 在依赖就绪时分发，Executor 并行执行，必要时把中间结果回送 Planner 重规划。相对 ReAct，作者报告最高 3.7× 延迟加速、6.7× 成本下降、约 9% 准确率提升（Abstract、§5.1–5.2）。
 
-阅读状态：2026-10-07已核读正文的问题、方法、实验设置与主要结果、局限，完成工作负载分析；未复现实验。依据：§3–5、图1–3、表1–2、附录A–I。
+[原文](https://www.stat.berkeley.edu/~mmahoney/pubs/icml2024_kim24y.pdf)
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty及强弱点](Novelty分析.md)
-- [workload分析](workload分析.md)
-- [原文](原文.pdf)
+版本：ICML 2024（PMLR 235）正式版，作者镜像 PDF，22 页；2026-11 重新取得全文并按 §3–5、表 1–3、附录 A/B/D/E/I/K 核对本目录数字。未复现实验。

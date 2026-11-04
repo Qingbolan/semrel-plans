@@ -1,0 +1,65 @@
+{
+ "id": "swb_2579c72e98cf1af3",
+ "url": "https://www.vldb.org/pvldb/vol18/p2681-freire.pdf",
+ "title": "Liu, Pena, Santos, Wu, Freire — Magneto: Combining Small and Large Language Models for Schema Matching",
+ "version": "PVLDB 18(8): 2681–2694, 2025，doi:10.14778/3742728.3742757，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol18/p2681-freire.pdf",
+ "retrieved_at": "2026-11-04T05:55:23.142609+00:00",
+ "fulltext": "research/paper-completion/papers/swb_2579c72e98cf1af3.pdf",
+ "sha256": "967b57720accbaf7eb2756d7cf9d4d8f3dd93c7a7192e5e233713aaf355b09f6",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/swb_2579c72e98cf1af3",
+ "note": "research/paper-completion/notes/swb_2579c72e98cf1af3/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1，PDF pp.1–4",
+  "method": "§2.2、§3、§4，PDF pp.3–7",
+  "evaluation": "§5、§6、Tables 3–6、Figures 6–11，PDF pp.7–12；Table 3–5、Figure 6 已渲染核对",
+  "limitations": "§6.1、§8，PDF pp.8、12"
+ },
+ "evidence": [
+  {
+   "id": "swb_2579c72e98cf1af3:E01",
+   "claim": "生物医学数据整合（CPTAC 十项研究映射到 700 多属性的 GDC 标准）依赖人工；现有最佳模式匹配方法在该任务上 MRR 至多 0.45。",
+   "locator": "§1、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2579c72e98cf1af3:E02",
+   "claim": "Magneto 两阶段：SLM（MPNet）嵌入检索候选，再由 LLM（GPT-4o-mini，打分式 one-shot 提示）或二分图分配算法重排；SLM 用 LLM 生成的合成列加三元组损失自监督微调，仅在目标表列上训练。",
+   "locator": "§2.2、§3.2、§4，PDF pp.3–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2579c72e98cf1af3:E03",
+   "claim": "GDC 基准：10 个源表（16–179 列、93–225 行）对一个 736 列的简化 GDC 目标表，真值由多名标注者共识确定；另用 Valentine 五个数据集（Magellan 7、WikiData 4、OpenData/ChEMBL/TPC-DI 各 180 对）。",
+   "locator": "§5、§6.1、Table 3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2579c72e98cf1af3:E04",
+   "claim": "GDC 上四个 Magneto 变体的 MRR 与 Recall@GT 都高于所有基线，ft-llm 最高；Valentine 上与基线持平或更好，Unicorn 例外且作者归因于训练数据泄漏。",
+   "locator": "§6.2、Figures 6–7，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2579c72e98cf1af3:E05",
+   "claim": "k=5 时 LLM 重排较二分图 MRR 0.731→0.780、Recall@GT 0.375→0.475；全模式直接送 LLM 的效果低于所有 Magneto 变体，且单表可超 6,000 s；LLaMA3.3-70B 加微调 MPNet 的 MRR 为 0.860。",
+   "locator": "§6.4、Figure 11、Table 6，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2579c72e98cf1af3:E06",
+   "claim": "局限：正确匹配不在 SLM Top-k 时重排无法补救；重排依赖提示且有成本。GDC 只有 10 个表对且标准差较大，统计稳定性有限。",
+   "locator": "§8、Tables 4–6，PDF pp.10–12",
+   "basis": "inference",
+   "basis_note": "前半句为原文 §8；后半句为阅读者基于表中标准差的分析。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

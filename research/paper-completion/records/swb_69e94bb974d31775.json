@@ -1,0 +1,71 @@
+{
+ "id": "swb_69e94bb974d31775",
+ "url": "https://doi.org/10.1007/s10506-021-09288-2",
+ "title": "Ruggeri et al. — Detecting and explaining unfairness in consumer contracts through memory networks",
+ "version": "Artificial Intelligence and Law 30(1):59–92（2022），Springer 开放获取 HTML 全文，34 页（期刊页码 59–92）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://link.springer.com/article/10.1007/s10506-021-09288-2",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_69e94bb974d31775.html",
+ "sha256": "4611cf600ac14be581d7318ffdc98752bd578388e36fd461bbf1f6a87936506a",
+ "format": "html",
+ "pages": 34,
+ "note_directory": "research/paper-completion/notes/swb_69e94bb974d31775",
+ "note": "research/paper-completion/notes/swb_69e94bb974d31775/README.md",
+ "read_sections": {
+  "problem": "§1、§3、Table 1",
+  "method": "§4.1–4.2、Fig. 1、式 (1)–(2)",
+  "evaluation": "§5、Tables 7–9（表格页单独获取并附于提取文本末尾）",
+  "limitations": "§5 末段、§6"
+ },
+ "evidence": [
+  {
+   "id": "swb_69e94bb974d31775:E01",
+   "claim": "CLAUDETTE 能标出潜在不公平条款但无法解释；作者假设以法律专家理由作为 MANN 记忆，被选中的理由即可构成解释。",
+   "locator": "§1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69e94bb974d31775:E02",
+   "claim": "语料为 100 份 ToS、21,063 句，其中 2,346 句（11.1%）不公平；聚焦五类：ltd 629 条/98 文档，cr 216/83，ter 420/93，ch 344/97，a 106/43；理由数分别为 19、17、28、7、8。",
+   "locator": "§3、Table 1、§3.1–3.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69e94bb974d31775:E03",
+   "claim": "模型以条款为查询、理由为记忆槽，用 sigmoid 注意力（允许不用或多选记忆）、单跳读取、拼接更新；强监督用 max-margin 损失让目标理由得分高于非目标理由。",
+   "locator": "§4.1–4.2、式 (1)–(2)",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69e94bb974d31775:E04",
+   "claim": "每类独立二分类、10 折交叉验证，每折 80/20 训练/验证划分，3 个随机种子取验证最优；基线为 SVM、CNN、LSTM。",
+   "locator": "§5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69e94bb974d31775:E05",
+   "claim": "Table 7 中 MANN 强监督在 A（0.526 vs SVM 0.350）、CR、LTD、TER 上最好，但在 CH 上 SVM 0.673 略高于 MANN（0.670/0.665）。",
+   "locator": "Table 7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69e94bb974d31775:E06",
+   "claim": "强监督显著提升理由选择：CP 在 A/CH 超过 0.91，CP@1 为 0.741/0.850；弱监督在 TER 上完全不使用记忆（全部指标为 0）。",
+   "locator": "Table 8、§5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69e94bb974d31775:E07",
+   "claim": "正文称所有类别 top-3 命中超过 50%，但 Table 8 中强监督 CR 的 CP@3=0.500、TER=0.492，与正文表述不符。",
+   "locator": "§5 末段、Table 8",
+   "basis": "inference",
+   "basis_note": "阅读者对照正文与 Table 8 数值得出的差异。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,226 @@
+{
+  "titles": {
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444": "SDNET2018: An annotated image dataset for non-contact concrete crack detection using deep convolutional neural networks",
+    "https://proceedings.neurips.cc/paper_files/paper/2023/file/4962a23916103301b27bde29a27642e8-Paper-Datasets_and_Benchmarks.pdf": "CSMeD: Bridging the Dataset Gap in Automated Citation Screening for Systematic Literature Reviews",
+    "https://oro.open.ac.uk/102450/1/NeurIPS-2023-csmed-bridging-the-dataset-gap-in-automated-citation-screening-for-systematic-literature-reviews-Paper-Datasets_and_Benchmarks.pdf": "CSMeD: Bridging the Dataset Gap in Automated Citation Screening for Systematic Literature Reviews",
+    "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf": "ISO DR-Core (ISO 24617-8): Core Concepts for the Annotation of Discourse Relations",
+    "https://www.lrec-conf.org/proceedings/lrec2014/pdf/840_Paper.pdf": "Using a sledgehammer to crack a nut? Lexical diversity and event coreference resolution.",
+    "https://e-archivo.uc3m.es/bitstreams/714e8ec0-6fd2-4ae1-ab3f-93c564ff5a1c/download": "The DDI corpus: An annotated corpus with pharmacological substances and drug–drug interactions",
+    "https://www.scitepress.org/Papers/2026/142494/142494.pdf": "Retrieval-Augmented Generation for Procurement Validation",
+    "https://ceur-ws.org/Vol-3497/paper-002.pdf": "Overview of MedProcNER Task on Medical Procedure Detection and Entity Linking at BioASQ 2023",
+    "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf": "Towards Building a Discourse-annotated Corpus of Russian",
+    "https://pubmed.ncbi.nlm.nih.gov/18955451": "Correlation of kinase genotype and clinical outcome in the North American Intergroup Phase III Trial of imatinib mesylate for treatment of advanced gastrointestinal stromal tumor: CALGB 150105 Study by Cancer and Leukemia Group B and Southwest Oncology Group",
+    "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf": "Toward Machine-assisted Participation in eRulemaking: An Argumentation Model of Evaluability",
+    "https://sites.icmc.usp.br/taspardo/Thesis2014-Cardoso.pdf": "Exploração de métodos de sumarização automática multidocumento com base em conhecimento semântico-discursivo",
+    "https://doi.org/10.1093/insilicoplants/diad021": "Plant Science Knowledge Graph Corpus: a gold standard entity and relation corpus for the molecular plant sciences",
+    "https://clic.ub.edu/corpus/sites/default/files/inline-files/ancora-corpus.pdf": "AnCora: Multilingual and Multilevel Annotated Corpora",
+    "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149": "A French corpus annotated for multiword expressions and named entities",
+    "https://papers.neurips.cc/paper_files/paper/2025/file/4aab82c8d6b77c0b6b010145c1bfcdd3-Paper-Datasets_and_Benchmarks_Track.pdf": "PANORAMA: A Dataset and Benchmarks Capturing Decision Trails and Rationales in Patent Examination",
+    "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf": "A Quantitative Evaluation of Trademark Search Engines’ Performances through Large-Scale Statistical Analysis",
+    "https://usableprivacy.org/static/files/swilson_acl_2016.pdf": "The Creation and Analysis of a Website Privacy Policy Corpus",
+    "https://ojs.aaai.org/index.php/AAAI/article/view/6401": "CASIE: Extracting Cybersecurity Event Information from Text",
+    "https://ebiquity.umbc.edu/get/a/publication/1144.pdf": "Modeling and Extracting Information about Cybersecurity Events from Text",
+    "https://ceur-ws.org/Vol-2968/paper5.pdf": "The E3C Project: European Clinical Case Corpus",
+    "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf": "Softcite Dataset: A Dataset of Software Mentions in Biomedical and Economic Research Publications",
+    "https://www.mdpi.com/2504-446X/9/10/704": "UAV Accident Forensics via HFACS-LLM Reasoning: Low-Altitude Safety Insights",
+    "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf": "CSTNews - A Discourse-Annotated Corpus for Single and Multi-Document Summarization of News Texts in Brazilian Portuguese",
+    "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf": "Annotating Expressions of Opinions and Emotions in Language",
+    "https://doi.org/10.1145/3799682.3840202": "SemiHS-Bench: A Semiconductor Benchmark for HS6 Classification from Sparse ERP-Style Text",
+    "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf": "Analyzing Wikipedia Deletion Debates with a Group Decision-Making Forecast Model",
+    "https://doi.org/10.1016/j.dib.2024.111202": "BidCorpus: A multifaceted learning dataset for public procurement",
+    "https://lawfulcomputing.org/papers/pets2023.pdf": "GDPRxiv: Establishing the State of the Art in GDPR Enforcement",
+    "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content": "An objective corruption risk index using public procurement data",
+    "https://ceur-ws.org/Vol-2645/paper5.pdf": "A Dataset for Statutory Reasoning in Tax Law Entailment and Question Answering",
+    "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf": "Demonstrating TOFFEE: A Learned System for Synthesizing Data Agent Trajectories at Scale",
+    "https://proceedings.neurips.cc/paper_files/paper/2025/file/bbdd9525c5ecd3a03fee43d8fd64bd83-Paper-Conference.pdf": "Tool-Augmented Spatiotemporal Reasoning for Streamlining Video Question Answering Task",
+    "https://openreview.net/pdf?id=rkeJRhNYDH": "TabFact: A Large-scale Dataset for Table-based Fact Verification",
+    "https://openaccess.thecvf.com/content/ICCV2025/papers/Fucka_SALAD_--_Semantics-Aware_Logical_Anomaly_Detection_ICCV_2025_paper.pdf": "SALAD -- Semantics-Aware Logical Anomaly Detection"
+  },
+  "aliases": {
+    "https://arxiv.org/abs/2410.12189": "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+    "https://arxiv.org/abs/2207.13757": "https://www.nature.com/articles/s41597-022-01521-0",
+    "https://arxiv.org/abs/2603.13933": "https://aclanthology.org/2026.findings-acl.115",
+    "https://arxiv.org/abs/2512.11374": "https://link.springer.com/article/10.1007/s10506-026-09524-7",
+    "https://doi.org/10.1038/s41597-022-01721-8": "https://www.nature.com/articles/s41597-022-01721-8",
+    "https://oro.open.ac.uk/102450/1/NeurIPS-2023-csmed-bridging-the-dataset-gap-in-automated-citation-screening-for-systematic-literature-reviews-Paper-Datasets_and_Benchmarks.pdf": "https://proceedings.neurips.cc/paper_files/paper/2023/file/4962a23916103301b27bde29a27642e8-Paper-Datasets_and_Benchmarks.pdf",
+    "https://ebiquity.umbc.edu/get/a/publication/1312.pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/6401",
+    "https://proceedings.neurips.cc/paper_files/paper/2025/file/bbdd9525c5ecd3a03fee43d8fd64bd83-Paper-Conference.pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bbdd9525c5ecd3a03fee43d8fd64bd83-Abstract-Conference.html",
+    "https://arxiv.org/abs/2407.11418": "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf",
+    "https://arxiv.org/abs/2505.14661": "https://www.vldb.org/pvldb/vol19/p1060-russo.pdf",
+    "https://arxiv.org/abs/2507.06515": "https://www.vldb.org/pvldb/vol18/p4560-chai.pdf",
+    "https://arxiv.org/abs/2504.01157": "https://www.vldb.org/pvldb/vol18/p5415-mhedhbi.pdf",
+    "https://arxiv.org/abs/2509.02751": "https://www.vldb.org/cidrdb/papers/2026/p30-russo.pdf",
+    "https://arxiv.org/abs/2408.14717": "https://vldb.org/cidrdb/papers/2025/p11-biswal.pdf",
+    "https://research.google/pubs/multi-objective-agentic-rewrites-for-unstructured-data-processing": "https://arxiv.org/abs/2512.02289",
+    "https://arxiv.org/abs/2312.04511": "https://proceedings.mlr.press/v235/kim24y.html",
+    "https://www.stat.berkeley.edu/~mmahoney/pubs/icml2024_kim24y.pdf": "https://proceedings.mlr.press/v235/kim24y.html",
+    "https://openreview.net/attachment?id=VqkAKQibpq&name=pdf": "https://arxiv.org/abs/2312.07104",
+    "https://openreview.net/forum?id=z5uVAKwmjf": "https://arxiv.org/abs/2410.10762",
+    "https://arxiv.org/abs/2501.09349": "https://doi.org/10.1109/tvcg.2025.3567122",
+    "https://ieeexplore.ieee.org/document/10988687": "https://doi.org/10.1109/tvcg.2025.3567122",
+    "https://arxiv.org/abs/2407.01725": "https://proceedings.iclr.cc/paper_files/paper/2025/file/0d70af566e69f1dfb687791ecf955e28-Paper-Conference.pdf",
+    "https://proceedings.iclr.cc/paper_files/paper/2025/hash/0d70af566e69f1dfb687791ecf955e28-Abstract-Conference.html": "https://proceedings.iclr.cc/paper_files/paper/2025/file/0d70af566e69f1dfb687791ecf955e28-Paper-Conference.pdf",
+    "https://arxiv.org/abs/2401.04398": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf",
+    "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f53fd88a4340063ecd258c0ae9948b40-Abstract-Conference.html": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf",
+    "https://arxiv.org/abs/2405.16884": "https://aclanthology.org/2025.coling-main.8",
+    "https://arxiv.org/abs/2310.00815": "https://doi.org/10.14778/3659437.3659452",
+    "https://dl.acm.org/doi/10.14778/3659437.3659452": "https://doi.org/10.14778/3659437.3659452",
+    "https://upenn.ferric.systems/dbscholar/sigmod_papers/2025/3725408.pdf": "https://doi.org/10.1145/3725408",
+    "https://arxiv.org/abs/2403.05821": "https://proceedings.mlsys.org/paper_files/paper/2025/file/b5dc49f44db2fadc5c4d717c57f4a424-Paper-Conference.pdf",
+    "https://saehanjo.github.io/assets/files/thalamusdb.pdf": "https://doi.org/10.1145/3654989",
+    "https://doi.org/10.14778/3749646.3749713": "https://www.vldb.org/pvldb/vol18/p4560-chai.pdf",
+    "https://arxiv.org/abs/2608.09532": "https://www.vldb.org/pvldb/vol19/p4642-russo.pdf",
+    "https://doi.org/10.14778/3827998.3828086": "https://www.vldb.org/pvldb/vol19/p4642-russo.pdf",
+    "https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf": "https://arxiv.org/abs/2511.01716"
+  },
+  "title_evidence": {
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md"
+    ],
+    "https://proceedings.neurips.cc/paper_files/paper/2023/file/4962a23916103301b27bde29a27642e8-Paper-Datasets_and_Benchmarks.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-csmed.md"
+    ],
+    "https://oro.open.ac.uk/102450/1/NeurIPS-2023-csmed-bridging-the-dataset-gap-in-automated-citation-screening-for-systematic-literature-reviews-Paper-Datasets_and_Benchmarks.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08.md"
+    ],
+    "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round102.md"
+    ],
+    "https://www.lrec-conf.org/proceedings/lrec2014/pdf/840_Paper.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round106.md"
+    ],
+    "https://e-archivo.uc3m.es/bitstreams/714e8ec0-6fd2-4ae1-ab3f-93c564ff5a1c/download": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round109.md"
+    ],
+    "https://www.scitepress.org/Papers/2026/142494/142494.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round144.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-latvia.md"
+    ],
+    "https://ceur-ws.org/Vol-3497/paper-002.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round164.md"
+    ],
+    "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round176.md"
+    ],
+    "https://pubmed.ncbi.nlm.nih.gov/18955451": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round18.md"
+    ],
+    "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round186.md"
+    ],
+    "https://sites.icmc.usp.br/taspardo/Thesis2014-Cardoso.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
+    ],
+    "https://doi.org/10.1093/insilicoplants/diad021": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round202.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round203.md"
+    ],
+    "https://clic.ub.edu/corpus/sites/default/files/inline-files/ancora-corpus.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round204.md"
+    ],
+    "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round211.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round212.md"
+    ],
+    "https://papers.neurips.cc/paper_files/paper/2025/file/4aab82c8d6b77c0b6b010145c1bfcdd3-Paper-Datasets_and_Benchmarks_Track.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round30.md"
+    ],
+    "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round44.md"
+    ],
+    "https://usableprivacy.org/static/files/swilson_acl_2016.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round61.md"
+    ],
+    "https://ojs.aaai.org/index.php/AAAI/article/view/6401": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md"
+    ],
+    "https://ebiquity.umbc.edu/get/a/publication/1144.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round70.md"
+    ],
+    "https://ceur-ws.org/Vol-2968/paper5.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round82.md"
+    ],
+    "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round151.md"
+    ],
+    "https://www.mdpi.com/2504-446X/9/10/704": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round178.md"
+    ],
+    "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
+    ],
+    "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round192.md"
+    ],
+    "https://doi.org/10.1145/3799682.3840202": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round38.md"
+    ],
+    "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-afd.md"
+    ],
+    "https://doi.org/10.1016/j.dib.2024.111202": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-bidcorpus.md"
+    ],
+    "https://lawfulcomputing.org/papers/pets2023.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-gdprxiv.md"
+    ],
+    "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-proact.md"
+    ],
+    "https://ceur-ws.org/Vol-2645/paper5.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-sara.md"
+    ],
+    "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/toffee-review.md"
+    ],
+    "https://proceedings.neurips.cc/paper_files/paper/2025/file/bbdd9525c5ecd3a03fee43d8fd64bd83-Paper-Conference.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ],
+    "https://openreview.net/pdf?id=rkeJRhNYDH": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ],
+    "https://openaccess.thecvf.com/content/ICCV2025/papers/Fucka_SALAD_--_Semantics-Aware_Logical_Anomaly_Detection_ICCV_2025_paper.pdf": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
+    ]
+  },
+  "reviews": {},
+  "alias_evidence": {
+    "https://doi.org/10.1109/tvcg.2025.3567122": [
+      "https://api.crossref.org/works/10.1109/tvcg.2025.3567122",
+      "https://arxiv.org/abs/2501.09349"
+    ],
+    "https://proceedings.iclr.cc/paper_files/paper/2025/file/0d70af566e69f1dfb687791ecf955e28-Paper-Conference.pdf": [
+      "https://proceedings.iclr.cc/paper_files/paper/2025/file/0d70af566e69f1dfb687791ecf955e28-Paper-Conference.pdf",
+      "https://arxiv.org/abs/2407.01725"
+    ],
+    "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf": [
+      "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf",
+      "https://arxiv.org/abs/2401.04398"
+    ],
+    "https://aclanthology.org/2025.coling-main.8": [
+      "https://aclanthology.org/2025.coling-main.8/",
+      "https://arxiv.org/abs/2405.16884"
+    ],
+    "https://doi.org/10.14778/3659437.3659452": [
+      "https://api.crossref.org/works/10.14778/3659437.3659452",
+      "https://arxiv.org/abs/2310.00815"
+    ],
+    "https://doi.org/10.1145/3725408": [
+      "https://api.crossref.org/works/10.1145/3725408",
+      "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Aero- Adaptive Query Processing of ML Queries-PACMMOD-2025/原文.pdf"
+    ],
+    "https://proceedings.mlsys.org/paper_files/paper/2025/file/b5dc49f44db2fadc5c4d717c57f4a424-Paper-Conference.pdf": [
+      "https://proceedings.mlsys.org/paper_files/paper/2025/file/b5dc49f44db2fadc5c4d717c57f4a424-Paper-Conference.pdf",
+      "https://arxiv.org/abs/2403.05821"
+    ],
+    "https://doi.org/10.1145/3654989": [
+      "https://saehanjo.github.io/assets/files/thalamusdb.pdf",
+      "https://api.crossref.org/works/10.1145/3654989"
+    ],
+    "https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf": "同一论文（SemBench，PVLDB 19(8):1754–1767）的出版版本，2026-11-04 全文核对"
+  }
+}

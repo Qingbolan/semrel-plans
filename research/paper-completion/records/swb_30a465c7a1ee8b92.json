@@ -1,0 +1,59 @@
+{
+ "id": "swb_30a465c7a1ee8b92",
+ "url": "https://arxiv.org/abs/2601.20617",
+ "title": "Agent Benchmarks Fail Public Sector Requirements",
+ "version": "arXiv 2601.20617v1（2026-01-28，预印本），24 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2601.20617v1",
+ "retrieved_at": "2026-11-04T05:39:15.373980+00:00",
+ "fulltext": "research/paper-completion/papers/swb_30a465c7a1ee8b92.pdf",
+ "sha256": "ba4494b013b190ef39da4d909547c6cc5084bcb5d857fb8872f068b387862072",
+ "format": "pdf",
+ "pages": 24,
+ "note_directory": "research/paper-completion/notes/swb_30a465c7a1ee8b92",
+ "note": "research/paper-completion/notes/swb_30a465c7a1ee8b92/README.md",
+ "read_sections": {
+  "problem": "§1–§2，PDF pp.1–4",
+  "method": "§3（标准推导）、§4（LLM 辅助综述），PDF pp.4–8；附录 A–C，PDF pp.17–24",
+  "evaluation": "Table 1、Figures 2–3、§5，PDF pp.7–10",
+  "limitations": "Limitations 段，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "swb_30a465c7a1ee8b92:E01",
+   "claim": "从 7 个公共行政/自动化理论归纳出标准：基于流程、任务真实、公共部门特定，以及报告顶层性能、成本、公平指标。",
+   "locator": "§3、Figure 1，PDF pp.4–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_30a465c7a1ee8b92:E02",
+   "claim": "检索 arXiv、ICLR、NeurIPS、ACL Anthology，去重后 1,312 篇；用 gpt-oss-120b（温度 0）做 JSON 结构化标注，54 篇双人专家标注校准提示。",
+   "locator": "§4–§4.2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_30a465c7a1ee8b92:E03",
+   "claim": "人–LLM Krippendorff α：基于流程 29.2%、真实 57.7%、公共部门 79.3%、成本 100%、公平 78.5%；人–人 47.8%–73.3%。",
+   "locator": "Table 1，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_30a465c7a1ee8b92:E04",
+   "claim": "漏斗 640→518 智能体→308 真实→94 基于流程→8 公共部门→0 指标齐全；77.6% 既不报成本也不报公平，公平仅 1.9%，仅 1 篇两者都报。",
+   "locator": "Figure 2、§5，PDF pp.7–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_30a465c7a1ee8b92:E05",
+   "claim": "论文篇数口径不一（摘要 >1,300、引言 1,304、方法 1,312、漏斗起点 640），且附录提示写“给定标题和摘要”，与下载全文的表述不一致。",
+   "locator": "摘要、§1、§4、Figure 2、附录 B.1，PDF pp.1–2、7、17–18",
+   "basis": "inference",
+   "basis_note": "各数字和提示文本为原文；不一致的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

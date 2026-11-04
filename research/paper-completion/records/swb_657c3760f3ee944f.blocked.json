@@ -1,0 +1,12 @@
+{
+  "id": "swb_657c3760f3ee944f",
+  "title": "Disruption of the ATP-binding Cassette B7 (ABTM-1/ABCB7) Induces Oxidative Stress and Premature Cell Death in Caenorhabditis elegans",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/21464130",
+  "attempts": [
+    {
+      "url": "PMC3122190 full-text HTML (saved as papers/swb_657c3760f3ee944f.html)",
+      "result": "full text obtained"
+    }
+  ],
+  "reason": "Full text was obtained, but writing the analysis was halted twice by the assistant safety filter; left pending for a human reader."
+}

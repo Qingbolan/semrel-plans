@@ -1,0 +1,109 @@
+[
+  {
+    "title": "ChartInsighter: An Approach for Mitigating Hallucination in Time-Series Chart Summary Generation With a Benchmark Dataset",
+    "canonical": "https://doi.org/10.1109/tvcg.2025.3567122",
+    "aliases": [
+      "https://arxiv.org/abs/2501.09349",
+      "https://ieeexplore.ieee.org/document/10988687"
+    ],
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/tvcg.2025.3567122",
+      "https://arxiv.org/abs/2501.09349"
+    ],
+    "identity_verified": true,
+    "basis": "Matching title and all seven authors: Fen Wang, Bomiao Wang, Xueli Shu, Zhen Liu, Zekai Shao, Chao Liu, Siming Chen. Differences are capitalization only."
+  },
+  {
+    "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
+    "canonical": "https://proceedings.iclr.cc/paper_files/paper/2025/file/0d70af566e69f1dfb687791ecf955e28-Paper-Conference.pdf",
+    "aliases": [
+      "https://arxiv.org/abs/2407.01725"
+    ],
+    "evidence": [
+      "https://proceedings.iclr.cc/paper_files/paper/2025/file/0d70af566e69f1dfb687791ecf955e28-Paper-Conference.pdf",
+      "https://arxiv.org/abs/2407.01725"
+    ],
+    "identity_verified": true,
+    "basis": "Official ICLR PDF first page and arXiv metadata match title and all ten authors, from Bodhisattwa Prasad Majumder through Peter Clark."
+  },
+  {
+    "title": "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding",
+    "canonical": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf",
+    "aliases": [
+      "https://arxiv.org/abs/2401.04398"
+    ],
+    "evidence": [
+      "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf",
+      "https://arxiv.org/abs/2401.04398"
+    ],
+    "identity_verified": true,
+    "basis": "Official ICLR PDF first page and arXiv metadata match title and all eleven authors, from Zilong Wang through Tomas Pfister."
+  },
+  {
+    "title": "Match, Compare, or Select? An Investigation of Large Language Models for Entity Matching",
+    "canonical": "https://aclanthology.org/2025.coling-main.8/",
+    "aliases": [
+      "https://arxiv.org/abs/2405.16884",
+      "https://aclanthology.org/2025.coling-main.8.pdf"
+    ],
+    "evidence": [
+      "https://aclanthology.org/2025.coling-main.8/",
+      "https://arxiv.org/abs/2405.16884"
+    ],
+    "identity_verified": true,
+    "basis": "Exact title and same eight authors. Author order differs: Le Sun is last in arXiv metadata but sixth in COLING; this is a publication-version difference, not a separate paper. Abstracts identify the same ComEM framework."
+  },
+  {
+    "title": "ReAcTable: Enhancing ReAct for Table Question Answering",
+    "canonical": "https://doi.org/10.14778/3659437.3659452",
+    "aliases": [
+      "https://arxiv.org/abs/2310.00815",
+      "https://dl.acm.org/doi/10.14778/3659437.3659452"
+    ],
+    "evidence": [
+      "https://api.crossref.org/works/10.14778/3659437.3659452",
+      "https://arxiv.org/abs/2310.00815"
+    ],
+    "identity_verified": true,
+    "basis": "Matching title and authors: Yunjia Zhang, Jordan Henkel, Avrilia Floratou, Joyce Cahoon, Shaleen Deep, Jignesh M. Patel; arXiv 2023 preprint and PVLDB 2024 publication."
+  },
+  {
+    "title": "Aero: Adaptive Query Processing of ML Queries",
+    "canonical": "https://doi.org/10.1145/3725408",
+    "aliases": [
+      "https://upenn.ferric.systems/dbscholar/sigmod_papers/2025/3725408.pdf"
+    ],
+    "evidence": [
+      "https://api.crossref.org/works/10.1145/3725408",
+      "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Aero- Adaptive Query Processing of ML Queries-PACMMOD-2025/原文.pdf"
+    ],
+    "identity_verified": true,
+    "basis": "The previously downloaded publisher PDF identifies DOI 10.1145/3725408 on page 1, with matching title and all five authors in Crossref. The mirror currently returns 403; archived original was examined. Do not merge Hydro merely by related authors or topic."
+  },
+  {
+    "title": "Optimizing LLM Queries in Relational Data Analytics Workloads",
+    "canonical": "https://proceedings.mlsys.org/paper_files/paper/2025/file/b5dc49f44db2fadc5c4d717c57f4a424-Paper-Conference.pdf",
+    "aliases": [
+      "https://arxiv.org/abs/2403.05821"
+    ],
+    "evidence": [
+      "https://proceedings.mlsys.org/paper_files/paper/2025/file/b5dc49f44db2fadc5c4d717c57f4a424-Paper-Conference.pdf",
+      "https://arxiv.org/abs/2403.05821"
+    ],
+    "identity_verified": true,
+    "basis": "Official MLSys first page and arXiv v2 metadata match title and all eleven authors from Shu Liu through Matei Zaharia. Versions contain changed motivating cost/time numbers, so identity merging must preserve version-specific evidence."
+  },
+  {
+    "title": "ThalamusDB: Approximate Query Processing on Multi-Modal Data",
+    "canonical": "https://doi.org/10.1145/3654989",
+    "aliases": [
+      "https://saehanjo.github.io/assets/files/thalamusdb.pdf"
+    ],
+    "evidence": [
+      "https://saehanjo.github.io/assets/files/thalamusdb.pdf",
+      "https://api.crossref.org/works/10.1145/3654989"
+    ],
+    "identity_verified": true,
+    "basis": "Author-hosted PDF explicitly prints DOI 10.1145/3654989 on page 1, PACMMOD 2(3), Article 186, June 2024; title and both authors Saehan Jo and Immanuel Trummer match Crossref."
+  }
+]

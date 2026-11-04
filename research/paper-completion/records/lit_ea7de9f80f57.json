@@ -1,0 +1,72 @@
+{
+ "id": "lit_ea7de9f80f57",
+ "url": "https://arxiv.org/abs/2605.02503",
+ "title": "Zhang et al. — DataClawBench: An Agent Benchmark for Exploratory Real-World Financial Data Analysis",
+ "version": "arXiv:2605.02503v3（2026-05-27），25 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2605.02503",
+ "retrieved_at": "2026-11-04T04:51:38.584318+00:00",
+ "fulltext": "research/paper-completion/papers/lit_ea7de9f80f57.pdf",
+ "sha256": "4c757072973bd12b82591a744d830b95068e2f66492bd8d65c38b30d25f44034",
+ "format": "pdf",
+ "pages": 25,
+ "note_directory": "research/paper-completion/notes/lit_ea7de9f80f57",
+ "note": "research/paper-completion/notes/lit_ea7de9f80f57/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1、§2.1、Table 1，PDF pp.1–2",
+  "method": "§2.2、§3、Tables 2–3、Figure 1，PDF pp.2–5；附录 D，pp.17–20",
+  "evaluation": "§4 Q1–Q7、Tables 4–6、Figures 2–3，PDF pp.5–8；附录 A、E，pp.12、20",
+  "limitations": "Limitations and Future work，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "lit_ea7de9f80f57:E01",
+   "claim": "现有数据分析基准多提供数据源、schema 或清洗数据等先验，降低了探索负担，可能高估智能体在真实环境中的可靠性。",
+   "locator": "§1、Table 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ea7de9f80f57:E02",
+   "claim": "任务形式化为 (q, D, P, s, m, a)，不提供源提示、完整 schema 与噪声说明；指标为 Acc、EE（仅答对）、GPR 与 TPE（仅答错，γ=0.9）。",
+   "locator": "§2.1–2.2、Table 5 标题，PDF pp.2–3、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ea7de9f80f57:E03",
+   "claim": "数据环境约 206 万条记录、3 领域 7 个核心源 18 个文件，主要为 2022 年 CSV，保留缺失、单位不一致、实体名歧义等噪声，并经三阶段脱敏。",
+   "locator": "§3.1、Table 3、附录 D.1–D.2，PDF pp.3–4、17",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ea7de9f80f57:E04",
+   "claim": "492 题按难度 131/286/75，分七类；Easy 题由知识图谱 + 模板生成 + 自动规则校验产生，与正文“专家设计”的说法口径不完全一致。",
+   "locator": "Table 2、§3.2、附录 D.3.4，PDF pp.4–5、20",
+   "basis": "inference",
+   "basis_note": "数量与生成方式均出自原文；“口径不一致”是阅读者对正文与附录的对照。"
+  },
+  {
+   "id": "lit_ea7de9f80f57:E05",
+   "claim": "Claude Opus 4.6 总准确率 63.4%，其余 7 个模型低于 50%；8 模型平均 Easy→Medium 降 13.2 点、Medium→Hard 降 20.2 点。",
+   "locator": "§4 Q1、Table 4，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ea7de9f80f57:E06",
+   "claim": "Qwen3.5-Plus 在 30 道失败题上：去噪并减少无关源后 Easy/Medium/Hard 为 20%/33.3%/0%，再加完整 schema 为 40%/45%/20%。",
+   "locator": "§4 Q5、Figure 2a，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ea7de9f80f57:E07",
+   "claim": "所有评判由 GLM-5 完成，而 GLM-5 也是被测模型；原文未讨论自评偏差。里程碑在清洗环境中标注，GPR/TPE 只在答错任务上计算。",
+   "locator": "§3.2、§4、Limitations，PDF pp.5、9",
+   "basis": "inference",
+   "basis_note": "设置来自原文；自评偏差风险是阅读者指出，原文未讨论。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

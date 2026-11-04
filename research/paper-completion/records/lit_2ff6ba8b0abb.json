@@ -1,0 +1,77 @@
+{
+ "id": "lit_2ff6ba8b0abb",
+ "url": "https://arxiv.org/abs/2604.24198",
+ "title": "Qiu et al. — Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis",
+ "version": "arXiv:2604.24198v2（2026-06-20，ACM 会议模板），12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2604.24198v2",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_2ff6ba8b0abb.pdf",
+ "sha256": "992140554149acfa3672f34d4859ab86d635c47f1a19c6bce16dbfb62213a40e",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "research/paper-completion/notes/lit_2ff6ba8b0abb",
+ "note": "research/paper-completion/notes/lit_2ff6ba8b0abb/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–3、Table 1、Fig.2，PDF pp.1–4",
+  "method": "§4.1–4.3、Fig.3，附录 A，PDF pp.4–6、12",
+  "evaluation": "§5、Tables 2–5、Figs.4–5，PDF pp.6–9",
+  "limitations": "Limitations and Ethical Considerations，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "lit_2ff6ba8b0abb:E01",
+   "claim": "先导研究中，通用 PRM 引导的 Best-of-N 在 DABStep 子集上不如多数投票（ThinkPRM 在 N=16 由 32.67% 升至 40.00% 但仍未超过多数投票），且会给含落地错误但最终正确的步骤打低分。",
+   "locator": "§3、Fig.2a–b，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E02",
+   "claim": "DataPRM 是 ReAct 式生成 PRM：输入历史、此前验证反馈和当前步，可执行代码并调用 query_document/query_image，输出分数与理由；奖励为三值 {0, 0.5, 1}，0.5 表示触发了可纠正反馈的错误。",
+   "locator": "§4.1，式 3–6，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E03",
+   "claim": "训练数据 7K+ 实例：按 AutoSDT 爬取 GitHub 文件，Qwen3-235B 每题采样 4 条轨迹，只保留最终答案不一致的组；DeepSeek-V3.2 给三值分数；100 条抽检准确率 86.0%、加权 κ 0.83。",
+   "locator": "§4.2，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E04",
+   "claim": "ScienceAgentBench 去除 ML/DL 后保留 78 个任务（可视化由 Qwen3-VL-235B 评判）；DABStep 报告 Easy/Hard；RL 评测 DABench 与 TableBench，由 Qwen3-30B-A3B 评判。",
+   "locator": "§5.1.1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E05",
+   "claim": "Best-of-N（N=16）下 DataPRM 在 ScienceAgentBench SR 25.64、DABStep Avg 40.89，高于自奖励（24.36、39.77）、多数投票（23.08、38.00）和 Qwen2.5-Math-PRM-72B（20.51、29.11）。",
+   "locator": "§5.2.1、Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E06",
+   "claim": "用 DataPRM 过程奖励做 GRPO，DABench 78.73%、TableBench 64.84%，优于 SFT 与仅结果奖励；仅结果奖励约 200 步后熵降至约 0.12。",
+   "locator": "§5.4、Fig.5，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E07",
+   "claim": "局限：只覆盖推理与可视化类分析任务，不含模型训练等工程任务；DataPRM 仅用 SFT 训练，依赖高质量轨迹数据。",
+   "locator": "Limitations and Ethical Considerations，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2ff6ba8b0abb:E08",
+   "claim": "主表差距多为 1–2 个百分点且无方差报告，ScienceAgentBench 仅 78 题；DataPRM 4B 底座模型和先导研究子集规模在正文中未说明。",
+   "locator": "Table 2、§3、§5.1，PDF pp.3–6",
+   "basis": "inference",
+   "basis_note": "统计强度与披露缺口的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

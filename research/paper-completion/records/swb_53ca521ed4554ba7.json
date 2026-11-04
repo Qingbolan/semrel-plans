@@ -1,0 +1,71 @@
+{
+ "id": "swb_53ca521ed4554ba7",
+ "url": "https://lawfulcomputing.org/papers/pets2023.pdf",
+ "title": "GDPRxiv: Establishing the State of the Art in GDPR Enforcement",
+ "version": "PoPETs 2023(4)，pp.484–499，DOI 10.56553/popets-2023-0121，16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://lawfulcomputing.org/papers/pets2023.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_53ca521ed4554ba7.pdf",
+ "sha256": "0a5f7b710577358e9b9b2b9ceccd1a74e2d218f398f048f412a4f87c991fdc5b",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/swb_53ca521ed4554ba7",
+ "note": "research/paper-completion/notes/swb_53ca521ed4554ba7/README.md",
+ "read_sections": {
+  "problem": "§1、§2，PDF pp.1–4",
+  "method": "§3、§4、Figures 1–2，PDF pp.4–7",
+  "evaluation": "§5.1–5.3、Figures 3–7、Table 3，PDF pp.8–12",
+  "limitations": "§3.4、§4.2–4.4、§5.3.3，PDF pp.5–7、12"
+ },
+ "evidence": [
+  {
+   "id": "swb_53ca521ed4554ba7:E01",
+   "claim": "作者把 GDPR SOTA 定义为未通过现行 GDPR 合规标准的技术、设计、机制、政策、配置与运营做法的集合，采用 via negativa 方式，只收官方来源。",
+   "locator": "§3、§3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_53ca521ed4554ba7:E02",
+   "claim": "GDPRxiv 爬取 47 个 DPA 网站，用 Google Translate 译为英文；完整构建约 22 小时；过滤采用日期加关键词规则，每个 DPA 抽查 25 份，假阳性率不超过 5%。",
+   "locator": "§4.1、§4.3，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_53ca521ed4554ba7:E03",
+   "claim": "2018-05-25 至 2022-11-24 期间收录 3,343 份执法先例和 5,600 份指南，共 8,943 份；Enforcement Tracker 为 1,428 份，GDPRhub 为 1,594 份。",
+   "locator": "§5、§5.1、Table 2、Figure 3，PDF pp.4、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_53ca521ed4554ba7:E04",
+   "claim": "执法先例的决定类型、被执法组织、引用条款、罚款金额四项元数据需人工标注，因为正则、NLTK NER 和 BERT 的精确率与召回率只有 50–70%。",
+   "locator": "§4.2、§4.4，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_53ca521ed4554ba7:E05",
+   "claim": "执法统计：每日平均 2.03 件；第 1 年 275 件，第 4 年 1,012 件；46% 无罚款，80% 罚款不超过 1 万欧元；罚款前 3 国占欧盟总额 18.7 亿欧元的 80% 以上。",
+   "locator": "§5.2、Figure 4，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_53ca521ed4554ba7:E06",
+   "claim": "对 175 份引用第 17 条的决定做开放编码，得到 16 类 RTBF 失败、5 个功能组；UI 与策略类合计占 80%。",
+   "locator": "§5.3、Figures 6–7，PDF pp.10–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_53ca521ed4554ba7:E07",
+   "claim": "RTBF 编码一致性只抽查 25/175 份，且未报告一致性系数；Table 1 称第 5、6、32 条约占全部引用的近 50%，§5.2 则称至少其一出现在 78.5% 的引用中，两种口径不同且原文未解释。",
+   "locator": "§5.3、Table 1、§5.2，PDF pp.2、10",
+   "basis": "inference",
+   "basis_note": "原文已给出数值或事实；结论或对照为阅读者分析，原文未直接陈述。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

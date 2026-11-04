@@ -1,0 +1,65 @@
+{
+ "id": "swb_d6b98c91634c2133",
+ "url": "https://aclanthology.org/2023.wiesp-1.11",
+ "title": "Schrader et al. — MuLMS: A Multi-Layer Annotated Text Corpus for Information Extraction in the Materials Science Domain",
+ "version": "WIESP 2023（2nd Workshop on Information Extraction from Scientific Publications），pp.84–100，ACL Anthology 2023.wiesp-1.11，17 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2023.wiesp-1.11.pdf",
+ "retrieved_at": "2026-11-04T05:52:15+00:00",
+ "fulltext": "research/paper-completion/papers/swb_d6b98c91634c2133.pdf",
+ "sha256": "914246e51f712b1636a37c3336e8b56a975016c09d74d9bab552976b9d05e9ad",
+ "format": "pdf",
+ "pages": 17,
+ "note_directory": "research/paper-completion/notes/swb_d6b98c91634c2133",
+ "note": "research/paper-completion/notes/swb_d6b98c91634c2133/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–2",
+  "method": "§3 语料与标注方案、§4 任务与模型，PDF pp.2–6",
+  "evaluation": "§3.4 IAA、§5、Tables 5–12，PDF pp.4–8",
+  "limitations": "§6、Limitations，PDF pp.8–9"
+ },
+ "evidence": [
+  {
+   "id": "swb_d6b98c91634c2133:E01",
+   "claim": "MuLMS 含 50 篇 CC BY 材料科学论文、7 个子领域、10,186 句，按文档划分 train/dev/test = 36/7/7。",
+   "locator": "§3.1、Table 1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d6b98c91634c2133:E02",
+   "claim": "语料共 46,351 个 NE 标注和 16,794 个关系；2,111 句（20.7%）含 MEASUREMENT 标注。",
+   "locator": "§3.3、Tables 3–4，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d6b98c91634c2133:E03",
+   "claim": "关系 IAA 总体 κ=0.61，但 usedTogether κ=0.00；NE 中 SAMPLE 的 F1 仅 4.7、PROPERTY 40.0。",
+   "locator": "§3.4、Tables 6–7，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d6b98c91634c2133:E04",
+   "claim": "MatSciBERT CRF 标注器 NER 测试 micro-F1 79.6、macro-F1 70.7，优于依存解析式 NER（77.3/67.6）。",
+   "locator": "§5.2、Table 9，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d6b98c91634c2133:E05",
+   "claim": "关系抽取在金标实体上 MatSciBERT 测试 micro-F1 67.6；改用预测实体后降至 36.5。",
+   "locator": "§5.3、Table 10，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d6b98c91634c2133:E06",
+   "claim": "评价单位为单句，论文未实现或评测引言所设想的\"材料 X、条件 Y、值 ≥Z\"语义检索，该用法属于派生任务。",
+   "locator": "§1、§4，PDF pp.1、6",
+   "basis": "inference",
+   "basis_note": "检索查询只在引言作为动机示例出现；\"未实现/派生任务\"为阅读者判断。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

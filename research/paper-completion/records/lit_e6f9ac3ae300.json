@@ -1,0 +1,77 @@
+{
+ "id": "lit_e6f9ac3ae300",
+ "url": "https://arxiv.org/abs/2402.09727",
+ "title": "Lee et al. — A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts",
+ "version": "arXiv:2402.09727v3（2024-07-22，ICML 2024 / PMLR 235），20 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2402.09727v3",
+ "retrieved_at": "2026-11-04T05:24:37.341567+00:00",
+ "fulltext": "research/paper-completion/papers/lit_e6f9ac3ae300.pdf",
+ "sha256": "02927f6c19de32c4c1eae7beac57ef3dc0fd16851897cae3c6841f16b4e0e873",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "research/paper-completion/notes/lit_e6f9ac3ae300",
+ "note": "research/paper-completion/notes/lit_e6f9ac3ae300/README.md",
+ "read_sections": {
+  "problem": "§1–§2，PDF pp.1–3",
+  "method": "§3，PDF pp.3–5",
+  "evaluation": "§4、Tables 1–6，PDF pp.5–9；附录 B–E，PDF pp.13–17",
+  "limitations": "§2、§5、Impact Statement，PDF pp.2、9"
+ },
+ "evidence": [
+  {
+   "id": "lit_e6f9ac3ae300:E01",
+   "claim": "LLM 有显式上下文上限，且输入变长或含干扰信息时性能下降；作者借鉴模糊痕迹理论，用全局要点记忆加按需回查原文模拟人类阅读。",
+   "locator": "§1–§2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E02",
+   "claim": "ReadAgent 由三步提示组成：LLM 在段落间编号标签中选择停顿点完成分页；用“shorten”提示把每页压缩为带页号的要点；根据要点记忆与问题选择回看页，原文页替换对应要点后作答（并行 P 与顺序 S 两种回查）。",
+   "locator": "§3.1–3.2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E03",
+   "claim": "主模型为 8K 上下文的 PaLM 2-L；评测 QuALITY dev（230 篇/2,086 题）、NarrativeQA（Gutenberg 与电影剧本，测试 177/172 篇）、QMSum 验证（35 篇/272 题）；检索库仅限当前文档切出的页。",
+   "locator": "§4、§4.2–4.3，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E04",
+   "claim": "QuALITY 上 ReadAgent-S（1–6 页）准确率 87.17%，高于全文 85.83%；ReadAgent-P 回查 1–2 页时 CR 72.17%，总处理词数比全文少 20.4%。",
+   "locator": "Table 1、§3.3，PDF pp.4、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E05",
+   "claim": "NarrativeQA 测试集 LR-1：Gutenberg 上 ReadAgent-S 60.55% vs BM25 top-4 53.60%；电影剧本上 64.53% vs 神经检索 top-4 52.13%；Gutenberg 要点压缩率 96.80%。",
+   "locator": "Table 2、§4.3.2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E06",
+   "claim": "消融：LLM 分页 86.83% vs 均匀分页 85.71%；LLM 选 1 页 84.13% vs 要点上的神经检索 82.65%；页越大压缩率越高，过度压缩损害准确率。",
+   "locator": "§4.4、Tables 4–6，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E07",
+   "claim": "摘要称 Gutenberg 测试集 ROUGE-L 比最好检索基线高 31.98%，但按 Table 2 的 ReadAgent 最高 ROUGE-L 0.226 与 BM25 top-4 的 0.197 计算约为 15%，未能复现。",
+   "locator": "摘要/§1，PDF pp.1–2；Table 2，PDF p.7",
+   "basis": "inference",
+   "basis_note": "比例为阅读者依据 Table 2 计算；原文未说明 31.98% 的具体对照行。"
+  },
+  {
+   "id": "lit_e6f9ac3ae300:E08",
+   "claim": "作者承认方法不提供无限上下文、要点记忆过长时无保证、常规检索可扩展到更大库，并提示使用要点可能加剧幻觉但未研究；LLM 评分由 PaLM 2-L 完成，难以与其他工作比较。",
+   "locator": "§2、§4.3.3、§5、Impact Statement，PDF pp.2、8–9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,66 @@
+{
+ "id": "lit_0b8002a4eaca",
+ "url": "https://doi.org/10.14778/3696435.3696440",
+ "title": "Li, Yuan, Wang, Cong, Bing — LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency",
+ "version": "PVLDB Vol.18 No.1，pp.53–65，2024，13 页（vldb.org 开放 PDF）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol18/p53-yuan.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_0b8002a4eaca.pdf",
+ "sha256": "b947ab49369b51877f2dbdf7e9e5c74bd84b6288a468d8590160ba5953612e99",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/lit_0b8002a4eaca",
+ "note": "research/paper-completion/notes/lit_0b8002a4eaca/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.2，PDF pp.1–2",
+  "method": "§3–5、Figures 2–7、Algorithm 1，PDF pp.3–8",
+  "evaluation": "§6、Tables 2–11、Figure 8，PDF pp.8–12；Tables 2–7 对照 layout 文本核对",
+  "limitations": "§6.3、§6.5.3、§7，PDF pp.9–12"
+ },
+ "evidence": [
+  {
+   "id": "lit_0b8002a4eaca:E01",
+   "claim": "LLM 只从 Calcite 候选规则中选择规则序列，由 Calcite 执行改写，以保证可执行与等价；提示由系统指令、规则说明、一个示例和输入查询组成。",
+   "locator": "§3.1、Definition 3.1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0b8002a4eaca:E02",
+   "claim": "示例选择模型对查询树节点编码算子类型、条件文本与基数/代价，用 SimCSE 风格对比损失训练，并以 4 轮课程学习逐步加入高置信数据。",
+   "locator": "§5.1–5.2、Algorithm 1、§6.1.5，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0b8002a4eaca:E03",
+   "claim": "数据集为 IMDB/JOB 5,000 条、TPC-H（约 10GB）5,000 条、DSB 2,000 条查询；正文未说明训练/测试划分。",
+   "locator": "§6.1.1，PDF p.8",
+   "basis": "inference",
+   "basis_note": "规模为原文；“未说明划分”为阅读者核查全文后的判断。"
+  },
+  {
+   "id": "lit_0b8002a4eaca:E04",
+   "claim": "GPT-3.5 下 LLM-R2 平均执行时间 TPC-H 37.23s、IMDB 3.91s、DSB 24.11s，分别为原查询的 52.5%、56.0%、39.8%，为 LR 的 94.5%、63.1%、40.7%。",
+   "locator": "Table 2、§6.2，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0b8002a4eaca:E05",
+   "claim": "LLM-R2 改写延迟比 LR 多 1.82/1.86/1.51 秒，但加上执行时间的总时间仍最低；每查询 API 成本低于 0.001 美元。",
+   "locator": "§6.3、Tables 4–5，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0b8002a4eaca:E06",
+   "claim": "§6.2 称 LLM only 在 TPC-H 的 129 次改写中 119 次出错，而 Table 3 记为 197 次改写、68 次改进；Table 6 的 100G 使用 3,000 秒上限而非 300 秒。",
+   "locator": "§6.2、§6.1.6、Tables 3、6，PDF pp.8–10",
+   "basis": "inference",
+   "basis_note": "数值均来自原文；不一致之处为阅读者对照得出。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

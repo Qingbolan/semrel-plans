@@ -1,0 +1,13 @@
+{
+ "id": "lit_2156a19e4057",
+ "title": "Rabbit: Retrieval-Augmented Generation Enables Better Automatic Database Knob Tuning",
+ "url": "https://doi.org/10.1109/icde65448.2025.00284",
+ "attempts": [
+  {"url": "https://doi.org/10.1109/icde65448.2025.00284", "result": "resolves to https://ieeexplore.ieee.org/document/11113071/ (IEEE Xplore landing page, subscription)"},
+  {"url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11113071", "result": "HTTP 418 HTML, not a PDF"},
+  {"url": "https://export.arxiv.org/api/query?search_query=all:Rabbit+AND+all:knob+AND+all:tuning", "result": "no arXiv preprint found"},
+  {"url": "https://api.openalex.org/works/doi:10.1109/icde65448.2025.00284", "result": "oa_status closed; only location is the DOI; any_repository_has_fulltext=false"},
+  {"url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109/ICDE65448.2025.00284", "result": "HTTP 429 rate limited"}
+ ],
+ "reason": "Full text is only on IEEE Xplore (closed access); no preprint or repository copy found."
+}

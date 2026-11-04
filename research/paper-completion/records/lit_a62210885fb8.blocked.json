@@ -1,0 +1,14 @@
+{
+ "id": "lit_a62210885fb8",
+ "title": "LATuner: An LLM-Enhanced Database Tuning System Based on Adaptive Surrogate Model",
+ "url": "https://doi.org/10.1007/978-3-031-70362-1_22",
+ "attempts": [
+  {"url": "https://link.springer.com/content/pdf/10.1007/978-3-031-70362-1_22.pdf", "result": "HTML page returned instead of PDF (Springer paywall)"},
+  {"url": "https://api.openalex.org/works/doi:10.1007/978-3-031-70362-1_22", "result": "is_oa=false, oa_status=closed, no repository full text"},
+  {"url": "https://export.arxiv.org/api/query?search_query=ti:LATuner", "result": "no arXiv preprint found"},
+  {"url": "https://mlanthology.org/ecmlpkdd/2024/fan2024ecmlpkdd-latuner/", "result": "metadata/abstract page only, no PDF link"},
+  {"url": "https://pure.ecnu.edu.cn/en/publications/latuner-an-llm-enhanced-database-tuning-system-based-onadaptive-s/", "result": "repository record without PDF link"},
+  {"url": "web search: LATuner ... pdf", "result": "only abstract-level pages (aminer, chatpaper, dblp)"}
+ ],
+ "reason": "Closed-access Springer LNCS chapter (ECML PKDD 2024, pp.372-388); no open full text located, only abstracts."
+}

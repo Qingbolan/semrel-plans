@@ -1,13 +1,22 @@
-# Workload 分析
+# 工作负载
 
-**要验证的问题。** 检验整体表达工具依赖并并行调度，能否降低工具调用延迟、token成本，且保持答案质量；包含静态依赖和重规划两种情况。
+**要验证的问题**：把工具依赖整体写成 DAG 并并行调度，能否在不降准确率的前提下降低延迟与 token 成本；覆盖静态依赖和需要重规划两种情况（§5，p.5）。
 
-**数据、任务单位与gold。** HotpotQA只用约1500个comparison dev问题；BIG-bench Movie Recommendation500题；作者构造ParallelQA113题，限定Wikipedia首段足够回答；Game of24用100个数值实例，按表达式是否合法得到24评分。前两者是基准问答，ParallelQA是设计任务，24点为合成算术；任务单位一次问答。指标准确率、墙钟时间和token/估计费用。
+**数据集与规模**：
 
-**具体use case：输入目标 → 使用前 → 使用后。** 图3原文例子：“Stanford和UCLA诺奖数相加是否超过UC Berkeley？”使用前ReAct逐次查3个学校再算；使用后3次查找并行，结果就绪后做加法和比较。这里依赖图可预知，只是数字待绑定；§5.3的24点则根据候选评估结果继续重规划，不能把系统局限为前一种。
+| 工作负载 | 规模 | 调用模式 | 工具 | 来源 |
+|---|---|---|---|---|
+| HotpotQA comparison（dev） | 约 1.5K 题 | 2 路完全并行 | Wikipedia search（去掉 lookup） | §5.1，p.5 |
+| HotpotQA bridge | 未给题数 | 顺序依赖，需重规划 | 同上 | 附录 E.3，p.18 |
+| Movie Recommendation（BIG-bench） | 500 题 | 8 路完全并行 | search | §5.1，p.5 |
+| ParallelQA（作者构建） | 113 题，56 个实体 | 2–5 路并行 + 多次 join | search + math（LLM 驱动的 numexpr） | §5.2、附录 I |
+| Game of 24 | 100 个实例 | 每轮重规划 | thought proposer、state evaluator、top-k select | §5.3，p.8 |
+| WebShop | 500 条指令（LATS 为 50 条） | 并行探索商品 | search、explore | §5.4、表 3 |
 
-**Baseline与比较条件。** 比较ReAct、修复重复调用/提前结束提示的ReAct†、OpenAI Parallel Function Calling；24点比较Tree-of-Thoughts。相同任务采用相同工具；主HotpotQA排除了lookup，仅测comparison；附录补bridge。表1原版ReAct部分延迟未报告，因此加速基准应指ReAct†而非随意用原版。
+**任务单位**：一次问答（或一次购物指令）是一个任务；准确率按 3 次运行取平均（附录 D）。
 
-**证据边界。** ParallelQA通过筛题排除检索失败，所以能证明依赖调度而不能证明大环境证据发现。没有跨独立任务证据复用实验。
+**模型与设置**（附录 D，pp.15–16）：HotpotQA/Movie 用 gpt-3.5-turbo-1106；ParallelQA 用 gpt-4-turbo-1106；24 点用 gpt-4-0613；开源模型为 LLaMA-2 70B（2×A100-80GB，vLLM）。温度为 0（24 点的 proposer/evaluator 为 0.7）。少样本数：HotpotQA 3、Movie 1、ParallelQA 5，各方法用相同示例。
 
-来源：[阅读版本](https://www.stat.berkeley.edu/~mmahoney/pubs/icml2024_kim24y.pdf)，§5.1–5.3、图3、表1–2、附录A/B/C/I/K。本文为原文工作负载分析，未复现实验。
+阅读者分析：这些都是基准题或作者构造的题，不是生产流量；单题工具调用数很少（2–10 次左右），并行度上限由题目本身决定。
+
+依据：§5.1–5.4、表 3，PDF pp.5–9；附录 D、E.3、I，pp.15–18、21。

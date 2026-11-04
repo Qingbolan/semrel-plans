@@ -1,0 +1,72 @@
+{
+ "id": "swb_2f43cf3ce591807b",
+ "url": "https://arxiv.org/abs/2204.04263",
+ "title": "BioRED: A Rich Biomedical Relation Extraction Dataset",
+ "version": "arXiv:2204.04263v2，23 页（正文 pp.1–16，补充材料 pp.17–23）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2204.04263v2",
+ "retrieved_at": "2026-11-04T05:40:45.906343+00:00",
+ "fulltext": "research/paper-completion/papers/swb_2f43cf3ce591807b.pdf",
+ "sha256": "e350d577fa8deb3718be7c7e700f5e31b07bd4e00e7bc5c0fb3f91fa5a143ae7",
+ "format": "pdf",
+ "pages": 23,
+ "note_directory": "research/paper-completion/notes/swb_2f43cf3ce591807b",
+ "note": "research/paper-completion/notes/swb_2f43cf3ce591807b/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2（Table 1–3），PDF pp.1–6",
+  "method": "§3.1–3.4（Table 4），PDF pp.6–9；补充 A.1，p.17",
+  "evaluation": "§4.1–4.4（Table 5–7），PDF pp.9–12；补充 A.2–A.4（Table S3–S5），pp.18–19",
+  "limitations": "§4.4 错误分析、§5 末段，PDF pp.12–13"
+ },
+ "evidence": [
+  {
+   "id": "swb_2f43cf3ce591807b:E01",
+   "claim": "现有生物医学 RE 语料多只标一种关系且限于单句，也没有区分新发现与背景知识的标注。",
+   "locator": "§1、§2.2，PDF pp.1–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2f43cf3ce591807b:E02",
+   "claim": "BioRED 含 600 篇 PubMed 摘要（训练/开发/测试 400/100/100），20,419 个实体提及（3,869 个唯一 ID）、6,503 条关系，其中新发现关系 4,532 条（69%）；实体、关系、新颖性 IAA 分别为 97.01%、77.91%、85.01%。",
+   "locator": "§3.3、Table 4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2f43cf3ce591807b:E03",
+   "claim": "每篇由三名标注者标注、分歧由资深标注者复核；每条关系的新颖性由两位生物学家判定；关系除 BC5CDR 已有的化学物致病关系外均从零人工标注。",
+   "locator": "§3.2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2f43cf3ce591807b:E04",
+   "claim": "NER 测试集 PubMedBERT-CRF 严格 F1 89.3%、宽松 93.5%；RE（给定金标准实体）PubMedBERT 实体对 72.9%、+关系类型 58.9%、+新颖性 47.7%。",
+   "locator": "Table 5–6，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2f43cf3ce591807b:E05",
+   "claim": "联合训练使细胞系 NER F1 由 75.5 升至 90.5、<G,G> 由 66.8 升至 78.1，但疾病实体与 <C,D> 关系单独训练更高（84.4、81.5），联合训练并非全面占优。",
+   "locator": "Table 7，PDF p.11",
+   "basis": "inference",
+   "basis_note": "数字来自原文 Table 7；“并非全面占优”是阅读者对表格的归纳。"
+  },
+  {
+   "id": "swb_2f43cf3ce591807b:E06",
+   "claim": "§3.3 称每篇平均 3.8 个唯一实体 ID，而全语料 3,869 个唯一 ID 意味着每篇平均至少约 6.4 个，二者不一致。",
+   "locator": "§3.3、Table 4，PDF p.8",
+   "basis": "inference",
+   "basis_note": "两个数字均来自原文；不一致性由阅读者计算得出。"
+  },
+  {
+   "id": "swb_2f43cf3ce591807b:E07",
+   "claim": "局限：只有 600 篇摘要，稀少关系类型（如变异-变异）不足；只用摘要而非全文。",
+   "locator": "§5，PDF pp.12–13",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

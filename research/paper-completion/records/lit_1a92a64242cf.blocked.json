@@ -1,0 +1,13 @@
+{
+ "id": "lit_1a92a64242cf",
+ "title": "AgentTune: An Agent-Based Large Language Model Framework for Database Knob Tuning",
+ "url": "https://doi.org/10.1145/3769758",
+ "attempts": [
+  {"url": "https://dl.acm.org/doi/pdf/10.1145/3769758", "result": "HTTP 200 but Cloudflare 'Just a moment...' challenge HTML, not a PDF"},
+  {"url": "http://export.arxiv.org/api/query?search_query=ti:AgentTune", "result": "no arXiv preprint found"},
+  {"url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3769758", "result": "only OA location is the same ACM DL PDF (bronze)"},
+  {"url": "https://api.unpaywall.org/v2/10.1145/3769758", "result": "no OA locations listed"},
+  {"url": "https://api.openalex.org/works/doi:10.1145/3769758", "result": "only ACM DL PDF; any_repository_has_fulltext=false"}
+ ],
+ "reason": "Full text is only hosted on ACM DL behind a Cloudflare bot challenge; no preprint or repository copy found. Not circumventing the challenge."
+}

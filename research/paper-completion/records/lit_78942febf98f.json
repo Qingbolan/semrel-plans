@@ -1,0 +1,66 @@
+{
+ "id": "lit_78942febf98f",
+ "url": "https://aclanthology.org/2023.emnlp-main.574/",
+ "title": "Jiang et al. — StructGPT: A General Framework for Large Language Model to Reason over Structured Data",
+ "version": "EMNLP 2023 正式版（ACL Anthology 2023.emnlp-main.574，pp.9237–9251），15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2023.emnlp-main.574.pdf",
+ "retrieved_at": "2026-11-04T05:33:52.212480+00:00",
+ "fulltext": "research/paper-completion/papers/lit_78942febf98f.pdf",
+ "sha256": "4817776e3866356b02d17dc26ef6d84f9dec8a207f027b4d86e4b3faebe806e6",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "research/paper-completion/notes/lit_78942febf98f",
+ "note": "research/paper-completion/notes/lit_78942febf98f/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–3",
+  "method": "§4.1–4.4、Figure 1，PDF pp.3–6",
+  "evaluation": "§5、Tables 1–3、Figures 2–3，PDF pp.6–9；附录 A Table 4，PDF p.14",
+  "limitations": "§7 Limitations，PDF p.10；§5.4 错误分析，PDF pp.8–9"
+ },
+ "evidence": [
+  {
+   "id": "lit_78942febf98f:E01",
+   "claim": "KG、表格、数据库分别提供 2、3、2 个读取接口（如 Extract_Neighbor_Relations、Extract_SubTable、Extract_Tables_Information），LLM 按调用接口-线性化-生成的流程迭代。",
+   "locator": "§4.2–4.3、Figure 1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_78942febf98f:E02",
+   "claim": "评测 8 个数据集：WebQSP、MetaQA 1/2/3 跳、WikiSQL、WTQ、TabFact、Spider/Spider-SYN/Spider-Realistic；Spider 评测集为 20 个库 1,034 条。",
+   "locator": "§5.1，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_78942febf98f:E03",
+   "claim": "零样本 ChatGPT 加 IRR 后，WebQSP Hits@1 从 61.2 到 72.6，TabFact 从 82.9 到 87.1，Spider 执行准确率从 70.1 到 74.8。",
+   "locator": "§1、Tables 1–3，PDF pp.2、7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_78942febf98f:E04",
+   "claim": "Davinci-003 加 IRR 后 TabFact 准确率从 80.7 降至 76.5；全监督 RESDSQL-3B+NatSQL 的 Spider 为 84.1，高于所有 LLM 设置。",
+   "locator": "Tables 2–3，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_78942febf98f:E05",
+   "claim": "错误分析中 WebQSP 有 74% 是选择错误，Spider 有 62% 是推理错误；正文称所选数据集为 WTQ，图中却标注 WikiSQL。",
+   "locator": "§5.4、Figure 3，PDF pp.8–9",
+   "basis": "inference",
+   "basis_note": "比例来自正文；数据集名称不一致是阅读者对照图文后发现的。"
+  },
+  {
+   "id": "lit_78942febf98f:E06",
+   "claim": "数据库接口只返回表名、列名和外键，不读取单元格值；框架是按任务固定的接口调用顺序，LLM 只在每一步做选择。",
+   "locator": "§4.2、§4.4，PDF pp.5–6",
+   "basis": "inference",
+   "basis_note": "由阅读者根据接口定义和任务实例化描述归纳。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

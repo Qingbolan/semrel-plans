@@ -1,0 +1,77 @@
+{
+ "id": "lit_b3e90751b07d",
+ "url": "http://sites.computer.org/debull/A25mar/p3.pdf",
+ "title": "Freire, Fan, Feuer et al. — Large Language Models for Data Discovery and Integration: Challenges and Opportunities",
+ "version": "IEEE Data Engineering Bulletin，2025 年 3 月刊 p3.pdf，29 页（期刊页 3–31；页码定位均为 PDF 页）",
+ "status": "READ",
+ "core": false,
+ "source_url": "http://sites.computer.org/debull/A25mar/p3.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_b3e90751b07d.pdf",
+ "sha256": "3e407c88de0beb1d5d991060d128b061b4f39e525e6da46c27e21e030cfb4444",
+ "format": "pdf",
+ "pages": 29,
+ "note_directory": "research/paper-completion/notes/lit_b3e90751b07d",
+ "note": "research/paper-completion/notes/lit_b3e90751b07d/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–4",
+  "method": "§3–4、Tables 1–2，PDF pp.4–15",
+  "evaluation": "无实验；§4 局限段与 §5.4，PDF pp.10–16",
+  "limitations": "§3.4，PDF p.7；§5，PDF pp.14–16"
+ },
+ "evidence": [
+  {
+   "id": "lit_b3e90751b07d:E01",
+   "claim": "数据集发现与集成共享理解表格模式与属性语义的难题，语义异构与歧义限制现有方法；LLM 可在不微调的情况下把模式和内容放到真实语义中理解。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E02",
+   "claim": "表搜索定义为给定文本查询 q 与表集合 C，输出按独立打分排序的表列表；按表查表包括可连接与可合并表搜索。",
+   "locator": "§3.1–3.2，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E03",
+   "claim": "可连接与可合并表搜索的近期方法基本基于嵌入，尚未有直接使用 LLM 的方法；LLM 在表搜索中主要用于生成训练数据、理解查询与生成数据集描述。",
+   "locator": "§3.1–3.2，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E04",
+   "claim": "发现方法的局限：难以理解数值列语义、多表传递连接复杂、大规模检索的扩展性、幻觉风险。",
+   "locator": "§3.4，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E05",
+   "claim": "LLM 模式匹配多只用列名与描述评测，常见场景为匹配 OMOP CDM；方法间少有比较，Table-GPT 的模式匹配结果因'完美'而无法下结论。",
+   "locator": "§4.1，PDF pp.9–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E06",
+   "claim": "Peeters 等的研究显示实体匹配中无单一模型或提示始终最优，传统监督方法有时更好；GPT-4 对提示较稳定，较小模型更敏感。",
+   "locator": "§4.2，PDF pp.12–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E07",
+   "claim": "研究方向包括元数据丰富、跨任务复用、LLM 与草图/索引混合、可解释发现、实例数据处理、间接改进分块、提示优化、成本比较框架与细粒度评测。",
+   "locator": "§5，PDF pp.14–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b3e90751b07d:E08",
+   "claim": "全文无自己的实验与数据集规模信息，Table 1 只有 7 篇 LLM 发现方法，说明成文时 LLM 用于数据集发现仍较少。",
+   "locator": "Table 1，PDF p.8",
+   "basis": "inference",
+   "basis_note": "Table 1 行数为原文；'仍较少'及无实验的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

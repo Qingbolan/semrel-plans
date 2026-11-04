@@ -1,0 +1,14 @@
+{
+ "id": "swb_6cee056ba74ca704",
+ "title": "Expression of vascular endothelial growth factor (VEGF) and its soluble receptor-1 in endometriosis (Cho et al., Microvasc Res 2012;83(2), PMID 22230112, DOI 10.1016/j.mvr.2011.12.004)",
+ "url": "https://pubmed.ncbi.nlm.nih.gov/22230112",
+ "attempts": [
+  {"url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=22230112", "result": "metadata only; no PMC id (not deposited in PMC)"},
+  {"url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:22230112", "result": "isOpenAccess=N, hasPDF=N, availability 'Subscription required'"},
+  {"url": "https://doi.org/10.1016/j.mvr.2011.12.004", "result": "redirect to Elsevier landing page, no full text"},
+  {"url": "https://www.sciencedirect.com/science/article/pii/S0026286211002317", "result": "HTTP 403"},
+  {"url": "https://www.sciencedirect.com/science/article/pii/S0026286211002317/pdfft", "result": "HTTP 403"},
+  {"url": "https://api.unpaywall.org/v2/10.1016/j.mvr.2011.12.004", "result": "no OA location returned"}
+ ],
+ "reason": "Elsevier subscription-only article (Microvascular Research); no open-access copy in PMC/Europe PMC; only the PubMed abstract is available, which is not full text."
+}

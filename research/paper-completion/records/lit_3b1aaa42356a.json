@@ -1,0 +1,65 @@
+{
+ "id": "lit_3b1aaa42356a",
+ "url": "https://arxiv.org/abs/2603.28889",
+ "title": "Li, Peng, Xie, Lu, Zhu, Mu, Liu, Luo — DeepEye: A Steerable Self-driving Data Agent System",
+ "version": "arXiv 2603.28889v1（2026-03-30），SIGMOD Companion ’26 演示论文，4 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2603.28889v1",
+ "retrieved_at": "2026-11-04T05:02:21.471704+00:00",
+ "fulltext": "research/paper-completion/papers/lit_3b1aaa42356a.pdf",
+ "sha256": "a05229d5394ad920f27bc6816abaa49030a15ca56e32a6ff8cc4fbd30acf420c",
+ "format": "pdf",
+ "pages": 4,
+ "note_directory": "research/paper-completion/notes/lit_3b1aaa42356a",
+ "note": "research/paper-completion/notes/lit_3b1aaa42356a/README.md",
+ "read_sections": {
+  "problem": "§1（Prior Art & Limitations、Challenges C1–C3），PDF pp.1–2",
+  "method": "§2.1–2.4、Fig.1，PDF pp.2–4",
+  "evaluation": "§3 演示场景 1–2、Fig.2，PDF pp.3–4（无定量评测）",
+  "limitations": "无独立章节；阅读者依据全文推断"
+ },
+ "evidence": [
+  {
+   "id": "lit_3b1aaa42356a:E01",
+   "claim": "作者提出三项挑战：结构化与非结构化数据之间的异构鸿沟、单智能体全局上下文导致的上下文爆炸、LLM 黑盒顺序执行带来的不可靠与低效。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3b1aaa42356a:E02",
+   "claim": "节点被定义为五元组 ⟨D, I, O, C, Φ⟩；ToolNode 为确定性幂等算子，AgentNode 为使用私有上下文窗口的 LLM 子智能体，全局规划器只感知节点 I/O 接口（上下文隔离）。",
+   "locator": "§2.1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3b1aaa42356a:E03",
+   "claim": "规划器使用短期工作记忆与长期向量知识库（schema 元数据、领域文档、SOP 经验），执行失败时根据错误轨迹重新规划，成功工作流自动归档。",
+   "locator": "§2.2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3b1aaa42356a:E04",
+   "claim": "工作流引擎分编译、校验（DFS 环检测、端口类型兼容、凭据完整性）、优化（Kahn 算法分层并行）、执行（Celery/Redis，瞬时失败重试）四阶段。",
+   "locator": "§2.3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3b1aaa42356a:E05",
+   "claim": "演示任务为“全球销售业绩分析”：用户以 @ 绑定销售数据库与指标文档，系统并行执行知识检索与数据读取节点，生成数据视频、仪表盘和报告；并展示 SQL 节点检查与 Schema Mismatch 校验。",
+   "locator": "§3，Fig.2，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3b1aaa42356a:E06",
+   "claim": "论文没有任何定量评测（无基线、无准确率、延迟或用户研究），三项设计的效果均未经实验验证，也没有局限性章节。",
+   "locator": "全文，PDF pp.1–4",
+   "basis": "inference",
+   "basis_note": "阅读者通读全文后的判断。"
+  }
+ ],
+ "batch": "r02",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,11 @@
+{
+ "id": "swb_9b22866412d6b018",
+ "title": "Automatic knowledge extraction from industrial maintenance short text using deep learning",
+ "url": "https://research-repository.uwa.edu.au/en/publications/automatic-knowledge-extraction-from-industrial-maintenance-short-",
+ "attempts": [
+  {"url": "https://research-repository.uwa.edu.au/en/publications/automatic-knowledge-extraction-from-industrial-maintenance-short-", "result": "HTTP 200 repository landing page (PhD thesis record, Tyler Ken Bikaun, UWA 2024, DOI 10.26182/hhg8-ra38); links a thesis PDF"},
+  {"url": "https://research-repository.uwa.edu.au/files/518010782/THESIS_-_DOCTOR_OF_PHILOSOPHY_-_BIKAUN_Tyler_Ken_-_2024.pdf", "result": "returned an HTML page instead of a PDF (repository bot-check/interstitial); not saved"},
+  {"url": "https://doi.org/10.26182/hhg8-ra38", "result": "redirects to the same landing page; no alternative full-text host"}
+ ],
+ "reason": "Item is a 2024 UWA PhD thesis; the repository PDF link served an HTML interstitial rather than the PDF to a scripted download, and circumventing the bot check was not permitted. Only the landing page/abstract was available."
+}

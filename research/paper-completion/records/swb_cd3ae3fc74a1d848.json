@@ -1,0 +1,71 @@
+{
+ "id": "swb_cd3ae3fc74a1d848",
+ "url": "https://aclanthology.org/W18-4925",
+ "title": "Edition 1.1 of the PARSEME Shared Task on Automatic Identification of Verbal Multiword Expressions",
+ "version": "LAW-MWE-CxG-2018 论文集 pages 222–240，ACL Anthology W18-4925 PDF，19 页（含附录）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/W18-4925.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_cd3ae3fc74a1d848.pdf",
+ "sha256": "554fc7c5ef8366d3ba0b6a0220e29830839cd628530f8bc3b4834866768aa064",
+ "format": "pdf",
+ "pages": 19,
+ "note_directory": "research/paper-completion/notes/swb_cd3ae3fc74a1d848",
+ "note": "research/paper-completion/notes/swb_cd3ae3fc74a1d848/README.md",
+ "read_sections": {
+  "problem": "§1–3.1，PDF pp.1–3",
+  "method": "§3.2–5、Fig.1–2，PDF pp.3–8",
+  "evaluation": "§6–7、附录 B Tables 2–12，PDF pp.8–10、14–19；Table 2 已渲染核对",
+  "limitations": "§4.2、§7–8，PDF pp.6–7、9–10"
+ },
+ "evidence": [
+  {
+   "id": "swb_cd3ae3fc74a1d848:E01",
+   "claim": "1.1 版重新设计 VMWE 类别（LVC.full/LVC.cause、VID、IRV、VPC.full/semi、MVC、LS.ICV、实验类 IAV），并用统一判定树合并识别与分类。",
+   "locator": "§3.2–3.3、Fig.1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_cd3ae3fc74a1d848:E02",
+   "claim": "数据为 20 种语言、280,838 句、6,072,331 token、79,326 个 VMWE，以 cupt 格式（conllu 10 列加 PARSEME:MWE 列）发布。",
+   "locator": "§4、§4.1、Table 2，PDF pp.5–6、15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_cd3ae3fc74a1d848:E03",
+   "claim": "多数语料未双标；双标样本 κspan 从西班牙语 0.227 到土耳其语 0.984，宏平均 0.691，κcat 宏平均 0.836。",
+   "locator": "§4.2、Table 1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_cd3ae3fc74a1d848:E04",
+   "claim": "按语料 VMWE 规模分四档划分 train/dev/test，各划分子语料来源比例一致；closed 赛道只能用提供的 train/dev。",
+   "locator": "§5，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_cd3ae3fc74a1d848:E05",
+   "claim": "12 队提交 17 个系统；closed 最佳 TRAVERSAL 宏平均 F1-MWE 54，open 最佳 SHOMA 58.09；19 种语言等权，缺失预测记为 P=R=0。",
+   "locator": "§6–7、Table 3，PDF pp.8–9、16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_cd3ae3fc74a1d848:E06",
+   "claim": "全语言系统在见过与未见 VMWE 之间相差 45–56 个 F1 点（平均 50）；TRAVERSAL 未见子集 F1 为 17.35。",
+   "locator": "§7、Tables 8–9，PDF pp.9、17–18",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_cd3ae3fc74a1d848:E07",
+   "claim": "Table 2 各语言 Total 行的 IRV 列为逐语言累加值（如 DE-Total 3548，实际 308），渲染 p.14 确认原表即如此。",
+   "locator": "附录 B Table 2，PDF pp.14–15",
+   "basis": "inference",
+   "basis_note": "数值来自原表；判断其为累加错误是阅读者对各行求和后得出的。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

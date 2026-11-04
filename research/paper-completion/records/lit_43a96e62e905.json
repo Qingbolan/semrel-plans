@@ -1,0 +1,71 @@
+{
+ "id": "lit_43a96e62e905",
+ "url": "https://arxiv.org/abs/2305.06983",
+ "title": "Jiang et al. — Active Retrieval Augmented Generation",
+ "version": "arXiv:2305.06983v2（2023-10-22），24 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2305.06983",
+ "retrieved_at": "2026-11-04T05:32:40.545190+00:00",
+ "fulltext": "research/paper-completion/papers/lit_43a96e62e905.pdf",
+ "sha256": "2425bd04de6e082512ef576298ec24df770a7f576bb2c23d09b3fd498f716c52",
+ "format": "pdf",
+ "pages": 24,
+ "note_directory": "research/paper-completion/notes/lit_43a96e62e905",
+ "note": "research/paper-completion/notes/lit_43a96e62e905/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–3",
+  "method": "§3、附录 A，PDF pp.3–5、14",
+  "evaluation": "§4–6、Tables 1–6、Figures 4–5，PDF pp.5–9；附录 B–C、Tables 7–9，PDF pp.14–16",
+  "limitations": "§9 Limitations，PDF p.9；附录 A Efficiency，PDF p.14"
+ },
+ "evidence": [
+  {
+   "id": "lit_43a96e62e905:E01",
+   "claim": "单次检索适合信息需求在输入中已明确的短答 QA；长文本生成需要在生成过程中持续获取信息，而固定间隔、用前文检索的方法不一定反映将要生成的内容。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43a96e62e905:E02",
+   "claim": "FLARE-direct 先不带检索生成临时下一句；若有 token 概率低于 θ，则用遮盖低于 β 的 token 的句子或针对低置信片段生成的问题作查询，检索后重生成该句。",
+   "locator": "§3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43a96e62e905:E03",
+   "claim": "评测样本：2WikiMultihopQA 500、StrategyQA 229、ASQA 500、WikiAsp 500；前三者用 Wikipedia+BM25，WikiAsp 用 Bing 并排除 Wikipedia 相关域名。",
+   "locator": "§5、Tables 7–8，PDF pp.6、16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43a96e62e905:E04",
+   "claim": "2WikiMultihopQA 上 EM：不检索 28.2、单次检索 39.4、问题分解 47.8、FLARE-direct 51.0；StrategyQA 上 FLARE 77.3，单次检索 68.6 低于不检索 72.9。",
+   "locator": "Tables 1–2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43a96e62e905:E05",
+   "claim": "每句都检索时，以下一句作查询在 2Wiki 上 EM 48.8，以上一句为 39.0；检索约 40%–80% 的句子通常效果较好。",
+   "locator": "Table 3、Figure 5，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43a96e62e905:E06",
+   "claim": "多次检索基线为作者重实现而非原论文精确复现，各数据集 θ、β、查询方式不同且在开发集上选择，评测至多 500 条，部分增益可能对超参敏感。",
+   "locator": "§4–5、Table 9，PDF pp.5–6、16",
+   "basis": "inference",
+   "basis_note": "重实现与超参事实来自原文；敏感性判断为阅读者分析。"
+  },
+  {
+   "id": "lit_43a96e62e905:E07",
+   "claim": "作者报告在 Wizard of Wikipedia 和 ELI5 上无显著收益，朴素实现交替检索与生成会增加开销。",
+   "locator": "§9，PDF p.9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

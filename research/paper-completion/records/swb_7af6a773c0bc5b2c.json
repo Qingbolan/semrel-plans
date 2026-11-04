@@ -1,0 +1,65 @@
+{
+ "id": "swb_7af6a773c0bc5b2c",
+ "url": "https://doi.org/10.1186/1471-2105-12-393",
+ "title": "Thompson et al. — Enriching a biomedical event corpus with meta-knowledge annotation",
+ "version": "BMC Bioinformatics 12:393（2011），PMC3222636 开放获取全文 JATS XML（Europe PMC REST），无页码",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3222636/fullTextXML",
+ "retrieved_at": "2026-11-04T04:49:59+00:00",
+ "fulltext": "research/paper-completion/papers/swb_7af6a773c0bc5b2c.xml",
+ "sha256": "f88c80e99ab8ffb50b538fbb8bbde24aaa453b84393fb376cf33cd61615a47b5",
+ "format": "xml",
+ "pages": null,
+ "note_directory": "research/paper-completion/notes/swb_7af6a773c0bc5b2c",
+ "note": "research/paper-completion/notes/swb_7af6a773c0bc5b2c/README.md",
+ "read_sections": {
+  "problem": "Abstract、Background（Event-based text mining、Event interpretation and the role of meta-knowledge）",
+  "method": "Methods：Meta-knowledge annotation scheme（KT、CL、Polarity、Manner、Source、Hyper-Dimensions，Tables 1–2）、Testing、Annotators and training",
+  "evaluation": "Results and Discussion：分布 Tables 3–15、Inter-annotator agreement Table 16",
+  "limitations": "Annotation discrepancies、Conclusion"
+ },
+ "evidence": [
+  {
+   "id": "swb_7af6a773c0bc5b2c:E01",
+   "claim": "典型事件标注不记录上下文元知识，类型和参与者相同的事件可能是事实、调查、否定、推测或他人研究（narL 例 2a–2f）；已有语料多在句子级、单一维度上标注，事件级通常只有否定。",
+   "locator": "Background、Related work",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7af6a773c0bc5b2c:E02",
+   "claim": "方案为每个事件标注 KT（6 值）、CL（L1–L3）、Polarity、Manner（3 值）、Source（2 值）五个维度，并标注线索词；New Knowledge 和 Hypothesis 两个超维度按 Table 1/2 规则推导。",
+   "locator": "Methods，Tables 1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7af6a773c0bc5b2c:E03",
+   "claim": "方案应用于 GENIA 事件语料：1,000 篇摘要、36,858 个事件，由 2 名外部标注者（生物学家和语言学家）完成；标注指南 66 页。",
+   "locator": "Abstract、Methods（Annotators and training）、Conclusion",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7af6a773c0bc5b2c:E04",
+   "claim": "分布高度偏斜：KT 中 Observation 占 34.7%、Method 占 2.6%；CL=L3 占 91.9%；Negative 占 6.1%；Source=Other 占 1.5%；New Knowledge=Yes 占 43.4%，Hypothesis=Yes 占 13.4%。",
+   "locator": "Results，Tables 3、5、7、10、13、15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7af6a773c0bc5b2c:E05",
+   "claim": "在 104 篇（10%）双标注摘要上，Kappa 为：Polarity 0.929、Source 0.878、CL 0.864、Manner 0.864、KT 0.843；最大的分歧在 Observation 与 Fact 之间。",
+   "locator": "Results：Inter-annotator agreement，Table 16；Annotation discrepancies",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7af6a773c0bc5b2c:E06",
+   "claim": "本文没有自动系统基线，元知识识别模型是未来工作；只覆盖摘要；稀有类别上的一致性未单独报告。图谱查询'KT、CL、极性、方式与来源'对应本文五个维度。",
+   "locator": "Conclusion、Table 16",
+   "basis": "inference",
+   "basis_note": "未来工作和摘要范围为原文所述；稀有类别风险及与图谱查询的对应为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

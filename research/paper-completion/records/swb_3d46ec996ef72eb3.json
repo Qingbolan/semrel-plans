@@ -1,0 +1,77 @@
+{
+ "id": "swb_3d46ec996ef72eb3",
+ "url": "https://aclanthology.org/2024.tacl-1.34",
+ "title": "The Thai Discourse Treebank: Annotating and Classifying Thai Discourse Connectives",
+ "version": "TACL 第 12 卷，pp.613–629（2024），ACL Anthology 2024.tacl-1.34 正式版 PDF，17 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.tacl-1.34.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_3d46ec996ef72eb3.pdf",
+ "sha256": "8d4bad45ff26b66eda701b7f115ee9de8480df509b7676021c64dbe597741ac7",
+ "format": "pdf",
+ "pages": 17,
+ "note_directory": "research/paper-completion/notes/swb_3d46ec996ef72eb3",
+ "note": "research/paper-completion/notes/swb_3d46ec996ef72eb3/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–§2，PDF pp.1–3",
+  "method": "§3、§4.1，PDF pp.3–8",
+  "evaluation": "§4.1 Tables 1–3、§5 Tables 4–8、§6 Tables 9–10，PDF pp.6–13",
+  "limitations": "§4.2、§6、§7，PDF pp.7–8、12–13"
+ },
+ "evidence": [
+  {
+   "id": "swb_3d46ec996ef72eb3:E01",
+   "claim": "泰语此前没有篇章语料；泰语形态少、无标点标出小句/句边界，加上连接词多义和兼类，词典规则不足以标注显式连接词。",
+   "locator": "§1、§2.1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E02",
+   "claim": "语料基于 LST20 新闻，共 384 篇文档、10,602 句、18,374 个显式连接词实例、33 种义项；其中 180 篇有完整 Arg1/Arg2 论元标注。",
+   "locator": "§1、§4.1，PDF pp.1–2、6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E03",
+   "claim": "沿用 PDTB-3 义项体系，仅新增 EXPANSION.GENEXPANSION；同时发布 148 个连接词、340 个形式–义项对的清单。",
+   "locator": "摘要、§1、§3.3，PDF pp.1–2、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E04",
+   "claim": "双人标注的连接词状态 κ 为 0.77–0.91、义项 κ 为 0.76–0.87，论元 Jaccard 为 0.63–0.72；之后全量标注不再双标。",
+   "locator": "§4.1、Tables 2–3，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E05",
+   "claim": "数据按 80:10:10 随机划分；分别训练 L1（5 类）、L2（20 类）和叶级（35 类）模型，并额外设一个非连接词类，指标为去掉非连接词类后的宏 F1。",
+   "locator": "§5.1–§5.2，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E06",
+   "claim": "原始 token 条件下，WangchanBERTa 单句的识别 F1=0.956，叶级义项宏 F1=0.460；最佳 CRF 为 0.868/0.418，词典为 0.718/0.302。金标准连接词条件下，MaxEnt POS+Word 的 L2 为 0.723，高于 PLM 的 0.636。",
+   "locator": "Table 4，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E07",
+   "claim": "115 个错误中，相近义项 32 个、并列 26 个、其他多功能语法用法 22 个；模型错误与人工分歧模式一致。",
+   "locator": "§6、Tables 9–10，PDF pp.12–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d46ec996ef72eb3:E08",
+   "claim": "摘要称 33 种关系，叶级模型为 35 类，原文未解释两者差异；随机划分的单位（文档或句子）也未说明。",
+   "locator": "摘要、§5.1，PDF pp.1、9",
+   "basis": "inference",
+   "basis_note": "两处数字均来自原文；“差异未解释、划分单位未说明”是阅读者对全文的核对结论。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

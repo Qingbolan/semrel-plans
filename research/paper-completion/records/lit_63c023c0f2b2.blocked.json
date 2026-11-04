@@ -1,0 +1,12 @@
+{
+ "id": "lit_63c023c0f2b2",
+ "title": "Large Language Models for Data Science: A Survey",
+ "url": "https://www.researchgate.net/publication/392594876_Large_Language_Models_for_Data_Science_A_Survey",
+ "attempts": [
+  {"url": "https://www.researchgate.net/publication/392594876_Large_Language_Models_for_Data_Science_A_Survey", "result": "HTTP 403 (ResearchGate blocks non-browser access); not circumvented"},
+  {"url": "https://export.arxiv.org/api/query?search_query=ti:\"Language Models for Data Science\"", "result": "no arXiv entry with this exact title (only LLM4DS 2411.11908, 'LLM-based Data Science Agent: A Survey' 2508.02744, 2408.15658 — different papers)"},
+  {"url": "https://api.openalex.org/works?filter=title.search:\"Large Language Models for Data Science\"", "result": "no work with this exact title; closest are different papers (e.g. Sun et al. 'A Survey on LLM-based Agents for Statistics and Data Science', 10.1080/00031305.2025.2561140)"},
+  {"url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Large+Language+Models+for+Data+Science+A+Survey", "result": "HTTP 429 Too Many Requests"}
+ ],
+ "reason": "Only a ResearchGate landing page (403 to scripted access) is known; authors/DOI unknown and no open repository copy with the exact title was found. Did not substitute a similarly titled survey."
+}

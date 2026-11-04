@@ -1,0 +1,65 @@
+{
+ "id": "swb_7ad02a7082a23a7b",
+ "url": "https://aclanthology.org/2020.fnp-1.36",
+ "title": "Jacobs & Hoste — Extracting Fine-Grained Economic Events from Business News",
+ "version": "FNP-FNS 2020 workshop（COLING 2020），pp.235–245（ACL Anthology 2020.fnp-1.36），11 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2020.fnp-1.36.pdf",
+ "retrieved_at": "2026-11-04T05:40:00+00:00",
+ "fulltext": "research/paper-completion/papers/swb_7ad02a7082a23a7b.pdf",
+ "sha256": "aad9d2435e44c9ea749b0fe04cd876e3300ab9b4d5f0e6c403de3b94f0a4ffd1",
+ "format": "pdf",
+ "pages": 11,
+ "note_directory": "research/paper-completion/notes/swb_7ad02a7082a23a7b",
+ "note": "research/paper-completion/notes/swb_7ad02a7082a23a7b/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3–4，PDF pp.2–6",
+  "evaluation": "§5、Tables 2–5，PDF pp.6–8",
+  "limitations": "§5 误差分析、§7，PDF pp.6–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_7ad02a7082a23a7b:E01",
+   "claim": "SENTiVENT 含 288 篇英文公司新闻（30 家 S&P 500 公司，2016-06 至 2017-05），18 个主类型、42 个子类型、48 种论元角色；划分为训练 228/开发 30/测试 30 篇，共 6,203 个事件、13,675 个论元。",
+   "locator": "§3、Table 1，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7ad02a7082a23a7b:E02",
+   "claim": "SENTiVENT 中 42% 的触发词为多词、13% 既多词又不连续；为适配 DYGIE++，用依存分析把触发词压缩为单个名词/动词 token。",
+   "locator": "§3–4，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7ad02a7082a23a7b:E03",
+   "claim": "最佳配置 BERT-Large+LSTM（含 NER）在 SENTiVENT 上 Trig-ID/Trig-C/Arg-ID/Arg-C F1 为 52.71/42.46/39.49/38.01，ACE05 上为 76.22/72.76/62.01/56.33。",
+   "locator": "§5、Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7ad02a7082a23a7b:E04",
+   "claim": "FinBERT 无提升，微调降低性能，事件传播无益，去掉银标准 NER 特征降低性能（如 Arg-C 38.01→33.64）。",
+   "locator": "§5、Table 3，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7ad02a7082a23a7b:E05",
+   "claim": "人工复查一半测试文档：触发词错误中单 token 预处理占 34.1%、触发词歧义 20.1%、合理的多余预测 16.4%、专业语言 12.4%、词汇稀疏 9.1%。",
+   "locator": "§5、Table 5，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7ad02a7082a23a7b:E06",
+   "claim": "与 ACE05 的比较并非同条件（规模、事件密度、标注原则和触发词单位不同），且最佳配置的选择集合未说明、无方差报告；预处理为主因的结论未经多 token 模型对照验证。",
+   "locator": "§3–5、§7，PDF pp.4–8",
+   "basis": "inference",
+   "basis_note": "比较条件与选择方式来自原文；结论边界为阅读者分析。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

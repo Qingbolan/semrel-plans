@@ -1,0 +1,65 @@
+{
+ "id": "lit_2920b615b77f",
+ "url": "https://arxiv.org/abs/2310.17342",
+ "title": "Zhang et al. — ACT-SQL: In-Context Learning for Text-to-SQL with Automatically-Generated Chain-of-Thought",
+ "version": "arXiv:2310.17342v1（2023-10-26），32 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2310.17342",
+ "retrieved_at": "2026-11-04T05:32:40.545190+00:00",
+ "fulltext": "research/paper-completion/papers/lit_2920b615b77f.pdf",
+ "sha256": "88727b0fe6dd38fa6b9fe7d20cf4200f0b6a5efb999efe3a55133b10fb3021aa",
+ "format": "pdf",
+ "pages": 32,
+ "note_directory": "research/paper-completion/notes/lit_2920b615b77f",
+ "note": "research/paper-completion/notes/lit_2920b615b77f/README.md",
+ "read_sections": {
+  "problem": "§1、§3 开头公式，PDF pp.1–3",
+  "method": "§3.1–3.4、Figures 1–2，PDF pp.3–5",
+  "evaluation": "§4、Tables 1–10，PDF pp.5–9；附录 A Tables 11–12、附录 B Table 13，PDF p.12",
+  "limitations": "Limitations，PDF p.9；§4.4，PDF p.8"
+ },
+ "evidence": [
+  {
+   "id": "lit_2920b615b77f:E01",
+   "claim": "已有上下文学习 text-to-SQL 方法要么效果落后于微调模型，要么像 DIN-SQL 一样每条 SQL 需多次 API 调用；现有 CoT 需人工挑选和标注示例。",
+   "locator": "§1–2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2920b615b77f:E02",
+   "claim": "ACT-SQL 对 SQL 中每个列（忽略 GROUP BY 列）和剩余表，用相似度模型找问题中最相关的连续片段，按固定格式写入 CoT，再列出值和最终 SQL；相似度模型为 text2vec-base-chinese。",
+   "locator": "§3.3、§4.1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2920b615b77f:E03",
+   "claim": "Spider 含 200 个数据库、138 个领域，train 8,659、dev 1,034；test 未公开，所有实验在 dev 上进行；温度 0。",
+   "locator": "§4.1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2920b615b77f:E04",
+   "claim": "Spider dev：GPT-4 + ACT-SQL 为 EM 61.7、EX 82.9、TS 74.5，每条 SQL 1 次调用；GPT-4 + DIN-SQL 为 60.1/82.8/74.2，4 次调用；GPT-3.5-turbo + ACT-SQL 为 62.7/80.4/71.4。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2920b615b77f:E05",
+   "claim": "附录 Table 11 的 15 组 GPT-3.5 设置中，ACT-SQL 的 TS 有 5 组低于对应 few-shot；Spider-Realistic 上 TS 62.0→61.2，SParC 的 IM-TS 31.5→29.6。",
+   "locator": "Tables 7、8、11，PDF pp.8、12",
+   "basis": "inference",
+   "basis_note": "各数值来自原表；‘15 组中 5 组下降’为阅读者逐行比较所得。"
+  },
+  {
+   "id": "lit_2920b615b77f:E06",
+   "claim": "多轮扩展先用 LLM 改写问题以去除上下文依赖（每数据集人工标注 10 个改写示例），改写失败会影响 schema linking；作者承认示例数量需手工确定，且在鲁棒性变体和多轮数据集上效果较差。",
+   "locator": "§3.4、§4.4、Limitations，PDF pp.5、8–9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

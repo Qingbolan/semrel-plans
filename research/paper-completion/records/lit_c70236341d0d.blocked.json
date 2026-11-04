@@ -1,0 +1,13 @@
+{
+ "id": "lit_c70236341d0d",
+ "title": "Demystifying Artificial Intelligence for Data Preparation",
+ "url": "https://doi.org/10.1145/3555041.3589406",
+ "attempts": [
+  {"url": "https://dl.acm.org/doi/pdf/10.1145/3555041.3589406", "result": "HTTP 403, HTML bot-check page instead of PDF (two attempts)"},
+  {"url": "https://api.openalex.org/works/doi:10.1145/3555041.3589406", "result": "only OA location listed is the same ACM PDF URL (403)"},
+  {"url": "https://dbgroup.cs.tsinghua.edu.cn/ligl/publications.html", "result": "tutorial not listed with a PDF link"},
+  {"url": "https://luoyuyu.vip/ ; https://nantang.github.io/ ; https://chaicl.github.io/ ; https://faculty.ruc.edu.cn/fanju/", "result": "no PDF link for this tutorial found on author homepages"},
+  {"url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3555041.3589406", "result": "HTTP 429 rate limited"}
+ ],
+ "reason": "SIGMOD 2023 Companion tutorial abstract; the only full-text source (ACM DL) returns 403 to non-browser clients and no author/preprint copy was found. No analysis written."
+}

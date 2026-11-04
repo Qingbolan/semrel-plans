@@ -1,0 +1,68 @@
+{
+ "id": "src_c1beb3843ce6782e",
+ "url": "https://arxiv.org/abs/2606.31692v1",
+ "title": "Gasco et al. — Overview of the TalentCLEF 2026: Skill and Job Title Intelligence for Human Capital Management",
+ "version": "arXiv:2606.31692v1（2026-06-30），22 页（正文 17 页）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.31692v1",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "research/paper-completion/papers/src_c1beb3843ce6782e.pdf",
+ "sha256": "36e97ccb69bc1ca892604b2200226e6e3c3494597d5f5a1575dbe821ff6fc7fd",
+ "format": "pdf",
+ "pages": 22,
+ "note_directory": "research/paper-completion/notes/src_c1beb3843ce6782e",
+ "note": "research/paper-completion/notes/src_c1beb3843ce6782e/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–7",
+  "method": "§2.1–2.2 数据与评测设置，PDF pp.3–7；§3 参赛方法，Tables 3–4，pp.8–12",
+  "evaluation": "§4、Tables 5–8，PDF pp.12–16",
+  "limitations": "无专门局限节；§4.1 偏差评测解读（p.15）、§5（p.17）"
+ },
+ "evidence": [
+  {
+   "id": "src_c1beb3843ce6782e:E01",
+   "claim": "人力资本管理（HCM）中的大量信息以文本形式存在：职位广告、职位名称、个人简历、技能和职业分类体系等。NLP 可以支持招聘、职业指导、技能差距分析、内部流动和再培训。但已有研究的数据集、语言、任务定义、标注方案和评测协议各不相同，难以比较；而这类系统会影响招聘等真实决策，因此需要公开基准。本届在 2025 年首届的基础上扩展了两个任务：Task A 从单纯的职位名称匹配扩展为基于完整职位描述和简历的情境化匹配，理由是 LLM 可以纳入资历、技能证据、隐含技能等维度；Task B 从“为职位检索相关技能”扩展为同时区分核心技能与情境技能。",
+   "locator": "§1、§2.1–2.2，PDF pp.1–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "src_c1beb3843ce6782e:E02",
+   "claim": "Task A：输入为一份职位描述（查询）和一个简历库，输出为候选简历的排序列表。不提供训练数据，允许使用外部资源。评测分三种设置：单语（en-en、es-es）和跨语言（英文职位对西语简历）用 MAP；偏差设置构造只改动性别标记（姓名、带性别的职位名）的成对简历，用 Rank-Biased Overlap（RBO）比较两种变体下排序的一致性。Task B：输入为一个职位名称（英文）和技能库，输出为相关技能排序，并区分 core 与 contextual。分类并不单独计分，而是并入排序指标：binary NDCG 把两类技能都视为相关；graded NDCG 中 core=2、contextual=1，以 graded 为主指标。训练集取自 ESCO 各职业最具代表性的技能（标有 essential/optional），并过滤了技能数异常多的职业。",
+   "locator": "§2.1–2.2，Figures 1–2，PDF pp.3–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "src_c1beb3843ce6782e:E03",
+   "claim": "作为评测综述，本文的贡献是任务设定、数据与评测协议以及对参赛方法的总结，而不是新模型。具体包括：(1) 人工标注的合成岗位–简历语料，其生成依据从真实简历和职位描述中统计出的技能共现模式（来自组织方内部数据库），并人工审查以防数据泄漏；(2) 加入性别扰动下的排序稳健性评测；(3) 用分级相关度把技能类型编码进 NDCG；(4) 用 Codabench 维持赛后的持续评测。方法层面，Task A 的优胜系统以多阶段检索为主：稠密 + BM25 混合召回、交叉编码器或 LLM 列表式重排、秩融合，有的先用 LLM 把文档解析为结构化 JSON，或接入 ESCO 图；Task B 更依赖对比学习微调编码器，再配合 HyDE 查询扩展和 LLM 重排。 阅读者分析：Task B 的开发/测试查询与上届相同，只扩充修订了语料，而组织方提到参赛者复用了上届资源，因此存在一定的泄漏风险。数据生成与标注细节不在本文中，可审计性依赖另两篇任务综述。",
+   "locator": "§1、§2、§3、§5，Tables 3–4，PDF pp.2–12、17",
+   "basis": "inference",
+   "basis_note": "数据构造与方法总结为原文表述；关于泄漏风险和可审计性的评价为阅读者分析。"
+  },
+  {
+   "id": "src_c1beb3843ce6782e:E04",
+   "claim": "Task A（Table 1）：开发集英、西各 10 个查询，每种语言 472 份简历；测试集英、西各 40 个查询，每种语言 476 份简历。职位与简历均为合成文本，组织方称覆盖了多种行业、职业、背景、性别和族裔，并由专家人工标注匹配关系。Task B（Table 2）：开发集 304 个查询、9,052 个语料项，平均每个查询 185.6 个相关项；测试集 125 个查询、5,358 个语料项，平均 184.2 个相关项。训练集是 ESCO 职业–技能列表，正文未给出规模。两任务数据都发布在 Zenodo（脚注 5 与 7 给出的 DOI 相同，均为 10.5281/zenodo.17625261），评测在 Codabench 上进行。本文没有给出相关性标注的一致性统计。 与图谱查询的关系：本项目只有一条本地派生查询（TalentCLEF job 29243）关联本文。该编号不见于本文；论文提供的是排序任务，项目中的“过滤”计划属于派生，且尚未与发布包逐文件核对。",
+   "locator": "§2.1–2.2，Tables 1–2，PDF pp.4–7",
+   "basis": "inference",
+   "basis_note": "数据统计来自原文；DOI 重复的观察和与本项目查询的关系为阅读者核对。"
+  },
+  {
+   "id": "src_c1beb3843ce6782e:E05",
+   "claim": "Figure 1 给出的 Task A 示例：查询是 “Machine Learning Engineer” 职位描述，相关简历包括 P2（AI Engineer – MSc CS，技能 ML、Python）和 P13（DL Consultant – PhD AI，技能 DL、TensorFlow），系统要把它们排在前面。Figure 2 的 Task B 示例：同一职位名称应召回 Python（Core）、Data Processing（Core）、NLP Techniques（Contextual）。第二名 QTPride 的做法可以说明一种具体流程：先用 LLM 把职位描述和简历解析成结构化 JSON，再分别按全文、工作经历和 ESCO 知识图谱三种视图检索，最后用倒数秩融合合并。 阅读者分析：若在本项目中把匹配写成“语义抽取 + 语义连接/过滤”计划，须保留原任务的排序语义（MAP/NDCG）和语言设置，不能把二值过滤的结果与本文的排行榜直接对比。",
+   "locator": "§2.1–2.2、§4.1，Figures 1–2，PDF pp.4、6、13",
+   "basis": "inference",
+   "basis_note": "示例与方法来自原文；派生计划的注意事项为阅读者分析。"
+  },
+  {
+   "id": "src_c1beb3843ce6782e:E06",
+   "claim": "Task A 有 91 支队伍注册，21 支提交，共 384 次提交（含开发集），12 支提交工作笔记。单语 MAP（Table 5）：classum 平均 0.7140（en 0.7122、es 0.7157），QTPride 0.6632，bipboopbipboop 0.6532，组织方基线 0.3828。跨语言 MAP（Table 6）：classum 0.7044，bipboopbipboop 0.6438，基线 0.3562。RBO（Table 7）：classum 平均 0.9904，hr_gradient 0.9547，基线 0.7854，VerbaNex 最低为 0.6960。Task B 有 101 支注册，15 支提交，共 43 次提交；NDCG（Table 8）：classum graded 0.8068 / binary 0.8340，NightSun 0.7913/0.8246，bipboopbipboop 0.7793/0.8123，基线 0.6204/0.6634。 边界：作者明确指出，RBO 只反映排序在特定男/女变体扰动下的稳健性，不能证明整体公平性；排名靠前的系统也都没有专门的去偏模块。正文未说明基线的构成，也未做显著性检验。§5 称共有 29 支队伍提交，而 §3 两项任务的提交队伍分别为 21 和 15，二者应有重叠，正文未说明。阅读者分析：参赛系统同时改动了多个组件，排行榜差异不能归因于单一技术。",
+   "locator": "§3.1–3.2、§4.1–4.2、§5，Tables 5–8，PDF pp.8、11–17",
+   "basis": "inference",
+   "basis_note": "分数与参与统计来自原文；队伍数口径与归因限制为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

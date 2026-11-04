@@ -1,0 +1,77 @@
+{
+ "id": "lit_b63897eb21f8",
+ "url": "https://arxiv.org/abs/2405.04674",
+ "title": "Lin et al. — Towards Accurate and Efficient Document Analytics with Large Language Models",
+ "version": "arXiv:2405.04674v1（2024-05-07），16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2405.04674v1",
+ "retrieved_at": "2026-11-04T05:25:12+00:00",
+ "fulltext": "research/paper-completion/papers/lit_b63897eb21f8.pdf",
+ "sha256": "1ce0f88d4cea0d23257ef87034ea024047a938076c31a735dd98362017929c56",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/lit_b63897eb21f8",
+ "note": "research/paper-completion/notes/lit_b63897eb21f8/README.md",
+ "read_sections": {
+  "problem": "§1（Example 1.1、Figures 1–3）、§2，PDF pp.1–4",
+  "method": "§3 SHT 构建（Theorem 3.1、Algorithm 1）、§4 数据模型与查询语言、§5 表填充、§6 查询引擎（Algorithms 2–3），PDF pp.4–11",
+  "evaluation": "§7.1–7.2、Tables 1–7、Figures 11–14，PDF pp.11–13",
+  "limitations": "§4.2 查询子集与一致性说明、§9 Conclusion 未来工作，PDF pp.7、14"
+ },
+ "evidence": [
+  {
+   "id": "lit_b63897eb21f8:E01",
+   "claim": "市政议程例子中，GPT-4 在含聚合与多过滤条件的长文档上出错且成本高；RAG 只检索最相似片段，漏掉后续页上 20 多个 Capital Improvement 项目。",
+   "locator": "§1 Example 1.1、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b63897eb21f8:E02",
+   "claim": "SHT 以视觉格式模式聚类短语、用 LLM 抽样剔除非标题簇；若真实 SHT 格式良好且 LLM 正确识别非标题，oracle_gen 可恢复真实 SHT；同模板其余文档用模板前缀匹配构建，无需 LLM。",
+   "locator": "§3.2–3.3、Theorem 3.1，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b63897eb21f8:E03",
+   "claim": "支持的查询为无嵌套 SELECT-FROM-WHERE 加 SUM/COUNT/AVG/MAX/MIN，多个 DTable 只能按 doc_id 等值连接；LLM 抽取值与谓词判断可能不一致，不在本文范围。",
+   "locator": "§4.2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b63897eb21f8:E04",
+   "claim": "三个数据集：Publication 100 篇（平均 11.5 页、13,230 token）、Civic Agenda 41 篇（8.7 页、3,185 token）、Notice 80 篇（7.1 页、3,719 token）；每个数据集 9 条 SQL，按 1/2/3 个谓词分为 QG1–QG3。",
+   "locator": "§7.1.1、Table 1，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b63897eb21f8:E05",
+   "claim": "Table 2（GPT-4-32k）：ZenDB 精度 0.72/0.73/0.73、召回 0.53/0.84/0.74，每查询每文档成本 $0.03/0.03/0.02；GPT_single 为精度 0.74/0.45/0.71、召回 0.38/0.45/0.77、成本 $0.98/0.33/0.3。",
+   "locator": "Table 2、§7.2，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b63897eb21f8:E06",
+   "claim": "摘要中'精度最多高 61%、召回最多高 80%'与 Civic 列 ZenDB 对 RAG 的绝对差一致（0.73−0.12、0.84−0.04），应理解为百分点。",
+   "locator": "摘要、Table 2，PDF pp.1、12",
+   "basis": "inference",
+   "basis_note": "表中数值为原文；百分点解释为阅读者计算。"
+  },
+  {
+   "id": "lit_b63897eb21f8:E07",
+   "claim": "预处理成本：SHT 构建加表填充总计约 $0.1、$0.015、$0.015；ZenDB-light（GPT-3.5-turbo）精度约降 7%、召回约降 3%，成本约为 1/100。",
+   "locator": "§7.2 Exp-3、Exp-5、Tables 6–7、Figure 12，PDF p.13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b63897eb21f8:E08",
+   "claim": "未来工作：无模板或模板噪声大的情况，以及扩展支持的 SQL 范围。",
+   "locator": "§9，PDF p.14",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

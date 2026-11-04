@@ -1,0 +1,12 @@
+{
+ "id": "swb_51f116bbfc6e7715",
+ "title": "PVLDB Reproducibility (VLDB reproducibility guidelines web page; batch placeholder 'Artifact guide')",
+ "url": "https://vldb.org/pvldb/reproducibility",
+ "attempts": [
+  {
+   "url": "https://vldb.org/pvldb/reproducibility",
+   "result": "HTTP 200 HTML page 'PVLDB Reproducibility': venue policy/guidelines (goals, CMT submission requirements, reproducibility highlights list); no authors, no paper, no PDF link to a research article"
+  }
+ ],
+ "reason": "The URL is a PVLDB venue guidelines web page, not a research paper; there is no paper full text to read, so the seven-part paper analysis does not apply. The fetched HTML was not kept."
+}

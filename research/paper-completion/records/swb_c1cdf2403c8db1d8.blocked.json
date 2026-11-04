@@ -1,0 +1,24 @@
+{
+ "id": "swb_c1cdf2403c8db1d8",
+ "title": "SemiHS-Bench: A Semiconductor Benchmark for HS6 Classification from Sparse ERP-Style Text",
+ "url": "https://doi.org/10.1145/3799682.3840202",
+ "attempts": [
+  {
+   "url": "https://dl.acm.org/doi/pdf/10.1145/3799682.3840202",
+   "result": "HTML Cloudflare challenge page ('Just a moment...'), not a PDF; deleted"
+  },
+  {
+   "url": "https://doi.org/10.1145/3799682.3840202",
+   "result": "302 to https://dl.acm.org/doi/10.1145/3799682.3840202 (ACM DL landing behind the same bot check)"
+  },
+  {
+   "url": "https://api.openalex.org/works/doi:10.1145/3799682.3840202",
+   "result": "is_oa=true (hybrid, CC BY 4.0 per Crossref, CIKM 2026), but no repository copy; only OA location is the ACM DOI"
+  },
+  {
+   "url": "https://export.arxiv.org/api/query (title search: SemiHS / HS6 semiconductor)",
+   "result": "no arXiv preprint found"
+  }
+ ],
+ "reason": "Paper is open access on ACM DL (CIKM 2026, published 2026-11-06) but the PDF is served only behind a Cloudflare bot challenge; no alternate full-text copy (arXiv/repository) located. Not circumventing the challenge; needs manual download in a browser."
+}

@@ -1,0 +1,72 @@
+{
+ "id": "lit_53789163c713",
+ "url": "https://arxiv.org/abs/2412.10422",
+ "title": "Fan et al. — AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework",
+ "version": "arXiv:2412.10422v4（2025-07-09），PVLDB 18(10) 版式，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2412.10422",
+ "retrieved_at": "2026-11-04T05:22:39.598821+00:00",
+ "fulltext": "research/paper-completion/papers/lit_53789163c713.pdf",
+ "sha256": "5a0c5313cc5427c0bbfe256a3df65d998ec0f5b628e55b7787741080ad145dee",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_53789163c713",
+ "note": "research/paper-completion/notes/lit_53789163c713/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.3、Figure 1–3，PDF pp.1–4",
+  "method": "§3–§5、Figure 4–6，PDF pp.4–8",
+  "evaluation": "§6、Tables 1–5、Figures 7–8，PDF pp.8–12；p.11（Table 4、Figure 8）已渲染核对",
+  "limitations": "§1 Remarks、§2.2 Remarks、§8 Future Work，PDF pp.3–4、12"
+ },
+ "evidence": [
+  {
+   "id": "lit_53789163c713:E01",
+   "claim": "作者对 GPT-4 在 WikiTQ 与 TabFact 上的错误分析称 84% 与 76% 来自数据准备问题（缺失语义、值不一致、无关列），细节在技术报告中。",
+   "locator": "§1、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_53789163c713:E02",
+   "claim": "问题定义：给定问题 Q 与单表 T，生成 Derive/Normalize/Filter 组成的逻辑计划，并为每个操作生成代码，把 T 变换为满足 Q 需求的 T′；Analyzer 默认使用 Text-to-SQL，被声明为可替换。",
+   "locator": "§2.2、§3，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_53789163c713:E03",
+   "claim": "Chain-of-Clauses 先生成类 SQL 的 Analysis Sketch，用 Binder 语法解析器按执行顺序抽取子句，再结合相关列取值逐子句生成逻辑操作；Programmer 从函数池选函数并推断参数，Executor 执行并回传错误。",
+   "locator": "§4.2、§5.1–5.2、Figures 5–6，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_53789163c713:E04",
+   "claim": "数据：WikiTQ 22,033 条记录（正文称训练 17,689、测试 4,344）、TabFact small test 2,024 条、TableBench 886 条（只评 FC 与 NR）；AutoTQA 基线只在各 500 条抽样上运行。正文未写明 WikiTQ 主实验使用的划分。",
+   "locator": "§6.1、Table 1，PDF pp.8–9",
+   "basis": "inference",
+   "basis_note": "数量来自原文；“未写明划分”是阅读者对正文的核对结论。"
+  },
+  {
+   "id": "lit_53789163c713:E05",
+   "claim": "DeepSeek 骨干下 AutoPrep 在 WikiTQ/TabFact 达 66.09/87.85，高于 CoTable 64.53/86.22、ReAcTable 64.13/85.71；NL2SQL 接入 AutoPrep 后四骨干平均提升 12.22/13.23。",
+   "locator": "§6.2–6.3、Tables 2–3，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_53789163c713:E06",
+   "claim": "Table 4 中 AutoPrep 在 TransTQ 为 68.88，第二名 AutoTQA 为 59.75，差值 9.13，而正文写“超出第二名 9.31 个点”。",
+   "locator": "§6.5 Exp-6、Table 4，PDF p.11（已渲染核对）",
+   "basis": "inference",
+   "basis_note": "差值由阅读者根据 Table 4 计算，与正文数字不一致。"
+  },
+  {
+   "id": "lit_53789163c713:E07",
+   "claim": "消融：CoC 比直接提示在三个数据集上高 7.92/4.50/5.27；工具增强把 WikiTQ 代码错误率从 4.51% 降至 1.50%；去掉 Normalize 使 TableBench 降 8.52。局限包括只支持单表、未处理缺失值和重复。",
+   "locator": "§6.6、Table 5，PDF pp.11–12；§8，PDF p.12",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

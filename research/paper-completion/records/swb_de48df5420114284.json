@@ -1,0 +1,65 @@
+{
+ "id": "swb_de48df5420114284",
+ "url": "https://aclanthology.org/2020.clicit-1.30",
+ "title": "Magnini et al. — The E3C Project: Collection and Annotation of a Multilingual Corpus of Clinical Cases",
+ "version": "CLiC-it 2020 会议论文（ACL Anthology 2020.clicit-1.30），7 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2020.clicit-1.30.pdf",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "research/paper-completion/papers/swb_de48df5420114284.pdf",
+ "sha256": "9d54eed67c83b33829cf50a48ed3318f577ab1c00cbe9090cc09ccc5b685cc8a",
+ "format": "pdf",
+ "pages": 7,
+ "note_directory": "research/paper-completion/notes/swb_de48df5420114284",
+ "note": "research/paper-completion/notes/swb_de48df5420114284/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–§2，PDF pp.1–2",
+  "method": "§3–§4.3、Tables 1–3，PDF pp.2–6",
+  "evaluation": "无实验；Tables 1–2 为收集统计，PDF p.3",
+  "limitations": "§4.4、§5，PDF p.6"
+ },
+ "evidence": [
+  {
+   "id": "swb_de48df5420114284:E01",
+   "claim": "临床信息抽取多关注实体而非时间信息；隐私与数据保护使可共享标注语料稀少，且大多为英语。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_de48df5420114284:E02",
+   "claim": "已收集病例：意 1,323、英 9,533、法 1,615、西 1,400、巴斯克 122；L1 五语言全部覆盖，巴斯克 L2 2.27%、L3 4.76%。",
+   "locator": "§3、Tables 1–2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_de48df5420114284:E03",
+   "claim": "只收录已发表且可再分发的病例，丢弃图片，以发表日期近似书写日期以降低可追溯性。",
+   "locator": "§3.1，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_de48df5420114284:E04",
+   "claim": "标注分两级：THYME 驱动（事件、时间表达式、TLINK/ALINK，新增 BODY PART、ACTOR、RML）和分类体系驱动（SNOMED-CT 与 ICD-10 编码，取最具体概念）。",
+   "locator": "§4–§4.2、Table 3，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_de48df5420114284:E05",
+   "claim": "两级标注存在跨度不匹配（如 [chest pain] 覆盖 THYME 的 chest 与 pain）及分类标准差异（THYME 事件多属 SNOMED-CT [finding]）；无实验或一致性结果。",
+   "locator": "§4.4，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_de48df5420114284:E06",
+   "claim": "法语 199+1,416 例的 token 合计约 569K，与 Table 1 的 548K 不一致；正文称 L2 对多数语言收齐、L3 只有英、法、西全部或部分填满，而 Table 2 给意大利语 L3 100%、L2 96%。",
+   "locator": "§3、Tables 1–2，PDF p.3",
+   "basis": "inference",
+   "basis_note": "事实及定位来自原文；数字核算、版本比较或用途边界为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

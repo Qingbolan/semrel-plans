@@ -1,11 +1,9 @@
 # Semantic Data Integration and Querying: A Survey and Challenges
 
-**来源。** [出版商原文](https://doi.org/10.1145/3653317)，ACM Computing Surveys 56(8)，Article 209，1–35，2024-04-26。
+跨部门、跨组织的数据用不同词汇和结构描述，分析者难以在不丢失含义的前提下联合查询。本综述以本体（ontology）、RDF/OWL/SPARQL 和"源到概念"映射为主线，把 30 余项语义数据集成工作按物化（materialized）、虚拟（virtual）、混合（hybrid）三类组织，并从映射、查询翻译、来源选择等维度比较（Tables 1–3），最后归纳互操作、含义保持和查询利用方面的挑战。
 
-**阅读状态（2026-10-07）。** 已通过出版商可索引正文补核§2的架构与OBDA定义、§3查询、§4.1–4.3分类（含§4.2.2联邦系统）、表1–3所有呈现行、§5.1–5.4与§6的可获取段落。仍不是连续全文精读：完整PDF未取得，部分段落、图和Listing未取得，不能确认漏段与页码。未逐篇复核被综述系统的原论文。
+这是综述，没有统一的实验或量化结果。
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty 与强弱点](Novelty分析.md)
-- [Workload分析](workload分析.md)
-- [正文获取与剩余缺口](阅读核验记录.md)
+[原文](https://doi.org/10.1145/3653317)
+
+版本：ACM Computing Surveys 56(8), Article 209, pp.1–35（2024-04-26；作者 Masmoudi, Ben Abdallah Ben Lamine, Karray, Archimède, Baazaoui Zghal）。此前通过出版商可索引正文核读了 §2–6 的主要段落和 Tables 1–3 的呈现行；本轮未能取得完整 PDF，**内容只做了可读性整理，数字与表述未再对照全文复核**，页码无法确认，也未逐篇复核被综述系统的原论文。

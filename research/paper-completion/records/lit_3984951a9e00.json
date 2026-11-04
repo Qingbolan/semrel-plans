@@ -1,0 +1,71 @@
+{
+ "id": "lit_3984951a9e00",
+ "url": "https://arxiv.org/abs/2308.15363",
+ "title": "Gao, Wang et al. — Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation",
+ "version": "arXiv 2308.15363v4（2023-11-20），22 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2308.15363v4",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_3984951a9e00.pdf",
+ "sha256": "d11c0b10d6eb706f93ec262b00a27b40d36fb4f9bb3f8a061d574a418fe39887",
+ "format": "pdf",
+ "pages": 22,
+ "note_directory": "research/paper-completion/notes/lit_3984951a9e00",
+ "note": "research/paper-completion/notes/lit_3984951a9e00/README.md",
+ "read_sections": {
+  "problem": "§1–§3 开头，PDF pp.1–3",
+  "method": "§3.1–3.4、Listings 1–8、附录 A.2，PDF pp.3–6、15–16",
+  "evaluation": "§4.1–4.5、Tables 2–4、Figures 1–7、附录 C.3 Table 12、附录 F，PDF pp.6–12、18、21–22；Tables 2、3、12 已用版面文本核对",
+  "limitations": "§5 末段，PDF p.13"
+ },
+ "evidence": [
+  {
+   "id": "lit_3984951a9e00:E01",
+   "claim": "论文系统比较 5 种问题表示、外键与规则两个提示成分、4 种示例选择、3 种示例组织，覆盖 4 个 LLM，并研究开源 LLM 的上下文学习与监督微调。",
+   "locator": "§1，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3984951a9e00:E02",
+   "claim": "DAIL-SQL 用 CREATE TABLE 代码表示 schema；按掩码问题向量距离排序并以预测 SQL 骨架 Jaccard 相似度阈值 τ 过滤示例（实验 τ=0.9，排行榜 0.85）；示例只保留问题–SQL 对。",
+   "locator": "§3.3、附录 A.2，PDF pp.5–6、15–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3984951a9e00:E03",
+   "claim": "评测使用 Spider-dev（1,034 例）与 Spider-Realistic（508 例），示例候选与微调数据为 Spider 训练集 8,659 例；指标为 EM 与 EX，温度 0。",
+   "locator": "§4.1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3984951a9e00:E04",
+   "claim": "GPT-4 + 全信息组织 5-shot 下，DAIL 选择 EX 82.4，高于掩码问题相似 82.0 和随机 79.5，低于以真实 SQL 选例的 Upper Limit 84.4。",
+   "locator": "Table 2，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3984951a9e00:E05",
+   "claim": "DAIL-SQL + GPT-4 在 Spider-dev 上 EX 83.5%、Spider-Realistic 76.0%；Spider 排行榜测试集 86.2%，加自一致性 86.6%。附录 Table 12 中 Dev 为 83.1%，与正文 83.5% 不一致。",
+   "locator": "§4.3.2、附录 C.3 Table 12、附录 F，PDF pp.9、18、21",
+   "basis": "inference",
+   "basis_note": "各数值为原文所述；不一致为阅读者对照后发现。"
+  },
+  {
+   "id": "lit_3984951a9e00:E06",
+   "claim": "微调后的 LLaMA-13B + Alpaca 提示零样本 EM 65.1%/EX 68.6%，但微调模型加入上下文示例后准确率骤降。",
+   "locator": "§4.4.4、Table 4，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3984951a9e00:E07",
+   "claim": "作者承认的局限：只测两条规则提示、微调仅用 Spider 训练集、数据库规模可能不够大、指标不考虑生成 SQL 的执行效率。",
+   "locator": "§5，PDF p.13",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

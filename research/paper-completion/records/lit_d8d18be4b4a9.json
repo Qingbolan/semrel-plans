@@ -1,0 +1,65 @@
+{
+ "id": "lit_d8d18be4b4a9",
+ "url": "https://arxiv.org/abs/2308.04076",
+ "title": "Sultanum & Srinivasan — DataTales: Investigating the use of Large Language Models for Authoring Data-Driven Articles",
+ "version": "arXiv 2308.04076v1（2023-08-08），5 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2308.04076v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_d8d18be4b4a9.pdf",
+ "sha256": "55509ebbf9440706a1b1c64981f5e08d5097849637b584153dab4e8d6aab0515",
+ "format": "pdf",
+ "pages": 5,
+ "note_directory": "research/paper-completion/notes/lit_d8d18be4b4a9",
+ "note": "research/paper-completion/notes/lit_d8d18be4b4a9/README.md",
+ "read_sections": {
+  "problem": "§1，PDF p.1",
+  "method": "§3，PDF pp.2–3",
+  "evaluation": "§4，PDF pp.3–4",
+  "limitations": "§4.3、§5，PDF p.4"
+ },
+ "evidence": [
+  {
+   "id": "lit_d8d18be4b4a9:E01",
+   "claim": "写数据驱动文章需分析数据、排序洞见并写成连贯叙述；作者提出用图表交互代替直接写提示来向 LLM 传达叙事意图。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d8d18be4b4a9:E02",
+   "claim": "DataTales 用 gpt-3.5-turbo；提示模板为图表类型、chartData、图表标题和可选标注；之后再提示生成标题，并用依存分析与关键词匹配把句子链接到图表标记。",
+   "locator": "§3，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d8d18be4b4a9:E03",
+   "claim": "提示设计时每种图表生成 10–20 条叙述比较特征组合；去掉编码信息，并只保留图表类型而非分析任务。",
+   "locator": "§3，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d8d18be4b4a9:E04",
+   "claim": "用户研究：11 名数据从业者，20 分钟写作任务加半结构化访谈，使用 4 种数据集+图表组合之一；平均每人生成 4 篇故事，约 3 篇带标注；3 人在 20 分钟内完成初稿。",
+   "locator": "§4、T3、T5，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d8d18be4b4a9:E05",
+   "claim": "生成文本存在错误（如称佛罗里达 80 岁以上人口多于加州），文本–图表联动用于核查；参与者希望控制语气格式、获得来源引用并区分数据陈述与 LLM 外部知识。",
+   "locator": "Figure 3、T2、T9、T13，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d8d18be4b4a9:E06",
+   "claim": "评测只有定性研究，无基线、对照或数值指标，不能据此推出质量或省时的效应量。",
+   "locator": "§4，PDF pp.3–4",
+   "basis": "inference",
+   "basis_note": "研究设计事实来自原文；效应量不可推断为阅读者分析。"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,14 @@
+{
+ "id": "lit_fe9d81da7269",
+ "title": "DATALORE: Can a Large Language Model Find All Lost Scrolls in a Data Repository?",
+ "url": "https://doi.org/10.1109/ICDE60146.2024.00388",
+ "attempts": [
+  {"url": "https://doi.org/10.1109/ICDE60146.2024.00388", "result": "IEEE Xplore paywalled ICDE 2024 paper"},
+  {"url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10597713", "result": "HTTP 418, no PDF"},
+  {"url": "https://api.openalex.org/works/doi:10.1109/ICDE60146.2024.00388", "result": "oa_status closed, no repository full text"},
+  {"url": "https://export.arxiv.org/api/query (title / author Yuze Lou searches)", "result": "no arXiv version found"},
+  {"url": "https://www.amazon.science/publications/datalore-can-a-large-language-model-find-all-lost-scrolls-in-a-data-repository", "result": "HTTP 202 empty body (bot check), no PDF link"},
+  {"url": "web search (bibbase, dblp, aminer)", "result": "bibliographic records only"}
+ ],
+ "reason": "No legally accessible full text found; only bibliographic metadata available."
+}

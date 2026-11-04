@@ -1,0 +1,71 @@
+{
+ "id": "lit_9e4516fde780",
+ "url": "https://arxiv.org/abs/2507.12621",
+ "title": "Ai, Tang, Wang — NLI4VolVis: Natural Language Interaction for Volume Visualization via LLM Multi-Agents and Editable 3D Gaussian Splatting",
+ "version": "arXiv:2507.12621v1（2025-07-16，IEEE TVCG 模板预印本，含附录），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2507.12621v1",
+ "retrieved_at": "2026-11-04T05:14:20.703416+00:00",
+ "fulltext": "research/paper-completion/papers/lit_9e4516fde780.pdf",
+ "sha256": "6968f23defed16054c97e675a0939972a8ac68edf9ade949889d11a54bfe1b55",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/lit_9e4516fde780",
+ "note": "research/paper-completion/notes/lit_9e4516fde780/README.md",
+ "read_sections": {
+  "problem": "§1、§2、Table 1，PDF pp.1–3",
+  "method": "§3.1–3.5、Figure 2，PDF pp.3–6",
+  "evaluation": "§4、Table 2–3、Figures 5–10，PDF pp.6–9；附录 §1–4 与附表 1–2，PDF pp.9–11",
+  "limitations": "§5，PDF p.9；附录 §2–3，PDF pp.10–11"
+ },
+ "evidence": [
+  {
+   "id": "lit_9e4516fde780:E01",
+   "claim": "DVR 计算量与存储开销大，难以实时交互；TF 设计复杂且不了解语义；已有工作没有把可编辑体表示、开放词汇场景理解和协作多智能体 LLM 结合起来。",
+   "locator": "§1、Table 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4516fde780:E02",
+   "claim": "管线包括：多视角语义分割，按熵选 top-k 视图做 CLIP 嵌入，为每个部件训练 iVR-GS，组合成完整场景；再由基于规则的分层多智能体通过函数调用和声明式命令编辑场景，并遵循 AVA 的 VPA 循环。",
+   "locator": "§3.1–3.4、Figure 2，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4516fde780:E03",
+   "claim": "评测用 8 个体数据集（5 个扫描、3 个模拟），大小从 49.69 MB 到 4.32 GB，语义部件 2–14 个；用 92 张 800×800 多视角图训练，每个基础场景约 7 分钟。",
+   "locator": "§4、Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4516fde780:E04",
+   "claim": "3DGS 推理在 RTX 4090 上超过 100 FPS；ParaView DVR 渲染 4.32 GB 的 chameleon 只有 5.09 FPS。",
+   "locator": "§4，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4516fde780:E05",
+   "claim": "8 人用户研究完成 23 项任务：平均完成时间 35.1 分钟，自然语言使用率 88.1%，知识问答 8.75/9；语音功能评分最低（3.38/5），参与者最常提到延迟。",
+   "locator": "§4.2、Table 3、Figure 10，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4516fde780:E06",
+   "claim": "作者承认的局限：协作采用规则式分层结构，带来延迟和单点故障；对函数调用工具的输出过度信任，无关查询也会返回最相似的部件；领域缺少标准化定量基准。",
+   "locator": "§5，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4516fde780:E07",
+   "claim": "本文的证据以案例和小样本用户研究为主，没有与其他系统做任务级对比，也没有测开放词汇查询的准确率；主要新意在于集成已有组件。",
+   "locator": "§2–5，PDF pp.2–9",
+   "basis": "inference",
+   "basis_note": "组件来源与评测构成来自原文；'新意主要在集成''证据不足以证明准确性优势'是阅读者分析。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

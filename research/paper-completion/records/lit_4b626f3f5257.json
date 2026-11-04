@@ -1,0 +1,59 @@
+{
+ "id": "lit_4b626f3f5257",
+ "url": "https://aclanthology.org/2024.emnlp-main.54.pdf",
+ "title": "Tan, Li, Wang et al. — Large Language Models for Data Annotation and Synthesis: A Survey",
+ "version": "EMNLP 2024 main，pp.930–957，28 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.emnlp-main.54.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_4b626f3f5257.pdf",
+ "sha256": "148d84298fa352aed62ee8307f566d8b0596b7685156d92b01ac0543b83893b0",
+ "format": "pdf",
+ "pages": 28,
+ "note_directory": "research/paper-completion/notes/lit_4b626f3f5257",
+ "note": "research/paper-completion/notes/lit_4b626f3f5257/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–2",
+  "method": "§3–5、Figure 1，PDF pp.2–8",
+  "evaluation": "无实验；§4 评估方法综述、附录 C Tables 1–4（抽查），PDF pp.6–7、24–28",
+  "limitations": "§6、Limitations，PDF pp.8–10"
+ },
+ "evidence": [
+  {
+   "id": "lit_4b626f3f5257:E01",
+   "claim": "人工数据标注与合成需要领域知识、成本高；已有 LLM 综述未专门讨论 LLM 作为标注者。",
+   "locator": "Abstract、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4b626f3f5257:E02",
+   "claim": "综述以标注者 A（LLM）和任务学习者 L 两个角色组织文献，主要讨论纯语言模型而非多模态 LLM。",
+   "locator": "§1–2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4b626f3f5257:E03",
+   "claim": "分类为生成（指令与回复、标签、推理依据、成对反馈、文本反馈、领域数据）、评估（通用、任务特定、LLM-as-a-judge 与三类过滤）、利用（监督微调、对齐调优、推理）。",
+   "locator": "§3–5、Figure 1，PDF pp.2–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4b626f3f5257:E04",
+   "claim": "挑战包括伦理、模型坍塌、幻觉与效率，并给出累积真实与合成数据、Reverse Validation、CoAnnotating、剪枝/MoE/量化等方向。",
+   "locator": "§6，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4b626f3f5257:E05",
+   "claim": "本文无实验、无统一基准，也未说明文献检索与纳入标准；附录 C 是带骨干、成本与链接的论文表，而非结论所称的基准数据集汇编。",
+   "locator": "§7、附录 C，PDF pp.9、24–28",
+   "basis": "inference",
+   "basis_note": "附录内容为原文；“非基准汇编”“无纳入标准”为阅读者分析。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

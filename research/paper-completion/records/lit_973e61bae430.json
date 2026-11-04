@@ -1,0 +1,71 @@
+{
+ "id": "lit_973e61bae430",
+ "url": "https://vldb.org/pvldb/vol17/p1939-tang.pdf",
+ "title": "Lao et al. — GPTuner: A Manual-Reading Database Tuning System via GPT-Guided Bayesian Optimization",
+ "version": "PVLDB Vol.17 No.8，pp.1939–1952，2024，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://vldb.org/pvldb/vol17/p1939-tang.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_973e61bae430.pdf",
+ "sha256": "70780db58a95d03d5eea2b295999b5e12599b2d05958f80527aabb3c4bcbabf5",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_973e61bae430",
+ "note": "research/paper-completion/notes/lit_973e61bae430/README.md",
+ "read_sections": {
+  "problem": "§1–3（含 Table 1–2、Figure 2），PDF pp.1–4",
+  "method": "§4–7（Figure 3、Algorithms 1–3），PDF pp.5–9",
+  "evaluation": "§8.1–8.5（Figures 4–9、Table 3），PDF pp.10–12；pp.10–11 已渲染核对",
+  "limitations": "§8.4 知识质量实验、§9 Outlook，PDF pp.11–12"
+ },
+ "evidence": [
+  {
+   "id": "lit_973e61bae430:E01",
+   "claim": "DBMS 有数百个 knob（PostgreSQL v14.9 有 346 个），BO/RL 调优需数百到数千次迭代；默认取值范围过宽，而手册和论坛给出重要 knob 与合理区间（如 shared_buffers 为内存的 25%–40%）。",
+   "locator": "§1、Table 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_973e61bae430:E02",
+   "claim": "系统输入为 DBMS、目标负载和优化目标，输出预算内的最佳配置；知识被整理为每个 knob 的 suggested_values、min_value、max_value、special_value 四类属性。",
+   "locator": "§2.1、§4–5，PDF pp.3、5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_973e61bae430:E03",
+   "claim": "方法包括 LLM 知识过滤与事实一致性检查、提示集成（K=10、n=3、多数投票）、四层级 knob 选择、Region Discard/Tiny Feasible Space/虚拟 knob，以及粗到细两阶段 BO。",
+   "locator": "§5–7、Algorithms 1–3，PDF pp.6–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_973e61bae430:E04",
+   "claim": "实验用 TPC-H SF1（95 分位延迟）与 TPC-C SF200（吞吐），PostgreSQL v14.9 调 60 个 knob、MySQL v8.0 调 40 个，每方法 3 次会话、每次 100 次迭代；基线为 DDPG++、GP、SMAC、DB-BERT。",
+   "locator": "§8.1，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_973e61bae430:E05",
+   "claim": "MySQL TPC-C 上 GPTuner 达 1029 tx/s（默认 240 tx/s），比 DB-BERT 高 10%、比 DDPG++ 高 131.7%；PostgreSQL TPC-H 上前 20 次迭代延迟降 44.4%。",
+   "locator": "§8.2、Figures 4–5，PDF p.10（渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_973e61bae430:E06",
+   "claim": "知识过滤识别 27 条错误知识中的 20 条（召回 74%），将输入知识准确率由 82% 提升到 94%；gpt-4-turbo 处理 150 个 knob 约 2101.6k token、23.7 美元、4 小时。",
+   "locator": "§8.4–8.5、Table 3，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_973e61bae430:E07",
+   "claim": "正文结果主要以曲线呈现，模块消融只指向技术报告，“16 倍”“30%”的汇总无逐项计算；评估仅限离线调优和标准合成基准。",
+   "locator": "§8.2、§8.6、§9，PDF pp.10–12",
+   "basis": "inference",
+   "basis_note": "事实来自原文各节；关于可核验性和适用范围的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

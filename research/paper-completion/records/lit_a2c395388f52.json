@@ -1,0 +1,68 @@
+{
+ "id": "lit_a2c395388f52",
+ "url": "https://arxiv.org/abs/2604.09944",
+ "title": "Mang, Xiang et al. — PLOP: Cost-Based Placement of Semantic Operators in Hybrid Query Plans",
+ "version": "arXiv:2604.09944v2（2026-04-24），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2604.09944v2",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "research/paper-completion/papers/lit_a2c395388f52.pdf",
+ "sha256": "951da62a212286b09edbd5a6e9caf36ba0eaecb19ddfeca94b6de2507408535a",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/lit_a2c395388f52",
+ "note": "research/paper-completion/notes/lit_a2c395388f52/README.md",
+ "read_sections": {
+  "problem": "§1、§3，Listing 1、Figure 1，PDF pp.1–4",
+  "method": "§2、§4–5，Algorithms 1–2、Theorems 4.1–4.3，PDF pp.3–7",
+  "evaluation": "§6、Tables 1–3、Figures 5–9，PDF pp.7–11",
+  "limitations": "§3.2 问题简化、§5 固定选择率、§7 准确性讨论，PDF pp.3、7、11–12；无专门局限节"
+ },
+ "evidence": [
+  {
+   "id": "lit_a2c395388f52:E01",
+   "claim": "语义算子（用 LLM 判定的过滤、连接、投影）常与关系算子组合成混合计划，执行代价同时来自昂贵的 LLM 调用和常规的数据库处理。作者指出已有工作的两个缺陷：(1) 忽视语义算子与关系算子的交互——Lotus、Palimpzest/Abacus、DocETL 等都只优化单个语义算子；ZenDB、iPDB、Cortex AISQL 采用把语义过滤上拉的启发式，但在多表查询中可能使中间结果膨胀；(2) 模型级联、近似查询处理等做法会改变算子的输出，多个算子组合后误差会累积。Listing 1 的例子（books 1K 行、reviews 5K 行）中，全部下推需要 4,000 次 LLM 调用；全部上拉借助函数缓存只需 3,300 次，但连接要处理未过滤的表。作者还引用 Snowflake 的数据：近 40% 的语义查询涉及多表。",
+   "locator": "§1，Listing 1、Figure 1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a2c395388f52:E02",
+   "claim": "输入是一棵混合查询计划树 T 和用户给定的参数 α>0；输出是语义等价的计划 T*，使 C_LLM + α·C_rel 最小。C_LLM 是函数缓存下语义算子处理的不同行数，C_rel 是关系算子处理的行数；搜索空间仅限于对语义算子做等价的重新定位和改写。论文做了两项限定：(1) 连接顺序沿用底层优化器（DuckDB）给出的结果，不做联合优化；(2) 语义连接只考虑内连接。化归步骤：把语义投影 SP 上拉到最高可行位置（依赖其新列的关系算子随之移动，用拓扑排序确定）；把 SJ_φ(R,S) 改写为 SF_φ(R×S)。之后只剩“把每个语义过滤器 SF 放在固定计划树的哪个节点”这一问题。语义过滤器只能跨越不阻塞的、可交换的算子移动（关系过滤、叉积、投影、内连接、其他 SF），不能跨过 LIMIT、UNION 等。",
+   "locator": "§2.1–2.3、§3.1–3.2、§4.1，Figures 2–3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a2c395388f52:E03",
+   "claim": "论文声明的贡献：(1) 形式化混合计划优化问题，并通过两种重写把它化归为语义过滤器的放置；(2) 证明在函数缓存下沿不阻塞算子上拉语义过滤器不会增加其不同输入数（Theorem 4.1），给出 O(n²·d) 的上拉算法（Algorithm 1）；(3) 提出 DP 代价模型（Algorithm 2）：自底向上为每个节点和每个过滤器子集计算最小代价，复杂度为 O(|V|·n·2ⁿ + 3ⁿ)；(4) 在 DuckDB 中用约 3,000 行 C++ 实现，函数缓存是一张以渲染后的 prompt 为键、按查询作用域的并发哈希表。作者说明，与经典的昂贵谓词迁移（Hellerstein & Stonebraker）相比，PLOP 不依赖线性连接代价假设；与 Chaudhuri & Shim 的 DP 相比，PLOP 考虑了函数缓存。 阅读者分析：核心思想是把经典的昂贵谓词放置方法移植到 LLM 算子上，并加入以“不同输入数”计费的缓存感知代价，新意主要在这一组合与系统实现。DP 假设过滤器之间相互独立，并使用固定的统计无关选择率（s_i=0.2、连接去重率 0.1），对相关谓词或倾斜数据的适用性没有验证。",
+   "locator": "§1、§4–5、§8，Theorems 4.1–4.3，PDF pp.2–7、12",
+   "basis": "inference",
+   "basis_note": "定理、算法与实现事实为原文表述；关于新意与独立性假设的评价为阅读者分析。"
+  },
+  {
+   "id": "lit_a2c395388f52:E04",
+   "claim": "评测共 44 条语义 SQL：(1) 作者自建 30 条混合查询，覆盖四个 schema——BookReview（3 表，平均 682 行）、Yelp（3 表，1,594 行）、GoogleLocal（2 表，1,040 行）取自 DataAgentBench，TPC-H（SF=0.005，8 表，平均 10,851 行）（Table 1）。DataAgentBench 的原始问题是自然语言或基础 SQL，作者把其中的意图人工翻译为 SP/SF/SJ 语义算子；TPC-H 查询则在文本列上加了语义谓词。Q1–Q3 使用 SP，Q4–Q30 使用 SF，Q16–Q17、Q25、Q27–Q30 还使用 SJ；最复杂的查询有 9 个连接和 4 个 SF（Figure 5）。(2) SemBench E-Commerce 子集 14 条，有人工标注，但查询通常少于 3 个关系算子。作者认为 SemBench 中多数查询的算子数 ≤3，计划级优化的空间有限，这是自建基准的理由。 与图谱查询的关系：本项目从上游仓库固定提交中照搬了 plop/agent-bench 的 Q1–Q30 共 30 条，数量与论文的 30 条混合查询一致；但逐条是否与论文版本完全相同，需另行比对。",
+   "locator": "§1、§6.1，Table 1、Figure 5，PDF pp.2、7–8",
+   "basis": "inference",
+   "basis_note": "规模与构成来自原文；与本项目 30 条查询的对应为阅读者推断，未逐条比对。"
+  },
+  {
+   "id": "lit_a2c395388f52:E05",
+   "claim": "论文的两个对照案例。Q8（BookReview）用一个语义过滤器确认某书是否为第二版，并与经过关系过滤的评论做一次连接：把该过滤器上拉到连接之上后，借助关系过滤和内连接先剔除元组，LLM 调用从 200 次降到 1 次；上拉算法与代价模型耗时相近（2.1 s 对 2.9 s）。Q19（TPC-H）是一条审计查询，含 6 个连接、2 个 SF、4 个关系过滤，涉及 lineitem、orders、customer、part、partsupp、supplier 六张表：全部上拉会让 6 个连接都处理未过滤的表，结果在 3,000 s 时超时；代价模型保留一个 SF 不上拉，提前缩小连接输入，443 s 完成。作者的结论是：简单查询用上拉即可，复杂多表查询才需要代价模型。 阅读者分析：这一用例可以直接映射到“语义过滤放在连接之前还是之后”的计划选择，适合在本项目中作为计划空间的对照样例；但 PLOP 固定了连接顺序，不处理连接顺序与语义过滤的联合搜索。",
+   "locator": "§6.4，Listings 3–4，PDF pp.9–10",
+   "basis": "inference",
+   "basis_note": "案例数字来自原文；映射与限制说明为阅读者分析。"
+  },
+  {
+   "id": "lit_a2c395388f52:E06",
+   "claim": "实验环境：AWS r7i.8xlarge，所有系统统一使用 GPT-5-mini，α=10⁻⁷，超时 3,000 s。基线为 DuckDB+Cache（UDF + 函数缓存，不做放置优化），对比系统为 ThalamusDB、FlockMTL、Palimpzest、Abacus；Lotus 因使用多个模型，只参与 SemBench 的质量比较。指标为相对基线的几何平均加速和 LLM 美元成本降低，以及 F1。在 30 条混合查询上，F1 以 DuckDB+Cache 的输出为参照，并非人工金标准（Table 2）：PLOP-Cost 1.50×/4.18×/0.848，PLOP-Pullup 1.16×/4.29×/0.849，ThalamusDB 1.50×/10.10×/0.515（Q1–Q3 不支持，已排除），FlockMTL 0.64×/7.31×/0.343，Palimpzest 1.70×/2.15×/0.533，Abacus 0.15×/0.43×/0.561。SemBench E-Commerce（Table 3）：基线质量 0.865，PLOP-Cost 1.11×/1.10×/0.840，Lotus 质量 0.574。消融：α 在 10⁻³–10⁰ 之间时计划稳定；改变 s_i 和 s_1 只会产生两种计划；优化器开销低于 0.12 s，不到总时间的 2%。 边界：作者把与基线约 0.15 的 F1 差距归因于 LLM 非确定性，而非重写本身。阅读者分析：论文未报告重复运行次数或方差，因此这一解释没有被直接检验。贡献列表中的“最多 33× 成本降低、3.0× 延迟降低”是单条查询的最大值，与摘要中“最多 1.5×/4.29×”的几何平均口径不同。α、s_i 的敏感性只在“一条代表性多表查询”上测试过。",
+   "locator": "§6.1–6.5、§7，Tables 2–3、Figures 6–9，PDF pp.7–12",
+   "basis": "inference",
+   "basis_note": "数字来自原文；关于口径差异、未报告方差和敏感性范围的评价为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,72 @@
+{
+ "id": "lit_a520bda53945",
+ "url": "https://arxiv.org/abs/2508.05002",
+ "title": "Sun, Li et al. — AgenticData: An Agentic Data Analytics System for Heterogeneous Data",
+ "version": "arXiv:2508.05002v2，13 页（PDF 标题为 AgenticData: A Multi-Agent based Data Analytics System for Heterogeneous Data）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2508.05002v2",
+ "retrieved_at": "2026-11-04T05:06:37.034919+00:00",
+ "fulltext": "research/paper-completion/papers/lit_a520bda53945.pdf",
+ "sha256": "b2441d9f18cc894195aa8cc639fd04547f8fa60289b351b08946efffd0e26120",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "research/paper-completion/notes/lit_a520bda53945",
+ "note": "research/paper-completion/notes/lit_a520bda53945/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1、§2.1，PDF pp.1–2",
+  "method": "§2.2–§6、Fig.1–7，PDF pp.2–9",
+  "evaluation": "§7、Table 1–2、Fig.8–13，PDF pp.9–12；Fig.8 已渲染核对",
+  "limitations": "无独立局限章节；§2.2 Remark（p.3）、§7.2.2（p.10）、§7.5（p.12）"
+ },
+ "evidence": [
+  {
+   "id": "lit_a520bda53945:E01",
+   "claim": "AgenticData 将 NL 问题转为由 9 种关系算子与 6 种语义算子组成的树形语义计划；数据画像智能体离线构建画像图，规划智能体生成计划，校验器与记忆提供反馈迭代改进。",
+   "locator": "§2.1–2.2、Fig.1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a520bda53945:E02",
+   "claim": "作者声明在优化与执行两个组件上不声明贡献，重点为画像、规划、校验与记忆智能体。",
+   "locator": "§2.2 Remark，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a520bda53945:E03",
+   "claim": "规划被建模为 MDP：校验通过奖励 +1、否则 −1，以 Bellman 式（Fig.6 中系数 0.1）计算状态值，前 k 高/低状态作为好/坏计划写入记忆引导后续生成。",
+   "locator": "§4.1、§4.4、Fig.6，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a520bda53945:E04",
+   "claim": "评测基准：DABStep（7 数据集/460 题）、DABench（68/311）、Spider-2.0-Lite（13,963/547）、Real-Bank（9/50）、Wikipedia（1000/100）；正文中 DABStep 写为 450 个任务、DABench 写为 55 张表，与 Table 1 不一致。",
+   "locator": "§7.1、Table 1，PDF p.9",
+   "basis": "inference",
+   "basis_note": "数字取自原文；正文与表格不一致之处为阅读者核对发现。"
+  },
+  {
+   "id": "lit_a520bda53945:E05",
+   "claim": "Fig.8 读数：DABStep-hard 72.2（GPT-5）对 Amity 41.0；DABench 89.7 对 CodeAgent 69.6；Spider-2.0-Lite 49.6 对 ReFoRCE 35.6；Real-Bank 70/75 对 ReFoRCE 50、手工计划 80；Wikipedia 95 对 Palimpzest 94、手工计划 100。",
+   "locator": "Fig.8，PDF p.11（渲染读取）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a520bda53945:E06",
+   "claim": "Wikipedia 上各质量阈值下成本约为 Palimpzest 的一半或更低；规划耗时每题 2.8–9.8 分钟；五次重复准确率波动 5%–10%。",
+   "locator": "§7.2.3、§7.4–7.5、Fig.12、Table 2，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a520bda53945:E07",
+   "claim": "部署：国家电网 200 余个问题准确率 91%，邮储银行 300 个任务准确率 92%；相关数据与问题未公开，无法复核。",
+   "locator": "§7.6，PDF p.12",
+   "basis": "inference",
+   "basis_note": "数字为原文陈述；不可复核的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

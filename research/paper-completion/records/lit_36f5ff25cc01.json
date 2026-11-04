@@ -1,0 +1,71 @@
+{
+ "id": "lit_36f5ff25cc01",
+ "url": "https://arxiv.org/abs/2503.06664",
+ "title": "Bendinelli, Dox & Holz — Exploring LLM Agents for Cleaning Tabular Machine Learning Datasets",
+ "version": "arXiv:2503.06664v1（2025-03-09，ICLR 2025 Workshop on Foundation Models in the Wild），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2503.06664v1",
+ "retrieved_at": "2026-11-04T05:12:12.897456+00:00",
+ "fulltext": "research/paper-completion/papers/lit_36f5ff25cc01.pdf",
+ "sha256": "762cdd5492596807879c20e6ff54db1ee4a6c457d8eea843f40eb10d37e3bb4b",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_36f5ff25cc01",
+ "note": "research/paper-completion/notes/lit_36f5ff25cc01/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§3、附录 A.1–A.2，PDF pp.2–4、12–14",
+  "evaluation": "§4、Fig. 2–4、Tables 1–4，PDF pp.4–8",
+  "limitations": "§5.2，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "lit_36f5ff25cc01:E01",
+   "claim": "研究问题是：保持预处理与训练流水线固定时，LLM 能否仅靠检测并纠正训练数据中的错误来提升模型性能。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_36f5ff25cc01:E02",
+   "claim": "LLM 只拥有 IPython（持久会话）与性能评估两个工具，评估工具在干净的留出测试集上返回分数；不能新增列或行、不能修改流水线；累计 token 达阈值后终止，取最高分提交为最终结果。",
+   "locator": "§3.2、Fig. 1、附录 A.2，PDF pp.3–4、14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_36f5ff25cc01:E03",
+   "claim": "三个 Kaggle 数据集：Titanic (408,12)、Meat Consumption (9160,10)、Hotel Bookings (100000,28)；人类数据科学家 1 小时提升分别为 6.2%、2.5%、0%；注入数值偏移、NaN 损坏、类别偏移三类错误。",
+   "locator": "§3.1、§4.1、Table 1、附录 A.1，PDF pp.3–5、12–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_36f5ff25cc01:E04",
+   "claim": "四个模型均未达到 P_Clean，Hotel Bookings 上全部提升不足 1%；没有模型发现 2016 年 lead time +10 天的偏移；除 gpt-4o 一次运行外均把 PRT 缺失值填为 Other。",
+   "locator": "§4.2.1、Fig. 2，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_36f5ff25cc01:E05",
+   "claim": "gemini-2.0-flash-exp 从 200k 到 2M token：Titanic 3.69%→8.88%，Meat 1.51%→1.79%，Hotel 0.08%→1.90%。",
+   "locator": "§4.2.2、Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_36f5ff25cc01:E06",
+   "claim": "无效提交比例 7.94%–13.53%；提交相关调用占比 gpt-4o 29% 至 o3-mini 84.70%，体现暴力反复提交倾向。",
+   "locator": "§4.2.4、Tables 3–4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_36f5ff25cc01:E07",
+   "claim": "工作规模小（3 数据集、作者手工注入错误），正文未列各模型精确提升与方差；评估工具直接暴露干净测试集分数，与真实无真值清洗场景不同。",
+   "locator": "§3.1、§4.2、§5.2，PDF pp.3–9",
+   "basis": "inference",
+   "basis_note": "数据集数量与作者自述局限来自原文；关于反馈信号与真实场景差异、缺少精确数值的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "lit_63ebb2ade22f",
+ "url": "https://arxiv.org/abs/2312.07104",
+ "title": "Zheng, Yin et al. — SGLang: Efficient Execution of Structured Language Model Programs",
+ "version": "arXiv:2312.07104v2（2024-06-06，Preprint/under review），20 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2312.07104",
+ "retrieved_at": "2026-11-04T05:31:49.521477+00:00",
+ "fulltext": "research/paper-completion/papers/lit_63ebb2ade22f.pdf",
+ "sha256": "161e0a0123a89cd8a57d68734ae704680b0e577fee41e1e7e1029c37a9d99b57",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "research/paper-completion/notes/lit_63ebb2ade22f",
+ "note": "research/paper-completion/notes/lit_63ebb2ade22f/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§2–5、Table 1、Figs. 2–4，PDF pp.3–7；附录 A–B、D，PDF pp.15–20",
+  "evaluation": "§6、Figs. 5–8、Table 2，PDF pp.7–9；附录 C、Figs. 12–13，PDF pp.18–19",
+  "limitations": "§3（饥饿）、§8 Future Directions、附录 B.3、D.1，PDF pp.6、10、18–19"
+ },
+ "evidence": [
+  {
+   "id": "lit_63ebb2ade22f:E01",
+   "claim": "作者认为 LM 程序含多次相互依赖的生成调用与结构化输入输出，现有推理引擎不了解工作负载结构，请求结束即丢弃 KV cache，约束解码只能逐 token 进行。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_63ebb2ade22f:E02",
+   "claim": "SGLang 前端是嵌入 Python 的 DSL，原语包括 gen（可带 regex）、select、extend、fork/join、image/video；解释器把提示当作异步流执行，也可编译为计算图。",
+   "locator": "§2、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_63ebb2ade22f:E03",
+   "claim": "RadixAttention 用基数树管理 token 序列到分页 KV cache 的映射，LRU 逐叶淘汰并以引用计数保护运行中请求；缓存感知调度按最长共享前缀优先，定理 3.1 证明缓存不小于最长请求时 DFS 顺序达到离线最优命中率。",
+   "locator": "§3，PDF pp.4–6；附录 A.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_63ebb2ade22f:E04",
+   "claim": "评测覆盖 MMLU、HellaSwag、ReAct/生成式智能体、思维树、思维骨架、LLM 评审、JSON 解码、多轮对话、DSPy RAG 等工作负载，基线为 Guidance v0.1.8、vLLM v0.2.5、LMQL v0.7.3。",
+   "locator": "§6.1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_63ebb2ade22f:E05",
+   "claim": "SGLang 在开源模型上吞吐最高提升 6.4 倍、延迟最多降 3.7 倍；缓存命中率 50%–99%，缓存感知调度平均达最优命中率的 96%。",
+   "locator": "§6.2、Figs. 5–6、Fig. 13，PDF pp.7–8、19",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_63ebb2ade22f:E06",
+   "claim": "LLaVA-v1.5-7B 吞吐由 0.18 提升到 1.15 image/s，LLaVA-NeXT-34B 由 0.02 提升到 0.10 frame/s；压缩 FSM 使 JSON 解码吞吐提高 1.6 倍。",
+   "locator": "Table 2、§6.3，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_63ebb2ade22f:E07",
+   "claim": "端到端结果主要以归一化柱状图呈现，未给逐基准绝对值，且只评吞吐/延迟不评输出质量；作者自认贪心调度可能饥饿、压缩 FSM 存在概率失真。",
+   "locator": "§3、§6、附录 B.3，PDF pp.6–9、18",
+   "basis": "inference",
+   "basis_note": "局限条目来自原文；对呈现方式的评价为阅读者分析。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

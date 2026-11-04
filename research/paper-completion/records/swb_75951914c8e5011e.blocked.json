@@ -1,0 +1,40 @@
+{
+ "id": "swb_75951914c8e5011e",
+ "title": "Randomised controlled trial of an interactive multimedia decision aid on benign prostatic hypertrophy in primary care",
+ "url": "https://doi.org/10.1136/bmj.323.7311.493",
+ "attempts": [
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC48138/pdf/493.pdf",
+   "result": "HTML proof-of-work 'Preparing to download' challenge page, not a PDF"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC48138/",
+   "result": "reCAPTCHA challenge page"
+  },
+  {
+   "url": "https://europepmc.org/articles/PMC48138/pdf/render",
+   "result": "HTTP 403"
+  },
+  {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC48138/fullTextXML",
+   "result": "HTTP 500 (not in open-access subset)"
+  },
+  {
+   "url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC48138.",
+   "result": "no objects (not in PMC open data / TDM set)"
+  },
+  {
+   "url": "https://www.bmj.com/content/323/7311/493.full.pdf",
+   "result": "HTTP 403"
+  },
+  {
+   "url": "https://www.bmj.com/content/bmj/323/7311/493.full.pdf",
+   "result": "HTTP 403 (OpenAlex/Semantic Scholar bronze OA URL)"
+  },
+  {
+   "url": "https://api.unpaywall.org/v2/10.1136/bmj.323.7311.493",
+   "result": "no oa_locations"
+  }
+ ],
+ "reason": "Batch title '0096' is a placeholder; DOI resolves to Murray et al., BMJ 2001;323:493 (PMID 11532845, PMC48138). Full text exists on PMC and BMJ but every route returned a bot challenge or 403; no full text obtained, so no analysis written."
+}

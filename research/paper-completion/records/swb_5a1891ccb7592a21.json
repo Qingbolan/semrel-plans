@@ -1,0 +1,72 @@
+{
+ "id": "swb_5a1891ccb7592a21",
+ "url": "https://aclanthology.org/2026.eacl-demo.34",
+ "title": "Vaghefi, Hachcham et al. — AI for Climate Finance: Agentic Retrieval and Multi-Step Reasoning for Early Warning System Investments",
+ "version": "EACL 2026 System Demonstrations，pp.492–511（2026.eacl-demo.34），20 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2026.eacl-demo.34.pdf",
+ "retrieved_at": "2026-11-04T05:32:31+00:00",
+ "fulltext": "research/paper-completion/papers/swb_5a1891ccb7592a21.pdf",
+ "sha256": "d66a3f82bbb1f1b732f8cec1441dae970ed6dcb77d86cb08fa93ee2732885431",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "research/paper-completion/notes/swb_5a1891ccb7592a21",
+ "note": "research/paper-completion/notes/swb_5a1891ccb7592a21/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1，PDF pp.1–2；附录 D，pp.10–13",
+  "method": "§3–4，PDF pp.2–3；附录 A、F、G、H，pp.7–9、14–17",
+  "evaluation": "§5、Table 1、Figures 2–3，PDF pp.3–5；附录 E、I、J、K，Tables 2–7，pp.14、17–19",
+  "limitations": "§6、Limitations，PDF pp.5–6、19"
+ },
+ "evidence": [
+  {
+   "id": "swb_5a1891ccb7592a21:E01",
+   "claim": "任务是多标签分类加预算分配：对 MDB/基金项目文档输出五个 EW4All 支柱的标签、各支柱金额和证据片段；某支柱算真阳性须标签正确且金额落在金标准 ±5%·文档总额内，预测不做归一化。",
+   "locator": "Abstract、§5.1，PDF pp.1、3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5a1891ccb7592a21:E02",
+   "claim": "系统用 Docling 解析、上下文增强分块、text-embedding-3-small 与 BM25F 经 RRF（K=60）融合取前 5 块，再由 LLM 智能体规划子查询、自我验证并在证据不足时重新查询。",
+   "locator": "§3、附录 A，PDF pp.2、7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5a1891ccb7592a21:E03",
+   "claim": "CREWS 语料为 500 份项目报告、20,000 个专家标注片段，按文档 350/100/50 划分；支柱 2 占 32%，跨支柱占 8%。",
+   "locator": "附录 E.1–E.2，Tables 2–3，PDF p.14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5a1891ccb7592a21:E04",
+   "claim": "CREWS 测试集上智能体准确率 0.87、精确率 0.89、召回率 0.83；最强基线 Few-Shot-CoT 为 0.51/0.63/0.71。",
+   "locator": "§5.1、Table 1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5a1891ccb7592a21:E05",
+   "claim": "§5.1 所说\"比最强基线提升 8–14 个百分点\"与 Table 1 不符：按表计算，准确率差 36 点、精确率差 25 点、召回率差 12 点。",
+   "locator": "§5.1、Table 1，PDF p.4",
+   "basis": "inference",
+   "basis_note": "差值由阅读者按 Table 1 计算。"
+  },
+  {
+   "id": "swb_5a1891ccb7592a21:E06",
+   "claim": "与黑盒助手对比时，智能体总额准确率中位数约 0.78，Gemini 2.5 Flash 约 0.73，OpenAI Assistants 约 0.68；预算分散在叙述文字的项目里 Gemini 略好。",
+   "locator": "§5.3、Figures 2–3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5a1891ccb7592a21:E07",
+   "claim": "跨基金测试准确率从 CREWS 的 0.87 降到 GCF 0.72（15 份）和 AF 0.68（10 份）；MDB 证据集规模和推理用 LLM 型号原文未给出。",
+   "locator": "附录 K、Table 7，PDF pp.18–19；§4.3、§5.2，pp.3–4",
+   "basis": "inference",
+   "basis_note": "跨基金数字为原文；\"规模和型号未给出\"为阅读者通读后的判断。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

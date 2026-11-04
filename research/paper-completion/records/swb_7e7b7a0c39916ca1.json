@@ -1,0 +1,71 @@
+{
+ "id": "swb_7e7b7a0c39916ca1",
+ "url": "https://aclanthology.org/2022.acl-long.297",
+ "title": "LexGLUE: A Benchmark Dataset for Legal Language Understanding in English",
+ "version": "ACL 2022 长文，pp.4310–4330（ACL Anthology 2022.acl-long.297），21 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2022.acl-long.297.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_7e7b7a0c39916ca1.pdf",
+ "sha256": "90d7c0d438f7b1b12100b3c9d4ab7b49ee37d07ed999d269e8ed6959e6b24188",
+ "format": "pdf",
+ "pages": 21,
+ "note_directory": "research/paper-completion/notes/swb_7e7b7a0c39916ca1",
+ "note": "research/paper-completion/notes/swb_7e7b7a0c39916ca1/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–§2，PDF pp.1–3",
+  "method": "§3–§4，PDF pp.3–7",
+  "evaluation": "§5、Tables 3–4、附录 B–E，PDF pp.7–8、17–18",
+  "limitations": "§6–§7、附录 F，PDF pp.8–9、19"
+ },
+ "evidence": [
+  {
+   "id": "swb_7e7b7a0c39916ca1:E01",
+   "claim": "法律文本有罕见术语、特殊词义、古旧与外来表达及超长文档；法律 NLP 资源分散、指标不统一，因此仿 GLUE/SuperGLUE 建立统一基准。",
+   "locator": "§1–§2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7e7b7a0c39916ca1:E02",
+   "claim": "LexGLUE 由 7 个英文数据集组成：ECtHR A/B（9,000/1,000/1,000）、SCOTUS（5,000/1,400/1,400）、EUR-LEX（55,000/5,000/5,000）、LEDGAR（60,000/10,000/10,000）、UNFAIR-ToS（5,532/2,275/1,607）、CaseHOLD（45,000/3,900/3,900）。",
+   "locator": "§3.2、Table 1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7e7b7a0c39916ca1:E03",
+   "claim": "数据被简化：ECtHR 仅保留 10 个可违反且依赖事实的条款，EUR-LEX 取 level 2 最常见 100 个概念，LEDGAR 取最常见 100 类；多数数据按时间重新切分，CaseHOLD 因无时间信息不能。",
+   "locator": "§3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7e7b7a0c39916ca1:E04",
+   "claim": "评估时为多标签任务额外加入'无标签'类，因为无标签样本比例在 ECtHR A 为 11.5%、ECtHR B 为 1.6%、UNFAIR-ToS 为 95.5%。",
+   "locator": "附录 B，PDF p.17",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7e7b7a0c39916ca1:E05",
+   "claim": "Legal-BERT 的算术均值 µ-F1/m-F1 为 79.8/72.0，为最高；没有单一模型在所有任务上最好，SCOTUS 上 TF-IDF+SVM 最好（78.2/69.5）。",
+   "locator": "§5.2、Tables 3–4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7e7b7a0c39916ca1:E06",
+   "claim": "局限包括只覆盖英文、无人工评估与人类水平估计、未纳入匿名化任务；分层模型上层 Transformer 未预训练。",
+   "locator": "§6–§7，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7e7b7a0c39916ca1:E07",
+   "claim": "§4.2 脚注 13 给出标准 BERT 的差距为 −12.2/−10.6/−3.5，而附录 D 写分层版本领先 +10.2/+7.5/+4.9 个百分点，两处数值不一致；单种子报告与小差距使模型排序需谨慎。",
+   "locator": "§4.2 脚注 13、§5.1、附录 D，PDF pp.6–7、18",
+   "basis": "inference",
+   "basis_note": "两处数值均取自原文；对其不一致及排序可靠性的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

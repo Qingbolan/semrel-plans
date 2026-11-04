@@ -1,0 +1,12 @@
+{
+ "id": "lit_6525046eefce",
+ "title": "Cracking SQL Barriers: An LLM-based Dialect Translation System",
+ "url": "https://doi.org/10.1145/3725278",
+ "attempts": [
+  {"url": "https://dl.acm.org/doi/pdf/10.1145/3725278", "result": "HTTP 200 but body is a Cloudflare 'Just a moment...' bot-challenge HTML page, not a PDF; not circumvented"},
+  {"url": "https://api.openalex.org/works/doi:10.1145/3725278", "result": "OpenAlex lists only the ACM DL location (oa_status hybrid); no repository copy (any_repository_has_fulltext=false)"},
+  {"url": "https://arxiv.org/abs/2504.00882", "result": "Different paper: 'CrackSQL: A Hybrid SQL Dialect Translation System Powered by Large Language Models' (demo paper by same project); not used as a substitute"},
+  {"url": "https://github.com/OpenDataBox/CrackSQL", "result": "Code repository; README and top-level files contain no copy of the SIGMOD/PACMMOD paper PDF"}
+ ],
+ "reason": "Full text of the PACMMOD 2025 paper is only at ACM DL, which returns a bot challenge to non-browser clients; no open repository or arXiv copy of this exact paper was found."
+}

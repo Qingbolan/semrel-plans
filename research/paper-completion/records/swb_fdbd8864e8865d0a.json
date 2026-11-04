@@ -1,0 +1,71 @@
+{
+ "id": "swb_fdbd8864e8865d0a",
+ "url": "https://aclanthology.org/2022.coling-1.63",
+ "title": "Hewett & Stede — Extractive summarisation for German-language data: a text-level approach with discourse features",
+ "version": "COLING 2022 论文集 pp.756–765（ACL Anthology 2022.coling-1.63），10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2022.coling-1.63.pdf",
+ "retrieved_at": "2026-11-04T05:40:11+00:00",
+ "fulltext": "research/paper-completion/papers/swb_fdbd8864e8865d0a.pdf",
+ "sha256": "3d5a975b030c8827dd5c92eacda3d814744d938dc3601050f83e8853dab1ca28",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "research/paper-completion/notes/swb_fdbd8864e8865d0a",
+ "note": "research/paper-completion/notes/swb_fdbd8864e8865d0a/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3–5.2、Table 2、公式 (1)，PDF pp.2–7",
+  "evaluation": "§5.3、Tables 3–4，PDF pp.6–8；附录超参数 p.10",
+  "limitations": "§3.2–3.3、§6，PDF pp.2–3、8"
+ },
+ "evidence": [
+  {
+   "id": "swb_fdbd8864e8865d0a:E01",
+   "claim": "PCC 含 176 篇德语地区日报评论，平均 11.4 句；作者为每篇新建 3 个排序关键句的抽取式摘要，约占平均句数 26%，并公开发布。",
+   "locator": "§3、§3.1，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbd8864e8865d0a:E02",
+   "claim": "30 篇双标注的选句 Cohen κ=.32；两名标注者摘要互比 ROUGE-1 F1=.587（随机基线 .380），WMD=.512（随机基线 .827）。",
+   "locator": "§3.2–3.3，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbd8864e8865d0a:E03",
+   "claim": "关键句中 70% 为核（全集 61%），25% 含 most-nuclear EDU；按深度分取前三句与关键句的重合为 46%。",
+   "locator": "§4.2–4.3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbd8864e8865d0a:E04",
+   "claim": "抽取式摘要被表述为句子二分类；建模数据为 167 篇、1,894 句，30% 为测试集，使用类别权重处理不平衡。",
+   "locator": "§5、§5.2，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbd8864e8865d0a:E05",
+   "claim": "Table 3 中 FFN 关键句类 F1=.506（R .588、P .448），LR .488，bi-LSTM .440，首中末句基线 .225；FFN 测试集 ROUGE-1 F1=.690。",
+   "locator": "§5.3、Table 3，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbd8864e8865d0a:E06",
+   "claim": "LR 消融中单特征以句长（.462）和句向量（.452）最强，作者提出的文档上下文句向量为 .385，未带来整体提升。",
+   "locator": "Table 4、§5.3、§6，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbd8864e8865d0a:E07",
+   "claim": "§3 的 176 篇与 §5 的 167 篇建模文本之间存在未解释的差异；与 Louis et al. 的比较跨语言、跨语料，且无方差或显著性报告，结论稳定性有限。",
+   "locator": "§3、§5、§6、Table 3，PDF pp.2、6–8",
+   "basis": "inference",
+   "basis_note": "数字来自原文；差异与稳定性判断为阅读者比对后得出，原文只说明了跨语料不可直接比较。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

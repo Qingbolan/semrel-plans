@@ -1,0 +1,66 @@
+{
+ "id": "lit_429b4326c58f",
+ "url": "https://arxiv.org/abs/2506.10974",
+ "title": "Luo, Ou, Zheng et al. — AutoMind: Adaptive Knowledgeable Agent for Automated Data Science",
+ "version": "arXiv:2506.10974v4（DAI ’26 版本），23 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2506.10974v4",
+ "retrieved_at": "2026-11-04T05:07:18.457550+00:00",
+ "fulltext": "research/paper-completion/papers/lit_429b4326c58f.pdf",
+ "sha256": "ed59e9aeece5b0036248d829bff3d7cb7433d677d1e4b0ac81b21bfd519889cd",
+ "format": "pdf",
+ "pages": 23,
+ "note_directory": "research/paper-completion/notes/lit_429b4326c58f",
+ "note": "research/paper-completion/notes/lit_429b4326c58f/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3、Algorithm 1、Fig.1，PDF pp.2–5",
+  "evaluation": "§4–5、Tables 1–4、Figs.2–4，PDF pp.5–8、11",
+  "limitations": "正文无独立局限节；依据 §4.1、§4.2、附录 A–B，PDF pp.5–6、10–12"
+ },
+ "evidence": [
+  {
+   "id": "lit_429b4326c58f:E01",
+   "claim": "知识库由 455 个 Kaggle 竞赛的 3,237 篇有效方案帖与近三年顶会/期刊论文构成，使用 11 个一级类别的分层标签，并在检索时排除同一目标任务的方案。",
+   "locator": "§3.1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_429b4326c58f:E02",
+   "claim": "搜索策略是启发式概率规则：先补足 C_init 个草稿，以 H_debug 概率调试 buggy 叶，以 H_greedy 概率改进最优节点，否则改进随机 valid 节点；复杂度评分超过阈值时分步生成并做 AST 检查和执行。",
+   "locator": "§3.2–3.3、Algorithm 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_429b4326c58f:E03",
+   "claim": "评测使用的 MLE-Bench lite 只有 15 个任务，筛选时排除了先前 SOTA 无有效提交的任务，并按类别每类保留 1–2 个；结论不等同于完整 75 任务排行榜。",
+   "locator": "§4.2、附录 A、Table 4，PDF pp.5、10–11",
+   "basis": "inference",
+   "basis_note": "筛选规则与任务数为原文；对结论适用范围的限定为阅读者分析。"
+  },
+  {
+   "id": "lit_429b4326c58f:E04",
+   "claim": "Table 1 Overall avg@3 胜率：AutoMind(o3-mini) 0.39、AutoMind(DeepSeek-V3) 0.41，AIDE 同骨干分别为 0.28、0.36；BELKA AP 为 0.44 对 0.09。",
+   "locator": "§4.3、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_429b4326c58f:E05",
+   "claim": "在 Medium 子集的消融中，去掉知识库使胜率下降 11.8%、有效率下降 5.6%；改为一次性编码使胜率下降 13.2%、有效率下降 27.6%。",
+   "locator": "§5.1、Fig.3，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_429b4326c58f:E06",
+   "claim": "原文多处数字不一致：摘要写 40%/8.0%，§4.3 写 38.7%/41.2% 与 11.0%/5.2%；Table 3 中 AutoMind 输入 2.15M + 输出 0.27M ≠ 总计 2.25M；§4.1 写 RTX 3090，附录 B 写 Tesla V100 32G。",
+   "locator": "摘要、§4.1、§4.3、Table 3、附录 B，PDF pp.1、5、7、11",
+   "basis": "inference",
+   "basis_note": "各数字均为原文；不一致的识别与算术核对为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

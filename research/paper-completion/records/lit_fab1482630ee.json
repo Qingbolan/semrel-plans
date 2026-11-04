@@ -1,0 +1,71 @@
+{
+ "id": "lit_fab1482630ee",
+ "url": "https://arxiv.org/abs/2606.03152",
+ "title": "Nie, Xia, Liu, Jermaine & Chaudhuri — Cost-Aware Optimization for Agentic Query Execution",
+ "version": "arXiv:2606.03152v2（2026-10-07，PVLDB 格式预印本），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.03152v2",
+ "retrieved_at": "2026-11-04T04:52:08.877893+00:00",
+ "fulltext": "research/paper-completion/papers/lit_fab1482630ee.pdf",
+ "sha256": "3c1b0fcf748e8713643473326bdf77a8de45ab2b0a8649e137c14e684341aa61",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_fab1482630ee",
+ "note": "research/paper-completion/notes/lit_fab1482630ee/README.md",
+ "read_sections": {
+  "problem": "§1–2、Figure 1，PDF pp.1–3",
+  "method": "§3.1–3.4、Table 1、Figure 2、Algorithm 1，PDF pp.3–8",
+  "evaluation": "§4–5、Tables 2–5、Figures 3–4，PDF pp.8–12",
+  "limitations": "§5.4、§5.5、§5.7、§7，PDF pp.10–12（无独立 Limitations 节）"
+ },
+ "evidence": [
+  {
+   "id": "lit_fab1482630ee:E01",
+   "claim": "LLM 语义算子是近似且昂贵的，其放置、顺序和粒度同时决定成本与答案质量，经典的等价计划假设失效；现有混合系统在处理元组前固定计划。",
+   "locator": "§1、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fab1482630ee:E02",
+   "claim": "问题形式化为状态 (q, W_t) 上的序贯决策，目标是最大化 E[U(y) − λΣc]，查询时 U 不可观测。",
+   "locator": "§2.2，式 1–2，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fab1482630ee:E03",
+   "claim": "计划空间五轴：执行范式、算子类型、算子位置、选择范围、投影宽度，各对应一个经典优化概念，共 21 种轴赋值（含 1 种自适应）。",
+   "locator": "§3.1、Table 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fab1482630ee:E04",
+   "claim": "EnumGRPO 以计划枚举替代温度采样，组内相对优势加四阶段 LLM 蒸馏只更新自然语言经验池，不更新权重。",
+   "locator": "§3.2–3.4、Algorithm 1，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fab1482630ee:E05",
+   "claim": "SWAN 120 题分为 40 学习/80 评测，4 个 BIRD 派生库；SemBench Movie 10 题，Spider 166 题、BIRD 231 题用于迁移。",
+   "locator": "§4.1–4.2、Table 2，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fab1482630ee:E06",
+   "claim": "SWAN 上 EnumGRPO EX 35.4%、LLM 算子总成本 0.864 美元（每查询约 0.011），Agentic BlendSQL 30.0%、273.95 美元，Palimpzest† 12.5%、47.56 美元，LOTUS† 20.8%、2.60 美元。",
+   "locator": "Table 3A、§5.1，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fab1482630ee:E07",
+   "claim": "LOTUS/Palimpzest 执行由 oracle 辅助翻译的固定程序，跨系统对比含协议差异；学习成本 77.32 美元，1× 规模约 1,677 条查询回本，低频工作负载不划算。",
+   "locator": "§4.2，PDF p.8；§5.7，PDF p.12",
+   "basis": "inference",
+   "basis_note": "协议与学习成本数字来自原文；协议差异影响对比解读为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

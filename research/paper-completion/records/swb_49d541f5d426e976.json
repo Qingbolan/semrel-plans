@@ -1,0 +1,71 @@
+{
+ "id": "swb_49d541f5d426e976",
+ "url": "https://aclanthology.org/2023.mwe-1.6",
+ "title": "Savary et al. — PARSEME Corpus Release 1.3",
+ "version": "MWE 2023 Workshop 论文集 pp.24–35（ACL Anthology 2023.mwe-1.6），PDF 12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2023.mwe-1.6.pdf",
+ "retrieved_at": "2026-11-04T05:50:00+00:00",
+ "fulltext": "research/paper-completion/papers/swb_49d541f5d426e976.pdf",
+ "sha256": "cc13853a048d07407f5998748d58355d57496b0c492879975273045060f8e7d1",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "research/paper-completion/notes/swb_49d541f5d426e976",
+ "note": "research/paper-completion/notes/swb_49d541f5d426e976/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§2–§9，PDF pp.2–6",
+  "evaluation": "§7、§10、Table 1、Figure 3、附录 Table 2，PDF pp.5–8、11–12",
+  "limitations": "§10 末段、§11，PDF p.7"
+ },
+ "evidence": [
+  {
+   "id": "swb_49d541f5d426e976:E01",
+   "claim": "1.3 版目标：以统一 UD 格式发布以往 26 种语言、使语料发布与共享任务脱钩、建立持续改进与定期发布流程。",
+   "locator": "§1，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49d541f5d426e976:E02",
+   "claim": "新增阿拉伯语（约 7,500 句、>4,700 个 VMWE，从零新建）与塞尔维亚语（3,586 句、>1,300 个 VMWE，单人标注）；扩充希腊语、瑞典语（4,304→6,026 句）、汉语（新增 9,000 句）。",
+   "locator": "§2–§3，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49d541f5d426e976:E03",
+   "claim": "所有 26 种语言使用 UD-2 标签集：11 种语言含部分人工形态句法标注并同步至 UD 2.11，16 种语言用 UDPipe（多为 v2.10）重新分析；格式为扩展 CoNLL-U 的 .cupt。",
+   "locator": "§5，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49d541f5d426e976:E04",
+   "claim": "按 1.2 标准重划分：测试集相对 train+dev 固定 300 个未见 VMWE，开发集相对 train 固定 100 个；理由是系统性能与未见 VMWE 比例强相关、与训练规模弱相关。",
+   "locator": "§6，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49d541f5d426e976:E05",
+   "claim": "全集 455,629 句、9,264,811 token、127,498 个 VMWE，最常见类别为 LVC.full（40,933）、IRV（29,062）、VID（26,214）。",
+   "locator": "§7、Table 2，PDF pp.5、12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49d541f5d426e976:E06",
+   "claim": "Seen2Seen 在瑞典语上 F1 从 70.68 升至 82.25，汉语从 49.28 降至 35.07；MTLB-STRUCT 只评测了多任务版，且 4 种语言未评测；作者承认因重划分与模型版本不同，1.2/1.3 比较不完全可靠。",
+   "locator": "§10、Table 1，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49d541f5d426e976:E07",
+   "claim": "该语料的主要贡献是数据统一与发布基础设施，而非新的识别方法；不存在覆盖全部 26 种语言的神经基线。",
+   "locator": "§1、§10、Table 1，PDF pp.2、6–8",
+   "basis": "inference",
+   "basis_note": "根据原文目标陈述与 Table 1 覆盖情况所做的阅读者判断。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

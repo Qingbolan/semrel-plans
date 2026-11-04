@@ -1,25 +1,24 @@
-# Workload分析
+# 工作负载
 
-## 求证什么
+**要验证什么**（§IV，p.6）：四个研究问题。RQ1 效果：在结构异构的系统和不同 LLM 上是否超过基线；RQ2 效率：token 与墙钟时间；RQ3 消融：各模块贡献及是否依赖系统特定 prompt；RQ4 失败分析：残余错误的类型与结构瓶颈。
 
-将可重复的遥测提取交给确定性程序，再让LLM区分根因与传播，能否比开放代码取证减少调用并提升答案；进一步用消融区分证据缺失与判断错误（§IV RQ1–4）。
+**数据**：沿用 OpenRCA 的既有遥测，本文没有新增事故集（§IV-A，p.6）。三个系统在各结构维度上都不同（Table I，p.3）：
 
-## 数据与任务
+| 维度 | Bank | Telecom | Market |
+|---|---|---|---|
+| 案例数 | 136 | 51 | 148 |
+| 候选层级 | pod | node、pod、service | node、pod、service |
+| 候选组件 | 14 pod（6 service） | 22 node、8 pod、13 service | 6 node、40 pod、10 service |
+| 纵向拓扑 | 无 | node–pod 共部署 | 编码在 pod 名中；有故障转移 |
+| 模态 | 指标、调用链、日志 | 指标、调用链（无日志） | 指标、调用链、日志 |
+| 黄金信号 | 合成服务测试 | 单一网关（OSB） | 每服务 |
+| 原因类型数 | 8 | 5 | 15 |
+| 时间单位 | 指标 s、调用链 ms、日志 s | 全部 ms | 指标 s、调用链 ms、日志 s |
 
-沿用OpenRCA：Bank 136、Telecom 51、Market 148，335案例。每个30分钟窗口查询组件/时间/原因的子集，候选封闭且提供故障数量；Correct要求所有字段及根因数量正确，时间±60秒，Partial另计。数据为既有遥测，本文并未新增自然事故集。相同DeepSeek-v4-pro与Qwen3.7-plus分别运行系统和基线；质量按案例数加权，另测tokens与墙钟（§IV.A、表III–IV）。
+Market 合并了 cloudbed-1 与 cloudbed-2 两个部署。
 
-## 最有说服力的具体用例：把CPU根因与连带异常分开
+**评分**（§IV-A，p.6）：使用 OpenRCA 评分器。Correct 要求所有被查询字段正确且预测根因数等于注入故障数，时间误差 ±60 s；Partial 按答对的字段比例计分。难度按查询模板分：easy 问 1 个元素（task 1–3）、middle 问 2 个（task 4–6）、hard 问全部 3 个（task 7）。
 
-图2的Telecom查询发生在04:00–04:30。**处理前：** 原始多模态遥测同时出现数据库连接尖峰、慢pod和节点CPU高，最大的异常不一定是原因；论文没有给出该单例RCA-agent失败结果。**处理后：** 确定性提取缩为六张证据卡；04:01–04:03的数据库尖峰太早，真正业务异常在04:19。docker_006的延迟比3.9倍、CPU超过99分位，而同节点docker_002健康，支持pod CPU故障而非整个节点故障；下游检查排除从数据库传播（§III.E）。
+**模型**：deepseek-v4-pro 与 qwen3.7-plus，系统与基线都用这两个模型运行；Overall 按案例数加权（§IV-A、Table III）。
 
-该原文案例展示“压缩证据后仍需判断”，不会把确定性提取等同于完成诊断。整体上DeepSeek的Correct为43.9%，同模型RCA-agent为13.1%，Oracle为14.6%；这些是335例汇总，不是该单例准确率。
-
-## Baseline与公平性
-
-- RCA-Agent：状态化Python上的Controller–Executor，循环写代码处理原始遥测；同模型重跑，避免只与2025旧模型数字比较。
-- Oracle Sampling：工程师预选诊断KPI后单次判断，带特权先验，不是无先验普通基线。
-- 消融分别移除Trace、Co-location、Log、Golden signal、Safety net、指导信息等，检验各组件的增量；不是新独立系统。
-
-表IV的15–26倍token减少及3.2–19.6倍时间改善采用DeepSeek。Telecom/Market预计算分钟调用摘要供全部案例复用，Bank逐案例重建；必须另计构建与摊销，不能直接当完整冷启动加速。真实组件未进入证据卡时模型受召回上限约束；Market失败网络案例尤其明显（§IV.E）。结果不证明所有任务都应预提取，也不能直接与本项目不给故障数的Bank设置比较。
-
-来源：[原文](paper.pdf)，§III.E、§IV–V、图2、表III–V；arXiv v1。
+依据：[arXiv 2609.19825v1](https://arxiv.org/abs/2609.19825v1)，§II-B、§IV-A、Tables I、III，pp.2–3、6–7。

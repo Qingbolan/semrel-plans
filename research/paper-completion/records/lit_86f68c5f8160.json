@@ -1,0 +1,71 @@
+{
+ "id": "lit_86f68c5f8160",
+ "url": "https://arxiv.org/abs/2304.11015",
+ "title": "Pourreza & Rafiei — DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction",
+ "version": "arXiv 2304.11015v3（2023-11-02，NeurIPS 2023 版），34 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2304.11015v3",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_86f68c5f8160.pdf",
+ "sha256": "ceee8729821dcd776c559baff20f6f1af0e1c0372fef895024b52d9ef76db283",
+ "format": "pdf",
+ "pages": 34,
+ "note_directory": "research/paper-completion/notes/lit_86f68c5f8160",
+ "note": "research/paper-completion/notes/lit_86f68c5f8160/README.md",
+ "read_sections": {
+  "problem": "§1、§3、Figure 1，PDF pp.1–4；Figure 1 已渲染核对",
+  "method": "§4.1–4.4，PDF pp.4–6；附录 A，PDF pp.15–34",
+  "evaluation": "§5、Tables 2–5、Figure 4，PDF pp.6–10",
+  "limitations": "§7，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "lit_86f68c5f8160:E01",
+   "claim": "§3 在 Spider 训练集随机抽 500 条（排除提示所用数据库）分析 CodeX Davinci 少样本失败：模式链接 37%、JOIN 21%、GROUP BY 13%、嵌套 13%、其他 13%、无效 SQL 3%；未给出失败绝对数。",
+   "locator": "§3、Figure 1，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_86f68c5f8160:E02",
+   "claim": "DIN-SQL 由模式链接、分类与分解（easy / non-nested complex / nested complex）、按类别的 SQL 生成（non-nested 用 NatSQL 中间表示，nested 先解子查询）和零样本自我修正四个提示模块组成。",
+   "locator": "§4.1–4.4，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_86f68c5f8160:E03",
+   "claim": "Spider 隐藏测试集：DIN-SQL + GPT-4 EX 85.3、EM 60；RESDSQL-3B + NatSQL EX 79.9、EM 72；DIN-SQL + CodeX Davinci EX 78.2、EM 57。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_86f68c5f8160:E04",
+   "claim": "BIRD 测试集 DIN-SQL + GPT-4 EX 55.9、VES 59.44，GPT-4 基线 EX 54.89、VES 60.77；开发集 DIN-SQL EX 50.72、VES 58.79，基线 46.35、49.77。测试集上 DIN-SQL 的 VES 低于基线，引言的 VES 提升 9% 仅指开发集。",
+   "locator": "Table 3、§1，PDF pp.2、9",
+   "basis": "inference",
+   "basis_note": "数值来自 Table 3；测试集 VES 低于基线的比较为阅读者计算。"
+  },
+  {
+   "id": "lit_86f68c5f8160:E05",
+   "claim": "消融（CodeX Davinci，Spider 开发集 EX）：完整 69.9，去模式链接 65.9，去分类（简单少样本）63.1，去分类（分解 CoT）68.2，去自我修正 67.3；GPT-4 上 generic 自我修正 70.0 低于无修正 73.3，gentle 为 74.2。",
+   "locator": "Table 5，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_86f68c5f8160:E06",
+   "claim": "Spider：10,181 问题、200 库；训练 8,659（146 库）、开发 1,034（20 库）、测试 2,147（34 库），库不重叠。BIRD：12,751 对、95 库共 33.4 GB；DIN-SQL 在 BIRD 提示中加入样本行和外部知识。",
+   "locator": "§5.3，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_86f68c5f8160:E07",
+   "claim": "局限：示例按类别手工固定；用 GPT-4 回答一个 Spider 问题约 0.5 美元、约 60 秒。",
+   "locator": "§7，PDF p.10",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

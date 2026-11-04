@@ -1,0 +1,65 @@
+{
+ "id": "swb_af152f5630911f25",
+ "url": "https://aclanthology.org/L16-1699",
+ "title": "Minard et al. — MEANTIME, the NewsReader Multilingual Event and Time Corpus",
+ "version": "LREC 2016，pages 4417–4422，6 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/L16-1699.pdf",
+ "retrieved_at": "2026-11-04T05:48:41.580048+00:00",
+ "fulltext": "research/paper-completion/papers/swb_af152f5630911f25.pdf",
+ "sha256": "582291bb7407aee2fd730745a8f6f2d21af67ad1e3b4909e54761d9411d947a6",
+ "format": "pdf",
+ "pages": 6,
+ "note_directory": "research/paper-completion/notes/swb_af152f5630911f25",
+ "note": "research/paper-completion/notes/swb_af152f5630911f25/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–2",
+  "method": "§3–4，PDF pp.2–4",
+  "evaluation": "§5，Tables 1–3，PDF pp.3–5（仅语料统计，无模型评测）",
+  "limitations": "无 Limitations 节；§5.1、§6 覆盖与发布说明，PDF pp.4–5"
+ },
+ "evidence": [
+  {
+   "id": "swb_af152f5630911f25:E01",
+   "claim": "MEANTIME 服务于 NewsReader 跨新闻故事线重建；选用无版权的 Wikinews，并由专业译者译成西班牙语、意大利语、荷兰语，便于跨语言细粒度比较。",
+   "locator": "§1、§5.1，PDF pp.1、4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_af152f5630911f25:E02",
+   "claim": "文档级标注实体/事件/时间/数值 markable，以及 TLINK、SLINK、CLINK、GLINK、HAS_PARTICIPANT（PropBank）关系和 REFERS_TO 共指；语料级用实例 ID 和 DBpedia URI 链接跨文档共指，并覆盖 44 个种子实体。",
+   "locator": "§3.1–3.2，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_af152f5630911f25:E03",
+   "claim": "意大利语和西班牙语采用五步流程：markable 标注、与英文 markable 对齐、脚本投射、人工复核、跨文档共指投射；荷兰语文档级标注全部人工完成。",
+   "locator": "§4.1–4.2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_af152f5630911f25:E04",
+   "claim": "120 篇英文文章分四个主题各 30 篇，全文 1,797 句、40,231 token；文档级标注只覆盖标题和前四句（597 句、13,981 token），英文有 2,096 个事件提及、1,717 个事件实例。",
+   "locator": "§5.1、§5.3，Tables 1–2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_af152f5630911f25:E05",
+   "claim": "四语共享事件实例 761 个、实体实例 584 个。",
+   "locator": "Table 3，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_af152f5630911f25:E06",
+   "claim": "本文没有模型评测、标注一致性、投射误差或数据划分；作为基准使用需依赖 SemEval 2015 TimeLine、CLIN26、EVALITA 2016 FactA 等任务的定义。",
+   "locator": "§4–6，PDF pp.3–5",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；评价、比较或口径提示为阅读者分析。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

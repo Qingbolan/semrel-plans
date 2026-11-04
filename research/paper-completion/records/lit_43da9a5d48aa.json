@@ -1,0 +1,65 @@
+{
+ "id": "lit_43da9a5d48aa",
+ "url": "https://arxiv.org/abs/2606.00051",
+ "title": "Łabędzki et al. — Business Utility of Large Language Models as Exploratory Data Analysis Agents",
+ "version": "arXiv:2606.00051v1（2026-05-08），16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.00051",
+ "retrieved_at": "2026-11-04T04:51:47.288379+00:00",
+ "fulltext": "research/paper-completion/papers/lit_43da9a5d48aa.pdf",
+ "sha256": "f64d98346adc3df41137e750a197761ca36611e213179437ce8b6201a491d30b",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/lit_43da9a5d48aa",
+ "note": "research/paper-completion/notes/lit_43da9a5d48aa/README.md",
+ "read_sections": {
+  "problem": "§1–2、§3.2，PDF pp.1–2、6",
+  "method": "§4（Table 2、式(1)），PDF pp.6–8",
+  "evaluation": "§5–6、Tables 3–6、Fig.1，PDF pp.8–13",
+  "limitations": "§8 Limitations、§6.4，PDF pp.13–14"
+ },
+ "evidence": [
+  {
+   "id": "lit_43da9a5d48aa:E01",
+   "claim": "可部署的 EDA agent 需要可接受的平均表现与足够的可重复性，高波动会提高核验成本；作者按 De Mast & Trip 的描述—识别—解释三步看待 EDA，并认为现有数据科学基准未覆盖过程式 EDA。",
+   "locator": "§1–3，PDF pp.1–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43da9a5d48aa:E02",
+   "claim": "任务基于供应链 agent 仿真：从间接运营痕迹推断导致低质量与销量损失的供应商-商品组合，输出 JSON 集合，以 Jaccard 对确定性真值评分；失败（无 JSON 或 1200 秒无输出变化）可重试一次，仍失败记 0。",
+   "locator": "§4.2–4.4，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43da9a5d48aa:E03",
+   "claim": "15 个模型-推理档位配置 × 4 种条件（参考、冗余汇总表、无歧义提示、弱信号设置）× 5 条轨迹，共 300 条轨迹，统一使用 OpenCode v1.2.27 默认设置。",
+   "locator": "§4.3、Table 2、§5.1，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43da9a5d48aa:E04",
+   "claim": "Business utility = ms·exp(−2.25·CV^0.88)，参数借自累积前景理论损失侧；条件敏感性用 Mann-Whitney U 与 Kruskal-Wallis 检验，作者视为探索性结果，未做多重比较校正。",
+   "locator": "§4.5 式(1)，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43da9a5d48aa:E05",
+   "claim": "GPT-5.4 xhigh 实验平均 ms 0.8748、CV 0.1202、utility 0.6952 居首；全体平均 ms 0.3562、平均 utility 0.1511（约 42%）；汇总层面只有参考条件与弱信号条件的差异显著（MWU p=0.000908）。",
+   "locator": "Tables 3–5、§6.1，PDF pp.8–9、12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_43da9a5d48aa:E06",
+   "claim": "每条件只有一个仿真实例、5 条轨迹，方差反映的是 agent 运行随机性而非任务分布；ms 接近 0 时折扣项可能很高（如 GPT-5.4 mini low 折扣 0.754），折扣需与 ms 一起解读。原文局限也承认样本小、单一业务问题和参数化依赖。",
+   "locator": "§8、Table 4，PDF pp.9、14",
+   "basis": "inference",
+   "basis_note": "事实及页码来自原文；阅读者对其含义、局限或项目迁移的分析已在正文中标明。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

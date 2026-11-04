@@ -1,0 +1,78 @@
+{
+ "id": "lit_cffc752fd081",
+ "url": "https://arxiv.org/abs/2510.01285",
+ "title": "Salemi et al. — LLM-Based Multi-Agent Blackboard System for Information Discovery in Data Science",
+ "version": "arXiv 2510.01285v2（2026-01-31），44 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2510.01285v2",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_cffc752fd081.pdf",
+ "sha256": "333545f7d918b877eb02579a04da724b0823e7886f232983453975797f5b19be",
+ "format": "pdf",
+ "pages": 44,
+ "note_directory": "research/paper-completion/notes/lit_cffc752fd081",
+ "note": "research/paper-completion/notes/lit_cffc752fd081/README.md",
+ "read_sections": {
+  "problem": "§1–2，pp.1–3",
+  "method": "§3，pp.4–6；附录 D，p.29",
+  "evaluation": "§4、Tables 1–2、Figure 2，pp.6–10；附录 A Table 3，p.19；附录 F，pp.31–41",
+  "limitations": "§6，pp.11–12（无独立局限性章节）"
+ },
+ "evidence": [
+  {
+   "id": "lit_cffc752fd081:E01",
+   "claim": "现有方法多假设相关数据已提供；实际中从大型异构数据湖发现数据是瓶颈。单智能体全量入上下文不可扩展、RAG 检索器在表格/领域数据上差、主从式需中心控制器掌握子智能体能力。",
+   "locator": "§1，pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cffc752fd081:E02",
+   "claim": "任务形式化为：给定数据湖 𝔻 与问题 q，生成 Python 程序 p，执行后读取所需文件并算出答案；用 μ_generation 比较输出与标准答案，用 μ_retrieval 根据标准文件集评价数据发现。",
+   "locator": "§2，p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cffc752fd081:E03",
+   "claim": "主智能体把请求贴到黑板，不点名分派；按文件名由 Gemini-2.5-Pro 聚类得到的各 file agent 与 search agent 自主决定是否响应，响应写入仅主智能体可读的响应板；主智能体 ReAct 最多 10 步。",
+   "locator": "§3、§4.1，pp.4–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cffc752fd081:E04",
+   "claim": "过滤后 KramaBench 104 题（6 领域）、改造 DSBench 253 题/48 文件、改造 DA-Code 91 题/145 文件；Table 3 中 KramaBench 合计行提取为 174613/2714，应为 1764/27 加脚注号 13/14。",
+   "locator": "附录 A Table 3，p.19",
+   "basis": "inference",
+   "basis_note": "任务数与各领域文件数为原文；合计行的脚注拼接判断是阅读者按各行求和得出。"
+  },
+  {
+   "id": "lit_cffc752fd081:E05",
+   "claim": "宏平均端到端得分：Gemini 2.5 Pro 下黑板 28.53% vs 主从 24.01% vs RAG 18.51% vs DS-GRU 7.71%；Claude 4 Opus 下黑板 31.43% vs 主从 27.63%。",
+   "locator": "Table 1，p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cffc752fd081:E06",
+   "claim": "Gemini 2.5 Pro 下文件发现宏平均 F1：黑板 0.561、主从 0.513、RAG 0.247。",
+   "locator": "Table 2，p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cffc752fd081:E07",
+   "claim": "50 题抽样中三者每题运行时间 132.0–145.2 秒；黑板成本约为 RAG 的 2.3 倍、主从的 1.8 倍。",
+   "locator": "§4.2，p.10；附录 F，p.31",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cffc752fd081:E08",
+   "claim": "并非每个骨干在每个数据集上都最优：Gemini Flash 的 DA-Code 上黑板 0.55% 低于 RAG 2.75%；消融与成本实验仅用 Gemini 2.5 Pro 与 KramaBench；未报告方差。",
+   "locator": "Table 1，p.8；§4.2，pp.8–10",
+   "basis": "inference",
+   "basis_note": "数值来自原表；'并非全面占优'及缺方差的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

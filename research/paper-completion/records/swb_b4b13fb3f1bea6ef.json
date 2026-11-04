@@ -1,0 +1,71 @@
+{
+ "id": "swb_b4b13fb3f1bea6ef",
+ "url": "https://aclanthology.org/2021.naacl-main.22",
+ "title": "Paragraph-level Rationale Extraction through Regularization: A case study on European Court of Human Rights Cases",
+ "version": "NAACL-HLT 2021（ACL Anthology 2021.naacl-main.22，pp.226–241），16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2021.naacl-main.22.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_b4b13fb3f1bea6ef.pdf",
+ "sha256": "ff7a697ed5ece1efcb2b2d5cef620b312c09bd5ab34bb7732e0c0a87470b1360",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/swb_b4b13fb3f1bea6ef",
+ "note": "research/paper-completion/notes/swb_b4b13fb3f1bea6ef/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–4",
+  "method": "§4.1–4.2，PDF pp.5–6；附录 B，p.12",
+  "evaluation": "§5–6、Tables 2–6，PDF pp.7–9；附录 C–D、Tables 7–11，pp.12–13",
+  "limitations": "§6.4–6.6、§7，PDF pp.8–9；附录 F，pp.14–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E01",
+   "claim": "任务为被主张违反条款预测：给定 ECtHR 案件事实段落，多标签预测 40 个可违反 ECHR 条款中被主张者，并选出支撑预测的事实段落作为理由。",
+   "locator": "§3，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E02",
+   "claim": "数据集约 11k 案件（train 9K / dev 1K / test 1K），银标准理由由判决中对事实段落的引用经正则抽取，平均稀疏度 24–31%；1 名律师为 50 个测试案件标注金标准理由（条款限于 2/3/5/6）。",
+   "locator": "§3、Table 1，PDF p.4；附录 C，pp.12–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E03",
+   "claim": "提出 singularity 约束：要求所选掩码优于随机生成、同等稀疏度的掩码，并按两者余弦距离加权；连续性约束在段落级无益（开发集 λc=0 最佳）。",
+   "locator": "§4.2、§6.2，PDF pp.5–6、8；Table 10，p.13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E04",
+   "claim": "测试集上各 HierBERT-HA 变体分类 micro-F1 72.6–73.1，与不掩码的 HierBERT-ALL（73.7）相当；singularity 变体 sufficiency 0.040、comprehensiveness 0.204 为最佳。",
+   "locator": "Table 3，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E05",
+   "claim": "在 50 个同时有银/金理由的测试案件上，singularity 变体金标准 mRP 53.6±2.3，高于 Ls 基线 51.9 和银理由监督 51.4；随机理由为 35.1；按银/金标准排序方法结果一致。",
+   "locator": "§6.5、Table 6，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E06",
+   "claim": "原文承认模型理由离人工理由差距大，模型对健康、上诉等措辞敏感而非因果推理，且未做人工可信度评估。",
+   "locator": "§6.5–6.6，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b4b13fb3f1bea6ef:E07",
+   "claim": "singularity 的优势与标准差同量级（5 次运行），附录把最佳模型写作 HIERBERT-SA，与正文 HierBERT-HA 命名不一致。",
+   "locator": "Table 6，PDF p.9；附录 C，p.13",
+   "basis": "inference",
+   "basis_note": "数值来自原文；统计强度判断与笔误判断为阅读者分析。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

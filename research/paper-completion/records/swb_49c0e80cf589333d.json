@@ -1,0 +1,65 @@
+{
+ "id": "swb_49c0e80cf589333d",
+ "url": "https://drive.google.com/file/d/1vsu0Ns6R6AeTX4-Hf2OdYqRvHD4yNm4y/view",
+ "title": "Health Insurance Coverage Rules Interpretation Corpus: Law, Policy, and Medical Guidance for Health Insurance Coverage Understanding",
+ "version": "AI for Access to Justice Workshop at JURIX 2024，Google Drive 托管 PDF，19 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://drive.usercontent.google.com/download?id=1vsu0Ns6R6AeTX4-Hf2OdYqRvHD4yNm4y&export=download",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_49c0e80cf589333d.pdf",
+ "sha256": "be73a057e2b4edfe3b3ac94c848373ba1a50ca58d3da5322554ded554d756045",
+ "format": "pdf",
+ "pages": 19,
+ "note_directory": "research/paper-completion/notes/swb_49c0e80cf589333d",
+ "note": "research/paper-completion/notes/swb_49c0e80cf589333d/README.md",
+ "read_sections": {
+  "problem": "§1、§3、§5.1–5.4，PDF pp.1–5",
+  "method": "§4、§5.5–5.6、附录 A、D、E，PDF pp.2–6、12–15",
+  "evaluation": "§5.7、Table 2，PDF pp.6–7",
+  "limitations": "§5.4、§6.2、§8、§9、附录 C，PDF pp.4–5、8–9、14"
+ },
+ "evidence": [
+  {
+   "id": "swb_49c0e80cf589333d:E01",
+   "claim": "语料含 8,311 份文档、4.19 亿词、27 亿字符、2.83 GB，分为 6 个互斥分区标签，共 616 种标签；其中 1,434 份带权威性 kb 标签。",
+   "locator": "§4、Table 1、§4.2.4，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49c0e80cf589333d:E02",
+   "claim": "任务为三分类：根据申诉前可知的背景描述，预测外部申诉被推翻、维持或描述不足；作者强调只使用申诉前可知的信息，以避免回顾性结果分类。",
+   "locator": "§5.1、§5.3–5.4，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49c0e80cf589333d:E03",
+   "claim": "基准由纽约 DFS、加州 CDI、加州 DMHC 的 1,000 条人工标注（片段与 1–4 级充分度）训练 DistilBERT 片段抽取器和充分度分类器，再为 74,007 条案件描述生成伪标签。",
+   "locator": "§5.5–5.6、附录 E，PDF pp.5–6、14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49c0e80cf589333d:E04",
+   "claim": "测试集 9,920 条（Insufficient 113、Upheld 5,284、Overturned 4,523）；DistilBERT 宏 F1 0.778、AUC 0.891，GPT-4o-mini 2-shot 宏 F1 0.412。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49c0e80cf589333d:E05",
+   "claim": "作者称全文为工作中论文；目前没有标注者一致性结果；商业合同、商业医学政策、Medicaid/CHIP 州计划等因许可或无批量渠道而缺失。",
+   "locator": "摘要、§5.6.1、§8.3，PDF pp.1、5、8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49c0e80cf589333d:E06",
+   "claim": "测试标签同样来自伪标注模型，因此 Table 2 衡量的是对伪标注流程的拟合；Insufficient 仅占约 1.1%，宏平均放大其影响；原文未报告多数类基线（Upheld 占 53.3%）。",
+   "locator": "§5.6.4、Table 2，PDF pp.6–7",
+   "basis": "inference",
+   "basis_note": "原文已给出数值或事实；结论或对照为阅读者分析，原文未直接陈述。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

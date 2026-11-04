@@ -1,15 +1,9 @@
-# OpenRCA 2.0- From Outcome Labels to Causal Process Supervision-arXiv-2026
+# OpenRCA 2.0: From Outcome Labels to Causal Process Supervision
 
-版本：arXiv v2，2026-06-30；会议待确认。核读日期：2026-10-07；阅读范围：正文及相关实验/限制章节。
+现有根因分析（RCA）基准只标注被注入故障的组件，只按最终答案评分，智能体即使跳过中间服务或编造依赖边也能得满分。本文（港中大深圳）提出标注协议 PAVE：利用故障注入记录中智能体看不到的干预信息，从已知原因向前核验，只保留同时满足结构规则、相对注入前基线的统计偏差、上下游时间先后三项条件的传播路径。由此在 TrainTicket、OpenTelemetry Demo、DeathStarBench Hotel Reservation 三个微服务系统、27 类故障上构建 500 个带逐步因果标注的实例。
 
-[原文](https://arxiv.org/abs/2606.27154v2) · [本地PDF](paper.pdf)
+评测 11 个前沿 LLM：精确恢复根因集合平均只有 20.7%；至少说对一个根因服务的比例为 76.0%，但能从该服务画出一条通到告警节点的已核验路径的只有 61.5%——约 14.5 个百分点的“正确但无依据”诊断被结果评分掩盖。
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty分析](Novelty分析.md)
+[原文](https://arxiv.org/abs/2606.27154v2)
 
-PDF SHA-256：`2c8388aaf732b94cffd2b1f9dd6169e555ed0f8d33a051d91a2a93e2063ec3ea`
-
-- [Workload：问题、数据、具体用例与Baseline](workload分析.md)
-
-阅读更新（2026-10-07）：补充核读实验设置、基线、案例与结论边界；未复现实验。
+版本：arXiv 2606.27154v2（2026-06-30，cs.AI），正文 9 页，含附录共 30 页；会议待确认；数据与 PAVE 流水线计划在论文录用后公开（附录 A.6）。阅读范围：正文 §1–6、附录 A、E.1、H；2026-11 对照全文复核数字。未复现实验。

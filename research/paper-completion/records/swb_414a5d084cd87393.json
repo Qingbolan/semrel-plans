@@ -1,0 +1,65 @@
+{
+ "id": "swb_414a5d084cd87393",
+ "url": "https://aclanthology.org/2024.lrec-main.1093",
+ "title": "Ahmadnia et al. — Opinion Mining Using Pre-Trained Large Language Models: Identifying the Type, Polarity, Intensity, Expression, and Source of Private States",
+ "version": "LREC-COLING 2024，pp.12481–12495，ACL Anthology 2024.lrec-main.1093，15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.lrec-main.1093.pdf",
+ "retrieved_at": "2026-11-04T05:52:15+00:00",
+ "fulltext": "research/paper-completion/papers/swb_414a5d084cd87393.pdf",
+ "sha256": "c48626205df196a1955156632ebb3046a0279bb15b5d1fa7b66f2cb56b607852",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "research/paper-completion/notes/swb_414a5d084cd87393",
+ "note": "research/paper-completion/notes/swb_414a5d084cd87393/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–3，PDF pp.1–4",
+  "method": "§2.2、§4、附录 12–13，PDF pp.3–6、13–15",
+  "evaluation": "§5、Tables 6–13，PDF pp.6–9",
+  "limitations": "§5.5、§6、§8–9，PDF pp.9–10"
+ },
+ "evidence": [
+  {
+   "id": "swb_414a5d084cd87393:E01",
+   "claim": "作者清理 MPQA 2.0：修正 175 个 span、删除 1,526 个无法匹配句子的标注项等，并转换为 JSON；清理后 DS 15,076、ESE 13,654、OSE 9,973。",
+   "locator": "§2.2、Table 2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_414a5d084cd87393:E02",
+   "claim": "类型/极性/强度任务以金标表达（及金标类型）为输入，排除 OSE 与属性缺失样本（约 7.7%）。",
+   "locator": "§4.1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_414a5d084cd87393:E03",
+   "claim": "5 折交叉验证下 FLAN-T5 最佳：类型 micro-F1 83.8、极性 weighted-F1 87.1、强度 weighted-F1 73.0；多数类基线 63.7/24.9/39.5。",
+   "locator": "§5.2、Tables 6–8，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_414a5d084cd87393:E04",
+   "claim": "MTL 与顺序训练未带来明显提升，作者未发现任务间有意义的关系。",
+   "locator": "§5.3、Tables 9–10，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_414a5d084cd87393:E05",
+   "claim": "T5 带前缀的来源抽取精确 F1 83.5（LS）/81.8（ALO）；表达抽取 ESE 精确 F1 54.4，T5 优于 FLAN-T5。",
+   "locator": "§5.4–5.5、Tables 12–13，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_414a5d084cd87393:E06",
+   "claim": "由于数据版本与任务定义不同，结果只与多数类基线及自身变体比较，不能与先前 MPQA 工作直接比较；5 折按文档或实例切分未说明。",
+   "locator": "§3、§5、附录 11，PDF pp.4、6、13",
+   "basis": "inference",
+   "basis_note": "不可比为原文所述；\"切分单位未说明\"为阅读者核查结论。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

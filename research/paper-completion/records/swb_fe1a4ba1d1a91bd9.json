@@ -1,0 +1,65 @@
+{
+ "id": "swb_fe1a4ba1d1a91bd9",
+ "url": "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf",
+ "title": "Vandamme, Cabay & Debeir — A Quantitative Evaluation of Trademark Search Engines’ Performances through Large-Scale Statistical Analysis",
+ "version": "ICAIL 2023, pp.343–350（DOI 10.1145/3594536.3595149），ORBi 仓储作者稿 PDF，8 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf",
+ "retrieved_at": "2026-11-04T05:36:55+00:00",
+ "fulltext": "research/paper-completion/papers/swb_fe1a4ba1d1a91bd9.pdf",
+ "sha256": "564e12769ff32babc2ef2b6d3c4d37b22949bde3cbf975fb25d1088441af4e62",
+ "format": "pdf",
+ "pages": 8,
+ "note_directory": "research/paper-completion/notes/swb_fe1a4ba1d1a91bd9",
+ "note": "research/paper-completion/notes/swb_fe1a4ba1d1a91bd9/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，PDF pp.1–2",
+  "method": "§2.1–2.4、Figures 1–2，PDF pp.2–4",
+  "evaluation": "§3、Tables 1–5、Figures 3–5，PDF pp.5–7（已渲染核对）",
+  "limitations": "§2.2–2.3、§3.2、§4，PDF pp.4–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_fe1a4ba1d1a91bd9:E01",
+   "claim": "官方商标图像检索引擎模型不公开、未经系统评估；作者以已决异议案例为真值做规模化评估。",
+   "locator": "摘要、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fe1a4ba1d1a91bd9:E02",
+   "claim": "以 EUIPO 异议处 2016-03-23 至 2022-05-31 的 8,126 件图形商标决定为数据，申请人商标图像为查询，异议人商标为相关项，指标为 Match Ratio 与 Rank。",
+   "locator": "§2.1–2.2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fe1a4ba1d1a91bd9:E03",
+   "claim": "Table 1：5,857 件决定无数据问题；1,121 件因多于一个图形商标被排除，963 件缺决定文档。",
+   "locator": "§3.1、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fe1a4ba1d1a91bd9:E04",
+   "claim": "在共同的 5,757 次查询上，BOIP 匹配率界于 7.36%–11.72%，EUIPO-50 界于 62.01%–99.16%；平均排名 BOIP 14.21，EUIPO-50 2.91。",
+   "locator": "§3.2、§4、Table 4，PDF pp.5–6、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fe1a4ba1d1a91bd9:E05",
+   "claim": "按 LoC 结果（+、+/−、−）分组后两系统匹配率差别很小，作者认为出人意料；并假设 EUIPO 可能在相同决定上训练过。",
+   "locator": "§3.4、§4、Table 5，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fe1a4ba1d1a91bd9:E06",
+   "claim": "每个查询仅一个已知相关项，排在其前面的其他商标可能同样构成 LoC，因此匹配率与排名只是代理指标。",
+   "locator": "§2.2，PDF p.4",
+   "basis": "inference",
+   "basis_note": "局限为原文陈述，“单相关项代理指标”的概括为阅读者分析。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

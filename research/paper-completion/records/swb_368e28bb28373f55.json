@@ -1,0 +1,71 @@
+{
+ "id": "swb_368e28bb28373f55",
+ "url": "https://doi.org/10.1016/j.dib.2024.111202",
+ "title": "BidCorpus: A multifaceted learning dataset for public procurement",
+ "version": "Data in Brief 58:111202（2024-12 在线，2025-02 期），PMC11715116 开放获取全文 JATS XML（Europe PMC REST），无页码",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11715116/fullTextXML",
+ "retrieved_at": "2026-11-04T05:40:45.906343+00:00",
+ "fulltext": "research/paper-completion/papers/swb_368e28bb28373f55.xml",
+ "sha256": "633be3c770f9e7855ba719838df9436502979efa83c3884beb0eed1e84b4dc65",
+ "format": "xml",
+ "pages": null,
+ "note_directory": "research/paper-completion/notes/swb_368e28bb28373f55",
+ "note": "research/paper-completion/notes/swb_368e28bb28373f55/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1 Value of the Data、§2 Background",
+  "method": "§3 Data Description（Table 1–2）、§4.1–4.5（Table 3–8）",
+  "evaluation": "§4.6（Table 9–15）",
+  "limitations": "Limitations 章节"
+ },
+ "evidence": [
+  {
+   "id": "swb_368e28bb28373f55:E01",
+   "claim": "公共采购约占许多国家 GDP 的 15%，招标文档靠专家人工分析费时低效，且该领域缺少 NLP 数据集，尤其是舞弊检测。",
+   "locator": "Abstract、§1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_368e28bb28373f55:E02",
+   "claim": "从 TCE-PI 与 ComprasNet 采集 421,113 份招标公告（3,284 万句、14.6 亿 token），按章节要求筛选后 373,650 份，清洗去重后 221,417 条唯一样本。",
+   "locator": "§3 Table 1、§4.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_368e28bb28373f55:E03",
+   "claim": "三类数据集九个侧面：章节类型 1,530、标的性质 2,137、正确性/允许性 1,362、相似对 1,754、关键短语 2,040、红旗金标准 1,818、弱监督与模型标签各 221,417、合成样本 1,818。",
+   "locator": "Table 2、§4.2–4.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_368e28bb28373f55:E04",
+   "claim": "红旗标注用 Snorkel 正则标注函数，由 3 组专家（每组 2 人+裁决者）迭代验证，再人工标注 1,818 份金标准训练 BERT 模型标注全量。",
+   "locator": "§4.4、Table 8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_368e28bb28373f55:E05",
+   "claim": "5 折分层验证下，红旗分类 JurisBERT F1 92.93%；用关键短语代替标的全文，BERTScore 相似判定 F1 从 32.6% 升至 96.3%，标的性质分类 F1 从 73.71–82.83% 升至 90.02–93.39%。",
+   "locator": "§4.6、Table 9、11、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_368e28bb28373f55:E06",
+   "claim": "在同义改写的合成样本上 BERTimbau F1 85.11%，JurisBERT 降至 75.47%；但原文未给出正则规则在同一合成集上的对照数字，“模型比规则更抗改写”缺少直接比较。",
+   "locator": "§4.6.5、Table 15",
+   "basis": "inference",
+   "basis_note": "数字来自原文；缺少规则基线的判断为阅读者分析。"
+  },
+  {
+   "id": "swb_368e28bb28373f55:E07",
+   "claim": "局限：仅巴西数据、红旗稀少导致不平衡、只覆盖资格阶段 7 类红旗。",
+   "locator": "Limitations",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

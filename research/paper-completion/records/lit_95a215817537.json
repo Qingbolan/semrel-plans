@@ -1,0 +1,65 @@
+{
+ "id": "lit_95a215817537",
+ "url": "https://arxiv.org/abs/2510.04023",
+ "title": "Rahman et al. — LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, and Future Directions",
+ "version": "arXiv:2510.04023v1，35 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2510.04023v1",
+ "retrieved_at": "2026-11-04T05:15:27.410458+00:00",
+ "fulltext": "research/paper-completion/papers/lit_95a215817537.pdf",
+ "sha256": "6e671943eeb88aacfac870f4e4547968db571655abbeb1e8cf16584d149de212",
+ "format": "pdf",
+ "pages": 35,
+ "note_directory": "research/paper-completion/notes/lit_95a215817537",
+ "note": "research/paper-completion/notes/lit_95a215817537/README.md",
+ "read_sections": {
+  "problem": "§1（RQ1–RQ4），PDF pp.2–4",
+  "method": "§3 文献检索与筛选、§4 分类法，PDF pp.10–13",
+  "evaluation": "§5 与 Table 2、§6 与 Table 3，PDF pp.13–27；pp.23、25 已渲染核对",
+  "limitations": "§7 与 Table 4、§8，PDF pp.27–31；未讨论综述自身局限"
+ },
+ "evidence": [
+  {
+   "id": "lit_95a215817537:E01",
+   "claim": "检索 2023–2025 年文献，去重后 587 篇候选，标题与摘要筛选后约 200 篇，全文审阅得到 45 个不同 DS 智能体；声明采用 PRISMA 协议。",
+   "locator": "§3，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_95a215817537:E02",
+   "claim": "分类法包括六个生命周期阶段（S1 业务理解与数据获取至 S6 部署与监控）和五个横切维度（推理规划、模态整合、工具编排深度、学习与对齐、可信与安全）。",
+   "locator": "§4.1–4.2，PDF pp.11–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_95a215817537:E03",
+   "claim": "Table 2 判断 S2 覆盖充分，S3 中等，S4、S5 部分，S1 有限，S6 很有限。",
+   "locator": "§5.6，Table 2，PDF p.23",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_95a215817537:E04",
+   "claim": "45 个系统均未展示持续适应能力（增量再训练、自动漂移检测等）；超过 90% 缺少安全、隐私与合规的明确机制。",
+   "locator": "§5.4.1、§7.3，PDF pp.20、28",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_95a215817537:E05",
+   "claim": "综述转引的基准表现：Spider 2.0 上 GPT-4o 约 10%，Spider2-V 成功率低于 14%，ELT-Bench 数据加载 57% 而转换 3.9%，DSEval 最多 27% 的失败来自静默状态完整性破坏。",
+   "locator": "§5.1、§6.6，PDF pp.15、26–27",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_95a215817537:E06",
+   "claim": "阅读者认为覆盖程度为定性判断、未给出各阶段计数，筛选过程未报告标注一致性，转引数字来自不同设置不可横向比较。",
+   "locator": "§3、§5.6、§6，PDF pp.10–27",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；评价、局限归纳或与项目的关联为阅读者分析，正文已用“阅读者分析”标明。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

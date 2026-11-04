@@ -1,16 +1,9 @@
-# Towards Operationalizing Heterogeneous Data Discovery
+# Wang, Feng, Shen, Rahman, Kandogan（Megagon Labs）— Towards Operationalizing Heterogeneous Data Discovery
 
-**来源与版本。** [原文](https://arxiv.org/abs/2504.02059v1)；v1，2025-04-02；PDF的PVLDB卷页/DOI及artifact字段含占位内容，不作为已发表或完整系统证据。
+这是一篇愿景论文：企业数据湖里同时有表、文档和知识图谱，用户往往不知道该查哪种来源。作者设想一个声明式多模态数据湖系统，用一组扩展关系代数的多模态算子写程序；来源未指定时隐式触发数据发现，再做跨模态查询规划、执行和结果汇总（Verifier），并列出待解决的研究挑战。
 
-**阅读状态。** 2026-10-07 核读正文的问题定义、关键方法、实验设置及讨论；未复现实验。具体依据见各分析文件，不将愿景、推断或扩展建议当作已验证能力。
+实证只有两个已发表基准的初步结果：CMDBench 的来源发现（作者称即使用最好的发现模型，各模态准确率也下降 46%）和 CypherBench 的零样本图查询生成（最好的 claude3.5-sonnet 执行准确率 61.58%）。系统本身没有实现评测。
 
-**研究关联。** 支持端到端异构发现问题早已有明确表述，但不支持“已有完整方案解决这一问题”的强结论。
+[原文](https://arxiv.org/abs/2504.02059v1)
 
-- [出发点分析](出发点分析.md)
-- [解决的问题分析](解决的问题分析.md)
-- [Novelty、Strong points 与 Weak points](Novelty分析.md)
-- [本地原文](原文.pdf)
-
-- [Workload：问题、数据、具体用例与Baseline](workload分析.md)
-
-阅读更新（2026-10-07）：补充核读实验设置、基线、案例与结论边界；未复现实验。
+版本：arXiv 2504.02059v1（2025-04-02，cs.DB），8 页；PDF 的 PVLDB 卷页、DOI 和 artifact 字段为模板占位，不能作为已发表或系统已实现的证据。已通读正文 §1–6；2026-11 按全文重新核对，未复现实验。

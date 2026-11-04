@@ -1,0 +1,12 @@
+{
+  "id": "lit_c231cad49d0d",
+  "title": "CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases",
+  "url": "https://openreview.net/forum?id=ZtR4q390OK",
+  "attempts": [
+    {"url": "https://openreview.net/pdf?id=ZtR4q390OK", "result": "HTTP 403 OpenReview error page (HTML, not PDF), 2026-11-04"},
+    {"url": "https://api2.openreview.net/notes?id=ZtR4q390OK", "result": "HTTP 403 ChallengeRequiredError (challenge verification required)"},
+    {"url": "https://export.arxiv.org/api/query?search_query=all:CoreSemDB", "result": "0 entries; no arXiv preprint found"},
+    {"url": "web search: CoreSemDB title", "result": "only papers.cool abstract listing (https://papers.cool/venue/ZtR4q390OK@OpenReview); no full-text mirror"}
+  ],
+  "reason": "Full text only on OpenReview, which returns 403 / bot challenge to non-browser clients; no arXiv or other full-text copy found. Abstract alone is not full text, so no analysis written."
+}

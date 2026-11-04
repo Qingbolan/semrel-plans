@@ -1,0 +1,71 @@
+{
+ "id": "swb_2d55ff7a1b315f1d",
+ "url": "https://link.springer.com/article/10.1007/s10506-024-09415-9",
+ "title": "Lüders & Stohlmann — Classifying proportionality - identification of a legal argument",
+ "version": "Artificial Intelligence and Law 33:1051–1078（2025；2024-08-03 在线），出版社 Open Access（CC BY）版本，取自 HU Berlin edoc 仓储，28 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://edoc.hu-berlin.de/bitstreams/49f3b586-29ec-428a-8131-d71b919e483b/download",
+ "retrieved_at": "2026-11-04T05:06:08+00:00",
+ "fulltext": "research/paper-completion/papers/swb_2d55ff7a1b315f1d.pdf",
+ "sha256": "da0efdc60e6ea43c6732e389339097052beeb503c61b09ba4d663d90187be633",
+ "format": "pdf",
+ "pages": 28,
+ "note_directory": "research/paper-completion/notes/swb_2d55ff7a1b315f1d",
+ "note": "research/paper-completion/notes/swb_2d55ff7a1b315f1d/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–2、5–9（期刊页 1051–1052、1055–1059）",
+  "method": "§4–5，PDF pp.9–18（期刊页 1059–1068）；附录 B p.24–25",
+  "evaluation": "§5.4、§6、Table 6，PDF pp.18–22（期刊页 1068–1072）",
+  "limitations": "§6.1.3、§6.2、§7，PDF pp.21–23"
+ },
+ "evidence": [
+  {
+   "id": "swb_2d55ff7a1b315f1d:E01",
+   "claim": "作者主张领域特定论证类型比通用前提/结论划分更适合法律论证挖掘，并以 GFCC 判决中的比例原则（目的、适当性、必要性、权衡四步）为对象。",
+   "locator": "§1、§3.1–3.2，PDF pp.1–2、5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2d55ff7a1b315f1d:E02",
+   "claim": "数据集为 3,371 份判决中随机抽取的 300 份，共 54,929 句；merits 部分 24,577 句，其中 2,870 句（约 11.7%）为比例原则；245 份有 merits，60 份含比例原则。",
+   "locator": "§4.1、§4.3、Tables 2、5，PDF pp.9–10、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2d55ff7a1b315f1d:E03",
+   "claim": "分类目标为折叠变量：任一步骤或 unspecific 被标注即为正例；输入以判决为单位的 merits 句子序列，句级二分类。",
+   "locator": "§4.2–4.3、§5，PDF pp.12–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2d55ff7a1b315f1d:E04",
+   "claim": "三轮标注折叠变量 Fleiss κ 为 0.560、0.781、0.776；分歧由法律专家裁定形成金标准，而非多数投票。",
+   "locator": "§4.1–4.2、Tables 3–4，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2d55ff7a1b315f1d:E05",
+   "claim": "五折分层交叉验证下，BERT-BiLSTM-CRF（德语 BERT）F1=0.561、P=0.708、R=0.478、Acc=0.905，为最佳；无模型召回超过 0.5；规则方法 P=0.893 但 R=0.111。",
+   "locator": "§5.4、§6.1、Table 6，PDF pp.18–19",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2d55ff7a1b315f1d:E06",
+   "claim": "模型架构复用 Bhattacharya et al. 的 BiLSTM/BERT-BiLSTM-CRF，主要贡献在语料与专家裁定流程而非新模型；论文未报告折间方差，Accuracy 受负类主导不宜比较。",
+   "locator": "§5.2、§6.1，PDF pp.15、19",
+   "basis": "inference",
+   "basis_note": "架构复用为原文明示；“贡献主要在语料”与“未报告方差的影响”为阅读者分析。"
+  },
+  {
+   "id": "swb_2d55ff7a1b315f1d:E07",
+   "claim": "误差集中在含比例原则的判决：单次 80:20 测试的 37 份无比例原则判决仅 2 句误判；典型错误是长段落中目的讨论漏判及与一般基本权利审查混淆。",
+   "locator": "§6.2、Figs.3–4，PDF pp.21–22",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r04",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

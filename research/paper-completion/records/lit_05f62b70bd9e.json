@@ -1,0 +1,78 @@
+{
+ "id": "lit_05f62b70bd9e",
+ "url": "https://arxiv.org/abs/2606.23081",
+ "title": "Zimmerer et al. — SemCEB: A Cardinality Estimation Benchmark for Semantic Operators",
+ "version": "arXiv:2606.23081v1（2026-06-22），VLDB 2026 Workshop NOVAS，7 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.23081v1",
+ "retrieved_at": "2026-11-04T04:54:16.643324+00:00",
+ "fulltext": "research/paper-completion/papers/lit_05f62b70bd9e.pdf",
+ "sha256": "bc442d741e170f72e420fa075394e5ae9da9f04902d4ea6864f73f7d4af3a92b",
+ "format": "pdf",
+ "pages": 7,
+ "note_directory": "research/paper-completion/notes/lit_05f62b70bd9e",
+ "note": "research/paper-completion/notes/lit_05f62b70bd9e/README.md",
+ "read_sections": {
+  "problem": "§1（Figure 1 动机实验、经典方法不足），PDF pp.1–2",
+  "method": "§3、§3.1–3.2、Table 1、Figure 2–4，PDF pp.3–5",
+  "evaluation": "§4、Figure 5–6，PDF pp.5–6；Figure 5–6 已渲染核对",
+  "limitations": "§5，PDF p.6；§3 单算子查询形状说明，p.3"
+ },
+ "evidence": [
+  {
+   "id": "lit_05f62b70bd9e:E01",
+   "claim": "一个三关系语义连接查询的 96 个等价计划成本从 $0.119（524,136 token）到 $2.869（13,122,385 token），相差 24.1×；固定 20% 连接选择率会选错连接顺序；仅过滤顺序错误带来 1.43× 成本。作者说明这是单个查询实例。",
+   "locator": "§1、Figure 1，p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E02",
+   "claim": "语义基数估计与经典问题不同：估计本身需调用同一 LLM，成为准确率/成本/延迟权衡；真值依赖模型与提示；谓词开放且与模态相关，嵌入难以表达否定、数量、时间、空间、词汇条件。",
+   "locator": "§1，p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E03",
+   "claim": "真值定义为指定 LLM 与系统提示下系统实际观察到的基数，每次运行前重算并提供缓存；连接真值需用嵌套循环连接计算；scale-factor 为抽取的商品数且嵌套抽样。",
+   "locator": "§3，p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E04",
+   "claim": "数据来自 Amazon Reviews 2023 的 Arts, Crafts and Sewing 类（5-core 与非空过滤），得到 45k 商品、936k 评论，含文本与主图像列，以及 Qwen3-Embedding-0.6B 与 siglip2 预计算嵌入。",
+   "locator": "§3.1，pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E05",
+   "claim": "102 条手写查询：过滤 62（单列 37、多列 25）、连接 40（单列 23、多列 17）；谓词类别 Equality 52、Negation 23、Ordinal 17、Temporal 11、Spatial 4、Lexical 10（可重叠）。",
+   "locator": "§3.2、Table 1，pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E06",
+   "claim": "评测用 gpt-5.4-nano，过滤 SF 1000、连接 SF 100；Semantic Histograms 只覆盖 31/102 条，q-error 普遍高于 1% 采样，但单次估计约 6 s（1% 采样约 5 s）且 KV-cache 内存开销大；采样在 5% 时较准，但成本与延迟高，连接尤甚；SemHist 在否定与时间谓词上更差。",
+   "locator": "§4、Figure 5–6，pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E07",
+   "claim": "单列过滤共 37 条，但 SemHist 只覆盖 31 条（Figure 6 各类计数之和也是 31），论文未解释差异；评测只用一种模型和单一规模，作者自承难以给出最小样本量的一般结论。",
+   "locator": "§3.2 p.4；§4 p.6；Figure 6",
+   "basis": "inference",
+   "basis_note": "计数来自原文；差异的指出及外推性评价为阅读者分析。"
+  },
+  {
+   "id": "lit_05f62b70bd9e:E08",
+   "claim": "本 atlas 的 102 条 semceb/amazon-reviews 查询与论文 102 条手写查询数量一致。",
+   "locator": "§1 贡献（1），p.3；§3.2，p.4",
+   "basis": "inference",
+   "basis_note": "对应关系由阅读者根据数量与作者仓库来源推断，未逐条核对。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

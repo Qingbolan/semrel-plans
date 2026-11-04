@@ -1,0 +1,72 @@
+{
+ "id": "lit_6aef3ccb6120",
+ "url": "https://arxiv.org/abs/2412.19113",
+ "title": "Zhang, Li, Luo, Tang — SketchFill: Sketch-Guided Code Generation for Imputing Derived Missing Values",
+ "version": "arXiv:2412.19113v1（2024-12-26，Preprint），19 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2412.19113",
+ "retrieved_at": "2026-11-04T05:31:49.521477+00:00",
+ "fulltext": "research/paper-completion/papers/lit_6aef3ccb6120.pdf",
+ "sha256": "80dc8d04825e1b2dfac2462a612a48abf3a05f8b506da67c3634bb763c1b29db",
+ "format": "pdf",
+ "pages": 19,
+ "note_directory": "research/paper-completion/notes/lit_6aef3ccb6120",
+ "note": "research/paper-completion/notes/lit_6aef3ccb6120/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–5",
+  "method": "§3.2–3.6、Algorithm 1、Fig. 3，PDF pp.5–7；附录 B，pp.16–17",
+  "evaluation": "§4、Tables 1–2、Fig. 4，PDF pp.8–10；附录 A、C、D，pp.14–19；p.9 与 p.2 Fig. 2 已渲染核对",
+  "limitations": "§5 末段，PDF p.10；附录 C.3，p.18"
+ },
+ "evidence": [
+  {
+   "id": "lit_6aef3ccb6120:E01",
+   "claim": "派生缺失值填补（DMVI）指缺失数值可由跨行跨列的公式得到；作者认为 CoT、直接代码生成和自反思代码生成都难以推导正确公式。",
+   "locator": "§1、Figs. 1–2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6aef3ccb6120:E02",
+   "claim": "SketchFill 输入脏表、Meta-Sketch 与目标列，抽样遮蔽干净行，用 Domain-Sketch 生成器与代码生成器产出 Python 代码，Evaluator 以 CloseMatch 校验，失败则 Reflector 修正，最多重试 3 次，成功后 Summarizer 泛化为函数并由 Executor 执行。",
+   "locator": "§3.2–3.6、Algorithm 1，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6aef3ccb6120:E03",
+   "claim": "五个数据集（Bajaj、Bmi、Supermarket、GreenTrip、LOLChampion）元组数 554–3,600，缺失值 107–334 个，缺失率 9.28%–19.31%。",
+   "locator": "Table 1，PDF p.8；附录 A，pp.14–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6aef3ccb6120:E04",
+   "claim": "GPT-4o 后端下，SketchFill 各数据集汇总 RMSE 为 Bajaj 1.4666、Bmi 0、Supermarket 0.1292、GreenTrip 0.5551、LOLChampion 0.3926，均低于所有基线；但 RSI8、GrossIncome 等变量上不及 MICE。",
+   "locator": "Table 2，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6aef3ccb6120:E05",
+   "claim": "结论称总体准确率 84.2%，比 CoT 高 56.2%、比代码生成高 59%、比 MetaGPT 高 78.8%，未说明是绝对还是相对提升。",
+   "locator": "§5，PDF p.10",
+   "basis": "inference",
+   "basis_note": "数值来自原文；口径不明是阅读者判断。"
+  },
+  {
+   "id": "lit_6aef3ccb6120:E06",
+   "claim": "作者承认方法不能处理非派生特征，多步计算与噪声数据困难，效果依赖后端 LLM（Llama3-8B 明显较弱）。",
+   "locator": "§5，PDF p.10；附录 C.3，p.18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6aef3ccb6120:E07",
+   "claim": "论文没有对 Meta-Sketch 或 Reflector 做消融，也未报告 LLM 调用成本；Bmi 数据在 Table 1 为 720 元组而附录称 741 条记录。",
+   "locator": "§4、Table 1、附录 A.2，PDF pp.8–10、15",
+   "basis": "inference",
+   "basis_note": "基于对全文的缺项检查与表格比对，为阅读者分析。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

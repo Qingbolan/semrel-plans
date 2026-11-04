@@ -1,0 +1,66 @@
+{
+ "id": "lit_ad83778307a8",
+ "url": "https://doi.org/10.1109/gen4ds63889.2024.00008",
+ "title": "Shen et al. — From Data to Story: Towards Automatic Animated Data Video Creation with LLM-Based Multi-Agent Systems",
+ "version": "作者版预印本 arXiv:2408.03876v1（2024-08-07），8 页；对应 IEEE VIS 2024 GEN4DS 研讨会论文",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2408.03876v1",
+ "retrieved_at": "2026-11-04T05:25:31+00:00",
+ "fulltext": "research/paper-completion/papers/lit_ad83778307a8.pdf",
+ "sha256": "4c885327c54b1b2075e325f5e7b9980cd3af338ef183530f254fa5f68c13676a",
+ "format": "pdf",
+ "pages": 8,
+ "note_directory": "research/paper-completion/notes/lit_ad83778307a8",
+ "note": "research/paper-completion/notes/lit_ad83778307a8/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，PDF pp.1–2",
+  "method": "§2、Figures 1–2，PDF pp.1–3；附录 A，pp.7–8",
+  "evaluation": "§3 案例研究，PDF pp.2–3；无定量评测",
+  "limitations": "§4–5，PDF pp.3–5"
+ },
+ "evidence": [
+  {
+   "id": "lit_ad83778307a8:E01",
+   "claim": "Data Director 基于 GPT-4，由数据分析师与设计师两个 LLM 角色及控制器组成，把数据视频拆为三项组件生成与三项关系管理共六个子任务。",
+   "locator": "§2.1–2.2，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ad83778307a8:E02",
+   "claim": "分析师输出洞察（13 种类型）、Vega-Lite 可视化与旁白；设计师输出动画与注释；控制器调用 TTS、SVG 渲染与视频合成，旁白作为时间轴。",
+   "locator": "§2，PDF p.2；附录 A Listings 2–3，pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ad83778307a8:E03",
+   "claim": "唯一评测是一个四家 IT 公司股价数据的定性案例研究，没有基线、指标或用户研究。",
+   "locator": "§3、Figure 2，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ad83778307a8:E04",
+   "claim": "作者指出缺少全局优化与验证框架和公认基准，并列出误差累积、不一致、幻觉、高时间成本等 LLM 固有局限。",
+   "locator": "§5，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ad83778307a8:E05",
+   "claim": "经验教训（如分层生成注释、合并动画与同步子任务）来自开发过程观察，原文没有量化证据支持。",
+   "locator": "§2、§4，PDF pp.2–4",
+   "basis": "inference",
+   "basis_note": "由原文缺少任何实验数据推断。"
+  },
+  {
+   "id": "lit_ad83778307a8:E06",
+   "claim": "保存的是 arXiv 作者版，批次 URL 指向 IEEE 出版版；两者是否存在内容差异未核对。",
+   "locator": "PDF p.1 页眉",
+   "basis": "inference",
+   "basis_note": "阅读者说明版本边界；IEEE 版未获取。"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

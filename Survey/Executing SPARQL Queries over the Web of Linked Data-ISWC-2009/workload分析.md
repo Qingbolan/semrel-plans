@@ -1,13 +1,18 @@
-# Workload分析
+# 工作负载
 
-**验证的问题。** 不预先固定全部Web数据源，能否沿查询过程中出现的URI获取RDF，并通过预取和非阻塞执行降低等待。
+**两类工作负载**（§6，pp.11–13）：
 
-**数据与任务。** 两类证据：4个真实Web查询（论文作者电话、社交兴趣、药物替代、电影原声封面）；以及改写的BSBM 12查询混合，合成4,971–26,108 triples的Linked Data服务器，scale10–60。每规模运行6次，首轮warm-up不计。真实表1报告结果数、获取graphs数、servers数与耗时；没有全Web穷尽gold。
+| 工作负载 | 内容 | 规模 | 用途 |
+|---|---|---|---|
+| 真实 Web 查询 Q1–Q4 | 作者电话（ESWC09）、Tim Berners-Lee 认识的人的兴趣、药物 Varenicline 的天然替代、Peter Jackson 电影原声封面 | 每查询 28–442 个 RDF 图、6–46 个服务器 | 可行性演示 |
+| BSBM 查询混合 | Berlin SPARQL Benchmark 的 12 个查询，改写为访问模拟服务器 | scale 10–60，4,971–26,108 三元组 | 预取与非阻塞的受控比较 |
 
-**最清楚的use case（原文§1、§6.1）。** 查询ESWC09 ontology engineering论文作者电话：从会议RDF识别论文/作者URI，再读个人FOAF等来源获得电话。使用前需人为准备完整来源或只查本地已知数据；使用后按链接扩充查询数据。表1原文记录2结果、297 graphs、16 servers、3分47秒；这是历史网络运行，不是当前可复现保证，“使用前”未做配对实验。
+**真实查询的数据来源**（§6.1，p.12）：Q1 用 SW Conference Corpus、DBpedia 与个人 FOAF；Q2 用 Tim Berners-Lee 及其认识的人的数据；Q3 用 DrugBank、Diseasome、Traditional Chinese Medicine 数据集；Q4 用 LinkedMDB 与 MusicBrainz。查询的 SPARQL 写法只放在作者的演示页上，论文正文只给 Q1（Fig. 1）。
 
-**Baseline与公平性。** 同一SWClLib的 `without prefetching`、`with prefetching`、`non-blocking iterators`构成受控消融。图6b的“全部数据已缓存”来自相同查询执行第二遍，是免去获取成本的下界，不是同初始信息的端到端baseline。合成BSBM服务器隔离了机制影响，但不具有真实Web的规模和不可用性。
+**模拟 Web**（§6.2，p.13）：用 RAP Pubby 搭的 Linked Data 服务器按 Linked Data 原则发布 BSBM 生成数据。每个规模把查询混合运行 6 次，第一次作热身不计。
 
-**依据与边界。** §6.1表1、§6.2图6；§3–5算法条件。能动态发现数据不等于已知整个Web的全部答案；实时遍历的结果依赖可达链接、访问策略和来源状态。
+**单位**：一个“查询执行”= 从种子 URI 开始、边遍历边匹配直到结束；Table 1 报告的是多次执行的平均值。
 
-[论文来源与版本](README.md)。
+阅读者分析：两类工作负载都没有“全网应答”的完整 gold，无法衡量召回；BSBM 服务器规模很小，且没有真实 Web 的延迟分布与不可用情况。
+
+依据：[作者预印本](https://olafhartig.de/files/HartigEtAl_QueryTheWeb_ISWC09_Preprint.pdf)，§6.1–6.2、Table 1，pp.11–13。

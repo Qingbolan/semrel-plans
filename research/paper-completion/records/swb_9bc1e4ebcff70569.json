@@ -1,0 +1,77 @@
+{
+ "id": "swb_9bc1e4ebcff70569",
+ "url": "https://arxiv.org/abs/2207.11871",
+ "title": "Towards Complex Document Understanding By Discrete Reasoning",
+ "version": "arXiv:2207.11871v3（2023-05-04；ACM MM 2022 论文），10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2207.11871",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_9bc1e4ebcff70569.pdf",
+ "sha256": "fdc468381193dfa421694d2a66e39518bba4fc7161f60b5667cf34790416eb2f",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "research/paper-completion/notes/swb_9bc1e4ebcff70569",
+ "note": "research/paper-completion/notes/swb_9bc1e4ebcff70569/README.md",
+ "read_sections": {
+  "problem": "摘要、§1、§3.1，PDF pp.1–3",
+  "method": "§3.2、§4，PDF pp.3–6",
+  "evaluation": "§5、Tables 4–7、Figs. 3–5，PDF pp.6–8",
+  "limitations": "§5.3.3–§5.3.4、§6，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_9bc1e4ebcff70569:E01",
+   "claim": "现有文档 VQA 数据集（DocVQA、VisualMRC 等）不针对“含表格、文本和大量数字、需离散推理”的真实商业文档。",
+   "locator": "§1–§2.3，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E02",
+   "claim": "任务为 F(D,Q)=a，D 为含表格和文本的 1–3 页文档。答案分 Span、Spans、Counting、Arithmetic 四类，并带 5 种 scale；计数和计算题保留推导式。",
+   "locator": "§3.1–§3.2.1，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E03",
+   "claim": "数据集包含 182 份财报（多为 2018–2020 年）、2,758 个文档、3,067 页、16,558 个问答对；按文档 80/10/10 划分，测试集 277 个文档、1,662 个问题。",
+   "locator": "§3.2.2–§3.3、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E04",
+   "claim": "问答对主要沿用 TAT-QA 的金融专家问答，另补充少量问答并删除错误样本；平均文档长度 550.29 个 OCR 词，平均 1.33 页。",
+   "locator": "§3.2.1、Table 3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E05",
+   "claim": "MHST 用 LayoutLMv2-Large 编码，配合答案类型分类、BIO 序列标注、GTS 表达式树和 scale 预测。多页文档只把含主要表格的那一页作为视觉输入。",
+   "locator": "§4–§4.2、脚注 3，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E06",
+   "claim": "测试集上，MHST（LayoutLMv2）的 EM/F1 为 41.5/50.7，TagOp 为 33.7/42.5，NumNet+ V2 为 30.6/40.1，人类专家为 84.1/90.8；Arithmetic 类 F1 最低，为 42.7。",
+   "locator": "Tables 4–5，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E07",
+   "claim": "多页和长文档上的表现显著更差；100 个错误中 Span 预测占 37%、表达式树占 34%（其中符号错误 19%）、序列标注占 25%、scale 占 4%。",
+   "locator": "§5.3.3–§5.3.4、Figs. 4–5、Table 7，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9bc1e4ebcff70569:E08",
+   "claim": "各划分合计与总量一致（2,758 个文档 / 16,558 个问题）；但“多页”只占约 11%，且模型视觉侧只用单页，多页视觉理解实际未被建模。",
+   "locator": "Tables 1–3、§4.1 脚注 3，PDF pp.3–4",
+   "basis": "inference",
+   "basis_note": "合计由阅读者用 Tables 1–2 自行核算；“未被建模”是阅读者基于脚注 3 的判断。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "lit_a2ebdb54967d",
+ "url": "https://arxiv.org/abs/2504.01157",
+ "title": "Dorbani et al. — Beyond Quacking: Deep Integration of Language Models and RAG into DuckDB",
+ "version": "arXiv:2504.01157v1（2025-04-01，PVLDB 演示论文预印本），4 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2504.01157v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_a2ebdb54967d.pdf",
+ "sha256": "6b25687948a68534adbe4a28c7456639b08d174f99db3f42148f3c338eca3219",
+ "format": "pdf",
+ "pages": 4,
+ "note_directory": "research/paper-completion/notes/lit_a2ebdb54967d",
+ "note": "research/paper-completion/notes/lit_a2ebdb54967d/README.md",
+ "read_sections": {
+  "problem": "§1，PDF p.1",
+  "method": "§2.1–2.3、Table 1、Queries 1–3、Fig.1，PDF pp.2–4",
+  "evaluation": "§2.3 Batching 段（Kaggle Bank Review 加速比），PDF p.4；§3 演示设计，PDF p.4",
+  "limitations": "原文无独立局限性章节；阅读者依据 §2.3、§3 推断，PDF pp.3–4"
+ },
+ "evidence": [
+  {
+   "id": "lit_a2ebdb54967d:E01",
+   "claim": "动机是知识密集型分析需同时整合表与文档；现有 LLM 流水线跨异构系统编排，开发者需手工处理模型选择、提示、上下文管理与缓存等低层决策，需求变化导致重写并错失联合优化。",
+   "locator": "Abstract、§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a2ebdb54967d:E02",
+   "claim": "FlockMTL 是 DuckDB 扩展，提供 llm_complete(_json)、llm_embedding、llm_filter、fusion 等标量函数和 llm_reduce(_json)、llm_rerank、llm_first/last 等聚合函数。",
+   "locator": "§2、Table 1，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a2ebdb54967d:E03",
+   "claim": "MODEL 与 PROMPT 作为与 TABLE 并列的 DDL 资源，可设 Local/Global 作用域；修改时自动产生新版本，默认使用最新版本。",
+   "locator": "§1、§2.1、Query 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a2ebdb54967d:E04",
+   "claim": "批处理按上下文窗口贪心填充元组，输出超限时每次缩小 10% 重试，单元组超限则置 NULL；在 Kaggle Bank Review 上，对话补全映射函数最多 7×、嵌入函数最多 48× 加速。",
+   "locator": "§2.3 Batching，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_a2ebdb54967d:E05",
+   "claim": "论文没有质量评测、基线系统对比或数据规模/模型/批大小等实验细节；摘要所称的 cost-based optimization 在正文中仅体现为批大小启发式，未见成本模型。",
+   "locator": "§2.3、§3，PDF pp.3–4",
+   "basis": "inference",
+   "basis_note": "依据全文（4 页）未出现相应实验或成本模型的阅读者判断。"
+  },
+  {
+   "id": "lit_a2ebdb54967d:E06",
+   "claim": "Query 3 在 SQL 中组合查询时嵌入的余弦相似度 top-100、BM25 top-100、按最大分归一化的 fusion 取 top-10 与 llm_rerank，作者称其为所知首个 SQL 内完整混合检索实现。",
+   "locator": "§2.2、Query 3，PDF p.3",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r04",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

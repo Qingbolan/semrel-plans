@@ -1,0 +1,71 @@
+{
+ "id": "lit_3fa753de4c33",
+ "url": "https://arxiv.org/abs/2607.11019",
+ "title": "Zeng, Hong et al. — QwenPaw-Data: Bridging Facts, Methodology, and Execution for Autonomous Enterprise Data Analytics",
+ "version": "arXiv:2607.11019v2（Technical Report，2026-07-14），24 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2607.11019v2",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/lit_3fa753de4c33.pdf",
+ "sha256": "64db98bc0561baff2eb5ac8b108d803a35a6b92de759fff53ae63ff594ad9b8c",
+ "format": "pdf",
+ "pages": 24,
+ "note_directory": "research/paper-completion/notes/lit_3fa753de4c33",
+ "note": "research/paper-completion/notes/lit_3fa753de4c33/README.md",
+ "read_sections": {
+  "problem": "§1.1–1.3、Table 1，PDF pp.2–5",
+  "method": "§2–5、Figs.1–7，PDF pp.7–19",
+  "evaluation": "§6、Tables 3–4，PDF pp.19–21",
+  "limitations": "无独立局限章节；§7 未来工作 PDF pp.21–22，及 §6 披露缺口（阅读者整理）"
+ },
+ "evidence": [
+  {
+   "id": "lit_3fa753de4c33:E01",
+   "claim": "报告认为编码有硬闭环二值反馈而数据分析是开放空间、反馈模糊且常需唯一权威答案的问题，并以 GAAP 示例总结概念落地、方法论固化和长时程产物执行三类困难。",
+   "locator": "§1.2–1.3、Table 1，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3fa753de4c33:E02",
+   "claim": "系统分为 DataBridge（MG/KG/TG 三图 + Build/Store/Retrieve/Learn/Govern 生命周期）、Skill-Hub（L0–L3 分层技能、自动检查单和版本化演化）和 Host（DAG、子智能体、沙箱、产物登记、恢复），Host 经 MCP 访问 DataBridge、经 Agent Skills 标准消费 Skill-Hub。",
+   "locator": "§2.2、§3–5，PDF pp.8、10–19",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3fa753de4c33:E03",
+   "claim": "内部评测为 29 条客观查询（专家审核参考答案）和 37 条开放分析查询（每条约 15 分钟至 1 小时、以报告结束），数据在 Hologres 上。",
+   "locator": "§6.1，PDF p.19",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3fa753de4c33:E04",
+   "claim": "客观查询正确率约 96.5%；开放查询满意度 78.3，通用智能体（同一底层 LLM）为 34.1；DataBridge 使上下文 token 平均约减少 42%。",
+   "locator": "§6.1，PDF p.20",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3fa753de4c33:E05",
+   "claim": "消融（LLM-as-judge）中两者组合四维为 79.63/62.60/58.09/86.04，基线为 27.35/25.21/35.64/36.94；仅加 DataBridge 增益较小，且产物完整性 32.43 低于基线。",
+   "locator": "§6.2、Table 3，PDF pp.20–21",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3fa753de4c33:E06",
+   "claim": "KramaBench 上 QwenPaw-Data 68.32（SOTA 55.83、人类 76.75），DAComp 上 62.38（SOTA 50.84）；人类与 SOTA 数取自基准论文。",
+   "locator": "§6.3、Table 4，PDF p.21",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3fa753de4c33:E07",
+   "claim": "报告未披露底层 LLM、对比通用智能体和评判模型身份，开放查询仅 37 条且无方差，公开基准运行配置未说明；“保守下界”说法缺少论证。",
+   "locator": "§6，PDF pp.19–21",
+   "basis": "inference",
+   "basis_note": "基于对 §6 披露内容的检查，指出缺失信息为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,32 @@
+{
+ "id": "swb_ec5511e26e070d30",
+ "title": "Correlation of Kinase Genotype and Clinical Outcome in the North American Intergroup Phase III Trial of Imatinib Mesylate for Treatment of Advanced Gastrointestinal Stromal Tumor: CALGB 150105 Study by Cancer and Leukemia Group B and Southwest Oncology Group",
+ "url": "https://pubmed.ncbi.nlm.nih.gov/18955451",
+ "attempts": [
+  {
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=18955451",
+   "result": "OK: links to PMC2651078 (J Clin Oncol, doi 10.1200/JCO.2008.17.4284)"
+  },
+  {
+   "url": "https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC2651078&blobtype=pdf",
+   "result": "returned a 5.6 KB HTML page, not a PDF"
+  },
+  {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2651078/fullTextXML",
+   "result": "HTTP 500 Internal Server Error"
+  },
+  {
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2651078/",
+   "result": "reCAPTCHA challenge page, no article content"
+  },
+  {
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2651078&rettype=xml",
+   "result": "front matter only; XML comment: publisher does not allow downloading of the full text in XML form"
+  },
+  {
+   "url": "https://ascopubs.org/doi/pdf/10.1200/JCO.2008.17.4284 and other PMC/Europe PMC PDF endpoints",
+   "result": "not attempted: the agent's permission system blocked further attempts as bot-check circumvention"
+  }
+ ],
+ "reason": "Full text exists in PMC (PMC2651078) but could not be retrieved programmatically: the PMC page is behind a reCAPTCHA, Europe PMC render/XML endpoints failed, and the publisher disallows XML full text. Only metadata/abstract were reachable; no analysis written. A manual browser download of the PMC or ASCO PDF is needed."
+}

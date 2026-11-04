@@ -1,0 +1,13 @@
+{
+ "id": "swb_057033191e270616",
+ "title": "Plant Science Knowledge Graph Corpus: a gold standard entity and relation corpus for the molecular plant sciences",
+ "url": "https://doi.org/10.1093/insilicoplants/diad021",
+ "attempts": [
+  {"url": "https://doi.org/10.1093/insilicoplants/diad021", "result": "302 -> academic.oup.com article page, HTTP 403 (bot protection)"},
+  {"url": "https://academic.oup.com/insilicoplants/advance-article-pdf/doi/10.1093/insilicoplants/diad021/53332632/diad021.pdf", "result": "HTTP 403 (OpenAlex oa_url)"},
+  {"url": "https://academic.oup.com/insilicoplants/article/6/1/diad021/7413143", "result": "HTTP 403"},
+  {"url": "http://web.archive.org/web/20240416061012id_/https://academic.oup.com/insilicoplants/article/doi/10.1093/insilicoplants/diad021/7413143", "result": "archived page is a JS cookie challenge, no article text; wayback has no PDF snapshot"},
+  {"url": "Europe PMC / NCBI PMC / Crossref (author Lotreck) / OpenAlex", "result": "no PMC copy and no bioRxiv preprint found"}
+ ],
+ "reason": "Gold OA article but every OUP full-text URL returns 403 to non-browser clients; no repository or preprint copy located."
+}

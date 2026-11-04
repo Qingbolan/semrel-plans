@@ -1,0 +1,65 @@
+{
+ "id": "swb_ce668097d39dbea9",
+ "url": "https://aclanthology.org/2026.acl-long.294",
+ "title": "ContextLens: Modeling Imperfect Privacy and Safety Context for Legal Compliance",
+ "version": "ACL 2026（Volume 1: Long Papers），pp.6503–6518，16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2026.acl-long.294.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "research/paper-completion/papers/swb_ce668097d39dbea9.pdf",
+ "sha256": "ea02e6308ea95ed581027d4b7c7801edf10c0833e5a08fbacc0b80f7b565c555",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "research/paper-completion/notes/swb_ce668097d39dbea9",
+ "note": "research/paper-completion/notes/swb_ce668097d39dbea9/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1–3.2，PDF pp.1–4",
+  "method": "§3.3–3.6、附录 A、D，PDF pp.4–5、12–13",
+  "evaluation": "§4–§6、Tables 1–6，PDF pp.5–9；附录 B–C、Table 7，PDF p.12",
+  "limitations": "Limitations，PDF pp.9–10"
+ },
+ "evidence": [
+  {
+   "id": "swb_ce668097d39dbea9:E01",
+   "claim": "现有 LLM 合规评判默认语境完整清楚，而现实中的简短描述常不完整、含糊；例如欧盟 13 岁以下儿童同意服务条款不构成 GDPR 合法依据。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ce668097d39dbea9:E02",
+   "claim": "ContextLens 将法规按 适用范围 > 特殊条件 > 具体条款 > 一般原则 分块，LLM 以 JSON 逐条回答 yes/no/not sure（AI 法案为可多选题并含 None of the above），再按规则汇总为 Permitted/Prohibited/Not Applicable；not sure 与 none of the above 记为缺失语境因素。",
+   "locator": "§3.1–3.6、Figure 1，PDF pp.2–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ce668097d39dbea9:E03",
+   "claim": "评测使用 PrivaCI-Bench 官方测试子集：GDPR 628 例（150/478/0），AI 法案 600 例（202/187/211）。",
+   "locator": "§4.1、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ce668097d39dbea9:E04",
+   "claim": "GPT-4o-mini 的 AI 法案准确率由 Direct 71.16% 升至 ContextLens 88.11%，平均 89.99%，高于 ContextReasoner-7B-PPO 的 88.25%；但长思维链模型在 GDPR 上用 ContextLens 后下降，如 DeepSeek-R1 90.44→80.89。",
+   "locator": "§5.1、Table 2，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ce668097d39dbea9:E05",
+   "claim": "三种模型标出不完整语境的比例为 98.33–100%，每例平均 4.93–7.48 个未知因素；人工-LLM Cohen’s κ 在 GDPR 为 1.00、AI 法案 0.91–0.97，GDPR 上三模型 Fleiss’ κ 为 0.21。",
+   "locator": "§5.2、Table 3，PDF p.7；附录 C.1、Table 7，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ce668097d39dbea9:E06",
+   "claim": "局限节称对指令微调模型总是有效，但 Table 2 中 Qwen2.5-7B 与 GPT-4o 的 GDPR 准确率在 ContextLens 下降低；Qwen2.5-7B 平均准确率表中 70.61 与简单平均 69.91 不符；“5 个以上未知因素”与 Llama GDPR 平均 4.93 不符。",
+   "locator": "Limitations，PDF p.9；Tables 2–3，PDF p.7",
+   "basis": "inference",
+   "basis_note": "表格数值来自原文；不一致与差值为阅读者对照计算得出。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

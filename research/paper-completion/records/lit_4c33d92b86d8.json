@@ -1,0 +1,78 @@
+{
+ "id": "lit_4c33d92b86d8",
+ "url": "https://arxiv.org/abs/2604.23477",
+ "title": "Lin et al. — Sema-SQL: Extending Relational Queries with Large Language Models",
+ "version": "arXiv:2604.23477v2（2026-05-14），14 页；v2 标题与批次标题（SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models）不同",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2604.23477v2",
+ "retrieved_at": "2026-11-04T04:54:16.643324+00:00",
+ "fulltext": "research/paper-completion/papers/lit_4c33d92b86d8.pdf",
+ "sha256": "82b3caefaa983935208e0bb42a0d9a3095864a7f46c57bc3fa748198e3fb9969",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "research/paper-completion/notes/lit_4c33d92b86d8",
+ "note": "research/paper-completion/notes/lit_4c33d92b86d8/README.md",
+ "read_sections": {
+  "problem": "§1、Figure 1–2，PDF pp.1–2；Problem 3.1，p.4",
+  "method": "§2–§5（HRA、查询生成、代价优化 Alg.1、smart-batching Alg.3），PDF pp.3–8",
+  "evaluation": "§6、Table 2–5、Fig. 8–11，PDF pp.8–12",
+  "limitations": "无独立章节；脚注 2 与 SMT 回退 p.7、§4 末未来工作 p.7、§6.2.2 错误分析 p.10、§6.3.1 p.11"
+ },
+ "evidence": [
+  {
+   "id": "lit_4c33d92b86d8:E01",
+   "claim": "现有混合问答系统直接用 LLM 回答而不产出查询，难以验证与复现；LOTUS、Palimpzest 等语义算子系统要求用户手写算子管道并自行优化；Sema-SQL 旨在从自然语言自动生成结合关系与 LLM 语义推理的高效查询。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E02",
+   "claim": "HRA 把 LLM UDF 嵌入选择、投影、连接、TopK（成对比较）和聚合；查询生成的正确性分为语法有效、语义正确（φ̂(D)=φ*(D)）与可执行三项。",
+   "locator": "Def. 2.1、Table 1、Problem 3.1，pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E03",
+   "claim": "优化采用两阶段：先标准关系优化，再用动态规划（最坏 O(k·2^m)）放置 LLM UDF，以 Z3 符号执行验证等价（LLM UDF 视为确定的未解释函数，超时/unknown 时回退）；无状态且确定的 UDF 由 LLM 改写为 SQL。",
+   "locator": "§4、Alg. 1、脚注 2，pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E04",
+   "claim": "TAG+ 共 120 题：TAG 原有 60 题（match/comparison/ranking）+20 题聚合，作者新增语义连接、语义分类、信息抽取、计算推理各 10 题；并由三位专家写出 ground-truth 查询。主观题用 GPT-5 作判官。",
+   "locator": "§6.1.1、§6.2.1、§6.3.3，pp.9–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E05",
+   "claim": "Table 3 中 Sema-SQL 执行准确率 Claude 4.5 为 89.2%（各系统该模型下最高），GPT-5 83.3%、Gemini 3 81.7%、Qwen3-256B 76.7%；LOTUS（GPT-5）90.8%、Palimpzest 最高 85.0%，二者为专家手写管道。",
+   "locator": "Table 3，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E06",
+   "claim": "优化在 33 个被改写计划上使平均执行时间 62.9→45.1 s（−28%）、token 31.5K→25.0K（−21%）（Claude 4.5）；smart-batching 在 10 个连接查询上平均减少 93.3% LLM 调用且执行准确率 100%。",
+   "locator": "§6.3.3–6.3.4、Fig. 10–11，pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E07",
+   "claim": "论文内效率数字口径不一：摘要称语义连接调用平均减少 93%，贡献列表称 5–300×，§6.3.4 称最高约 100×；查询生成准确率 93.3% 与端到端执行准确率 89.2% 是不同指标。基线 LOTUS/Palimpzest/BlendSQL 均由作者编写脚本，比较的是自动生成 vs 专家管道。",
+   "locator": "摘要 p.1；§1 Contributions p.2；§6.3.1 p.10；§6.3.4 p.11；§6.1.2 p.9",
+   "basis": "inference",
+   "basis_note": "各数字逐一取自原文；“口径不一”和对比较条件的评价为阅读者分析。"
+  },
+  {
+   "id": "lit_4c33d92b86d8:E08",
+   "claim": "本 atlas 的 40 条 sema-sql/tag-plus/1001–1040 查询与论文新增的 40 道 TAG+ 题数量一致。",
+   "locator": "§6.1.1，p.9",
+   "basis": "inference",
+   "basis_note": "论文给出新增 40 题；与 atlas 查询的对应关系由阅读者根据数量和来源仓库推断，未逐题核对。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "swb_5d204e142d4766e7",
+ "url": "https://arxiv.org/abs/2510.01474",
+ "title": "Marino, Hunter et al. — AIReg-Bench: Benchmarking Language Models That Assess AI Regulation Compliance",
+ "version": "arXiv:2510.01474v3（2026-02-07），31 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2510.01474",
+ "retrieved_at": "2026-11-04T05:32:32+00:00",
+ "fulltext": "research/paper-completion/papers/swb_5d204e142d4766e7.pdf",
+ "sha256": "34c96bb1542a80f2a39d6a73ca2b570b016860cec9dc5c590ac5b5b64a6f4d06",
+ "format": "pdf",
+ "pages": 31,
+ "note_directory": "research/paper-completion/notes/swb_5d204e142d4766e7",
+ "note": "research/paper-completion/notes/swb_5d204e142d4766e7/README.md",
+ "read_sections": {
+  "problem": "§1、§5，PDF pp.1–2、5–6",
+  "method": "§2–3、Figure 2，PDF pp.2–4；附录 B、D–H，pp.19–27",
+  "evaluation": "§4、Tables 1–2，PDF pp.4–6；附录 A（Tables 3–8），pp.17–21",
+  "limitations": "§6–7，PDF pp.6–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_5d204e142d4766e7:E01",
+   "claim": "AIReg-Bench 含 120 份由 gpt-4.1-mini 生成的高风险 AI 系统技术文档片段，覆盖 8 个用途和 AIA 第 9、10、12、14、15 条；三分之一样本被引向合规。",
+   "locator": "§1、§2.1、§3，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5d204e142d4766e7:E02",
+   "claim": "每份片段由 6 名法律专家中的 3 人给出 1–5 的合规可能性评分和理由，共 360 个评分；评测以专家中位数为金标准。",
+   "locator": "§3.1、§4，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5d204e142d4766e7:E03",
+   "claim": "标注者间 Krippendorff α=0.651；两名标注者偏向相反，去掉后升到 0.786，但分析保留了全部标注。",
+   "locator": "§3.1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5d204e142d4766e7:E04",
+   "claim": "10 个 LLM 中 Gemini 2.5 Pro 的加权 κ 最高（0.863），ρ=0.856，MAE=0.458；o3 mini 的 κ 最低（0.624），且在 54.2% 的样本上高估合规。",
+   "locator": "§4、Table 2、Table 3，PDF pp.5–6、19",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5d204e142d4766e7:E05",
+   "claim": "GPT-4o 消融中，\"严厉\"提示把偏差从 0.458 降到 0.125，但 κw 降到 0.722；不提供条文时 κw 降到 0.654。",
+   "locator": "Table 4，PDF p.19",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5d204e142d4766e7:E06",
+   "claim": "作者承认样本为合成数据、只覆盖 AIA 部分要求、为单轮评估，且基准反映 2025 年 9 月的法律状态。",
+   "locator": "§6.1、§7，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5d204e142d4766e7:E07",
+   "claim": "附录 G 的用途编号（信用评分第 7、紧急调度第 8）与 Table 1/8 图注及 §3.1（信用评分为 Use 8）不一致；用 LLM 生成样本再评测 LLM，可能使结果偏乐观。",
+   "locator": "附录 G、Table 1、§3.1，PDF pp.4–5、27",
+   "basis": "inference",
+   "basis_note": "编号差异由阅读者比对原文发现；对评测偏乐观的风险是阅读者推断，原文未做此分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}
