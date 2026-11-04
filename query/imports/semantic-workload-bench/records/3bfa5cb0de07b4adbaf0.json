@@ -1,0 +1,38 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v81/inspection-persuasion-v2/public/task",
+  "group": "public-tasks",
+  "query": "Apply the P1/P2 annotation protocol to each complete source document with its title and topic. Return P1 as true, P2 as false. Include balanced argumentation for both sides as P1 under section 3.3.1 even when no overall persuasive stance is stated; this is protocol-specific eligibility for further argument analysis, not ordinary intent detection or factual truth.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v81/inspection-persuasion-v2/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "ukp-persuasion-inspection-v2",
+    "task": "Apply the P1/P2 annotation protocol to each complete source document with its title and topic. Return P1 as true, P2 as false. Include balanced argumentation for both sides as P1 under section 3.3.1 even when no overall persuasive stance is stated; this is protocol-specific eligibility for further argument analysis, not ordinary intent detection or factual truth.",
+    "dag": [
+      "scan",
+      "sem_filter",
+      "project(record_id)",
+      "count"
+    ],
+    "required_inputs": [
+      "protocol.txt",
+      "documents/*.json"
+    ],
+    "output": {
+      "label": "Boolean or null",
+      "status": [
+        "OK",
+        "ABSTAIN"
+      ]
+    },
+    "status": "BUILT_INSPECTION_NOT_VALIDATED",
+    "scope": "source-derived development; no independent confirmation",
+    "independence": "group by original webpage and author; overlap with Toulmin task must be grouped; not yet split",
+    "state": "BUILT_INSPECTION_NOT_VALIDATED"
+  },
+  "domain": "shared-environment-audit-20260908"
+}

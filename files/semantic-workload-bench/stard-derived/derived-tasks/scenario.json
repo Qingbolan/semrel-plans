@@ -1,0 +1,10 @@
+{
+  "id": "swb-stard-derived/derived-tasks",
+  "name": "stard-derived/derived-tasks",
+  "query_ids": [
+    "swb/stard-Q1-v1",
+    "swb/stard-Q2-v1",
+    "swb/stard-Q3-v1",
+    "swb/stard-Q4-v1"
+  ]
+}

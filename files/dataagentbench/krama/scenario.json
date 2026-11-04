@@ -1,0 +1,16 @@
+{
+  "id": "dataagentbench/krama",
+  "name": "DataAgentBench · krama",
+  "query_ids": [
+    "dataagentbench/krama/query1",
+    "dataagentbench/krama/query2",
+    "dataagentbench/krama/query3",
+    "dataagentbench/krama/query4",
+    "dataagentbench/krama/query5",
+    "dataagentbench/krama/query6",
+    "dataagentbench/krama/query7",
+    "dataagentbench/krama/query8",
+    "dataagentbench/krama/query9",
+    "dataagentbench/krama/query10"
+  ]
+}

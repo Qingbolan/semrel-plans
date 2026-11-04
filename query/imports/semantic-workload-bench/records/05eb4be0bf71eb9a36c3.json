@@ -1,0 +1,28 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v108/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Extract typed directed material anaphora relations from each complete tokenized snippet under the supplied annotation guideline.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v108/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_ONLY_DEVELOPMENT",
+    "task": "Extract typed directed material anaphora relations from each complete tokenized snippet under the supplied annotation guideline.",
+    "input": "sentences: token lists; flat zero-based inclusive token offsets",
+    "output": "record_id and relations by Coreference/Transformed/Reaction-associated/Work-up/Contained; each edge is [anaphor_ranges, antecedent_ranges]; preserve discontinuity.",
+    "gold_semantics": "Original published JSON edges. No transitive closure applied; not the official 2022 score.",
+    "failure": "ABSTAIN is execution failure, not a negative semantic label.",
+    "downstream": "Filter Work-up edges and project material sources, or group/count edges by type.",
+    "limitations": [
+      "No original BRAT parity audit",
+      "No patent entity grouping or independent confirmation",
+      "Conservative public example lexical exclusion is not complete leakage audit",
+      "No model or operator extraction run"
+    ]
+  },
+  "domain": "shared-environment-audit-20260908"
+}

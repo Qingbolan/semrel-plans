@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "note": "Presentation folders for the catalog sidebar. Each source collection (collection_label, or the benchmark default) maps to exactly one folder; query_id and the imported tables are unchanged. tag: category = category_label, subset = original_record.subset, source = source collection name without its ' · Derived' / ' · Examples' suffix.",
+  "kinds": {
+    "benchmark": {
+      "zh": "语义算子 / 混合查询 benchmark",
+      "en": "Semantic-operator / hybrid-query benchmark"
+    },
+    "system": {
+      "zh": "系统论文自带 workload",
+      "en": "System-paper workload"
+    },
+    "agent": {
+      "zh": "Data agent benchmark",
+      "en": "Data agent benchmark"
+    },
+    "derived": {
+      "zh": "派生任务",
+      "en": "Derived tasks"
+    },
+    "example": {
+      "zh": "仓库示例",
+      "en": "Repository examples"
+    }
+  },
+  "folders": [
+    {
+      "name": "SemBench",
+      "kind": "benchmark",
+      "papers": [
+        "1ef81efeb4f6"
+      ],
+      "sources": [
+        {
+          "collection": "SemBench"
+        }
+      ],
+      "summary": {
+        "zh": "语义查询处理引擎 benchmark。6 个场景（电影、动物、汽车、电商、多模态问答、医疗）的自然语言查询，数据混合文本、图像、音频与关系表。",
+        "en": "Benchmark for semantic query engines: natural-language queries over 6 scenarios (movie, animals, cars, e-commerce, multimodal QA, medical) mixing text, images, audio and relational tables."
+      }
+    },
+    {
+      "name": "TAG-Bench",
+      "kind": "benchmark",
+      "papers": [
+        "0a2691144636"
+      ],
+      "sources": [
+        {
+          "collection": "TAG-Bench"
+        }
+      ],
+      "summary": {
+        "zh": "Table-Augmented Generation benchmark。在 BIRD 的 5 个数据库上改写的 80 个问题，需要关系查询加世界知识或语义推理。",
+        "en": "Table-Augmented Generation benchmark: 80 questions rewritten over 5 BIRD databases that need relational queries plus world knowledge or semantic reasoning."
+      }
+    },
+    {
+      "name": "UDA-Bench",
+      "kind": "benchmark",
+      "papers": [
+        "f3bddbba0041"
+      ],
+      "sources": [
+        {
+          "collection": "UDA-Bench",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "非结构化数据分析 benchmark。6 个领域（艺术、CS 论文、财报、法律、医疗、球员）的文档集合，用 SQL 式查询先抽取属性，再过滤、聚合或连接；收录仓库中全部 608 个查询位置。",
+        "en": "Unstructured data analysis benchmark: document collections in 6 domains (art, CS papers, finance, legal, medical, players) queried with SQL that extracts attributes, then filters, aggregates or joins; all 608 query sites in the repository."
+      }
+    },
+    {
+      "name": "QUEST",
+      "kind": "benchmark",
+      "papers": [
+        "36e7d4a337e8"
+      ],
+      "sources": [
+        {
+          "collection": "QUEST",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "非结构化文档分析的查询优化。在 WikiText、LCR、SWDE 三个文档集上，对 LLM 抽取出的属性做过滤与 join 的 SQL 查询。",
+        "en": "Query optimization for unstructured document analysis: SQL that filters and joins on LLM-extracted attributes over the WikiText, LCR and SWDE document sets."
+      }
+    },
+    {
+      "name": "SWAN",
+      "kind": "benchmark",
+      "papers": [
+        "lit_abbb0b713132"
+      ],
+      "sources": [
+        {
+          "collection": "SWAN 2.0",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "超出数据库本身信息的问题。BIRD 的 4 个数据库被遮蔽部分列，120 个问题需要 LLM 补全这些信息；SWAN 2.0 每题附 AISQL 与 oracle SQL。",
+        "en": "Questions beyond the database: 4 BIRD databases with columns masked, so 120 questions need an LLM to supply the missing facts; SWAN 2.0 adds AISQL and oracle SQL per question."
+      }
+    },
+    {
+      "name": "SEMA-SQL",
+      "kind": "benchmark",
+      "papers": [
+        "lit_4c33d92b86d8"
+      ],
+      "sources": [
+        {
+          "collection": "SEMA-SQL TAG+",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "SEMA-SQL 仓库中的 TAG+ 部分：40 个基于 BIRD 的问题，需要关系操作加 LLM 语义推理。原始只有问题与答案。仓库另外 80 条即 TAG-Bench。",
+        "en": "The TAG+ part of the SEMA-SQL repository: 40 BIRD-based questions needing relational operations plus LLM reasoning, supplied as questions and answers only. Its other 80 queries are TAG-Bench."
+      }
+    },
+    {
+      "name": "SemCEB",
+      "kind": "benchmark",
+      "papers": [
+        "lit_05f62b70bd9e"
+      ],
+      "sources": [
+        {
+          "collection": "SemCEB",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "语义算子基数估计 benchmark。在 Amazon 商品与评论上手工整理的 102 条语义 filter / join，按简单 / 复杂、单表 / 连接分组；评估的是基数估计，不是端到端计划。",
+        "en": "Cardinality estimation benchmark for semantic operators: 102 hand-curated semantic filters and joins over Amazon products and reviews, grouped by simple/complex and single-table/join; it targets estimation, not end-to-end plans."
+      }
+    },
+    {
+      "name": "PLOP",
+      "kind": "benchmark",
+      "papers": [
+        "lit_a2c395388f52"
+      ],
+      "sources": [
+        {
+          "collection": "PLOP agent_bench",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "语义算子在混合计划中的放置优化。Morrila agent_bench 数据上的 30 条语义 SQL；论文另用的 14 条电商查询即 SemBench ecomm。",
+        "en": "Placement of semantic operators in hybrid plans: 30 semantic SQL queries over the Morrila agent_bench data; the paper's other 14 e-commerce queries are SemBench ecomm."
+      }
+    },
+    {
+      "name": "BlendSQL",
+      "kind": "benchmark",
+      "papers": [
+        "lit_a5a5cd98e6b0"
+      ],
+      "sources": [
+        {
+          "collection": "BlendSQL benchmark",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "把 LLM 调用（LLMMap、LLMJoin 等）嵌入 SQL 的方言。收录仓库 benchmark/ 中 4 个数据库的 18 条查询；论文所用问答数据集的题目未收录。",
+        "en": "A SQL dialect embedding LLM calls (LLMMap, LLMJoin, ...): the 18 queries over 4 databases in the repository's benchmark/; the paper's QA datasets are not included."
+      }
+    },
+    {
+      "name": "ELEET",
+      "kind": "benchmark",
+      "papers": [
+        "lit_da7a4612cc74"
+      ],
+      "sources": [
+        {
+          "collection": "ELEET benchmark",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "文本与表格上的学习型查询执行。benchmark.py 中 5 个数据集返回的 86 个查询计划（多模态 join / union / 抽取），没有自然语言问题。",
+        "en": "Learned query execution over text and tables: the 86 query plans (multimodal join / union / extraction) returned for 5 datasets in benchmark.py; there are no natural-language questions."
+      }
+    },
+    {
+      "name": "CAESURA",
+      "kind": "benchmark",
+      "papers": [
+        "d6d61261ea85"
+      ],
+      "sources": [
+        {
+          "collection": "CAESURA",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "多模态查询规划。Artwork（画作图片 + Wikidata）与 Rotowire（球赛报道 + 表格）上的 24 个查询模板，{…} 为待填槽位；论文中的 48 条采样实例未公开。",
+        "en": "Multimodal query planning: 24 query templates over Artwork (painting images + Wikidata) and Rotowire (game reports + tables); {…} marks slots. The paper's 48 sampled instances are unpublished."
+      }
+    },
+    {
+      "name": "Abacus",
+      "kind": "system",
+      "papers": [
+        "adc8261dfc10"
+      ],
+      "sources": [
+        {
+          "collection": "Abacus",
+          "tag": "category"
+        },
+        {
+          "collection": "Abacus MMQA",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "Abacus 论文的实验 workload：BioDEX（医学不良反应抽取）、CUAD（合同条款抽取）、MMQA（多模态问答）三个流程，以及 MMQA 的 451 个问题。三个流程的标题是期望输出的描述，不是问句。",
+        "en": "Workloads from the Abacus paper: the BioDEX (adverse-event extraction), CUAD (contract clause extraction) and MMQA (multimodal QA) pipelines, plus the 451 MMQA questions. The three pipeline titles describe the expected output, not a question."
+      }
+    },
+    {
+      "name": "ThalamusDB",
+      "kind": "system",
+      "papers": [
+        "145167bbe3ca"
+      ],
+      "sources": [
+        {
+          "collection": "ThalamusDB",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "多模态近似查询处理。Craigslist 家具（图片 + 文本）、YouTube（音频）、Netflix 三个数据集上带自然语言谓词的 SQL 聚合与 LIMIT 查询，共 55 条。",
+        "en": "Approximate query processing on multimodal data: 55 SQL aggregate and LIMIT queries with natural-language predicates over Craigslist furniture (images + text), YouTube (audio) and Netflix."
+      }
+    },
+    {
+      "name": "MLSys 2025 LLM-SQL",
+      "kind": "system",
+      "papers": [
+        "ad23774b1aed"
+      ],
+      "sources": [
+        {
+          "collection": "MLSys 2025 LLM-SQL",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "关系分析中调用 LLM 的查询。7 个数据集上的 LLM 过滤、投影、多次调用、聚合与 RAG 共 16 条，按论文附录转录；无官方代码仓库。",
+        "en": "Relational analytics queries that call an LLM: 16 LLM filter, projection, multi-call, aggregation and RAG queries over 7 datasets, transcribed from the paper's appendix; there is no official repository."
+      }
+    },
+    {
+      "name": "7-30",
+      "kind": "agent",
+      "papers": [
+        "lit_87488b0451d4",
+        "lit_bd4329fbe1d9",
+        "4033831ae351",
+        "lit_313bfdb48598"
+      ],
+      "sources": [
+        {
+          "collection": "7-30",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "5 个 data agent benchmark 的逐题粗粒度分析：FDABench 2007、LongDA 505、DABstep 450、KramaBench 104、DataAgentBench（DAB）54，共 3120 条。每题只有最小计划、语义算子计数与依据，原始数据未提供。",
+        "en": "Per-question coarse analysis of 5 data agent benchmarks: FDABench 2,007, LongDA 505, DABstep 450, KramaBench 104 and DataAgentBench (DAB) 54, 3,120 in total. Each has only a minimal plan, semantic-operator counts and evidence; raw data is not provided."
+      }
+    },
+    {
+      "name": "8-17",
+      "kind": "agent",
+      "papers": [],
+      "sources": [
+        {
+          "collection": "8-17",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "Data agent 查询集：在 SEC 10-K 年报、合同附件、ASRS 航空安全报告、NHTSA 车辆投诉四个语料上的 228 条文档 + 表格查询，附参考语义计划、答案与评估规则。语料约 11GB，只登记本地路径。",
+        "en": "Data agent query set: 228 document + table queries over SEC 10-K filings, contract exhibits, ASRS aviation safety reports and NHTSA vehicle complaints, with reference semantic plans, answers and evaluation rules. The ~11 GB corpus is registered by local path only."
+      }
+    },
+    {
+      "name": "DataAgentBench",
+      "kind": "agent",
+      "papers": [
+        "lit_313bfdb48598"
+      ],
+      "sources": [
+        {
+          "collection": "DataAgentBench",
+          "tag": "category"
+        }
+      ],
+      "summary": {
+        "zh": "数据 agent benchmark（共 104 条，跨 4 种 DBMS）中按仓库收录的 5 个数据集 50 条，逻辑计划依据问题与库描述人工重建；另外 54 条在 7-30 的 DAB 标签下。",
+        "en": "Data agent benchmark (104 questions across 4 DBMSs): the 50 questions from 5 datasets taken from the repository, with logical plans rebuilt by hand from the question and database description; the other 54 are under the DAB tag of 7-30."
+      }
+    },
+    {
+      "name": "派生任务",
+      "kind": "derived",
+      "papers": [],
+      "sources": [
+        {
+          "collection": "TAR",
+          "tag": "source"
+        },
+        {
+          "collection": "TREC-Legal",
+          "tag": "source"
+        },
+        {
+          "collection": "ContractNLI",
+          "tag": "source"
+        },
+        {
+          "collection": "MAUD",
+          "tag": "source"
+        },
+        {
+          "collection": "ShARC",
+          "tag": "source"
+        },
+        {
+          "collection": "ClinGen",
+          "tag": "source"
+        },
+        {
+          "collection": "TalentCLEF",
+          "tag": "source"
+        },
+        {
+          "collection": "Trial",
+          "tag": "source"
+        },
+        {
+          "suffix": " · Derived",
+          "tag": "source"
+        }
+      ],
+      "summary": {
+        "zh": "从公开数据集（法律、医疗、生物、篇章分析、网络安全等）改写成的语义处理任务，每个标签对应一个源数据集。卡片里的论文是数据集出处，不是查询来源。",
+        "en": "Semantic processing tasks rewritten from public datasets (legal, medical, biology, discourse, security, ...); each tag is one source dataset. Linked papers describe the datasets, not the queries."
+      }
+    },
+    {
+      "name": "仓库示例",
+      "kind": "example",
+      "papers": [],
+      "sources": [
+        {
+          "suffix": " · Examples",
+          "tag": "source"
+        },
+        {
+          "collection": "DataSpace",
+          "tag": "source"
+        }
+      ],
+      "summary": {
+        "zh": "系统或 benchmark 代码仓库里的单条示例查询（LOTUS、Palimpzest、DataSpace），不属于正式查询集。",
+        "en": "Single example queries from system or benchmark repositories (LOTUS, Palimpzest, DataSpace); not part of a formal query set."
+      }
+    }
+  ]
+}

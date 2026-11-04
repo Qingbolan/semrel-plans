@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/Finan/Filter/filter_queries_Finan/44",
+  "group": "uda-finan",
+  "query": "SELECT the_highest_ownership_stake, revenue, board_members FROM Finance WHERE revenue <= 12857200000 OR total_assets > 33746800000 OR executive_profiles != 'Christine Oldridge' OR company_name = 'Rectifier Technologies Ltd';",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Finan/Filter/filter_queries_Finan.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "the_highest_ownership_stake, revenue, board_members",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "revenue <= 12857200000 OR total_assets > 33746800000 OR executive_profiles <> 'Christine Oldridge' OR company_name = 'Rectifier Technologies Ltd'",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；board_members, company_name, executive_profiles, revenue, the_highest_ownership_stake, total_assets",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "Finance 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

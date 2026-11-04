@@ -1,0 +1,12 @@
+{
+  "id": "thalamusdb/netflix",
+  "name": "ThalamusDB / netflix",
+  "query_ids": [
+    "thalamusdb/netflix/Q01",
+    "thalamusdb/netflix/Q02",
+    "thalamusdb/netflix/Q03",
+    "thalamusdb/netflix/Q04",
+    "thalamusdb/netflix/Q05",
+    "thalamusdb/netflix/Q06"
+  ]
+}

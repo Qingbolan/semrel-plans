@@ -1,0 +1,21 @@
+{
+  "dataset_id": "sema-sql/tag-plus",
+  "source_ids": [
+    "hyb_1373ef25652bbe52"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "BIRD MINIDEV databases",
+      "type": "database",
+      "description": "Named per query in the DB used column"
+    }
+  ],
+  "record_count": null,
+  "version": "b4866921ad0843c73a6966aca0cdd89082da1cf1",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "BIRD MINIDEV databases named by SEMA-SQL; not downloaded"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "public-task/shared-environment-five-lakes-v2/stard/public/request",
+  "group": "public-tasks",
+  "query": "For every question in records.json, return a ranked, duplicate-free list of relevant article IDs from lake/catalog.jsonl. Use the frozen article corpus. This is relevant-article retrieval, not a legal ruling or a complete legal answer. Do not infer that unannotated or unreturned articles are legally inapplicable.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-five-lakes-v2/stard/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "stard-Q1-v1",
+    "dataset": "stard",
+    "request": "For every question in records.json, return a ranked, duplicate-free list of relevant article IDs from lake/catalog.jsonl. Use the frozen article corpus. This is relevant-article retrieval, not a legal ruling or a complete legal answer. Do not infer that unannotated or unreturned articles are legally inapplicable.",
+    "output_value": {
+      "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+      "status": [
+        "OK",
+        "ABSTAIN"
+      ],
+      "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+      "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+    },
+    "evidence": "records.json defines the full batch; paths are relative to public/. Shared resources are under lake/.",
+    "execution_failure": "ABSTAIN with null value and a reason. Insufficient evidence is not a negative label.",
+    "readiness": "DEVELOPMENT_RETRIEVAL_ONLY",
+    "dag": [
+      "scan_questions",
+      "sem_map_decompose_issues",
+      "retrieve_full_catalog",
+      "sem_map_relevance_rank",
+      "validate_article_ids"
+    ]
+  },
+  "domain": "stard"
+}

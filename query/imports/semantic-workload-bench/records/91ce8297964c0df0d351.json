@@ -1,0 +1,124 @@
+{
+  "id": "bench-u/Med/Mixed/mixed_queries_filter_agg_join/12",
+  "group": "uda-med",
+  "query": "SELECT Med_institution.institution_type, MIN(Med_disease.diagnosis_challenges) AS min_Med_disease_diagnosis_challenges FROM disease JOIN institution ON disease.disease_name = institution.research_diseases JOIN drug ON disease.disease_name = drug.disease_name WHERE (Med_drug.side_effects = 'diarrhea' AND Med_drug.generic_name = 'Esomeprazole') OR (Med_institution.research_diseases = 'Gut Microbiome Imbalance' AND Med_disease.pathogenesis = 'infectious_fungal') GROUP BY Med_institution.institution_type;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Mixed/mixed_queries_filter_agg_join.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "unresolved_binding",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。 源SQL存在未绑定表限定符：Med_disease, Med_drug, Med_institution；图原样保留，字段归属待核，不能直接执行。所需字段：Med_disease.diagnosis_challenges, Med_disease.pathogenesis, Med_drug.generic_name, Med_drug.side_effects, Med_institution.institution_type, Med_institution.research_diseases, disease.disease_name, drug.disease_name, institution.research_diseases",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "Med_institution.institution_type, MIN(Med_disease.diagnosis_challenges) AS min_Med_disease_diagnosis_challenges",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Aggregate",
+        "detail": "Med_institution.institution_type; MIN(Med_disease.diagnosis_challenges)",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "(Med_drug.side_effects = 'diarrhea' AND Med_drug.generic_name = 'Esomeprazole') OR (Med_institution.research_diseases = 'Gut Microbiome Imbalance' AND Med_disease.pathogenesis = 'infectious_fungal')",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Join",
+        "detail": " disease.disease_name = drug.disease_name",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Join",
+        "detail": " disease.disease_name = institution.research_diseases",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；disease_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "disease 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；research_diseases",
+        "kind": "semantic"
+      },
+      {
+        "id": "n8",
+        "op": "Scan",
+        "detail": "institution 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n9",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；disease_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n10",
+        "op": "Scan",
+        "detail": "drug 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n8",
+        "n7"
+      ],
+      [
+        "n7",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n10",
+        "n9"
+      ],
+      [
+        "n9",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

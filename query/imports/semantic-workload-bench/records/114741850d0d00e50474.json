@@ -1,0 +1,94 @@
+{
+  "id": "sembench/movie/Q6",
+  "group": "sembench-movie",
+  "query": "Ten Pairs of reviews that express the *opposite* sentiment (one is positive and the other is negative) for movie with id 'ant_man_and_the_wasp_quantumania'. Return id, reviewId from first review, reviewId from second review.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q6.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "按原gold的有序对保留(a,b)/(b,a)，不擅自去成无序对；Q5/Q6的NL限10，gold SQL未限。直接SJoin可替换为两侧SMap情感后等值/不等连接，但需验证质量等价。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Limit",
+        "detail": "10; 未指定顺序",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Project",
+        "detail": "movieId, reviewId1, reviewId2",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "reviewId1 != reviewId2",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SJoin",
+        "detail": "两篇评论相反情感",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Filter",
+        "detail": "id = ant_man_and_the_wasp_quantumania",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "Reviews",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "Filter",
+        "detail": "id = ant_man_and_the_wasp_quantumania",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "Scan",
+        "detail": "Reviews",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "blendsql/rugby",
+  "name": "BlendSQL benchmark · rugby",
+  "query_ids": [
+    "blendsql/rugby/q01",
+    "blendsql/rugby/q02",
+    "blendsql/rugby/q03",
+    "blendsql/rugby/q04"
+  ]
+}

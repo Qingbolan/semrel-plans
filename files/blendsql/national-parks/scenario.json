@@ -1,0 +1,11 @@
+{
+  "id": "blendsql/national-parks",
+  "name": "BlendSQL benchmark · national_parks",
+  "query_ids": [
+    "blendsql/national-parks/q01",
+    "blendsql/national-parks/q02",
+    "blendsql/national-parks/q03",
+    "blendsql/national-parks/q04",
+    "blendsql/national-parks/q05"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/Player/Filter/filter_queries_team/10",
+  "group": "uda-player",
+  "query": "SELECT team_name, founded_year, ownership FROM team WHERE founded_year > 1967 OR team_name != 'Charlotte Hornets' OR team_name = 'Detroit Pistons' OR founded_year >= 1989;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Filter/filter_queries_team.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "team_name, founded_year, ownership",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "founded_year > 1967 OR team_name <> 'Charlotte Hornets' OR team_name = 'Detroit Pistons' OR founded_year >= 1989",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；founded_year, ownership, team_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "team 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

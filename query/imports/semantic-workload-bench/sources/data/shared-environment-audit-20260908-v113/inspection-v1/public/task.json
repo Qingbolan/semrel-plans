@@ -1,0 +1,14 @@
+{
+  "status": "INSPECTION_ONLY_DEVELOPMENT",
+  "task": "Infer directed typed SDRT discourse relations and composite discourse units from all supplied EDUs, speakers and turn order under the shared manual.",
+  "upstream": "Human EDU segmentation supplied; addressee and CDU/relations are withheld.",
+  "output": "record_id, cdus with member EDU/CDU IDs, directed relations with labels. Predicted CDU IDs need structural matching, not literal ID matching.",
+  "downstream": "Filter Clarification_question or Question_answer_pair edges, project endpoints, and count by type.",
+  "failure": "ABSTAIN is execution failure, not a negative relation.",
+  "limits": [
+    "No canonical CDU graph scorer implemented",
+    "No model run",
+    "Guide/paper overlap heuristic is not complete leakage audit",
+    "Native parity filtering uses gold: development only"
+  ]
+}

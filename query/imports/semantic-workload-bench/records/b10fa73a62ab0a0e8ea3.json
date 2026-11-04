@@ -1,0 +1,16 @@
+{
+  "id": "public-task/pathology/workload",
+  "group": "public-tasks",
+  "query": "业务请求：对本批切片逐张识别组织类别，输出分类清单，统计每类切片数量，供影像归档与后续人工复核使用。记录单位是28×28 RGB组织图块，不是完整病理slide、患者或诊断。PathMNIST九分类及官方split见[官方资料](https://medmnist.com/v2)。",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/pathology-patches/workload-card.md",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "request": "业务请求：对本批切片逐张识别组织类别，输出分类清单，统计每类切片数量，供影像归档与后续人工复核使用。记录单位是28×28 RGB组织图块，不是完整病理slide、患者或诊断。PathMNIST九分类及官方split见[官方资料](https://medmnist.com/v2)。"
+  },
+  "domain": "pathology"
+}

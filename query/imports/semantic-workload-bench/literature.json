@@ -1,0 +1,1786 @@
+[
+  {
+    "source_id": "swb_9bc1e4ebcff70569",
+    "url": "https://arxiv.org/abs/2207.11871",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_c00f1ae5a609a1c7",
+    "url": "https://arxiv.org/abs/2407.11418",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_6f81ce3af87a2ac5",
+    "url": "https://arxiv.org/abs/2410.12189",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/accuracy-gap-candidates.md",
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-research-audit.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_5ecc753763938cef",
+    "url": "https://arxiv.org/abs/2405.14696",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_de7d86492ba55883",
+    "url": "https://arxiv.org/abs/2409.07429",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-research-audit.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_922191dd8388f08f",
+    "url": "https://arxiv.org/abs/2606.26669",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_72d8deb91b7d8ed0",
+    "url": "https://arxiv.org/abs/2505.17612",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/benchmark-construction-plan-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/benchmark-construction-plan-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_3249d7335bfc1d8c",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md"
+    ]
+  },
+  {
+    "source_id": "swb_3d648cb84b8b6ea4",
+    "url": "https://arxiv.org/abs/2605.10397",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md",
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-research-audit.md",
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_bf169fcee7a342d9",
+    "url": "https://arxiv.org/abs/2501.01767",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md",
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-research-audit.md"
+    ]
+  },
+  {
+    "source_id": "swb_494d3e8da8ee8504",
+    "url": "https://arxiv.org/abs/2307.15051",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round13.md"
+    ]
+  },
+  {
+    "source_id": "swb_2ed7b13eae4743b6",
+    "url": "https://aclanthology.org/2021.emnlp-main.300",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md"
+    ]
+  },
+  {
+    "source_id": "swb_0c557d475309f6b3",
+    "url": "https://aclanthology.org/2025.acl-long.557",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_b410a3525b400c9e",
+    "url": "https://arxiv.org/abs/2505.11613",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-input-audit.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_e1b58c6b3f256636",
+    "url": "https://arxiv.org/abs/2512.02289",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-research-audit.md"
+    ]
+  },
+  {
+    "source_id": "swb_51f116bbfc6e7715",
+    "url": "https://vldb.org/pvldb/reproducibility",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/artifact-guide.md"
+    ]
+  },
+  {
+    "source_id": "swb_06e6bee78c14464d",
+    "url": "https://link.springer.com/article/10.1007/s11263-022-01578-9",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/history/loco-pilot-readiness.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-scenario-adversarial.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-scenario-gates.md"
+    ]
+  },
+  {
+    "source_id": "swb_f1af6da7b459b359",
+    "url": "https://arxiv.org/abs/2503.21622",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-scenario-adversarial.md"
+    ]
+  },
+  {
+    "source_id": "swb_60eb3e86900adc8b",
+    "url": "https://aclanthology.org/2025.acl-industry.29",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-scenario-adversarial.md",
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-scenario-gates.md"
+    ]
+  },
+  {
+    "source_id": "swb_09382a48ead3f2c2",
+    "url": "https://arxiv.org/abs/2406.04687",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-scenario-adversarial.md"
+    ]
+  },
+  {
+    "source_id": "swb_48346cee75b5bb79",
+    "url": "https://arxiv.org/abs/1902.06197",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/history/manufacturing-source-readiness.md",
+      "query/imports/semantic-workload-bench/sources/report.md",
+      "query/imports/semantic-workload-bench/sources/workloads/pcb-copper/workload-card.md"
+    ]
+  },
+  {
+    "source_id": "swb_06f927e345ab3cc8",
+    "url": "https://arxiv.org/abs/2602.18193",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-blmguard-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_3cae5252bdcfe210",
+    "url": "https://aclanthology.org/2024.emnlp-main.217",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-c3pa-in-progress.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round62.md"
+    ]
+  },
+  {
+    "source_id": "swb_2f8dcc726b24630f",
+    "url": "https://arxiv.org/abs/2510.00311",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-cortex-in-progress.md"
+    ]
+  },
+  {
+    "source_id": "swb_00d7c15ac52f6fdb",
+    "url": "https://arxiv.org/abs/2509.18400",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-customs-followup.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round9.md"
+    ]
+  },
+  {
+    "source_id": "swb_88dc3d32f1cfb076",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/4962a23916103301b27bde29a27642e8-Paper-Datasets_and_Benchmarks.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-csmed.md"
+    ]
+  },
+  {
+    "source_id": "swb_49c0e80cf589333d",
+    "url": "https://drive.google.com/file/d/1vsu0Ns6R6AeTX4-Hf2OdYqRvHD4yNm4y/view",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round6.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-hicric.md"
+    ]
+  },
+  {
+    "source_id": "swb_d8772e83d0a04019",
+    "url": "https://doi.org/10.1016/j.pec.2008.07.033",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md"
+    ]
+  },
+  {
+    "source_id": "swb_75951914c8e5011e",
+    "url": "https://doi.org/10.1136/bmj.323.7311.493",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md"
+    ]
+  },
+  {
+    "source_id": "swb_109d391e85953807",
+    "url": "https://arxiv.org/abs/2505.17654",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evade-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_ac85b14fcd64e77b",
+    "url": "https://astrolavos.gatech.edu/articles/Manuscript_UDRP_final.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round22.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round25.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round26.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-udrp.md"
+    ]
+  },
+  {
+    "source_id": "swb_e0f9c1b754a2c084",
+    "url": "https://aclanthology.org/P98-1013",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round198.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round201.md"
+    ]
+  },
+  {
+    "source_id": "swb_41f1c2ecf23645a0",
+    "url": "https://upcommons.upc.edu/bitstreams/4a4e2dc2-df18-4bcd-893a-ffeadc9bf2b3/download",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round128.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round129.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round130.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round131.md"
+    ]
+  },
+  {
+    "source_id": "swb_315f61e3d4c2343e",
+    "url": "https://aclanthology.org/2024.lrec-main.103",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round213.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round215.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-annoctr.md"
+    ]
+  },
+  {
+    "source_id": "swb_7af6a773c0bc5b2c",
+    "url": "https://doi.org/10.1186/1471-2105-12-393",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round53.md"
+    ]
+  },
+  {
+    "source_id": "swb_4d2a6d2cf3b548f0",
+    "url": "https://doi.org/10.1007/s10579-021-09562-4",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round58.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round60.md"
+    ]
+  },
+  {
+    "source_id": "swb_279bb4c403b81ba3",
+    "url": "https://ebiquity.umbc.edu/get/a/publication/1312.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round70.md"
+    ]
+  },
+  {
+    "source_id": "swb_b2d5d8a0f66a4102",
+    "url": "https://aclanthology.org/P18-1018",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round170.md"
+    ]
+  },
+  {
+    "source_id": "swb_b07911f239df86a1",
+    "url": "https://gucorpling.org/amir/pdf/GUM_paper_prepub.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round71.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round73.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round74.md"
+    ]
+  },
+  {
+    "source_id": "swb_d71b9c022df6a37b",
+    "url": "https://aclanthology.org/2025.cl-1.3",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round71.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round73.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round74.md"
+    ]
+  },
+  {
+    "source_id": "swb_8a2c1f35dc27d86a",
+    "url": "https://aclanthology.org/J17-3005",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round75.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round76.md"
+    ]
+  },
+  {
+    "source_id": "swb_17fcfce4e68396c6",
+    "url": "https://aclanthology.org/J17-1004",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round79.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round80.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round81.md"
+    ]
+  },
+  {
+    "source_id": "swb_4d7f8c4ca19452df",
+    "url": "https://arxiv.org/abs/2106.13833",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round179.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_bdb2ca21417b7e12",
+    "url": "https://aclanthology.org/2020.lrec-1.133",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-evidence-review.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round181.md"
+    ]
+  },
+  {
+    "source_id": "swb_af0cd6febeef5923",
+    "url": "https://arxiv.org/abs/2505.22959",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-hsebench-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_6c2e3b2cd12ac91c",
+    "url": "https://arxiv.org/abs/2604.08552",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-hubmap-in-progress.md"
+    ]
+  },
+  {
+    "source_id": "swb_1114bf9f9e852909",
+    "url": "https://arxiv.org/abs/2504.14904",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-kuaimod-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_ca7762b13d0be676",
+    "url": "https://aclanthology.org/2025.findings-acl.887",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-lawtree-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_c4bf4a96ffdb3949",
+    "url": "https://aclanthology.org/2023.acl-long.416",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-mdace-in-progress.md"
+    ]
+  },
+  {
+    "source_id": "swb_4c1a140aac623fd5",
+    "url": "https://arxiv.org/abs/2605.27377",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-mdace-in-progress.md"
+    ]
+  },
+  {
+    "source_id": "swb_1408fdcc383f6abc",
+    "url": "https://aclanthology.org/2025.acl-long.518",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-privaci-in-progress.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md"
+    ]
+  },
+  {
+    "source_id": "swb_ce668097d39dbea9",
+    "url": "https://aclanthology.org/2026.acl-long.294",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-privaci-in-progress.md"
+    ]
+  },
+  {
+    "source_id": "swb_30a465c7a1ee8b92",
+    "url": "https://arxiv.org/abs/2601.20617",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-public-sector-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_5a1891ccb7592a21",
+    "url": "https://aclanthology.org/2026.eacl-demo.34",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-public-sector-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_dcf3d4b39960dc91",
+    "url": "https://aclanthology.org/P18-2071",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round100.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round101.md"
+    ]
+  },
+  {
+    "source_id": "swb_006ebf155d6acc06",
+    "url": "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round102.md"
+    ]
+  },
+  {
+    "source_id": "swb_af152f5630911f25",
+    "url": "https://aclanthology.org/L16-1699",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round103.md"
+    ]
+  },
+  {
+    "source_id": "swb_a31115dd5290be11",
+    "url": "https://aclanthology.org/2024.lrec-main.954",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round104.md"
+    ]
+  },
+  {
+    "source_id": "swb_9b22866412d6b018",
+    "url": "https://research-repository.uwa.edu.au/en/publications/automatic-knowledge-extraction-from-industrial-maintenance-short-",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round105.md"
+    ]
+  },
+  {
+    "source_id": "swb_de093b8af2af6972",
+    "url": "https://www.lrec-conf.org/proceedings/lrec2014/pdf/840_Paper.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round106.md"
+    ]
+  },
+  {
+    "source_id": "swb_4f212191533404a4",
+    "url": "https://biaoyanf.github.io/files/papers/eacl2021-chemu-ref.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round107.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round108.md"
+    ]
+  },
+  {
+    "source_id": "swb_dd347e9b38fa7dca",
+    "url": "https://e-archivo.uc3m.es/bitstreams/714e8ec0-6fd2-4ae1-ab3f-93c564ff5a1c/download",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round109.md"
+    ]
+  },
+  {
+    "source_id": "swb_da688ad6f82a66ca",
+    "url": "https://aclanthology.org/S13-2056",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round109.md"
+    ]
+  },
+  {
+    "source_id": "swb_8a07d9a53b68145d",
+    "url": "https://ceur-ws.org/Vol-2696/paper_263.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round11.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round48.md"
+    ]
+  },
+  {
+    "source_id": "swb_6f488a10f0fce31a",
+    "url": "https://aclanthology.org/L16-1432",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round111.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round113.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round114.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round115.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round141.md"
+    ]
+  },
+  {
+    "source_id": "swb_f535341f9a8ddf7c",
+    "url": "https://www.nature.com/articles/s41597-022-01521-0",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round116.md"
+    ]
+  },
+  {
+    "source_id": "swb_dbe3ef6b4d9451c7",
+    "url": "https://arxiv.org/abs/2207.13757",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round116.md"
+    ]
+  },
+  {
+    "source_id": "swb_96f59b64c48c85ff",
+    "url": "https://arxiv.org/abs/2208.06178",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round119.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round78.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_f7ded85665b4916e",
+    "url": "https://arxiv.org/abs/2112.14731",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round12.md"
+    ]
+  },
+  {
+    "source_id": "swb_561a653983f0f575",
+    "url": "https://raw.githubusercontent.com/LLTLab/VetClaims/master/WalkerEtAl-ConnectivesSentenceRoles-ICAIL2017-PrePubCopy.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round120.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round124.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-vetclaims.md"
+    ]
+  },
+  {
+    "source_id": "swb_c5bd25a2b757290f",
+    "url": "https://www.nature.com/articles/s41597-019-0342-9",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round126.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round127.md"
+    ]
+  },
+  {
+    "source_id": "swb_51bbfa2841c3167c",
+    "url": "https://aclanthology.org/2024.lrec-main.1054",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round132.md"
+    ]
+  },
+  {
+    "source_id": "swb_601c5308e31d4538",
+    "url": "https://aclanthology.org/W17-2711",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round134.md"
+    ]
+  },
+  {
+    "source_id": "swb_c0c15db490aa1302",
+    "url": "https://aclanthology.org/2022.acl-long.303",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round136.md"
+    ]
+  },
+  {
+    "source_id": "swb_07c0c4e2b91f854d",
+    "url": "https://arxiv.org/abs/2511.07979",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round139.md"
+    ]
+  },
+  {
+    "source_id": "src_3c12a77f2e968514",
+    "url": "https://ceur-ws.org/Vol-2380/paper_250.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round14.md"
+    ]
+  },
+  {
+    "source_id": "swb_6cee056ba74ca704",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22230112",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round14.md"
+    ]
+  },
+  {
+    "source_id": "swb_b73f20a87218b658",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15733405",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round14.md"
+    ]
+  },
+  {
+    "source_id": "swb_38b3af71399e7e1f",
+    "url": "https://arxiv.org/abs/2608.20391",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round140.md"
+    ]
+  },
+  {
+    "source_id": "swb_b625878fd48a0f02",
+    "url": "https://arxiv.org/abs/2406.09105",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round142.md"
+    ]
+  },
+  {
+    "source_id": "src_0783e2f41e3d01a0",
+    "url": "https://aclanthology.org/2023.emnlp-main.1019/",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round143.md"
+    ]
+  },
+  {
+    "source_id": "swb_973f7874b35ac9f7",
+    "url": "https://www.scitepress.org/Papers/2026/142494/142494.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round144.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-latvia.md"
+    ]
+  },
+  {
+    "source_id": "swb_ee2f9eaaa97a583f",
+    "url": "https://arxiv.org/abs/2603.13933",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round145.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08.md"
+    ]
+  },
+  {
+    "source_id": "swb_653ef2352fa54377",
+    "url": "https://www.nature.com/articles/s41597-025-05664-8",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round146.md"
+    ]
+  },
+  {
+    "source_id": "swb_2d55ff7a1b315f1d",
+    "url": "https://link.springer.com/article/10.1007/s10506-024-09415-9",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round148.md"
+    ]
+  },
+  {
+    "source_id": "swb_1d2a82c028488d38",
+    "url": "https://aclanthology.org/2024.clicit-1.124",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round149.md"
+    ]
+  },
+  {
+    "source_id": "swb_7209f8c85fd21e7e",
+    "url": "https://arxiv.org/abs/2510.11985",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round15.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round20.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round29.md"
+    ]
+  },
+  {
+    "source_id": "swb_b4623de588deb9c3",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19060901",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round15.md"
+    ]
+  },
+  {
+    "source_id": "swb_2fd412beff975b13",
+    "url": "https://aclanthology.org/2024.lrec-main.229",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round150.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round68.md"
+    ]
+  },
+  {
+    "source_id": "swb_0dd6b85c0563fc58",
+    "url": "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round151.md"
+    ]
+  },
+  {
+    "source_id": "swb_a37833c020b0b931",
+    "url": "https://aclanthology.org/P16-1166",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round153.md"
+    ]
+  },
+  {
+    "source_id": "swb_3554268f202076ad",
+    "url": "https://aclanthology.org/W14-4921",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round153.md"
+    ]
+  },
+  {
+    "source_id": "swb_7a1bf4852afcc31a",
+    "url": "https://aclanthology.org/2020.acl-main.116",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round155.md"
+    ]
+  },
+  {
+    "source_id": "swb_e9390aaf60d6f809",
+    "url": "https://aclanthology.org/2021.naacl-main.69",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round157.md"
+    ]
+  },
+  {
+    "source_id": "swb_d6b98c91634c2133",
+    "url": "https://aclanthology.org/2023.wiesp-1.11",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round158.md"
+    ]
+  },
+  {
+    "source_id": "swb_657c3760f3ee944f",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21464130",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round16.md"
+    ]
+  },
+  {
+    "source_id": "swb_5c465992aad60453",
+    "url": "https://arxiv.org/abs/2410.21495",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round160.md"
+    ]
+  },
+  {
+    "source_id": "swb_b05589475dc4ae8e",
+    "url": "https://aclanthology.org/2026.eacl-long.377",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round162.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-ace.md"
+    ]
+  },
+  {
+    "source_id": "swb_ec5d40251cde1595",
+    "url": "https://www.nature.com/articles/s41598-024-62665-0",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round163.md"
+    ]
+  },
+  {
+    "source_id": "swb_69c2f0a1dae1fa77",
+    "url": "https://ceur-ws.org/Vol-3497/paper-002.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round164.md"
+    ]
+  },
+  {
+    "source_id": "swb_f6565ac2f4848bca",
+    "url": "https://arxiv.org/abs/2601.19667",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round165.md"
+    ]
+  },
+  {
+    "source_id": "swb_fdbed9aacaef81aa",
+    "url": "https://aclanthology.org/P13-1023",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round166.md"
+    ]
+  },
+  {
+    "source_id": "swb_386f1dadfa3554e4",
+    "url": "https://aclanthology.org/2026.acl-long.1760",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round172.md"
+    ]
+  },
+  {
+    "source_id": "swb_b307befbb8de1a36",
+    "url": "https://arxiv.org/abs/2503.03261",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round172.md"
+    ]
+  },
+  {
+    "source_id": "swb_3d46ec996ef72eb3",
+    "url": "https://aclanthology.org/2024.tacl-1.34",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round173.md"
+    ]
+  },
+  {
+    "source_id": "swb_36e0988f4d1f7d17",
+    "url": "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round176.md"
+    ]
+  },
+  {
+    "source_id": "swb_703b1e63eb91038a",
+    "url": "https://www.mdpi.com/2504-446X/9/10/704",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round178.md"
+    ]
+  },
+  {
+    "source_id": "swb_19417c58a6cc712f",
+    "url": "https://link.springer.com/article/10.1186/s13073-019-0687-x",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round18.md"
+    ]
+  },
+  {
+    "source_id": "swb_ec5511e26e070d30",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18955451",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round18.md"
+    ]
+  },
+  {
+    "source_id": "swb_fdbd8864e8865d0a",
+    "url": "https://aclanthology.org/2022.coling-1.63",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round181.md"
+    ]
+  },
+  {
+    "source_id": "swb_de04d2a208ec9768",
+    "url": "https://aclanthology.org/2020.law-1.16",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round183.md"
+    ]
+  },
+  {
+    "source_id": "swb_89830d01cf2a6c79",
+    "url": "https://aclanthology.org/2024.emnlp-main.726",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round185.md"
+    ]
+  },
+  {
+    "source_id": "swb_ea28fbbdd292a25a",
+    "url": "https://aclanthology.org/L18-1257",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round186.md"
+    ]
+  },
+  {
+    "source_id": "swb_49eedaa56605f814",
+    "url": "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round186.md"
+    ]
+  },
+  {
+    "source_id": "swb_1d5e3032209e6232",
+    "url": "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
+    ]
+  },
+  {
+    "source_id": "swb_fa6ea9ed97333fbb",
+    "url": "https://sites.icmc.usp.br/taspardo/Thesis2014-Cardoso.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
+    ]
+  },
+  {
+    "source_id": "swb_ab69f2b6fe9ae535",
+    "url": "https://aclanthology.org/N15-1146",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round191.md"
+    ]
+  },
+  {
+    "source_id": "swb_4b67cb87476a2fd8",
+    "url": "https://aclanthology.org/W06-1651",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round191.md"
+    ]
+  },
+  {
+    "source_id": "swb_6a3be73ff52f493f",
+    "url": "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round192.md"
+    ]
+  },
+  {
+    "source_id": "swb_414a5d084cd87393",
+    "url": "https://aclanthology.org/2024.lrec-main.1093",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round192.md"
+    ]
+  },
+  {
+    "source_id": "swb_27f33d6e470eaca9",
+    "url": "https://arxiv.org/abs/1805.00195",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round193.md"
+    ]
+  },
+  {
+    "source_id": "swb_51405a28ae12c407",
+    "url": "https://aclanthology.org/2021.eacl-main.187",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round193.md"
+    ]
+  },
+  {
+    "source_id": "swb_0e8300b2b4902c9a",
+    "url": "https://aclanthology.org/W16-5706",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round195.md"
+    ]
+  },
+  {
+    "source_id": "swb_874f7c28daa199e1",
+    "url": "https://aclanthology.org/W13-2322",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round196.md"
+    ]
+  },
+  {
+    "source_id": "swb_a44d1b532326f3f0",
+    "url": "https://aclanthology.org/D17-2001",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round198.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round201.md"
+    ]
+  },
+  {
+    "source_id": "swb_057033191e270616",
+    "url": "https://doi.org/10.1093/insilicoplants/diad021",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round202.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round203.md"
+    ]
+  },
+  {
+    "source_id": "swb_a3a10f2f7ac4ad3a",
+    "url": "https://clic.ub.edu/corpus/sites/default/files/inline-files/ancora-corpus.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round204.md"
+    ]
+  },
+  {
+    "source_id": "swb_49d541f5d426e976",
+    "url": "https://aclanthology.org/2023.mwe-1.6",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round206.md"
+    ]
+  },
+  {
+    "source_id": "swb_345bdbdf33da6aaf",
+    "url": "https://aclanthology.org/2020.mwe-1.14",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round206.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round207.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round208.md"
+    ]
+  },
+  {
+    "source_id": "swb_2214a5f0abe2dbfc",
+    "url": "https://aclanthology.org/2022.acl-long.468",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round21.md"
+    ]
+  },
+  {
+    "source_id": "swb_cd3ae3fc74a1d848",
+    "url": "https://aclanthology.org/W18-4925",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round210.md"
+    ]
+  },
+  {
+    "source_id": "swb_4f02949b54fd3f85",
+    "url": "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round211.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round212.md"
+    ]
+  },
+  {
+    "source_id": "swb_f3cf6b93c83f23ac",
+    "url": "https://aclanthology.org/2023.nllp-1.24",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round27.md"
+    ]
+  },
+  {
+    "source_id": "swb_bdf2bdf0063a84d6",
+    "url": "https://arxiv.org/abs/2211.00582",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round28.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_c68b4b2c6e624ec4",
+    "url": "https://arxiv.org/abs/2604.04443",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round3.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-deonticbench.md"
+    ]
+  },
+  {
+    "source_id": "swb_b4b13fb3f1bea6ef",
+    "url": "https://aclanthology.org/2021.naacl-main.22",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round3.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round5.md"
+    ]
+  },
+  {
+    "source_id": "swb_bf09840107a4fde2",
+    "url": "https://papers.neurips.cc/paper_files/paper/2025/file/4aab82c8d6b77c0b6b010145c1bfcdd3-Paper-Datasets_and_Benchmarks_Track.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round30.md"
+    ]
+  },
+  {
+    "source_id": "swb_7bf3f63af5fcf88b",
+    "url": "https://www.nature.com/articles/s41467-026-75160-z",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round32.md"
+    ]
+  },
+  {
+    "source_id": "swb_e29f37a968796840",
+    "url": "https://arxiv.org/abs/2503.03444",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round33.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-plat.md"
+    ]
+  },
+  {
+    "source_id": "swb_f385895bf39b0fef",
+    "url": "https://aclanthology.org/2024.findings-naacl.172",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round35.md"
+    ]
+  },
+  {
+    "source_id": "swb_baffe3cbb93b19b4",
+    "url": "https://aclanthology.org/2021.acl-long.132",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round35.md"
+    ]
+  },
+  {
+    "source_id": "swb_96934869cba8e4d3",
+    "url": "https://arxiv.org/abs/2507.20162",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round36.md"
+    ]
+  },
+  {
+    "source_id": "swb_ff28e5185fed4c22",
+    "url": "https://arxiv.org/abs/2608.07796",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round37.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-clinicare.md"
+    ]
+  },
+  {
+    "source_id": "swb_c1cdf2403c8db1d8",
+    "url": "https://doi.org/10.1145/3799682.3840202",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round38.md"
+    ]
+  },
+  {
+    "source_id": "swb_59fa88912bffc0a1",
+    "url": "https://aclanthology.org/2024.nllp-1.7",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round39.md"
+    ]
+  },
+  {
+    "source_id": "swb_f234be861a99115d",
+    "url": "https://arxiv.org/abs/2607.04261",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round39.md"
+    ]
+  },
+  {
+    "source_id": "swb_672fb3079a45a845",
+    "url": "https://aclanthology.org/2024.lrec-main.486",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round4.md"
+    ]
+  },
+  {
+    "source_id": "swb_9f542271257024d7",
+    "url": "https://aclanthology.org/2025.emnlp-main.160",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round40.md"
+    ]
+  },
+  {
+    "source_id": "swb_fe1a4ba1d1a91bd9",
+    "url": "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round44.md"
+    ]
+  },
+  {
+    "source_id": "swb_9d08755307cbfa01",
+    "url": "https://arxiv.org/abs/2604.00075",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round45.md"
+    ]
+  },
+  {
+    "source_id": "swb_8cf00edb7a537c63",
+    "url": "https://arxiv.org/abs/2505.20650",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round46.md"
+    ]
+  },
+  {
+    "source_id": "swb_9830b4b52e0e9dab",
+    "url": "https://arxiv.org/abs/2510.00694",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round47.md"
+    ]
+  },
+  {
+    "source_id": "swb_14a900008039bf2e",
+    "url": "https://arxiv.org/abs/1807.02478",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round49.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round50.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-cail2018.md"
+    ]
+  },
+  {
+    "source_id": "swb_d70676b0c74215d9",
+    "url": "https://arxiv.org/abs/1810.05851",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round49.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round50.md"
+    ]
+  },
+  {
+    "source_id": "swb_7e7b7a0c39916ca1",
+    "url": "https://aclanthology.org/2022.acl-long.297",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round5.md"
+    ]
+  },
+  {
+    "source_id": "swb_5b7ccb242d590dce",
+    "url": "https://arxiv.org/abs/1805.01217",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round51.md"
+    ]
+  },
+  {
+    "source_id": "swb_69e94bb974d31775",
+    "url": "https://doi.org/10.1007/s10506-021-09288-2",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round51.md"
+    ]
+  },
+  {
+    "source_id": "swb_424aa6e41cf69cd2",
+    "url": "https://doi.org/10.1186/1758-2946-7-S1-S2",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round54.md"
+    ]
+  },
+  {
+    "source_id": "swb_1309d8848b583154",
+    "url": "https://doi.org/10.1186/1471-2105-13-161",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round56.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round94.md"
+    ]
+  },
+  {
+    "source_id": "swb_7ad02a7082a23a7b",
+    "url": "https://aclanthology.org/2020.fnp-1.36",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round58.md"
+    ]
+  },
+  {
+    "source_id": "swb_502371d81d01baa4",
+    "url": "https://usableprivacy.org/static/files/swilson_acl_2016.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round61.md"
+    ]
+  },
+  {
+    "source_id": "swb_5dbdf1553c881f43",
+    "url": "https://www.nature.com/articles/s41597-021-00875-1",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round63.md"
+    ]
+  },
+  {
+    "source_id": "swb_84eff4e7a337b2ae",
+    "url": "https://aclanthology.org/2020.emnlp-main.129",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round65.md"
+    ]
+  },
+  {
+    "source_id": "swb_80c610592c1704c1",
+    "url": "https://arxiv.org/abs/2211.07342",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round65.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round67.md"
+    ]
+  },
+  {
+    "source_id": "swb_5671808a4988ad6b",
+    "url": "https://arxiv.org/abs/2311.09105",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round65.md"
+    ]
+  },
+  {
+    "source_id": "swb_5847fa0407ea8101",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/6401",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md"
+    ]
+  },
+  {
+    "source_id": "swb_0948f1e420ed5019",
+    "url": "https://ebiquity.umbc.edu/get/a/publication/1144.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round70.md"
+    ]
+  },
+  {
+    "source_id": "swb_edf28529d9a981e9",
+    "url": "https://aclanthology.org/2023.argmining-1.8",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round75.md"
+    ]
+  },
+  {
+    "source_id": "swb_c5b2d7ad0d069a81",
+    "url": "https://aclanthology.org/D15-1255",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round79.md"
+    ]
+  },
+  {
+    "source_id": "swb_34e95253a99eb5fc",
+    "url": "https://arxiv.org/abs/2510.19631",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round8.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-hscodecomp.md"
+    ]
+  },
+  {
+    "source_id": "swb_de48df5420114284",
+    "url": "https://aclanthology.org/2020.clicit-1.30",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round82.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round83.md"
+    ]
+  },
+  {
+    "source_id": "swb_efcb437ac47ee48a",
+    "url": "https://ceur-ws.org/Vol-2968/paper5.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round82.md"
+    ]
+  },
+  {
+    "source_id": "swb_4135baf6b3ba7a19",
+    "url": "https://doi.org/10.1093/bioinformatics/bts407",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round84.md"
+    ]
+  },
+  {
+    "source_id": "swb_1541a238149429a4",
+    "url": "https://www.nature.com/articles/s41598-023-32915-8",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round85.md"
+    ]
+  },
+  {
+    "source_id": "swb_d9206cff751803fc",
+    "url": "https://link.springer.com/article/10.1186/s13321-018-0290-y",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round88.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round89.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round90.md"
+    ]
+  },
+  {
+    "source_id": "swb_af33f04d26bcf483",
+    "url": "https://arxiv.org/abs/2512.11374",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round91.md"
+    ]
+  },
+  {
+    "source_id": "swb_dad28ff447a91bac",
+    "url": "https://link.springer.com/article/10.1007/s10506-026-09524-7",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round92.md"
+    ]
+  },
+  {
+    "source_id": "swb_d93bc8e0b8843785",
+    "url": "https://aclanthology.org/2022.coling-1.293",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round93.md"
+    ]
+  },
+  {
+    "source_id": "swb_63abf63fd6a4ba3b",
+    "url": "https://aclanthology.org/2021.tacl-1.87",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round97.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round98.md"
+    ]
+  },
+  {
+    "source_id": "swb_2f43cf3ce591807b",
+    "url": "https://arxiv.org/abs/2204.04263",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round99.md"
+    ]
+  },
+  {
+    "source_id": "swb_beab2970681c9cd7",
+    "url": "https://oro.open.ac.uk/102450/1/NeurIPS-2023-csmed-bridging-the-dataset-gap-in-automated-citation-screening-for-systematic-literature-reviews-Paper-Datasets_and_Benchmarks.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08.md"
+    ]
+  },
+  {
+    "source_id": "swb_e15d70343986c7ed",
+    "url": "https://aclanthology.org/2026.acl-long.1035",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08.md",
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-inslogic.md"
+    ]
+  },
+  {
+    "source_id": "swb_600c071c0f881eb9",
+    "url": "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-afd.md"
+    ]
+  },
+  {
+    "source_id": "swb_5d204e142d4766e7",
+    "url": "https://arxiv.org/abs/2510.01474",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-aireg.md"
+    ]
+  },
+  {
+    "source_id": "swb_b35b43273f8d9633",
+    "url": "https://arxiv.org/abs/2301.05663",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-asrs.md"
+    ]
+  },
+  {
+    "source_id": "swb_368e28bb28373f55",
+    "url": "https://doi.org/10.1016/j.dib.2024.111202",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-bidcorpus.md"
+    ]
+  },
+  {
+    "source_id": "swb_d8a7a2c815cad5bb",
+    "url": "https://arxiv.org/abs/1910.04906",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-chicagofood.md"
+    ]
+  },
+  {
+    "source_id": "swb_f31b3a2d540db173",
+    "url": "https://arxiv.org/abs/2403.02231",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-codeaccord.md"
+    ]
+  },
+  {
+    "source_id": "swb_2b0983a2b2168159",
+    "url": "https://arxiv.org/abs/2604.17153",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-dso.md"
+    ]
+  },
+  {
+    "source_id": "swb_38bf3a400cfb29c7",
+    "url": "https://arxiv.org/abs/2605.29427",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-finguard.md"
+    ]
+  },
+  {
+    "source_id": "swb_53ca521ed4554ba7",
+    "url": "https://lawfulcomputing.org/papers/pets2023.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-gdprxiv.md"
+    ]
+  },
+  {
+    "source_id": "swb_ee6a479460e56203",
+    "url": "https://arxiv.org/abs/2407.09017",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-guide.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_44bb85d2bfc523ae",
+    "url": "https://www.nature.com/articles/s43856-025-01256-0",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-inato.md"
+    ]
+  },
+  {
+    "source_id": "swb_121af327241de97b",
+    "url": "https://arxiv.org/abs/2412.17228",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-matchminer.md"
+    ]
+  },
+  {
+    "source_id": "swb_3c1147625f2901d3",
+    "url": "https://aclanthology.org/2026.findings-acl.115",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-omnicompliance.md"
+    ]
+  },
+  {
+    "source_id": "swb_1bf94aedd5b19570",
+    "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-proact.md"
+    ]
+  },
+  {
+    "source_id": "swb_1cf51e3ac7d10088",
+    "url": "https://www.procurementintegrity.org/assets/about/ProACT_Market_structure_and_efficiency_20210630.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-proact.md"
+    ]
+  },
+  {
+    "source_id": "swb_50bbbdf5f266fd47",
+    "url": "https://arxiv.org/abs/2509.23291",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-prt.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_b86c94b4f954c37c",
+    "url": "https://arxiv.org/abs/2605.29742",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-regops.md"
+    ]
+  },
+  {
+    "source_id": "swb_23422ddeb78a2f5c",
+    "url": "https://ceur-ws.org/Vol-2645/paper5.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-sara.md"
+    ]
+  },
+  {
+    "source_id": "swb_4832f78592aff59a",
+    "url": "https://arxiv.org/abs/2507.14201",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-secrl.md"
+    ]
+  },
+  {
+    "source_id": "swb_8566ef0045fcf87c",
+    "url": "https://arxiv.org/abs/2604.12040",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-sir.md"
+    ]
+  },
+  {
+    "source_id": "swb_8ee1c19c89bafd70",
+    "url": "https://aclanthology.org/2024.findings-emnlp.625",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-stard.md"
+    ]
+  },
+  {
+    "source_id": "swb_ac3a36eb2b2cb80d",
+    "url": "https://arxiv.org/abs/2609.01202",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-trialgpt2.md"
+    ]
+  },
+  {
+    "source_id": "swb_7a97369bbf3dea1f",
+    "url": "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/toffee-review.md"
+    ]
+  },
+  {
+    "source_id": "swb_ac04e5b30d6e3431",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bbdd9525c5ecd3a03fee43d8fd64bd83-Abstract-Conference.html",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md"
+    ]
+  },
+  {
+    "source_id": "swb_8f6f9adf24baf3f7",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/bbdd9525c5ecd3a03fee43d8fd64bd83-Paper-Conference.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_d31b97e3fe52ae26",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/2b76873e897f3de3069b2f360c65e0c2-Abstract-Datasets_and_Benchmarks_Track.html",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_afc8abaedb79a59a",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/1fdee6bdc130776e489719d25d422073-Abstract-Datasets_and_Benchmarks_Track.html",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md"
+    ]
+  },
+  {
+    "source_id": "swb_d51a694744819cc6",
+    "url": "https://aclanthology.org/2025.acl-long.27",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md",
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_2579c72e98cf1af3",
+    "url": "https://www.vldb.org/pvldb/vol18/p2681-freire.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_e870fb5b0473fb2c",
+    "url": "https://www.vldb.org/pvldb/vol19/p196-bodensohn.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md",
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_b28d778e560a376d",
+    "url": "https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md"
+    ]
+  },
+  {
+    "source_id": "swb_ca45da11093fd209",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/89e44582fd28ddfea1ea4dcb0ebbf4b0-Abstract-Datasets_and_Benchmarks.html",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md"
+    ]
+  },
+  {
+    "source_id": "swb_c45984a1b32dd527",
+    "url": "https://arxiv.org/abs/2606.02994",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-input-audit.md"
+    ]
+  },
+  {
+    "source_id": "swb_ac11f9d76ed1b073",
+    "url": "https://aclanthology.org/2025.coling-main.8",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_163d8598115e26c7",
+    "url": "https://aclanthology.org/2026.acl-long.1258",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_7c63c7bd39a3938e",
+    "url": "https://aclanthology.org/2024.emnlp-main.352",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_302fffb141cd9c0d",
+    "url": "https://openreview.net/pdf?id=rkeJRhNYDH",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_ed70b4ebfee785e8",
+    "url": "https://aclanthology.org/2024.tacl-1.89",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+    ]
+  },
+  {
+    "source_id": "swb_7d74ee97e00524d1",
+    "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Fucka_SALAD_--_Semantics-Aware_Logical_Anomaly_Detection_ICCV_2025_paper.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_ba03b1ffa18dff6d",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f53fd88a4340063ecd258c0ae9948b40-Abstract-Conference.html",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
+    ]
+  },
+  {
+    "source_id": "swb_c70d6ad6e6d3ee63",
+    "url": "https://arxiv.org/abs/2406.13352",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_08a59033f25f86e1",
+    "url": "https://arxiv.org/abs/2506.01055",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_e8d5ef645048f145",
+    "url": "https://arxiv.org/abs/2604.21308",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_7cbe658a758b8cab",
+    "url": "https://www.nature.com/articles/s41597-022-01721-8",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_4db68a774a2144f2",
+    "url": "https://arxiv.org/abs/2608.02680",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_b1202c532256e177",
+    "url": "https://arxiv.org/abs/2603.25158",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_bf0b34f8ced5d15e",
+    "url": "https://arxiv.org/abs/2408.08435",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_f1688da02e2baf51",
+    "url": "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_e9bdafce4f8d9bd3",
+    "url": "https://arxiv.org/abs/2606.04455",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_4addcadecf805619",
+    "url": "https://arxiv.org/abs/2406.14991",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_1ad1457f02ffac91",
+    "url": "https://arxiv.org/abs/2305.13395",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md",
+      "query/imports/semantic-workload-bench/sources/workloads/biodex-reactions/workload-card.md"
+    ]
+  },
+  {
+    "source_id": "swb_8136d37a5eaa2d2f",
+    "url": "https://arxiv.org/abs/2305.16291",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/report.md"
+    ]
+  },
+  {
+    "source_id": "swb_854190cd19386e9d",
+    "url": "https://arxiv.org/abs/2507.06515",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/external/43a5bdf0b31c/readme.md"
+    ]
+  },
+  {
+    "source_id": "swb_5840f364e6feb416",
+    "url": "https://arxiv.org/abs/2103.06268",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/workloads/cuad-clauses/workload-card.md"
+    ]
+  },
+  {
+    "source_id": "swb_832be41dbccd4361",
+    "url": "https://arxiv.org/abs/2608.03451",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/workloads/dataspace-fund/workload-card.md"
+    ]
+  },
+  {
+    "source_id": "swb_27cb7bda5b7a86a8",
+    "url": "https://doi.org/10.1038/s41597-022-01721-8",
+    "documents": [
+      "query/imports/semantic-workload-bench/sources/workloads/pathology-patches/workload-card.md"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "dataagentbench/cve",
+  "name": "DataAgentBench · cve",
+  "query_ids": [
+    "dataagentbench/cve/query1",
+    "dataagentbench/cve/query2",
+    "dataagentbench/cve/query3",
+    "dataagentbench/cve/query4",
+    "dataagentbench/cve/query5",
+    "dataagentbench/cve/query6",
+    "dataagentbench/cve/query7",
+    "dataagentbench/cve/query8",
+    "dataagentbench/cve/query9",
+    "dataagentbench/cve/query10"
+  ]
+}

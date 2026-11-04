@@ -1,0 +1,7 @@
+{
+  "id": "abacus/cuad",
+  "name": "Abacus CUAD",
+  "query_ids": [
+    "abacus/cuad/workflow"
+  ]
+}

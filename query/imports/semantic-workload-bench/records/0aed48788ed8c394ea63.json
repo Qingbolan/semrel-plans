@@ -1,0 +1,26 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v53/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Assign KT, CL, Polarity, Manner, Source under the protocol; select current, positive, L3 Observation/Analysis events with High manner.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v53/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "SOURCE_VERIFIED_CONSTRUCTIBLE_DEVELOPMENT",
+    "input_condition": "GENIA base entities and event graphs given; predict only independent meta-knowledge attributes. Not end-to-end event extraction.",
+    "task": "Assign KT, CL, Polarity, Manner, Source under the protocol; select current, positive, L3 Observation/Analysis events with High manner.",
+    "output_fields": [
+      "KT",
+      "CL",
+      "Polarity",
+      "Manner",
+      "Source"
+    ],
+    "research_limits": "Development packet. Manual/paper exact sentence overlaps excluded; near-duplicate/example paraphrase and training contamination not fully audited. No model run."
+  },
+  "domain": "shared-environment-audit-20260908"
+}

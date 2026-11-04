@@ -1,0 +1,44 @@
+{
+  "id": "bench-u/Med/Select/select_queries_drug/2",
+  "group": "uda-med",
+  "query": "SELECT active_ingredients, mechanism_of_action, indication, generic_name FROM drug;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Select/select_queries_drug.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "scan_projection_only",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "active_ingredients, mechanism_of_action, indication, generic_name",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；active_ingredients, generic_name, indication, mechanism_of_action",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Scan",
+        "detail": "drug 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

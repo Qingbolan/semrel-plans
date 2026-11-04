@@ -1,0 +1,18 @@
+{
+  "id": "dataspace-fund-daily-scope-v1",
+  "operator": "sem_map",
+  "question": "For each requested fund, determine whether its benchmark growth rate on the current day is greater than zero. If it is, return the fund abbreviation and the exact investment scope from its archive. Use the current-day benchmark rate, not the fund's own return, nor a weekly/monthly/yearly rate. Join on fund identity when needed.",
+  "output": {
+    "selected": "Boolean",
+    "fund": "abbreviation if selected, otherwise null",
+    "investment_scope": "verbatim archive investment scope if selected, otherwise null"
+  },
+  "dag": [
+    "scan_fund",
+    "sem_map_select_and_extract",
+    "project_selected_fund_and_scope"
+  ],
+  "failure": "ABSTAIN is execution failure, not a negative fund decision.",
+  "input": "Each record supplies an entity-local workspace path containing SQLite, CSV and JSON assets. All necessary evidence is available there.",
+  "status": "DEVELOPMENT_TRANSFORMATION_NOT_OFFICIAL_DATASPACE_SCORE"
+}

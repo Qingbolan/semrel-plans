@@ -1,0 +1,23 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v130/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Extract all 13-type chemical-protein relation tuples from each abstract using given entity mentions and shared manual.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v130/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_ONLY_DEVELOPMENT",
+    "task": "Extract all 13-type chemical-protein relation tuples from each abstract using given entity mentions and shared manual.",
+    "gold_scope": "Mention-level relation set; upstream entity annotations explicitly provided, no end-to-end NER claim.",
+    "limitations": [
+      "OCR and exact-match exclusions do not prove absence of semantic duplicates or training contamination.",
+      "No empirical long-environment gain measured.",
+      "No model runtime or OS isolation attached."
+    ]
+  },
+  "domain": "shared-environment-audit-20260908"
+}

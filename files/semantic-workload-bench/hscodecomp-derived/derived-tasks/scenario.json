@@ -1,0 +1,10 @@
+{
+  "id": "swb-hscodecomp-derived/derived-tasks",
+  "name": "hscodecomp-derived/derived-tasks",
+  "query_ids": [
+    "swb/hscodecomp-Q1-v1",
+    "swb/hscodecomp-Q2-v1",
+    "swb/hscodecomp-Q3-v1",
+    "swb/hscodecomp-Q4-v1"
+  ]
+}

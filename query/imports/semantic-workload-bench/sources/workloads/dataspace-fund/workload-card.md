@@ -1,0 +1,13 @@
+# DataSpace fund daily-growth / investment-scope development control
+
+Unit: one fund identity in upstream task184. Shared task: select funds whose current-day benchmark growth rate is positive, and return their abbreviation plus verbatim archive investment scope. Fixed outer DAG: scan → sem_map select/extract → project selected tuples. The internal schema discovery/join procedure is initially absent from the Agent prompt.
+
+Source: [lock](../../environments/dataspace/sources.lock.json), dataset revision96be19257d7aa251dbce4771d46a26fc36f6dc52. Upstream has1048unique fund records,77manager groups and374official positive output tuples. Entity-private gold is projected from those official tuples by unique source abbreviation. The handwritten SQL audit exactly matches the full official multiset; it is not the learned operator.
+
+Splits:1demonstration,16validation,300later entities. Hash source manager groups before fund identities; manager groups and fund IDs are pairwise disjoint. All are development records. Training/source-template/near-duplicate independence is not established. The full original task workspace is archived separately; this transformation preserves entity-local rows of all fund-keyed SQLite tables and matching industryCSV/riskJSON. No label-selected rows/resources are exposed. Public IDs derive only from fund identity.
+
+Default static LOTUS receives all columns and all these entity-local records serialized without truncation. Native LOTUS and Codex have the same public assets plus offlinePython/SQLite execution. Source indexing is shared preprocessing. The exact output value schema is in generated task.json. ABSTAIN stays in the denominator. Exact tuple matching strips only outer whitespace; selection, scope, name convention and infrastructure errors are diagnosed separately.
+
+Validity issue: the task's English abbreviation convention permits ambiguity among multiple public abbreviated names. Three static positive outputs preserve exact scopes but use a longer abbreviated-name field. This is not evidence of reasoning/resource necessity. The current candidate is a control, not a killer task. A clarified version needs a new task/protocol, not silent rescoring.
+
+Observed engineering result: one native demonstration → one automatic synthesis → frozen applicability-aware Python →300later records,299correct/1ABSTAIN;104selected tuples all correct. Native whole-batchAgent has the same results; handwrittenSQL300/300. Unknown monetary/compute costs remain unknown. See [protocol](../../docs/dataspace-amortization-pilot.md) and [artifact guide](../../docs/dataspace-artifact-guide.md). No deployment, generalization, clinical/financial advice or independent confirmation claim.

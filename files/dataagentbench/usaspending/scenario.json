@@ -1,0 +1,16 @@
+{
+  "id": "dataagentbench/usaspending",
+  "name": "DataAgentBench · usaspending",
+  "query_ids": [
+    "dataagentbench/usaspending/query1",
+    "dataagentbench/usaspending/query2",
+    "dataagentbench/usaspending/query3",
+    "dataagentbench/usaspending/query4",
+    "dataagentbench/usaspending/query5",
+    "dataagentbench/usaspending/query6",
+    "dataagentbench/usaspending/query7",
+    "dataagentbench/usaspending/query8",
+    "dataagentbench/usaspending/query9",
+    "dataagentbench/usaspending/query10"
+  ]
+}

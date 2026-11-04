@@ -1,0 +1,6 @@
+{
+  "status": "INSPECTION_DEVELOPMENT_NOT_QUALIFIED",
+  "task": "Under the author31pageAAEC guidelines, extract majorclaims/claims/premises with exact character spans, premise supports/attacks edges, and claim For/Against stance. Claim-to-majorclaim links are encoded via stance, not invented explicit relation gold.",
+  "input": "Full source essay including title plus source writing prompt. Prompt decoded Mac Roman: evidence-backed inference; original bytes retained evaluator-side.",
+  "scope": "Local academic research construction; do not redistribute source data. Original boundary conflicts removed as disclosed gold-exposed development cleaning, not independent confirmation. No model execution or semantic quality claim."
+}

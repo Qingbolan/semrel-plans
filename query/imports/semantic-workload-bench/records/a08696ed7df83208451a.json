@@ -1,0 +1,25 @@
+{
+  "id": "public-task/sembench-movie-composition-v1/public/request",
+  "group": "public-tasks",
+  "query": "For each movie in records.json, prepare a sentiment review report using ONLY its listed review_ids. Identify clearly positive reviews from their reviewText, return all their review IDs, the positive count, negative count and positivity ratio. Use binary POSITIVE/NEGATIVE overall movie-review sentiment, treating other completed non-positive judgments as NEGATIVE. Do not infer sentiment from the film's reputation. Do not count unlisted reviews in the lake.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/sembench-movie-composition-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "movie-sentiment-review-report-v1",
+    "request": "For each movie in records.json, prepare a sentiment review report using ONLY its listed review_ids. Identify clearly positive reviews from their reviewText, return all their review IDs, the positive count, negative count and positivity ratio. Use binary POSITIVE/NEGATIVE overall movie-review sentiment, treating other completed non-positive judgments as NEGATIVE. Do not infer sentiment from the film's reputation. Do not count unlisted reviews in the lake.",
+    "output_value": {
+      "positive_review_ids": "sorted list of reviewId strings",
+      "positive_count": "integer",
+      "negative_count": "integer",
+      "positivity_ratio": "positive_count / number of listed review_ids"
+    },
+    "evidence": "lake/reviews.csv contains full reviewText. Join movies.csv on id for titles. reviews.csv includes other movies and unlisted reviews; records.json defines this processing batch.",
+    "execution_failure": "ABSTAIN with null value; do not convert failure into a negative sentiment."
+  },
+  "domain": "sembench-movie-composition"
+}

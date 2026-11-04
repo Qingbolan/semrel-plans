@@ -1,0 +1,10 @@
+{
+  "id": "swb-codiesp-derived/derived-tasks",
+  "name": "codiesp-derived/derived-tasks",
+  "query_ids": [
+    "swb/codiesp-Q1-v1",
+    "swb/codiesp-Q2-v1",
+    "swb/codiesp-Q3-v1",
+    "swb/codiesp-Q4-v1"
+  ]
+}

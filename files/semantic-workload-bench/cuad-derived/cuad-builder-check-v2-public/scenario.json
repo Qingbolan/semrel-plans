@@ -1,0 +1,7 @@
+{
+  "id": "swb-cuad-derived/cuad-builder-check-v2-public",
+  "name": "cuad-derived/cuad-builder-check-v2-public",
+  "query_ids": [
+    "swb/public-task/cuad-builder-check-v2/public/instruction"
+  ]
+}

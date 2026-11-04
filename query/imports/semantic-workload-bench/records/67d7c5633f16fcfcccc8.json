@@ -1,0 +1,104 @@
+{
+  "id": "sembench/animals/Q9",
+  "group": "sembench-animals",
+  "query": "What is the list of cities for which we have both images and audio recordings of monkeys?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q9.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Intersect",
+        "detail": "城市集合交集",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Distinct",
+        "detail": "集合语义",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Project",
+        "detail": "city",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SFilter",
+        "detail": "识别 monkey",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "ImageData",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Distinct",
+        "detail": "集合语义",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "Project",
+        "detail": "city",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "SFilter",
+        "detail": "识别 monkey",
+        "kind": "semantic"
+      },
+      {
+        "id": "n8",
+        "op": "Scan",
+        "detail": "AudioData",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ],
+      [
+        "n8",
+        "n7"
+      ],
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n0"
+      ]
+    ]
+  }
+}

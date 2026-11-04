@@ -1,0 +1,64 @@
+{
+  "id": "udrp-Q1-v1",
+  "group": "derived-five-lakes",
+  "query": "For each supplied case, apply the frozen WIPO Overview 3.0 to attributed party contentions and recorded facts, and return a singleton list containing RELIEF_GRANTED or DENIED. Missing support is not a denial: ABSTAIN with null value and a reason when unable to complete. These are retrospective pre-analysis case extracts, not original filings. This query is registered for inspection: residual answer leakage and external-fact gaps remain, so it is not an evaluation-ready prediction benchmark.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/udrp-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "inspection_only",
+  "note": "INSPECTION_ONLY_LEAKAGE_AND_FACT_GAPS；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。正式命令的规则抽取标签；保留正式原文，非新独立人工复核标签",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Transform",
+        "detail": "combine_decision_or_abstain",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "sem_map_evaluate_three_elements",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Lookup",
+        "detail": "retrieve_overview_elements_and_exceptions；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "udrp public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "udrp frozen public lake / catalog / full references",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n4",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

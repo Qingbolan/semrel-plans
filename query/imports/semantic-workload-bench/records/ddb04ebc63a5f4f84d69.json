@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/Legal/Filter/filter_queries_Legal/41",
+  "group": "uda-legal",
+  "query": "SELECT nationality_for_applicant, verdict, counsel_for_respondent FROM Legal_Case WHERE verdict != 'Guilty' OR hearing_year != 2007 OR plaintiff != 'Australian Prudential Regulation Authority' OR defendant_current_status = 'Professor of Surgery in the University of Western Australia (UWA)';",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Legal/Filter/filter_queries_Legal.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "nationality_for_applicant, verdict, counsel_for_respondent",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "verdict <> 'Guilty' OR hearing_year <> 2007 OR plaintiff <> 'Australian Prudential Regulation Authority' OR defendant_current_status = 'Professor of Surgery in the University of Western Australia (UWA)'",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；counsel_for_respondent, defendant_current_status, hearing_year, nationality_for_applicant, plaintiff, verdict",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "Legal_Case 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

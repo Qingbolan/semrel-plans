@@ -1,0 +1,58 @@
+{
+  "id": "sembench/ecomm/Q7",
+  "group": "sembench-ecomm",
+  "query": "Find all pairs of products priced at $5 or less where both products\nare of the same category and from the same brand based on their descriptions.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q7.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "gold SQL用price≤500；未声明单位换算。原gold允许自配对及(a,b)/(b,a)，NL未要求distinct，本图不擅加id1≠id2。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "id1, id2",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SJoin",
+        "detail": "描述表达相同类别且相同品牌",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "price ≤ $5；存储单位待核",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

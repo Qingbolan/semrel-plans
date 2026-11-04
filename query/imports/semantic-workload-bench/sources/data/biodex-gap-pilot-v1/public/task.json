@@ -1,0 +1,5 @@
+{
+  "id": "biodex-reactions-fulltext-pilot-v1",
+  "max_labels": 25,
+  "split": "official-test-development"
+}

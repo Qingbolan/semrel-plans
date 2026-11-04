@@ -1,0 +1,36 @@
+{
+  "id": "public-task/shared-environment-five-lakes-v1/udrp/public/request",
+  "group": "public-tasks",
+  "query": "For each supplied case, apply the frozen WIPO Overview 3.0 to attributed party contentions and recorded facts, and return a singleton list containing RELIEF_GRANTED or DENIED. Missing support is not a denial: ABSTAIN with null value and a reason when unable to complete. These are retrospective pre-analysis case extracts, not original filings. This query is registered for inspection: residual answer leakage and external-fact gaps remain, so it is not an evaluation-ready prediction benchmark.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-five-lakes-v1/udrp/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "udrp-Q1-v1",
+    "dataset": "udrp",
+    "request": "For each supplied case, apply the frozen WIPO Overview 3.0 to attributed party contentions and recorded facts, and return a singleton list containing RELIEF_GRANTED or DENIED. Missing support is not a denial: ABSTAIN with null value and a reason when unable to complete. These are retrospective pre-analysis case extracts, not original filings. This query is registered for inspection: residual answer leakage and external-fact gaps remain, so it is not an evaluation-ready prediction benchmark.",
+    "output_value": {
+      "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+      "status": [
+        "OK",
+        "ABSTAIN"
+      ],
+      "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+      "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+    },
+    "evidence": "records.json defines the full batch; paths are relative to public/. Shared resources are under lake/.",
+    "execution_failure": "ABSTAIN with null value and a reason. Insufficient evidence is not a negative label.",
+    "readiness": "INSPECTION_ONLY_LEAKAGE_AND_FACT_GAPS",
+    "dag": [
+      "scan_attributed_case_facts",
+      "retrieve_overview_elements_and_exceptions",
+      "sem_map_evaluate_three_elements",
+      "combine_decision_or_abstain"
+    ]
+  },
+  "domain": "udrp"
+}

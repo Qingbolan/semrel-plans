@@ -1,0 +1,24 @@
+{
+  "task_id": "codiesp-Q1-v1",
+  "dataset": "codiesp",
+  "request": "For every complete Spanish case report, return a ranked, duplicate-free list of procedure codes under the supplied CodiEsp guidelines and frozen 2018 coding resources. Use lowercase codes and preserve allowed four- or seven-character specificity; do not invent missing axes. Code mention scope under the task guidelines, not whether a procedure actually occurred. Include all reports; an empty completed list means no selected codable mentions, not absence of real procedures. This task is P, not D or X.",
+  "output_value": {
+    "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ],
+    "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+    "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+  },
+  "evidence": "records.json defines the full batch; paths are relative to public/. Shared resources are under lake/.",
+  "execution_failure": "ABSTAIN with null value and a reason. Insufficient evidence is not a negative label.",
+  "readiness": "DEVELOPMENT_SOURCE_LABEL_REPRODUCTION_ONLY",
+  "dag": [
+    "scan_full_reports",
+    "sem_map_procedure_mentions",
+    "retrieve_code_candidates_and_guidelines",
+    "sem_map_resolve_axes_and_specificity",
+    "rank_unique_codes"
+  ]
+}

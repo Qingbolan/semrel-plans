@@ -1,0 +1,64 @@
+{
+  "id": "sembench/medical/Q8",
+  "group": "sembench-medical",
+  "query": "Find hundred patients with malignant skin moles and cancer in the family history.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q8.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Limit",
+        "detail": "100; 未指定顺序",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Project",
+        "detail": "患者记录",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SFilter",
+        "detail": "skin mole malignant",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Filter",
+        "detail": "did_family_have_cancer = 1",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "Patients：结构字段及关联症状、X-ray、skin、audio",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

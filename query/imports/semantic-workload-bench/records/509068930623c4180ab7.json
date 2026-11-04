@@ -1,0 +1,54 @@
+{
+  "id": "quest/SWDE/12",
+  "group": "quest-swde",
+  "query": "SELECT university_name, setting, total_undergraduate_enrollment FROM University WHERE setting = urban AND total_undergraduate_enrollment < 2000",
+  "source": "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/QUEST/repository/QUEST/query/SWDE.txt",
+  "source_line": 15,
+  "provenance": "pseudo_sql_plus_proposed_extraction",
+  "status": "pseudo_sql_only",
+  "note": "原库列出的伪SQL；保留未加引号的文本字面量和原始拼写。谓词作为原文整体显示，没有假称可执行SQL或已验证类型绑定；语义抽取为逻辑补充。列表中的省略号表示这里不是全部可能查询。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "university_name, setting, total_undergraduate_enrollment",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "setting = urban AND total_undergraduate_enrollment < 2000",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "原文→投影和谓词所需字段；分析性补充",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "University 原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

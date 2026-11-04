@@ -1,0 +1,64 @@
+{
+  "id": "sembench/movie/Q4",
+  "group": "sembench-movie",
+  "query": "Positivity ratio of reviews for movie \"taken_3\". Return the ratio as positivity_ratio.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q4.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "必须在全部目标评论上计算分母，不能先过滤正向再COUNT当分母。空输入分母按SQL保持未定义/NULL，不伪造0%。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "positive_count / total_count AS positivity_ratio",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Aggregate",
+        "detail": "全局; SUM(sentiment=positive), COUNT(*)",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SMap",
+        "detail": "reviewText→positive/negative",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Filter",
+        "detail": "id = taken_3",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "Reviews",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

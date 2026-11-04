@@ -1,0 +1,21 @@
+{
+  "dataset_id": "semceb/amazon-reviews",
+  "source_ids": [
+    "hyb_78fe567e6b19207c"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "amazon-reviews",
+      "type": "table",
+      "description": "Products and reviews with text and images"
+    }
+  ],
+  "record_count": null,
+  "version": "fec6bde7d1b23fc751f8701872fafda777a63942",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Prepared by SemCEB tools/amazon-reviews; not downloaded"
+}

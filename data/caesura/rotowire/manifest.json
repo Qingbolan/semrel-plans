@@ -1,0 +1,21 @@
+{
+  "dataset_id": "caesura/rotowire",
+  "source_ids": [
+    "hyb_e73e9d2cad5982c9"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "rotowire",
+      "type": "database",
+      "description": "Multi-modal database built by CAESURA scripts"
+    }
+  ],
+  "record_count": null,
+  "version": "00ebb188bf9e83c36ad06e9504594a74f169a23c",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Built by CAESURA scripts from public sources; not downloaded"
+}

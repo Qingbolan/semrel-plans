@@ -1,0 +1,54 @@
+{
+  "id": "lotus/failure-mode-discovery",
+  "group": "implementation-examples",
+  "query": "从失败的Agent轨迹归纳失败模式并展开为行。",
+  "source": "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/LOTUS/repository/LOTUS/benchmarks/failure_mode_discovery/pipeline.py",
+  "source_line": null,
+  "provenance": "observed_source_pipeline",
+  "status": "logical_only",
+  "note": "SAggregate是语义归纳，不等于SQL COUNT/SUM；结构部分主要是解析、展开。未执行。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Transform",
+        "detail": "parse list → explode → rename",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SAggregate",
+        "detail": "失败轨迹→failure modes list",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "SFilter",
+        "detail": "agent failed to successfully complete task",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "agent traces",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

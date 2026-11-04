@@ -1,0 +1,84 @@
+{
+  "id": "bench-u/Player/Mixed/mixed_queries_filter_join/9",
+  "group": "uda-player",
+  "query": "SELECT player.name, player.position, team.championship, team.founded_year FROM player JOIN team ON player.team = team.team_name WHERE player.name = 'Kobe Bean Bryant' OR player.fiba_world_cup >= 0 OR team.championship != 3;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Mixed/mixed_queries_filter_join.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "player.name, player.position, team.championship, team.founded_year",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "player.name = 'Kobe Bean Bryant' OR player.fiba_world_cup >= 0 OR team.championship <> 3",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Join",
+        "detail": " player.team = team.team_name",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；fiba_world_cup, name, position, team",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "player 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；championship, founded_year, team_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "team 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

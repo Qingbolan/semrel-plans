@@ -1,0 +1,13 @@
+{
+  "id": "blendsql/financials",
+  "name": "BlendSQL benchmark · financials",
+  "query_ids": [
+    "blendsql/financials/q01",
+    "blendsql/financials/q02",
+    "blendsql/financials/q03",
+    "blendsql/financials/q04",
+    "blendsql/financials/q05",
+    "blendsql/financials/q06",
+    "blendsql/financials/q07"
+  ]
+}

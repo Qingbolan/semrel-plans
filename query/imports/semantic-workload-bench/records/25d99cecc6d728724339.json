@@ -1,0 +1,44 @@
+{
+  "id": "sembench/ecomm/Q6",
+  "group": "sembench-ecomm",
+  "query": "Based solely on the image of the product, classify each product into one of the following categories:\n\nDress: A dress is a one-piece outer garment that is worn on the torso, hangs down over the legs, and often consist of a bodice attached to a skirt.\nBottomwear: Bottomwear refers to clothing worn on the lower part of the body, such as trousers, jeans, skirts, shorts, and leggings.\nSocks: Socks are a type of clothing worn on the feet, typically made of soft fabric, designed to provide comfort and warmth.\nTopwear: Topwear refers to clothing worn on the upper part of the body, such as shirts, blouses, t-shirts, and jackets.\nInnerwear: Innerwear refers to clothing worn beneath outer garments, typically close to the skin, such as underwear, bras, and undershirts.\n\nEach product can only have one category.\nReturn the id of the product as well as its category.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q6.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "Q5/Q6源SQL有表名/提示词或语法不一致；图依原NL的模态定义。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "scan_projection_only",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "id, category",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "image→五类服装之一",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "environment_id": "eleet/aviation",
+  "dataset_id": "eleet/aviation",
+  "runtime_status": "unconfigured",
+  "engine": "ELEET",
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null,
+  "resources": []
+}

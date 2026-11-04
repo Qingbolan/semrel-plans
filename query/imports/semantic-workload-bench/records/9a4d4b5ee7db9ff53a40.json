@@ -1,0 +1,54 @@
+{
+  "id": "sembench/cars/Q5",
+  "group": "sembench-cars",
+  "query": "How many automatic cars are damaged according to both audio and images?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q5.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Aggregate",
+        "detail": "全局; COUNT(*)",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SFilter",
+        "detail": "audio 与 image 均显示损伤",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "automatic transmission",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "Cars：结构字段及关联 complaint / image / audio",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

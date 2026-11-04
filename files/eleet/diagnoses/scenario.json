@@ -1,0 +1,8 @@
+{
+  "id": "eleet/diagnoses",
+  "name": "ELEET · diagnoses",
+  "query_ids": [
+    "eleet/diagnoses/00-union_health",
+    "eleet/diagnoses/01-union_computer"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "hscodecomp-Q2-v1",
+  "group": "derived-five-lakes",
+  "query": "按参数化2/4/6/8/10位编码前缀返回商品清单及数量",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/hscodecomp-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "registered_not_executed",
+  "note": "DEVELOPMENT_INCOMPLETE_INPUT_DIAGNOSTIC；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。Derived from the same Q1 labels; not independent gold",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "ResultBundle",
+        "detail": "清单和总数",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Distinct",
+        "detail": "record_id；一个实体不因多个标签重复计数",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Project",
+        "detail": "record_id及原请求字段",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Filter",
+        "detail": "status=OK AND label匹配参数（HTS为显式前缀；其他按原契约）",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Unnest",
+        "detail": "value中的去重标签",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Transform",
+        "detail": "validate_10_digit_code_or_abstain",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "SMap",
+        "detail": "sem_map_resolve_exclusions_and_classification",
+        "kind": "semantic"
+      },
+      {
+        "id": "n7",
+        "op": "Lookup",
+        "detail": "retrieve_hts_tree_and_notes；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n8",
+        "op": "SMap",
+        "detail": "sem_map_extract_material_use_unit_facts",
+        "kind": "semantic"
+      },
+      {
+        "id": "n9",
+        "op": "Scan",
+        "detail": "hscodecomp public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n10",
+        "op": "Scan",
+        "detail": "hscodecomp frozen public lake / catalog / full references",
+        "kind": "relational"
+      },
+      {
+        "id": "n11",
+        "op": "Aggregate",
+        "detail": "全局; COUNT(*)",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n9",
+        "n8"
+      ],
+      [
+        "n8",
+        "n7"
+      ],
+      [
+        "n10",
+        "n7"
+      ],
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ],
+      [
+        "n1",
+        "n11"
+      ],
+      [
+        "n11",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "INSPECTION_ONLY_DEVELOPMENT",
+  "task": "Classify each author-selected sentence into Sentence,FindingSentence,ReasoningSentence,EvidenceSentence,LegalRuleSentence,CitationSentence using the shared protocols, rule tree and unannotated case context.",
+  "limits": [
+    "Author sentence segmentation/selection given; not raw-document end-to-end extraction.",
+    "Protocol example overlaps unresolved; not independent evaluation.",
+    "Author sentence text preserved despite documented typography/three text differences.",
+    "Protocol/new-cohort normative binding not fully verified."
+  ]
+}

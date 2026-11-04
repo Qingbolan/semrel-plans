@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/Player/Filter/filter_queries_city/4",
+  "group": "uda-player",
+  "query": "SELECT gdp, area, state_name FROM city WHERE area >= 976.15 AND state_name != 'Oregon' AND area = 375.78 AND population = '808988';",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Filter/filter_queries_city.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "gdp, area, state_name",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "area >= 976.15 AND state_name <> 'Oregon' AND area = 375.78 AND population = '808988'",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；area, gdp, population, state_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "city 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

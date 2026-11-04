@@ -80,6 +80,10 @@
     "family": "semantic"
   },
   {
+    "operator_type": "SEM_GROUP_BY",
+    "family": "semantic"
+  },
+  {
     "operator_type": "SEM_JOIN",
     "family": "semantic"
   },
@@ -113,6 +117,22 @@
   },
   {
     "operator_type": "UNNEST",
+    "family": "relational"
+  },
+  {
+    "operator_type": "UNRESOLVED",
+    "family": "relational"
+  },
+  {
+    "operator_type": "LOOKUP",
+    "family": "relational"
+  },
+  {
+    "operator_type": "RESULT_BUNDLE",
+    "family": "relational"
+  },
+  {
+    "operator_type": "EXTERNAL_SEARCH",
     "family": "relational"
   }
 ]

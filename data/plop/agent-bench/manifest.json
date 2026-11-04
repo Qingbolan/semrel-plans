@@ -1,0 +1,21 @@
+{
+  "dataset_id": "plop/agent-bench",
+  "source_ids": [
+    "hyb_53e66e497a8670a9"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "agent_bench datasets",
+      "type": "files",
+      "description": "CSV/Parquet files read by each query"
+    }
+  ],
+  "record_count": null,
+  "version": "56780d9623c4bcc3e95c722b3d7328bdedb161a5",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Datasets live in the Morrila repository; not copied"
+}

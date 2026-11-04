@@ -1,0 +1,7 @@
+{
+  "id": "swb-sentivent-derived/shared-environment-audit-20260908-v60-inspection-v1-public",
+  "name": "sentivent-derived/shared-environment-audit-20260908-v60-inspection-v1-public",
+  "query_ids": [
+    "swb/public-task/shared-environment-audit-20260908-v60/inspection-v1/public/task"
+  ]
+}

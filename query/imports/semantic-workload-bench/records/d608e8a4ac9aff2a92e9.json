@@ -1,0 +1,37 @@
+{
+  "id": "public-task/shared-environment-five-lakes-v2/annoctr/public/request",
+  "group": "public-tasks",
+  "query": "For every supplied mention and its context, use its complete report and frozen definitions to return the ATT&CK technique ID(s) it denotes. Boundaries and technical-mention selection are given. This is conditional linking of published positive annotations, not end-to-end detection, negative detection, or a complete report inventory. Preserve subtechnique specificity: use Txxxx.xxx, without collapsing to the parent. Return a duplicate-free list.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-five-lakes-v2/annoctr/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "annoctr-Q1-v1",
+    "dataset": "annoctr",
+    "request": "For every supplied mention and its context, use its complete report and frozen definitions to return the ATT&CK technique ID(s) it denotes. Boundaries and technical-mention selection are given. This is conditional linking of published positive annotations, not end-to-end detection, negative detection, or a complete report inventory. Preserve subtechnique specificity: use Txxxx.xxx, without collapsing to the parent. Return a duplicate-free list.",
+    "output_value": {
+      "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+      "status": [
+        "OK",
+        "ABSTAIN"
+      ],
+      "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+      "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+    },
+    "evidence": "records.json defines the full batch; paths are relative to public/. Shared resources are under lake/.",
+    "execution_failure": "ABSTAIN with null value and a reason. Insufficient evidence is not a negative label.",
+    "readiness": "DEVELOPMENT_CONDITIONAL_LINKING_ONLY",
+    "dag": [
+      "scan_given_mentions",
+      "read_report_context",
+      "retrieve_definitions",
+      "sem_map_link_technique",
+      "normalize_original_id_granularity"
+    ]
+  },
+  "domain": "annoctr"
+}

@@ -1,0 +1,21 @@
+{
+  "dataset_id": "blendsql/rugby",
+  "source_ids": [
+    "hyb_3f1370def2efdd7c"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "rugby",
+      "type": "database",
+      "description": "Benchmark database named by the directory"
+    }
+  ],
+  "record_count": null,
+  "version": "8a75abeca64b662aa8d1d7b5fdb52d3e31b052db",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Database referenced by the BlendSQL benchmark directory; not copied"
+}

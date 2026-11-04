@@ -1,0 +1,21 @@
+{
+  "id": "eleet/corona",
+  "name": "ELEET · corona",
+  "query_ids": [
+    "eleet/corona/00-union",
+    "eleet/corona/01-union_projection-00",
+    "eleet/corona/01-union_projection-01",
+    "eleet/corona/01-union_projection-02",
+    "eleet/corona/01-union_projection-03",
+    "eleet/corona/01-union_projection-04",
+    "eleet/corona/01-union_projection-05",
+    "eleet/corona/01-union_projection-06",
+    "eleet/corona/01-union_projection-07",
+    "eleet/corona/01-union_projection-08",
+    "eleet/corona/01-union_projection-09",
+    "eleet/corona/01-union_projection-10",
+    "eleet/corona/01-union_projection-11",
+    "eleet/corona/01-union_projection-12",
+    "eleet/corona/01-union_projection-13"
+  ]
+}

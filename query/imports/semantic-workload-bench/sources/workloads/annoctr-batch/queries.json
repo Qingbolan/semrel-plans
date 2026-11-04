@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "dataset": "annoctr",
+  "readiness": "DEVELOPMENT_CONDITIONAL_LINKING_ONLY",
+  "lake_description": "records 给定 mention/context 和完整报告路径；catalog 为578技术，entity-definitions 为1266实体的定义投影。entity_context 过程示例、label/title/link/id 均不从源标注行公开。原报告自身ID/名称保留。 湖保留全部120报告，本批正链接来自112报告；不由此声称完整报告技术发现。",
+  "output_contract": {
+    "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ],
+    "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+    "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+  },
+  "filter_match": "exact",
+  "queries": [
+    {
+      "id": "annoctr-Q1-v1",
+      "kind": "semantic_primary",
+      "request": "For every supplied mention and its context, use its complete report and frozen definitions to return the ATT&CK technique ID(s) it denotes. Boundaries and technical-mention selection are given. This is conditional linking of published positive annotations, not end-to-end detection, negative detection, or a complete report inventory. Preserve subtechnique specificity: use Txxxx.xxx, without collapsing to the parent. Return a duplicate-free list.",
+      "dag": [
+        "scan_given_mentions",
+        "read_report_context",
+        "retrieve_definitions",
+        "sem_map_link_technique",
+        "normalize_original_id_granularity"
+      ],
+      "gold": "专家技术URL映射为ATT&CK ID；不按父技术折叠，粒度与论文部分实验不同",
+      "metrics": [
+        "source-label exact set match",
+        "micro/macro set F1",
+        "report-clustered analysis",
+        "coverage"
+      ]
+    },
+    {
+      "id": "annoctr-Q2-v1",
+      "kind": "derived_filter",
+      "request": "返回链接到指定技术的提及清单，并关联所属报告",
+      "parameters": {
+        "target_label": {
+          "type": "string",
+          "example": "T1140"
+        }
+      },
+      "dag": [
+        "Q1",
+        "filter_predicted_label_or_prefix",
+        "project_record_id",
+        "count"
+      ],
+      "gold": "Derived from the same Q1 labels; not independent gold"
+    },
+    {
+      "id": "annoctr-Q3-v1",
+      "kind": "derived_aggregate",
+      "request": "对本批给定提及按报告归并技术集合，同时区分提及数与报告数",
+      "dag": [
+        "Q1",
+        "unnest_unique_labels",
+        "group_by_label_and_source_entity",
+        "count_distinct_records",
+        "emit_completeness"
+      ],
+      "gold": "Derived from Q1; partial groups explicitly marked incomplete"
+    },
+    {
+      "id": "annoctr-Q4-v1",
+      "kind": "operational_review_queue",
+      "request": "返回未完成记录及原因，并报告全量coverage；缺事实和运行失败均需保留原因，不当负例。",
+      "dag": [
+        "Q1",
+        "filter_status_ABSTAIN",
+        "project_id_reason",
+        "coverage"
+      ],
+      "gold": "No independent gold; this is execution accounting, not missing-fact correctness"
+    }
+  ],
+  "scientific_boundary": "5 primary tasks across five lakes; derived queries are not extra datasets, independent labels or observed execution families. No model runs or measured K.",
+  "limitations": "3348条源TECHNIQUE正链接中11条指向软件，另18条技术链接缺KG；原gold全部保留，29条不在578技术输出catalog中，不能将不可达标签当模型语义错误。湖含120报告，当前给定提及覆盖112报告。原文保留明示ID捷径。"
+}

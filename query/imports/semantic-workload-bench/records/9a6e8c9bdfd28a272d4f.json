@@ -1,0 +1,26 @@
+{
+  "id": "public-task/pcb-v1/public/predicate",
+  "group": "public-tasks",
+  "query": "The tested PCB image contains spurious isolated copper absent from its aligned clean template.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/pcb-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "id": "pcb-copper-pilot-v1",
+    "operator": "sem_filter",
+    "target_class": 5,
+    "predicate": "The tested PCB image contains spurious isolated copper absent from its aligned clean template.",
+    "dag": [
+      "scan",
+      "sem_filter",
+      "project_record_id",
+      "count"
+    ],
+    "status": "EXPLORATORY_CONTROL_NOT_CONFIRMATORY"
+  },
+  "domain": "pcb"
+}

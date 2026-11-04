@@ -1,0 +1,44 @@
+{
+  "id": "sembench/cars/Q10",
+  "group": "sembench-cars",
+  "query": "For all complaints, classify which car component is problematic according to the complaint.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q10.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "scan_projection_only",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "complaint_id, component",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "complaint→故障部件类别",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Scan",
+        "detail": "Complaints",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "lotus/rag-pubmedqa",
+  "group": "implementation-examples",
+  "query": "分解问题、检索PubMed文献、按问题汇总证据并生成回答。",
+  "source": "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/LOTUS/repository/LOTUS/benchmarks/rag_pubmedqa/pipeline.py",
+  "source_line": null,
+  "provenance": "observed_source_pipeline",
+  "status": "logical_only",
+  "note": "基于本地当前pipeline文件，不声称是某篇早期论文原始查询。ExternalSearch是外部检索依赖，非普通数据库Join；最终merge是结构左连接。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "LeftJoin",
+        "detail": "query；左=语义回答，右=文献payload",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SAggregate",
+        "detail": "GROUP BY query；综合文献输出answer + yes/no",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Unnest",
+        "detail": "apply/explode/reset_index/json_normalize",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "ExternalSearch",
+        "detail": "PubMed web_search；K=8/subquery；max24/query",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Transform",
+        "detail": "parse_subqueries",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "SMap",
+        "detail": "问题→2–4 subqueries",
+        "kind": "semantic"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "PubMedQA questions",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "Aggregate",
+        "detail": "query; first(subqueries), set(ids,titles,abstracts)",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ],
+      [
+        "n2",
+        "n7"
+      ],
+      [
+        "n7",
+        "n0"
+      ]
+    ]
+  }
+}

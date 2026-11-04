@@ -1,0 +1,74 @@
+{
+  "id": "codiesp-Q1-v1",
+  "group": "derived-five-lakes",
+  "query": "For every complete Spanish case report, return a ranked, duplicate-free list of procedure codes under the supplied CodiEsp guidelines and frozen 2018 coding resources. Use lowercase codes and preserve allowed four- or seven-character specificity; do not invent missing axes. Code mention scope under the task guidelines, not whether a procedure actually occurred. Include all reports; an empty completed list means no selected codable mentions, not absence of real procedures. This task is P, not D or X.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/codiesp-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "registered_not_executed",
+  "note": "DEVELOPMENT_SOURCE_LABEL_REPRODUCTION_ONLY；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。源P病例-code集合，保留全部标签；原排序预测任务主指标MAP，集合为补充",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Transform",
+        "detail": "rank_unique_codes",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "sem_map_resolve_axes_and_specificity",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Lookup",
+        "detail": "retrieve_code_candidates_and_guidelines；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SMap",
+        "detail": "sem_map_procedure_mentions",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "codiesp public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "codiesp frozen public lake / catalog / full references",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n5",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "dataagentbench/civic-unstructured",
+  "name": "DataAgentBench · civic_unstructured",
+  "query_ids": [
+    "dataagentbench/civic-unstructured/query1",
+    "dataagentbench/civic-unstructured/query2",
+    "dataagentbench/civic-unstructured/query3",
+    "dataagentbench/civic-unstructured/query4",
+    "dataagentbench/civic-unstructured/query5",
+    "dataagentbench/civic-unstructured/query6",
+    "dataagentbench/civic-unstructured/query7",
+    "dataagentbench/civic-unstructured/query8",
+    "dataagentbench/civic-unstructured/query9",
+    "dataagentbench/civic-unstructured/query10"
+  ]
+}

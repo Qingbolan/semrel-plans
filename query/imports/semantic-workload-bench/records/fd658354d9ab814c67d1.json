@@ -1,0 +1,64 @@
+{
+  "id": "bench-u/Finan/Mixed/mixed_queries/2",
+  "group": "uda-finan",
+  "query": "SELECT remuneration_policy, MIN(bussiness_profit) AS min_bussiness_profit FROM finance WHERE dividend_per_share > 0.00 AND revenue <= 12857200000 GROUP BY remuneration_policy;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Finan/Mixed/mixed_queries.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "remuneration_policy, MIN(bussiness_profit) AS min_bussiness_profit",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Aggregate",
+        "detail": "remuneration_policy; MIN(bussiness_profit)",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "dividend_per_share > 0.00 AND revenue <= 12857200000",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；bussiness_profit, dividend_per_share, remuneration_policy, revenue",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "finance 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

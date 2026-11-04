@@ -1,0 +1,25 @@
+{
+  "dataset_id": "thalamusdb/craigslist",
+  "source_ids": [
+    "thm_ad22f96ce42019f5"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": {
+    "images": [
+      "img",
+      "aid"
+    ],
+    "furniture": [
+      "aid",
+      "title",
+      "price"
+    ]
+  },
+  "record_count": null,
+  "version": "c17a1ea7c8a3bca1fba13537002e99ba00a3e130",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "家具帖 CSV 在上游仓库；图片文件需按 README 另行下载（186 MB）。"
+}

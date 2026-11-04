@@ -1,0 +1,10 @@
+{
+  "id": "mlsys-llmsql/movies",
+  "name": "MLSys 2025 LLM-SQL / movies",
+  "query_ids": [
+    "mlsys-llmsql/movies/T1",
+    "mlsys-llmsql/movies/T2",
+    "mlsys-llmsql/movies/T3",
+    "mlsys-llmsql/movies/T4"
+  ]
+}

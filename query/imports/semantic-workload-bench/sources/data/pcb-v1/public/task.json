@@ -1,0 +1,13 @@
+{
+  "id": "pcb-copper-pilot-v1",
+  "operator": "sem_filter",
+  "target_class": 5,
+  "predicate": "The tested PCB image contains spurious isolated copper absent from its aligned clean template.",
+  "dag": [
+    "scan",
+    "sem_filter",
+    "project_record_id",
+    "count"
+  ],
+  "status": "EXPLORATORY_CONTROL_NOT_CONFIRMATORY"
+}

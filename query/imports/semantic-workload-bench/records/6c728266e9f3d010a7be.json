@@ -1,0 +1,78 @@
+{
+  "id": "annoctr-Q1-v1",
+  "group": "derived-five-lakes",
+  "query": "For every supplied mention and its context, use its complete report and frozen definitions to return the ATT&CK technique ID(s) it denotes. Boundaries and technical-mention selection are given. This is conditional linking of published positive annotations, not end-to-end detection, negative detection, or a complete report inventory. Preserve subtechnique specificity: use Txxxx.xxx, without collapsing to the parent. Return a duplicate-free list.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/annoctr-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "registered_not_executed",
+  "note": "DEVELOPMENT_CONDITIONAL_LINKING_ONLY；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。专家技术URL映射为ATT&CK ID；不按父技术折叠，粒度与论文部分实验不同",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Transform",
+        "detail": "normalize_original_id_granularity",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "sem_map_link_technique",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Lookup",
+        "detail": "retrieve_definitions；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Lookup",
+        "detail": "read_report_context；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "annoctr public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "annoctr frozen public lake / catalog / full references",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n5",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n5",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "sembench/ecomm/Q10",
+  "group": "sembench-ecomm",
+  "query": "Based on product images, find matching outfits consisting of shoes,\nbottomwear, and topwear in Black, Blue, Red, or White,\nwhere all three items are from the same brand, same color,\nand each is priced at $10 or less.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q10.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "此图选用先语义抽属性、再结构等值join的合法实现；直接SJoin是另一方案。gold price≤1000而NL≤$10，单位未核。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "shoes.id, lower.id, upper.id",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Join",
+        "detail": "brand相同 AND color相同",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Join",
+        "detail": "brand相同 AND color相同",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SMap",
+        "detail": "image→brand, color",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "SFilter",
+        "detail": "shoes；颜色∈Black/Blue/Red/White",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "Filter",
+        "detail": "price ≤ $10；单位待核",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "SMap",
+        "detail": "image→brand, color",
+        "kind": "semantic"
+      },
+      {
+        "id": "n8",
+        "op": "SFilter",
+        "detail": "bottomwear；颜色∈Black/Blue/Red/White",
+        "kind": "semantic"
+      },
+      {
+        "id": "n9",
+        "op": "Filter",
+        "detail": "price ≤ $10；单位待核",
+        "kind": "relational"
+      },
+      {
+        "id": "n10",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n11",
+        "op": "SMap",
+        "detail": "image→brand, color",
+        "kind": "semantic"
+      },
+      {
+        "id": "n12",
+        "op": "SFilter",
+        "detail": "topwear；颜色∈Black/Blue/Red/White",
+        "kind": "semantic"
+      },
+      {
+        "id": "n13",
+        "op": "Filter",
+        "detail": "price ≤ $10；单位待核",
+        "kind": "relational"
+      },
+      {
+        "id": "n14",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n10",
+        "n9"
+      ],
+      [
+        "n9",
+        "n8"
+      ],
+      [
+        "n8",
+        "n7"
+      ],
+      [
+        "n7",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n14",
+        "n13"
+      ],
+      [
+        "n13",
+        "n12"
+      ],
+      [
+        "n12",
+        "n11"
+      ],
+      [
+        "n11",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

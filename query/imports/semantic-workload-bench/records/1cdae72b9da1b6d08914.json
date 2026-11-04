@@ -1,0 +1,37 @@
+{
+  "id": "public-task/shared-environment-five-lakes-v2/hscodecomp/public/request",
+  "group": "public-tasks",
+  "query": "For every product in records.json, use its published title, attributes, price, currency and marketplace categories with frozen HTS 2025 Revision 15 to return one 10-digit HTS code as a singleton string list. Consult hierarchy, unnumbered parent rows and full notes. Do not assume price is per item, invent photos, convert currency without evidence, or reconstruct missing product facts. If a supported classification cannot be completed, ABSTAIN with null value and a concrete reason. The source-label task supplies no independent UNKNOWN gold.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-five-lakes-v2/hscodecomp/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "hscodecomp-Q1-v1",
+    "dataset": "hscodecomp",
+    "request": "For every product in records.json, use its published title, attributes, price, currency and marketplace categories with frozen HTS 2025 Revision 15 to return one 10-digit HTS code as a singleton string list. Consult hierarchy, unnumbered parent rows and full notes. Do not assume price is per item, invent photos, convert currency without evidence, or reconstruct missing product facts. If a supported classification cannot be completed, ABSTAIN with null value and a concrete reason. The source-label task supplies no independent UNKNOWN gold.",
+    "output_value": {
+      "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+      "status": [
+        "OK",
+        "ABSTAIN"
+      ],
+      "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+      "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+    },
+    "evidence": "records.json defines the full batch; paths are relative to public/. Shared resources are under lake/.",
+    "execution_failure": "ABSTAIN with null value and a reason. Insufficient evidence is not a negative label.",
+    "readiness": "DEVELOPMENT_INCOMPLETE_INPUT_DIAGNOSTIC",
+    "dag": [
+      "scan_products",
+      "sem_map_extract_material_use_unit_facts",
+      "retrieve_hts_tree_and_notes",
+      "sem_map_resolve_exclusions_and_classification",
+      "validate_10_digit_code_or_abstain"
+    ]
+  },
+  "domain": "hscodecomp"
+}

@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "dataset": "udrp",
+  "readiness": "INSPECTION_ONLY_LEAKAGE_AND_FACT_GAPS",
+  "lake_description": "1572份既有public-v2前分析案文；Overview3.0 PDF及全文。正式裁决、讨论、源URL、派生label在private。沿用已去除69句的版本，不声称剩余泄漏已清零。",
+  "output_contract": {
+    "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ],
+    "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+    "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+  },
+  "filter_match": "exact",
+  "queries": [
+    {
+      "id": "udrp-Q1-v1",
+      "kind": "semantic_primary",
+      "request": "For each supplied case, apply the frozen WIPO Overview 3.0 to attributed party contentions and recorded facts, and return a singleton list containing RELIEF_GRANTED or DENIED. Missing support is not a denial: ABSTAIN with null value and a reason when unable to complete. These are retrospective pre-analysis case extracts, not original filings. This query is registered for inspection: residual answer leakage and external-fact gaps remain, so it is not an evaluation-ready prediction benchmark.",
+      "dag": [
+        "scan_attributed_case_facts",
+        "retrieve_overview_elements_and_exceptions",
+        "sem_map_evaluate_three_elements",
+        "combine_decision_or_abstain"
+      ],
+      "gold": "正式命令的规则抽取标签；保留正式原文，非新独立人工复核标签",
+      "metrics": [
+        "source-label macro-F1",
+        "DENIED recall",
+        "balanced accuracy",
+        "coverage"
+      ]
+    },
+    {
+      "id": "udrp-Q2-v1",
+      "kind": "derived_filter",
+      "request": "筛出预测驳回案件，生成需复核的少数类清单",
+      "parameters": {
+        "target_label": {
+          "type": "string",
+          "example": "DENIED"
+        }
+      },
+      "dag": [
+        "Q1",
+        "filter_predicted_label_or_prefix",
+        "project_record_id",
+        "count"
+      ],
+      "gold": "Derived from the same Q1 labels; not independent gold"
+    },
+    {
+      "id": "udrp-Q3-v1",
+      "kind": "derived_aggregate",
+      "request": "统计两种预测决定及未完成数量；不得只报多数类准确率",
+      "dag": [
+        "Q1",
+        "unnest_unique_labels",
+        "group_by_label_and_source_entity",
+        "count_distinct_records",
+        "emit_completeness"
+      ],
+      "gold": "Derived from Q1; partial groups explicitly marked incomplete"
+    },
+    {
+      "id": "udrp-Q4-v1",
+      "kind": "operational_review_queue",
+      "request": "返回未完成记录及原因，并报告全量coverage；缺事实和运行失败均需保留原因，不当负例。",
+      "dag": [
+        "Q1",
+        "filter_status_ABSTAIN",
+        "project_id_reason",
+        "coverage"
+      ],
+      "gold": "No independent gold; this is execution accounting, not missing-fact correctness"
+    }
+  ],
+  "scientific_boundary": "5 primary tasks across five lakes; derived queries are not extra datasets, independent labels or observed execution families. No model runs or measured K.",
+  "limitations": "仍有4处既有残余instruction-transfer词面标记，语义泄漏未清；外部调查未封存；1513/59严重偏斜；禁止将本构造视为可用预测实验证据。"
+}

@@ -1,0 +1,24 @@
+{
+  "dataset_id": "thalamusdb/netflix",
+  "source_ids": [
+    "thm_fe457d76d05bd6ad"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": {
+    "movies": [
+      "movieid",
+      "featured_review"
+    ],
+    "ratings": [
+      "movieid",
+      "rating"
+    ]
+  },
+  "record_count": null,
+  "version": "c17a1ea7c8a3bca1fba13537002e99ba00a3e130",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "movies_with_reviews.csv 在上游仓库；评分 CSV 需按 README 另行下载（2.71 GB）。"
+}

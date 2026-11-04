@@ -1,0 +1,64 @@
+{
+  "id": "quest/SWDE/26",
+  "group": "quest-swde",
+  "query": "SELECT university_name, year_founded, rank FROM University WHERE setting = urban OR year_founded < 1820 OR year_founded > 2000 OR  rank <= 3 OR ran > 100 OR total_undergraduate_enrollment < 1800 OR total_undergraduate_enrollment > 6000 OR academic_calendar = 4-1-4-based academic_calendar = quarter-based OR academic_calendar = semester",
+  "source": "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/QUEST/repository/QUEST/query/SWDE.txt",
+  "source_line": 31,
+  "provenance": "pseudo_sql_plus_proposed_extraction",
+  "status": "source_incomplete",
+  "note": "原库列出的伪SQL；保留未加引号的文本字面量和原始拼写。谓词作为原文整体显示，没有假称可执行SQL或已验证类型绑定；语义抽取为逻辑补充。列表中的省略号表示这里不是全部可能查询。 此条仅展示不完整计划，不计作可执行混合查询。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Unresolved",
+        "detail": "原句连接条件缺失/截断；禁止自动补齐",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Project",
+        "detail": "university_name, year_founded, rank",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "setting = urban OR year_founded < 1820 OR year_founded > 2000 OR  rank <= 3 OR ran > 100 OR total_undergraduate_enrollment < 1800 OR total_undergraduate_enrollment > 6000 OR academic_calendar = 4-1-4-based academic_calendar = quarter-based OR academic_calendar = semester",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SExtract",
+        "detail": "原文→投影和谓词所需字段；分析性补充",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "University 原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

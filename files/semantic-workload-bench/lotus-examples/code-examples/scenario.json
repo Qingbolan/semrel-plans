@@ -1,0 +1,8 @@
+{
+  "id": "swb-lotus-examples/code-examples",
+  "name": "lotus-examples/code-examples",
+  "query_ids": [
+    "swb/lotus/failure-mode-discovery",
+    "swb/lotus/rag-pubmedqa"
+  ]
+}

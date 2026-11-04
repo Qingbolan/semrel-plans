@@ -1,0 +1,614 @@
+{
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q1.txt": {
+    "sha256": "e1dac5b5c15cf288dbd1b1067d867a53d8f63b3624df8cefcb88e04bfbaf5951",
+    "bytes": 55
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q10.txt": {
+    "sha256": "31d13818e25aed076e8726c6eb29fe5c454ea5f22e3b8efd71b5b933774d8e4f",
+    "bytes": 159
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q2.txt": {
+    "sha256": "83678287e7932923fab57acedd24287a34efdbfeae365c8816ecf161ae9a068c",
+    "bytes": 66
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q3.txt": {
+    "sha256": "88513668ea21f88e193a00571a9fbdd02a1e31f3b1e5d4e045612fede4cbdaa1",
+    "bytes": 144
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q4.txt": {
+    "sha256": "ae9a102b5af5751ecfa2b1810cba38f81ffee743b7e1087b62007bb89989c64e",
+    "bytes": 154
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q5.txt": {
+    "sha256": "fe813eef88f4579ed7897898d9774aaaa0f6927edc158728ef56eb15d399c3f7",
+    "bytes": 93
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q6.txt": {
+    "sha256": "6b08d8fa76fc518f0b14a799d6ec5a09423ced2278981c94338a029507d26680",
+    "bytes": 82
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q7.txt": {
+    "sha256": "922da00dffca566ac475d9a6f638c69af8a4bc1971016136ca13045fb09620e9",
+    "bytes": 139
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q8.txt": {
+    "sha256": "6ff01878d8ed772ec9c1b53c8eba93c359dd1a8ba264e2e8e26df406cdfaf07a",
+    "bytes": 151
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/natural_language/Q9.txt": {
+    "sha256": "884d8920916b67d4e242f3ca4092fcf2b746aa47e66a536bfa739f68d77f7c36",
+    "bytes": 90
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q1.txt": {
+    "sha256": "325f643e894274c42ff5e9d9d075372fade674e2459d6a651bc7bdd88de46e67",
+    "bytes": 51
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q10.txt": {
+    "sha256": "aad35f15d870496ebc5e2b1accc4da0f4f6e57acf1f50363249e4dc63fb5bc9c",
+    "bytes": 92
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q2.txt": {
+    "sha256": "b026af9c958b4e2451c93ce3b114602e045108cb369c41a8a4171d7dbf155a12",
+    "bytes": 77
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q3.txt": {
+    "sha256": "5acb5f38b47be3689d9af241de60e4795f5fd8100c8be0bdf02b630805fe4fed",
+    "bytes": 97
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q4.txt": {
+    "sha256": "ab92b0d14ba9367307fa1058bfae6379551d72ac665e9dd2447336f6d6be08d1",
+    "bytes": 54
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q5.txt": {
+    "sha256": "a4565018c821533b797b726a64eeed4000af17cb59731c14f6467c0d2990931b",
+    "bytes": 72
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q6.txt": {
+    "sha256": "9a83da66f36448f14d6a7b784a2c5dc6f920d3f960b49b4535dab044dc537c51",
+    "bytes": 134
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q7.txt": {
+    "sha256": "a003cc9ccee5a8e90e37dc7094056d9b191cbc2f680111a01727201e01e1ac18",
+    "bytes": 170
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q8.txt": {
+    "sha256": "f1a39652ad5bf846013d6f6d8305b5d886ad36c77be83cf341ad9311b0733c65",
+    "bytes": 66
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/cars/query/natural_language/Q9.txt": {
+    "sha256": "380cf97f710412c1fa45c43c7fb1c5fdcf5fb39bbaddc573ad7e9a6e11cb11eb",
+    "bytes": 86
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q1.txt": {
+    "sha256": "e868fe1d6afbcc9ae52228f3f3f7b370fa636da2bc4218fe06f7c528c9b32f21",
+    "bytes": 56
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q10.txt": {
+    "sha256": "06150a36bf9d93ea2a6428958a0c8790b9c22c6b6586aa2cb403bb9977ae9c28",
+    "bytes": 70
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q2.txt": {
+    "sha256": "d32105d5213dd1aaec67916e7ad236eaedfe6b814f4e3369f321bdf85a6fcb63",
+    "bytes": 156
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q3.txt": {
+    "sha256": "766bca24b1b0703ecc4df46d0e528c9c1c899bfd720ad8631f6a3fcaf7181e46",
+    "bytes": 132
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q4.txt": {
+    "sha256": "5ee0ff7b908fa3cb78730ccc770de0a5f072e09436b7938b171dcc42f57d485a",
+    "bytes": 45
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q5.txt": {
+    "sha256": "de26f21618cc82d8b5e5eaf2356e332db35df973c9f73eccd14abccfb3e85cd7",
+    "bytes": 106
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q6.txt": {
+    "sha256": "e1a387b2530836aa3d6b08a86813d6235ecb737b4c14ebd56fa093529ee0224b",
+    "bytes": 231
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q7.txt": {
+    "sha256": "6f62725c3fb30ebf8fd4fb6df71c87b13916cba348abd733a9c44723b7d80648",
+    "bytes": 132
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q8.txt": {
+    "sha256": "9846000a6ac9c22fc0c70a53959f13a62893b8c114fccd30c2eb1cf2ff08885e",
+    "bytes": 81
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/natural_language/Q9.txt": {
+    "sha256": "e0cebd6742bc6d3fc64ce7ab2035c9877721f43c6842c41634e387927f868f9e",
+    "bytes": 136
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q1.json": {
+    "sha256": "df59c936a60e73a8cf26d2c167bce62667b4ac9faf6c35cef8df692820047f0a",
+    "bytes": 186
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q2a.json": {
+    "sha256": "939de4973cf4d16e6c7bd779ee4d87779b18f9635dc7883761cfb87b9ce4e517",
+    "bytes": 467
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q2b.json": {
+    "sha256": "f78f8bfa1d00ea2d0bbbf1b6408ffd9eb6a01cb6c81beefcc52fe65c453776ef",
+    "bytes": 539
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3a.json": {
+    "sha256": "9dc5c9775c883b0e89724609607b816708317ceb3b320438003a895af730dda1",
+    "bytes": 487
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3b.json": {
+    "sha256": "7b268897581f03ed80b49f5aaaa3000e5a7b285d614b5afeadf1ac6b42e586a3",
+    "bytes": 180
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3c.json": {
+    "sha256": "c04cc9acca16a5bd9296cc4b088a796c7f6c7ab0bb4859522578d5204977e43d",
+    "bytes": 230
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3d.json": {
+    "sha256": "caf1ff1923bde9934fb81597fbe8a102c269b7a82d522b6399b127761b5abe14",
+    "bytes": 148
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3e.json": {
+    "sha256": "84038fa610634b2e1c77620c1dd9f0ab3cd0af80eb97caaef10b3eec4c17ef99",
+    "bytes": 141
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3f.json": {
+    "sha256": "37091e056831e9ff1d65bfc059e494cce126ffee502abd6fbb7de51261f4231a",
+    "bytes": 220
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3g.json": {
+    "sha256": "244e3e24add659b8a7cd31e099e4db00848e302473410408e41612c794765c36",
+    "bytes": 152
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q4.json": {
+    "sha256": "10cd150dfbf26dd144f5ad9711d92ce422ca3876d317a651ffce07fd86432c1f",
+    "bytes": 1800
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q5.json": {
+    "sha256": "0f300be7796ec2d46a7b75533c54026f8c7c9e48454ea6023a02e1a369c29a34",
+    "bytes": 444
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q6a.json": {
+    "sha256": "432f5e74456199dd14247b098284e1f4973aa2c259d02c63a0cc1e8a582119a3",
+    "bytes": 158
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q6b.json": {
+    "sha256": "867925a92d7aef768fd653c99700a55426cb362253b198af1f658fdf67835755",
+    "bytes": 156
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q6c.json": {
+    "sha256": "96ce54bdf88d70fb2decd3af172766407f82c33a4f3e7f2b4c28a67a9bbe17d5",
+    "bytes": 261
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q7.json": {
+    "sha256": "f441de7e15674b89e222338b50faf69ca8bc9d1baa679d8cc8a260d65a7e6295",
+    "bytes": 511
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q1.txt": {
+    "sha256": "e4f699b13cbf0d1f1bdc02ea14c11a7cc11436b952fe2c3d7157d2e677374f59",
+    "bytes": 59
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q10.txt": {
+    "sha256": "211dc32df047b77df5de38fc996688ef0e173690b1bd6c103a051b9301ab8509",
+    "bytes": 187
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q2.txt": {
+    "sha256": "d337c9d0586086b8cf7d554d389bca246eb9b5dc437a0f79e149ac05186fc467",
+    "bytes": 59
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q3.txt": {
+    "sha256": "a04afb64ca7feb24865cb7efa6d456c31b25fe6d2c2557a2f55fae0bfc029a77",
+    "bytes": 87
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q4.txt": {
+    "sha256": "7bd0f7755543f5b34e883237e503df32c57cf427dedad114b464709cd8a6d944",
+    "bytes": 86
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q5.txt": {
+    "sha256": "0079d8f10aa22ef99850ea1d236ac560dac34e3634ea83a9492d0d5d971ac8c0",
+    "bytes": 217
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q6.txt": {
+    "sha256": "ad142e03b72f430409dda6362c60f14fd6f769cd1c3f02f82456ea3990603e74",
+    "bytes": 224
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q7.txt": {
+    "sha256": "14b113ba237462a1560b244ed02519d3f6211cd16e329790e902cf2bb36e9e7a",
+    "bytes": 224
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q8.txt": {
+    "sha256": "07737a917ee4397583a98901b93858d1ff4128c014db9d7fbc3804c4f26f6e0c",
+    "bytes": 107
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q9.txt": {
+    "sha256": "67df360539dbe28dae0449197056c156e77b2a3e2db83db9e0e2305cef654402",
+    "bytes": 161
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q1.toml": {
+    "sha256": "3ab5e9c238feb32592dd236e1cc9f0e97a4733e9ef2d6d2ffe239c043aac715a",
+    "bytes": 1095
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q10.toml": {
+    "sha256": "ee5c931d2d74a663d6dc79f6c8949b0dc5d16b568b1a18a5c6800068160bfe3b",
+    "bytes": 1975
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q11.toml": {
+    "sha256": "43bbd66104cc54a9238d1498e589883f7737570515934f7e8db61af667da1b05",
+    "bytes": 2724
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q12.toml": {
+    "sha256": "f0be6ac51a8e248d1689ce251563a4309d9ccb20c8985b88ae3c0f8483363866",
+    "bytes": 1615
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q13.toml": {
+    "sha256": "2130778232a6dc55b5de6f3b492d49db5b28226a0628c63e91f47a03541bfc5c",
+    "bytes": 1725
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q14.toml": {
+    "sha256": "a1ff3e5d216821336d62137e5ae53fb1d5dd6b9eb399449c71da41224d2c48b0",
+    "bytes": 2174
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q2.toml": {
+    "sha256": "6a0b94babac343cf64a6cabf801b150b8364a5880dba46f080ae746bb9f5ec5d",
+    "bytes": 1132
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q3.toml": {
+    "sha256": "d4a699242d950713ac85e454f93dbe193b2f6dcedc156ca4ea0848c6d7fcb42e",
+    "bytes": 1151
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q4.toml": {
+    "sha256": "c3f3b4fd64a4826b25c90cdd43fb2fd78df524842781eebf22abf1aae3ea8e68",
+    "bytes": 1277
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q5.toml": {
+    "sha256": "1e8ef76635dceafb736112491d14f7d5f8cf352ff34fb8c3d93ee952546fabb0",
+    "bytes": 2964
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q6.toml": {
+    "sha256": "e82833761516987ae5ae694ded646b78e32ec64a72befde9f13d1e11d8fbd4c6",
+    "bytes": 2725
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q7.toml": {
+    "sha256": "1acc16f15c82f3c05f2f1bf7fef37a77dc8dff1172de134a8901a72085e7d095",
+    "bytes": 936
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q8.toml": {
+    "sha256": "bb1a6a15b1cefca9043e1babbe71fc1acfa3657eec5084d4a5322b1dcc9dd23a",
+    "bytes": 1137
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q9.toml": {
+    "sha256": "ce59997a864fabe5df26979746ff44e9804c54f466ade3a73cf61b81633f4f71",
+    "bytes": 1402
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Art/Agg/agg_queries_Art.sql": {
+    "sha256": "efdf14c4c3c10ccde7943f50a3f3dff22c7cc187a10f26e253ae5d18e4f99202",
+    "bytes": 1009
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Art/Filter/filter_queries.sql": {
+    "sha256": "26c4167df7c24378cae80efc98cb0e118e6247e47a7c430c748ca4f193e661d1",
+    "bytes": 8807
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Art/Mixed/mixed_queries.sql": {
+    "sha256": "70ad88c89d0bc2fea8678d05725a907db17d3201347bb4e2d29f8f8620ce73f8",
+    "bytes": 1104
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Art/Select/select_queries.sql": {
+    "sha256": "ced7c9a2da0536780d69b6a154f99ea85ec8f7decd1486443c670d07acced12f",
+    "bytes": 638
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/CSPaper/Agg/agg_queries_CSPaper.sql": {
+    "sha256": "2559ecf94ef8a08b8b60fd3dc63f3f7f675efcd45d4f5662f6989cfd974fe009",
+    "bytes": 1329
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/CSPaper/Filter/filter_queries_CSPaper.sql": {
+    "sha256": "b20a4e675f920aee474209904c498bf1067861e394155cdf7f507d9ddf4fe861",
+    "bytes": 15121
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/CSPaper/Mixed/mixed_queries.sql": {
+    "sha256": "4e8fe7fc5aa64c616d454f91aa745570854ddebcf4cb8699d660412431659dfb",
+    "bytes": 1425
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/CSPaper/Select/select_queries.sql": {
+    "sha256": "0b6d966af82364ddc38fcd8be5e4049c3e626c9e06dd3a63299b88d6f068127f",
+    "bytes": 944
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Finan/Agg/agg_queries_finance.sql": {
+    "sha256": "36f712beba820376740ae0acf9d24c01757349c8db95b144a2dc79deb9114a04",
+    "bytes": 1341
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Finan/Filter/filter_queries_Finan.sql": {
+    "sha256": "f8c71d41406f49b8fb88528fe6d3992867b4dc627eea1480e730f9f2973eb183",
+    "bytes": 12213
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Finan/Mixed/mixed_queries.sql": {
+    "sha256": "fd9862a69cd9ea616369c6c97aae5509dd5e7ee871a5b26473da180d12af0700",
+    "bytes": 1502
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Finan/Select/select_queries.sql": {
+    "sha256": "6853a3cd5f17b5fba080f9fa8c1c398e4bbd4bcfa3311bce074bdff4b044656d",
+    "bytes": 1060
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Legal/Agg/agg_queries_Legal.sql": {
+    "sha256": "ff791774477d81d4dae70719550e6ee45e5c6a892f8954e3c85eaac735f3d3e8",
+    "bytes": 1407
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Legal/Filter/filter_queries_Legal.sql": {
+    "sha256": "6cae410183c6df3559b7ec2cf5ff3f294ddbef022d4b2df3227c6b256dee0095",
+    "bytes": 12010
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Legal/Mixed/mixed_queries.sql": {
+    "sha256": "4bb7c16a18e19fce7576d6768486a52639170277ebd626a6b757e1fe896ec6de",
+    "bytes": 1366
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Legal/Select/select_queries.sql": {
+    "sha256": "5090f8c89782ef4eac28ee37a20445fdbde501b7e5bcdc1a1fc7746de5a2a5c2",
+    "bytes": 826
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Agg/agg_queries_drug.sql": {
+    "sha256": "efb78b2a1e816e497132a193814f818f534f14cd3fa09a7bd0c632e41b957fdc",
+    "bytes": 1182
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Agg/agg_queries_institution.sql": {
+    "sha256": "4b7c32ddc9111ee84dff0495dfe560522a90df75435c99b7cc9303213fbd79af",
+    "bytes": 316
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Filter/filter_queries_disease.sql": {
+    "sha256": "011db090b19695c2a6673eb71bafef734d2cdfa0c5f19734a70dcf57fcff8f52",
+    "bytes": 5041
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Filter/filter_queries_drug.sql": {
+    "sha256": "a91f84aabd4c61ec720436f420bd34b23d361f41547f255df935d093ed816e12",
+    "bytes": 5200
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Filter/filter_queries_institution.sql": {
+    "sha256": "0ff6ab5a1d1bc5269baa7a0505ed7786f12c955b2c4e09800c4421868483f357",
+    "bytes": 3186
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Join/join_queries.sql": {
+    "sha256": "865f03a2d966e40c481d3210e80e7690ea2eade78620c2856d73de3375ecf7dd",
+    "bytes": 5492
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Mixed/mixed_queries_agg_join.sql": {
+    "sha256": "7e461a3fb499fd42fc1c9156c7e996a8d210e69a44325228188eafa1858886a6",
+    "bytes": 592
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Mixed/mixed_queries_filter_agg.sql": {
+    "sha256": "11c31f11e3faab535c5afd64c196c2234fd4a9d8b2223b65f96d3486be849f9f",
+    "bytes": 1745
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Mixed/mixed_queries_filter_agg_join.sql": {
+    "sha256": "eebd2822608b00eeafe900f4a00604a9ae92bba1b011b347ceeace2eb7fdc7f1",
+    "bytes": 5431
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Mixed/mixed_queries_filter_join.sql": {
+    "sha256": "25f259b20348b1514f9944c4c02c7c0318de26935decf2eee95deba0733711c0",
+    "bytes": 4769
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Select/select_queries_disease.sql": {
+    "sha256": "dcaee6793b11f4e3ee1bbed0cafd1a9c5f6db86a30adb4d810f7de6e57979760",
+    "bytes": 299
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Select/select_queries_drug.sql": {
+    "sha256": "a5a00a2c25348a19c7fe2efc575e450b65acfddc1e6f8d75699771cb4a4016db",
+    "bytes": 339
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Select/select_queries_institution.sql": {
+    "sha256": "4041505d207d3dbf524e98b40238bee37bae412e5d4ce867df470c6e9566a489",
+    "bytes": 237
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Agg/agg_queries.sql": {
+    "sha256": "ea7e592e5a0a2dfc16dc0c71a8f0a216eeeee0a8b3bbbb189dd6d82e93b9d870",
+    "bytes": 1113
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Filter/filter_queries_city.sql": {
+    "sha256": "e70454c8f6597802c8f8b29f6348e9a830b6a0b2ec3cb527077079fc94681674",
+    "bytes": 825
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Filter/filter_queries_manager.sql": {
+    "sha256": "1c65f74d7fe0da7b1848d4920403c5de00fd0490e71f0d7de13bf8977f31bcda",
+    "bytes": 889
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Filter/filter_queries_player.sql": {
+    "sha256": "76e92d839f28ba02783ab904083b32b47d1168492efbd74ff418e8c441da9d0b",
+    "bytes": 5652
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Filter/filter_queries_team.sql": {
+    "sha256": "5e8da90d6e6ddd41587b712561e1b15912cd7f50911bf3a35d68fef43f2d402d",
+    "bytes": 1915
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Join/join_queries.sql": {
+    "sha256": "b821fc64868bc7775a6db032012912d24913387052736f9a10c1a03835d5dd0b",
+    "bytes": 4300
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Mixed/mixed_queries_agg_join.sql": {
+    "sha256": "22367d5114ce50d277f8fff6e86261938b9425d157c7889126f9c6d09a634efb",
+    "bytes": 501
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Mixed/mixed_queries_filter_agg_join.sql": {
+    "sha256": "8f529ba9c6ff4b92b8d64140c112b2c55fe2d74a0e92a0d24ea88f86b683cccb",
+    "bytes": 3972
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Mixed/mixed_queries_filter_agg_player.sql": {
+    "sha256": "e623f9a5296da424b60d1122f6a0fd236bebe55e87fdc94d3f73aa3658521e2f",
+    "bytes": 1113
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Mixed/mixed_queries_filter_join.sql": {
+    "sha256": "6e13f23b76f3766aafb949f8e7a77b83932589e914d8a0511b7fcf9a46ed83e1",
+    "bytes": 3678
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Select/select_queries_city.sql": {
+    "sha256": "197ac4c5cb364bdd6241de66e2419682e2a77f0387389e94aabcfe62213f2ba5",
+    "bytes": 66
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Select/select_queries_manager.sql": {
+    "sha256": "43f74ebce89a73b438a17493bb7a6a08d0ef3dcab87b216c50b65d19c3360e0a",
+    "bytes": 76
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Select/select_queries_player.sql": {
+    "sha256": "bff5130aa70f4c134f55c51951f88f3e507470936a3e6b55892be413085408b6",
+    "bytes": 477
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Select/select_queries_team.sql": {
+    "sha256": "2bc39a879d174d998a1c83eb340053742752cc0d33d747747ed4ff062b15fe1f",
+    "bytes": 189
+  },
+  "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/QUEST/repository/QUEST/query/WikiText.txt": {
+    "sha256": "b4075395e860bef40d2a0b9915dc40aca3056b01b3d89da45cb8cc1a5d6da944",
+    "bytes": 3338
+  },
+  "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/QUEST/repository/QUEST/query/LCR.txt": {
+    "sha256": "f6b0d3db0778d00b9a9d42fa17b4496591b7b72c0c2d0cf9ab857baf942701f8",
+    "bytes": 3139
+  },
+  "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/QUEST/repository/QUEST/query/SWDE.txt": {
+    "sha256": "bfb218f5b680f63fd650f52c0f59fcff47bc6c2aff19c4f36ed798e0eeb59a38",
+    "bytes": 3399
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/workloads/stard-batch/queries.json": {
+    "sha256": "ff55c1c2d58fb3452ae4e7205eac56da4dfc70858ce65f76916f26d22e8f431e",
+    "bytes": 3269
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/workloads/annoctr-batch/queries.json": {
+    "sha256": "cbac4bd85b573cc0b1461b0dbaa858b1f35b1a5f35c3559dcd9104978035feae",
+    "bytes": 3857
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/workloads/codiesp-batch/queries.json": {
+    "sha256": "2c31f08bb3de0f508a3e32dbd468d16d3385348f16302ec5c834086d99959578",
+    "bytes": 3654
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/workloads/hscodecomp-batch/queries.json": {
+    "sha256": "588e221736fa0c6eaa4e814f07ec5cdaebb217f35d886d0d4a0b4b7c4eec5963",
+    "bytes": 3667
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/workloads/udrp-batch/queries.json": {
+    "sha256": "1c8ca253e5317a84ddc1ca8c38993a1036f467a11dc7431afc3e07a0a556d7b1",
+    "bytes": 3599
+  },
+  "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/Palimpzest/repository/Palimpzest/tests/pytest/fixtures/workloads.py": {
+    "sha256": "42226fac08fe064755e02e1fa097505abd707117a3d76cdf7d2b22bc4b4eaf39",
+    "bytes": 3849
+  },
+  "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/LOTUS/repository/LOTUS/benchmarks/failure_mode_discovery/pipeline.py": {
+    "sha256": "d5b3be8cbbed9b76444d92b19c94f68ed9488998d13a94bcef29aabbf09b787c",
+    "bytes": 3269
+  },
+  "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/LOTUS/repository/LOTUS/benchmarks/rag_pubmedqa/pipeline.py": {
+    "sha256": "0dd1f4ba91999a9125949ae4d906540aaf5c726f3f1bb795b47655808e9ce5c5",
+    "bytes": 4953
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q7.sql": {
+    "sha256": "397ca1132574879cd4b22b435abc4f11ae0b06a4cb01a2ea7951433ef499c620",
+    "bytes": 243
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q6.sql": {
+    "sha256": "397ca1132574879cd4b22b435abc4f11ae0b06a4cb01a2ea7951433ef499c620",
+    "bytes": 243
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q4.sql": {
+    "sha256": "8a3fa2f7153fa8c17dc0ae5fc5820f3c98345cd93dfdfd30197f084a0d554e9a",
+    "bytes": 148
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q5.sql": {
+    "sha256": "e1e18d98e2361bf7cf3971c021b59e51e55eb68bbb81bc59129764d23ce1dc5f",
+    "bytes": 242
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q1.sql": {
+    "sha256": "847621f0ed626e03c56dee06b73b7bff5cd587fe2f8b38d1e41e2049e9f4de66",
+    "bytes": 63
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q2.sql": {
+    "sha256": "5ab598444ef58794879227734873d370636dbc89ec9b29d4529d33dd4d5f2965",
+    "bytes": 82
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q3.sql": {
+    "sha256": "753ec183e733fa1b7e11dfee9309bc82297ebc0a02ff15347ef898027f1665b5",
+    "bytes": 105
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q10.sql": {
+    "sha256": "e19e3a84eaf3aed38fe382860332fbdee0d4fef16910bc5ed279715853f7cdca",
+    "bytes": 71
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q8.sql": {
+    "sha256": "1c9c2b9f1cfba93476261b816f042c8d2905f59488f268615d719351f750e3c5",
+    "bytes": 99
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/gold_sql/Q9.sql": {
+    "sha256": "6c45ec0e54b3ad98f88b839b3eceda759de5de34019bd2ede48407e349b9414c",
+    "bytes": 140
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q7.sql": {
+    "sha256": "91b4ef5b22419871bf346cf34b30f5984c058f46e4b2ce93d137dfe31ed787d9",
+    "bytes": 145
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q6.sql": {
+    "sha256": "4c5c9de1e6588eec814a4485f77b08406b633d8344166ef3403e56ef74301728",
+    "bytes": 158
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q4.sql": {
+    "sha256": "1d0052c3a8ae03cf43d82c46b08818b856ac58d5081024e7fa57e700b972883c",
+    "bytes": 195
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q5.sql": {
+    "sha256": "407c9a4843ecb8a9b3806f461a5fa7cf091c59037b8eca54c3fd0484edd5dd47",
+    "bytes": 149
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q1.sql": {
+    "sha256": "c92be3663f6564e8d6dd94dc6fe632c4e351f81be169bffdb3405aea41ecf85b",
+    "bytes": 61
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q2.sql": {
+    "sha256": "6b8ae0f83474020fa012f97f182d9d365bc4a287d21f13b964fc5ced16221502",
+    "bytes": 58
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q3.sql": {
+    "sha256": "c7df846c1471b233a3930fcca8ed0a988af58441be06a2a5d02573430d9b1cc0",
+    "bytes": 189
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/README.txt": {
+    "sha256": "b971c7b2ce3e46648a50b20e13f58f5a67c55f1850806c1dde895fe0136843c8",
+    "bytes": 268
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q10.sql": {
+    "sha256": "10acdc0fa36acdd94185c293c245ad582158c02c8e31777b7193bcfab395b5a8",
+    "bytes": 246
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q8.sql": {
+    "sha256": "78afc28abdcb0bd4d9b1844b5558eeef405edbbf7a20b905da8e4579d1eb1b49",
+    "bytes": 273
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/animals/query/gold_sql/Q9.sql": {
+    "sha256": "2d74e595141ea26cb3e0945dc71431a492d2cd112135c6355b100bee3bd7c921",
+    "bytes": 149
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q7.sql": {
+    "sha256": "ef9d05fc65bfdfe4613a96abe99376e09c31e333b7a99c69325e146b433ac553",
+    "bytes": 50
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q6.sql": {
+    "sha256": "4d368ad82066886e7c9a417f491bf7d0426e13bca37dd0a1ebe05d9756b598a6",
+    "bytes": 326
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q4.sql": {
+    "sha256": "e87529d9155f125bd358762939c377d43f34a2752e6905149621127728190ee0",
+    "bytes": 80
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q5.sql": {
+    "sha256": "c4cc06c4ff734375bf97460e44723d283d44e058335ced4a63ea8b02ae3eb002",
+    "bytes": 236
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q1.sql": {
+    "sha256": "d2c0795e4ba953015b365b5981283c2adcff74c1325baa5d3acaac8376909e3c",
+    "bytes": 120
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q2.sql": {
+    "sha256": "e5db2c9c6b803efeadd7b078657345b3f091436c49a01a30c0a3c3a1ccc298a9",
+    "bytes": 153
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/Q3.sql": {
+    "sha256": "bd79859ea535450fffc37781c29a90175e6eb6bf4ee555a476a2f9fd4d1e1a10",
+    "bytes": 176
+  },
+  "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/medical/query/gold_sql/README.txt": {
+    "sha256": "4191d224ced0a442bf7ebe90b32ea61da4e00e5ada997d946ea4d40e2de22e33",
+    "bytes": 223
+  }
+}

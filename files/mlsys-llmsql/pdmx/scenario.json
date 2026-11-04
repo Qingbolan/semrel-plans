@@ -1,0 +1,8 @@
+{
+  "id": "mlsys-llmsql/pdmx",
+  "name": "MLSys 2025 LLM-SQL / pdmx",
+  "query_ids": [
+    "mlsys-llmsql/pdmx/T1",
+    "mlsys-llmsql/pdmx/T2"
+  ]
+}

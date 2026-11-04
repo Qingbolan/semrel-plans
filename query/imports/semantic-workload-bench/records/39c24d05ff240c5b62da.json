@@ -1,0 +1,64 @@
+{
+  "id": "sembench/movie/Q2",
+  "group": "sembench-movie",
+  "query": "Five positive reviews for movie \"taken_3\". Return reviewId.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/movie/query/natural_language/Q2.txt",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "NL要5条；gold SQL未写LIMIT。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Limit",
+        "detail": "5; 未指定顺序",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Project",
+        "detail": "reviewId",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SFilter",
+        "detail": "positive(reviewText)",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Filter",
+        "detail": "id = taken_3",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "Reviews",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v94/inspection-v2/public/task",
+  "group": "public-tasks",
+  "query": "Extract all CHEBI+extensions concept mentions with exact possibly discontinuous character spans from each full text, under provided author protocol and current rules.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v94/inspection-v2/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task": "Extract all CHEBI+extensions concept mentions with exact possibly discontinuous character spans from each full text, under provided author protocol and current rules.",
+    "input_condition": "ANNOTATION_GIVEN_UPSTREAM_TYPOGRAPHY: section/font intervals are supplied human structural annotations; concept annotations remain private.",
+    "status": "INSPECTION_DEVELOPMENT_NOT_VALIDATED",
+    "limitations": [
+      "Manual PMID exclusions only; no complete example leakage audit",
+      "50 source documents are not 8000 independent cases",
+      "No model execution or environment gain measured"
+    ]
+  },
+  "domain": "shared-environment-audit-20260908"
+}

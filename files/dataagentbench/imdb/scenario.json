@@ -1,0 +1,16 @@
+{
+  "id": "dataagentbench/imdb",
+  "name": "DataAgentBench · imdb",
+  "query_ids": [
+    "dataagentbench/imdb/query1",
+    "dataagentbench/imdb/query2",
+    "dataagentbench/imdb/query3",
+    "dataagentbench/imdb/query4",
+    "dataagentbench/imdb/query5",
+    "dataagentbench/imdb/query6",
+    "dataagentbench/imdb/query7",
+    "dataagentbench/imdb/query8",
+    "dataagentbench/imdb/query9",
+    "dataagentbench/imdb/query10"
+  ]
+}

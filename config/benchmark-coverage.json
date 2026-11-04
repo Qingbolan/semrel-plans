@@ -1,0 +1,979 @@
+{
+  "checked_on": "2026-11-03",
+  "scope": "直接面向语义算子或 SQL+LLM 混合查询的 benchmark，以及自带查询集的语义算子系统论文。收录数量在构建时从 query/queries.jsonl 计算；论文规模只引用原文摘要、已有七项分析或 OpenReview 摘要。混合判断针对论文 workload 的性质，不是逐条审查。",
+  "groups": {
+    "benchmark": "A. 语义算子 / 混合查询 benchmark",
+    "system": "B. 语义算子系统自带 workload",
+    "agent": "C. Data agent benchmark（非原生语义算子）"
+  },
+  "entries": [
+    {
+      "key": "sembench",
+      "group": "benchmark",
+      "paper_id": "1ef81efeb4f6",
+      "arxiv": "2511.01716",
+      "repositories": [
+        {
+          "url": "https://github.com/SemBench/SemBench",
+          "commit": "c4b2bcff3a5907148f504cfb6faea4c6d3f90e8f",
+          "link_source": "官方仓库；图册查询按旧 commit 8c2cac89 固定"
+        }
+      ],
+      "query_scale": "v1：5 个场景 55 条；v2 增加 medical 场景",
+      "scale_source": "已有七项分析（SemBench v2 全文）",
+      "catalog": [
+        {
+          "benchmark_id": "sembench"
+        }
+      ],
+      "status": "partial",
+      "status_note": "按 commit 8c2cac89 收录 6 个场景的自然语言查询（movie 10、animals 10、cars 10、ecomm 14、mmqa 16、medical 10）。上游 HEAD c4b2bcff 相对固定版本只改 README 与 docs，查询未变。未收录 medical/Q11 与 Q7_filter：它们只有 BigQuery 方言，没有自然语言版本。",
+      "mixed": "yes",
+      "mixed_note": "多数查询含键连接、聚合、排序或集合运算与语义算子的组合。"
+    },
+    {
+      "key": "uda-bench",
+      "group": "benchmark",
+      "paper_id": "f3bddbba0041",
+      "arxiv": "2510.27119",
+      "repositories": [
+        {
+          "url": "https://github.com/unimib-datAI/UDA-Bench",
+          "commit": "50039a527f156eeb9cad80118637da47db94b976",
+          "link_source": "官方仓库；与图册固定版本一致"
+        }
+      ],
+      "query_scale": "论文 v1：5 个数据集 240 条；仓库：6 个领域 43 个 SQL 文件 608 个查询位置",
+      "scale_source": "已有七项分析；exports/uda-source-coverage.json",
+      "catalog": [
+        {
+          "benchmark_id": "uda-bench"
+        }
+      ],
+      "status": "complete",
+      "status_note": "仓库固定版本全部收录；论文 240 条实验集尚未逐条映射。",
+      "mixed": "yes",
+      "mixed_note": "含 Filter/Join/Agg/Mixed 类 SQL；602 条尚未逐条标注混合类型。"
+    },
+    {
+      "key": "tag-bench",
+      "group": "benchmark",
+      "paper_id": "0a2691144636",
+      "arxiv": "2408.14717",
+      "repositories": [
+        {
+          "url": "https://github.com/TAG-Research/TAG-Bench",
+          "commit": "f97b0b5ca211573837cf3236224ac658b4a959bc",
+          "link_source": "论文原文；与图册固定版本一致"
+        }
+      ],
+      "query_scale": "80 条（BIRD 改写，5 个数据库）",
+      "scale_source": "已有七项分析 §4.1",
+      "catalog": [
+        {
+          "benchmark_id": "tag-bench"
+        }
+      ],
+      "status_note": "",
+      "mixed": "yes",
+      "mixed_note": "全部是关系查询加常识或推理判断。",
+      "expected_queries": 80
+    },
+    {
+      "key": "quest",
+      "group": "benchmark",
+      "paper_id": "36e7d4a337e8",
+      "arxiv": "2507.06515",
+      "repositories": [
+        {
+          "url": "https://anonymous.4open.science/r/QUEST",
+          "commit": null,
+          "link_source": "论文原文（匿名仓库，无 git commit）"
+        }
+      ],
+      "query_scale": "3 个真实数据集；主表 50 条，另有双表 join 60 条、多表 join 30 条",
+      "scale_source": "arXiv 摘要；已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "quest"
+        }
+      ],
+      "status": "partial",
+      "status_note": "83 条来自源 artifact 版本。双表 join 60 条、多表 join 30 条的查询未在可访问仓库中发布：匿名仓库 anonymous.4open.science/r/QUEST 无法通过 API 读取，GitHub 也未检索到公开仓库（2026-11-03）。",
+      "mixed": "yes",
+      "mixed_note": "抽取属性上的过滤与 join。"
+    },
+    {
+      "key": "swan",
+      "group": "benchmark",
+      "title": "Hybrid Querying Over Relational Databases and Large Language Models",
+      "url": "https://arxiv.org/abs/2408.00884",
+      "venue": "CIDR",
+      "year": 2025,
+      "kind": "benchmark",
+      "arxiv": "2408.00884",
+      "repositories": [
+        {
+          "url": "https://github.com/ZhaoFuheng/SWAN",
+          "commit": "0ba4c936ae3a087a66037656894633081f880aa5",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "SWAN：120 个超出数据库的问题，4 个真实数据库（来自 BIRD）；仓库 SWAN 2.0 为每题给出 AISQL 与 oracle SQL",
+      "scale_source": "arXiv 摘要；仓库 README",
+      "catalog": [
+        {
+          "benchmark_id": "swan"
+        }
+      ],
+      "status_note": "按 commit 0ba4c936 收录 SWAN 2.0 问题、AISQL 与 oracle SQL；逻辑 DAG 由 AISQL 自动转换（scripts/sql_plans.py）。",
+      "mixed": "yes",
+      "mixed_note": "AISQL 中 ai_filter/ai_classify/ai_complete/ai_agg 与 join、聚合、排序组合；118 条实质混合、2 条仅语义过滤（按 AISQL 文本规则判定）。",
+      "expected_queries": 120
+    },
+    {
+      "key": "coresemdb",
+      "group": "benchmark",
+      "title": "CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases",
+      "url": "https://openreview.net/forum?id=ZtR4q390OK",
+      "venue": "COLM",
+      "year": 2026,
+      "kind": "benchmark",
+      "arxiv": null,
+      "repositories": [
+        {
+          "url": "https://openreview.net/forum?id=ZtR4q390OK",
+          "commit": null,
+          "link_source": "OpenReview 附有 supplementary zip；未找到公开代码仓库"
+        }
+      ],
+      "query_scale": "330 条，27 个真实文本丰富数据库",
+      "scale_source": "OpenReview 摘要",
+      "catalog": [],
+      "status_note": "",
+      "mixed": "yes",
+      "mixed_note": "NL2SemProg：合成交织关系算子与语义算子的程序。",
+      "expected_queries": 330
+    },
+    {
+      "key": "semceb",
+      "group": "benchmark",
+      "title": "SemCEB: A Cardinality Estimation Benchmark for Semantic Operators",
+      "url": "https://arxiv.org/abs/2606.23081",
+      "venue": "arXiv",
+      "year": 2026,
+      "kind": "benchmark",
+      "arxiv": "2606.23081",
+      "repositories": [
+        {
+          "url": "https://github.com/utndatasystems/SemCEB",
+          "commit": "fec6bde7d1b23fc751f8701872fafda777a63942",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "102 条手工整理查询",
+      "scale_source": "arXiv 摘要",
+      "catalog": [
+        {
+          "benchmark_id": "semceb"
+        }
+      ],
+      "status_note": "按 commit fec6bde7 收录；逻辑 DAG 为单个语义 filter / join（自动转换）；查询 embedding 只保留在源快照中。",
+      "mixed": "no",
+      "mixed_note": "单独评估语义 filter / join 的基数估计，不是端到端混合计划。",
+      "expected_queries": 102
+    },
+    {
+      "key": "plop",
+      "group": "benchmark",
+      "arxiv": "2604.09944",
+      "repositories": [
+        {
+          "url": "https://github.com/DMoRanSky/Morrila",
+          "commit": "56780d9623c4bcc3e95c722b3d7328bdedb161a5",
+          "link_source": "SWAN 2.0 README 指向的作者 DuckDB fork；仓库 README 与论文同名同结果"
+        }
+      ],
+      "query_scale": "44 条语义 SQL：Morrila agent_bench 30 条 + SemBench E-Commerce 14 条",
+      "scale_source": "arXiv 摘要；仓库 README",
+      "catalog": [
+        {
+          "benchmark_id": "plop"
+        },
+        {
+          "benchmark_id": "sembench",
+          "scenario_id": "ecomm"
+        }
+      ],
+      "status_note": "30 条主查询按 commit 56780d96 收录，逻辑 DAG 由 SQL 自动转换；14 条 E-Commerce 查询即已有的 SemBench ecomm 记录。",
+      "mixed": "yes",
+      "mixed_note": "专门针对关系与语义算子的放置。",
+      "expected_queries": 44,
+      "title": "PLOP: Cost-Based Placement of Semantic Operators in Hybrid Query Plans",
+      "url": "https://arxiv.org/abs/2604.09944",
+      "venue": "arXiv",
+      "year": 2026,
+      "kind": "research"
+    },
+    {
+      "key": "sema",
+      "group": "benchmark",
+      "paper_id": "lit_bb47801458a1",
+      "arxiv": "2603.11622",
+      "repositories": [
+        {
+          "url": "https://github.com/BITQiKangK/SemaSystem",
+          "commit": null,
+          "link_source": "论文原文；2026-11-03 无法访问"
+        }
+      ],
+      "query_scale": "20 条语义查询，9 个 BIRD 数据集，覆盖分类、摘要、关键词抽取",
+      "scale_source": "arXiv 正文 §1、§6",
+      "catalog": [],
+      "status_note": "",
+      "mixed": "partial",
+      "mixed_note": "BIRD 表上的语义 SQL（语义 filter/projection/join/order by/aggregate）；正文未逐条给出关系算子构成，查询列表未公开。",
+      "expected_queries": 20
+    },
+    {
+      "key": "sema-sql",
+      "group": "benchmark",
+      "title": "SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models",
+      "url": "https://arxiv.org/abs/2604.23477",
+      "venue": "arXiv",
+      "year": 2026,
+      "kind": "research",
+      "arxiv": "2604.23477",
+      "repositories": [
+        {
+          "url": "https://github.com/semasql/SEMA-SQL",
+          "commit": "b4866921ad0843c73a6966aca0cdd89082da1cf1",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "仓库 data/queries：TAG 80 条 + TAG+ 40 条",
+      "scale_source": "仓库 commit b4866921",
+      "catalog": [
+        {
+          "benchmark_id": "sema-sql"
+        },
+        {
+          "benchmark_id": "tag-bench"
+        }
+      ],
+      "status_note": "TAG 80 条即 TAG-Bench；TAG+ 40 条收录为 SEMA-SQL TAG+，只有问题与答案，逻辑 DAG 为人工依据问题与 BIRD schema 重建（query/manual-plans/tag-plus.json）。",
+      "mixed": "yes",
+      "mixed_note": "基于 BIRD 的混合查询，需要关系操作和 LLM 语义推理。",
+      "expected_queries": 120
+    },
+    {
+      "key": "lotus",
+      "group": "system",
+      "paper_id": "9484f4cd9df1",
+      "arxiv": "2407.11418",
+      "repositories": [
+        {
+          "url": "https://github.com/lotus-data/lotus",
+          "commit": "136ae4f4a344a2f75d89f811e516dfcb0de30e46",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "FEVER、BioDEX 等多个 workload",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "lotus"
+        }
+      ],
+      "status": "partial",
+      "status_note": "只有 2 条源码示例。仓库 benchmarks/（commit 136ae4f4）有 5 个语义流水线 workload：biodex 与 reranking（BEIR COVID / SciFact）对应论文实验，failure_mode_discovery、llm_as_judge、rag_pubmedqa 是后来新增。它们都是 sem_filter / sem_join / sem_topk / sem_agg 组成的流水线，没有关系算子，因此不作为混合查询导入。论文中的 FEVER workload 不在仓库中。",
+      "mixed": "partial",
+      "mixed_note": "以语义流程为主，部分含 join/top-k。"
+    },
+    {
+      "key": "palimpzest",
+      "group": "system",
+      "paper_id": "79478c8342ee",
+      "arxiv": "2405.14696",
+      "repositories": [
+        {
+          "url": "https://github.com/mitdbg/palimpzest",
+          "commit": "807ed301c4d2457ef304647e6095184556bd1e83",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "法律发现、房产、医疗 schema 匹配等",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "palimpzest"
+        }
+      ],
+      "status": "partial",
+      "status_note": "只有 1 条源码示例。",
+      "mixed": "partial",
+      "mixed_note": "以语义 convert/filter 流程为主。"
+    },
+    {
+      "key": "abacus",
+      "group": "system",
+      "paper_id": "adc8261dfc10",
+      "arxiv": "2505.14661",
+      "repositories": [
+        {
+          "url": "https://github.com/mitdbg/palimpzest/tree/807ed301c4d2457ef304647e6095184556bd1e83/abacus-research",
+          "commit": "807ed301c4d2457ef304647e6095184556bd1e83",
+          "link_source": "官方 artifact"
+        }
+      ],
+      "query_scale": "BioDEX / CUAD / MMQA 三个 workload",
+      "scale_source": "已有七项分析；docs/abacus-import.md",
+      "catalog": [
+        {
+          "benchmark_id": "abacus"
+        }
+      ],
+      "status": "complete",
+      "status_note": "3 个流程 + 451 条 MMQA 问题。",
+      "mixed": "partial",
+      "mixed_note": "以语义流程为主。"
+    },
+    {
+      "key": "docetl",
+      "group": "system",
+      "paper_id": "7be638a1ed48",
+      "arxiv": "2410.12189",
+      "repositories": [
+        {
+          "url": "https://github.com/ucbepic/docetl",
+          "commit": "53d292e0b0a4a3e2bf290760998a4fa3a4c2fdc8",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "警务记录、BlackVault、Steam、CUAD 等",
+      "scale_source": "已有七项分析",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "partial",
+      "mixed_note": "以语义 map/reduce/resolve 为主。"
+    },
+    {
+      "key": "moar",
+      "group": "system",
+      "paper_id": "5e5e411ed136",
+      "arxiv": "2512.02289",
+      "repositories": [
+        {
+          "url": "https://github.com/ucbepic/docetl",
+          "commit": "53d292e0b0a4a3e2bf290760998a4fa3a4c2fdc8",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "DocETL 类文档任务",
+      "scale_source": "已有阅读记录",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "partial",
+      "mixed_note": "以语义流程为主。"
+    },
+    {
+      "key": "thalamusdb",
+      "group": "system",
+      "paper_id": "145167bbe3ca",
+      "repositories": [
+        {
+          "url": "https://github.com/itrummer/thalamusdb",
+          "commit": "9e0e2f08959691133627cb922d534941d7098b32",
+          "link_source": "按系统名检索到的作者仓库；论文中未逐条核对"
+        },
+        {
+          "url": "https://github.com/saehanjo/thalamusdb",
+          "commit": "c17a1ea7c8a3bca1fba13537002e99ba00a3e130",
+          "link_source": "第一作者仓库；benchmark.py 的生成函数展开出 55 条查询"
+        }
+      ],
+      "query_scale": "§7.1 列 24/25/6 条，共 55 条（§7.2 分母为 49）",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "thalamusdb"
+        }
+      ],
+      "status_note": "按 saehanjo/thalamusdb@c17a1ea7 的 benchmark.py 生成函数展开 55 条（Craigslist 25、YouTube 24、Netflix 6），与 §7.1 一致；均重建为逻辑计划。",
+      "mixed": "yes",
+      "mixed_note": "带自然语言谓词的 SQL 聚合与 LIMIT 查询。",
+      "expected_queries": 55
+    },
+    {
+      "key": "caesura",
+      "group": "system",
+      "paper_id": "d6d61261ea85",
+      "arxiv": "2308.03424",
+      "repositories": [
+        {
+          "url": "https://github.com/DataManagementLab/caesura",
+          "commit": "00ebb188bf9e83c36ad06e9504594a74f169a23c",
+          "link_source": "按系统名检索到的作者机构仓库；论文未给链接"
+        }
+      ],
+      "query_scale": "Artwork 与 Rotowire 各 24 条，共 48 条",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "caesura"
+        }
+      ],
+      "status_note": "仓库公开 24 个查询模板与采样代码（numpy 种子 42，每模板 2 条）；按同一逻辑重算得到 48 条实例并收录，论文未列出实例故未与论文逐条核对。逻辑 DAG 由人工模板计划（query/manual-plans/caesura.json）按每条实例的取值确定。",
+      "mixed": "yes",
+      "mixed_note": "半数跨模态，SQL 与视觉/文本问答组合。",
+      "expected_queries": 48
+    },
+    {
+      "key": "llm-sql-mlsys",
+      "group": "system",
+      "paper_id": "ad23774b1aed",
+      "arxiv": "2403.05821",
+      "repositories": [],
+      "query_scale": "16 条，7 个数据集，5 类",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "mlsys-llmsql"
+        }
+      ],
+      "status_note": "未找到官方代码仓库；按 arXiv v2 附录 A–C 原文转录 16 条（提示词全部，SQL 仅论文给出的 5 个示例），未重建逻辑计划。",
+      "mixed": "yes",
+      "mixed_note": "SQL 中调用 LLM 的 filter、projection、aggregation。",
+      "expected_queries": 16
+    },
+    {
+      "key": "kathdb-fao",
+      "group": "system",
+      "paper_id": "ccff0505fcab",
+      "arxiv": "2609.28761",
+      "repositories": [
+        {
+          "url": "https://github.com/xertxiao/KathDB",
+          "commit": "4b1d46e05f7ae5fd0c9a9e2a938daede0f67a5ee",
+          "link_source": "按系统名检索到的作者仓库；论文中未逐条核对"
+        }
+      ],
+      "query_scale": "复用 SemBench，另加 10 条复杂查询和 2×10 条复用实验",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "sembench"
+        }
+      ],
+      "status": "reused",
+      "status_note": "SemBench 部分已覆盖；新增 10 条及复用实验未收录。 arXiv 当前版本标题已改为“KathDB-FAO: Optimizing Multimodal Queries through Operator Grouping and Code Reuse”，阅读记录基于 v1。",
+      "mixed": "yes",
+      "mixed_note": "沿用 SemBench 混合查询。"
+    },
+    {
+      "key": "cadenza",
+      "group": "system",
+      "paper_id": "285d2a2d5af0",
+      "arxiv": "2606.29151",
+      "repositories": [
+        {
+          "url": "https://github.com/SemBench/SemBench",
+          "commit": "c4b2bcff3a5907148f504cfb6faea4c6d3f90e8f",
+          "link_source": "论文引用的数据仓库"
+        }
+      ],
+      "query_scale": "SemBench 55 条 + BioDEX 1 条",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "sembench"
+        }
+      ],
+      "status": "reused",
+      "status_note": "SemBench 部分已覆盖；BioDEX 1 条未对齐。",
+      "mixed": "yes",
+      "mixed_note": "沿用 SemBench 混合查询。"
+    },
+    {
+      "key": "nl2pipe",
+      "group": "system",
+      "paper_id": "afb038811f17",
+      "arxiv": "2606.04641",
+      "repositories": [
+        {
+          "url": "https://github.com/dongw-netize/NL2Pipe-Compiling-Natural-Language-Questions-into-Semantic-Operator-Pipelines",
+          "commit": "9abf5cbfe98654453bb1073cc80a9750f78c02e5",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "从 MMQA、HybridQA、HotpotQA、ManyModalQA、TAT-QA 各抽 300 题，共 1500 题",
+      "scale_source": "已有七项分析 §4.0.1",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "partial",
+      "mixed_note": "来源是 QA 数据集，不是原生混合 SQL。"
+    },
+    {
+      "key": "aero",
+      "group": "system",
+      "paper_id": "e6ff1c32193e",
+      "repositories": [],
+      "query_scale": "6 条 SQL + ML UDF",
+      "scale_source": "已有七项分析",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "SQL 加 ML 谓词（非 LLM）。"
+    },
+    {
+      "key": "eleet",
+      "group": "system",
+      "title": "ELEET: Efficient Learned Query Execution over Text and Tables",
+      "url": "https://arxiv.org/abs/2410.22522",
+      "venue": "PVLDB",
+      "year": 2024,
+      "kind": "research",
+      "arxiv": "2410.22522",
+      "repositories": [
+        {
+          "url": "https://github.com/DataManagementLab/eleet",
+          "commit": "4c2c70ae70fb91bd0899c2d79cb4cb141b0f503a",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "仓库 eleet/benchmark.py：5 个数据集返回的查询计划（corona 展开后共 86 条），含选择率参数扫描",
+      "scale_source": "仓库 commit 4c2c70ae",
+      "catalog": [
+        {
+          "benchmark_id": "eleet"
+        }
+      ],
+      "status": "complete",
+      "status_note": "收录 benchmark.py 各数据集函数返回的全部 Query；corona 的生成器按 PROJECTIONS 展开为 14 条，共 86 条。逻辑 DAG 由算子对象自动转换（scripts/code_plans.py）。没有自然语言问题。",
+      "mixed": "yes",
+      "mixed_note": "按 DAG 判定：64 条同时含关系算子与 MM* 语义抽取，22 条只有文本抽取。"
+    },
+    {
+      "key": "suql",
+      "group": "system",
+      "title": "SUQL: Conversational Search over Structured and Unstructured Data with Large Language Models",
+      "url": "https://arxiv.org/abs/2311.09818",
+      "venue": "arXiv",
+      "year": 2023,
+      "kind": "research",
+      "arxiv": "2311.09818",
+      "repositories": [
+        {
+          "url": "https://github.com/stanford-oval/suql",
+          "commit": "03829c0e34155bc5574327b1e663fa5e3ca45a52",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "HybridQA 与餐厅对话数据",
+      "scale_source": "arXiv 摘要",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "SQL 扩展 summary / answer 自由文本原语。"
+    },
+    {
+      "key": "blendsql",
+      "group": "system",
+      "arxiv": "2402.17882",
+      "repositories": [
+        {
+          "url": "https://github.com/parkervg/blendsql",
+          "commit": "8a75abeca64b662aa8d1d7b5fdb52d3e31b052db",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "论文：混合问答数据集；仓库 benchmark/：4 个数据库 18 条 BlendSQL 查询",
+      "scale_source": "arXiv 摘要；仓库 commit 8a75abec",
+      "catalog": [
+        {
+          "benchmark_id": "blendsql"
+        }
+      ],
+      "status": "partial",
+      "status_note": "收录仓库 benchmark/ 的 18 条 BlendSQL 查询；论文中 HybridQA、OTT-QA 等问答数据集的题目未收录。",
+      "mixed": "yes",
+      "mixed_note": "按 DAG 判定：11 条实质混合；financials 7 条只用确定性测试成分（test_starts_with、get_length），没有语义算子。",
+      "title": "BlendSQL: A Scalable Dialect for Unifying Hybrid Question Answering in Relational Algebra",
+      "url": "https://arxiv.org/abs/2402.17882",
+      "venue": "arXiv",
+      "year": 2024,
+      "kind": "research"
+    },
+    {
+      "key": "flockmtl",
+      "group": "system",
+      "paper_id": "lit_a2ebdb54967d",
+      "arxiv": "2504.01157",
+      "repositories": [
+        {
+          "url": "https://github.com/dsg-polymtl/flockmtl",
+          "commit": "832f351fd7776b69cb4498ff0f4870a47e89810b",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "示例",
+      "scale_source": "arXiv 摘要",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "DBMS 中的模型标量与聚合函数。"
+    },
+    {
+      "key": "uqe",
+      "group": "system",
+      "paper_id": "lit_2d941e2e3d74",
+      "arxiv": "2407.09522",
+      "repositories": [],
+      "query_scale": "摘要未给出",
+      "scale_source": "arXiv 摘要",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录；未找到官方代码仓库。",
+      "mixed": "yes",
+      "mixed_note": "UQL 是带自然语言条件和算子的 SQL 方言。"
+    },
+    {
+      "key": "zendb",
+      "group": "system",
+      "paper_id": "lit_b63897eb21f8",
+      "arxiv": "2405.04674",
+      "repositories": [],
+      "query_scale": "摘要未给出",
+      "scale_source": "arXiv 摘要",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录；未找到官方代码仓库。",
+      "mixed": "yes",
+      "mixed_note": "在文档集合上回答 ad-hoc SQL 查询。"
+    },
+    {
+      "key": "luna",
+      "group": "system",
+      "paper_id": "lit_570501fa2ba6",
+      "arxiv": "2409.00847",
+      "repositories": [
+        {
+          "url": "https://github.com/aryn-ai/sycamore",
+          "commit": "377d432bc612406c88e9b6d4fbbd39986676b4fc",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "NTSB 约 17 万份 PDF 的端到端用例，无公开查询集",
+      "scale_source": "arXiv 正文",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "示例“2023 年单引擎飞机事故中受损最多的前三个部件”需要过滤、分组和 top-k，并结合对自由文本的语义抽取。"
+    },
+    {
+      "key": "galois",
+      "group": "system",
+      "paper_id": "lit_1aab8b98cf3a",
+      "arxiv": "2304.00472",
+      "repositories": [],
+      "query_scale": "摘要未给出",
+      "scale_source": "arXiv 摘要（EDBT 2024 vision）",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "部分物理算子通过 prompt 从 LLM 取数。"
+    },
+    {
+      "key": "nirvana",
+      "group": "system",
+      "paper_id": "lit_50d184b15111",
+      "arxiv": "2511.19830",
+      "repositories": [
+        {
+          "url": "https://github.com/JunHao-Zhu/nirvana",
+          "commit": "7ef95e614a97836c37899a23db7f94e4fa836a35",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "每个数据集 12 条（small 单算子 / medium 2–3 个算子 / large ≥4 个算子）；查询列表在补充材料附录 F",
+      "scale_source": "arXiv 正文 §5.1.2",
+      "catalog": [],
+      "status": "none",
+      "status_note": "查询列表只在补充材料中，arXiv 正文未给出。",
+      "mixed": "partial",
+      "mixed_note": "large 组多为多算子并聚合为单值结果，small 组只有单个算子。"
+    },
+    {
+      "key": "binder",
+      "group": "system",
+      "paper_id": "lit_7edd5039f50c",
+      "arxiv": "2210.02875",
+      "repositories": [
+        {
+          "url": "https://github.com/HKUNLP/Binder",
+          "commit": "287ab979506a1294c1c7cd6a1f34776f9dc832cf",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "表格问答数据集",
+      "scale_source": "arXiv 元数据",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "SQL 中绑定 LM 调用（表格问答领域）。"
+    },
+    {
+      "key": "weaver",
+      "group": "system",
+      "title": "Weaver: Interweaving SQL and LLM for Table Reasoning",
+      "url": "https://arxiv.org/abs/2505.18961",
+      "venue": "EMNLP",
+      "year": 2025,
+      "kind": "research",
+      "arxiv": "2505.18961",
+      "repositories": [
+        {
+          "url": "https://coral-lab-asu.github.io/weaver",
+          "commit": null,
+          "link_source": "论文给出的项目页"
+        }
+      ],
+      "query_scale": "4 个表格问答数据集",
+      "scale_source": "arXiv 摘要",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "逐步计划组合 SQL 与 LLM 语义处理。"
+    },
+    {
+      "key": "larch",
+      "group": "system",
+      "paper_id": "lit_e6386003288b",
+      "arxiv": "2606.07923",
+      "repositories": [],
+      "query_scale": "摘要未给出",
+      "scale_source": "已有摘要阅读",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "partial",
+      "mixed_note": "多个语义谓词的排序。"
+    },
+    {
+      "key": "llmjoins",
+      "group": "system",
+      "paper_id": "lit_6fc3b12a3188",
+      "arxiv": "2510.08489",
+      "repositories": [
+        {
+          "url": "https://github.com/itrummer/llmjoins",
+          "commit": "8511485ed88e43c2b99de8fbd2976d4316c16373",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "语义 join 基准",
+      "scale_source": "已有摘要阅读",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "no",
+      "mixed_note": "单算子（语义 join）。"
+    },
+    {
+      "key": "fdj",
+      "group": "system",
+      "paper_id": "lit_9a464996c0f0",
+      "arxiv": "2512.05399",
+      "repositories": [],
+      "query_scale": "语义 join 基准",
+      "scale_source": "已有摘要阅读",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "no",
+      "mixed_note": "单算子（语义 join）。"
+    },
+    {
+      "key": "sembaker",
+      "group": "system",
+      "paper_id": "lit_895989c07787",
+      "arxiv": "2608.06677",
+      "repositories": [
+        {
+          "url": "https://github.com/iDB-Research-Group/SemBaker",
+          "commit": "f15bcaafdcb94c2f52def18ef7889810313e8194",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "QA 200 条、SemBench movie 10 条、DocETL 任务 1,494 条记录，另有 filter/map/join 单算子各 100 条",
+      "scale_source": "arXiv 正文表 2",
+      "catalog": [
+        {
+          "benchmark_id": "sembench",
+          "scenario_id": "movie"
+        }
+      ],
+      "status": "reused",
+      "status_note": "SemBench movie 10 条已覆盖；QA 与 DocETL 部分未收录。",
+      "mixed": "partial",
+      "mixed_note": "SemBench movie 部分是混合查询，QA 和单算子实验不是。"
+    },
+    {
+      "key": "compilation-vision",
+      "group": "system",
+      "title": "From Interpretation to Compilation: Compilation-Based Execution of Semantic Operators [Vision]",
+      "url": "https://arxiv.org/abs/2607.13407",
+      "venue": "arXiv",
+      "year": 2026,
+      "kind": "research",
+      "arxiv": "2607.13407",
+      "repositories": [],
+      "query_scale": "filter / map / join 单算子实验（§5.1–5.2），以及 SemBench movie Q1–Q10（§5.3）",
+      "scale_source": "arXiv 正文 §5",
+      "catalog": [
+        {
+          "benchmark_id": "sembench",
+          "scenario_id": "movie"
+        }
+      ],
+      "status": "reused",
+      "status_note": "SemBench movie 10 条已覆盖；单算子实验没有查询集。",
+      "mixed": "partial",
+      "mixed_note": "§5.3 使用 SemBench movie 的混合查询；§5.1–5.2 是单算子实验。"
+    },
+    {
+      "key": "kalypso",
+      "group": "system",
+      "title": "Kalypso: Relational LLM Serving",
+      "url": "https://arxiv.org/abs/2607.23815",
+      "venue": "arXiv",
+      "year": 2026,
+      "kind": "research",
+      "arxiv": "2607.23815",
+      "repositories": [],
+      "query_scale": "4 个 workload：FEVER、MEDEC、BioDEX、ContractNLI",
+      "scale_source": "arXiv 正文 §7.2 表 2",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "no",
+      "mixed_note": "语义算子流水线（sem_map、index_search、sem_filter 等），沿用 LOTUS 实现，没有关系算子。"
+    },
+    {
+      "key": "plans-change-answers",
+      "group": "system",
+      "paper_id": "lit_315438467f53",
+      "arxiv": "2610.08089",
+      "repositories": [],
+      "query_scale": "一个运行示例查询的模拟实验（评论 × 商品）",
+      "scale_source": "arXiv 正文实验节",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "yes",
+      "mixed_note": "理论针对含语义选择的 SPJ 查询；实验是评论与商品连接加语义选择的模拟。"
+    },
+    {
+      "key": "sic",
+      "group": "system",
+      "paper_id": "lit_7a6f73fa0359",
+      "repositories": [],
+      "query_scale": "Vision 论文，无查询集",
+      "scale_source": "PVLDB 18 正文",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "no",
+      "mixed_note": "提出语义完整性约束框架，没有评测查询集。"
+    },
+    {
+      "key": "evaporate",
+      "group": "system",
+      "paper_id": "1b8a3e688b0a",
+      "arxiv": "2304.09433",
+      "repositories": [],
+      "query_scale": "结构化视图抽取任务",
+      "scale_source": "已有七项分析",
+      "catalog": [],
+      "status": "none",
+      "status_note": "未收录。",
+      "mixed": "no",
+      "mixed_note": "评估的是抽取，不是混合查询。"
+    },
+    {
+      "key": "dataagentbench",
+      "group": "agent",
+      "paper_id": "lit_313bfdb48598",
+      "arxiv": "2603.20576",
+      "repositories": [
+        {
+          "url": "https://github.com/ucbepic/DataAgentBench",
+          "commit": "ac11ab6854dec9e1add75720850b0c891e2ff6b5",
+          "link_source": "论文原文"
+        }
+      ],
+      "query_scale": "104 条，17 个数据集，4 个 DBMS",
+      "scale_source": "arXiv 摘要",
+      "catalog": [
+        {
+          "benchmark_id": "7-30",
+          "scenario_id": "7-30-DAB"
+        },
+        {
+          "benchmark_id": "dataagentbench"
+        }
+      ],
+      "status_note": "54 条在 7-30 / DAB（粗粒度分析记录）；其余 5 个数据集 50 条按 commit ac11ab68 收录，逻辑 DAG 为人工依据问题与 db_description 重建（query/manual-plans/dataagentbench.json）。",
+      "mixed": "partial",
+      "mixed_note": "按 7-30 粗粒度计划判定，54 条中有 16 条同时含语义与关系步骤；其余为纯结构化分析。 新收录的 civic_unstructured 需要同时查询非结构化文档（BSON）与关系表。",
+      "expected_queries": 104
+    },
+    {
+      "key": "kramabench",
+      "group": "agent",
+      "paper_id": "4033831ae351",
+      "arxiv": "2506.06541",
+      "repositories": [],
+      "query_scale": "104 个任务",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "7-30",
+          "scenario_id": "7-30-KramaBench"
+        }
+      ],
+      "status_note": "7-30 / KramaBench 集合。",
+      "mixed": "no",
+      "mixed_note": "按 7-30 粗粒度计划判定，104 条均未同时出现语义与关系步骤。",
+      "expected_queries": 104
+    },
+    {
+      "key": "carnot",
+      "group": "agent",
+      "paper_id": "069e958460a3",
+      "repositories": [],
+      "query_scale": "1000 条评论演示；KramaBench legal workload",
+      "scale_source": "已有七项分析",
+      "catalog": [
+        {
+          "benchmark_id": "7-30",
+          "scenario_id": "7-30-KramaBench"
+        }
+      ],
+      "status": "reused",
+      "status_note": "仅 KramaBench 部分经由 7-30 覆盖。",
+      "mixed": "no",
+      "mixed_note": "已覆盖的 KramaBench 部分按 7-30 粗粒度计划判定，未出现语义与关系的组合；1000 条评论演示未公开查询。"
+    }
+  ]
+}

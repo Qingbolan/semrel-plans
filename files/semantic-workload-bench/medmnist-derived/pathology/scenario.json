@@ -1,0 +1,7 @@
+{
+  "id": "swb-medmnist-derived/pathology",
+  "name": "medmnist-derived/pathology",
+  "query_ids": [
+    "swb/public-task/pathology/workload"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v70/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Extract all five schema event types, exact trigger spans, and their argument spans/entity types/semantic roles from full news text under the author schema and rules. Return records per document; no gold events given.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v70/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_DEVELOPMENT",
+    "task": "Extract all five schema event types, exact trigger spans, and their argument spans/entity types/semantic roles from full news text under the author schema and rules. Return records per document; no gold events given.",
+    "optional_task": "Joint realis classification uses same extracted events. Unknown source labels remain INVALID_SOURCE_LABEL, never normalized into another class.",
+    "environment": "Verbatim dissertation sections3.1-3.4 and4.2-4.3, 28 printed pages (5529words); excludes proposed3.5 extension and chapter12 automatic enrichment.",
+    "limitations": [
+      "No model execution or independent confirmation",
+      "No gold coreference scoring in this initial view",
+      "No CAPEC, confidence, role subtype, external_reference supervision",
+      "Source entity and near-duplicate isolation pending; lexical overlap screen not contamination proof",
+      "Licensing/republication rights unresolved"
+    ]
+  },
+  "domain": "shared-environment-audit-20260908"
+}

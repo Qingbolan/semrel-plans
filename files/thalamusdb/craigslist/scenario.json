@@ -1,0 +1,31 @@
+{
+  "id": "thalamusdb/craigslist",
+  "name": "ThalamusDB / craigslist",
+  "query_ids": [
+    "thalamusdb/craigslist/Q01",
+    "thalamusdb/craigslist/Q02",
+    "thalamusdb/craigslist/Q03",
+    "thalamusdb/craigslist/Q04",
+    "thalamusdb/craigslist/Q05",
+    "thalamusdb/craigslist/Q06",
+    "thalamusdb/craigslist/Q07",
+    "thalamusdb/craigslist/Q08",
+    "thalamusdb/craigslist/Q09",
+    "thalamusdb/craigslist/Q10",
+    "thalamusdb/craigslist/Q11",
+    "thalamusdb/craigslist/Q12",
+    "thalamusdb/craigslist/Q13",
+    "thalamusdb/craigslist/Q14",
+    "thalamusdb/craigslist/Q15",
+    "thalamusdb/craigslist/Q16",
+    "thalamusdb/craigslist/Q17",
+    "thalamusdb/craigslist/Q18",
+    "thalamusdb/craigslist/Q19",
+    "thalamusdb/craigslist/Q20",
+    "thalamusdb/craigslist/Q21",
+    "thalamusdb/craigslist/Q22",
+    "thalamusdb/craigslist/Q23",
+    "thalamusdb/craigslist/Q24",
+    "thalamusdb/craigslist/Q25"
+  ]
+}

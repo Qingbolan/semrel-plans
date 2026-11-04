@@ -1,0 +1,74 @@
+{
+  "id": "bench-u/Player/Join/join_queries/9",
+  "group": "uda-player",
+  "query": "SELECT manager.nba_team, team.team_name, team.founded_year, manager.nationality FROM team JOIN manager ON team.ownership = manager.name;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Join/join_queries.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "manager.nba_team, team.team_name, team.founded_year, manager.nationality",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Join",
+        "detail": " team.ownership = manager.name",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；founded_year, ownership, team_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "team 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；name, nationality, nba_team",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "manager 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

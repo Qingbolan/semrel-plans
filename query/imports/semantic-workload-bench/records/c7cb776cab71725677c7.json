@@ -1,0 +1,17 @@
+{
+  "id": "public-task/dataspace-source-audit-v1/task184-inspection/question",
+  "group": "public-tasks",
+  "query": "What are the funds and fund investment scopes with benchmark growth rate greater than 0 on the current day?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/dataspace-source-audit-v1/task184-inspection/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "task_184",
+    "question": "What are the funds and fund investment scopes with benchmark growth rate greater than 0 on the current day?"
+  },
+  "domain": "dataspace-source-audit"
+}

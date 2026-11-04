@@ -1,0 +1,64 @@
+{
+  "id": "sembench/mmqa/Q6B",
+  "group": "sembench-mmqa",
+  "query": "Which airlines have destinations in Germany?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q6b.json",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Distinct",
+        "detail": "集合语义",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Project",
+        "detail": "airline",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SFilter",
+        "detail": "目的地属于 Germany",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "SMap",
+        "detail": "表/文本→(airline,destination)",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "航线表及关联文本",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "sembench/mmqa/Q2B",
+  "group": "sembench-mmqa",
+  "query": "Identify the images containing logos, if available, for each racetrack in which A.P. Warrior was a contender. What is the color of each logo?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q2b.json",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "racetrack, logo_image, color",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "非空logo→颜色；空logo保留NULL",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "SLeftJoin",
+        "detail": "logo对应赛马场；if available",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Distinct",
+        "detail": "集合语义",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Project",
+        "detail": "racetrack",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Filter",
+        "detail": "contender='A.P. Warrior'",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "SMap",
+        "detail": "比赛表→(racetrack, contender)",
+        "kind": "semantic"
+      },
+      {
+        "id": "n7",
+        "op": "Scan",
+        "detail": "赛马表与关联证据",
+        "kind": "relational"
+      },
+      {
+        "id": "n8",
+        "op": "Scan",
+        "detail": "图片与相关文本",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n8",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

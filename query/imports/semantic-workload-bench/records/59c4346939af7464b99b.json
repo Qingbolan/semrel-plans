@@ -1,0 +1,94 @@
+{
+  "id": "sembench/ecomm/Q14",
+  "group": "sembench-ecomm",
+  "query": "For each fashion product that costs less than 130,\nfind the single image that best matches the product's textual description\n(including the product name and full description),\nbut only if that image also depicts white socks.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q14.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "按NL best使用每产品Top1，不是全局LIMIT 1。源SQL AI.SCORE的ORDER BY未写DESC，且gold仅筛原商品属性；二者不能未经核验认定等价。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "product_id,image_id",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "PartitionTopK",
+        "detail": "按product_id；匹配分数DESC；每组1张",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SMap",
+        "detail": "description与image→语义匹配分数",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Join",
+        "detail": "CROSS：商品×白袜候选图；不加未声明的匹配阈值",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Filter",
+        "detail": "price < 130",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "SFilter",
+        "detail": "image depicts white socks",
+        "kind": "semantic"
+      },
+      {
+        "id": "n7",
+        "op": "Scan",
+        "detail": "Images",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

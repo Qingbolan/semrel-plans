@@ -1,0 +1,30 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v208/view/public/task",
+  "group": "public-tasks",
+  "query": "Find and type all verbal multiword expressions as sets of integer word IDs",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v208/view/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "DEVELOPMENT_VIEW_BUILT_NOT_VALIDATED",
+    "unit": "source_sentence",
+    "task": "Find and type all verbal multiword expressions as sets of integer word IDs",
+    "categories": [
+      "VID",
+      "LVC.full",
+      "LVC.cause",
+      "IRV",
+      "MVC"
+    ],
+    "environment": "1.1 full normative prose with explicitly non-English/French examples removed; still includes language-specific prose; relevant length not proven",
+    "input": "Text and source word segmentation only; no POS/lemma/dependency or MWE annotations",
+    "failure": "ABSTAIN distinct from empty expression list",
+    "evaluation": "Exact category plus word-set matching required; official global score alone is untyped",
+    "split": "Original split preserved only in private provenance; no independent confirmation split created"
+  },
+  "domain": "shared-environment-audit-20260908"
+}

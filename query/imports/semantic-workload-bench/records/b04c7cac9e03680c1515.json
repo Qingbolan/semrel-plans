@@ -1,0 +1,184 @@
+{
+  "id": "sembench/ecomm/Q11",
+  "group": "sembench-ecomm",
+  "query": "Based on product images and descriptions, find matching all-black outfits\nconsisting of shoes, bottomwear (excluding swimwear), topwear (excluding swimwear),\nand an accessory (watch, jewellery, or bag priced at $5 or less),\nwhere all four items are from the same brand.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q11.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "按NL all-black要求四类都黑；gold accessories分支缺Black过滤。价格仅限制配饰，不扩展到全部四件。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "四件商品ID",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Join",
+        "detail": "brand相同",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Join",
+        "detail": "brand相同",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Join",
+        "detail": "brand相同",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "SMap",
+        "detail": "image+description→brand",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "SFilter",
+        "detail": "shoes；全黑",
+        "kind": "semantic"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "SMap",
+        "detail": "image+description→brand",
+        "kind": "semantic"
+      },
+      {
+        "id": "n8",
+        "op": "SFilter",
+        "detail": "bottomwear，非swimwear；全黑",
+        "kind": "semantic"
+      },
+      {
+        "id": "n9",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n10",
+        "op": "SMap",
+        "detail": "image+description→brand",
+        "kind": "semantic"
+      },
+      {
+        "id": "n11",
+        "op": "SFilter",
+        "detail": "topwear，非swimwear；全黑",
+        "kind": "semantic"
+      },
+      {
+        "id": "n12",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n13",
+        "op": "SMap",
+        "detail": "image+description→brand",
+        "kind": "semantic"
+      },
+      {
+        "id": "n14",
+        "op": "SFilter",
+        "detail": "watch/jewellery/bag；全黑",
+        "kind": "semantic"
+      },
+      {
+        "id": "n15",
+        "op": "Filter",
+        "detail": "price ≤ $5；单位待核",
+        "kind": "relational"
+      },
+      {
+        "id": "n16",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n9",
+        "n8"
+      ],
+      [
+        "n8",
+        "n7"
+      ],
+      [
+        "n7",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n12",
+        "n11"
+      ],
+      [
+        "n11",
+        "n10"
+      ],
+      [
+        "n10",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n16",
+        "n15"
+      ],
+      [
+        "n15",
+        "n14"
+      ],
+      [
+        "n14",
+        "n13"
+      ],
+      [
+        "n13",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

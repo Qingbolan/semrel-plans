@@ -1,0 +1,24 @@
+{
+  "task_id": "ukp-persuasion-inspection-v1",
+  "task": "According to protocol.txt, determine whether each document is topic-related persuasive; return record_id,label,status. Classification concerns intent under this annotation protocol, not factual truth or convincingness.",
+  "dag": [
+    "scan",
+    "sem_filter",
+    "project(record_id)",
+    "count"
+  ],
+  "required_inputs": [
+    "protocol.txt",
+    "documents/*.json"
+  ],
+  "output": {
+    "label": "Boolean or null",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ]
+  },
+  "status": "BUILT_INSPECTION_NOT_VALIDATED",
+  "scope": "source-derived development; no independent confirmation",
+  "independence": "group by original webpage and author; overlap with Toulmin task must be grouped; not yet split"
+}

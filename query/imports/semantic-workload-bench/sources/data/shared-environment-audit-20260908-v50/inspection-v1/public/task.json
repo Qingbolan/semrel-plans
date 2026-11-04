@@ -1,0 +1,6 @@
+{
+  "inspection_only": true,
+  "task": "Predict the CAIL released charge/article set, then group case IDs by charge.",
+  "environment_status": "Incomplete candidate E; additional interpretations and temporal applicability not verified.",
+  "do_not_use_for_confirmation": true
+}

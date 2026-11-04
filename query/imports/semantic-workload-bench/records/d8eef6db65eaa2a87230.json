@@ -1,0 +1,74 @@
+{
+  "id": "stard-Q1-v1",
+  "group": "derived-five-lakes",
+  "query": "For every question in records.json, return a ranked, duplicate-free list of relevant article IDs from lake/catalog.jsonl. Use the frozen article corpus. This is relevant-article retrieval, not a legal ruling or a complete legal answer. Do not infer that unannotated or unreturned articles are legally inapplicable.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/stard-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "registered_not_executed",
+  "note": "DEVELOPMENT_RETRIEVAL_ONLY；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。人工相关法条集合；排名指标可对无序qrels评估，非原gold顺序",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Transform",
+        "detail": "validate_article_ids",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "sem_map_relevance_rank",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Lookup",
+        "detail": "retrieve_full_catalog；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SMap",
+        "detail": "sem_map_decompose_issues",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "stard public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "stard frozen public lake / catalog / full references",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n5",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

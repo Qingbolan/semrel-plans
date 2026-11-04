@@ -1,0 +1,7 @@
+{
+  "id": "abacus/biodex",
+  "name": "Abacus BIODEX",
+  "query_ids": [
+    "abacus/biodex/workflow"
+  ]
+}

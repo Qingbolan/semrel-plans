@@ -1,0 +1,21 @@
+{
+  "dataset_id": "swan/formula_1",
+  "source_ids": [
+    "hyb_1373ef25652bbe52"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "formula_1",
+      "type": "database",
+      "description": "BIRD database with masked columns"
+    }
+  ],
+  "record_count": null,
+  "version": "0ba4c936ae3a087a66037656894633081f880aa5",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "BIRD database named by SWAN; masked columns in data/masked_columns.json snapshot; not downloaded"
+}

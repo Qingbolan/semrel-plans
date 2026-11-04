@@ -1,0 +1,7 @@
+{
+  "id": "swb-biodex-derived/biodex",
+  "name": "biodex-derived/biodex",
+  "query_ids": [
+    "swb/public-task/biodex/INSTRUCTION"
+  ]
+}

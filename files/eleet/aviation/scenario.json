@@ -1,0 +1,21 @@
+{
+  "id": "eleet/aviation",
+  "name": "ELEET · aviation",
+  "query_ids": [
+    "eleet/aviation/00-join",
+    "eleet/aviation/01-union",
+    "eleet/aviation/02-scan",
+    "eleet/aviation/03-join_project",
+    "eleet/aviation/04-union_project",
+    "eleet/aviation/05-scan_project",
+    "eleet/aviation/06-join_select_table_03",
+    "eleet/aviation/07-join_select_table_05",
+    "eleet/aviation/08-join_select_table_08",
+    "eleet/aviation/09-union_select_text_03",
+    "eleet/aviation/10-union_select_text_05",
+    "eleet/aviation/11-union_select_text_08",
+    "eleet/aviation/12-scan_agg1",
+    "eleet/aviation/13-scan_agg2",
+    "eleet/aviation/14-scan_agg3"
+  ]
+}

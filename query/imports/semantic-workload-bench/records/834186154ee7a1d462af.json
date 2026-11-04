@@ -1,0 +1,74 @@
+{
+  "id": "palimpzest/real-estate",
+  "group": "implementation-examples",
+  "query": "根据室内照片、房源文字、地址与价格筛选房源。",
+  "source": "/Volumes/Element/Github2/Awesome-Sem-Filter-Bench/baseline/Palimpzest/repository/Palimpzest/tests/pytest/fixtures/workloads.py",
+  "source_line": null,
+  "provenance": "observed_source_pipeline",
+  "status": "logical_only",
+  "note": "保留fixture源码顺序。距离函数实际使用街道黑名单近似，不是真实地理距离计算；不可把结果称为2英里精确查询。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Filter",
+        "detail": "600000 < parsed_price ≤ 2000000",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "within_two_miles_of_mit(address) UDF",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SFilter",
+        "detail": "modern and attractive AND natural sunlight",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "SMap",
+        "detail": "image_filepaths→image listing schema",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "SMap",
+        "detail": "text_content→listing schema",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "real_estate_eval_tiny",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

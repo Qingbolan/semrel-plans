@@ -1,0 +1,7 @@
+{
+  "id": "swb-stac-derived/shared-environment-audit-20260908-v114-inspection-v2-public",
+  "name": "stac-derived/shared-environment-audit-20260908-v114-inspection-v2-public",
+  "query_ids": [
+    "swb/public-task/shared-environment-audit-20260908-v114/inspection-v2/public/task"
+  ]
+}

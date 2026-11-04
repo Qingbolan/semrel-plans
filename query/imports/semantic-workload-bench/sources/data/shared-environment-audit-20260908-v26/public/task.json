@@ -1,0 +1,13 @@
+{
+  "status": "DEVELOPMENT_REDACTION_AUDIT_ONLY",
+  "task": "For each single-domain complaint, apply the shared UDRP and interpretive environment to the supplied procedural history, factual background and attributed party contentions. Decide whether transfer or cancellation relief is warranted. Output RELIEF_GRANTED, DENIED or ABSTAIN with evidence.",
+  "scope": "Retrospective prediction from published pre-analysis sections; not original complaint/annexes or prospective legal advice.",
+  "environment": "environment.pdf",
+  "constraints": [
+    "No access to current decision/analysis or online case-result search",
+    "Historical cases quoted by parties may remain; source attribution must be preserved",
+    "Private labels are provisional extraction, not model resources",
+    "Directory layout is not OS isolation"
+  ],
+  "redaction": "Current execution-annex sentences redacted by public-only pattern; deletion marker may reveal construction and needs masking/control before evaluation."
+}

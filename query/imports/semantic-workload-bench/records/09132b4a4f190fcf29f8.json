@@ -1,0 +1,37 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v80/inspection-persuasion-v1/public/task",
+  "group": "public-tasks",
+  "query": "According to protocol.txt, determine whether each document is topic-related persuasive; return record_id,label,status. Classification concerns intent under this annotation protocol, not factual truth or convincingness.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v80/inspection-persuasion-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "task_id": "ukp-persuasion-inspection-v1",
+    "task": "According to protocol.txt, determine whether each document is topic-related persuasive; return record_id,label,status. Classification concerns intent under this annotation protocol, not factual truth or convincingness.",
+    "dag": [
+      "scan",
+      "sem_filter",
+      "project(record_id)",
+      "count"
+    ],
+    "required_inputs": [
+      "protocol.txt",
+      "documents/*.json"
+    ],
+    "output": {
+      "label": "Boolean or null",
+      "status": [
+        "OK",
+        "ABSTAIN"
+      ]
+    },
+    "status": "BUILT_INSPECTION_NOT_VALIDATED",
+    "scope": "source-derived development; no independent confirmation",
+    "independence": "group by original webpage and author; overlap with Toulmin task must be grouped; not yet split"
+  },
+  "domain": "shared-environment-audit-20260908"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "mlsys-llmsql/products",
+  "name": "MLSys 2025 LLM-SQL / products",
+  "query_ids": [
+    "mlsys-llmsql/products/T1",
+    "mlsys-llmsql/products/T2",
+    "mlsys-llmsql/products/T3",
+    "mlsys-llmsql/products/T4"
+  ]
+}

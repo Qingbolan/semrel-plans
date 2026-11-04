@@ -1,0 +1,8 @@
+{
+  "id": "swb-casie-derived/shared-environment-audit-20260908-v70-inspection-v1-public",
+  "name": "casie-derived/shared-environment-audit-20260908-v70-inspection-v1-public",
+  "query_ids": [
+    "swb/public-task/shared-environment-audit-20260908-v70/inspection-v1/public/task",
+    "swb/public-task/shared-environment-audit-20260908-v70/inspection-v1/public/optional_task"
+  ]
+}

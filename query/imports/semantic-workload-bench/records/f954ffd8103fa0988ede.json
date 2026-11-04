@@ -1,0 +1,128 @@
+{
+  "id": "udrp-Q2-v1",
+  "group": "derived-five-lakes",
+  "query": "筛出预测驳回案件，生成需复核的少数类清单",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/udrp-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "inspection_only",
+  "note": "INSPECTION_ONLY_LEAKAGE_AND_FACT_GAPS；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。Derived from the same Q1 labels; not independent gold",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "ResultBundle",
+        "detail": "清单和总数",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Distinct",
+        "detail": "record_id；一个实体不因多个标签重复计数",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Project",
+        "detail": "record_id及原请求字段",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Filter",
+        "detail": "status=OK AND label匹配参数（HTS为显式前缀；其他按原契约）",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Unnest",
+        "detail": "value中的去重标签",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Transform",
+        "detail": "combine_decision_or_abstain",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "SMap",
+        "detail": "sem_map_evaluate_three_elements",
+        "kind": "semantic"
+      },
+      {
+        "id": "n7",
+        "op": "Lookup",
+        "detail": "retrieve_overview_elements_and_exceptions；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n8",
+        "op": "Scan",
+        "detail": "udrp public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n9",
+        "op": "Scan",
+        "detail": "udrp frozen public lake / catalog / full references",
+        "kind": "relational"
+      },
+      {
+        "id": "n10",
+        "op": "Aggregate",
+        "detail": "全局; COUNT(*)",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n8",
+        "n7"
+      ],
+      [
+        "n9",
+        "n7"
+      ],
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ],
+      [
+        "n1",
+        "n10"
+      ],
+      [
+        "n10",
+        "n0"
+      ]
+    ]
+  }
+}

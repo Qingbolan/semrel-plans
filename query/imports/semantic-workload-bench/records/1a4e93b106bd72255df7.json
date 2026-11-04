@@ -1,0 +1,32 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v73/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "From each public document tokens and source structural markup, reconstruct GUM/eRST primary discourse tree and secondary relations. Return exact zero-based half-open EDU token ranges, group structure and labeled parent/secondary edges. Deterministically select requested relation labels from the predicted graph.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v73/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_DEVELOPMENT_NOT_QUALIFIED",
+    "task": "From each public document tokens and source structural markup, reconstruct GUM/eRST primary discourse tree and secondary relations. Return exact zero-based half-open EDU token ranges, group structure and labeled parent/secondary edges. Deterministically select requested relation labels from the predicted graph.",
+    "query_labels": [
+      "attribution-positive",
+      "attribution-negative",
+      "explanation-evidence",
+      "contingency-condition"
+    ],
+    "input_notes": "Source tokenization and selected visible structure are explicitly given. No sentence type, summary, entity annotations, EDU boundaries, relation labels or signal annotations are public. No claim of raw end-to-end tokenization. Source texts can be excerpts.",
+    "environment_precedence": "GUM-specific rules override RST-DT guidance; eRST formalism extends RST. No ANNIS lookup of current evaluation labels. Full theory papers provided as references; their combined page count is not a necessary-context claim.",
+    "limitations": [
+      "Layout is simplified source markup, not full rendering or images",
+      "OCR/12gram overlap screening is not contamination clearance",
+      "No signal gold in this task",
+      "No OS isolation, model run or independent confirmation",
+      "Source entity isolation and exact historical guideline applicability pending"
+    ]
+  },
+  "domain": "shared-environment-audit-20260908"
+}

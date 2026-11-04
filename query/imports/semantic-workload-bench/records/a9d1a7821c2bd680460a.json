@@ -1,0 +1,118 @@
+{
+  "id": "stard-Q3-v1",
+  "group": "derived-five-lakes",
+  "query": "按法条统计命中的咨询数，生成咨询—法条索引",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/stard-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "registered_not_executed",
+  "note": "DEVELOPMENT_RETRIEVAL_ONLY；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。Derived from Q1; partial groups explicitly marked incomplete",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "ResultBundle",
+        "detail": "统计和completeness（缺失不是0或负例）",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Aggregate",
+        "detail": "label及原请求source_entity; COUNT(DISTINCT record_id)；需要时COLLECT DISTINCT label",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Unnest",
+        "detail": "status=OK的去重value；空集合不产生标签行",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Transform",
+        "detail": "validate_article_ids",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "SMap",
+        "detail": "sem_map_relevance_rank",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "Lookup",
+        "detail": "retrieve_full_catalog；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "SMap",
+        "detail": "sem_map_decompose_issues",
+        "kind": "semantic"
+      },
+      {
+        "id": "n7",
+        "op": "Scan",
+        "detail": "stard public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n8",
+        "op": "Scan",
+        "detail": "stard frozen public lake / catalog / full references",
+        "kind": "relational"
+      },
+      {
+        "id": "n9",
+        "op": "Aggregate",
+        "detail": "全批; COUNT status=ABSTAIN；完成数/总数",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n8",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ],
+      [
+        "n3",
+        "n9"
+      ],
+      [
+        "n9",
+        "n0"
+      ]
+    ]
+  }
+}

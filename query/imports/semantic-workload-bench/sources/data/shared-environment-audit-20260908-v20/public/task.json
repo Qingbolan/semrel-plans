@@ -1,0 +1,17 @@
+{
+  "status": "INSPECTION_PACKET_NOT_VALIDATED",
+  "task": "Extract a set of gene-disease experimental evidence categories and absolute scores under SOP9 for each query-paper pair. Preserve ABSTAIN for insufficient evidence. Do not predict final gene-disease validity.",
+  "shared_environment": "SOP9.pdf",
+  "allowed_inputs": [
+    "queries.jsonl",
+    "papers/*.txt",
+    "SOP9.pdf"
+  ],
+  "gold_schema": "set of evidence category and absolute score; reference curator narratives remain private",
+  "notes": [
+    "No model executed",
+    "Exact public PMID could retrieve current curator answers; any future tool access must prohibit those endpoints",
+    "Public/private directories are not OS isolation",
+    "No additional references selected by gold are exposed"
+  ]
+}

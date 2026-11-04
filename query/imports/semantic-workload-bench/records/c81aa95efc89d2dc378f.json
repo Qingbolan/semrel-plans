@@ -1,0 +1,20 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v60/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Extract event type/subtype, all trigger spans, modality, negation, and canonical participant/filler role spans under SENTiVENT chapters3-6. Return SecurityValue event records grouped by document. This counts mentions, not unique real-world events.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v60/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_DEVELOPMENT",
+    "task": "Extract event type/subtype, all trigger spans, modality, negation, and canonical participant/filler role spans under SENTiVENT chapters3-6. Return SecurityValue event records grouped by document. This counts mentions, not unique real-world events.",
+    "input": "Full article text only; event/argument/coreference annotations are private. Resolve canonical references from text according to section4.3.",
+    "environment": "Verbatim pdftotext-layout extraction of PDF pages13-64, chapters3-6. Chapter7 enhancement proposals are not normative. Original69pagePDF retained evaluator-side.",
+    "scope": "Current source development; not independent confirmation; no model run. Source entity and near-duplicate isolation not proven."
+  },
+  "domain": "shared-environment-audit-20260908"
+}

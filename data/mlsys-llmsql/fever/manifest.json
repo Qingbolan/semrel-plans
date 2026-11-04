@@ -1,0 +1,23 @@
+{
+  "dataset_id": "mlsys-llmsql/fever",
+  "source_ids": [
+    "thm_b815dd9420e62562"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": {
+    "fever": [
+      "claim",
+      "evidence1",
+      "evidence2",
+      "evidence3",
+      "evidence4"
+    ]
+  },
+  "record_count": null,
+  "version": "2403.05821v2",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "论文 §6.1.1 与附录 B 给出数据集与列；本仓未下载数据。"
+}

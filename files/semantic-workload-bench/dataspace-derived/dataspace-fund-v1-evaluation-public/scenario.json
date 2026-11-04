@@ -1,0 +1,7 @@
+{
+  "id": "swb-dataspace-derived/dataspace-fund-v1-evaluation-public",
+  "name": "dataspace-derived/dataspace-fund-v1-evaluation-public",
+  "query_ids": [
+    "swb/public-task/dataspace-fund-v1/evaluation/public/question"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/Med/Filter/filter_queries_drug/16",
+  "group": "uda-med",
+  "query": "SELECT single_dose, mechanism_of_action, side_effects FROM drug WHERE side_effects = 'fever' AND storage_conditions = 'store below 25C or 77F' AND mechanism_of_action != 'broken down into 6-thioguanine nucleotides to exert immunosuppressive effects' AND active_ingredients = 'Omeprazole';",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Filter/filter_queries_drug.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "single_dose, mechanism_of_action, side_effects",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "side_effects = 'fever' AND storage_conditions = 'store below 25C or 77F' AND mechanism_of_action <> 'broken down into 6-thioguanine nucleotides to exert immunosuppressive effects' AND active_ingredients = 'Omeprazole'",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；active_ingredients, mechanism_of_action, side_effects, single_dose, storage_conditions",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "drug 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "swb-sembench/medical",
+  "name": "sembench/medical",
+  "query_ids": [
+    "swb/sembench/medical/Q1",
+    "swb/sembench/medical/Q10",
+    "swb/sembench/medical/Q2",
+    "swb/sembench/medical/Q3",
+    "swb/sembench/medical/Q4",
+    "swb/sembench/medical/Q5",
+    "swb/sembench/medical/Q6",
+    "swb/sembench/medical/Q7",
+    "swb/sembench/medical/Q8",
+    "swb/sembench/medical/Q9"
+  ]
+}

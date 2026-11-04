@@ -1,0 +1,30 @@
+{
+  "id": "thalamusdb/youtube",
+  "name": "ThalamusDB / youtube",
+  "query_ids": [
+    "thalamusdb/youtube/Q01",
+    "thalamusdb/youtube/Q02",
+    "thalamusdb/youtube/Q03",
+    "thalamusdb/youtube/Q04",
+    "thalamusdb/youtube/Q05",
+    "thalamusdb/youtube/Q06",
+    "thalamusdb/youtube/Q07",
+    "thalamusdb/youtube/Q08",
+    "thalamusdb/youtube/Q09",
+    "thalamusdb/youtube/Q10",
+    "thalamusdb/youtube/Q11",
+    "thalamusdb/youtube/Q12",
+    "thalamusdb/youtube/Q13",
+    "thalamusdb/youtube/Q14",
+    "thalamusdb/youtube/Q15",
+    "thalamusdb/youtube/Q16",
+    "thalamusdb/youtube/Q17",
+    "thalamusdb/youtube/Q18",
+    "thalamusdb/youtube/Q19",
+    "thalamusdb/youtube/Q20",
+    "thalamusdb/youtube/Q21",
+    "thalamusdb/youtube/Q22",
+    "thalamusdb/youtube/Q23",
+    "thalamusdb/youtube/Q24"
+  ]
+}

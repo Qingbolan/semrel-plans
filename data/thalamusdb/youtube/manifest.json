@@ -1,0 +1,21 @@
+{
+  "dataset_id": "thalamusdb/youtube",
+  "source_ids": [
+    "thm_bef4d739cb78e7d7"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": {
+    "youtube": [
+      "audio",
+      "description",
+      "likes"
+    ]
+  },
+  "record_count": null,
+  "version": "c17a1ea7c8a3bca1fba13537002e99ba00a3e130",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "youtube.csv 在上游仓库；AudioCaps 原始波形需另行下载（32.26 GB）。"
+}

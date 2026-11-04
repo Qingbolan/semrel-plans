@@ -1,0 +1,21 @@
+{
+  "dataset_id": "blendsql/1966-nba-draft",
+  "source_ids": [
+    "hyb_bff33ea7ebaca169"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "1966_nba_draft",
+      "type": "database",
+      "description": "Benchmark database named by the directory"
+    }
+  ],
+  "record_count": null,
+  "version": "8a75abeca64b662aa8d1d7b5fdb52d3e31b052db",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Database referenced by the BlendSQL benchmark directory; not copied"
+}

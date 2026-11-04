@@ -1,0 +1,10 @@
+{
+  "id": "swb-udrp-derived/derived-tasks",
+  "name": "udrp-derived/derived-tasks",
+  "query_ids": [
+    "swb/udrp-Q1-v1",
+    "swb/udrp-Q2-v1",
+    "swb/udrp-Q3-v1",
+    "swb/udrp-Q4-v1"
+  ]
+}

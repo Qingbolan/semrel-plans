@@ -1,0 +1,32 @@
+[
+  {
+    "path": "data/abacus/artifacts/abacus-data.tar.gz",
+    "bytes": 2371162388,
+    "sha256": "02c64a652fa80a9f1b7953aba065f3fa1000c9f02c083a09efe0bc6603604b46"
+  },
+  {
+    "path": "data/abacus/cuad/data.zip",
+    "bytes": 18309308,
+    "sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a"
+  },
+  {
+    "path": "data/abacus/biodex/validation-00000-of-00001-3dc2d02bd07059cb.parquet",
+    "bytes": 66230581,
+    "sha256": "be182d779b1c7ac89ac532b7b192b14b337481e35c849d158a71910601507b17"
+  },
+  {
+    "path": "data/abacus/biodex/test.parquet",
+    "bytes": 106609906,
+    "sha256": "7ea93550ba12993ad87d47d0afd665574d42ec14218bca1bfdba13fe3d4ff749"
+  },
+  {
+    "path": "data/abacus/biodex/train-00001-of-00002-91a4d2de97566883.parquet",
+    "bytes": 134635651,
+    "sha256": "732db0acb1e93f3c95619074be0aa89160bdfb37be5227bf4376f875da211640"
+  },
+  {
+    "path": "data/abacus/biodex/train-00000-of-00002-3a4af29b480220dc.parquet",
+    "bytes": 133245248,
+    "sha256": "3beb668b7cb28ecdad08c26fc5c1b5e1ddde9a54d63702e0e00acbf86a7ea022"
+  }
+]

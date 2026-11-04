@@ -1,0 +1,54 @@
+{
+  "environment_id": "abacus/biodex",
+  "dataset_id": "abacus/biodex",
+  "runtime_status": "unconfigured",
+  "engine": "Palimpzest / Abacus",
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null,
+  "resources": [
+    {
+      "name": "reaction_terms",
+      "path": "data/abacus/artifacts/extracted/data/reaction_terms.txt",
+      "source_type": "table",
+      "columns": [
+        {
+          "name": "term",
+          "type": "string",
+          "description": "Standardized reaction label"
+        }
+      ]
+    },
+    {
+      "name": "biodex-reaction-terms Chroma index",
+      "path": "data/abacus/artifacts/extracted/.chroma-biodex",
+      "source_type": "index"
+    }
+  ],
+  "batching": {
+    "unit": "medical article",
+    "records_per_run": 250,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "selection_path": "data/abacus/biodex/selections.json",
+    "optimization_examples_per_seed": 20,
+    "optimization_selection_path": "data/abacus/biodex/optimization-selections.json",
+    "model_batch_size": null,
+    "selection_algorithm": "pandas.DataFrame.sample(random_state=seed)",
+    "scope": "One parameterized operator workflow evaluated over the selected records; model batch size is not specified."
+  }
+}

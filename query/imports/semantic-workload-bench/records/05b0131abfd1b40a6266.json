@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/CSPaper/Filter/filter_queries_CSPaper/12",
+  "group": "uda-cspaper",
+  "query": "SELECT evaluation_dataset, data_modality, application_domain FROM cspaper WHERE application_domain = 'Education' AND evaluation_metric = 'recall@k; Preprocessing Time; Query processing time';",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/CSPaper/Filter/filter_queries_CSPaper.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "evaluation_dataset, data_modality, application_domain",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "application_domain = 'Education' AND evaluation_metric = 'recall@k; Preprocessing Time; Query processing time'",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；application_domain, data_modality, evaluation_dataset, evaluation_metric",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "cspaper 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

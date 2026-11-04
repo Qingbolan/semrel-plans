@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "dataset": "hscodecomp",
+  "readiness": "DEVELOPMENT_INCOMPLETE_INPUT_DIAGNOSTIC",
+  "lake_description": "632商品字段与原平台类别；HTS原JSON、35950行含无编号父节点的树、29932编码catalog；4429页完整同版PDF及全文。question换为共享任务，hs_code隔离。",
+  "output_contract": {
+    "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ],
+    "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+    "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+  },
+  "filter_match": "prefix",
+  "queries": [
+    {
+      "id": "hscodecomp-Q1-v1",
+      "kind": "semantic_primary",
+      "request": "For every product in records.json, use its published title, attributes, price, currency and marketplace categories with frozen HTS 2025 Revision 15 to return one 10-digit HTS code as a singleton string list. Consult hierarchy, unnumbered parent rows and full notes. Do not assume price is per item, invent photos, convert currency without evidence, or reconstruct missing product facts. If a supported classification cannot be completed, ABSTAIN with null value and a concrete reason. The source-label task supplies no independent UNKNOWN gold.",
+      "dag": [
+        "scan_products",
+        "sem_map_extract_material_use_unit_facts",
+        "retrieve_hts_tree_and_notes",
+        "sem_map_resolve_exclusions_and_classification",
+        "validate_10_digit_code_or_abstain"
+      ],
+      "gold": "独立专家10位码；前缀目标由同一标签派生",
+      "metrics": [
+        "source-label exact 10-digit accuracy",
+        "prefix diagnostics",
+        "coverage",
+        "input-gap audit"
+      ]
+    },
+    {
+      "id": "hscodecomp-Q2-v1",
+      "kind": "derived_filter",
+      "request": "按参数化2/4/6/8/10位编码前缀返回商品清单及数量",
+      "parameters": {
+        "target_label": {
+          "type": "string",
+          "example": "70"
+        }
+      },
+      "dag": [
+        "Q1",
+        "filter_predicted_label_or_prefix",
+        "project_record_id",
+        "count"
+      ],
+      "gold": "Derived from the same Q1 labels; not independent gold"
+    },
+    {
+      "id": "hscodecomp-Q3-v1",
+      "kind": "derived_aggregate",
+      "request": "按预测完整编码统计商品数；前缀筛选为派生诊断，不是独立专家gold",
+      "dag": [
+        "Q1",
+        "unnest_unique_labels",
+        "group_by_label_and_source_entity",
+        "count_distinct_records",
+        "emit_completeness"
+      ],
+      "gold": "Derived from Q1; partial groups explicitly marked incomplete"
+    },
+    {
+      "id": "hscodecomp-Q4-v1",
+      "kind": "operational_review_queue",
+      "request": "返回未完成记录及原因，并报告全量coverage；缺事实和运行失败均需保留原因，不当负例。",
+      "dag": [
+        "Q1",
+        "filter_status_ABSTAIN",
+        "project_id_reason",
+        "coverage"
+      ],
+      "gold": "No independent gold; this is execution accounting, not missing-fact correctness"
+    }
+  ],
+  "scientific_boundary": "5 primary tasks across five lakes; derived queries are not extra datasets, independent labels or observed execution families. No model runs or measured K.",
+  "limitations": "图片、单位价格、外部裁定及汇率事实未闭合；不可用缺事实造成的失败证明Agent优势。"
+}

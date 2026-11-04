@@ -1,0 +1,7 @@
+{
+  "id": "mlsys-llmsql/squad",
+  "name": "MLSys 2025 LLM-SQL / squad",
+  "query_ids": [
+    "mlsys-llmsql/squad/T5"
+  ]
+}

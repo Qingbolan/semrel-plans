@@ -1,0 +1,53 @@
+{
+  "resources": [
+    {
+      "name": "CUAD category definitions",
+      "path": "environment/abacus/cuad/categories.json",
+      "source_type": "table",
+      "columns": [
+        {
+          "name": "Category",
+          "type": "string",
+          "description": "Category"
+        },
+        {
+          "name": "Description",
+          "type": "string",
+          "description": "Description"
+        },
+        {
+          "name": "Answer Format",
+          "type": "string",
+          "description": "Answer Format"
+        },
+        {
+          "name": "Group",
+          "type": "string",
+          "description": "Group"
+        }
+      ]
+    }
+  ],
+  "batching": {
+    "unit": "contract",
+    "records_per_run": 100,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "selection_path": "data/abacus/cuad/selections.json",
+    "optimization_examples_per_seed": 25,
+    "optimization_selection_path": "data/abacus/cuad/optimization-selections.json",
+    "model_batch_size": null,
+    "selection_algorithm": "numpy.random.default_rng(seed).shuffle; first N",
+    "scope": "One parameterized operator workflow evaluated over the selected records; model batch size is not specified."
+  }
+}

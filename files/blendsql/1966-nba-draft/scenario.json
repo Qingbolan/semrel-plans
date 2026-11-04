@@ -1,0 +1,8 @@
+{
+  "id": "blendsql/1966-nba-draft",
+  "name": "BlendSQL benchmark · 1966_nba_draft",
+  "query_ids": [
+    "blendsql/1966-nba-draft/q01",
+    "blendsql/1966-nba-draft/q02"
+  ]
+}

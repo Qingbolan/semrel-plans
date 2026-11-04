@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/Med/Filter/filter_queries_institution/12",
+  "group": "uda-med",
+  "query": "SELECT parent_organization, key_achievements, international_collaboration FROM institution WHERE (technology_application = 'inpatient psychiatric treatment' AND key_technologies = 'blood sample collection') OR (funding_sources != 'industry grant' AND key_achievements = 'Largest neuroscience study of mindfulness for addiction');",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Med/Filter/filter_queries_institution.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "parent_organization, key_achievements, international_collaboration",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "(technology_application = 'inpatient psychiatric treatment' AND key_technologies = 'blood sample collection') OR (funding_sources <> 'industry grant' AND key_achievements = 'Largest neuroscience study of mindfulness for addiction')",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；funding_sources, international_collaboration, key_achievements, key_technologies, parent_organization, technology_application",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "institution 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

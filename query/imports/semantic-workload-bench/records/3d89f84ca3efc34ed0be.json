@@ -1,0 +1,84 @@
+{
+  "id": "sembench/mmqa/Q5",
+  "group": "sembench-mmqa",
+  "query": "Who has played a role in all the following movies: 'Love Is the Drug', 'Crashing', 'Cloverfield', 'My Best Friend's Girl', 'Hot Tub Time Machine', 'The Last Rites of Ransom Pride', 'Save the Date', 'Bachelorette', '3, 2, 1... Frankie Go Boom', 'Queens of Country', 'Item 47', 'The Night Before', 'Now You See Me 2', 'Allied', 'Extinction', and 'Cobweb'?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q5.json",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "这是关系除法的GROUP BY/HAVING实现：必须覆盖全部16部电影，COUNT(*)会被重复出演记录误导。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "actor",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "COUNT(DISTINCT film)=16",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Aggregate",
+        "detail": "actor; COUNT(DISTINCT film)",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Filter",
+        "detail": "film in 原题列出的16部电影",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Unnest",
+        "detail": "演员集合→(film,actor)",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "SMap",
+        "detail": "各电影证据→出演演员集合",
+        "kind": "semantic"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "电影表及关联文本",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "task": "Extract all CHEBI+extensions concept mentions with exact possibly discontinuous character spans from each full text, under provided author protocol and current rules.",
+  "input_condition": "ANNOTATION_GIVEN_UPSTREAM_TYPOGRAPHY: section/font intervals are supplied human structural annotations; concept annotations remain private.",
+  "status": "INSPECTION_DEVELOPMENT_NOT_VALIDATED",
+  "limitations": [
+    "Manual PMID exclusions only; no complete example leakage audit",
+    "50 source documents are not 8000 independent cases",
+    "No model execution or environment gain measured"
+  ]
+}

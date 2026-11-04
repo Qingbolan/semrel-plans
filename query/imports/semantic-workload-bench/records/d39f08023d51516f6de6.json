@@ -1,0 +1,44 @@
+{
+  "id": "sembench/mmqa/Q3G",
+  "group": "sembench-mmqa",
+  "query": "Which movies are biographical comedies?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q3g.json",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "scan_projection_only",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "film",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SFilter",
+        "detail": "电影属于 biographical comedy",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Scan",
+        "detail": "电影表及关联图文",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

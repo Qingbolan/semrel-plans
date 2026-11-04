@@ -1,0 +1,7 @@
+{
+  "id": "cuad-all-clauses-pilot-v1",
+  "categories": 41,
+  "instruction": "Extract every applicable category span from the complete contract.",
+  "split": "official-test-development-pilot",
+  "state": "BUILT"
+}

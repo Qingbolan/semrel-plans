@@ -1,0 +1,26 @@
+{
+  "dataset_id": "dataagentbench/imdb",
+  "source_ids": [
+    "hyb_eeec24b3b7570bd3"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "query_imdb/query_dataset/movies.sql",
+      "type": "file",
+      "description": "Listed in dataset_manifest.tsv"
+    },
+    {
+      "name": "query_imdb/query_dataset/people.sqlite",
+      "type": "file",
+      "description": "Listed in dataset_manifest.tsv"
+    }
+  ],
+  "record_count": null,
+  "version": "ac11ab6854dec9e1add75720850b0c891e2ff6b5",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Databases listed in dataset_manifest.tsv and fetched by download.sh; not downloaded"
+}

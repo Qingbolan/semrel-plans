@@ -1,0 +1,64 @@
+{
+  "id": "sembench/mmqa/Q1",
+  "group": "sembench-mmqa",
+  "query": "Who is the director of the movie that has Ben Piazza in the role of Bob Whitewood?",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/mmqa/query/natural_language/q1.json",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": " 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "director",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SMap",
+        "detail": "查所选电影的导演",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "actor='Ben Piazza' AND role='Bob Whitewood'",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "SMap",
+        "detail": "表格/文本→(film, actor, role)",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "电影表与关联证据",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

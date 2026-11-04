@@ -1,0 +1,108 @@
+{
+  "id": "udrp-Q4-v1",
+  "group": "derived-five-lakes",
+  "query": "返回未完成记录及原因，并报告全量coverage；缺事实和运行失败均需保留原因，不当负例。",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/workloads/udrp-batch/queries.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "inspection_only",
+  "note": "INSPECTION_ONLY_LEAKAGE_AND_FACT_GAPS；本地派生任务，非原benchmark官方查询；没有模型执行或K测量。No independent gold; this is execution accounting, not missing-fact correctness 运行管理派生，不新增独立语义问题。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "ResultBundle",
+        "detail": "拒答队列及全量coverage",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Project",
+        "detail": "record_id, reason",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "status=ABSTAIN",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Transform",
+        "detail": "combine_decision_or_abstain",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "SMap",
+        "detail": "sem_map_evaluate_three_elements",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "Lookup",
+        "detail": "retrieve_overview_elements_and_exceptions；检索实现尚未指定",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "Scan",
+        "detail": "udrp public records",
+        "kind": "relational"
+      },
+      {
+        "id": "n7",
+        "op": "Scan",
+        "detail": "udrp frozen public lake / catalog / full references",
+        "kind": "relational"
+      },
+      {
+        "id": "n8",
+        "op": "Aggregate",
+        "detail": "全批; COUNT(status=OK)/COUNT(*)",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n6",
+        "n5"
+      ],
+      [
+        "n7",
+        "n5"
+      ],
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ],
+      [
+        "n3",
+        "n8"
+      ],
+      [
+        "n8",
+        "n0"
+      ]
+    ]
+  }
+}

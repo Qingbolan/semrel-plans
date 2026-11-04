@@ -1,0 +1,54 @@
+{
+  "id": "bench-u/CSPaper/Filter/filter_queries_CSPaper/36",
+  "group": "uda-cspaper",
+  "query": "SELECT generator_model, uses_reranker, evaluation_metric FROM cspaper WHERE generator_model != 'Phi-3.5-mini-instruct' AND agent_framework != 'ToT' AND baseline = 'RAG' AND performance_on_NQ = 'RE-RAGbase: EM: 49.9, Acc: 53.1, F1: 56.9; RE-RAGFlan-base: EM: 51.9, Acc: 55.2, F1: 58.9; RE-RAGlarge: EM: 54.0, Acc: 56.7, F1: 61.0; RE-RAGFlan-large: EM: 55.4, Acc: 58.3, F1: 62.5; Llama27b + RE: EM: 45.7, Acc: 48.4, F1: 54.3; Llama213b + RE: EM: 46.6, Acc: 49.8, F1: 55.6; Llama3gb +RE: EM: 49.6, Acc: 54.5, F1: 59.0; Llama270b + RE: EM: 48.0, Acc: 52.0, F1: 57.6; Llama370b + RE: EM: 50.8, Acc: 54.8, F1: 60.1; ChatGPT+RE: EM: 49.3, Acc: 55.2, F1: 59.6';",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/CSPaper/Filter/filter_queries_CSPaper.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "generator_model, uses_reranker, evaluation_metric",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "generator_model <> 'Phi-3.5-mini-instruct' AND agent_framework <> 'ToT' AND baseline = 'RAG' AND performance_on_NQ = 'RE-RAGbase: EM: 49.9, Acc: 53.1, F1: 56.9; RE-RAGFlan-base: EM: 51.9, Acc: 55.2, F1: 58.9; RE-RAGlarge: EM: 54.0, Acc: 56.7, F1: 61.0; RE-RAGFlan-large: EM: 55.4, Acc: 58.3, F1: 62.5; Llama27b + RE: EM: 45.7, Acc: 48.4, F1: 54.3; Llama213b + RE: EM: 46.6, Acc: 49.8, F1: 55.6; Llama3gb +RE: EM: 49.6, Acc: 54.5, F1: 59.0; Llama270b + RE: EM: 48.0, Acc: 52.0, F1: 57.6; Llama370b + RE: EM: 50.8, Acc: 54.8, F1: 60.1; ChatGPT+RE: EM: 49.3, Acc: 55.2, F1: 59.6'",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；agent_framework, baseline, evaluation_metric, generator_model, performance_on_NQ, uses_reranker",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "cspaper 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

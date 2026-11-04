@@ -1,0 +1,30 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v67/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "For each document and explicitly given event clusters/TIMEX nodes, predict temporal, causal and parent-child subevent edges; produce a document event graph for downstream timeline/component queries.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v67/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_DEVELOPMENT_NOT_QUALIFIED",
+    "task": "For each document and explicitly given event clusters/TIMEX nodes, predict temporal, causal and parent-child subevent edges; produce a document event graph for downstream timeline/component queries.",
+    "annotation_given": "All event mentions, event identity clusters and temporal expression mention spans are given upstream annotations. Target relations are private; this is not end-to-end extraction.",
+    "environment": [
+      "relation-guidelines.md",
+      "maven-adaptations.json"
+    ],
+    "gold_semantics": "Released graph after human annotation and rule completion. Missing edges are corpus NONE, not world FALSE. Official hidden test is not used.",
+    "unresolved": [
+      "Exact RED historical applicability and conflict resolutions",
+      "Released closure implementation/label combinations",
+      "Independent scientific validation and confirmation split",
+      "Full necessary rule dependency versus simpler environment-only compiler"
+    ],
+    "no_model_run": true
+  },
+  "domain": "shared-environment-audit-20260908"
+}

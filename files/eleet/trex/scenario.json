@@ -1,0 +1,18 @@
+{
+  "id": "eleet/trex",
+  "name": "ELEET · trex",
+  "query_ids": [
+    "eleet/trex/00-union_nobel_personal",
+    "eleet/trex/01-union_nobel_career",
+    "eleet/trex/02-join_nobel_personal",
+    "eleet/trex/03-join_nobel_career",
+    "eleet/trex/04-scan_nobel_personal",
+    "eleet/trex/05-scan_nobel_career",
+    "eleet/trex/06-union_nobel_personal_selection",
+    "eleet/trex/07-union_nobel_personal_selection2",
+    "eleet/trex/08-union_nobel_personal_project",
+    "eleet/trex/09-union_nobel_career_project",
+    "eleet/trex/10-scan_nobel_personal_aggregation",
+    "eleet/trex/11-scan_nobel_career_aggregation"
+  ]
+}

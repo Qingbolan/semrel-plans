@@ -1,0 +1,19 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v50/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Predict the CAIL released charge/article set, then group case IDs by charge.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v50/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "inspection_only": true,
+    "task": "Predict the CAIL released charge/article set, then group case IDs by charge.",
+    "environment_status": "Incomplete candidate E; additional interpretations and temporal applicability not verified.",
+    "do_not_use_for_confirmation": true
+  },
+  "domain": "shared-environment-audit-20260908"
+}

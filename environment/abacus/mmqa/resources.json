@@ -1,0 +1,85 @@
+{
+  "resources": [
+    {
+      "name": "mmqa-texts",
+      "source_type": "table",
+      "path": "environment/abacus/mmqa/texts.jsonl",
+      "columns": [
+        {
+          "name": "text_id",
+          "type": "string",
+          "description": "The id for the given text snippet."
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "description": "A text snippet which may or may not support the question."
+        }
+      ],
+      "record_count": 71,
+      "source_path": "data/abacus/artifacts/extracted/data/MMQA_texts.jsonl",
+      "selection": "Candidate records follow supporting contexts of the 100 selected questions per seed, preserving duplicates and order; see environment/abacus/mmqa/pool-records.json"
+    },
+    {
+      "name": "mmqa-tables",
+      "source_type": "table",
+      "path": "environment/abacus/mmqa/tables.jsonl",
+      "columns": [
+        {
+          "name": "table_id",
+          "type": "string",
+          "description": "The id for the given table."
+        },
+        {
+          "name": "table",
+          "type": "string",
+          "description": "A table which may or may not support the question."
+        }
+      ],
+      "record_count": 307,
+      "source_path": "data/abacus/artifacts/extracted/data/MMQA_tables.jsonl",
+      "selection": "Candidate records follow supporting contexts of the 100 selected questions per seed, preserving duplicates and order; see environment/abacus/mmqa/pool-records.json"
+    },
+    {
+      "name": "mmqa-images",
+      "source_type": "table",
+      "path": "environment/abacus/mmqa/images.jsonl",
+      "columns": [
+        {
+          "name": "image_id",
+          "type": "string",
+          "description": "The id for the given image."
+        },
+        {
+          "name": "image",
+          "type": "image",
+          "description": "An image which may or may not support the question."
+        }
+      ],
+      "record_count": 450,
+      "source_path": "data/abacus/artifacts/extracted/data/MMQA_images.jsonl",
+      "selection": "Candidate records follow supporting contexts of the 100 selected questions per seed, preserving duplicates and order; see environment/abacus/mmqa/pool-records.json",
+      "storage_encoding": "Local image file paths; the official loader encodes image bytes as base64 before passing them to the operator."
+    }
+  ],
+  "batching": {
+    "unit": "question",
+    "records_per_run": 100,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9
+    ],
+    "selection_path": "data/abacus/mmqa/selections.json",
+    "optimization_examples_per_seed": 20,
+    "optimization_selection_path": "data/abacus/mmqa/optimization-selections.json",
+    "model_batch_size": null,
+    "selection_algorithm": "numpy.random.default_rng(seed).shuffle; first N",
+    "scope": "One parameterized operator workflow evaluated over the selected records; model batch size is not specified."
+  }
+}

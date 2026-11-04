@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "dataset": "codiesp",
+  "readiness": "DEVELOPMENT_SOURCE_LABEL_REPRODUCTION_ONLY",
+  "lake_description": "1000病例TXT；冻结repo的87170条操作词表；四本2018 PDF及全文文本、原任务DOCX及文本。119个无P标签报告保留。P gold和X原始断续偏移仅private。",
+  "output_contract": {
+    "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ],
+    "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+    "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+  },
+  "filter_match": "exact",
+  "queries": [
+    {
+      "id": "codiesp-Q1-v1",
+      "kind": "semantic_primary",
+      "request": "For every complete Spanish case report, return a ranked, duplicate-free list of procedure codes under the supplied CodiEsp guidelines and frozen 2018 coding resources. Use lowercase codes and preserve allowed four- or seven-character specificity; do not invent missing axes. Code mention scope under the task guidelines, not whether a procedure actually occurred. Include all reports; an empty completed list means no selected codable mentions, not absence of real procedures. This task is P, not D or X.",
+      "dag": [
+        "scan_full_reports",
+        "sem_map_procedure_mentions",
+        "retrieve_code_candidates_and_guidelines",
+        "sem_map_resolve_axes_and_specificity",
+        "rank_unique_codes"
+      ],
+      "gold": "源P病例-code集合，保留全部标签；原排序预测任务主指标MAP，集合为补充",
+      "metrics": [
+        "source-label MAP",
+        "supplemental set P/R/F1",
+        "coverage",
+        "separate rule-consistency audit"
+      ]
+    },
+    {
+      "id": "codiesp-Q2-v1",
+      "kind": "derived_filter",
+      "request": "返回含指定操作代码提及的报告清单；不解释为患者接受该操作",
+      "parameters": {
+        "target_label": {
+          "type": "string",
+          "example": "bn39"
+        }
+      },
+      "dag": [
+        "Q1",
+        "filter_predicted_label_or_prefix",
+        "project_record_id",
+        "count"
+      ],
+      "gold": "Derived from the same Q1 labels; not independent gold"
+    },
+    {
+      "id": "codiesp-Q3-v1",
+      "kind": "derived_aggregate",
+      "request": "按操作代码统计报告数；不把重复提及或同论文病例算成独立患者",
+      "dag": [
+        "Q1",
+        "unnest_unique_labels",
+        "group_by_label_and_source_entity",
+        "count_distinct_records",
+        "emit_completeness"
+      ],
+      "gold": "Derived from Q1; partial groups explicitly marked incomplete"
+    },
+    {
+      "id": "codiesp-Q4-v1",
+      "kind": "operational_review_queue",
+      "request": "返回未完成记录及原因，并报告全量coverage；缺事实和运行失败均需保留原因，不当负例。",
+      "dag": [
+        "Q1",
+        "filter_status_ABSTAIN",
+        "project_id_reason",
+        "coverage"
+      ],
+      "gold": "No independent gold; this is execution accounting, not missing-fact correctness"
+    }
+  ],
+  "scientific_boundary": "5 primary tasks across five lakes; derived queries are not extra datasets, independent labels or observed execution families. No model runs or measured K.",
+  "limitations": "原标签已有侧别及词义冲突；119份无P标注只作原集合空集；SEDOM历史资源未闭合；X不与P混评。"
+}

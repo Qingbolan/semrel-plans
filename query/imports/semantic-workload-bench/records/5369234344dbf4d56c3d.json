@@ -1,0 +1,134 @@
+{
+  "id": "bench-u/Player/Join/join_queries/20",
+  "group": "uda-player",
+  "query": "SELECT team.championships, manager.nationality, city.population, player.nationality, player.college FROM player JOIN team ON player.team = team.team_name JOIN manager ON team.ownership = manager.name JOIN city ON team.location = city.city_name;",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/bench-u/checkout/Query/Player/Join/join_queries.sql",
+  "source_line": null,
+  "provenance": "sql_plus_proposed_extraction",
+  "status": "logical_only",
+  "note": "SQL本身只有结构化算子；SExtract是从原文到关系的分析性补充，不是源SQL的显式调用，也不表明每个字段必须由LLM抽取。字段类型、NULL及一对多抽取契约须在执行前固定。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "team.championships, manager.nationality, city.population, player.nationality, player.college",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Join",
+        "detail": " team.location = city.city_name",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "Join",
+        "detail": " team.ownership = manager.name",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Join",
+        "detail": " player.team = team.team_name",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；college, nationality, team",
+        "kind": "semantic"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "player 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n6",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；championships, location, ownership, team_name",
+        "kind": "semantic"
+      },
+      {
+        "id": "n7",
+        "op": "Scan",
+        "detail": "team 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n8",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；name, nationality",
+        "kind": "semantic"
+      },
+      {
+        "id": "n9",
+        "op": "Scan",
+        "detail": "manager 对应原始文档集合",
+        "kind": "relational"
+      },
+      {
+        "id": "n10",
+        "op": "SExtract",
+        "detail": "逻辑补出的原文抽取；city_name, population",
+        "kind": "semantic"
+      },
+      {
+        "id": "n11",
+        "op": "Scan",
+        "detail": "city 对应原始文档集合",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n7",
+        "n6"
+      ],
+      [
+        "n6",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n9",
+        "n8"
+      ],
+      [
+        "n8",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n11",
+        "n10"
+      ],
+      [
+        "n10",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

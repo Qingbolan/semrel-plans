@@ -1,0 +1,470 @@
+[
+  {
+    "source": "data/source-inputs/semantic-workload-bench/biodex-gap-pilot-v1/public/articles",
+    "path": "data/source-inputs/semantic-workload-bench/biodex-gap-pilot-v1/public/articles"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/biodex-gap-pilot-v1/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/biodex-gap-pilot-v1/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/biodex-gap-pilot-v1/public/terminology",
+    "path": "data/source-inputs/semantic-workload-bench/biodex-gap-pilot-v1/public/terminology"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-builder-check-v2/public/categories.json",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-builder-check-v2/public/categories.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-builder-check-v2/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-builder-check-v2/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-builder-check-v2/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-builder-check-v2/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-gap-pilot-v1/public/categories.json",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-gap-pilot-v1/public/categories.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-gap-pilot-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-gap-pilot-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-gap-pilot-v1/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-gap-pilot-v1/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-source-audit-v1/task184-inspection/sub_db.sqlite",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-source-audit-v1/task184-inspection/sub_db.sqlite"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-source-audit-v1/task184-inspection/公募基金行业投资.csv",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-source-audit-v1/task184-inspection/公募基金行业投资.csv"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-source-audit-v1/task184-inspection/公募基金风险等级表.json",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-source-audit-v1/task184-inspection/公募基金风险等级表.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-task184-v1/public/context",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-task184-v1/public/context"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/batches",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/batches"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/images",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/images"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/models",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/models"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/references",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/references"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/tasks",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/tasks"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/tool_code",
+    "path": "data/source-inputs/semantic-workload-bench/pathology-batch-v1/public/tool_code"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pcb-v1/public/images",
+    "path": "data/source-inputs/semantic-workload-bench/pcb-v1/public/images"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/pcb-v1/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/pcb-v1/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/sembench-movie-composition-v1/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/sembench-movie-composition-v1/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/sembench-movie-composition-v1/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/sembench-movie-composition-v1/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/sembench-movie-rebuild-check-v1/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/sembench-movie-rebuild-check-v1/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/sembench-movie-rebuild-check-v1/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/sembench-movie-rebuild-check-v1/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v20/public/papers",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v20/public/papers"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v20/public/queries.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v20/public/queries.jsonl"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v26/public/cases",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v26/public/cases"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v26/public/environment.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v26/public/environment.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v26/public/queries.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v26/public/queries.jsonl"
+  },
+  {
+    "source": "data/source-inputs/8-17/SEC",
+    "path": "data/source-inputs/8-17/SEC"
+  },
+  {
+    "source": "data/source-inputs/8-17/asrs",
+    "path": "data/source-inputs/8-17/asrs"
+  },
+  {
+    "source": "data/source-inputs/8-17/contract-exhibit",
+    "path": "data/source-inputs/8-17/contract-exhibit"
+  },
+  {
+    "source": "data/source-inputs/8-17/nhtsa_vehicle_safety",
+    "path": "data/source-inputs/8-17/nhtsa_vehicle_safety"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-history-transfer-v1/evaluation/public/categories.json",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-history-transfer-v1/evaluation/public/categories.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-history-transfer-v1/evaluation/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-history-transfer-v1/evaluation/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/cuad-history-transfer-v1/evaluation/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/cuad-history-transfer-v1/evaluation/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/demonstration/public/contexts",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/demonstration/public/contexts"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/demonstration/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/demonstration/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/evaluation/public/contexts",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/evaluation/public/contexts"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/evaluation/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/evaluation/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/validation/public/contexts",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/validation/public/contexts"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/validation/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/dataspace-fund-v1/validation/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v101/inspection-v1/public/docs",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v101/inspection-v1/public/docs"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v101/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v101/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v108/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v108/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v108/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v108/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v113/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v113/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v113/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v113/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v114/inspection-v2/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v114/inspection-v2/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v114/inspection-v2/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v114/inspection-v2/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v124/inspection-v1/public/cases",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v124/inspection-v1/public/cases"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v124/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v124/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v130/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v130/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v130/inspection-v1/public/records",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v130/inspection-v1/public/records"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/documents.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/documents.jsonl"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/environment.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/environment.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/manual.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/manual.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/records.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v201/view/public/records.jsonl"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v208/view/public/environment.txt",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v208/view/public/environment.txt"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v208/view/public/records.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v208/view/public/records.jsonl"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v25/packet/public/cases",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v25/packet/public/cases"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v25/packet/public/environment.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v25/packet/public/environment.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v25/packet/public/queries.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v25/packet/public/queries.jsonl"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v50/inspection-v1/public/cases.jsonl",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v50/inspection-v1/public/cases.jsonl"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v50/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v50/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v1/public/protocol.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v1/public/protocol.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v2/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v2/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v2/public/protocol.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v2/public/protocol.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v3/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v3/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v3/public/protocol.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v53/inspection-v3/public/protocol.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v60/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v60/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v60/inspection-v1/public/protocol.txt",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v60/inspection-v1/public/protocol.txt"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v67/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v67/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v67/inspection-v1/public/maven-adaptations.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v67/inspection-v1/public/maven-adaptations.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v67/inspection-v1/public/relation-guidelines.md",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v67/inspection-v1/public/relation-guidelines.md"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v70/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v70/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v70/inspection-v1/public/protocol.txt",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v70/inspection-v1/public/protocol.txt"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v73/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v73/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v73/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v73/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v74/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v74/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v74/inspection-v1/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v74/inspection-v1/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v76/inspection-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v76/inspection-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v76/inspection-v1/public/protocol.pdf",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v76/inspection-v1/public/protocol.pdf"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v80/inspection-persuasion-v1/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v80/inspection-persuasion-v1/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v80/inspection-persuasion-v1/public/protocol.txt",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v80/inspection-persuasion-v1/public/protocol.txt"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v81/inspection-persuasion-v2/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v81/inspection-persuasion-v2/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v81/inspection-persuasion-v2/public/protocol.txt",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v81/inspection-persuasion-v2/public/protocol.txt"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v94/inspection-v2/public/documents",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v94/inspection-v2/public/documents"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v94/inspection-v2/public/environment",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-audit-20260908-v94/inspection-v2/public/environment"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/annoctr/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/annoctr/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/annoctr/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/annoctr/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/codiesp/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/codiesp/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/codiesp/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/codiesp/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/hscodecomp/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/hscodecomp/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/hscodecomp/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/hscodecomp/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/stard/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/stard/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/stard/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/stard/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/udrp/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/udrp/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/udrp/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v1/udrp/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/annoctr/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/annoctr/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/annoctr/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/annoctr/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/codiesp/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/codiesp/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/codiesp/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/codiesp/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/hscodecomp/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/hscodecomp/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/hscodecomp/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/hscodecomp/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/stard/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/stard/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/stard/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/stard/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/udrp/public/lake",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/udrp/public/lake"
+  },
+  {
+    "source": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/udrp/public/records.json",
+    "path": "data/source-inputs/semantic-workload-bench/shared-environment-five-lakes-v2/udrp/public/records.json"
+  },
+  {
+    "source": "data/source-inputs/Awesome-Dymatic-Operator/Benchmark/code/DABstep/data/context/acquirer_countries.csv",
+    "path": "data/source-inputs/d4f5538738e4/acquirer_countries.csv"
+  },
+  {
+    "source": "data/source-inputs/Awesome-Dymatic-Operator/Benchmark/code/DABstep/data/context/fees.json",
+    "path": "data/source-inputs/b11c7dfb7d09/fees.json"
+  },
+  {
+    "source": "data/source-inputs/Awesome-Dymatic-Operator/Benchmark/code/DABstep/data/context/merchant_category_codes.csv",
+    "path": "data/source-inputs/8fe3136d34db/merchant_category_codes.csv"
+  },
+  {
+    "source": "data/source-inputs/Awesome-Dymatic-Operator/Benchmark/code/DABstep/data/context/merchant_data.json",
+    "path": "data/source-inputs/d6de1c47604c/merchant_data.json"
+  },
+  {
+    "source": "data/source-inputs/Awesome-Dymatic-Operator/Benchmark/code/DABstep/data/context/payments.csv",
+    "path": "data/source-inputs/ae904199aea3/payments.csv"
+  }
+]

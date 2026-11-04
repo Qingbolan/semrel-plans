@@ -1,0 +1,64 @@
+{
+  "id": "sembench/ecomm/Q8",
+  "group": "sembench-ecomm",
+  "query": "Perform a self-join of the dataset.\nFor each product with a product description having at least 3000 characters,\nfind the matching product images based on the title and the description\nof the product.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q8.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "NL允许多个匹配图；gold只返回id-id原配图。原配对不能自动证明其他语义匹配图全错。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "product_id, image_id",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "SJoin",
+        "detail": "image与title+description匹配",
+        "kind": "semantic"
+      },
+      {
+        "id": "n2",
+        "op": "Filter",
+        "detail": "LENGTH(description) ≥ 3000",
+        "kind": "relational"
+      },
+      {
+        "id": "n3",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      },
+      {
+        "id": "n4",
+        "op": "Scan",
+        "detail": "全部候选图片",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n4",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

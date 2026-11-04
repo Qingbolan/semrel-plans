@@ -1,0 +1,21 @@
+{
+  "dataset_id": "eleet/aviation",
+  "source_ids": [
+    "hyb_879fd9af198650f0"
+  ],
+  "availability": "not_downloaded",
+  "local_path": null,
+  "schema": [
+    {
+      "name": "aviation",
+      "type": "database",
+      "description": "Tables and text collections loaded by ELEET"
+    }
+  ],
+  "record_count": null,
+  "version": "4c2c70ae70fb91bd0899c2d79cb4cb141b0f503a",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Dataset prepared by ELEET scripts; not downloaded"
+}

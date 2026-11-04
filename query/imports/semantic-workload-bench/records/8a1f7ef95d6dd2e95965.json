@@ -1,0 +1,20 @@
+{
+  "id": "public-task/cuad-history-transfer-v1/evaluation/public/instruction",
+  "group": "public-tasks",
+  "query": "Extract every applicable category span from the complete contract.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/cuad-history-transfer-v1/evaluation/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "id": "cuad-all-clauses-pilot-v1",
+    "categories": 41,
+    "instruction": "Extract every applicable category span from the complete contract.",
+    "split": "official-test-development-pilot",
+    "state": "BUILT"
+  },
+  "domain": "cuad-history-transfer"
+}

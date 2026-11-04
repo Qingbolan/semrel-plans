@@ -1,0 +1,503 @@
+{
+  "source": "scripts/run_experiment.py",
+  "source_sha256": "b39e4acb4827cd51acbe9e9e87048538086a557873ce3284f3d5dec16b98ebbe",
+  "method": "sample_queries(): itertools.product of slot values, numpy default_rng(seed=42).choice 2 per template",
+  "tasks": [
+    {
+      "id": "artwork/L115-1",
+      "template_line": 115,
+      "template": "What is the {oldest} {religious_artwork} in the database?",
+      "query": "What is the oldest painting in the database?",
+      "values": {
+        "oldest": "oldest",
+        "religious_artwork": "painting"
+      }
+    },
+    {
+      "id": "artwork/L115-2",
+      "template_line": 115,
+      "template": "What is the {oldest} {religious_artwork} in the database?",
+      "query": "What is the newest Renaissance painting in the database?",
+      "values": {
+        "oldest": "newest",
+        "religious_artwork": "Renaissance painting"
+      }
+    },
+    {
+      "id": "artwork/L116-1",
+      "template_line": 116,
+      "template": "What is the {genre_slash_century} of the {oldest} painting in the database?",
+      "query": "What is the year of the newest painting in the database?",
+      "values": {
+        "genre_slash_century": "year",
+        "oldest": "newest"
+      }
+    },
+    {
+      "id": "artwork/L116-2",
+      "template_line": 116,
+      "template": "What is the {genre_slash_century} of the {oldest} painting in the database?",
+      "query": "What is the movement of the newest painting in the database?",
+      "values": {
+        "genre_slash_century": "movement",
+        "oldest": "newest"
+      }
+    },
+    {
+      "id": "artwork/L119-1",
+      "template_line": 119,
+      "template": "Get the {century} of the {oldest} painting per {genre}.",
+      "query": "Get the year of the oldest painting per movement.",
+      "values": {
+        "century": "year",
+        "oldest": "oldest",
+        "genre": "movement"
+      }
+    },
+    {
+      "id": "artwork/L119-2",
+      "template_line": 119,
+      "template": "Get the {century} of the {oldest} painting per {genre}.",
+      "query": "Get the century of the oldest painting per genre.",
+      "values": {
+        "century": "century",
+        "oldest": "oldest",
+        "genre": "genre"
+      }
+    },
+    {
+      "id": "artwork/L120-1",
+      "template_line": 120,
+      "template": "Get the number of {religious_artwork}s for each {century}.",
+      "query": "Get the number of paintings for each century.",
+      "values": {
+        "religious_artwork": "painting",
+        "century": "century"
+      }
+    },
+    {
+      "id": "artwork/L120-2",
+      "template_line": 120,
+      "template": "Get the number of {religious_artwork}s for each {century}.",
+      "query": "Get the number of Renaissance paintings for each century.",
+      "values": {
+        "religious_artwork": "Renaissance painting",
+        "century": "century"
+      }
+    },
+    {
+      "id": "artwork/L123-1",
+      "template_line": 123,
+      "template": "Plot the {century} of the {oldest} painting per {genre}.",
+      "query": "Plot the year of the oldest painting per movement.",
+      "values": {
+        "century": "year",
+        "oldest": "oldest",
+        "genre": "movement"
+      }
+    },
+    {
+      "id": "artwork/L123-2",
+      "template_line": 123,
+      "template": "Plot the {century} of the {oldest} painting per {genre}.",
+      "query": "Plot the year of the newest painting per genre.",
+      "values": {
+        "century": "year",
+        "oldest": "newest",
+        "genre": "genre"
+      }
+    },
+    {
+      "id": "artwork/L124-1",
+      "template_line": 124,
+      "template": "Plot the number of {religious_artwork}s for each {century}.",
+      "query": "Plot the number of Renaissance paintings for each century.",
+      "values": {
+        "religious_artwork": "Renaissance painting",
+        "century": "century"
+      }
+    },
+    {
+      "id": "artwork/L124-2",
+      "template_line": 124,
+      "template": "Plot the number of {religious_artwork}s for each {century}.",
+      "query": "Plot the number of Renaissance paintings for each year.",
+      "values": {
+        "religious_artwork": "Renaissance painting",
+        "century": "year"
+      }
+    },
+    {
+      "id": "artwork/L128-1",
+      "template_line": 128,
+      "template": "What is depicted on the {oldest} {religious_artwork} in the database?",
+      "query": "What is depicted on the newest religious artwork in the database?",
+      "values": {
+        "oldest": "newest",
+        "religious_artwork": "religious artwork"
+      }
+    },
+    {
+      "id": "artwork/L128-2",
+      "template_line": 128,
+      "template": "What is depicted on the {oldest} {religious_artwork} in the database?",
+      "query": "What is depicted on the oldest impressionist artwork in the database?",
+      "values": {
+        "oldest": "oldest",
+        "religious_artwork": "impressionist artwork"
+      }
+    },
+    {
+      "id": "artwork/L129-1",
+      "template_line": 129,
+      "template": "What is the {genre_slash_century} of the painting that depicts the {highest} number of {animals}?",
+      "query": "What is the year of the painting that depicts the highest number of swords?",
+      "values": {
+        "genre_slash_century": "year",
+        "highest": "highest",
+        "animals": "swords"
+      }
+    },
+    {
+      "id": "artwork/L129-2",
+      "template_line": 129,
+      "template": "What is the {genre_slash_century} of the painting that depicts the {highest} number of {animals}?",
+      "query": "What is the century of the painting that depicts the lowest number of animals?",
+      "values": {
+        "genre_slash_century": "century",
+        "highest": "lowest",
+        "animals": "animals"
+      }
+    },
+    {
+      "id": "artwork/L132-1",
+      "template_line": 132,
+      "template": "Get the {highest} number of {animals} depicted in paintings of each {genre_slash_century}.",
+      "query": "Get the lowest number of animals depicted in paintings of each century.",
+      "values": {
+        "highest": "lowest",
+        "animals": "animals",
+        "genre_slash_century": "century"
+      }
+    },
+    {
+      "id": "artwork/L132-2",
+      "template_line": 132,
+      "template": "Get the {highest} number of {animals} depicted in paintings of each {genre_slash_century}.",
+      "query": "Get the lowest number of babies depicted in paintings of each century.",
+      "values": {
+        "highest": "lowest",
+        "animals": "babies",
+        "genre_slash_century": "century"
+      }
+    },
+    {
+      "id": "artwork/L133-1",
+      "template_line": 133,
+      "template": "Get the number of paintings that depict {madonna_and_child} for each {genre_slash_century}.",
+      "query": "Get the number of paintings that depict Animals for each genre.",
+      "values": {
+        "madonna_and_child": "Animals",
+        "genre_slash_century": "genre"
+      }
+    },
+    {
+      "id": "artwork/L133-2",
+      "template_line": 133,
+      "template": "Get the number of paintings that depict {madonna_and_child} for each {genre_slash_century}.",
+      "query": "Get the number of paintings that depict Fruit for each movement.",
+      "values": {
+        "madonna_and_child": "Fruit",
+        "genre_slash_century": "movement"
+      }
+    },
+    {
+      "id": "artwork/L136-1",
+      "template_line": 136,
+      "template": "Plot the {highest} number of {animals} depicted in each {genre_slash_century}.",
+      "query": "Plot the highest number of animals depicted in each movement.",
+      "values": {
+        "highest": "highest",
+        "animals": "animals",
+        "genre_slash_century": "movement"
+      }
+    },
+    {
+      "id": "artwork/L136-2",
+      "template_line": 136,
+      "template": "Plot the {highest} number of {animals} depicted in each {genre_slash_century}.",
+      "query": "Plot the highest number of swords depicted in each year.",
+      "values": {
+        "highest": "highest",
+        "animals": "swords",
+        "genre_slash_century": "year"
+      }
+    },
+    {
+      "id": "artwork/L137-1",
+      "template_line": 137,
+      "template": "Plot the number of paintings that depict {madonna_and_child} for each {genre_slash_century}.",
+      "query": "Plot the number of paintings that depict Monarch for each year.",
+      "values": {
+        "madonna_and_child": "Monarch",
+        "genre_slash_century": "year"
+      }
+    },
+    {
+      "id": "artwork/L137-2",
+      "template_line": 137,
+      "template": "Plot the number of paintings that depict {madonna_and_child} for each {genre_slash_century}.",
+      "query": "Plot the number of paintings that depict Animals for each genre.",
+      "values": {
+        "madonna_and_child": "Animals",
+        "genre_slash_century": "genre"
+      }
+    },
+    {
+      "id": "rotowire/L162-1",
+      "template_line": 162,
+      "template": "Who is the {tallest} {small_forward} in the database?",
+      "query": "Who is the smallest power forward in the database?",
+      "values": {
+        "tallest": "smallest",
+        "small_forward": "power forward"
+      }
+    },
+    {
+      "id": "rotowire/L162-2",
+      "template_line": 162,
+      "template": "Who is the {tallest} {small_forward} in the database?",
+      "query": "Who is the smallest small forward in the database?",
+      "values": {
+        "tallest": "smallest",
+        "small_forward": "small forward"
+      }
+    },
+    {
+      "id": "rotowire/L163-1",
+      "template_line": 163,
+      "template": "What is the {oldest} team in the {eastern_conference} in terms of the founding date?",
+      "query": "What is the youngest team in the Eastern conference in terms of the founding date?",
+      "values": {
+        "oldest": "youngest",
+        "eastern_conference": "Eastern conference"
+      }
+    },
+    {
+      "id": "rotowire/L163-2",
+      "template_line": 163,
+      "template": "What is the {oldest} team in the {eastern_conference} in terms of the founding date?",
+      "query": "What is the oldest team in the Western conference in terms of the founding date?",
+      "values": {
+        "oldest": "oldest",
+        "eastern_conference": "Western conference"
+      }
+    },
+    {
+      "id": "rotowire/L165-1",
+      "template_line": 165,
+      "template": "Who is the {tallest} player per {position}?",
+      "query": "Who is the oldest player per position?",
+      "values": {
+        "tallest": "oldest",
+        "position": "position"
+      }
+    },
+    {
+      "id": "rotowire/L165-2",
+      "template_line": 165,
+      "template": "Who is the {tallest} player per {position}?",
+      "query": "Who is the youngest player per position?",
+      "values": {
+        "tallest": "youngest",
+        "position": "position"
+      }
+    },
+    {
+      "id": "rotowire/L166-1",
+      "template_line": 166,
+      "template": "What is the {oldest} team per {division} in terms of the founding date?",
+      "query": "What is the youngest team per division in terms of the founding date?",
+      "values": {
+        "oldest": "youngest",
+        "division": "division"
+      }
+    },
+    {
+      "id": "rotowire/L166-2",
+      "template_line": 166,
+      "template": "What is the {oldest} team per {division} in terms of the founding date?",
+      "query": "What is the oldest team per conference in terms of the founding date?",
+      "values": {
+        "oldest": "oldest",
+        "division": "conference"
+      }
+    },
+    {
+      "id": "rotowire/L169-1",
+      "template_line": 169,
+      "template": "Plot the {age_player} of the {oldest} player per {position}.",
+      "query": "Plot the height of the oldest player per position.",
+      "values": {
+        "age_player": "height",
+        "oldest": "oldest",
+        "position": "position"
+      }
+    },
+    {
+      "id": "rotowire/L169-2",
+      "template_line": 169,
+      "template": "Plot the {age_player} of the {oldest} player per {position}.",
+      "query": "Plot the height of the youngest player per position.",
+      "values": {
+        "age_player": "height",
+        "oldest": "youngest",
+        "position": "position"
+      }
+    },
+    {
+      "id": "rotowire/L170-1",
+      "template_line": 170,
+      "template": "Plot the {age_team} of the {oldest} team per {division} in terms of the founding date.",
+      "query": "Plot the age of the oldest team per conference in terms of the founding date.",
+      "values": {
+        "age_team": "age",
+        "oldest": "oldest",
+        "division": "conference"
+      }
+    },
+    {
+      "id": "rotowire/L170-2",
+      "template_line": 170,
+      "template": "Plot the {age_team} of the {oldest} team per {division} in terms of the founding date.",
+      "query": "Plot the age of the oldest team per division in terms of the founding date.",
+      "values": {
+        "age_team": "age",
+        "oldest": "oldest",
+        "division": "division"
+      }
+    },
+    {
+      "id": "rotowire/L175-1",
+      "template_line": 175,
+      "template": "Who made the {highest} number of {points} in any game?",
+      "query": "Who made the highest number of rebounds in any game?",
+      "values": {
+        "highest": "highest",
+        "points": "rebounds"
+      }
+    },
+    {
+      "id": "rotowire/L175-2",
+      "template_line": 175,
+      "template": "Who made the {highest} number of {points} in any game?",
+      "query": "Who made the highest number of points in any game?",
+      "values": {
+        "highest": "highest",
+        "points": "points"
+      }
+    },
+    {
+      "id": "rotowire/L176-1",
+      "template_line": 176,
+      "template": "Which team made the {highest} {number_of_total_points} in any game?",
+      "query": "Which team made the highest number of total points in any game?",
+      "values": {
+        "highest": "highest",
+        "number_of_total_points": "number of total points"
+      }
+    },
+    {
+      "id": "rotowire/L176-2",
+      "template_line": 176,
+      "template": "Which team made the {highest} {number_of_total_points} in any game?",
+      "query": "Which team made the lowest number of points in 1st quarter in any game?",
+      "values": {
+        "highest": "lowest",
+        "number_of_total_points": "number of points in 1st quarter"
+      }
+    },
+    {
+      "id": "rotowire/L179-1",
+      "template_line": 179,
+      "template": "For each player, what is the {highest} number of {points} they made in a game?",
+      "query": "For each player, what is the lowest number of field goals they made in a game?",
+      "values": {
+        "highest": "lowest",
+        "points": "field goals"
+      }
+    },
+    {
+      "id": "rotowire/L179-2",
+      "template_line": 179,
+      "template": "For each player, what is the {highest} number of {points} they made in a game?",
+      "query": "For each player, what is the lowest number of three pointers they made in a game?",
+      "values": {
+        "highest": "lowest",
+        "points": "three pointers"
+      }
+    },
+    {
+      "id": "rotowire/L180-1",
+      "template_line": 180,
+      "template": "How many games did each team {win}?",
+      "query": "How many games did each team loose?",
+      "values": {
+        "win": "loose"
+      }
+    },
+    {
+      "id": "rotowire/L180-2",
+      "template_line": 180,
+      "template": "How many games did each team {win}?",
+      "query": "How many games did each team win?",
+      "values": {
+        "win": "win"
+      }
+    },
+    {
+      "id": "rotowire/L183-1",
+      "template_line": 183,
+      "template": "Plot the {highest} number of {points} made by players from each {position}.",
+      "query": "Plot the lowest number of rebounds made by players from each position.",
+      "values": {
+        "highest": "lowest",
+        "points": "rebounds",
+        "position": "position"
+      }
+    },
+    {
+      "id": "rotowire/L183-2",
+      "template_line": 183,
+      "template": "Plot the {highest} number of {points} made by players from each {position}.",
+      "query": "Plot the highest number of three pointers made by players from each position.",
+      "values": {
+        "highest": "highest",
+        "points": "three pointers",
+        "position": "position"
+      }
+    },
+    {
+      "id": "rotowire/L184-1",
+      "template_line": 184,
+      "template": "Plot the  {highest} {number_of_total_points} made by teams from each {division}.",
+      "query": "Plot the  highest number of total points made by teams from each division.",
+      "values": {
+        "highest": "highest",
+        "number_of_total_points": "number of total points",
+        "division": "division"
+      }
+    },
+    {
+      "id": "rotowire/L184-2",
+      "template_line": 184,
+      "template": "Plot the  {highest} {number_of_total_points} made by teams from each {division}.",
+      "query": "Plot the  highest percentage of field goals made by teams from each conference.",
+      "values": {
+        "highest": "highest",
+        "number_of_total_points": "percentage of field goals",
+        "division": "conference"
+      }
+    }
+  ]
+}

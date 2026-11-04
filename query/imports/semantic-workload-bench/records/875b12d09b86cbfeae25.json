@@ -1,0 +1,78 @@
+{
+  "id": "sembench/ecomm/Q9",
+  "group": "sembench-ecomm",
+  "query": "Based on product images, find pairs of distinct products under $8\nin a single base color (Black, Blue, Red, White, Orange, or Green)\nthat depict objects of the same category and the same dominant surface color.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/semantic-query-discovery-20260908/sembench/checkout/files/ecomm/queries/q9.toml",
+  "source_line": null,
+  "provenance": "native_nl_reconstructed",
+  "status": "logical_only",
+  "note": "gold price<800，且用baseColour/colour1/colour2人工字段预筛。模型只能通过公开模态或明确开放字段得到这些事实。 图依据原自然语言重建；扫描中的关联媒体是概念输入，不假定已核对物理表名/外键。",
+  "composition": "substantive_relational",
+  "graph": {
+    "root": "n0",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "Project",
+        "detail": "id1,id2",
+        "kind": "relational"
+      },
+      {
+        "id": "n1",
+        "op": "Filter",
+        "detail": "id1 != id2",
+        "kind": "relational"
+      },
+      {
+        "id": "n2",
+        "op": "SJoin",
+        "detail": "图像物品同类别且同主色",
+        "kind": "semantic"
+      },
+      {
+        "id": "n3",
+        "op": "SFilter",
+        "detail": "image为指定六色之一且单一主色",
+        "kind": "semantic"
+      },
+      {
+        "id": "n4",
+        "op": "Filter",
+        "detail": "price < $8；单位待核",
+        "kind": "relational"
+      },
+      {
+        "id": "n5",
+        "op": "Scan",
+        "detail": "Products：id, title, description, price, image refs",
+        "kind": "relational"
+      }
+    ],
+    "edges": [
+      [
+        "n5",
+        "n4"
+      ],
+      [
+        "n4",
+        "n3"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n3",
+        "n2"
+      ],
+      [
+        "n2",
+        "n1"
+      ],
+      [
+        "n1",
+        "n0"
+      ]
+    ]
+  }
+}

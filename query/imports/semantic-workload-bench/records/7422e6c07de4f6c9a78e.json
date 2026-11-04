@@ -1,0 +1,19 @@
+{
+  "id": "public-task/shared-environment-audit-20260908-v76/inspection-v1/public/task",
+  "group": "public-tasks",
+  "query": "Under the author31pageAAEC guidelines, extract majorclaims/claims/premises with exact character spans, premise supports/attacks edges, and claim For/Against stance. Claim-to-majorclaim links are encoded via stance, not invented explicit relation gold.",
+  "source": "/Volumes/Element/Github2/semantic-workload-bench/data/shared-environment-audit-20260908-v76/inspection-v1/public/task.json",
+  "source_line": null,
+  "provenance": "local_derived",
+  "status": "source_definition",
+  "note": "",
+  "composition": "",
+  "graph": null,
+  "task_definition": {
+    "status": "INSPECTION_DEVELOPMENT_NOT_QUALIFIED",
+    "task": "Under the author31pageAAEC guidelines, extract majorclaims/claims/premises with exact character spans, premise supports/attacks edges, and claim For/Against stance. Claim-to-majorclaim links are encoded via stance, not invented explicit relation gold.",
+    "input": "Full source essay including title plus source writing prompt. Prompt decoded Mac Roman: evidence-backed inference; original bytes retained evaluator-side.",
+    "scope": "Local academic research construction; do not redistribute source data. Original boundary conflicts removed as disclosed gold-exposed development cleaning, not independent confirmation. No model execution or semantic quality claim."
+  },
+  "domain": "shared-environment-audit-20260908"
+}

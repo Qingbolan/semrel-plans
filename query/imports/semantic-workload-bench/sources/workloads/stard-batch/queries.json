@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "dataset": "stard",
+  "readiness": "DEVELOPMENT_RETRIEVAL_ONLY",
+  "lake_description": "question records 与共享法条 catalog.jsonl（id/name/content）。原始 literal backslash-n 规范化为换行；source qrels、相关法规、match_id/name 都不公开。",
+  "output_contract": {
+    "value": "Ranked, duplicate-free list of public catalog label_id strings; singleton for HSCodeComp/UDRP. Empty OK is allowed for set-valued tasks. ABSTAIN uses null value and nonempty reason.",
+    "status": [
+      "OK",
+      "ABSTAIN"
+    ],
+    "evidence_refs": "Optional list of public relative file paths. Existence is checked; evidence sufficiency is not inferred.",
+    "ranking": "Order is prediction rank, not source gold order. No confidence values are required."
+  },
+  "filter_match": "exact",
+  "queries": [
+    {
+      "id": "stard-Q1-v1",
+      "kind": "semantic_primary",
+      "request": "For every question in records.json, return a ranked, duplicate-free list of relevant article IDs from lake/catalog.jsonl. Use the frozen article corpus. This is relevant-article retrieval, not a legal ruling or a complete legal answer. Do not infer that unannotated or unreturned articles are legally inapplicable.",
+      "dag": [
+        "scan_questions",
+        "sem_map_decompose_issues",
+        "retrieve_full_catalog",
+        "sem_map_relevance_rank",
+        "validate_article_ids"
+      ],
+      "gold": "人工相关法条集合；排名指标可对无序qrels评估，非原gold顺序",
+      "metrics": [
+        "Recall@k",
+        "MRR@k",
+        "source-label set F1",
+        "coverage"
+      ]
+    },
+    {
+      "id": "stard-Q2-v1",
+      "kind": "derived_filter",
+      "request": "返回涉及指定法条的咨询记录清单与数量",
+      "parameters": {
+        "target_label": {
+          "type": "string",
+          "example": "705"
+        }
+      },
+      "dag": [
+        "Q1",
+        "filter_predicted_label_or_prefix",
+        "project_record_id",
+        "count"
+      ],
+      "gold": "Derived from the same Q1 labels; not independent gold"
+    },
+    {
+      "id": "stard-Q3-v1",
+      "kind": "derived_aggregate",
+      "request": "按法条统计命中的咨询数，生成咨询—法条索引",
+      "dag": [
+        "Q1",
+        "unnest_unique_labels",
+        "group_by_label_and_source_entity",
+        "count_distinct_records",
+        "emit_completeness"
+      ],
+      "gold": "Derived from Q1; partial groups explicitly marked incomplete"
+    },
+    {
+      "id": "stard-Q4-v1",
+      "kind": "operational_review_queue",
+      "request": "返回未完成记录及原因，并报告全量coverage；缺事实和运行失败均需保留原因，不当负例。",
+      "dag": [
+        "Q1",
+        "filter_status_ABSTAIN",
+        "project_id_reason",
+        "coverage"
+      ],
+      "gold": "No independent gold; this is execution accounting, not missing-fact correctness"
+    }
+  ],
+  "scientific_boundary": "5 primary tasks across five lakes; derived queries are not extra datasets, independent labels or observed execution families. No model runs or measured K.",
+  "limitations": "原相关性标签不保证完整依据或回答充分性；全量关联校验不等于语义正确。"
+}

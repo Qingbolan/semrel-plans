@@ -1,0 +1,21 @@
+{
+  "status": "DEVELOPMENT_INSPECTION_VIEW",
+  "input": "Raw document sentences and given target spans; no target lemma, frame or LU ID.",
+  "query": "Map each given target to a FrameNet 1.7 frame and all annotated FE layers, including null instantiation types.",
+  "offsets": "Zero-based Python character offsets, exclusive end, relative to original sentence.",
+  "resources": [
+    "environment.json",
+    "manual.pdf"
+  ],
+  "runtime_failure": {
+    "status": "ABSTAIN",
+    "result": null
+  },
+  "null_types": [
+    "DNI",
+    "INI",
+    "CNI",
+    "INC"
+  ],
+  "scope": "Given-target task, not target discovery. No unannotated-negative inference. No confirmation split."
+}
