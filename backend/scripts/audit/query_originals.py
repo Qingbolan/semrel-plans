@@ -8,17 +8,17 @@ from query_originals import extract_text
 def text_equal(a,b):return a==b
 
 def rows(p):return [json.loads(s) for s in p.read_text().splitlines() if s.strip()]
-qs=rows(ROOT/'query/queries.jsonl');details={r['query_id']:r for r in rows(ROOT/'query/task_details.jsonl')};sources={r['source_id']:r for r in rows(ROOT/'query/sources.jsonl')}
-index=json.loads((ROOT/'query/source-snapshots/index.json').read_text())
-contracts={r['query_id']:r for r in rows(ROOT/'query/input_contracts.jsonl')}
+qs=rows(ROOT/'catalog/queries.jsonl');details={r['query_id']:r for r in rows(ROOT/'catalog/task_details.jsonl')};sources={r['source_id']:r for r in rows(ROOT/'catalog/sources.jsonl')}
+index=json.loads((ROOT/'upstream/snapshots/index.json').read_text())
+contracts={r['query_id']:r for r in rows(ROOT/'catalog/input_contracts.jsonl')}
 json_tasks={}
-for p in (ROOT/'query/imports/8-17').glob('*.json'):
+for p in (ROOT/'upstream/imports/8-17').glob('*.json'):
     data=json.loads(p.read_text())
     if isinstance(data,dict):data=data['tasks']
     for i,r in enumerate(data):json_tasks[r['task_id']]=(p,i)
-csv_tasks={(r['benchmark'],r['task_id']):p for p in (ROOT/'query/imports/7-30').glob('*_per_query.csv') for r in csv.DictReader(p.open())}
+csv_tasks={(r['benchmark'],r['task_id']):p for p in (ROOT/'upstream/imports/7-30').glob('*_per_query.csv') for r in csv.DictReader(p.open())}
 revision='8c2cac89b21c6782239e8e5b03d326d0c029b655'
-imported={r['query_id']:r for r in rows(ROOT/'query/original_queries.jsonl') if r['query_id'].startswith(('swb/','abacus/'))}
+imported={r['query_id']:r for r in rows(ROOT/'catalog/original_queries.jsonl') if r['query_id'].startswith(('swb/','abacus/'))}
 records=[]
 for q in qs:
     if q['query_id'] in imported:
@@ -30,7 +30,7 @@ for q in qs:
     if benchmark=='sembench':
         group=q['scenario_id'];tid=q['source_query_id']
         rel=f'files/{group}/queries/{tid}.toml' if group=='ecomm' else f'files/{group}/query/natural_language/{tid}.'+('json' if group=='mmqa' else 'txt')
-        path=ROOT/'query/source-snapshots/sembench/SemBench'/revision/rel
+        path=ROOT/'upstream/snapshots/sembench/SemBench'/revision/rel
         selector={'type':'toml'} if group=='ecomm' else {'type':'json_field','field':'nl_question'} if group=='mmqa' else {'type':'text'}
     elif benchmark=='tag-bench':
         path=ROOT/index[sources[q['source_id']]['location'].split('#')[0]];selector={'type':'python_query','function':'pipeline_'+q['source_query_id']}
@@ -69,7 +69,7 @@ for q in qs:
     assert text.strip(),qid
     if qid in details:assert text==details[qid]['original_record']['query'],qid
     records.append({'query_id':qid,'text':text,'kind':kind,'verification':verification,'source_path':path.relative_to(ROOT).as_posix(),'selector':selector,'source_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'text_sha256':hashlib.sha256(text.encode()).hexdigest(),'upstream_comparison':comparison})
-(ROOT/'query/original_queries.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records))
+(ROOT/'catalog/original_queries.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records))
 with (ROOT/'exports/query_text_audit.csv').open('w',newline='') as f:
     writer=csv.writer(f);writer.writerow(['query_id','kind','verification','source_path','selector','upstream_comparison','original_query'])
     for r in records:writer.writerow([r['query_id'],r['kind'],r['verification'],r['source_path'],json.dumps(r['selector']),json.dumps(r['upstream_comparison']),r['text']])

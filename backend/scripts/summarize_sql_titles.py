@@ -79,7 +79,7 @@ def short(condition, limit=70):
 if __name__ == '__main__':
     records = json.loads(OUTPUT.read_text())
     count = 0
-    for line in (ROOT / 'query/queries.jsonl').read_text().splitlines():
+    for line in (ROOT / 'catalog/queries.jsonl').read_text().splitlines():
         q = json.loads(line)
         if q['benchmark_id'] not in ('uda-bench', 'quest') or not re.match(r'\s*SELECT\b', q['title'], re.I):
             continue

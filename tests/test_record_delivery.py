@@ -14,7 +14,7 @@ class RecordDeliveryTest(unittest.TestCase):
         cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'dist/assets/plans.json').read_text())['queries']}
 
     def test_817_task_documents_preserve_every_supplied_field(self):
-        for line in (ROOT / 'query/task_details.jsonl').read_text().splitlines():
+        for line in (ROOT / 'catalog/task_details.jsonl').read_text().splitlines():
             detail = json.loads(line)
             if detail['query_id'].startswith('8-17/'):
                 self.assertEqual(self.queries[detail['query_id']]['task_record'], detail['original_record'])
@@ -27,7 +27,7 @@ class RecordDeliveryTest(unittest.TestCase):
             self.assertIsInstance(record['query'],str)
             self.assertIsInstance(record['inputs'],list)
             self.assertTrue(record['reference_semantic_plan'])
-            self.assertEqual(json.loads((ROOT/q['task_path']).read_text()),record)
+            self.assertEqual(json.loads((ROOT/'dist'/q['task_path']).read_text()),record)
             for source in record['inputs']:
                 self.assertTrue({'source_id','dataset','source_type','role'} <= source.keys())
 

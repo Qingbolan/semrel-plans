@@ -7,8 +7,8 @@ from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
 FRONTEND_FILES = ('index.html', 'migration.html')
-FRONTEND_ROOTS = ('assets', 'viewer')
-DATA_ROOTS = ('data', 'environment', 'exports', 'files', 'query', 'docs', 'papers')
+FRONTEND_ROOTS = ('assets', 'viewer', 'tasks')
+DATA_ROOTS = ('data', 'environment', 'exports', 'files', 'catalog', 'upstream', 'docs', 'papers')
 # Paper full texts are kept for reading and hashing but never published (copyright).
 UNPUBLISHED = ('papers/readings/fulltext/', 'papers/readings/text/', 'papers/literature/2026-10-14/semantic/pdfs/',
                'papers/literature/2026-10-14/data-agents/evidence/', 'papers/literature/2026-10-14/data-agents/publisher-evidence/')

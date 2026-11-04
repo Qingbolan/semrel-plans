@@ -10,7 +10,7 @@
 ## 来源核对
 
 - 原 Veterans URL `https://ceur-ws.org/Vol-2385/paper1.pdf` 的标题是 Automatic Classification of Rhetorical Roles for Sentences: Comparing Rule-Based Scripts with Machine Learning（2019）。下载件保留为被拒绝的来源证据，不计 READ。
-- 目标 2017 年作者主页 PDF 请求返回 403；作者 LLTLab/VetClaims 仓库成功获取。当前 `query/sources.jsonl` 的来源地址、出版年份和版本已纠正，既有 `swb_561a653983f0f575` source_id 保持不变，避免丢失派生查询关联。历史导入/注册资料中旧链接作为原始记录保留，本次来源更正以当前来源表和收据为准；重新导入历史快照时须保留此更正。
+- 目标 2017 年作者主页 PDF 请求返回 403；作者 LLTLab/VetClaims 仓库成功获取。当前 `catalog/sources.jsonl` 的来源地址、出版年份和版本已纠正，既有 `swb_561a653983f0f575` source_id 保持不变，避免丢失派生查询关联。历史导入/注册资料中旧链接作为原始记录保留，本次来源更正以当前来源表和收据为准；重新导入历史快照时须保留此更正。
 - DrugProt 当前目录实际指向 2023 Database 文章（baad080），入口返回 HTTP 418。搜索到的 2021 会议综述既请求返回 403，又不是同一目标版本，因此未使用。已发现 2023 年机构仓库候选入口，下一批继续获取；不能把暂未获取说成全文不存在。
 - 获取结果在 `acquisition-batch-03.json`，完成项及逐条证据在 `reviews.json` / `sources.json`。没有独立复核，不能标 EVIDENCE_CHECKED。
 

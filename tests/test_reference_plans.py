@@ -49,7 +49,7 @@ class ReferencePlansTest(unittest.TestCase):
             self.parse('SCAN_TABLE(unclosed')
 
     def test_full_reference_lowering_is_reproducible(self):
-        tables = {name: [json.loads(line) for line in (ROOT / 'query' / (name + '.jsonl')).read_text().splitlines()] for name in ('queries','nodes','edges','task_details','input_contracts','original_queries')}
+        tables = {name: [json.loads(line) for line in (ROOT / 'catalog' / (name + '.jsonl')).read_text().splitlines()] for name in ('queries','nodes','edges','task_details','input_contracts','original_queries')}
         original = json.loads(json.dumps(tables))
         lower_collections(tables, OPS, ROOT)
         self.assertEqual(tables, original)

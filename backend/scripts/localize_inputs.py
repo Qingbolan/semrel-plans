@@ -13,13 +13,13 @@ def destination(path):
     return ROOT/'data/source-inputs'/hashlib.sha256(text.encode()).hexdigest()[:12]/path.name
 
 def main():
-    contracts=[json.loads(line) for line in (ROOT/'query/input_contracts.jsonl').read_text().splitlines()]
+    contracts=[json.loads(line) for line in (ROOT/'catalog/input_contracts.jsonl').read_text().splitlines()]
     bindings=set()
     for contract in contracts:
         for row in contract['tables']+contract['environment']['resources']:
             if isinstance(row,dict) and isinstance(row.get('path'),str) and row['path'].startswith('/'):
                 bindings.add(Path(row['path']))
-    queries=[json.loads(line) for line in (ROOT/'query/queries.jsonl').read_text().splitlines()]
+    queries=[json.loads(line) for line in (ROOT/'catalog/queries.jsonl').read_text().splitlines()]
     environments=[ROOT/'environment'/identity/'manifest.json' for identity in sorted({q['environment_id'] for q in queries})]
     datasets={json.loads(path.read_text())['dataset_id'] for path in environments}
     manifests=environments+[ROOT/'data'/identity/'manifest.json' for identity in sorted(datasets)]
@@ -45,7 +45,7 @@ def main():
         if isinstance(value,dict):return {key:rewrite(item) for key,item in value.items()}
         if isinstance(value,list):return list(map(rewrite,value))
         return value
-    (ROOT/'query/input_contracts.jsonl').write_text(''.join(json.dumps(rewrite(row),ensure_ascii=False)+'\n' for row in contracts))
+    (ROOT/'catalog/input_contracts.jsonl').write_text(''.join(json.dumps(rewrite(row),ensure_ascii=False)+'\n' for row in contracts))
     for path in manifests:
         data=json.loads(path.read_text());updated=rewrite(data)
         if updated!=data:

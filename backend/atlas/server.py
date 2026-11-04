@@ -54,7 +54,7 @@ class AtlasHandler(SimpleHTTPRequestHandler):
     def list_directory(self, path):
         directory = Path(path)
         relative = directory.relative_to(self.server.root)
-        if not relative.parts or relative.parts[0] not in {'data', 'environment', 'query', 'exports'}:
+        if not relative.parts or relative.parts[0] not in {'data', 'environment', 'catalog', 'upstream', 'exports'}:
             self.send_error(404, 'Directory listing is disabled')
             return None
         links = []

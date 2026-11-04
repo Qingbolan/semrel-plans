@@ -9,7 +9,7 @@ from query_originals import extract_text
 
 class AbacusImportTests(unittest.TestCase):
  def test_original_queries_match_official_source(self):
-  rows=[r for r in map(json.loads,(ROOT/'query/original_queries.jsonl').read_text().splitlines()) if r['query_id'].startswith('abacus/')]
+  rows=[r for r in map(json.loads,(ROOT/'catalog/original_queries.jsonl').read_text().splitlines()) if r['query_id'].startswith('abacus/')]
   self.assertGreater(len(rows),100)
   for r in rows:self.assertEqual(r['text'],extract_text(ROOT/r['source_path'],r['selector']))
  def test_seeds_are_covered_once_per_distinct_question(self):
@@ -17,7 +17,7 @@ class AbacusImportTests(unittest.TestCase):
   self.assertEqual(set(seeds),{'0','1','2','3','4','6','8','9'})
   for ids in seeds.values():self.assertEqual(len(ids),100)
   ids={qid for values in seeds.values() for qid in values}
-  rows=[r for r in map(json.loads,(ROOT/'query/queries.jsonl').read_text().splitlines()) if r['collection_label']=='Abacus MMQA']
+  rows=[r for r in map(json.loads,(ROOT/'catalog/queries.jsonl').read_text().splitlines()) if r['collection_label']=='Abacus MMQA']
   self.assertEqual({r['query_id'].split('/')[-1] for r in rows},ids)
  def test_gold_is_not_passed_as_input(self):
   for line in (ROOT/'data/abacus/mmqa/questions.jsonl').read_text().splitlines():self.assertEqual(set(json.loads(line)),{'qid','question'})
@@ -35,8 +35,8 @@ class AbacusImportTests(unittest.TestCase):
    self.assertEqual(ids,{id for pool in pools.values() for id in pool[part]})
    self.assertTrue(all(set(r)=={part+'_id',part} for r in rows))
  def test_every_query_links_to_abacus_paper(self):
-  queries=[r['query_id'] for r in map(json.loads,(ROOT/'query/queries.jsonl').read_text().splitlines()) if r['benchmark_id']=='abacus']
-  refs=list(map(json.loads,(ROOT/'query/query_sources.jsonl').read_text().splitlines()))
+  queries=[r['query_id'] for r in map(json.loads,(ROOT/'catalog/queries.jsonl').read_text().splitlines()) if r['benchmark_id']=='abacus']
+  refs=list(map(json.loads,(ROOT/'catalog/query_sources.jsonl').read_text().splitlines()))
   self.assertEqual(set(queries),{r['query_id'] for r in refs if r['source_id']=='abacus_paper' and r['role']=='paper'})
 
 if __name__=='__main__':unittest.main()

@@ -71,7 +71,7 @@ GROUP BY q.benchmark_id,n.operator_type;
 
 ## 环境与数据契约
 
-规范化查询表已迁移到 `query/`，不保留旧路径副本。`queries.environment_id` 必须引用 `environment/` 中存在的 manifest；环境的 `dataset_id` 必须引用 `data/` 中存在的 manifest。manifest ID 必须与所在相对目录一致。数据来源 ID 必须存在于 sources 表。
+规范化查询表已迁移到 `catalog/`，不保留旧路径副本。`queries.environment_id` 必须引用 `environment/` 中存在的 manifest；环境的 `dataset_id` 必须引用 `data/` 中存在的 manifest。manifest ID 必须与所在相对目录一致。数据来源 ID 必须存在于 sources 表。
 
 数据 schema、版本、记录数与文件路径尚未核验时为 null；环境 engine、model、hardware 尚未配置时为 null。导出同时包含 environments 与 datasets 表，集合字段在 SQLite / CSV 中编码为 JSON。浏览器 inputs 是输入节点的逻辑投影，不冒充物理绑定。
 
@@ -86,7 +86,7 @@ environment 与 data 仍按集合／领域共享。8-17 的 availability=local_e
 提供的 JSON 任务使用来源角色 task_definition，CSV 查询分析使用 analysis；它们是本地证据角色，不冒充论文或规则协议。
 
 查询页的“数据环境”指查询所需的辅助资料，不是运行机器、模型或引擎配置。
-`query/input_contracts.jsonl` 保存经来源核对的逐查询输入契约：`environment.requirement`
+`catalog/input_contracts.jsonl` 保存经来源核对的逐查询输入契约：`environment.requirement`
 取 `none`（无）、`required`（需要）或 `unspecified`（未说明）；`tables` 描述输入关系、
 列类型以及传入语义算子的 `passed_columns`。列定义不代表已经绑定实际数据行。
 每条查询均有独立契约与来源定位，构建时要求覆盖全部 query ID。详见 [逐查询核对说明](input-audit.md)。
@@ -100,14 +100,14 @@ environment 与 data 仍按集合／领域共享。8-17 的 availability=local_e
 `task_id`、`datasets`、`query`、`tags`、`inputs`、`reference_semantic_plan`、`gold`、`evaluation`。
 8-17 原记录完整保留；其他集合由 TaskRecords 根据逐查询输入契约、参考计划和来源记录生成。
 缺少 gold、评估指标或分析标签时使用 null，不生成参考答案。
-原始源文件仍保存在 query/imports 和 query/source-snapshots 中。
+原始源文件仍保存在 upstream/imports 和 upstream/snapshots 中。
 
 输入延续 source_id/dataset/source_type/role，额外的 columns 和 semantic_columns 记录已核对的列定义；
 辅助环境资料作为 role=context 的输入登记。原有 8-17 输入不添加或改写字段。
-逐条下载文件位于 query/tasks/<问题集合>/<顺序编号>.json，全量文件为 exports/tasks.jsonl。
+逐条下载文件位于 tasks/<问题集合>/<顺序编号>.json，全量文件为 exports/tasks.jsonl。
 
 ### Query 原文与显示标题
 
-`query/original_queries.jsonl` 为每条查询保存原文、来源文件、字段选择器和 SHA-256。`query/queries.jsonl` 的 `title` 只作为显示标题；英文查询页面以及按 8-17 格式整理的 JSON `query` 均使用来源原文，不能由标题翻译生成。中文显示独立管理。
+`catalog/original_queries.jsonl` 为每条查询保存原文、来源文件、字段选择器和 SHA-256。`catalog/queries.jsonl` 的 `title` 只作为显示标题；英文查询页面以及按 8-17 格式整理的 JSON `query` 均使用来源原文，不能由标题翻译生成。中文显示独立管理。
 
 SemBench 采用固定版本的 natural-language 文件，TAG 采用原始 pipeline 的 query 字符串；UDA 采用源 SQL。10 条本地定义保留本地 SQL 或原有标题，不声称来自论文的英文题目。8-17 和 7-30 保留用户提供文件中的 query 字段。7-30 另逐条比较上游快照；版本不同仍保留提供版本，差异记入 `upstream_comparison`。逐条审计表见 `exports/query_text_audit.csv`，可运行 `python3 backend/scripts/audit/query_originals.py` 重新核验生成。

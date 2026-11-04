@@ -28,7 +28,7 @@ reference_program 任务没有可编译依赖图，不生成 EAL，也不调用�
 
 7-30 的自然语言分析阶段保持原粒度，例如“relational/SQL/Python analysis only”仅映射为一个 COMPUTE 节点；SEM_JOIN 若未提供两路关系分支，也不虚构扫描输入。该集合的图是最小计划描述的结构投影，不是完整的关系代数执行计划。以上节点数不能当作实际执行工作量或与细粒度计划直接比较。
 
-重新整理：`python3 backend/scripts/lower_reference_plans.py`，随后 `python3 backend/scripts/build.py`。重新导入集合时也会调用相同转换器。query/imports 与 task_details 的原始证据不被改写。编译验证只证明语法与引用有效，未执行能力、查询或验证 gold。
+重新整理：`python3 backend/scripts/lower_reference_plans.py`，随后 `python3 backend/scripts/build.py`。重新导入集合时也会调用相同转换器。upstream/imports 与 task_details 的原始证据不被改写。编译验证只证明语法与引用有效，未执行能力、查询或验证 gold。
 
 字符串契约：导出参数声明 `string_encoding = "json-string-content-v1"`。EasyNet IR 原样保留 EAL 字符串转义；SemRel 展示层通过 `backend/atlas/eal_strings.py` 对声明该编码的参数解码一次，能力实现也应遵守同一契约。未声明的外部 EAL 参数保持原样。IR 本身不被改写。
 

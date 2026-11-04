@@ -54,7 +54,7 @@ def save(records):
 
 if __name__ == '__main__':
     records = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else {}
-    rows = [json.loads(line) for line in (ROOT / 'query/queries.jsonl').read_text().splitlines()]
+    rows = [json.loads(line) for line in (ROOT / 'catalog/queries.jsonl').read_text().splitlines()]
     rows = [r for r in rows if r['benchmark_id'] in ('8-17', '7-30')]
     pending = [r for r in rows if records.get(r['query_id'], {}).get('source') != r['title']]
     errors = []

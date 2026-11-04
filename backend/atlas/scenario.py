@@ -14,7 +14,7 @@ class Catalog:
         self.root = root
         self.content_en = json.loads((root / 'config/content-en.json').read_text())
         self.metadata = json.loads((root / 'config/catalog.json').read_text())
-        self.tables = {name: [json.loads(line) for line in (root / f'query/{name}.jsonl').read_text().splitlines() if line.strip()] for name in self.TABLES}
+        self.tables = {name: [json.loads(line) for line in (root / f'catalog/{name}.jsonl').read_text().splitlines() if line.strip()] for name in self.TABLES}
         self.operators = json.loads((root / 'config/operators.json').read_text())
         self.families = {op['operator_type']: op['family'] for op in self.operators}
         self.environments = self.load_manifests('environment', 'environment_id', {q['environment_id'] for q in self.tables['queries']})

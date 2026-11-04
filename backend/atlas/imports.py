@@ -10,7 +10,7 @@ from pathlib import Path
 class CollectionImporter:
     def __init__(self, root):
         self.root = Path(root)
-        self.tables = {name: self.read_rows(self.root / 'query' / f'{name}.jsonl')
+        self.tables = {name: self.read_rows(self.root / 'catalog' / f'{name}.jsonl')
                        for name in ('queries', 'nodes', 'edges', 'sources', 'query_sources', 'task_details', 'input_contracts', 'original_queries')}
         self.metadata = json.loads((self.root / 'config/catalog.json').read_text())
         for query in self.tables['queries']:
@@ -28,7 +28,7 @@ class CollectionImporter:
         path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
 
     def snapshot(self, source, collection):
-        relative = Path('query/imports') / collection / source.name
+        relative = Path('upstream/imports') / collection / source.name
         destination = self.root / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source, destination)
@@ -44,7 +44,7 @@ class CollectionImporter:
         ids = {q['query_id'] for q in self.tables['queries'] if q['benchmark_id'] == collection}
         for name in ('queries', 'nodes', 'edges', 'query_sources', 'task_details'):
             self.tables[name] = [r for r in self.tables[name] if r['query_id'] not in ids]
-        self.tables['sources'] = [s for s in self.tables['sources'] if not s['location'].startswith(f'query/imports/{collection}/')]
+        self.tables['sources'] = [s for s in self.tables['sources'] if not s['location'].startswith(f'upstream/imports/{collection}/')]
         self.metadata['scenarios'] = [s for s in self.metadata['scenarios'] if not s.startswith(f'files/{collection}/')]
 
     def environment(self, collection, domain, source_id, directory=None):
@@ -153,6 +153,6 @@ class CollectionImporter:
         for index, q in enumerate(self.tables['queries']):
             q['display_order'] = index
         for name, rows in self.tables.items():
-            (self.root / 'query' / f'{name}.jsonl').write_text(''.join(json.dumps(row, ensure_ascii=False) + '\n' for row in rows))
+            (self.root / 'catalog' / f'{name}.jsonl').write_text(''.join(json.dumps(row, ensure_ascii=False) + '\n' for row in rows))
         self.metadata['scope'] = 'Logical DAG catalog plus supplied 8-17 reference tasks and 7-30 query analyses; no execution or gold validation implied.'
         self.write_json('config/catalog.json', self.metadata)

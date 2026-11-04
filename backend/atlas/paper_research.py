@@ -24,7 +24,7 @@ class PaperResearch:
         return re.sub(r'\[([^\]]+)\]\(([^)]+)\)',link,document.read_text())
 
     def apply(self, papers, queries):
-        literature=self.root/'query/imports/semantic-workload-bench/literature.json'
+        literature=self.root/'upstream/imports/semantic-workload-bench/literature.json'
         if not literature.exists():return
         grouped=defaultdict(set)
         for entry in json.loads(literature.read_text()):

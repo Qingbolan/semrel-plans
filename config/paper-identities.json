@@ -75,116 +75,116 @@
   },
   "title_evidence": {
     "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444": [
-      "query/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/adversarial-search-2026-09-05-candidates.md"
     ],
     "https://proceedings.neurips.cc/paper_files/paper/2023/file/4962a23916103301b27bde29a27642e8-Paper-Datasets_and_Benchmarks.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md",
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-csmed.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-domain-recheck219.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round2.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-csmed.md"
     ],
     "https://oro.open.ac.uk/102450/1/NeurIPS-2023-csmed-bridging-the-dataset-gap-in-automated-citation-screening-for-systematic-literature-reviews-Paper-Datasets_and_Benchmarks.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08.md"
     ],
     "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round102.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round102.md"
     ],
     "https://www.lrec-conf.org/proceedings/lrec2014/pdf/840_Paper.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round106.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round106.md"
     ],
     "https://e-archivo.uc3m.es/bitstreams/714e8ec0-6fd2-4ae1-ab3f-93c564ff5a1c/download": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round109.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round109.md"
     ],
     "https://www.scitepress.org/Papers/2026/142494/142494.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round144.md",
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-latvia.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round144.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-latvia.md"
     ],
     "https://ceur-ws.org/Vol-3497/paper-002.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round164.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round164.md"
     ],
     "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round176.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round176.md"
     ],
     "https://pubmed.ncbi.nlm.nih.gov/18955451": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round18.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round18.md"
     ],
     "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round186.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round186.md"
     ],
     "https://sites.icmc.usp.br/taspardo/Thesis2014-Cardoso.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
     ],
     "https://doi.org/10.1093/insilicoplants/diad021": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round202.md",
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round203.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round202.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round203.md"
     ],
     "https://clic.ub.edu/corpus/sites/default/files/inline-files/ancora-corpus.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round204.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round204.md"
     ],
     "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round211.md",
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round212.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round211.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round212.md"
     ],
     "https://papers.neurips.cc/paper_files/paper/2025/file/4aab82c8d6b77c0b6b010145c1bfcdd3-Paper-Datasets_and_Benchmarks_Track.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round30.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round30.md"
     ],
     "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round44.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round44.md"
     ],
     "https://usableprivacy.org/static/files/swilson_acl_2016.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round61.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round61.md"
     ],
     "https://ojs.aaai.org/index.php/AAAI/article/view/6401": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md"
     ],
     "https://ebiquity.umbc.edu/get/a/publication/1144.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md",
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round70.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round69.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round70.md"
     ],
     "https://ceur-ws.org/Vol-2968/paper5.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round82.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round82.md"
     ],
     "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round151.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round151.md"
     ],
     "https://www.mdpi.com/2504-446X/9/10/704": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round178.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round178.md"
     ],
     "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round187.md"
     ],
     "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round192.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round192.md"
     ],
     "https://doi.org/10.1145/3799682.3840202": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round38.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-search-2026-09-08-round38.md"
     ],
     "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-afd.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-afd.md"
     ],
     "https://doi.org/10.1016/j.dib.2024.111202": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-bidcorpus.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-bidcorpus.md"
     ],
     "https://lawfulcomputing.org/papers/pets2023.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-gdprxiv.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-gdprxiv.md"
     ],
     "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-proact.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-proact.md"
     ],
     "https://ceur-ws.org/Vol-2645/paper5.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-sara.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/shared-environment-strict-audit-sara.md"
     ],
     "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/toffee-review.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/toffee-review.md"
     ],
     "https://proceedings.neurips.cc/paper_files/paper/2025/file/bbdd9525c5ecd3a03fee43d8fd64bd83-Paper-Conference.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md",
-      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-discovery.md",
+      "upstream/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
     ],
     "https://openreview.net/pdf?id=rkeJRhNYDH": [
-      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05-rigor.md"
     ],
     "https://openaccess.thecvf.com/content/ICCV2025/papers/Fucka_SALAD_--_Semantics-Aware_Logical_Anomaly_Detection_ICCV_2025_paper.pdf": [
-      "query/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
+      "upstream/imports/semantic-workload-bench/sources/docs/topconf-search-2026-09-05.md"
     ]
   },
   "reviews": {},

@@ -38,7 +38,7 @@ class PaperExporter:
             if 'benchmark' not in sections:
                 sections['benchmark'] = self.benchmark(sections['workload'])
             records.append({'id': hashlib.sha256(folder.encode()).hexdigest()[:12], 'title': title.replace('- ', ': ', 1), 'venue': venue, 'year': year, 'folder': folder, 'url': paper_url, 'sections': sections, 'usecase': usecase})
-        sources = [json.loads(line) for line in (self.root / 'query/sources.jsonl').read_text().splitlines()]
+        sources = [json.loads(line) for line in (self.root / 'catalog/sources.jsonl').read_text().splitlines()]
         for source in sources:
             if source['source_type'] != 'paper':
                 continue

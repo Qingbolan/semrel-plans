@@ -17,14 +17,14 @@ class SuppliedCollectionsTest(unittest.TestCase):
         cls.details = {qid: detail for qid, detail in cls.catalog.details.items() if qid.startswith(('8-17/', '7-30/'))}
 
     def test_full_source_coverage_and_original_records(self):
-        for path in (ROOT / 'query/imports/8-17').glob('*.json'):
+        for path in (ROOT / 'upstream/imports/8-17').glob('*.json'):
             original = json.loads(path.read_text())
             original = original['tasks'] if isinstance(original, dict) else original
             for task in original:
                 matches = [d for d in self.details.values() if d['query_id'].startswith('8-17/') and d['original_record']['task_id'] == task['task_id']]
                 self.assertEqual(len(matches), 1)
                 self.assertEqual(matches[0]['original_record'], task)
-        for path in (ROOT / 'query/imports/7-30').glob('*_per_query.csv'):
+        for path in (ROOT / 'upstream/imports/7-30').glob('*_per_query.csv'):
             with path.open() as stream:
                 for row in csv.DictReader(stream):
                     self.assertEqual(self.details[f"7-30/{row['benchmark']}/{row['task_id']}"]['original_record'], row)
@@ -33,7 +33,7 @@ class SuppliedCollectionsTest(unittest.TestCase):
 
     def test_snapshots_match_receipts(self):
         for source in self.catalog.tables['sources']:
-            if source['location'].startswith(('query/imports/8-17/', 'query/imports/7-30/')):
+            if source['location'].startswith(('upstream/imports/8-17/', 'upstream/imports/7-30/')):
                 digest = hashlib.sha256((ROOT / source['location']).read_bytes()).hexdigest()
                 self.assertIn(digest, source['version'])
 

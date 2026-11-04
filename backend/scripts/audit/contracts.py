@@ -24,23 +24,23 @@ def table(name, columns=(), passed=None, row_unit='record', **kwargs):
 class ContractAudit:
     def __init__(self, upstream):
         self.upstream = upstream
-        self.queries = rows(ROOT/'query/queries.jsonl')
-        self.sources = {r['source_id']:r for r in rows(ROOT/'query/sources.jsonl')}
-        self.details = {r['query_id']:r for r in rows(ROOT/'query/task_details.jsonl')}
-        self.nodes = rows(ROOT/'query/nodes.jsonl')
-        self.index = json.loads((ROOT/'query/source-snapshots/index.json').read_text())
+        self.queries = rows(ROOT/'catalog/queries.jsonl')
+        self.sources = {r['source_id']:r for r in rows(ROOT/'catalog/sources.jsonl')}
+        self.details = {r['query_id']:r for r in rows(ROOT/'catalog/task_details.jsonl')}
+        self.nodes = rows(ROOT/'catalog/nodes.jsonl')
+        self.index = json.loads((ROOT/'upstream/snapshots/index.json').read_text())
         self.saved = {}
-        fda_root = ROOT/'query/source-snapshots/FDAbench2026/FDAbench-Full/46bcbbbaca95defddb99e411931763a47b3f5b65'
+        fda_root = ROOT/'upstream/snapshots/FDAbench2026/FDAbench-Full/46bcbbbaca95defddb99e411931763a47b3f5b65'
         self.fda = {r['task_id']:(r,p) for p in fda_root.glob('*/data.jsonl') for r in rows(p)}
         self.gold_tables_path=upstream/'Spider2/methods/gold-tables/spider2-lite-gold-tables.jsonl'
         self.gold_tables={r['instance_id']:r['gold_tables'] for r in rows(self.gold_tables_path)}
-        self.longda = json.loads((ROOT/'query/source-snapshots/EvilBench/LongDA/inventory.json').read_text())
+        self.longda = json.loads((ROOT/'upstream/snapshots/EvilBench/LongDA/inventory.json').read_text())
 
     def evidence(self, path, locator='', excerpt=None, url=None):
         path=Path(path)
         if not path.is_relative_to(ROOT):
             relative=path.relative_to(self.upstream)
-            target=ROOT/'query/source-snapshots/local'/relative
+            target=ROOT/'upstream/snapshots/local'/relative
             if path not in self.saved:
                 target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(path,target);self.saved[path]=target
             path=target
@@ -136,7 +136,7 @@ class ContractAudit:
         c['audit_status']='interpreted';return c
 
     def supplied(self,q):
-        c=self.base(q);d=self.details[q['query_id']];program='\n'.join(r['program'] for r in d['reference_programs']);c['evidence']=self.evidence(ROOT/'query/task_details.jsonl',q['query_id'],program)
+        c=self.base(q);d=self.details[q['query_id']];program='\n'.join(r['program'] for r in d['reference_programs']);c['evidence']=self.evidence(ROOT/'catalog/task_details.jsonl',q['query_id'],program)
         bound=set()
         for bindings in re.findall(r'(?:input_bindings=)?\{([^{}]+)\}',program):
             for key,value in re.findall(r'(\w+):\s*([\w.]+)',bindings):
@@ -191,7 +191,7 @@ class ContractAudit:
         data=[x for x in paths if x.startswith(survey+'/data/')];docs=[x for x in paths if x.startswith(survey+'/docs/')]
         c['tables']=[table(x,[],None,row_unit='survey_record',scope_note='该调查提供的数据文件；逐题最小读取子集未在 benchmark.csv 指定') for x in data]
         c['environment']={'requirement':'required','resources':[{'name':x,'kind':'survey_documentation'} for x in docs]}
-        p=next((ROOT/'query/source-snapshots/EvilBench/LongDA').glob('*/benchmark.csv'))
+        p=next((ROOT/'upstream/snapshots/EvilBench/LongDA').glob('*/benchmark.csv'))
         matches=[x for x in csv.DictReader(p.open()) if x['source']+':'+x['internal_id']==r['task_id']]
         if len(matches)!=1 or matches[0]['query']!=r['query']:raise ValueError('LongDA mismatch')
         c['evidence']=self.evidence(p,r['task_id'],json.dumps(matches[0],ensure_ascii=False));c['audit_status']='declared_files'
@@ -274,7 +274,7 @@ class ContractAudit:
 
     def run(self):
         contracts=[]
-        imported={r['query_id']:r for r in map(json.loads,(ROOT/'query/input_contracts.jsonl').read_text().splitlines()) if r['query_id'].startswith('swb/')}
+        imported={r['query_id']:r for r in map(json.loads,(ROOT/'catalog/input_contracts.jsonl').read_text().splitlines()) if r['query_id'].startswith('swb/')}
         for q in self.queries:
             if q['query_id'] in imported:
                 contracts.append(imported[q['query_id']]);continue
@@ -284,7 +284,7 @@ class ContractAudit:
             contract=handler(q)
             if contract['audit_status']=='version_mismatch':contract['environment']['requirement']='unspecified'
             contracts.append(contract)
-        (ROOT/'query/input_contracts.jsonl').write_text(''.join(json.dumps(c,ensure_ascii=False)+'\n' for c in contracts))
+        (ROOT/'catalog/input_contracts.jsonl').write_text(''.join(json.dumps(c,ensure_ascii=False)+'\n' for c in contracts))
         summary=InputContracts(ROOT,{q['query_id'] for q in self.queries}).export(ROOT,self.queries)
         print('Wrote',len(contracts),'per-query contracts',summary['states'])
 

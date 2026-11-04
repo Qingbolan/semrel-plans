@@ -12,9 +12,9 @@ The 451 distinct MMQA questions selected across those eight runs are also record
 
 ## Local files
 
-- `query/tasks/Abacus/`: three task JSON documents in the catalog's eight-key schema.
-- `query/tasks/Abacus MMQA/`: 451 individual task JSON documents.
-- `query/source-snapshots/abacus/<commit>/abacus-research/`: official workload definitions, all operator prompts, run scripts and scoring scripts.
+- `tasks/Abacus/`: three task JSON documents in the catalog's eight-key schema.
+- `tasks/Abacus MMQA/`: 451 individual task JSON documents.
+- `upstream/snapshots/abacus/<commit>/abacus-research/`: official workload definitions, all operator prompts, run scripts and scoring scripts.
 - `data/abacus/biodex/`: official test, train and validation Parquet files; primary input table; separate test gold; per-seed evaluation and optimization selections.
 - `data/abacus/cuad/`: official data.zip and extracted source JSON; contract input table; per-seed evaluation and optimization selections.
 - `data/abacus/mmqa/`: question input table, separate gold, selections, 450 actual image files and their CRC-verified download manifest.

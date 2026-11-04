@@ -10,7 +10,7 @@ from input_contracts import InputContracts
 class InputContractTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.queries={json.loads(x)['query_id'] for x in (ROOT/'query/queries.jsonl').read_text().splitlines()}
+        cls.queries={json.loads(x)['query_id'] for x in (ROOT/'catalog/queries.jsonl').read_text().splitlines()}
         cls.contracts=InputContracts(ROOT,cls.queries).records
 
     def test_every_query_has_its_own_source_evidence(self):
@@ -55,7 +55,7 @@ class InputContractTests(unittest.TestCase):
         self.assertEqual(c['environment']['requirement'],'unspecified')
 
     def test_fda_uses_matching_historical_question(self):
-        details=[json.loads(x) for x in (ROOT/'query/task_details.jsonl').read_text().splitlines()]
+        details=[json.loads(x) for x in (ROOT/'catalog/task_details.jsonl').read_text().splitlines()]
         for d in details:
             if d['query_id'].startswith('7-30/FDABench/'):
                 self.assertEqual(self.contracts[d['query_id']]['upstream_record']['query'],d['original_record']['query'])

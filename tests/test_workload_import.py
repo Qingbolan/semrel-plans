@@ -36,7 +36,7 @@ class WorkloadImportTest(unittest.TestCase):
 
     def test_papers_and_notes_are_accessible(self):
         papers=json.loads((ROOT/'dist/assets/papers.js').read_text().removeprefix('window.SEMREL_PAPERS = ').strip().removesuffix(';'))
-        imported=json.loads((ROOT/'query/imports/semantic-workload-bench/literature.json').read_text())
+        imported=json.loads((ROOT/'upstream/imports/semantic-workload-bench/literature.json').read_text())
         for item in imported:
             self.assertEqual(sum(item['source_id'] in p.get('source_ids',[]) for p in papers),1,item['source_id'])
             for doc in item['documents']:self.assertTrue((ROOT/doc).is_file())
@@ -102,7 +102,7 @@ class WorkloadImportTest(unittest.TestCase):
 
     def test_duplicate_publication_urls_share_one_paper(self):
         papers=json.loads((ROOT/'dist/assets/papers.js').read_text().removeprefix('window.SEMREL_PAPERS = ').strip().removesuffix(';'))
-        sources={s['location']:s['source_id'] for s in map(json.loads,(ROOT/'query/sources.jsonl').read_text().splitlines()) if s['source_type']=='paper'}
+        sources={s['location']:s['source_id'] for s in map(json.loads,(ROOT/'catalog/sources.jsonl').read_text().splitlines()) if s['source_type']=='paper'}
         aliases=json.loads((ROOT/'config/paper-identities.json').read_text())['aliases']
         for alias,canonical in aliases.items():
             pair={sources[url] for url in (alias,canonical) if url in sources}

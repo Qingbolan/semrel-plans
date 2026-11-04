@@ -79,8 +79,8 @@ def canonical_url(url):
 class WorkloadProjectImporter:
     def __init__(self, root, source):
         self.root=Path(root); self.source=Path(source)
-        self.base=Path('query/imports')/COLLECTION
-        self.tables={n:rows(self.root/'query'/f'{n}.jsonl') for n in ('queries','nodes','edges','sources','query_sources','task_details','input_contracts','original_queries')}
+        self.base=Path('upstream/imports')/COLLECTION
+        self.tables={n:rows(self.root/'catalog'/f'{n}.jsonl') for n in ('queries','nodes','edges','sources','query_sources','task_details','input_contracts','original_queries')}
         self.metadata=json.loads((self.root/'config/catalog.json').read_text())
         self.types=json.loads((self.root/'config/paper-types.json').read_text())
         self.registry=json.loads((self.root/'config/workload-registry.json').read_text())
@@ -386,7 +386,7 @@ class WorkloadProjectImporter:
                 key=' '.join(q['title'].split())
                 if key in first:q['notes']=' '.join(filter(None,[q['notes'],f"与 {first[key]} 的 SQL 相同（上游重复）。"]))
                 else:first[key]=q['query_id'].split('/',2)[2]
-        for name,records in self.tables.items():(self.root/'query'/f'{name}.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records))
+        for name,records in self.tables.items():(self.root/'catalog'/f'{name}.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records))
         self.write('config/catalog.json',self.metadata);self.write('config/paper-types.json',self.types);self.write('config/operators.json',list(operators.values()))
         self.write(self.base/'literature.json',self.paper_records)
         report={'project':str(self.source),'atlas_records':atlas_count,'public_task_records':len(atlas)-atlas_count,'total_source_records':len(atlas),'added_queries':sum(r['status']=='added' for r in self.coverage),'linked_queries':sum(r['status']=='linked_existing' for r in self.coverage),'superseded_queries':sum(r['status']=='superseded' for r in self.coverage),'literature_records':len(self.paper_records),'research_documents':len(self.documents),'queries':self.coverage,'files':list(self.files.values())}
@@ -406,6 +406,6 @@ class WorkloadProjectImporter:
             if manifest.get('version')=='Imported project snapshot' and manifest['dataset_id'] not in used_environments:
                 path.unlink()
                 (self.root/'environment'/manifest['dataset_id']/'manifest.json').unlink(missing_ok=True)
-        for path in (self.root/'query/tasks'/COLLECTION).glob('*.json'):path.unlink()
+        for path in (self.root/'dist/tasks'/COLLECTION).glob('*.json'):path.unlink()
 
         return {k:v for k,v in report.items() if k not in ('queries','files')}

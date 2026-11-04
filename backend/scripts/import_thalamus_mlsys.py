@@ -2,9 +2,9 @@
 
 Usage: python3 backend/scripts/import_thalamus_mlsys.py
 Inputs (already in the repository):
-- query/source-snapshots/saehanjo/thalamusdb/<commit>/{benchmark.py,nldbs.py,README.md} copied from the pinned commit, and
+- upstream/snapshots/saehanjo/thalamusdb/<commit>/{benchmark.py,nldbs.py,README.md} copied from the pinned commit, and
   benchmark.expanded.json: the 55 SQL strings produced by benchmark.py's query generators, expanded in order.
-- query/source-snapshots/arxiv/2403.05821v2/queries.json: verbatim transcription of the paper's queries (no public code).
+- upstream/snapshots/arxiv/2403.05821v2/queries.json: verbatim transcription of the paper's queries (no public code).
 Only rows with the thalamusdb/ and mlsys-llmsql/ prefixes (and their thm_ sources) are replaced on re-run.
 No data is copied and nothing is executed.
 """
@@ -16,9 +16,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 CHECKED = '2026-11-03'
 COMMIT = 'c17a1ea7c8a3bca1fba13537002e99ba00a3e130'
-THAL_DIR = f'query/source-snapshots/saehanjo/thalamusdb/{COMMIT}'
+THAL_DIR = f'upstream/snapshots/saehanjo/thalamusdb/{COMMIT}'
 THAL_BLOB = f'https://github.com/saehanjo/thalamusdb/blob/{COMMIT}'
-MLSYS_FILE = 'query/source-snapshots/arxiv/2403.05821v2/queries.json'
+MLSYS_FILE = 'upstream/snapshots/arxiv/2403.05821v2/queries.json'
 THAL_PAPER, MLSYS_PAPER = 'swb_2da9ce74a4218a0a', 'swb_7748082aec82fe14'  # existing paper records
 PREFIXES = ('thalamusdb/', 'mlsys-llmsql/')
 TABLES = ('queries', 'nodes', 'edges', 'sources', 'query_sources', 'task_details', 'input_contracts', 'original_queries')
@@ -39,7 +39,7 @@ def zh(text, en):
 
 
 def read(name):
-    return [json.loads(l) for l in (ROOT / 'query' / f'{name}.jsonl').read_text().splitlines() if l.strip()]
+    return [json.loads(l) for l in (ROOT / 'catalog' / f'{name}.jsonl').read_text().splitlines() if l.strip()]
 
 
 def write_json(rel, value):
@@ -343,7 +343,7 @@ class Importer:
                 entry['status_note'] = '未找到官方代码仓库；按 arXiv v2 附录 A–C 原文转录 16 条（提示词全部，SQL 仅论文给出的 5 个示例），未重建逻辑计划。'
         write_json('config/benchmark-coverage.json', coverage)
         for name in TABLES:
-            (ROOT / 'query' / f'{name}.jsonl').write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in self.t[name]))
+            (ROOT / 'catalog' / f'{name}.jsonl').write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in self.t[name]))
         CONTENT.update(EN)
         write_json('config/content-en.json', CONTENT)
 

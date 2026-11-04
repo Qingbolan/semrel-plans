@@ -45,7 +45,7 @@ class UdaCoverageTest(unittest.TestCase):
             query = self.queries[qid]
             self.assertEqual(query['task_record']['query'], self.source.records[identity]['text'])
             self.assertEqual(query['original_query'], self.source.original(identity, qid))
-            self.assertTrue((ROOT / query['task_path']).is_file())
+            self.assertTrue((ROOT / 'dist' / query['task_path']).is_file())
             self.assertTrue(query['eal'])
 
     def test_repeated_sql_preserves_both_ordinals(self):

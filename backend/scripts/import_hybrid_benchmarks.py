@@ -2,7 +2,7 @@
 
 Usage: python3 backend/scripts/import_hybrid_benchmarks.py <directory holding SWAN, SEMA-SQL, SemCEB, caesura checkouts>
 
-Only query definitions are copied (into query/source-snapshots); databases and model outputs are not.
+Only query definitions are copied (into upstream/snapshots); databases and model outputs are not.
 No logical DAG is reconstructed: each record keeps the upstream text and program verbatim.
 """
 import ast
@@ -23,7 +23,7 @@ from sql_plans import plan_sql, swan_dialect, plop_dialect, blendsql_dialect  # 
 from code_plans import eleet_plan, semceb_plan
 from reference_plans import ReferencePlan, dag_mixed_label as mixed_of
 
-MANUAL = ROOT / 'query/manual-plans'
+MANUAL = ROOT / 'catalog/manual-plans'
 
 
 def manual_label(op, label):
@@ -259,7 +259,7 @@ def paper_source_id(url):
 
 
 def read_jsonl(name):
-    return [json.loads(l) for l in (ROOT / 'query' / f'{name}.jsonl').read_text().splitlines() if l.strip()]
+    return [json.loads(l) for l in (ROOT / 'catalog' / f'{name}.jsonl').read_text().splitlines() if l.strip()]
 
 
 def write_json(rel, value):
@@ -291,7 +291,7 @@ class Importer:
         head = subprocess.run(['git', '-C', str(checkout), 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip()
         if head != commit:
             raise SystemExit(f'{folder} is at {head}, expected {commit}')
-        target = ROOT / 'query/source-snapshots' / repo / commit / relpath
+        target = ROOT / 'upstream/snapshots' / repo / commit / relpath
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(checkout / relpath, target)
         rel = target.relative_to(ROOT).as_posix()
@@ -373,7 +373,7 @@ class Importer:
         repo, _, commit = REPOS[bench]
         self.tables['input_contracts'].append(dict(
             query_id=qid, environment=dict(requirement='unspecified', resources=[]), tables=contract_tables, output=None,
-            evidence=dict(path=rel, url=f'https://github.com/{repo}/blob/{commit}/{path.relative_to(ROOT / "query/source-snapshots" / repo / commit).as_posix()}',
+            evidence=dict(path=rel, url=f'https://github.com/{repo}/blob/{commit}/{path.relative_to(ROOT / "upstream/snapshots" / repo / commit).as_posix()}',
                           locator=evidence_locator, sha256=sha(raw), excerpt=text.strip()),
             notes=notes, audit_status='source_checked'))
 
@@ -633,7 +633,7 @@ class Importer:
             self.catalog['scenarios'].append(rel)
         self.catalog['source_commits'].update({folder: commit for _, folder, commit in REPOS.values()})
         for name in TABLES:
-            (ROOT / 'query' / f'{name}.jsonl').write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in self.tables[name]))
+            (ROOT / 'catalog' / f'{name}.jsonl').write_text(''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in self.tables[name]))
         write_json('config/catalog.json', self.catalog)
         counts = {b: sum(q['benchmark_id'] == b for q in self.tables['queries']) for b in REPOS}
         print(json.dumps(counts))

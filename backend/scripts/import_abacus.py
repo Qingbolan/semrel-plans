@@ -10,7 +10,7 @@ import pyarrow.parquet as pq
 
 ROOT=Path(__file__).resolve().parents[2]
 COMMIT='807ed301c4d2457ef304647e6095184556bd1e83'
-SOURCE=ROOT/'query/source-snapshots/abacus'/COMMIT/'abacus-research'
+SOURCE=ROOT/'upstream/snapshots/abacus'/COMMIT/'abacus-research'
 ARTIFACT=ROOT/'data/abacus/artifacts/extracted'
 TABLES=['queries','nodes','edges','sources','query_sources','task_details','input_contracts','original_queries']
 sys.path.insert(0,str(ROOT / 'backend' / 'atlas'))
@@ -62,7 +62,7 @@ def schema(path,var):
  return out
 
 def main():
- tables={name:[r for r in map(json.loads,(ROOT/'query'/f'{name}.jsonl').read_text().splitlines()) if not r.get('query_id','').startswith('abacus/') and not r.get('source_id','').startswith('abacus_')] for name in TABLES}
+ tables={name:[r for r in map(json.loads,(ROOT/'catalog'/f'{name}.jsonl').read_text().splitlines()) if not r.get('query_id','').startswith('abacus/') and not r.get('source_id','').startswith('abacus_')] for name in TABLES}
  config=json.loads((ROOT/'config/catalog.json').read_text());config['scenarios']=[s for s in config['scenarios'] if not s.startswith('files/abacus/')]
  order=max(q['display_order'] for q in tables['queries'])+1
  source_rows={}
@@ -176,7 +176,7 @@ def main():
     add('abacus/mmqa/'+r['qid'],r['question'],dict(path=rel(originalfile),selector=dict(type='jsonl_task',id_field='qid',id=r['qid'],field='question')),c,i,'Abacus MMQA',dict(gold_answer=r['answers'],answer_schema=c['output']))
   scenario=f'files/abacus/{slug}/scenario.json';config['scenarios'].append(scenario);write(Path(scenario),dict(id=identity,name='Abacus '+slug.upper(),query_ids=[q['query_id'] for q in tables['queries'] if q['scenario_id']==identity]))
  tables['sources'].extend(source_rows.values())
- for name,rows in tables.items():jsonl(Path('query')/(name+'.jsonl'),rows)
+ for name,rows in tables.items():jsonl(Path('catalog')/(name+'.jsonl'),rows)
  write(Path('config/catalog.json'),config)
  types=json.loads((ROOT/'config/paper-types.json').read_text());types[paper]='research';write(Path('config/paper-types.json'),types)
  write(Path('exports/abacus-import.json'),dict(commit=COMMIT,context_records=context_counts,mmqa_image_files=len(images),workflows=3,mmqa_questions=len(used),biodex_test_rows=len(bio_inputs),cuad_test_contracts=len(contracts),mmqa_eligible_dev_questions=len(eligible),seeds=selected))

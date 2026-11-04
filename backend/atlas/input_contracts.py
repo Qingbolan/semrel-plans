@@ -6,7 +6,7 @@ from collections import Counter
 
 class InputContracts:
     def __init__(self, root, query_ids):
-        rows = [json.loads(line) for line in (root / 'query/input_contracts.jsonl').read_text().splitlines() if line.strip()]
+        rows = [json.loads(line) for line in (root / 'catalog/input_contracts.jsonl').read_text().splitlines() if line.strip()]
         self.records = {row['query_id']: row for row in rows}
         if len(rows) != len(self.records) or self.records.keys() != query_ids:
             raise ValueError('Input contracts must cover every query exactly once')

@@ -75,7 +75,7 @@ class TaskRecords:
 
     @staticmethod
     def export(root, queries):
-        directory=root/'query/tasks'
+        directory=root/'dist/tasks'
         if directory.exists():shutil.rmtree(directory)  # fully generated; drop folders that were renamed
         directory.mkdir()
         records=[]
@@ -83,6 +83,6 @@ class TaskRecords:
             path=directory/q['collection_name']/f"{q['display_number']}.json"
             path.parent.mkdir(parents=True,exist_ok=True)
             path.write_text(json.dumps(q['task_record'],ensure_ascii=False,indent=2)+'\n')
-            q['task_path']=path.relative_to(root).as_posix()
+            q['task_path']=path.relative_to(root/'dist').as_posix()
             records.append(q['task_record'])
         (root/'exports/tasks.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records))

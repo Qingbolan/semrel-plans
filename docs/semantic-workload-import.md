@@ -29,8 +29,8 @@
 - `config/paper-identities.json`：论文标题与同篇链接。
 - `exports/uda-source-coverage.json`：UDA-Bench 固定版本 43 个 SQL 文件、608 个查询位置的逐条核对收据。
 - `exports/semantic-workload-import.json`：逐条导入结果、归属和文件哈希。
-- `query/imports/semantic-workload-bench/records/`：逐条来源记录，包括来源项目的图和属性。
-- `query/imports/semantic-workload-bench/sources/`：来源文件快照。
-- `query/imports/semantic-workload-bench/literature.json`：文献与研究文档关系。
+- `upstream/imports/semantic-workload-bench/records/`：逐条来源记录，包括来源项目的图和属性。
+- `upstream/imports/semantic-workload-bench/sources/`：来源文件快照。
+- `upstream/imports/semantic-workload-bench/literature.json`：文献与研究文档关系。
 
 重建：先运行 `PYTHONPATH=/tmp/semrel-audit-deps python3 backend/scripts/import_workload_project.py https://github.com/Qingbolan/semantic-workload-bench`，再运行 `npm run build`。依赖见 `backend/scripts/audit/requirements.txt`。来源项目保持只读。

@@ -3,7 +3,7 @@
 `backend/scripts/import_hybrid_benchmarks.py` 从固定 commit 的上游仓库复制查询定义，写入统一查询表。所有记录保留上游原文和程序（`task_details.reference_programs`），并带逻辑 DAG，不执行查询：
 
 - **自动转换**（`plan_origin=source_reconstruction`，356 条）：SWAN、PLOP、BlendSQL 的 SQL 由 `backend/scripts/sql_plans.py`（sqlglot 30.22.0）转换；ELEET 的算子对象与 SemCEB 的记录由 `backend/scripts/code_plans.py` 转换。语义调用映射：`ai_filter`/`semantic()`→SEM_FILTER，`ai_classify`→SEM_CLASSIFY，`ai_complete`/`semantic_int|string|double`/`LLMMap`/`ImageCaption`→SEM_MAP，`ai_agg`/`LLMQA`→SEM_AGG，`LLMJoin`/ON 中的语义调用→SEM_JOIN；ELEET 的 MMScan/MMUnion→SEM_MAP（文本抽取），MMJoin→SEM_JOIN，MMSelection→SEM_FILTER。确定性谓词画在语义谓词下方，只表示依赖，不代表引擎执行顺序。
-- **人工重建**（`plan_origin=end_to_end_interpretation`，114 条）：TAG+ 40、CAESURA 24、DataAgentBench 50 只有问题或模板，DAG 依据问题与 schema 人工写成（`query/manual-plans/*.json`，用 `backend/atlas/reference_plans.py` 的计划记法），每条记录的 notes 保留重建依据和歧义说明。这些不是上游计划。
+- **人工重建**（`plan_origin=end_to_end_interpretation`，114 条）：TAG+ 40、CAESURA 24、DataAgentBench 50 只有问题或模板，DAG 依据问题与 schema 人工写成（`catalog/manual-plans/*.json`，用 `backend/atlas/reference_plans.py` 的计划记法），每条记录的 notes 保留重建依据和歧义说明。这些不是上游计划。
 - 混合标签按 DAG 判定：同时含语义算子与非结构关系算子为“实质混合”，只有语义算子为“轻混合（仅投影）”，没有语义算子则不标。
 
 | 集合 | 仓库与 commit | 条数 | 原文位置 | 参考程序 | 混合标签 |
@@ -19,7 +19,7 @@
 
 ## 边界
 
-- 只复制查询定义文件到 `query/source-snapshots/<org>/<repo>/<commit>/`；BIRD 数据库、Amazon 数据和模型输出都没有下载，数据 manifest 标为 `not_downloaded`。
+- 只复制查询定义文件到 `upstream/snapshots/<org>/<repo>/<commit>/`；BIRD 数据库、Amazon 数据和模型输出都没有下载，数据 manifest 标为 `not_downloaded`。
 - 原文通过选择器回指快照（新增 `csv_row` 选择器），构建时按 SHA-256 校验。
 - CAESURA 论文的 48 条是从模板随机采样得到的实例，仓库没有发布这些实例，所以只收录 24 个模板，覆盖表中记为 24/48。
 - SemBench 上游 HEAD `c4b2bcff` 相对图册固定的 `8c2cac89` 只改了 README 与 docs，查询没有变化。仍未收录 medical/Q11 与 Q7_filter，因为它们只有 BigQuery 方言，没有自然语言版本。

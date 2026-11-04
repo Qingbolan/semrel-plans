@@ -1,6 +1,6 @@
 {
   "checked_on": "2026-11-03",
-  "scope": "直接面向语义算子或 SQL+LLM 混合查询的 benchmark，以及自带查询集的语义算子系统论文。收录数量在构建时从 query/queries.jsonl 计算；论文规模只引用原文摘要、已有七项分析或 OpenReview 摘要。混合判断针对论文 workload 的性质，不是逐条审查。",
+  "scope": "直接面向语义算子或 SQL+LLM 混合查询的 benchmark，以及自带查询集的语义算子系统论文。收录数量在构建时从 catalog/queries.jsonl 计算；论文规模只引用原文摘要、已有七项分析或 OpenReview 摘要。混合判断针对论文 workload 的性质，不是逐条审查。",
   "groups": {
     "benchmark": "A. 语义算子 / 混合查询 benchmark",
     "system": "B. 语义算子系统自带 workload",
@@ -261,7 +261,7 @@
           "benchmark_id": "tag-bench"
         }
       ],
-      "status_note": "TAG 80 条即 TAG-Bench；TAG+ 40 条收录为 SEMA-SQL TAG+，只有问题与答案，逻辑 DAG 为人工依据问题与 BIRD schema 重建（query/manual-plans/tag-plus.json）。",
+      "status_note": "TAG 80 条即 TAG-Bench；TAG+ 40 条收录为 SEMA-SQL TAG+，只有问题与答案，逻辑 DAG 为人工依据问题与 BIRD schema 重建（catalog/manual-plans/tag-plus.json）。",
       "mixed": "yes",
       "mixed_note": "基于 BIRD 的混合查询，需要关系操作和 LLM 语义推理。",
       "expected_queries": 120
@@ -425,7 +425,7 @@
           "benchmark_id": "caesura"
         }
       ],
-      "status_note": "仓库公开 24 个查询模板与采样代码（numpy 种子 42，每模板 2 条）；按同一逻辑重算得到 48 条实例并收录，论文未列出实例故未与论文逐条核对。逻辑 DAG 由人工模板计划（query/manual-plans/caesura.json）按每条实例的取值确定。",
+      "status_note": "仓库公开 24 个查询模板与采样代码（numpy 种子 42，每模板 2 条）；按同一逻辑重算得到 48 条实例并收录，论文未列出实例故未与论文逐条核对。逻辑 DAG 由人工模板计划（catalog/manual-plans/caesura.json）按每条实例的取值确定。",
       "mixed": "yes",
       "mixed_note": "半数跨模态，SQL 与视觉/文本问答组合。",
       "expected_queries": 48
@@ -933,7 +933,7 @@
           "benchmark_id": "dataagentbench"
         }
       ],
-      "status_note": "54 条在 7-30 / DAB（粗粒度分析记录）；其余 5 个数据集 50 条按 commit ac11ab68 收录，逻辑 DAG 为人工依据问题与 db_description 重建（query/manual-plans/dataagentbench.json）。",
+      "status_note": "54 条在 7-30 / DAB（粗粒度分析记录）；其余 5 个数据集 50 条按 commit ac11ab68 收录，逻辑 DAG 为人工依据问题与 db_description 重建（catalog/manual-plans/dataagentbench.json）。",
       "mixed": "partial",
       "mixed_note": "按 7-30 粗粒度计划判定，54 条中有 16 条同时含语义与关系步骤；其余为纯结构化分析。 新收录的 civic_unstructured 需要同时查询非结构化文档（BSON）与关系表。",
       "expected_queries": 104

@@ -29,7 +29,7 @@ def numeric_values(text):
 
 class QueryTranslationTest(unittest.TestCase):
     def test_full_coverage_and_protected_content(self):
-        queries = [json.loads(line) for line in (ROOT / 'query/queries.jsonl').read_text().splitlines()]
+        queries = [json.loads(line) for line in (ROOT / 'catalog/queries.jsonl').read_text().splitlines()]
         translations = QueryTranslations(ROOT, queries)
         # 8-17/7-30 carry full translations; other entries are short generated titles (SQL summaries) that may omit details.
         full = {q['query_id'] for q in queries if q['benchmark_id'] in ('8-17', '7-30')}

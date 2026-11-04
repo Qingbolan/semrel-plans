@@ -11,7 +11,6 @@ data/source-inputs/
 # Build outputs: regenerate with `npm run build` instead of committing.
 /dist/
 /exports/eal/
-/query/tasks/
 /exports/eal.zip
 /exports/catalog.sqlite
 /exports/datasets.csv

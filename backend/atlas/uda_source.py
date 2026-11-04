@@ -9,7 +9,7 @@ from sql_source import query_text, sql_statements
 class UdaSourceCatalog:
     def __init__(self, root, commit):
         self.root = Path(root)
-        self.base = Path('query/source-snapshots/unimib-datAI/UDA-Bench') / commit
+        self.base = Path('upstream/snapshots/unimib-datAI/UDA-Bench') / commit
         self.manifest = json.loads((self.root / self.base / 'manifest.json').read_text())
         if self.manifest['commit'] != commit:
             raise ValueError('UDA snapshot commit mismatch')

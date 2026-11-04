@@ -99,8 +99,8 @@ class SiteBuilder:
         for path in resources:
             template = template.replace(f'"{path}"', f'"{path}?v={revision}"')
         (dist / 'index.html').write_text(template)
-        sections = ['# 逐查询逻辑计划\n\n由 `python3 backend/scripts/build.py` 生成；请编辑 query/ 下的规范化数据表。\n\n[论文与数据来源](sources.md) · [范围与限制](scope.md) · [交互图册](../index.html)\n']
-        bibliography = ['# 论文与数据来源\n\n原有查询代码沿用 2026-10-05 固定版本收据；本地集合于 2026-10-13 接入。各来源的核对日期与边界见条目。论文背景、提供的任务定义和分析记录分别标注。\n\n来源关系规范表：`query/query_sources.jsonl`；来源元数据：`query/sources.jsonl`。数据集链接不等于已经下载、许可审查或完整复现。\n']
+        sections = ['# 逐查询逻辑计划\n\n由 `python3 backend/scripts/build.py` 生成；请编辑 catalog/ 下的规范化数据表。\n\n[论文与数据来源](sources.md) · [范围与限制](scope.md) · [交互图册](../index.html)\n']
+        bibliography = ['# 论文与数据来源\n\n原有查询代码沿用 2026-10-05 固定版本收据；本地集合于 2026-10-13 接入。各来源的核对日期与边界见条目。论文背景、提供的任务定义和分析记录分别标注。\n\n来源关系规范表：`catalog/query_sources.jsonl`；来源元数据：`catalog/sources.jsonl`。数据集链接不等于已经下载、许可审查或完整复现。\n']
         roles = {'paper': '论文', 'dataset': '数据', 'protocol': '规则协议', 'task_definition': '提供的任务定义', 'analysis': '提供的查询分析'}
         used = {ref['source_id'] for ref in self.catalog.tables['query_sources']}
         for source in self.catalog.tables['sources']:

@@ -13,12 +13,12 @@ class BenchmarkCoverageTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name)
-        for d in ('config', 'query', 'docs'):
+        for d in ('config', 'catalog', 'docs'):
             (self.root / d).mkdir()
         queries = [dict(query_id=f't{i}', benchmark_id='tag', scenario_id='tag', mixed_label='实质混合') for i in range(3)]
         queries.append(dict(query_id='x', benchmark_id='7-30', scenario_id='7-30-DAB', mixed_label=''))
         queries.append(dict(query_id='y', benchmark_id='7-30', scenario_id='7-30-Other', mixed_label=''))
-        (self.root / 'query/queries.jsonl').write_text('\n'.join(json.dumps(q) for q in queries) + '\n')
+        (self.root / 'catalog/queries.jsonl').write_text('\n'.join(json.dumps(q) for q in queries) + '\n')
         repo = [dict(url='https://github.com/a/b', commit='0123456789', link_source='论文原文')]
         entries = [
             dict(key='tag', group='benchmark', paper_id='p1', repositories=repo, query_scale='5', scale_source='摘要',
@@ -56,7 +56,7 @@ class BenchmarkCoverageTests(unittest.TestCase):
             dict(operator_type='JOIN', family='relational'), dict(operator_type='SCAN', family='input')]))
         rows = [dict(query_id='t0', node_id='a', operator_type='SEM_FILTER'), dict(query_id='t0', node_id='b', operator_type='JOIN'),
                 dict(query_id='t1', node_id='a', operator_type='SEM_FILTER'), dict(query_id='t1', node_id='b', operator_type='PROJECT')]
-        (self.root / 'query/nodes.jsonl').write_text('\n'.join(json.dumps(r) for r in rows) + '\n')
+        (self.root / 'catalog/nodes.jsonl').write_text('\n'.join(json.dumps(r) for r in rows) + '\n')
         self.assertEqual(BenchmarkCoverage(self.root, lambda u: u).dag_mixed, {'t0'})
 
     def test_unknown_paper_id_fails(self):

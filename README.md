@@ -2,21 +2,27 @@
 
 用于统计与分析结构化—语义混合查询的统一计划数据集，附离线图册。当前 3,436 条查询记录均提供逻辑计划 EAL：原有 88 条逻辑 DAG，以及基于参考描述整理的 8-17 共 228 条、7-30 共 3,120 条。总计 8,809 个节点、30 类算子；粗粒度分析阶段保持原粒度，不是全量 benchmark 普查。
 
-**数据入口：[统一模型说明](docs/data-model.md) · [查询表](query/queries.jsonl) · [统计汇总](exports/summary.json) · [SQLite](exports/catalog.sqlite)**
+**数据入口：[统一模型说明](docs/data-model.md) · [查询表](catalog/queries.jsonl) · [统计汇总](exports/summary.json) · [SQLite](exports/catalog.sqlite)**
 
-来源入口：[论文与数据来源](docs/sources.md) · [逐查询来源关系](query/query_sources.jsonl) · [语义算子 Benchmark 收录核对](docs/benchmark-coverage.md)（登记源 `config/benchmark-coverage.json`，论文页“收录核对”页签显示仓库与收录状态） · [SWAN / TAG+ / SemCEB / CAESURA 查询导入](docs/hybrid-benchmark-import.md)。论文背景、固定版本查询定义与本项目重建的 plan 分别标注；数据获取缺口保留在逐条说明中。
+来源入口：[论文与数据来源](docs/sources.md) · [逐查询来源关系](catalog/query_sources.jsonl) · [语义算子 Benchmark 收录核对](docs/benchmark-coverage.md)（登记源 `config/benchmark-coverage.json`，论文页“收录核对”页签显示仓库与收录状态） · [SWAN / TAG+ / SemCEB / CAESURA 查询导入](docs/hybrid-benchmark-import.md)。论文背景、固定版本查询定义与本项目重建的 plan 分别标注；数据获取缺口保留在逐条说明中。
 
 UDA-Bench 已按固定版本源码完整收录 **608 个查询位置（602 种 SQL）**，覆盖六个领域、43 个 SQL 文件。论文 v1 的 5 数据集 / 240 查询与仓库扩展分开标注。详见[覆盖收据](exports/uda-source-coverage.json)和[范围说明](docs/scope.md)。
 
 展示入口：[交互图册](dist/index.html) · [逐查询文字计划](docs/catalog.md) · [范围和限制](docs/scope.md)。
 
 ```text
-query/
+catalog/
   queries.jsonl             查询身份、benchmark、场景、计划口径、来源
   nodes.jsonl               节点、明确的 operator_type
   edges.jsonl               有序输入连接，支持 DAG
   sources.jsonl             去重来源、论文题名、版本与核对状态
   query_sources.jsonl       查询到论文、数据、规则的多对多来源关系
+  task_details / input_contracts / original_queries.jsonl  原始记录、输入契约与原始查询文本
+  manual-plans/             手工重建的混合查询计划
+upstream/
+  imports/                  上游项目的逐字导入快照（只读，带哈希）
+  snapshots/                固定版本的上游 benchmark 查询定义（只读，带收据）
+data/                       运行时输入；大文件不进 Git（data/source-inputs、data/abacus）
 config/
   operators.json            统一算子类型与 family 字典
   catalog.json              场景索引与上游版本
@@ -25,7 +31,7 @@ backend/
   atlas/                    后端 Python：数据加载与校验、导出、图册生成、HTTP 服务
   scripts/                  命令入口：build、validate、serve、release、vendor_upstream、导入脚本
 frontend/                   前端源码：页面模板、交互脚本、样式、图组件
-dist/                       构建产物（不进 Git）：index.html、migration.html、assets/、viewer/
+dist/                       构建产物（不进 Git）：index.html、migration.html、assets/、viewer/、tasks/
 tests/                      数据完整性、后端与前端测试
 papers/
   survey/                   早期论文解析（每篇一个目录，manifest.json 记录哈希）
@@ -35,7 +41,7 @@ exports/                    生成的 CSV、SQLite、汇总
 docs/                       模型契约、来源快照、收据
 ```
 
-前端源码在 frontend/，构建输出到 dist/；后端代码与命令统一在 backend/。统一数据不按场景复制，避免跨场景统计需要扫描不同格式。唯一编辑源为 query/ 五表与 config/operators.json；files 中只保存场景成员索引。展示树是生成的投影，不作为统计输入。
+前端源码在 frontend/，构建输出到 dist/；后端代码与命令统一在 backend/。统一数据不按场景复制，避免跨场景统计需要扫描不同格式。唯一编辑源为 catalog/ 五表与 config/operators.json；files 中只保存场景成员索引。展示树是生成的投影，不作为统计输入。
 
 Python 3.10+（服务端仅标准库），前端组件构建需要 Node.js/npm；EAL 构建和实时读取需要 PATH 中的 EasyNet CLI。浏览器资源全部本地打包，无需外网：
 
@@ -97,7 +103,7 @@ ELK Layered 同时优化节点和端口顺序，生成带避障间距的正交�
 
 ## 环境、数据和查询分离
 
-- `query/`：查询定义、节点、依赖和来源关系，保留稳定 query_id。
+- `catalog/`：查询定义、节点、依赖和来源关系，保留稳定 query_id。
 - `environment/<benchmark>/<domain>/manifest.json`：环境身份、数据集引用及运行配置。
 - `data/<benchmark>/<domain>/manifest.json`：数据来源、文件绑定、schema、数量和版本；当前未绑定原始数据。
 
@@ -117,7 +123,7 @@ ELK Layered 同时优化节点和端口顺序，生成带避障间距的正交�
 | 7-30 / DAB | 54 | 同上 |
 | 7-30 / KramaBench | 104 | 同上 |
 
-`query/imports/` 保存提供的 JSON/CSV 原始快照，SHA256 记录在 sources 表；`query/task_details.jsonl` 保留逐任务输入、参考描述、gold、评估及完整原记录。页面在“参考计划”查看原描述，在“逻辑计划”和“EAL 源码”查看转换结果，在“环境与输入”查看路径和 CSV 表头。全部 3,348 条导入任务均已整理为 EAL；7-30 的粗粒度分析步骤不会擅自展开。详见 [转换规则](docs/eal.md#8-17-与-7-30-参考计划整理)。
+`upstream/imports/` 保存提供的 JSON/CSV 原始快照，SHA256 记录在 sources 表；`catalog/task_details.jsonl` 保留逐任务输入、参考描述、gold、评估及完整原记录。页面在“参考计划”查看原描述，在“逻辑计划”和“EAL 源码”查看转换结果，在“环境与输入”查看路径和 CSV 表头。全部 3,348 条导入任务均已整理为 EAL；7-30 的粗粒度分析步骤不会擅自展开。详见 [转换规则](docs/eal.md#8-17-与-7-30-参考计划整理)。
 
 8-17 的 42,216 个本地文件只登记清单与路径，不复制约 11GB 语料。外部目录必须在使用机器上存在；文件存在与表头检查不代表参考答案已验证。文件数与数据记录数分开，后者未测量时为 null。7-30 的 source_file 是原分析中记录的上游定位，不宣称该路径已存在。
 

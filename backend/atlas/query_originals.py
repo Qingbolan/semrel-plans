@@ -60,7 +60,7 @@ def extract_text(path, selector):
 
 class QueryOriginals:
     def __init__(self, root, queries):
-        self.records={r['query_id']:r for r in map(json.loads,(Path(root)/'query/original_queries.jsonl').read_text().splitlines())}
+        self.records={r['query_id']:r for r in map(json.loads,(Path(root)/'catalog/original_queries.jsonl').read_text().splitlines())}
         if set(self.records)!={q['query_id'] for q in queries}:raise ValueError('Original query coverage mismatch')
         hashes={}
         for qid,r in self.records.items():
