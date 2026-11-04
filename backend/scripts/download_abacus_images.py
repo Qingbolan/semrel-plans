@@ -1,7 +1,7 @@
 """Acquire selected MMQA image files from the official ZIP via HTTP ranges; verify CRCs."""
 import io,json,urllib.request,zipfile,struct,zlib,concurrent.futures,time,hashlib
 from pathlib import Path
-root=Path(__file__).resolve().parents[1]
+root=Path(__file__).resolve().parents[2]
 url='https://multimodalqa-images.s3-us-west-2.amazonaws.com/final_dataset_images/final_dataset_images.zip'
 size=2362869144
 

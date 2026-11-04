@@ -33,4 +33,4 @@
 - `query/imports/semantic-workload-bench/sources/`：来源文件快照。
 - `query/imports/semantic-workload-bench/literature.json`：文献与研究文档关系。
 
-重建：先运行 `PYTHONPATH=/tmp/semrel-audit-deps python3 scripts/import_workload_project.py https://github.com/Qingbolan/semantic-workload-bench`，再运行 `npm run build`。依赖见 `scripts/audit/requirements.txt`。来源项目保持只读。
+重建：先运行 `PYTHONPATH=/tmp/semrel-audit-deps python3 backend/scripts/import_workload_project.py https://github.com/Qingbolan/semantic-workload-bench`，再运行 `npm run build`。依赖见 `backend/scripts/audit/requirements.txt`。来源项目保持只读。

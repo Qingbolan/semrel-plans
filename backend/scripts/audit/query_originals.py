@@ -1,8 +1,8 @@
 """Trace every displayed/exported query to its precise source field."""
 import json, csv, hashlib, sys
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[2]
-sys.path.insert(0,str(ROOT/'src'))
+ROOT=Path(__file__).resolve().parents[3]
+sys.path.insert(0,str(ROOT / 'backend' / 'atlas'))
 from query_originals import extract_text
 
 def text_equal(a,b):return a==b

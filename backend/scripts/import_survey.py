@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('source', type=Path)
     args = parser.parse_args()
-    destination = Path(__file__).resolve().parents[1] / 'Survey'
+    destination = Path(__file__).resolve().parents[2] / 'Survey'
     manifest = []
     for folder in sorted(args.source.iterdir()):
         if not folder.is_dir():

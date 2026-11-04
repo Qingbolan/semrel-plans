@@ -1,7 +1,7 @@
 """Chinese one-line summaries for queries whose title is their SQL text (UDA-Bench, QUEST).
 
 The English UI keeps the SQL; the Chinese UI shows the summary from config/translations/queries-zh.json.
-Requires sqlglot (scripts/audit/requirements.txt). Re-run after the titles change.
+Requires sqlglot (backend/scripts/audit/requirements.txt). Re-run after the titles change.
 """
 import hashlib
 import json
@@ -11,7 +11,7 @@ import re
 import sqlglot
 from sqlglot import exp
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'config/translations/queries-zh.json'
 AGG = {'avg': '平均', 'sum': '总和', 'min': '最小值', 'max': '最大值', 'count': '计数'}
 

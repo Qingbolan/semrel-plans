@@ -31,7 +31,7 @@ plan_origin 必须为以下之一：
 
 ## 导出与统计
 
-运行 `python3 scripts/build.py` 会重建 exports/ 与图册。exports/ 是派生产物，不手工修改。
+运行 `python3 backend/scripts/build.py` 会重建 exports/ 与图册。exports/ 是派生产物，不手工修改。
 
 - queries/nodes/edges/sources/operators.csv：统一表格导出。
 - catalog.sqlite：上述五表和两个统计视图。
@@ -92,7 +92,7 @@ environment 与 data 仍按集合／领域共享。8-17 的 availability=local_e
 每条查询均有独立契约与来源定位，构建时要求覆盖全部 query ID。详见 [逐查询核对说明](input-audit.md)。
 运行配置 manifest 仍供原始记录和导出使用，不再作为查询的辅助环境资料显示。
 
-8-17 与 7-30 现均已由 `src/reference_plans.py` 将参考描述转换为 logical_dag，保留 supplied_reference / supplied_analysis 来源类型。可通过 `scripts/lower_reference_plans.py` 重建；task_details 与 imports 中的原始参考描述不改写。粗粒度 COMPUTE 节点不声称包含已经推导出的执行步骤。
+8-17 与 7-30 现均已由 `backend/atlas/reference_plans.py` 将参考描述转换为 logical_dag，保留 supplied_reference / supplied_analysis 来源类型。可通过 `backend/scripts/lower_reference_plans.py` 重建；task_details 与 imports 中的原始参考描述不改写。粗粒度 COMPUTE 节点不声称包含已经推导出的执行步骤。
 
 ## 统一任务 JSON（8-17 格式）
 
@@ -110,4 +110,4 @@ environment 与 data 仍按集合／领域共享。8-17 的 availability=local_e
 
 `query/original_queries.jsonl` 为每条查询保存原文、来源文件、字段选择器和 SHA-256。`query/queries.jsonl` 的 `title` 只作为显示标题；英文查询页面以及按 8-17 格式整理的 JSON `query` 均使用来源原文，不能由标题翻译生成。中文显示独立管理。
 
-SemBench 采用固定版本的 natural-language 文件，TAG 采用原始 pipeline 的 query 字符串；UDA 采用源 SQL。10 条本地定义保留本地 SQL 或原有标题，不声称来自论文的英文题目。8-17 和 7-30 保留用户提供文件中的 query 字段。7-30 另逐条比较上游快照；版本不同仍保留提供版本，差异记入 `upstream_comparison`。逐条审计表见 `exports/query_text_audit.csv`，可运行 `python3 scripts/audit/query_originals.py` 重新核验生成。
+SemBench 采用固定版本的 natural-language 文件，TAG 采用原始 pipeline 的 query 字符串；UDA 采用源 SQL。10 条本地定义保留本地 SQL 或原有标题，不声称来自论文的英文题目。8-17 和 7-30 保留用户提供文件中的 query 字段。7-30 另逐条比较上游快照；版本不同仍保留提供版本，差异记入 `upstream_comparison`。逐条审计表见 `exports/query_text_audit.csv`，可运行 `python3 backend/scripts/audit/query_originals.py` 重新核验生成。

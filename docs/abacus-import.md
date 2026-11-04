@@ -35,4 +35,4 @@ Gold answers and supporting-context annotations remain separate from direct inpu
 - [MMQA data and image archive](https://github.com/allenai/multimodalqa)
 - [Abacus data archive](https://palimpzest-workloads.s3.us-east-1.amazonaws.com/abacus-data.tar.gz)
 
-With source artifacts present, run `python3 scripts/download_abacus_images.py` to acquire/verify selected images, then `python3 scripts/import_abacus.py` (requires numpy, pandas and pyarrow), followed by `python3 scripts/build.py`. The importer replaces only Abacus-owned catalog rows. Run `python3 -m unittest discover -s tests -p 'test_abacus_import.py'` for source text, selection and paper-link validation.
+With source artifacts present, run `python3 backend/scripts/download_abacus_images.py` to acquire/verify selected images, then `python3 backend/scripts/import_abacus.py` (requires numpy, pandas and pyarrow), followed by `python3 backend/scripts/build.py`. The importer replaces only Abacus-owned catalog rows. Run `python3 -m unittest discover -s tests -p 'test_abacus_import.py'` for source text, selection and paper-link validation.

@@ -6,7 +6,7 @@ import threading
 import unittest
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'backend' / 'atlas'))
 from hosting import HostingPolicy
 from server import AtlasServer
 
@@ -39,7 +39,7 @@ class HostingTest(unittest.TestCase):
             try:
                 for path in ['/','/api/health','/api/plan?query_id=one']:
                     with request(path,'https://atlas.example.com') as response:self.assertEqual(response.status,200)
-                for path in ['/.env','/assets/escape','/src/server.py','/deploy/.env','/assets/']:
+                for path in ['/.env','/assets/escape','/backend/atlas/server.py','/deploy/.env','/assets/']:
                     with self.assertRaises(HTTPError) as caught:request(path)
                     self.assertIn(caught.exception.code,[403,404]);caught.exception.close()
                 with self.assertRaises(HTTPError) as caught:request('/api/plan?query_id=one','https://evil.example')

@@ -126,7 +126,7 @@
           "benchmark_id": "swan"
         }
       ],
-      "status_note": "按 commit 0ba4c936 收录 SWAN 2.0 问题、AISQL 与 oracle SQL；逻辑 DAG 由 AISQL 自动转换（scripts/sql_plans.py）。",
+      "status_note": "按 commit 0ba4c936 收录 SWAN 2.0 问题、AISQL 与 oracle SQL；逻辑 DAG 由 AISQL 自动转换（backend/scripts/sql_plans.py）。",
       "mixed": "yes",
       "mixed_note": "AISQL 中 ai_filter/ai_classify/ai_complete/ai_agg 与 join、聚合、排序组合；118 条实质混合、2 条仅语义过滤（按 AISQL 文本规则判定）。",
       "expected_queries": 120
@@ -553,7 +553,7 @@
         }
       ],
       "status": "complete",
-      "status_note": "收录 benchmark.py 各数据集函数返回的全部 Query；corona 的生成器按 PROJECTIONS 展开为 14 条，共 86 条。逻辑 DAG 由算子对象自动转换（scripts/code_plans.py）。没有自然语言问题。",
+      "status_note": "收录 benchmark.py 各数据集函数返回的全部 Query；corona 的生成器按 PROJECTIONS 展开为 14 条，共 86 条。逻辑 DAG 由算子对象自动转换（backend/scripts/code_plans.py）。没有自然语言问题。",
       "mixed": "yes",
       "mixed_note": "按 DAG 判定：64 条同时含关系算子与 MM* 语义抽取，22 条只有文本抽取。"
     },

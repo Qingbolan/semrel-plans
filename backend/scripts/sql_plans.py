@@ -1,6 +1,6 @@
 """Convert benchmark SQL with embedded semantic calls into the catalog's logical DAG.
 
-Used only at import time (requires sqlglot==30.22.0, see scripts/audit/requirements.txt).
+Used only at import time (requires sqlglot==30.22.0, see backend/scripts/audit/requirements.txt).
 Operator types are the existing ones in config/operators.json. Deterministic predicates are
 drawn below semantic ones, as a dependency picture, not a claim about the engine's order.
 """

@@ -8,7 +8,7 @@ class AtlasLocale {
     this.contentKeys=Object.keys(this.content).sort((a,b)=>b.length-a.length);
     this.messages={
       '切换分组':'Switch group','NLP 任务':'NLP tasks','Sem-operator 问题':'Sem-operator questions',
-      '原始 JSON':'Original JSON','原始查询':'Original query','计划来源':'Plan origin','离线快照，非实时编译':'Offline snapshot, not live-compiled','无法读取本地计划服务':'Unable to read the local plan service','请启动 python3 scripts/serve.py 并刷新。原始 JSON、环境与输入仍可查看。':'Start python3 scripts/serve.py and reload. Original JSON, environment and inputs remain available.','计划图暂不可用；原始 JSON、环境与输入可独立查看。':'Plan unavailable; original JSON, environment and inputs can be viewed independently.',
+      '原始 JSON':'Original JSON','原始查询':'Original query','计划来源':'Plan origin','离线快照，非实时编译':'Offline snapshot, not live-compiled','无法读取本地计划服务':'Unable to read the local plan service','请启动 python3 backend/scripts/serve.py 并刷新。原始 JSON、环境与输入仍可查看。':'Start python3 backend/scripts/serve.py and reload. Original JSON, environment and inputs remain available.','计划图暂不可用；原始 JSON、环境与输入可独立查看。':'Plan unavailable; original JSON, environment and inputs can be viewed independently.',
       '任务定义':'Task definition','查询分析':'Query analysis',
       '参考计划':'Reference plan','参考任务':'reference tasks','未建立可编译 DAG':'No compilable DAG','来源文件中的参考计划／分析；尚未核验为原论文 DAG 或执行结果。':'Reference plan / analysis from supplied files; not verified as a paper-original DAG or execution result.',
       '环境与输入':'Environment & inputs','查询定义 / 实现':'Query definition / implementation',

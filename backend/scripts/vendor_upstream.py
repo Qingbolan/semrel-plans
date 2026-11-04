@@ -1,7 +1,7 @@
 """Make the repository self-contained: copy referenced upstream files into data/source-inputs and
 rewrite every absolute workspace path to a repository-relative path (or a GitHub URL for whole repos).
 
-Run after any importer that reads a sibling checkout:  python3 scripts/vendor_upstream.py [--dry-run]
+Run after any importer that reads a sibling checkout:  python3 backend/scripts/vendor_upstream.py [--dry-run]
 """
 import argparse
 import os
@@ -10,9 +10,9 @@ import shutil
 import subprocess
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 WORKSPACE = str(ROOT.parent) + '/'
-SCAN = ['config', 'query', 'src', 'scripts', 'docs', 'Survey', 'research', 'environment', 'exports', 'data', 'tests', 'deploy', 'files', 'artifacts']
+SCAN = ['config', 'query', 'backend', 'src', 'docs', 'Survey', 'research', 'environment', 'exports', 'data', 'tests', 'deploy', 'files', 'artifacts']
 SKIP = {'.git', 'node_modules', '__pycache__', 'source-inputs', 'eal'}
 # Verbatim upstream snapshots are hash-checked; paths inside them are historical text, never read.
 VERBATIM = ('query/imports/', 'query/source-snapshots/', 'research/2026-10-14/data-agents/evidence/', 'research/2026-10-14/data-agents/publisher-evidence/')

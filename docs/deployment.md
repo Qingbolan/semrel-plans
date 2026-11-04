@@ -7,10 +7,10 @@
 在项目根目录执行：
 
 ```sh
-python3 scripts/localize_inputs.py
+python3 backend/scripts/localize_inputs.py
 npm ci
 npm run build
-python3 scripts/prepare_release.py --output releases/2026-10-15
+python3 backend/scripts/prepare_release.py --output releases/2026-10-15
 ```
 
 构建需要本机可用的 EasyNet CLI。`localize_inputs.py` 将 8-17 与 semantic-workload-bench 等来源中仍绑定到外部项目的输入复制到 `data/source-inputs/`，并更新输入绑定；不改动原始查询文本和提供的任务 JSON。重导入数据后应重新执行此步骤。准备脚本输出 `site.tar`、`SHA256SUMS`、逐文件 SHA-256 清单，以及独立的 Docker 构建上下文。数据集和来源快照全部包含，目录不依赖原电脑绝对路径，公开文件权限统一为 0644，避免本机生成的 0600 文件在容器中不可读；`.git`、node_modules、私有部署配置不包含在公开站点中。不要将整个工作仓库直接作为 Web 根目录。每次发布使用新的目录，不覆盖旧版本。
@@ -36,7 +36,7 @@ python3 scripts/prepare_release.py --output releases/2026-10-15
 sha256sum -c SHA256SUMS
 mkdir -p /srv/semrel/releases/2026-10-15
 tar -xf site.tar -C /srv/semrel/releases/2026-10-15
-python3 scripts/verify_release.py --root /srv/semrel/releases/2026-10-15
+python3 backend/scripts/verify_release.py --root /srv/semrel/releases/2026-10-15
 cp deploy/.env.example deploy/.env
 ```
 
@@ -54,7 +54,7 @@ curl --fail http://127.0.0.1:8765/api/health
 按 `deploy/nginx.conf.example` 配置真实域名、证书路径和本地端口，执行 `nginx -t` 后重载。反向代理保留原始 Host 和 Origin，不应伪造为 localhost。容器端口只绑定服务器 loopback；文件只读挂载，编译临时文件位于有大小限制的 `/tmp`，不执行 EAL mission。
 
 ```sh
-python3 scripts/verify_release.py --root /srv/semrel/releases/2026-10-15 --url https://实际域名
+python3 backend/scripts/verify_release.py --root /srv/semrel/releases/2026-10-15 --url https://实际域名
 ```
 
 再在浏览器检查：论文页、任一 DAG、Abacus 三个工作流、MMQA 单题 JSON、图片／数据下载、EAL 导入编译、浏览器数据恢复。API 健康检查失败时查看 `docker compose --env-file deploy/.env -f deploy/compose.yaml logs atlas`。

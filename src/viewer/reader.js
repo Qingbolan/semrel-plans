@@ -47,13 +47,13 @@ class EalDocument {
       if(!query.imported && query.eal?.snapshot) {
         result = query.eal.snapshot;
       } else if(location.protocol==='file:') {
-        throw new Error('导入 EAL 需要本地编译服务：python3 scripts/serve.py');
+        throw new Error('导入 EAL 需要本地编译服务：python3 backend/scripts/serve.py');
       } else {
         const response = await fetch(query.imported ? '/api/compile' : '/api/plan?query_id='+encodeURIComponent(query.query_id), {
           method:query.imported?'POST':'GET', cache:'no-store', signal:this.controller.signal,
           ...(query.imported?{headers:{'Content-Type':'application/json'},body:JSON.stringify({source:query.importedSource})}:{})
         });
-        if(!response.headers.get('content-type')?.includes('application/json')) throw new Error('请使用 python3 scripts/serve.py 启动图册，普通静态服务器不能编译 EAL。');
+        if(!response.headers.get('content-type')?.includes('application/json')) throw new Error('请使用 python3 backend/scripts/serve.py 启动图册，普通静态服务器不能编译 EAL。');
         result = await response.json();
         if(revision!==this.revision) return;
         if(!response.ok) {errorKind=result.error_kind||(response.status===422?'compile':'read');this.state.source=result.source||query.importedSource||'';throw new Error(result.error||'无法编译 EAL');}

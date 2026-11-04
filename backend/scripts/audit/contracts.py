@@ -8,8 +8,8 @@ from collections import Counter
 from pathlib import Path
 from sql_inputs import extract_sql
 
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0,str(ROOT/'src'))
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0,str(ROOT / 'backend' / 'atlas'))
 from input_contracts import InputContracts
 
 

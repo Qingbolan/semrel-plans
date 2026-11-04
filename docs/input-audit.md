@@ -14,11 +14,11 @@
 
 每条证据含路径、定位及 SHA-256。源文件保存在 `query/source-snapshots/`；上游代码仅供静态核对，不执行。SQL 表列提取使用 AST 与作用域，人工补充源 SQL 中无限定符的商品字段以及自连接输入关系。空 SQL 不生成不存在的上游定义。
 
-复核脚本：安装 `scripts/audit/requirements.txt` 后运行：
+复核脚本：安装 `backend/scripts/audit/requirements.txt` 后运行：
 
 ```sh
-python3 scripts/audit/contracts.py --upstream /path/to/Awesome-Dymatic-Operator/Benchmark/code
-python3 scripts/build.py
+python3 backend/scripts/audit/contracts.py --upstream /path/to/Awesome-Dymatic-Operator/Benchmark/code
+python3 backend/scripts/build.py
 ```
 
 LongDA 的调查资料表没有逐题变量代码或参考 SQL；DABstep 公布任务、数据和手册，没有逐题执行清单。页面区分提供的数据集与可由源码确认的实际读取表列。KramaBench 逐题列出 `data_sources`，同时保留参考步骤、代码列引用和源码，以免把派生列误写为输入字段。

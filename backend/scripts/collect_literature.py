@@ -6,8 +6,8 @@ import shutil
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'src'))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'backend' / 'atlas'))
 from workload_import import canonical_url
 
 BASE = ROOT / 'research/2026-10-14'

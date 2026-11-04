@@ -1,6 +1,6 @@
 """Import the ThalamusDB benchmark queries (55, logical DAGs) and the 16 MLSys-2025 LLM-SQL queries (reference records).
 
-Usage: python3 scripts/import_thalamus_mlsys.py
+Usage: python3 backend/scripts/import_thalamus_mlsys.py
 Inputs (already in the repository):
 - query/source-snapshots/saehanjo/thalamusdb/<commit>/{benchmark.py,nldbs.py,README.md} copied from the pinned commit, and
   benchmark.expanded.json: the 55 SQL strings produced by benchmark.py's query generators, expanded in order.
@@ -13,7 +13,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHECKED = '2026-11-03'
 COMMIT = 'c17a1ea7c8a3bca1fba13537002e99ba00a3e130'
 THAL_DIR = f'query/source-snapshots/saehanjo/thalamusdb/{COMMIT}'

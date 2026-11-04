@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'src'))
+sys.path.insert(0, str(ROOT / 'backend' / 'atlas'))
 from benchmark_coverage import BenchmarkCoverage
 
 

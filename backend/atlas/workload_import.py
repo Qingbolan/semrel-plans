@@ -19,7 +19,7 @@ def digest(value):
 
 def sql_columns(sql):
     """Columns an SQL query reads, by table (aliases resolved; UDA's 'Med_drug' qualifier means table 'drug').
-    Unqualified columns are listed under ''. Needs sqlglot (scripts/audit/requirements.txt); empty if unparsable."""
+    Unqualified columns are listed under ''. Needs sqlglot (backend/scripts/audit/requirements.txt); empty if unparsable."""
     columns=defaultdict(list)
     try:
         import sqlglot

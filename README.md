@@ -41,9 +41,9 @@ Python 3.10+（服务端仅标准库），前端组件构建需要 Node.js/npm�
 ```sh
 npm ci
 npm run build
-python3 scripts/validate.py
+python3 backend/scripts/validate.py
 python3 -m unittest discover -s tests
-python3 scripts/serve.py
+python3 backend/scripts/serve.py
 # 浏览器打开 http://127.0.0.1:8765
 ```
 
@@ -55,11 +55,11 @@ python3 scripts/serve.py
 
 具有逻辑 DAG 的查询的 EAL 导出位于 `exports/eal/`，打包文件为 [eal.zip](exports/eal.zip)。构建会同步更新网页中的 EAL 源码，可逐条查看、复制、下载，也可切换逻辑计划图和来源依据。详见 [EAL 转换契约与执行边界](docs/eal.md)。
 
-EAL 文件是保留节点和有序依赖的逻辑表示；执行仍需实现 SemRel abilities 和数据/表达式契约。`src/eal.py` 统一负责转换和打包，规范化数据仍是唯一事实来源。
+EAL 文件是保留节点和有序依赖的逻辑表示；执行仍需实现 SemRel abilities 和数据/表达式契约。`backend/atlas/eal.py` 统一负责转换和打包，规范化数据仍是唯一事实来源。
 
 ### 直接读取 EAL
 
-启动 `python3 scripts/serve.py` 后，选择目录查询或点击“重新加载”，图册会读取磁盘上的 `.eal` 并调用 EasyNet 编译器。源码和图来自同一次读取；编译失败不会继续显示旧图。点击节点查看参数、输入引用及源码位置。
+启动 `python3 backend/scripts/serve.py` 后，选择目录查询或点击“重新加载”，图册会读取磁盘上的 `.eal` 并调用 EasyNet 编译器。源码和图来自同一次读取；编译失败不会继续显示旧图。点击节点查看参数、输入引用及源码位置。
 
 “打开 .eal”或拖入文件可预览本地 EAL；仅在当前页面保留，刷新后清除。外部修改导入文件后需要重新选择文件。目录内 EAL 的修改可直接重新加载，但再次运行 build 会从规范化数据重新生成并覆盖它们。
 
@@ -120,7 +120,7 @@ ELK Layered 同时优化节点和端口顺序，生成带避障间距的正交�
 
 8-17 的 42,216 个本地文件只登记清单与路径，不复制约 11GB 语料。外部目录必须在使用机器上存在；文件存在与表头检查不代表参考答案已验证。文件数与数据记录数分开，后者未测量时为 null。7-30 的 source_file 是原分析中记录的上游定位，不宣称该路径已存在。
 
-重导入使用 `python3 scripts/import_collections.py --august <8-17目录> --july <7-30目录>`，随后 `npm run build`。重复导入按集合替换记录，保留其余目录内容和稳定查询 ID。
+重导入使用 `python3 backend/scripts/import_collections.py --august <8-17目录> --july <7-30目录>`，随后 `npm run build`。重复导入按集合替换记录，保留其余目录内容和稳定查询 ID。
 
 ### 原始记录与页面交付
 

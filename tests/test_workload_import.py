@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import unittest
 import sys
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1] / 'backend' / 'atlas'))
 from workload_import import canonical_url
 ROOT=Path(__file__).resolve().parents[1]
 

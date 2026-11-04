@@ -8,12 +8,12 @@ import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 COMMIT='807ed301c4d2457ef304647e6095184556bd1e83'
 SOURCE=ROOT/'query/source-snapshots/abacus'/COMMIT/'abacus-research'
 ARTIFACT=ROOT/'data/abacus/artifacts/extracted'
 TABLES=['queries','nodes','edges','sources','query_sources','task_details','input_contracts','original_queries']
-sys.path.insert(0,str(ROOT/'src'))
+sys.path.insert(0,str(ROOT / 'backend' / 'atlas'))
 from reference_plans import ReferencePlan, dag_mixed_label
 # Logical DAGs of the three official pipelines (the "construct plan" code of each script); every MMQA question runs the same one.
 PLANS={

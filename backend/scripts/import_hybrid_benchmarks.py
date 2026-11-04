@@ -1,6 +1,6 @@
 """Import query sets from pinned semantic-operator benchmark repositories as reference tasks.
 
-Usage: python3 scripts/import_hybrid_benchmarks.py <directory holding SWAN, SEMA-SQL, SemCEB, caesura checkouts>
+Usage: python3 backend/scripts/import_hybrid_benchmarks.py <directory holding SWAN, SEMA-SQL, SemCEB, caesura checkouts>
 
 Only query definitions are copied (into query/source-snapshots); databases and model outputs are not.
 No logical DAG is reconstructed: each record keeps the upstream text and program verbatim.
@@ -15,9 +15,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'src'))
-sys.path.insert(0, str(ROOT / 'scripts'))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'backend' / 'atlas'))
+sys.path.insert(0, str(ROOT / 'backend' / 'scripts'))
 from workload_import import canonical_url
 from sql_plans import plan_sql, swan_dialect, plop_dialect, blendsql_dialect  # needs sqlglot==30.22.0
 from code_plans import eleet_plan, semceb_plan
@@ -404,7 +404,7 @@ class Importer:
                          source, path, paper, data, 'SWAN 2.0', db, programs, gold,
                          [dict(name=db, columns=[], passed_columns=[], row_unit='record', scope='database')],
                          [f'BIRD evidence: {row["evidence"]}', f'difficulty={row["difficulty"]}; shape={row["shape"]}',
-                          f'{calls} AI calls in the AISQL query. The logical DAG is converted automatically from the AISQL (scripts/sql_plans.py); the mixed label follows the DAG.'],
+                          f'{calls} AI calls in the AISQL query. The logical DAG is converted automatically from the AISQL (backend/scripts/sql_plans.py); the mixed label follows the DAG.'],
                          mixed, calls, f'qid={row["qid"]}', plan=plan)
 
     def tag_plus(self):
@@ -589,7 +589,7 @@ class Importer:
                              source, path, paper, data, 'ELEET benchmark', dataset,
                              [dict(type='eleet_plan', program=program)], None,
                              [dict(name=dataset, columns=[], passed_columns=[], row_unit='record', scope='database')],
-                             ['Query plan defined in code; no natural-language question. The logical DAG is converted from the operator objects (scripts/code_plans.py).'] +
+                             ['Query plan defined in code; no natural-language question. The logical DAG is converted from the operator objects (backend/scripts/code_plans.py).'] +
                              ([f'Expanded from the generator over PROJECTIONS; projection {k + 1} of {len(variants)}.'] if k is not None else []),
                              '', None, f'{fn.name} return item {index}', kind='python_plan', plan=plan, title=title)
 

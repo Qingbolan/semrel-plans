@@ -1,9 +1,9 @@
 # 语义算子 Benchmark 查询导入（2026-11-03）
 
-`scripts/import_hybrid_benchmarks.py` 从固定 commit 的上游仓库复制查询定义，写入统一查询表。所有记录保留上游原文和程序（`task_details.reference_programs`），并带逻辑 DAG，不执行查询：
+`backend/scripts/import_hybrid_benchmarks.py` 从固定 commit 的上游仓库复制查询定义，写入统一查询表。所有记录保留上游原文和程序（`task_details.reference_programs`），并带逻辑 DAG，不执行查询：
 
-- **自动转换**（`plan_origin=source_reconstruction`，356 条）：SWAN、PLOP、BlendSQL 的 SQL 由 `scripts/sql_plans.py`（sqlglot 30.22.0）转换；ELEET 的算子对象与 SemCEB 的记录由 `scripts/code_plans.py` 转换。语义调用映射：`ai_filter`/`semantic()`→SEM_FILTER，`ai_classify`→SEM_CLASSIFY，`ai_complete`/`semantic_int|string|double`/`LLMMap`/`ImageCaption`→SEM_MAP，`ai_agg`/`LLMQA`→SEM_AGG，`LLMJoin`/ON 中的语义调用→SEM_JOIN；ELEET 的 MMScan/MMUnion→SEM_MAP（文本抽取），MMJoin→SEM_JOIN，MMSelection→SEM_FILTER。确定性谓词画在语义谓词下方，只表示依赖，不代表引擎执行顺序。
-- **人工重建**（`plan_origin=end_to_end_interpretation`，114 条）：TAG+ 40、CAESURA 24、DataAgentBench 50 只有问题或模板，DAG 依据问题与 schema 人工写成（`query/manual-plans/*.json`，用 `src/reference_plans.py` 的计划记法），每条记录的 notes 保留重建依据和歧义说明。这些不是上游计划。
+- **自动转换**（`plan_origin=source_reconstruction`，356 条）：SWAN、PLOP、BlendSQL 的 SQL 由 `backend/scripts/sql_plans.py`（sqlglot 30.22.0）转换；ELEET 的算子对象与 SemCEB 的记录由 `backend/scripts/code_plans.py` 转换。语义调用映射：`ai_filter`/`semantic()`→SEM_FILTER，`ai_classify`→SEM_CLASSIFY，`ai_complete`/`semantic_int|string|double`/`LLMMap`/`ImageCaption`→SEM_MAP，`ai_agg`/`LLMQA`→SEM_AGG，`LLMJoin`/ON 中的语义调用→SEM_JOIN；ELEET 的 MMScan/MMUnion→SEM_MAP（文本抽取），MMJoin→SEM_JOIN，MMSelection→SEM_FILTER。确定性谓词画在语义谓词下方，只表示依赖，不代表引擎执行顺序。
+- **人工重建**（`plan_origin=end_to_end_interpretation`，114 条）：TAG+ 40、CAESURA 24、DataAgentBench 50 只有问题或模板，DAG 依据问题与 schema 人工写成（`query/manual-plans/*.json`，用 `backend/atlas/reference_plans.py` 的计划记法），每条记录的 notes 保留重建依据和歧义说明。这些不是上游计划。
 - 混合标签按 DAG 判定：同时含语义算子与非结构关系算子为“实质混合”，只有语义算子为“轻混合（仅投影）”，没有语义算子则不标。
 
 | 集合 | 仓库与 commit | 条数 | 原文位置 | 参考程序 | 混合标签 |
@@ -28,4 +28,4 @@
 - PLOP 论文的另外 14 条是 SemBench E-Commerce 查询，已由图册中的 SemBench ecomm 记录覆盖，没有重复导入。
 - 没有公开查询、因此未收录：CoreSemDB（OpenReview 附件返回 403）、Sema（仓库链接无法访问）。
 
-重建：把八个仓库按上表 commit 检出到同一目录，安装 `scripts/audit/requirements.txt` 中的 sqlglot，运行 `PYTHONPATH=<依赖目录> python3 scripts/import_hybrid_benchmarks.py <目录>`，再运行 `npm run build`。脚本只替换自身前缀（`swan/`、`sema-sql/`、`semceb/`、`caesura/`、`plop/`、`blendsql/`、`eleet/`、`dataagentbench/`）的记录，重复运行结果不变。
+重建：把八个仓库按上表 commit 检出到同一目录，安装 `backend/scripts/audit/requirements.txt` 中的 sqlglot，运行 `PYTHONPATH=<依赖目录> python3 backend/scripts/import_hybrid_benchmarks.py <目录>`，再运行 `npm run build`。脚本只替换自身前缀（`swan/`、`sema-sql/`、`semceb/`、`caesura/`、`plop/`、`blendsql/`、`eleet/`、`dataagentbench/`）的记录，重复运行结果不变。

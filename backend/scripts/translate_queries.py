@@ -8,7 +8,7 @@ import time
 import urllib.parse
 import urllib.request
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'config/translations/queries-zh.json'
 PROTECTED = re.compile(r'`[^`]+`|\b[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9_]+\b|(?<!\w)[+-]?\d+(?:[.,:/-]\d+)*(?:%|st\b|nd\b|rd\b|th\b)?')
 

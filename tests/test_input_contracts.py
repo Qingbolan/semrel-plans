@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src'))
+sys.path.insert(0,str(ROOT / 'backend' / 'atlas'))
 from input_contracts import InputContracts
 
 class InputContractTests(unittest.TestCase):

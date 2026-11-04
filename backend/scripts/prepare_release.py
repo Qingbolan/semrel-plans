@@ -7,8 +7,8 @@ import sys
 import tarfile
 from datetime import datetime, timezone
 from pathlib import Path
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'src'))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'backend' / 'atlas'))
 from hosting import HostingPolicy, PUBLIC_ROOTS, PUBLIC_FILES
 
 
@@ -51,7 +51,7 @@ class ReleaseBuilder:
             for binding in contract['tables'] + contract['environment']['resources']:
                 path = (binding.get('path') or '') if isinstance(binding, dict) else ''
                 if path.startswith('/'):
-                    raise ValueError('Run scripts/vendor_upstream.py first: ' + path)
+                    raise ValueError('Run backend/scripts/vendor_upstream.py first: ' + path)
                 if path and '://' not in path and not (self.root / path).exists():
                     raise ValueError('Missing input binding: ' + path)
         output.mkdir(parents=True)
@@ -72,7 +72,7 @@ class ReleaseBuilder:
             archive.add(output / 'release-manifest.json', arcname='release-manifest.json', filter=self.public_metadata)
         (output / 'site.tar.partial').rename(output / 'site.tar')
         # Keep application code separate from the public website mount.
-        runtime = ['.dockerignore', 'scripts/serve.py', 'scripts/verify_release.py', 'src/server.py', 'src/hosting.py', 'src/plan_store.py', 'src/eal_reader.py', 'src/eal_strings.py', 'deploy/Dockerfile', 'deploy/compose.yaml', 'deploy/.env.example', 'deploy/nginx.conf.example', 'docs/deployment.md']
+        runtime = ['.dockerignore', 'backend/scripts/serve.py', 'backend/scripts/verify_release.py', 'backend/atlas/server.py', 'backend/atlas/hosting.py', 'backend/atlas/plan_store.py', 'backend/atlas/eal_reader.py', 'backend/atlas/eal_strings.py', 'deploy/Dockerfile', 'deploy/compose.yaml', 'deploy/.env.example', 'deploy/nginx.conf.example', 'docs/deployment.md']
         for name in runtime:
             target = output / name
             target.parent.mkdir(parents=True, exist_ok=True)

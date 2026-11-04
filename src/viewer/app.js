@@ -43,7 +43,7 @@ function referenceDetails(q) {
 }
 function planError(state) {
   const descriptions = {
-    read:['无法读取本地计划服务','请启动 python3 scripts/serve.py 并刷新。原始 JSON、环境与输入仍可查看。'],
+    read:['无法读取本地计划服务','请启动 python3 backend/scripts/serve.py 并刷新。原始 JSON、环境与输入仍可查看。'],
     catalog:['计划清单不可用','请重新构建图册并刷新页面。服务会自动读取最新清单。'],
     file:['计划文件不可用','请检查 EAL 文件或重新构建图册，然后重新加载。'],
     busy:['编译器忙','请稍后点击重新加载。'],
