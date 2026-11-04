@@ -1,0 +1,15 @@
+{
+  "dataset_id": "8-17/SEC10K",
+  "source_ids": [
+    "import_d4e72da2e93b9172"
+  ],
+  "availability": "local_files",
+  "local_path": "data/source-inputs/8-17/SEC",
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "File inventory only; contents and gold not evaluated",
+  "file_count": 35935,
+  "total_bytes": 11418141669,
+  "inventory_path": "data/8-17/SEC10K/inventory.json"
+}

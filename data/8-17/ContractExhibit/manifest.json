@@ -1,0 +1,15 @@
+{
+  "dataset_id": "8-17/ContractExhibit",
+  "source_ids": [
+    "import_75db068457d0183a"
+  ],
+  "availability": "local_files",
+  "local_path": "data/source-inputs/8-17/contract-exhibit",
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "File inventory only; contents and gold not evaluated",
+  "file_count": 2793,
+  "total_bytes": 203565291,
+  "inventory_path": "data/8-17/ContractExhibit/inventory.json"
+}

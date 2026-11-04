@@ -1,0 +1,15 @@
+{
+  "dataset_id": "8-17/NHTSA",
+  "source_ids": [
+    "import_3e37779f84127fd7"
+  ],
+  "availability": "local_files",
+  "local_path": "data/source-inputs/8-17/nhtsa_vehicle_safety",
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "File inventory only; contents and gold not evaluated",
+  "file_count": 299,
+  "total_bytes": 11413054,
+  "inventory_path": "data/8-17/NHTSA/inventory.json"
+}

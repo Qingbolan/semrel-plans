@@ -1,0 +1,21 @@
+# Replace atlas.example.com and certificate paths with the actual deployment values.
+server {
+    listen 80;
+    server_name atlas.example.com;
+    return 308 https://atlas.example.com$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name atlas.example.com;
+    ssl_certificate /etc/letsencrypt/live/atlas.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/atlas.example.com/privkey.pem;
+    client_max_body_size 2m;
+    gzip on;
+    gzip_types application/json application/javascript text/css text/plain;
+    location / {
+        proxy_pass http://127.0.0.1:8765;
+        proxy_set_header Host $http_host;
+        proxy_set_header Origin $http_origin;
+        proxy_read_timeout 30s;
+    }
+}

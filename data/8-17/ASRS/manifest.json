@@ -1,0 +1,15 @@
+{
+  "dataset_id": "8-17/ASRS",
+  "source_ids": [
+    "import_ceef9252b67270e6"
+  ],
+  "availability": "local_files",
+  "local_path": "data/source-inputs/8-17/asrs",
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "File inventory only; contents and gold not evaluated",
+  "file_count": 3189,
+  "total_bytes": 29879414,
+  "inventory_path": "data/8-17/ASRS/inventory.json"
+}

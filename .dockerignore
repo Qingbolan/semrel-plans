@@ -1,0 +1,13 @@
+**
+!src/
+!src/server.py
+!src/hosting.py
+!src/eal_reader.py
+!src/eal_strings.py
+!src/plan_store.py
+!scripts/
+!scripts/serve.py
+!deploy/
+!deploy/Dockerfile
+!deploy/bin/
+!deploy/bin/easynet
