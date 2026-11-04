@@ -35,8 +35,8 @@ data/source-inputs/
 
 # Large local inputs and paper full texts: kept beside the repository, distributed as a checksummed data package.
 /data/abacus/
-/research/paper-completion/papers/
-/research/paper-completion/text/
-/research/2026-10-14/semantic/pdfs/
-/research/2026-10-14/data-agents/evidence/
-/research/2026-10-14/data-agents/publisher-evidence/
+/papers/readings/fulltext/
+/papers/readings/text/
+/papers/literature/2026-10-14/semantic/pdfs/
+/papers/literature/2026-10-14/data-agents/evidence/
+/papers/literature/2026-10-14/data-agents/publisher-evidence/

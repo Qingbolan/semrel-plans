@@ -1,0 +1,65 @@
+{
+ "id": "lit_7b1659dbaabe",
+ "url": "https://arxiv.org/abs/2402.13610",
+ "title": "Majumder et al. — Data-driven Discovery with Large Generative Models",
+ "version": "arXiv:2402.13610v1（2024-02-21），34 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2402.13610v1",
+ "retrieved_at": "2026-11-04T05:25:31+00:00",
+ "fulltext": "papers/readings/fulltext/lit_7b1659dbaabe.pdf",
+ "sha256": "634ade3e83e3298fb8ee6043adf626d49995416802d6284455f1d16a29a836c1",
+ "format": "pdf",
+ "pages": 34,
+ "note_directory": "papers/readings/notes/lit_7b1659dbaabe",
+ "note": "papers/readings/notes/lit_7b1659dbaabe/README.md",
+ "read_sections": {
+  "problem": "摘要、§1、Figure 1，PDF pp.1–3",
+  "method": "§2 DataVoyager、Figures 4–5，PDF pp.4、18–19",
+  "evaluation": "§3 定性示例、Figures 6–20 图注，PDF pp.4–8、20–34；无定量评测",
+  "limitations": "§1 末尾、§3.7、§4，PDF pp.3、8"
+ },
+ "evidence": [
+  {
+   "id": "lit_7b1659dbaabe:E01",
+   "claim": "这是立场论文，主张用大型生成模型构建仅凭给定数据集搜索并验证假设的端到端数据驱动发现系统，并认为仅靠 LGM 不够，需要 fail-proof 工具与用户审核。",
+   "locator": "摘要、§1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7b1659dbaabe:E02",
+   "claim": "DataVoyager 基于 GPT-4 与 AutoGen，含 Planner、Programmer、Data Expert、Critic、User Proxy 五类智能体，配合预定义统计函数与代码执行；作者称其为 baseline system。",
+   "locator": "§2，PDF p.4；Figure 4，p.18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7b1659dbaabe:E03",
+   "claim": "系统支持完全自主（仅数据与元数据）与用户引导（数据+自然语言目标）两种设定。",
+   "locator": "§3，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7b1659dbaabe:E04",
+   "claim": "演示使用 NLSY 数据上的三个已发表社会科学问题（时间偏好与 BMI、入狱与财富、社会背景与学位完成）以及 Reflexion 代理实验数据，另有一个人为反转毕业状态的鲁棒性探针；原文未给数据规模。",
+   "locator": "附录 Figures 6–20 图注，PDF pp.20–34",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7b1659dbaabe:E05",
+   "claim": "论文没有基线、指标或数值结果；作者承认 DataVoyager 与几乎所有发现系统缺少进展度量，并提出用植入假设的合成基准。",
+   "locator": "§3.5，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7b1659dbaabe:E06",
+   "claim": "所有能力展示均为挑选的对话片段，关键转折（加交互项、换 GLM）由用户发起，因此不能据此判断完全自主设定下的成功率。",
+   "locator": "§3.1–3.4，PDF pp.4–7；Figure 2，p.3",
+   "basis": "inference",
+   "basis_note": "由原文示例的构成推断，原文未报告成功率或运行次数。"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

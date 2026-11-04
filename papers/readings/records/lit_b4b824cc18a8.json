@@ -1,0 +1,71 @@
+{
+ "id": "lit_b4b824cc18a8",
+ "url": "https://doi.org/10.1145/3725337",
+ "title": "Balaka et al. — Pneuma: Leveraging LLMs for Tabular Data Representation and Retrieval in an End-to-End System",
+ "version": "arXiv:2504.09207v1（2025-04-12），页眉为 Proc. ACM Manag. Data Vol.3 No.3 (SIGMOD) Article 200（2025 年 6 月），28 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2504.09207v1",
+ "retrieved_at": "2026-11-04T05:16:59.500896+00:00",
+ "fulltext": "papers/readings/fulltext/lit_b4b824cc18a8.pdf",
+ "sha256": "31b77aa0b21dac5c022d0f83ca5c1e792e135d3ce51ee7259be3658beb1a7b96",
+ "format": "pdf",
+ "pages": 28,
+ "note_directory": "papers/readings/notes/lit_b4b824cc18a8",
+ "note": "papers/readings/notes/lit_b4b824cc18a8/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–5",
+  "method": "§3–5，Fig. 2–4，PDF pp.5–10",
+  "evaluation": "§6–7，Table 1–2，Fig. 6–19，PDF pp.10–22",
+  "limitations": "无独立局限章节；§1（上下文由 LLM 模拟）、§5.2（增量维护）、§7.4.5（幻觉），PDF pp.3、9–10、22"
+ },
+ "evidence": [
+  {
+   "id": "lit_b4b824cc18a8:E01",
+   "claim": "表的相关性既取决于内容也取决于上下文；data.gov 约 30 万数据集中约 15 万有 PDF/文本/HTML 附属上下文；LlamaIndex 为 829 MB 的 Chicago Open Data 建出 44 GB 索引，而 Pneuma 为 458 MB。",
+   "locator": "§1、§4，PDF pp.2、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b4b824cc18a8:E02",
+   "claim": "问题定义：给定自然语言问题、表集合及上下文语料，返回能回答问题的单张相关表的排序；命中率为 top-k 中至少出现一张正确答案表的问题比例。",
+   "locator": "§2 Problem 2.1、§7.1，PDF pp.5、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b4b824cc18a8:E03",
+   "claim": "方法：LLM 为每列生成描述并拼接 5 条抽样行作为内容摘要；BM25 与向量检索各取 n·k 个候选，按 α 加权合并归一化分数，再由 LLM 判官二分类，不相关项移到末尾。",
+   "locator": "§4–5.1，PDF pp.6–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b4b824cc18a8:E04",
+   "claim": "基准：5 个数据集用 SQL 模板生成内容问题；用 Llama-3-8B-Instruct 回答 Datasheets 的 51 个问题来模拟上下文，按 51×20 分层抽 1,020 份上下文出题；另用 BIRD 的 1,595 道单表问题。",
+   "locator": "§6、§7.1.2、Table 1，PDF pp.10–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b4b824cc18a8:E05",
+   "claim": "k=1 时 Adventure Works 上 Pneuma 命中率为 71.53%，比全文检索、LlamaIndex、Solo 分别高 18.71、15.19、22.95 个百分点；BIRD original 上为 63.51%。",
+   "locator": "§7.1.1–7.1.2，PDF pp.14–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b4b824cc18a8:E06",
+   "claim": "10,330 张表时查询吞吐比 LlamaIndex 快 29.6 倍、比 Solo 快 6 倍；离线时间比 LlamaIndex 慢 18.6 倍，但存储只有 0.6 倍。",
+   "locator": "§7.2，PDF pp.16–17",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b4b824cc18a8:E07",
+   "claim": "原文称混合检索在 70% 场景最高，但按 Table 2 逐格计算为 6/10，上下文问题中有 3/5 是纯向量检索更高；基准与上下文都由作者的生成器和 LLM 产生，结论应限定在这种合成表发现设定内。",
+   "locator": "§7.3.2、Table 2，PDF p.19；§6，pp.10–12",
+   "basis": "inference",
+   "basis_note": "Table 2 数值来自原文；6/10 的计数与合成基准偏向的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

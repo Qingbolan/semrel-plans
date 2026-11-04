@@ -1,0 +1,78 @@
+{
+ "id": "swb_69c2f0a1dae1fa77",
+ "url": "https://ceur-ws.org/Vol-3497/paper-002.pdf",
+ "title": "Lima-López et al. — Overview of MedProcNER Task on Medical Procedure Detection and Entity Linking at BioASQ 2023",
+ "version": "CLEF 2023 Working Notes，CEUR-WS Vol-3497 paper-002，18 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://ceur-ws.org/Vol-3497/paper-002.pdf",
+ "retrieved_at": "2026-11-04T05:50:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_69c2f0a1dae1fa77.pdf",
+ "sha256": "15d56741c492d7ca6c4dd9bfd3cb4f686ad6cd00adf011b6ad45380123f57608",
+ "format": "pdf",
+ "pages": 18,
+ "note_directory": "papers/readings/notes/swb_69c2f0a1dae1fa77",
+ "note": "papers/readings/notes/swb_69c2f0a1dae1fa77/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.2，PDF pp.2–4",
+  "method": "§2.4、§3.1–3.4，PDF pp.5–10",
+  "evaluation": "§2.3、§4.1–4.3、Tables 1–5，PDF pp.5、10–13",
+  "limitations": "§2.3、§3.3、§5，PDF pp.5、8、14–15"
+ },
+ "evidence": [
+  {
+   "id": "swb_69c2f0a1dae1fa77:E01",
+   "claim": "已有操作相关语料（Patel 等、NEREL-BIO、MERLOT、APcNER、SemClinBr、CT-EBM-SP）虽参照 UMLS 设计标签，但都不做实体规范化；MedProcNER 在 DisTEMIST 同一批 1,000 篇文档上补充操作标注与 SNOMED CT 编码。",
+   "locator": "§1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E02",
+   "claim": "三个子任务为操作 NER、SNOMED CT 实体链接与文档级索引，均用 micro P/R/F1；链接为端到端评测，不提供金标准提及。",
+   "locator": "§2.2–2.3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E03",
+   "claim": "语料为 1,000 篇西语病例报告（16,678 句、350,764 token），训练 750 / 测试 250，单一标签 PROCEDIMIENTO，14,684 个提及（去重 7,179）；任务期间链接/索引只发布 250 篇训练文档的规范化标注；IAA 为 81.2。",
+   "locator": "§3.1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E04",
+   "claim": "规范化词表取自 2022-10-31 西语版 SNOMED CT，含 234,674 条词汇条目、130,219 个唯一码；测试集中无对应词表码的提及不计入评测。",
+   "locator": "§3.3，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E05",
+   "claim": "47 支注册队伍中 9 支提交 68 个 run；最佳 F1：NER 0.7985（BIT.UA）、链接 0.5707（Vicomtech）、索引 0.6242（Vicomtech）；基线分别为 0.4744、0.4613、0.5619。",
+   "locator": "§2.4、§4.1–4.2、Tables 1、3–5，PDF pp.5、10–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E06",
+   "claim": "使用 GPT-3.5/GPT-4 少样本提示的系统三项均较弱且召回尤低（GPT-4 链接 F1 0.1976），作者推测 LLM 未能有效捕捉提及与 SNOMED 码的对应。",
+   "locator": "§4.3、Tables 3–5，PDF pp.11–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E07",
+   "claim": "§4.2 称 BIT.UA 最高召回 0.7984，但 Table 3 中 BIT.UA 最高召回为 0.7894；索引最佳精确率与召回来自不同 run。",
+   "locator": "§4.2、Tables 3、5，PDF pp.11、13",
+   "basis": "inference",
+   "basis_note": "由阅读者对照正文与表格数值得出的不一致，原文未说明。"
+  },
+  {
+   "id": "swb_69c2f0a1dae1fa77:E08",
+   "claim": "链接/索引训练标注仅 250 篇、端到端评测混入 NER 误差，可能是链接分数显著低于 NER 的原因之一；多语种银标准未经正式质量评估。",
+   "locator": "§2.3、§3.1、§5，PDF pp.5、7、15",
+   "basis": "inference",
+   "basis_note": "银标准未评估是原文所述；关于链接分数偏低的原因为阅读者推断。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

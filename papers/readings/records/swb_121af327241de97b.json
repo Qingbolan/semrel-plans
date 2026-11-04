@@ -1,0 +1,77 @@
+{
+ "id": "swb_121af327241de97b",
+ "url": "https://arxiv.org/abs/2412.17228",
+ "title": "Altreuter et al. — MatchMiner-AI: Open-source, Privacy-preserving Cancer Clinical Trial Matching using Artificial Intelligence",
+ "version": "arXiv:2412.17228v4（稿件标注 Version 3.0，2026 年 8 月），68 页（正文约 24 页，余为参考文献、图表、补充材料与 TRIPOD+LLM 清单）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2412.17228",
+ "retrieved_at": "2026-11-04T05:47:08+00:00",
+ "fulltext": "papers/readings/fulltext/swb_121af327241de97b.pdf",
+ "sha256": "b65cda07cbb4511e8301fa7779599b35efd33c6130d39ea609db0e239af32078",
+ "format": "pdf",
+ "pages": 68,
+ "note_directory": "papers/readings/notes/swb_121af327241de97b",
+ "note": "papers/readings/notes/swb_121af327241de97b/README.md",
+ "read_sections": {
+  "problem": "摘要、Introduction，PDF pp.2–5",
+  "method": "Methods（trial spaces、合成 EHR、摘要、TrialSpace/TrialChecker/BoilerplateChecker），PDF pp.5–11；Figure 1 p.31；Supp. Table 2 pp.34 起",
+  "evaluation": "Methods Evaluation pp.11–15；Results pp.17–20；Table 1 pp.29–30；Figure 2 p.32；Supp. Tables 3–8 pp.56–61",
+  "limitations": "Discussion，PDF pp.20–22"
+ },
+ "evidence": [
+  {
+   "id": "swb_121af327241de97b:E01",
+   "claim": "作者认为逐条评估全部入组标准可能限制自动匹配的实用性，按核心标准快速检索同样有价值；闭源商业模型存在成本、漂移和隐私外传问题，PHI 训练的模型有泄露风险。",
+   "locator": "Introduction，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E02",
+   "claim": "试验被拆为由年龄、性别、癌种、组织学、负担、治疗史、生物标志物组成的 space；教师 LLM 对患者摘要—space 对打 0–5 分，1 分表示合理考虑，另 4 分对应癌种、负担、治疗史和生物标志物。",
+   "locator": "Methods，PDF pp.6、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E03",
+   "claim": "13,160 个试验抽出 34,519 个 space；训练用 3,000 个试验（7,695 个 space），生成 76,935 份合成病程和 1,295,607 份合成文档。",
+   "locator": "Results，PDF p.17",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E04",
+   "claim": "评测队列为 7,056 名入组患者（7,982 次入组）和 5,758 名 SOC 患者（11,393 次治疗开始）；可检索试验分别为 814 个（2,990 个 space）和 500 个（1,347 个 space），均不在训练中。",
+   "locator": "Results p.18、Table 1 pp.29–30",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E05",
+   "claim": "相对 Llama-Embed-Nemotron-8B 基线，患者中心 MAP@20 在入组队列从 0.44 升至 0.95，在 SOC 队列从 0.38 升至 0.94；指标以教师 Gemma-4-31B-IT 的判断为参照。",
+   "locator": "摘要 p.2、Methods pp.12–13、Figure 2 p.32、Supp. Table 3 p.56",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E06",
+   "claim": "50 份患者摘要经医生裁决 44 份正确；100 个患者—space 对中 Opus 4.8 与流水线完全一致 65%、1 分内 91%；两位医生间一致 91%，高于 LLM 与指标医生的 84%。",
+   "locator": "Results，PDF pp.18–19；Supp. Tables 7–8 pp.60–61",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E07",
+   "claim": "在共同 19 名有 NGS 的患者中，按 Opus 4.8 判定，MatchMiner-AI 建议合理率 80%（204/256），规则基因组匹配为 53%（60/113）。",
+   "locator": "Results，PDF p.20",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_121af327241de97b:E08",
+   "claim": "主要蒸馏指标衡量学生模型对教师 LLM 的复现，不等于真实入组资格准确率；外部机构泛化和与商业系统比较尚缺。",
+   "locator": "Methods p.12；Discussion pp.21–22",
+   "basis": "inference",
+   "basis_note": "单机构、无法比较商业系统是原文所述局限；“不等于真实资格准确率”是阅读者对指标定义的解读。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

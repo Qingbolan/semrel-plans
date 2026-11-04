@@ -1,0 +1,65 @@
+{
+ "id": "swb_49eedaa56605f814",
+ "url": "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf",
+ "title": "Toward Machine-assisted Participation in eRulemaking: An Argumentation Model of Evaluability",
+ "version": "ICAIL 2015（DOI 10.1145/2746090.2746118）作者主页 PDF，5 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_49eedaa56605f814.pdf",
+ "sha256": "c559ff909d1684951de59a477aa0e59fa214b828292f58456fefe36ed7f48359",
+ "format": "pdf",
+ "pages": 5,
+ "note_directory": "papers/readings/notes/swb_49eedaa56605f814",
+ "note": "papers/readings/notes/swb_49eedaa56605f814/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，PDF pp.1–2",
+  "method": "§3.1–§3.3、Tables 1–2，PDF pp.2–4",
+  "evaluation": "Table 3 示例分析，PDF p.5（无实证评测）",
+  "limitations": "§2、§3.3、§4，PDF pp.2、4–5"
+ },
+ "evidence": [
+  {
+   "id": "swb_49eedaa56605f814:E01",
+   "claim": "非专家评论常只表达立场而不提供理由或客观证据，难以评估；人工版主昂贵，而多数评论者是一次性访客（12,665 次访问中有 8,908 位独立访客），所以希望自动系统即时提示。",
+   "locator": "§1、脚注 2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49eedaa56605f814:E02",
+   "claim": "模型定义五种基本单元：Policy、Value、Fact（非经验事实）、Testimony（经验事实）、Reference（URL/引用）；以及两类支持：Reason、Evidence（限 Testimony 或 Reference）。",
+   "locator": "§3.1–§3.2、Table 1，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49eedaa56605f814:E03",
+   "claim": "可评估论证要求其自身及所有子论证满足以下之一：结论为 Testimony；Policy/Value 有命题理由；Fact 有 Fact 理由或证据。",
+   "locator": "§3.3 定义 3.1–3.3，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49eedaa56605f814:E04",
+   "claim": "Table 3 用三条 regulationroom.org 航空乘客权利规则评论演示：评论 1 的三个 Policy 都需补理由；评论 3 只可选地为 Testimony D 补证据。",
+   "locator": "§1、Table 3，PDF pp.1–2、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49eedaa56605f814:E05",
+   "claim": "模型只处理支持关系，攻击关系留作未来工作；并假设每个命题有至少一个支持即更易评估。",
+   "locator": "§2、§3.3、§4，PDF pp.2、4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_49eedaa56605f814:E06",
+   "claim": "本文没有数据集、标注一致性、自动分类实验或指标，只能作为概念模型引用，不能作为带结果的基准。",
+   "locator": "全文，PDF pp.1–5",
+   "basis": "inference",
+   "basis_note": "阅读者通读全文 5 页后的判断：原文未出现任何实验或数据统计。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

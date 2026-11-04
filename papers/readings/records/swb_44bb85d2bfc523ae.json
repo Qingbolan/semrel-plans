@@ -1,0 +1,71 @@
+{
+ "id": "swb_44bb85d2bfc523ae",
+ "url": "https://www.nature.com/articles/s43856-025-01256-0",
+ "title": "Callies et al. — Real-world validation of a multimodal LLM-powered pipeline for high-accuracy clinical trial patient matching",
+ "version": "Communications Medicine 5:536（2025），出版社 PDF，9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.nature.com/articles/s43856-025-01256-0.pdf",
+ "retrieved_at": "2026-11-04T05:21:13.846962+00:00",
+ "fulltext": "papers/readings/fulltext/swb_44bb85d2bfc523ae.pdf",
+ "sha256": "71e5d207964a7abf27f5e06c92573d9ceaa44b4bc0e05cf6f6eea5519faec08d",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/swb_44bb85d2bfc523ae",
+ "note": "papers/readings/notes/swb_44bb85d2bfc523ae/README.md",
+ "read_sections": {
+  "problem": "Abstract、引言，PDF pp.1–2",
+  "method": "Methods（Pipeline description、User feedback、Datasets、Statistics）、Figs. 1–2、Tables 1–7，PDF pp.2–6",
+  "evaluation": "Results、Tables 8–12、Figs. 3–4，PDF pp.6–7；p.6 Tables 6–11 已渲染核对",
+  "limitations": "Discussion、Conclusions、Data availability，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_44bb85d2bfc523ae:E01",
+   "claim": "作者认为既往 LLM 试验匹配在真实场景失败的原因有四：聊天模型推理不足、依赖专家改写准则、缺乏视觉理解（手写与图表病历）、缺乏通用的医院系统集成。",
+   "locator": "引言，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_44bb85d2bfc523ae:E02",
+   "claim": "流水线：试验侧用三次 LLM 调用拆分准则、生成相关性准则和检索指引；患者 PDF 拆页、经 Google Cloud DLP 去标识、做多模态嵌入入库；先用 GPT-4o 对一页做相关性检查，再按指引检索页面交 o1 判定 Eligible/Not Eligible/Insufficient information。",
+   "locator": "Methods（Pipeline description），Fig. 1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_44bb85d2bfc523ae:E03",
+   "claim": "n2c2 2018 Track 1 含 288 名糖尿病患者（训练 202、测试 86）、13 条入选准则，文本被转为 72 dpi 图像，评测为 2,366 次判定；真实数据为 30 个美国站点、36 项试验、485 名患者、650 条准则共 7,021 个患者-准则对，标签来自用户确认/修正并辅以启发式。",
+   "locator": "Methods（Datasets、Real-world dataset、Statistics），PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_44bb85d2bfc523ae:E04",
+   "claim": "使用全部记录时 n2c2 准则级准确率 0.93（met P/R 0.92/0.93）；真实数据用每条指引前 3 页时准确率 0.87（met 0.72/0.76，unmet 0.88/0.85，unknown 0.97/0.99）；入选准则子集 0.93、排除准则子集 0.86。",
+   "locator": "Results、Tables 8–11，PDF p.6（已渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_44bb85d2bfc523ae:E05",
+   "claim": "检索图像越多召回越高，但无检索策略达到全部记录的效果；按平均图像数对齐后检索指引几乎无益。每条准则全部记录 24.8 s、$0.15，前 3 页 19.0 s、$0.09；用户复核一名患者中位 5.5 分钟、平均约 9 分钟。",
+   "locator": "Results（Effect of retrieval and guidelines、Inference efficiency、User review），Figs. 3–4，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_44bb85d2bfc523ae:E06",
+   "claim": "288×13=3,744 与所写 2,366 次判定不符；真实数据各子表合计（7,039、6,088、7,083、5,976）均不等于 7,021；93% 与 87% 来自不同检索配置。",
+   "locator": "Methods、Tables 3–6、8–12，PDF pp.4–7",
+   "basis": "inference",
+   "basis_note": "原始数字来自论文；求和与配置差异为阅读者计算和分析。"
+  },
+  {
+   "id": "swb_44bb85d2bfc523ae:E07",
+   "claim": "作者承认两项未解决问题：病历不完整时的不确定性校准（协调员不愿在无进一步调查时排除患者），以及准则级到患者级的汇总；复核时间减少 80% 只覆盖预筛阶段。真实数据受保密协议限制不公开，作者为 Inato 员工。",
+   "locator": "Discussion、Conclusions、Data availability、Competing interests，PDF pp.7–8",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

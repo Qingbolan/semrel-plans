@@ -1,0 +1,72 @@
+{
+ "id": "swb_302fffb141cd9c0d",
+ "url": "https://openreview.net/pdf?id=rkeJRhNYDH",
+ "title": "TabFact: A Large-scale Dataset for Table-based Fact Verification",
+ "version": "ICLR 2020 会议版，arXiv:1909.02164v5（2020-06-14），25 页（含附录）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/1909.02164v5",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_302fffb141cd9c0d.pdf",
+ "sha256": "365b19479b3bae6e0f2c11a38ea8066f2df40a57e17374d33a8038a38723e5e3",
+ "format": "pdf",
+ "pages": 25,
+ "note_directory": "papers/readings/notes/swb_302fffb141cd9c0d",
+ "note": "papers/readings/notes/swb_302fffb141cd9c0d/README.md",
+ "read_sections": {
+  "problem": "§1、§3 开头，PDF pp.1–4",
+  "method": "§2、§3.1–3.2，PDF pp.3–6",
+  "evaluation": "§4、Table 2，PDF pp.7–8",
+  "limitations": "§4 Results、附录错误分析，PDF pp.8、15–17"
+ },
+ "evidence": [
+  {
+   "id": "swb_302fffb141cd9c0d:E01",
+   "claim": "TabFact 含 16,573 张维基表、118,275 条人工陈述，标签为 ENTAILED/REFUTED；NEUTRAL 因一致性低被舍弃。",
+   "locator": "§1、§2.3、Table 1、脚注 3，PDF pp.2、4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_302fffb141cd9c0d:E02",
+   "claim": "数据按约 8:1:1 划分：Train 92,283 条/13,182 表，Val 12,792/1,696，Test 12,779/1,695；平均每表约 14 行、5–6 列。",
+   "locator": "§2.3、Table 1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_302fffb141cd9c0d:E03",
+   "claim": "两通道众包（简单 0.45 美元/5 句，复杂 0.75 美元/5 句），反例由正例改写并禁止直接加否定词；后过滤丢弃约 18% 正例与 27% 反例，Fleiss κ=0.75。",
+   "locator": "§2.1–2.3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_302fffb141cd9c0d:E04",
+   "claim": "Table-BERT 最佳 Test 65.1、LPA-Ranking（含标题）Test 65.3，人类在 small test 上 92.1；无表格 BERT 为 50.5。",
+   "locator": "§4、Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_302fffb141cd9c0d:E05",
+   "claim": "人工核查 100 条 dev：实体链接完全正确 58%，程序搜索召回 51%，正确程序覆盖率约低于 30%，说明 LPA 存在严重虚假程序问题。",
+   "locator": "§4 Results，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_302fffb141cd9c0d:E06",
+   "claim": "三个划分合计 117,854 条，比总数少约 400 条，与脚注 7 的过滤说明一致。",
+   "locator": "Table 1、脚注 7，PDF p.4",
+   "basis": "inference",
+   "basis_note": "差值由阅读者根据 Table 1 计算，并与脚注对应。"
+  },
+  {
+   "id": "swb_302fffb141cd9c0d:E07",
+   "claim": "给定 OpenReview PDF 链接下载得到 HTML 页面；实际保存的是同一论文 ICLR 2020 版的 arXiv v5。",
+   "locator": "PDF p.1 页眉",
+   "basis": "inference",
+   "basis_note": "下载结果为阅读者观察；论文身份由标题、作者与 ICLR 2020 页眉确认。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,72 @@
+{
+ "id": "lit_bb47801458a1",
+ "url": "https://arxiv.org/abs/2603.11622",
+ "title": "Qi et al. — Sema: A High-performance System for LLM-based Semantic Query Processing",
+ "version": "arXiv:2603.11622v1（2026-03-12），27 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2603.11622v1",
+ "retrieved_at": "2026-11-04T05:01:09.735125+00:00",
+ "fulltext": "papers/readings/fulltext/lit_bb47801458a1.pdf",
+ "sha256": "b57530d5f873dd57eeb39aeed244749fb9a499fd2d18f52b3d269b4fdc83bda1",
+ "format": "pdf",
+ "pages": 27,
+ "note_directory": "papers/readings/notes/lit_bb47801458a1",
+ "note": "papers/readings/notes/lit_bb47801458a1/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–3",
+  "method": "§3–6、Tables 1–2、Algorithm 1，PDF pp.3–8；附录 A–B，pp.16–17",
+  "evaluation": "§7、Tables 3–6、Figs.4–7，PDF pp.8–12；附录 C Tables 7–8、Figs.13–32，pp.17–27（抽读）",
+  "limitations": "§2.2 末段、§5.1–5.2 末段，PDF pp.3、6–7"
+ },
+ "evidence": [
+  {
+   "id": "lit_bb47801458a1:E01",
+   "claim": "Sema 在 DuckDB v1.2.2 中把 SemFilter/SemProj/SemJoin/SemOrderBy/SemAgg 实现为原生算子，用户通过 SemaSQL 在 SQL 子句中嵌入 s'…{列}…' 形式的 NL 表达式。",
+   "locator": "§2.1 Table 1、§3.1、§7.1，PDF pp.3–4、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb47801458a1:E02",
+   "claim": "优化器用辅助 LLM（CoT）做 NL 表达式压缩与谓词推导，推导出的 SQL 必须是原 NL 谓词的必要条件，经自反思校验失败时回退原 SemFilter。",
+   "locator": "§4，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb47801458a1:E03",
+   "claim": "AQE 用 δ1 样本估计 SemFilter 选择率与两两 MCC，在 δ2 样本上以未批处理参考路径为伪真值评估候选路径，剔除精度低于 τacc 者，在延迟/token 帕累托前沿上选路；仅支持同一流水线中的 SemFilter，融合限两个一元算子。",
+   "locator": "§5.1–5.2、Algorithm 1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb47801458a1:E04",
+   "claim": "基准为 BIRD 9 个数据库上的 20 条查询；Q1–Q5 真值来自原数据集，Q6–Q20 真值为 Gemma-3 27B 的推理结果，因此后者的质量指标是与参考模型的一致度。",
+   "locator": "§7.1、附录 C Tables 7–8，PDF pp.8、17–18",
+   "basis": "inference",
+   "basis_note": "数据与真值来源为原文明示；“一致度而非人工正确率”的解读为阅读者分析。"
+  },
+  {
+   "id": "lit_bb47801458a1:E05",
+   "claim": "全部本地 vLLM、Gemma-3 4B/12B 条件下，Sema 在 20 条查询延迟均最低，相对 Lotus 2–4×、相对 Palimpzest 2–10×；质量与 Lotus/Palimpzest 相当，FlockMTL 明显较差且不支持部分查询。",
+   "locator": "Abstract、§1、§7.2、Fig.4、Table 3，PDF pp.1–2、8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb47801458a1:E06",
+   "claim": "Table 4 中 Q3 加谓词推导使 LLM 调用 856→492(+2)、延迟 410.66s→135.11s；但 Q14 加推导后 Precision 0.6134→0.3787，原文正文未讨论该下降。",
+   "locator": "§7.4、Table 4，PDF p.10",
+   "basis": "inference",
+   "basis_note": "表值来自原文；“正文未讨论”为阅读者核对正文后的判断。"
+  },
+  {
+   "id": "lit_bb47801458a1:E07",
+   "claim": "本地 vLLM 下批处理和融合可能增加延迟、批处理一致降低质量；远程 API 下二者同时降低延迟与成本。",
+   "locator": "§7.3、§7.5、Figs.6–7，PDF pp.9–11",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_0e8300b2b4902c9a",
+ "url": "https://aclanthology.org/W16-5706",
+ "title": "Richer Event Description: Integrating event coreference with temporal, causal and bridging annotation",
+ "version": "2nd Workshop on Computing News Storylines（2016），ACL Anthology W16-5706，pp.47–56，10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/W16-5706.pdf",
+ "retrieved_at": "2026-11-04T05:54:04.992485+00:00",
+ "fulltext": "papers/readings/fulltext/swb_0e8300b2b4902c9a.pdf",
+ "sha256": "9760a7f346eaebcc60121b9085df8d22dd1b2ec50fb3b919a31297d3d0f40517",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "papers/readings/notes/swb_0e8300b2b4902c9a",
+ "note": "papers/readings/notes/swb_0e8300b2b4902c9a/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3.1–3.5、Figures 1–3，PDF pp.2–6",
+  "evaluation": "Tables 1–5、§4.1–4.2、Figures 4–5，PDF pp.3–7",
+  "limitations": "§4.3、§5，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_0e8300b2b4902c9a:E01",
+   "claim": "RED 语料含 95 篇新闻与论坛文档、54,287 token、8,731 事件、1,127 时间表达、10,320 实体、2,390 同一链、1,863 桥接、4,969 条事件-事件关系。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0e8300b2b4902c9a:E02",
+   "claim": "标注分两遍：第一遍标事件、时间、实体及其属性和实体共指/桥接；裁决后第二遍在已裁决 markable 上标事件共指、桥接和时序/因果/子事件关系。",
+   "locator": "§3，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0e8300b2b4902c9a:E03",
+   "claim": "因果与时序融合为 BEFORE/CAUSES、OVERLAP/CAUSES、BEFORE/PRECONDITION、OVERLAP/PRECONDITION；子事件以 CONTAINS-SUBEVENT 表示，两类 CONTAINS 区分一致率 90.2%。",
+   "locator": "§3.3–3.4，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0e8300b2b4902c9a:E04",
+   "claim": "一致性在 55 篇子集上计算：事件 markable ITA 86.1；事件共指 CoNLL F1 ITA 65.5、对金标 83.2；事件关系 ITA 低，如 CONTAINS 64.0、SIMULTANEOUS 0。",
+   "locator": "§3.1、Tables 1、4、5，PDF pp.3–5、7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0e8300b2b4902c9a:E05",
+   "claim": "从裁决删除的关系中抽 60 例做误差分析：预设 12、情态 8、习语 8、包含层级 6、可推出 5、结果状态 4、其他 17。",
+   "locator": "§4.3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0e8300b2b4902c9a:E06",
+   "claim": "论文未评测任何自动系统；Table 5 的 11 种关系合计 4,218 条，低于正文 4,969，差额应含 ALINK 与转述关系但未给分项。",
+   "locator": "Table 5、§1，PDF pp.1、7",
+   "basis": "inference",
+   "basis_note": "合计数为阅读者按表内计数相加；差额解释依据 §1 对 4,969 所含关系类型的说明。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

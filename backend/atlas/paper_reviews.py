@@ -16,7 +16,7 @@ class PaperReviews:
     def __init__(self, root, identity):
         self.root = Path(root)
         self.identity = identity
-        self.entries = json.loads((self.root / 'research/paper-completion/reviews.json').read_text())
+        self.entries = json.loads((self.root / 'papers/readings/reviews.json').read_text())
 
     def apply(self, papers):
         indexed = {self.identity(p['url']): p for p in papers}

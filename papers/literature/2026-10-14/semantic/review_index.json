@@ -1,0 +1,86 @@
+[
+  {
+    "folder": "Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
+    "title": "Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS",
+    "url": "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf",
+    "year": 2025,
+    "venue": "PVLDB",
+    "loc": "§1–8，pp.4171–4182；表1–7、图1–7；另核对参考文献。关键实验页4179已渲染检查。",
+    "key": "lotus",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
+    "pdf_sha256": "865382441d7ca488c4da4670f233fd1e9b78532d9a4f12cc018d4a58d40f6298"
+  },
+  {
+    "folder": "Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
+    "title": "Abacus: A Cost-Based Optimizer for Semantic Operator Systems",
+    "url": "https://arxiv.org/abs/2505.14661v3",
+    "year": 2026,
+    "venue": "PVLDB",
+    "loc": "v3，2026-02-03，PVLDB19(5):1060–1073；§1–7及表1–3、图1–8，表2所在PDF第9页已渲染检查。",
+    "key": "abacus",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
+    "pdf_sha256": "dfd6f4a2588c25a9ce30335f86ed32dcfd449f11ba81321b667751bac46866fb"
+  },
+  {
+    "folder": "DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
+    "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing",
+    "url": "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+    "year": 2025,
+    "venue": "PVLDB",
+    "loc": "PVLDB18(9):3035–3048；§1–7、表1–6、图1–5；实验页3043已渲染检查。",
+    "key": "docetl",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
+    "pdf_sha256": "be1cc8f31d9dda3fbdbeda59e6d7152f8b071aa63a75baec33e359b6a8500794"
+  },
+  {
+    "folder": "QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
+    "title": "QUEST: Query Optimization in Unstructured Document Analysis",
+    "url": "https://arxiv.org/abs/2507.06515v2",
+    "year": 2025,
+    "venue": "arXiv",
+    "loc": "arXiv2507.06515v2，2025-07-11；§1–6，表1–3、图1–8；表2–3所在PDF第11页已渲染检查。",
+    "key": "quest",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
+    "pdf_sha256": "c0bf85e7ceab02ff197cec9ecf27ca685fcf37153be234364b2be383110e8bed"
+  },
+  {
+    "key": "palimpzest",
+    "title": "A Declarative System for Optimizing AI Workloads",
+    "year": 2024,
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2405.14696v2",
+    "folder": "A Declarative System for Optimizing AI Workloads-arXiv-2024",
+    "loc": "arXiv2405.14696v2，2024-05-29；全文§1–7，pp.1–20，附录pp.27–29程序与物理计划；表2所在p.18渲染核对。",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/A Declarative System for Optimizing AI Workloads-arXiv-2024",
+    "pdf_sha256": "f853718e273a6330aa4fde3ce79fbe23bf457d90c18d4d1f009de2adaca5deaf"
+  },
+  {
+    "key": "sembench",
+    "title": "SemBench: A Benchmark for Semantic Query Processing Engines",
+    "year": 2026,
+    "venue": "PVLDB",
+    "url": "https://arxiv.org/abs/2511.01716v2",
+    "folder": "SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
+    "loc": "arXiv2511.01716v2，2026-03-16；全文§1–6、表1–5、图1，PDF pp.1–12；p.7表2–3渲染核对。",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
+    "pdf_sha256": "9d34f386d9c88c911b67277e663b2476e6c729c3c60605d934f07b620c4d630f"
+  },
+  {
+    "key": "uda",
+    "title": "Unstructured Data Analysis using LLMs: A Comprehensive Benchmark",
+    "year": 2025,
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2510.27119v1",
+    "folder": "Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025",
+    "loc": "arXiv2510.27119v1，2025-10-31；全文§1–6，pp.1–13，表1–4、图1–14；p.10表3–4渲染核对。PDF提及的附录未包含在本下载版本，未声称读过。",
+    "reading_status": "full_text_reviewed",
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025",
+    "pdf_sha256": "1863e73e8e9e2124fa0e94a7348b53a91e2cac98eb1fc303675e7f2b8765c6db"
+  }
+]

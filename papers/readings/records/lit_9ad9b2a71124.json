@@ -1,0 +1,71 @@
+{
+ "id": "lit_9ad9b2a71124",
+ "url": "https://arxiv.org/abs/2510.16872",
+ "title": "Zhang et al. — DeepAnalyze: Agentic Large Language Models for Autonomous Data Science",
+ "version": "arXiv:2510.16872v1（2025-10-19），23 页（正文 12 页 + 附录）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2510.16872v1",
+ "retrieved_at": "2026-11-04T05:12:01.081201+00:00",
+ "fulltext": "papers/readings/fulltext/lit_9ad9b2a71124.pdf",
+ "sha256": "282a12564d395e1f827697737be5a1483381f5f992b94879e42a985340a1b434",
+ "format": "pdf",
+ "pages": 23,
+ "note_directory": "papers/readings/notes/lit_9ad9b2a71124",
+ "note": "papers/readings/notes/lit_9ad9b2a71124/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–4",
+  "method": "§3.1–3.4、Algorithm 1、Figure 3–6，PDF pp.4–8",
+  "evaluation": "§4–5、Tables 1–8、Figure 7–8，附录 A，PDF pp.7–11、16–17；pp.7–11 结果表已渲染核对",
+  "limitations": "原文无局限章节；§6 Conclusion，PDF pp.11–12（局限由阅读者从实验表推断）"
+ },
+ "evidence": [
+  {
+   "id": "lit_9ad9b2a71124:E01",
+   "claim": "作者把现有方法分为领域专用 LLM 与 workflow 式 agent，认为二者都未在真实环境中训练；数据科学 agentic 训练面临奖励稀疏与轨迹稀缺。",
+   "locator": "§1–2，PDF pp.1–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9ad9b2a71124:E02",
+   "claim": "模型用 Analyze/Understand/Code/Execute/Answer 五种特殊 token 动作循环交互，直到生成 Answer；Code 在环境中执行，反馈写入 Execute。",
+   "locator": "§3.1、Algorithm 1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9ad9b2a71124:E03",
+   "claim": "训练分单能力微调与多能力 agentic 训练（冷启动 + GRPO）；数据约 470K + 20K + 15K ≈ 500K，序列长 8K / 32K，基座为 DeepSeek-R1-0528-Qwen3-8B。",
+   "locator": "§3.2、§3.4、§4.2，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9ad9b2a71124:E04",
+   "claim": "DABStep-Research 为作者自建，100 个任务、五类，LLM-as-a-judge 按内容和格式各打 1–5 分。",
+   "locator": "§4.1、附录 A，PDF pp.8、16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9ad9b2a71124:E05",
+   "claim": "DataSciBench Score 61.11（GPT-4o 64.51）；DSBench 建模 Performance 39.41（AutoGen+GPT-4 45.52）；DABStep 总体 38.88、hard 32.80，easy 70.83 低于 84.72。",
+   "locator": "Tables 1–3，PDF pp.7、9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9ad9b2a71124:E06",
+   "claim": "消融：去掉 Understand 后 DABStep 由 38.88 降到 31.78；只做单能力微调为 15.34，一阶段训练为 36.89。",
+   "locator": "Tables 6–7，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9ad9b2a71124:E07",
+   "claim": "§6 称在 12 个基准上超过最强闭源 LLM，与 DataSciBench 和 DSBench 建模的表格结果不一致；原文无局限章节，也未讨论训练与评测间的泄漏检查。",
+   "locator": "§6、Tables 1–2，PDF pp.7、9、11–12",
+   "basis": "inference",
+   "basis_note": "数值来自原文；不一致与缺失项为阅读者比较所得。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

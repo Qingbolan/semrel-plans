@@ -1,0 +1,77 @@
+{
+ "id": "swb_ac3a36eb2b2cb80d",
+ "url": "https://arxiv.org/abs/2609.01202",
+ "title": "Towards AI-Assisted Clinical Trial Matching: Practical Considerations, Multicenter Evaluation, and Real-World Deployment",
+ "version": "arXiv:2609.01202v2（2026-10-28，cs.CL），44 页（含补充材料）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2609.01202",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_ac3a36eb2b2cb80d.pdf",
+ "sha256": "189ebfe6e5f3aed0558fd6bf40c3bbcc0ae060d9c08d19845418ca23e3fbded2",
+ "format": "pdf",
+ "pages": 44,
+ "note_directory": "papers/readings/notes/swb_ac3a36eb2b2cb80d",
+ "note": "papers/readings/notes/swb_ac3a36eb2b2cb80d/README.md",
+ "read_sections": {
+  "problem": "摘要、Introduction，PDF pp.1–3",
+  "method": "Results 首节、Fig. 1、Methods 系统设计，PDF pp.3–4、17–18",
+  "evaluation": "Results、Figs. 2–5、Methods 评测定义，PDF pp.5–14、18–26",
+  "limitations": "Discussion 局限段，PDF pp.15–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E01",
+   "claim": "作者认为既有 AI 试验匹配只做资格判断而非临床推荐，且缺乏医生裁定与前瞻性真实工作流评测。",
+   "locator": "Introduction，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E02",
+   "claim": "输入为患者上下文、预定义本地试验库和本地匹配策略；试验库超过 1,500 个时用 BM25+MedCPT 混合检索。每个试验输出结构化理由、0–100 的 fit score（>90 为 Highly Recommended，80–90 为 Possible Match，<80 为 Low Fit）和置信度。",
+   "locator": "Methods 系统设计，PDF p.17",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E03",
+   "claim": "回顾性评测共 288 例、1,340 个患者–试验对，分别来自 OPR 19、CCF 10、UIC 15、UPMC 144、NCI 100 例，试验库规模 9–1,871。",
+   "locator": "Fig. 2a、Results，PDF pp.3、5–6、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E04",
+   "claim": "四个 top-ranked 回顾性队列（188 例、440 对）的命中率@1=0.88、@10=0.91。NCI 队列中，系统单独与共识一致率为 89.0%，医生有/无辅助为 94.0%/94.2%；筛查时间从 129.8 秒降到 58.4 秒（−55.0%）。",
+   "locator": "Results 回顾性节，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E05",
+   "claim": "前瞻性 POTB 评测共 27 例（2026 年 2–7 月）。有至少一个最终推荐的病例从 11 例增至 21 例；54 个最终推荐中 37 个仅由系统发现；339 个系统候选中 282 个被标为 Eligible but Not Recommended。",
+   "locator": "Results 前瞻节，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E06",
+   "claim": "在 NIH-TrialBench（126 个合成病例、1,373 个候选试验）上，目标试验 Recall@10 宏平均为 TrialGPT 2.0 70%、1.0 54%、GPT-5.5 Thinking 43%、Gemini-3.5 Flash 21%。在 SIGIR/TREC 2021/2022 上，相对 1.0 平均 MAP 提升 10.2%。",
+   "locator": "Results 基准节、Methods，PDF pp.12、19、24–25",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E07",
+   "claim": "作者承认的局限包括：未评估入组和患者结局；前瞻性部分为单一工作流、病例少；试验库以美国为主；主干模型可能下线；系统有时过度字面地套用标准。",
+   "locator": "Discussion，PDF pp.15–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac3a36eb2b2cb80d:E08",
+   "claim": "通用 LLM 基线经网页界面检索注册库，而 TrialGPT 2.0 在给定候选集上排序，条件不对等。NCI 共识标签包含系统辅助下的标注，可能偏向辅助条件。",
+   "locator": "Methods，PDF pp.21、24",
+   "basis": "inference",
+   "basis_note": "流程描述来自原文 Methods；“条件不对等/可能偏向”是阅读者对评测设计的判断，原文未如此表述。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

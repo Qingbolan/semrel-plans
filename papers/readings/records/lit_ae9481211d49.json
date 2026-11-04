@@ -1,0 +1,72 @@
+{
+ "id": "lit_ae9481211d49",
+ "url": "https://doi.org/10.1109/tkde.2025.3592032",
+ "title": "Liu et al. — A Survey of Text-to-SQL in the Era of LLMs: Where Are We, and Where Are We Going?",
+ "version": "arXiv:2408.05109v7（2026-08-25），20 页；与 TKDE 2025 版标题相同的作者预印本，IEEE 正式版未获取",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2408.05109",
+ "retrieved_at": "2026-11-04T05:01:57+00:00",
+ "fulltext": "papers/readings/fulltext/lit_ae9481211d49.pdf",
+ "sha256": "5f9f6d02c11493e36ba929c9964c4ddc3238d69884430f5ec0734aaf1717ddf1",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "papers/readings/notes/lit_ae9481211d49",
+ "note": "papers/readings/notes/lit_ae9481211d49/README.md",
+ "read_sections": {
+  "problem": "§I–II（Definition 1、Fig. 2、挑战 C1–C4），PDF pp.1–6",
+  "method": "§III–VI（PLM/LLM 分类、预处理、翻译、后处理模块），PDF pp.6–13；浏览",
+  "evaluation": "§VII Table II、§VIII 指标/工具/错误分类，PDF pp.13–16；§IX，pp.16–17",
+  "limitations": "§X 局限与开放问题、Table III，PDF pp.17–18"
+ },
+ "evidence": [
+  {
+   "id": "lit_ae9481211d49:E01",
+   "claim": "Definition 1：给定 NL 与关系数据库，生成反映用户意图、执行后返回正确结果的 SQL；由于歧义/欠指定，或即使输入清晰，也可能存在多个正确或等价的 SQL。",
+   "locator": "§II-A，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ae9481211d49:E02",
+   "claim": "Fig. 2 的例子中，“genres” 可指 LiteraryGenre 或 SubjectGenre，“Labor Day in 2023” 在美国与中国分别对应 9 月 4 日和 5 月 1 日，需要依赖领域知识或附加信息。",
+   "locator": "§II-B、Fig. 2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ae9481211d49:E03",
+   "claim": "Table II 用 NL2SQL360 统计各基准，例如 Spider 有 11,840 个问题、206 个 DB、1,056 张表；BIRD 有 10,962 个问题、80 个 DB、611 张表、平均每 DB 4,585,335 条记录；Spider2-Lite 有 527 个问题、264 个 DB、6,259 张表。",
+   "locator": "§VII、Table II，PDF p.14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ae9481211d49:E04",
+   "claim": "作者认为现有基准的 SQL 复杂度低于真实场景，嵌套查询、复杂集合运算、标量函数和数学计算不足。",
+   "locator": "§VII-B Discussion，PDF p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ae9481211d49:E05",
+   "claim": "两级错误分类（错误位置 + 成因）用于 DIN-SQL 在 Spider 上的错误时，Others 类只占 1.8%；这是该分类唯一的实证支持，没有跨模型或跨基准验证。",
+   "locator": "§VIII-C、Fig. 1(d)，PDF pp.1、16",
+   "basis": "inference",
+   "basis_note": "1.8% 来自原文；“唯一实证、未跨模型验证”是阅读者的判断。"
+  },
+  {
+   "id": "lit_ae9481211d49:E06",
+   "claim": "Table III（Spider）：DIN-SQL 每条 SQL 3,579 API tokens、10.34 s，ZeroNet 377 tokens、3.72 s，RESDSQL 1.91 s；开放问题包括 open-domain Text-to-SQL、低成本方法、可信性和自适应数据合成。",
+   "locator": "§X、Table III，PDF pp.17–18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_ae9481211d49:E07",
+   "claim": "批次 URL 为 TKDE DOI（IEEE Xplore 11095853，需订阅）；本次阅读的是标题相同的作者 arXiv v7 预印本，与正式版的页码和内容可能有差异。",
+   "locator": "arXiv 首页页眉，PDF p.1",
+   "basis": "inference",
+   "basis_note": "版本对应关系为阅读者根据标题和作者一致性做出的判断，未与 IEEE 正式版逐页比对。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

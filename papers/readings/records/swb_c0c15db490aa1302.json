@@ -1,0 +1,77 @@
+{
+ "id": "swb_c0c15db490aa1302",
+ "url": "https://aclanthology.org/2022.acl-long.303",
+ "title": "Loukas et al. — FiNER: Financial Numeric Entity Recognition for XBRL Tagging",
+ "version": "ACL 2022 长文，论文集 pp.4419–4431（ACL Anthology 2022.acl-long.303），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2022.acl-long.303.pdf",
+ "retrieved_at": "2026-11-04T05:40:11+00:00",
+ "fulltext": "papers/readings/fulltext/swb_c0c15db490aa1302.pdf",
+ "sha256": "7d96c43344ecd3782e80f2bc3ae6dafdb959f709c390e279002f7cc7c904936a",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "papers/readings/notes/swb_c0c15db490aa1302",
+ "note": "papers/readings/notes/swb_c0c15db490aa1302/README.md",
+ "read_sections": {
+  "problem": "§1–3，PDF pp.1–4",
+  "method": "§4、§6–7，PDF pp.4–6；附录 A，p.12",
+  "evaluation": "§5、§8–9.3、Tables 3–6，PDF pp.4–8；附录 B（Tables 8–9），p.13",
+  "limitations": "§9.4、§10，PDF pp.8–9"
+ },
+ "evidence": [
+  {
+   "id": "swb_c0c15db490aa1302:E01",
+   "claim": "FiNER-139 来自约 1 万份 2016–2020 年 SEC 年报/季报的文字附注，XBRL 标签由专业审计师标注；保留出现至少 1,000 次的 139 个标签（共 6,008 个），IOB2 下共 279 个 token 标签。",
+   "locator": "§3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E02",
+   "claim": "180 万句中约 40% 被启发式规则删除（仅丢 1% 带标签句），余下按时间 80/10/10 切分为 900,384/112,494/108,378 句。",
+   "locator": "§3、Table 2，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E03",
+   "claim": "91.2% 的金标准片段为数字表达；平均每个金标准片段 2.53 个子词、1.04 个词。",
+   "locator": "§5–6，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E04",
+   "claim": "基线测试 µ-F1：词级 BiLSTM 77.3 高于 BERT 75.1；加 CRF 后 BERT 78.0 最好，词级 BiLSTM 降至 69.4。",
+   "locator": "§5、Table 3，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E05",
+   "claim": "`[SHAPE]` 伪 token 把 BERT 测试 µ-F1 提到 79.4；在 SEC 文件上预训练的 SEC-BERT-SHAPE 达 82.1，为全文最佳。",
+   "locator": "§6–8、Table 4，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E06",
+   "claim": "推荐引擎设定下 SEC-BERT-SHAPE 的 Hits@10 为 99.4%，但该设定假设待标注 token 已知。",
+   "locator": "§9.3、Figure 4，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E07",
+   "claim": "错误分析指出专业术语细分、财务日期误判为 O、审计师标注遗漏/不一致三类问题；作者未测人类上限。",
+   "locator": "§9.4、§10，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c0c15db490aa1302:E08",
+   "claim": "Table 5 的 SEC-BERT 78.8 与 Table 4 开发集值相同（测试为 75.7）；Table 6 的 BiLSTM-SHAPE 76.8 与 Table 9 测试 78.1 不一致。",
+   "locator": "Tables 4–6、9，PDF pp.6–7、13",
+   "basis": "inference",
+   "basis_note": "数字均来自原表；不一致为阅读者交叉比对发现，原文未解释。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

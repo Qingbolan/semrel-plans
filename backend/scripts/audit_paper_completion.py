@@ -10,11 +10,11 @@ from papers import PaperExporter
 
 def refresh():
     identity = PaperExporter(ROOT).identity
-    destination = ROOT / 'research/paper-completion/queue.json'
+    destination = ROOT / 'papers/readings/queue.json'
     queue = json.loads(destination.read_text())
     previous = {identity(p['url']): p for p in queue['papers']}
     reviews = {identity(p['url']): p for p in json.loads(
-        (ROOT / 'research/paper-completion/reviews.json').read_text())}
+        (ROOT / 'papers/readings/reviews.json').read_text())}
     catalog = json.loads((ROOT / 'dist/assets/papers.js').read_text().removeprefix(
         'window.SEMREL_PAPERS = ').rstrip(';\n'))
     required = ['motivation', 'problem', 'novelty', 'workload', 'usecase', 'benchmark']

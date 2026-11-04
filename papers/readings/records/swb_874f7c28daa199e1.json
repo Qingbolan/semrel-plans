@@ -1,0 +1,58 @@
+{
+ "id": "swb_874f7c28daa199e1",
+ "url": "https://aclanthology.org/W13-2322",
+ "title": "Abstract Meaning Representation for Sembanking",
+ "version": "LAW VII & ID（ACL 2013），pp.178–186，ACL Anthology W13-2322，9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/W13-2322.pdf",
+ "retrieved_at": "2026-11-04T05:39:15.373980+00:00",
+ "fulltext": "papers/readings/fulltext/swb_874f7c28daa199e1.pdf",
+ "sha256": "1f4199ef6bc42e3f4c10ae1cfa5e0913c80d8afd22c7f233be216a56e47dc556",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/swb_874f7c28daa199e1",
+ "note": "papers/readings/notes/swb_874f7c28daa199e1/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§2–§3、§5，PDF pp.2–6",
+  "evaluation": "§5（Smatch 与 IAA）、§6，PDF pp.6–7",
+  "limitations": "§4，PDF p.6；§8，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_874f7c28daa199e1:E01",
+   "claim": "动机：语义标注分散在命名实体、共指、语义关系等独立资源中，缺少类似 Penn Treebank 的整句语义库。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_874f7c28daa199e1:E02",
+   "claim": "AMR 是有根、有向、边带标签的图，可写成三元组合取或 PENMAN 记法；大量使用 PropBank 框架集，不规定字符串到意义的推导，偏向英语、非中间语。",
+   "locator": "§1–§2、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_874f7c28daa199e1:E03",
+   "claim": "Smatch 把 AMR 视为三元组合取，搜索最优变量映射计算 P/R/F；专家对共识 Smatch 新闻 0.83、网页 0.79，新标注员双标 382 句互评 0.71。",
+   "locator": "§5，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_874f7c28daa199e1:E04",
+   "claim": "当时语料：共识 AMR 225+142+100 句，LDC 标注《小王子》1,546、网页 1,328 与 1,110、新华社 926、CCTV 214 句；翻译一句需 7–10 分钟。",
+   "locator": "§6，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_874f7c28daa199e1:E05",
+   "claim": "AMR 不表示时态与数、无全称量化、不区分真实与假设事件，名词框架化处理不一致。",
+   "locator": "§4，PDF p.6",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

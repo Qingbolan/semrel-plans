@@ -1,0 +1,65 @@
+{
+ "id": "swb_006ebf155d6acc06",
+ "url": "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf",
+ "title": "Bunt & Prasad — ISO DR-Core (ISO 24617-8): Core Concepts for the Annotation of Discourse Relations",
+ "version": "作者主页 PDF（文件名 ISA-12-DR-core-revised，PDF 生成于 2016-05-31；正文未印会议名，文件名指向 ISA-12 研讨会），10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf",
+ "retrieved_at": "2026-11-04T05:48:35.073559+00:00",
+ "fulltext": "papers/readings/fulltext/swb_006ebf155d6acc06.pdf",
+ "sha256": "74fd49d3479baa01582496cbc8770da20030b70672b0240d31c26e000aa8c813",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "papers/readings/notes/swb_006ebf155d6acc06",
+ "note": "papers/readings/notes/swb_006ebf155d6acc06/README.md",
+ "read_sections": {
+  "problem": "§1，PDF p.1",
+  "method": "§2.1–2.8、§3（Tables 1–5）、§4.1–4.4（Figure 1、例 (3)–(7)），PDF pp.1–9",
+  "evaluation": "无实证评测；§3 跨框架映射表，PDF pp.4–7",
+  "limitations": "§2.4、§2.7 脚注 2、§5，PDF pp.2–3、9"
+ },
+ "evidence": [
+  {
+   "id": "swb_006ebf155d6acc06:E01",
+   "claim": "ISO DR-Core 是 ISO 24617-8 的第一部分，目标是：确立互操作标注的要求、与其他 ISO 语义标注方案兼容、给出一致定义的核心关系集合。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_006ebf155d6acc06:E02",
+   "claim": "篇章关系恰好有两个论元，论元是抽象对象（情境或对话行为）；语用变体编码在论元上；关系为平面集合；不对称性用关系特定角色表示；对全局结构保持理论中立。",
+   "locator": "§2.3–2.8，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_006ebf155d6acc06:E03",
+   "claim": "Table 1 定义 20 个核心关系及其对称性与论元定义，Table 2 给出角色标签；Tables 3–5 映射到 RST、SDRT、PDTB、Sanders 等七种分类。",
+   "locator": "§3、Tables 1–5，PDF pp.4–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_006ebf155d6acc06:E04",
+   "claim": "标注语言由抽象语法、DRS 形式语义和具体 XML 语法 DRelML 组成；DRelML 用 dRel、drArg、explDRLink、implDRLink 四个元素表示连接词、论元和显/隐式关系。",
+   "locator": "§4.1–4.3，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_006ebf155d6acc06:E05",
+   "claim": "本文没有语料统计、标注一致性或解析实验；映射基于定义比较，作者称与 RST 表达性关系的对应并不严格。",
+   "locator": "§3、§5，PDF pp.4–5、9",
+   "basis": "inference",
+   "basis_note": "“无实验”是阅读者对全文的判断；“映射基于定义比较、不严格对应”来自原文 §3。"
+  },
+  {
+   "id": "swb_006ebf155d6acc06:E06",
+   "claim": "关系集合开放可扩展；层级分类留待与 TextLink 合作；论元约束需要进一步达成共识。",
+   "locator": "§2.4、§2.7 脚注 2、§5，PDF pp.2–3、9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

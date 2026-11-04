@@ -27,6 +27,10 @@ backend/
 frontend/                   前端源码：页面模板、交互脚本、样式、图组件
 dist/                       构建产物（不进 Git）：index.html、migration.html、assets/、viewer/
 tests/                      数据完整性、后端与前端测试
+papers/
+  survey/                   早期论文解析（每篇一个目录，manifest.json 记录哈希）
+  readings/                 全文精读：notes/ 七栏笔记、records/ 与 reviews.json 证据；fulltext/、text/ 为原文（不进 Git、不公开）
+  literature/               文献检索与 benchmark 覆盖核对
 exports/                    生成的 CSV、SQLite、汇总
 docs/                       模型契约、来源快照、收据
 ```

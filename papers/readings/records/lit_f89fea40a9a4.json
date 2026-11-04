@@ -1,0 +1,65 @@
+{
+ "id": "lit_f89fea40a9a4",
+ "url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+ "title": "Wang & Li — AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries",
+ "version": "CIDR 2025（p32），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+ "retrieved_at": "2026-11-04T05:01:57+00:00",
+ "fulltext": "papers/readings/fulltext/lit_f89fea40a9a4.pdf",
+ "sha256": "026f3a212385a037e3e1423119cca79ca0a037a6d1079503646455be1e786e40",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "papers/readings/notes/lit_f89fea40a9a4",
+ "note": "papers/readings/notes/lit_f89fea40a9a4/README.md",
+ "read_sections": {
+  "problem": "§1，Fig. 2，PDF pp.1–3",
+  "method": "§2–6（架构、22 个语义算子、编排、交互执行、代价优化、数据湖扩展），PDF pp.3–10",
+  "evaluation": "§7，Figs. 7–9，PDF pp.10–11",
+  "limitations": "§6 未被实验覆盖的扩展、§8–9，PDF pp.9–12；局限主要为阅读者归纳"
+ },
+ "evidence": [
+  {
+   "id": "lit_f89fea40a9a4:E01",
+   "claim": "现有数据湖无法处理需要多跳语义检索、多步推理和多阶段语义分析的复杂查询；人工编排的流水线存在人力成本高、流水线固定、功能有限三个问题。",
+   "locator": "摘要、§1、Fig. 2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f89fea40a9a4:E02",
+   "claim": "AOP 预定义 22 个语义算子（Retrieve、Scan、Filter、OrderBy、Summarize、…、GroupBy、Compare、Aggregate），每个算子可有 prompt 实现或预编程实现，新增算子只需提供说明与实现。",
+   "locator": "§3、Table 1，PDF pp.4–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f89fea40a9a4:E03",
+   "claim": "编排分三步：LLM 多次采样生成链式流水线，LLM 改写为 DAG，再用规则加 Explain/Integrate 合并；执行时逐层进行，根据中间结果终止失败分支并重新编排。",
+   "locator": "§4.1–4.2、Fig. 4，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f89fea40a9a4:E04",
+   "claim": "实验用 CRAG 中 Multi-hop 231、Post-processing 108、Set 249、Aggregation 315、Comparison 333 条问题，全部网页合并为共享知识库；模型为 Llama 3.1-8B Instruct，取 top-20 句块。",
+   "locator": "§7.1，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f89fea40a9a4:E05",
+   "claim": "Comparison 类：AOP 54.1%，LLM 9.30%，RAG 24.3%，IterRAG 33.9%，RecurRAG 38.1%；Multi-hop 上并行加预取使延迟从 17.8 s 降到 7.3 s。",
+   "locator": "§7.2、Figs. 7、9a，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f89fea40a9a4:E06",
+   "claim": "“提升 45%” 对应与直接问 LLM 相比的绝对差（54.1−9.30=44.8）；§6 的数据湖扩展和奖励模型没有实验；评测只覆盖网页文本，只用一个 8B 模型，没有方差，也没有与语义算子系统对比。",
+   "locator": "§2 p.4；§6 pp.9–10；§7 pp.10–11",
+   "basis": "inference",
+   "basis_note": "数值和章节内容来自原文；算术解释与“未覆盖”的局限是阅读者归纳。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

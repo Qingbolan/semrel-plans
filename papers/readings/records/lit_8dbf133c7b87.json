@@ -1,0 +1,71 @@
+{
+ "id": "lit_8dbf133c7b87",
+ "url": "https://arxiv.org/abs/2502.12918",
+ "title": "Dharwada et al. — Query Rewriting via LLMs (LITHE)",
+ "version": "arXiv:2502.12918v4（2025-09-02），38 页（正文 pp.1–24，参考文献 pp.24–28，附录 A–D pp.29–38）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2502.12918v4",
+ "retrieved_at": "2026-11-04T05:19:58.245179+00:00",
+ "fulltext": "papers/readings/fulltext/lit_8dbf133c7b87.pdf",
+ "sha256": "b1331a45ea110deee6255dc1afd11a297f8abee4c6fd90f99f187e2fa955480b",
+ "format": "pdf",
+ "pages": 38,
+ "note_directory": "papers/readings/notes/lit_8dbf133c7b87",
+ "note": "papers/readings/notes/lit_8dbf133c7b87/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–5",
+  "method": "§3–6、Table 1–4、Algorithm 1，PDF pp.5–15",
+  "evaluation": "§7、Table 5–8、Fig. 8–9，PDF pp.15–21；附录 A–B、Table 9–11，pp.29–31；Table 5 已渲染核对",
+  "limitations": "§8（The Road Ahead），PDF pp.21–23"
+ },
+ "evidence": [
+  {
+   "id": "lit_8dbf133c7b87:E01",
+   "claim": "SQL 到 SQL 改写工具应满足语义等价、不回退、开销可接受；规则式方法范围受限，纯 LLM 方法易出现语义/语法错误。10 条 TPC-DS 微基准上人工改写的 CSGM 为 11.84，SOTA 集成为 2.49。",
+   "locator": "§1、§3、Table 1，PDF pp.3–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8dbf133c7b87:E02",
+   "claim": "慢查询定义为原生引擎上运行超过 10 s；CPR 为优化器估计代价至少提升 1.5 倍的改写；指标为 CPR 数、CSGM 和 TSGM（冷缓存运行时间）。",
+   "locator": "§2、§7，PDF pp.4–5、15–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8dbf133c7b87:E03",
+   "claim": "方法组合了 4 个基本提示、单规则提示 R1–R6（冗余消除和基于选择率）、token 概率引导的 MCTS（θ=0.7、k=2、itermax=8），以及“抽样结果比对 + QED/SQLSolver 证明 + SEER 回退检测”。",
+   "locator": "§3–6、Table 2，PDF pp.5–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8dbf133c7b87:E04",
+   "claim": "TPC-DS 100 GB 的 88 条慢查询上（PostgreSQL v16、GPT-4o），LITHE 得到 26 个 CPR、CSGM 11.5、TSGM 13.2；SOTA 为 13 个 CPR、CSGM 6.1、TSGM 4.9。27 条并集 CPR 中有 11 条被形式化证明。",
+   "locator": "§7.1，PDF pp.16–18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8dbf133c7b87:E05",
+   "claim": "商业引擎 OptA/OptB 上 LITHE 的 CPR 为 12/9，TSGM 为 2.1/1.9；每条查询平均开销为 5 分钟、18,427 tokens、$0.045。",
+   "locator": "§7.3–7.4、Table 6–7，PDF pp.19–20",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8dbf133c7b87:E06",
+   "claim": "作者承认逻辑等价工具覆盖有限，统计验证的改写仍需 DBA 确认，因此 LITHE 不能作为全自动预处理器。",
+   "locator": "§8，PDF p.22",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8dbf133c7b87:E07",
+   "claim": "Table 5 中 MCTS 的单独 CPR 为 26，而正文称 MCTS 单独使用只得到 11 个 CPR，两者矛盾；CSGM/TSGM 只在 CPR 子集上计算。",
+   "locator": "§7.2.1、Table 5，PDF p.18（已渲染核对）",
+   "basis": "inference",
+   "basis_note": "表格和正文数字均来自原文；矛盾之处及其对结论的影响为阅读者分析。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

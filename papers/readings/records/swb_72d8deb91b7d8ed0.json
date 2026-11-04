@@ -1,0 +1,71 @@
+{
+ "id": "swb_72d8deb91b7d8ed0",
+ "url": "https://arxiv.org/abs/2505.17612",
+ "title": "Distilling LLM Agent into Small Models with Retrieval and Code Tools",
+ "version": "arXiv:2505.17612v2（2025-11-05，NeurIPS 2025），38 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2505.17612v2",
+ "retrieved_at": "2026-11-04T05:43:51.429944+00:00",
+ "fulltext": "papers/readings/fulltext/swb_72d8deb91b7d8ed0.pdf",
+ "sha256": "32f50380df5c2f008d635ae867d70cbcf9ee10bbdfca795db611a30a5c6aedd7",
+ "format": "pdf",
+ "pages": 38,
+ "note_directory": "papers/readings/notes/swb_72d8deb91b7d8ed0",
+ "note": "papers/readings/notes/swb_72d8deb91b7d8ed0/README.md",
+ "read_sections": {
+  "problem": "§1、Figure 2，PDF pp.2–3",
+  "method": "§3–4、Figure 3，PDF pp.4–5",
+  "evaluation": "§5–7、Tables 1–4、Figures 4–8，PDF pp.5–10（Table 2 已渲染核对）",
+  "limitations": "Limitations & Future Works，PDF p.10；§6 数学结果讨论，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_72d8deb91b7d8ed0:E01",
+   "claim": "CoT 蒸馏得到的小模型在需要罕见事实或精确计算时容易幻觉；作者提出蒸馏智能体的思考—行动—观察轨迹，使小模型学会使用检索和代码工具。",
+   "locator": "§1、Figure 2，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_72d8deb91b7d8ed0:E02",
+   "claim": "学生在教师轨迹上微调，只对思考和动作计算损失，观察不计入损失。",
+   "locator": "§4、Eq.4，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_72d8deb91b7d8ed0:E03",
+   "claim": "ftp 以 CoT 提示下教师的第一步推理作为智能体首个思考的前缀，仅用于生成教师轨迹；sag 每步采样 N 个动作，滤掉解析/执行错误后对观察结果多数投票。",
+   "locator": "§4、Eq.5、Figure 3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_72d8deb91b7d8ed0:E04",
+   "claim": "训练用 1,000 条 HotPotQA 与 2,000 条 MATH，过滤后约 2,000 条轨迹；测试为 4 个事实与 4 个数学基准，每个最多 500 例；检索库为 Wikipedia 2018 + e5-base-v2；教师为 Qwen2.5-32B-Instruct。",
+   "locator": "§5、Table 1，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_72d8deb91b7d8ed0:E05",
+   "claim": "+ftp+sag 的平均分为 7B 42.68、3B 36.60、1.5B 30.55、0.5B 21.90，均高于同规模 CoT 各变体；7B 智能体超过 32B 教师 CoT 提示的 39.54。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_72d8deb91b7d8ed0:E06",
+   "claim": "作者承认 ftp 可能使模型在思考中直接写出事实而减少检索，且智能体蒸馏不直接提升核心推理能力。",
+   "locator": "Limitations & Future Works，PDF p.10；Figure 8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_72d8deb91b7d8ed0:E07",
+   "claim": "0.5B 智能体（21.90）只高于 1.5B CoT Distill（21.28），低于 1.5B CoT Distill+RAG（24.64），“比肩大一档模型”取决于所选 CoT 变体。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "inference",
+   "basis_note": "阅读者对照 Table 2 平均分得出。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_c4bf4a96ffdb3949",
+ "url": "https://aclanthology.org/2023.acl-long.416",
+ "title": "Cheng et al. — MDACE: MIMIC Documents Annotated with Code Evidence",
+ "version": "ACL 2023 Long Papers，pages 7534–7550，17 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2023.acl-long.416.pdf",
+ "retrieved_at": "2026-11-04T05:48:41.580048+00:00",
+ "fulltext": "papers/readings/fulltext/swb_c4bf4a96ffdb3949.pdf",
+ "sha256": "3e47b7481cb66bdcac7877a3d57bc20667cd9ac155b0af08fd2a590b43b83bc3",
+ "format": "pdf",
+ "pages": 17,
+ "note_directory": "papers/readings/notes/swb_c4bf4a96ffdb3949",
+ "note": "papers/readings/notes/swb_c4bf4a96ffdb3949/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，Table 1，PDF pp.1–3",
+  "method": "§3.1–3.4、§5，Tables 2、6，PDF pp.3–6",
+  "evaluation": "§4、§6，Tables 3–5、7–10，PDF pp.5–9",
+  "limitations": "§8 Limitations，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "swb_c4bf4a96ffdb3949:E01",
+   "claim": "CAC 系统必须为计费编码提供文本证据，但 MIMIC-III 不含编码与叙述的对应；此前缺乏公开的长文档极端多标签证据数据集，只能定性展示注意力。",
+   "locator": "Abstract、§1–2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c4bf4a96ffdb3949:E02",
+   "claim": "Inpatient 编码员标注充分证据，Profee 编码员标注完整证据；按 ICD-10 标注后经 GEMs 映射到 ICD-9，仅 2 个编码无法映射。",
+   "locator": "§3.1–3.2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c4bf4a96ffdb3949:E03",
+   "claim": "规模：Inpatient 302 份 chart、604 文档、ICD-9 证据 3,934；Profee 52 份 chart、588 文档、证据 5,563；平均文档长度 19,372 和 11,116 token。",
+   "locator": "Tables 1、3，PDF pp.3、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c4bf4a96ffdb3949:E04",
+   "claim": "初始一致性 Krippendorff's α 为 Inpatient 0.53、Profee 0.24，复核后为 0.97/0.96；与 MIMIC 原编码的重合约 45%，部分原因是 37% 以上的就诊缺少手术记录。",
+   "locator": "§3.4、§4，Tables 2、5，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c4bf4a96ffdb3949:E05",
+   "claim": "证据划分 60/20/20（Inpatient 181/60/61，Profee 31/10/11）；出院小结测试集上监督注意力 token F1 43.0、exact span F1 27.8，均为最佳。",
+   "locator": "§6.1、§6.3，Tables 8–9，PDF pp.7–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_c4bf4a96ffdb3949:E06",
+   "claim": "充分证据的标注口径会低估召回，存在漏标修饰词和不连续片段的问题；基线只有 CNN 类模型，复核后的 α 来自 3 份病历的讨论共识，并非独立一致性。",
+   "locator": "§3.4、§8，PDF pp.4、10",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；评价、比较或口径提示为阅读者分析。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

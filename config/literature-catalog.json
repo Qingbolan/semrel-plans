@@ -7,10 +7,10 @@
     "reading_status": "full_text_reviewed",
     "evidence": [
       "https://arxiv.org/abs/2505.14661v3",
-      "research/2026-10-14/semantic/pdfs/abacus.pdf",
+      "papers/literature/2026-10-14/semantic/pdfs/abacus.pdf",
       "v3，2026-02-03，PVLDB19(5):1060–1073；§1–7及表1–3、图1–8，表2所在PDF第9页已渲染检查。"
     ],
-    "review_folder": "Survey/Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
+    "review_folder": "papers/survey/Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
     "first_submitted": "2025/05/20",
     "checked_on": "2026-10-14",
     "pdf_sha256": "dfd6f4a2588c25a9ce30335f86ed32dcfd449f11ba81321b667751bac46866fb",
@@ -18,7 +18,7 @@
       "constrained-physical-optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -41,7 +41,7 @@
       "agentic relational planning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -67,8 +67,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -93,7 +93,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -117,7 +117,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -133,7 +133,7 @@
     "evidence": [
       "完整阅读§1–8、表3–5、图6–11；视觉核对第9页表4。v2为固定异构DAG、1024-query主实验，最高3.6×batch/2.6×online；不能混用v1结果。"
     ],
-    "review_folder": "Survey/Batch Query Processing and Optimization for Agentic Workflows-arXiv-2026",
+    "review_folder": "papers/survey/Batch Query Processing and Optimization for Agentic Workflows-arXiv-2026",
     "aliases": [],
     "searched_at": "2026-10-14",
     "read_version": "arXiv v2 2026-01-19",
@@ -142,7 +142,7 @@
       "batch workflow optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -166,7 +166,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -182,7 +182,7 @@
     "evidence": [
       "已读v1正文§1–5、表1–7，p9表1–3视觉核对；首页PVLDB占位字段不作为录用证据。"
     ],
-    "review_folder": "Survey/Bridge the Last-Mile Gap to Semantic Analytics- Compiling Natural-Language Queries into Semantic Operator Pipelines-arXiv-2026",
+    "review_folder": "papers/survey/Bridge the Last-Mile Gap to Semantic Analytics- Compiling Natural-Language Queries into Semantic Operator Pipelines-arXiv-2026",
     "aliases": [],
     "searched_at": "2026-10-14",
     "evidence_pdf_sha256": "a56e99a4d217f273a213104608f45320f81820e7456c8a846a7d86253cb35a0d",
@@ -191,7 +191,7 @@
       "NL-to-semantic pipeline compilation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -215,7 +215,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -239,7 +239,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -255,7 +255,7 @@
     "evidence": [
       "完整阅读27页正文§1–9、附录A–J；表1–20、算法1；附录J提供55条SemBench与1条BioDEX意图。存在正文/附录query描述冲突，已在分析列出。"
     ],
-    "review_folder": "Survey/CADENZA- Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing-arXiv-2026",
+    "review_folder": "papers/survey/CADENZA- Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing-arXiv-2026",
     "aliases": [],
     "searched_at": "2026-10-14",
     "read_version": "arXiv v3 2026-07-13",
@@ -265,7 +265,7 @@
       "semantic operator compilation / multi-objective optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -289,7 +289,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -313,8 +313,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -341,8 +341,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -367,7 +367,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -383,7 +383,7 @@
     "evidence": [
       "全文4页§1–4、图1–2，PVLDB官方PDF确认19(12):4642–4645。演示论文无性能/准确率benchmark，web search/general tools尚为未来工作。"
     ],
-    "review_folder": "Survey/Carnot- Interpretable, Interactive, and Optimized Execution of Deep Research Queries-PVLDB-2026",
+    "review_folder": "papers/survey/Carnot- Interpretable, Interactive, and Optimized Execution of Deep Research Queries-PVLDB-2026",
     "aliases": [
       "https://arxiv.org/abs/2608.09532",
       "https://doi.org/10.14778/3827998.3828086"
@@ -395,7 +395,7 @@
       "interactive deep research analytics"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -419,7 +419,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -442,7 +442,7 @@
       "agentic query planning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -466,7 +466,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -490,7 +490,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -507,7 +507,7 @@
       "https://arxiv.org/abs/2609.24137",
       "https://arxiv.org/html/2609.24137v1"
     ],
-    "review_folder": "Survey/Data Agents- Agentic Data Systems-arXiv-2026",
+    "review_folder": "papers/survey/Data Agents- Agentic Data Systems-arXiv-2026",
     "source_date": "2026/09/21",
     "discovery_source": "https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers",
     "metadata_verified": true,
@@ -518,7 +518,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -542,7 +542,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -566,7 +566,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -590,7 +590,7 @@
       "Academia Research"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -614,7 +614,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -640,8 +640,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -658,7 +658,7 @@
     "evidence": [
       "正式会议PDF正文§1–7，图1–2，表1–2（p5视觉核对）；132 CSV/HTML文件与250邮件，2个query各3次。"
     ],
-    "review_folder": "Survey/Deep Research is the New Analytics System- Towards Building the Runtime for AI-Driven Analytics-CIDR-2026",
+    "review_folder": "papers/survey/Deep Research is the New Analytics System- Towards Building the Runtime for AI-Driven Analytics-CIDR-2026",
     "aliases": [
       "https://arxiv.org/abs/2509.02751"
     ],
@@ -696,7 +696,7 @@
       "agentic analytics runtime"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -720,7 +720,7 @@
       "Academia Research"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -744,7 +744,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -760,7 +760,7 @@
     "evidence": [
       "已读v1 Extended正文§1–10、算法1、表1–5、附录A–D；实际全工作流Trading相对KVFlow最高1.34倍，微基准1.56倍。"
     ],
-    "review_folder": "Survey/Efficient LLM Serving for Agentic Workflows- A Data Systems Perspective-arXiv-2026",
+    "review_folder": "papers/survey/Efficient LLM Serving for Agentic Workflows- A Data Systems Perspective-arXiv-2026",
     "aliases": [],
     "searched_at": "2026-10-14",
     "evidence_pdf_sha256": "61a1e4b087685fa976a96d1b6a9abf035716bd1534fbaad5a576a1ada863f60a",
@@ -769,7 +769,7 @@
       "workflow-aware LLM serving"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -792,7 +792,7 @@
       "dynamic workflow serving"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -818,8 +818,8 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -835,7 +835,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2608.06677",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2026/08/07",
@@ -844,7 +844,7 @@
       "compiled-semantic-execution"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -868,7 +868,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -883,7 +883,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2606.07923",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2026/06/06",
@@ -892,7 +892,7 @@
       "learned-predicate-ordering"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -916,7 +916,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -940,7 +940,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -956,7 +956,7 @@
     "evidence": [
       "arXiv与Google Research正式publication页确认同文；v4 PDF已取得，本轮核对摘要和发表信息，未重读全部方法实验。Google publication统计与早期arXiv摘要不同，不能混用版本结果。",
       "https://arxiv.org/abs/2512.02289",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "aliases": [
@@ -968,8 +968,8 @@
       "semantic pipeline rewrite optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json",
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json",
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Agent query systems",
@@ -994,7 +994,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1009,7 +1009,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2604.09944",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2026/04/10",
@@ -1018,7 +1018,7 @@
       "hybrid-operator-placement"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1042,7 +1042,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1066,7 +1066,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1090,7 +1090,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1114,7 +1114,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1138,7 +1138,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1162,7 +1162,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1178,14 +1178,14 @@
     "evidence": [
       "arXiv2511.01716v2，2026-03-16；全文§1–6、表1–5、图1，PDF pp.1–12；p.7表2–3渲染核对。"
     ],
-    "review_folder": "Survey/SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
+    "review_folder": "papers/survey/SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
     "first_submitted": "2025/11/03",
     "checked_on": "2026-10-14",
     "topics": [
       "semantic operators / benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1200,7 +1200,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2603.11622",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2026/03/12",
@@ -1209,7 +1209,7 @@
       "adaptive-semantic-sql"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1233,7 +1233,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1257,7 +1257,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1281,7 +1281,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1305,7 +1305,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1320,7 +1320,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2610.08089",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2026/10/06",
@@ -1329,7 +1329,7 @@
       "output-quality-semantics"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1352,7 +1352,7 @@
       "adaptive retrieval query planning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -1376,7 +1376,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1400,7 +1400,7 @@
       "Surveys"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1424,7 +1424,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1447,7 +1447,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1472,7 +1472,7 @@
       "automatic agent workflow search"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -1494,7 +1494,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1516,14 +1516,14 @@
     "original_url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/36.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/36.txt",
     "topics": [
       "Academia Research",
       "data-lake pipeline orchestration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Agent query systems",
@@ -1547,7 +1547,7 @@
       "adaptive-ml-query-processing"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1571,7 +1571,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1596,7 +1596,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1623,9 +1623,9 @@
       "heterogeneous analytics agent"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json",
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json",
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Agent query systems",
@@ -1651,7 +1651,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1675,7 +1675,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1699,7 +1699,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1719,12 +1719,12 @@
     "original_url": "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/27.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/27.txt",
     "topics": [
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1748,7 +1748,7 @@
       "System Diagnosis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1772,7 +1772,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1794,7 +1794,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -1809,7 +1809,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2504.01157",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2025/04/01",
@@ -1818,7 +1818,7 @@
       "in-database-llm-functions"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1833,7 +1833,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2511.19830",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2025/11/25",
@@ -1842,7 +1842,7 @@
       "agentic-logical-optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -1866,7 +1866,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1892,8 +1892,8 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -1918,7 +1918,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1938,12 +1938,12 @@
     "original_url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/DATAI/DATAI25_8.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/23.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/23.txt",
     "topics": [
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1967,7 +1967,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -1991,7 +1991,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2017,8 +2017,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2045,8 +2045,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2073,8 +2073,8 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2099,7 +2099,7 @@
       "System Diagnosis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2117,7 +2117,7 @@
       "https://arxiv.org/html/2409.07703v2",
       "https://proceedings.iclr.cc/paper_files/paper/2025/hash/50e9ad960ae78b741a6b4fea533f2eaf-Abstract-Conference.html"
     ],
-    "review_folder": "Survey/DSBench- How Far Are Data Science Agents from Becoming Data Science Experts-arXiv-2024",
+    "review_folder": "papers/survey/DSBench- How Far Are Data Science Agents from Becoming Data Science Experts-arXiv-2024",
     "source_date": "2024/09/12",
     "discovery_source": "https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers",
     "metadata_verified": true,
@@ -2128,7 +2128,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -2152,7 +2152,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -2172,12 +2172,12 @@
     "original_url": "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/7.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/7.txt",
     "topics": [
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2195,7 +2195,7 @@
       "https://arxiv.org/html/2402.18679v4",
       "https://github.com/HKUSTDial/awesome-data-agents"
     ],
-    "review_folder": "Survey/Data Interpreter- An LLM Agent For Data Science-arXiv-2024",
+    "review_folder": "papers/survey/Data Interpreter- An LLM Agent For Data Science-arXiv-2024",
     "source_date": "2024/02/28",
     "discovery_source": "https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers",
     "metadata_verified": true,
@@ -2207,8 +2207,8 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2233,7 +2233,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2257,7 +2257,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2281,7 +2281,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -2305,7 +2305,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -2331,8 +2331,8 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2357,7 +2357,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2381,7 +2381,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2396,10 +2396,10 @@
     "reading_status": "full_text_reviewed",
     "evidence": [
       "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
-      "research/2026-10-14/semantic/pdfs/docetl.pdf",
+      "papers/literature/2026-10-14/semantic/pdfs/docetl.pdf",
       "PVLDB18(9):3035–3048；§1–7、表1–6、图1–5；实验页3043已渲染检查。"
     ],
-    "review_folder": "Survey/DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
+    "review_folder": "papers/survey/DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
     "first_submitted": "2024/10/16",
     "checked_on": "2026-10-14",
     "pdf_sha256": "be1cc8f31d9dda3fbdbeda59e6d7152f8b071aa63a75baec33e359b6a8500794",
@@ -2407,7 +2407,7 @@
       "agentic-document-rewriting"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -2427,12 +2427,12 @@
     "original_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/13.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/13.txt",
     "topics": [
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2452,12 +2452,12 @@
     "original_url": "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/31.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/31.txt",
     "topics": [
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2481,7 +2481,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2505,7 +2505,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2529,7 +2529,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2553,7 +2553,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2579,8 +2579,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2596,7 +2596,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2512.05399",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2025/12/05",
@@ -2605,7 +2605,7 @@
       "semantic-join-decomposition"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -2620,7 +2620,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2510.08489",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2025/10/09",
@@ -2629,7 +2629,7 @@
       "batched-semantic-join"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -2652,7 +2652,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2675,7 +2675,7 @@
       "workflow KV-cache management"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -2701,8 +2701,8 @@
       "📦 Data Agent Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -2727,7 +2727,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2751,7 +2751,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2775,7 +2775,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -2799,7 +2799,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2823,7 +2823,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2847,7 +2847,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2867,12 +2867,12 @@
     "original_url": "http://sites.computer.org/debull/A25mar/p3.pdf",
     "metadata_verified": true,
     "verification_method": "Publisher PDF first-page title; March 2025 issue path",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/42.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/42.txt",
     "topics": [
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2896,7 +2896,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2920,7 +2920,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -2944,7 +2944,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2968,7 +2968,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -2990,7 +2990,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -3014,7 +3014,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3038,7 +3038,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3058,12 +3058,12 @@
     "original_url": "https://www.vldb.org/pvldb/vol18/p5466-luo.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/40.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/40.txt",
     "topics": [
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3087,7 +3087,7 @@
       "Data Integration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3111,7 +3111,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3126,7 +3126,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2403.05821",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2024/03/09",
@@ -3135,7 +3135,7 @@
       "kv-cache-batch-analytics"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -3159,7 +3159,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3183,7 +3183,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3198,11 +3198,11 @@
     "reading_status": "full_text_reviewed",
     "evidence": [
       "https://arxiv.org/abs/2507.06515v2",
-      "research/2026-10-14/semantic/pdfs/quest.pdf",
+      "papers/literature/2026-10-14/semantic/pdfs/quest.pdf",
       "arXiv2507.06515v2，2025-07-11；§1–6，表1–3、图1–8；表2–3所在PDF第11页已渲染检查。",
       "https://api.crossref.org/works/10.14778%2F3749646.3749713"
     ],
-    "review_folder": "Survey/QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
+    "review_folder": "papers/survey/QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
     "first_submitted": "2025/07/09",
     "checked_on": "2026-10-14",
     "pdf_sha256": "c0bf85e7ceab02ff197cec9ecf27ca685fcf37153be234364b2be383110e8bed",
@@ -3212,8 +3212,8 @@
       "instance-optimized-extraction"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems",
@@ -3238,7 +3238,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3262,7 +3262,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3285,7 +3285,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3309,7 +3309,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3333,7 +3333,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3353,13 +3353,13 @@
     "original_url": "https://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/19.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/19.txt",
     "verification_note": "Verified actual SERAG first page; rejected similarly titled SEFRQO Crossref candidate.",
     "topics": [
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3383,7 +3383,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3409,8 +3409,8 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -3428,7 +3428,7 @@
       "https://arxiv.org/abs/2410.05080",
       "https://arxiv.org/html/2410.05080v2"
     ],
-    "review_folder": "Survey/ScienceAgentBench- Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery-ICLR-2025",
+    "review_folder": "papers/survey/ScienceAgentBench- Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery-ICLR-2025",
     "source_date": "2024/10/07",
     "discovery_source": "https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers",
     "metadata_verified": true,
@@ -3439,7 +3439,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -3461,7 +3461,7 @@
       "semantic-output-constraints"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -3476,10 +3476,10 @@
     "reading_status": "full_text_reviewed",
     "evidence": [
       "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf",
-      "research/2026-10-14/semantic/pdfs/lotus.pdf",
+      "papers/literature/2026-10-14/semantic/pdfs/lotus.pdf",
       "§1–8，pp.4171–4182；表1–7、图1–7；另核对参考文献。关键实验页4179已渲染检查。"
     ],
-    "review_folder": "Survey/Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
+    "review_folder": "papers/survey/Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
     "first_submitted": "2024/07/16",
     "checked_on": "2026-10-14",
     "pdf_sha256": "865382441d7ca488c4da4670f233fd1e9b78532d9a4f12cc018d4a58d40f6298",
@@ -3487,7 +3487,7 @@
       "semantic-operator-model"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -3511,7 +3511,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -3535,7 +3535,7 @@
       "Academia Research"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3559,7 +3559,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -3583,7 +3583,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3599,7 +3599,7 @@
     "evidence": [
       "正式会议PDF正文§1–6、附录A–C，表1–2；80 modified BIRD questions，60非聚合题计exact match。"
     ],
-    "review_folder": "Survey/Text2SQL is Not Enough- Unifying AI and Databases with TAG-CIDR-2025",
+    "review_folder": "papers/survey/Text2SQL is Not Enough- Unifying AI and Databases with TAG-CIDR-2025",
     "aliases": [
       "https://arxiv.org/abs/2408.14717"
     ],
@@ -3610,7 +3610,7 @@
       "semantic query paradigm / benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -3625,7 +3625,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2409.00847",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2024/09/01",
@@ -3634,7 +3634,7 @@
       "unstructured-analytics-system"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -3658,7 +3658,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3674,12 +3674,12 @@
     "evidence": [
       "arXiv2510.27119v1，2025-10-31；全文§1–6，pp.1–13，表1–4、图1–14；p.10表3–4渲染核对。PDF提及的附录未包含在本下载版本，未声称读过。"
     ],
-    "review_folder": "Survey/Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025",
+    "review_folder": "papers/survey/Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025",
     "topics": [
       "semantic operators / benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -3702,7 +3702,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3726,7 +3726,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3750,7 +3750,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3773,7 +3773,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3793,12 +3793,12 @@
     "original_url": "https://www.vldb.org/pvldb/vol18/p2371-tang.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/24.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/24.txt",
     "topics": [
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3822,7 +3822,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -3842,12 +3842,12 @@
     "original_url": "http://sites.computer.org/debull/A25mar/p57.pdf",
     "metadata_verified": true,
     "verification_method": "Publisher PDF first-page title; March 2025 issue path",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/37.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/37.txt",
     "topics": [
       "Academia Research"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3871,7 +3871,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3895,7 +3895,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3919,7 +3919,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3943,7 +3943,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -3959,14 +3959,14 @@
     "evidence": [
       "arXiv2405.14696v2，2024-05-29；全文§1–7，pp.1–20，附录pp.27–29程序与物理计划；表2所在p.18渲染核对。"
     ],
-    "review_folder": "Survey/A Declarative System for Optimizing AI Workloads-arXiv-2024",
+    "review_folder": "papers/survey/A Declarative System for Optimizing AI Workloads-arXiv-2024",
     "first_submitted": "2024/05/23",
     "checked_on": "2026-10-14",
     "topics": [
       "semantic operators / optimizer"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -3990,7 +3990,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4014,7 +4014,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4038,7 +4038,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4061,7 +4061,7 @@
       "agent procedural memory"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -4087,7 +4087,7 @@
       "tool-call DAG compilation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -4111,7 +4111,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4135,7 +4135,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4159,7 +4159,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4183,7 +4183,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4203,12 +4203,12 @@
     "original_url": "https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/29.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/29.txt",
     "topics": [
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4231,7 +4231,7 @@
       "meta agent program search"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -4255,7 +4255,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4270,7 +4270,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2402.17882",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2024/02/27",
@@ -4279,7 +4279,7 @@
       "hybrid-question-answering"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -4303,7 +4303,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4327,7 +4327,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4351,7 +4351,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4375,7 +4375,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4399,7 +4399,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4423,7 +4423,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4446,7 +4446,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4470,7 +4470,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4494,7 +4494,7 @@
       "System Diagnosis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4511,7 +4511,7 @@
       "https://arxiv.org/abs/2402.17453",
       "https://arxiv.org/html/2402.17453v2"
     ],
-    "review_folder": "Survey/DS-Agent- Automated Data Science by Empowering Large Language Models with Case-Based Reasoning-ICML-2024",
+    "review_folder": "papers/survey/DS-Agent- Automated Data Science by Empowering Large Language Models with Case-Based Reasoning-ICML-2024",
     "source_date": "2024/02/27",
     "discovery_source": "https://github.com/SJTU-DMTai/Awesome-Data-Agent-Papers",
     "metadata_verified": true,
@@ -4522,7 +4522,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4546,8 +4546,8 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json",
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json",
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Data agents",
@@ -4572,7 +4572,7 @@
       "Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4596,7 +4596,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4620,7 +4620,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4644,7 +4644,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4667,7 +4667,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4687,12 +4687,12 @@
     "original_url": "https://vldb.org/pvldb/vol17/p1939-tang.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/1.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/1.txt",
     "topics": [
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4716,7 +4716,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4740,7 +4740,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4764,7 +4764,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4788,7 +4788,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4812,7 +4812,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4836,7 +4836,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4860,7 +4860,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4884,7 +4884,7 @@
       "Data Integration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4908,7 +4908,7 @@
       "Data Science"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -4933,7 +4933,7 @@
       "Configuration Tuning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4953,12 +4953,12 @@
     "original_url": "https://www.vldb.org/pvldb/vol17/p4213-li.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/44.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/44.txt",
     "topics": [
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -4982,7 +4982,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5006,7 +5006,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5030,7 +5030,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5054,7 +5054,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5076,7 +5076,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -5100,7 +5100,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5124,7 +5124,7 @@
       "Data Integration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5148,7 +5148,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5169,13 +5169,13 @@
     "original_url": "https://www.vldb.org/cidrdb/papers/2024/p6-singh.pdf",
     "metadata_verified": true,
     "verification_method": "PDF first-page title and publication reference",
-    "local_evidence": "research/2026-10-14/data-agents/publisher-evidence/21.txt",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/21.txt",
     "verification_note": "PDF retains an unfilled ACM 2018 template. Year and venue verified from the official CIDR 2024 program, not that template.",
     "topics": [
       "System Diagnosis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5198,7 +5198,7 @@
       "application-aware LLM serving"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -5222,7 +5222,7 @@
       "Query Optimization"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5246,7 +5246,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5270,7 +5270,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5294,7 +5294,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5318,7 +5318,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5343,7 +5343,7 @@
       "structured LM program runtime"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json"
     ],
     "domains": [
       "Agent query systems"
@@ -5367,7 +5367,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5391,7 +5391,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -5415,7 +5415,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5439,7 +5439,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5463,7 +5463,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5486,7 +5486,7 @@
       "approximate-multimodal-query-processing"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -5510,7 +5510,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5525,7 +5525,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2405.04674",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2024/05/07",
@@ -5534,7 +5534,7 @@
       "document-analytics"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -5549,7 +5549,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2407.09522",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2024/06/23",
@@ -5558,7 +5558,7 @@
       "unstructured-query-engine"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -5582,7 +5582,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5606,7 +5606,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5630,7 +5630,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5654,7 +5654,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5678,7 +5678,7 @@
       "Data Integration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5702,7 +5702,7 @@
       "Data Discovery"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5718,7 +5718,7 @@
     "evidence": [
       "官方arXiv摘要，Matthias Urban/Carsten Binnig；GPT-4生成多模态算子计划，两数据集原型；本轮未全文阅读，会议需另核。",
       "https://arxiv.org/abs/2308.03424",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "aliases": [],
@@ -5728,8 +5728,8 @@
       "multimodal-query-planning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/agent-query/catalog.json",
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/agent-query/catalog.json",
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Agent query systems",
@@ -5753,7 +5753,7 @@
       "NL2VIS"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5777,7 +5777,7 @@
       "Data Integration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5801,7 +5801,7 @@
       "System Diagnosis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5825,7 +5825,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5850,7 +5850,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5874,7 +5874,7 @@
       "Report Generation"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5898,7 +5898,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5922,7 +5922,7 @@
       "📖 Surveys and Tutorials"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5937,7 +5937,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2304.09433",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2023/04/19",
@@ -5946,7 +5946,7 @@
       "schema-extraction"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -5970,7 +5970,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -5994,7 +5994,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6018,7 +6018,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -6033,7 +6033,7 @@
     "reading_status": "abstract_only",
     "evidence": [
       "https://arxiv.org/abs/2304.00472",
-      "research/2026-10-14/semantic/metadata.json"
+      "papers/literature/2026-10-14/semantic/metadata.json"
     ],
     "review_folder": null,
     "first_submitted": "2023/04/02",
@@ -6042,7 +6042,7 @@
       "llm-as-database"
     ],
     "catalog_sources": [
-      "research/2026-10-14/semantic/catalog.json"
+      "papers/literature/2026-10-14/semantic/catalog.json"
     ],
     "domains": [
       "Semantic operators"
@@ -6066,7 +6066,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6090,7 +6090,7 @@
       "Benchmarks"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -6114,7 +6114,7 @@
       "Unstructured Data Analysis"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6138,7 +6138,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6162,7 +6162,7 @@
       "Data Integration"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6186,7 +6186,7 @@
       "data agent and benchmark"
     ],
     "catalog_sources": [
-      "research/2026-10-14/data-agents/catalog.json"
+      "papers/literature/2026-10-14/data-agents/catalog.json"
     ],
     "domains": [
       "Data agents"
@@ -6210,7 +6210,7 @@
       "NL2SQL"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6234,7 +6234,7 @@
       "TableQA"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"
@@ -6258,7 +6258,7 @@
       "Data Cleaning"
     ],
     "catalog_sources": [
-      "research/2026-10-14/surveys/catalog.json"
+      "papers/literature/2026-10-14/surveys/catalog.json"
     ],
     "domains": [
       "Related data systems"

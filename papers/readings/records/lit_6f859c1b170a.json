@@ -1,0 +1,71 @@
+{
+ "id": "lit_6f859c1b170a",
+ "url": "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf",
+ "title": "Yang, Luo et al. — Data Imputation with Limited Data Redundancy Using Data Lakes",
+ "version": "PVLDB Vol.18 No.10，pp.3354–3367（2025），doi:10.14778/3748191.3748200，14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf",
+ "retrieved_at": "2026-11-04T05:11:19.918266+00:00",
+ "fulltext": "papers/readings/fulltext/lit_6f859c1b170a.pdf",
+ "sha256": "a79a180b9bbea5ee8ba4932bc38e58bd18a8651b382803345dec0b54ba44eef4",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_6f859c1b170a",
+ "note": "papers/readings/notes/lit_6f859c1b170a/README.md",
+ "read_sections": {
+  "problem": "§1、§2、Figure 1，PDF pp.1–2（pp.3354–3355）",
+  "method": "§3–5、Figures 2–4、Table 1、Theorem 4.1，PDF pp.3–7",
+  "evaluation": "§6.1–6.6、Tables 2–10、Figure 5，PDF pp.7–12",
+  "limitations": "无局限章节；边界见 §6.1、§6.3 Exp-2、§6.6，pp.3360–3365"
+ },
+ "evidence": [
+  {
+   "id": "lit_6f859c1b170a:E01",
+   "claim": "问题定义：给定不完整元组 t 与由 k 张异构表组成的数据湖 L，从 L 检索相关元组修复 t，使 t′ 与真值一致；LakeFill 采用检索—重排—推理框架，按元组而非按表建立索引。",
+   "locator": "§2，pp.3355–3356",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6f859c1b170a:E02",
+   "claim": "Retriever 训练集 282,862 个锚点（41,260 张表）、开发集 9,460 个锚点（775 张表），取自 WikiTables-TURL；锚点完整:掩码=7:3，每锚点 1 正 7 负。",
+   "locator": "§3.2，p.3357",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6f859c1b170a:E03",
+   "claim": "mvBench 含 9,009 个不完整元组、约 339 万数据湖元组，六个数据集；相关元组由 10 名博士生标注，200+ 人时、约 1,000 美元；重排训练集为每数据集 6–100 个随机元组。",
+   "locator": "§6.1、Table 2，pp.3360–3361",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6f859c1b170a:E04",
+   "claim": "Table 3：LakeFill + GPT-4o 的 EM 为 WT 0.907、SM 0.917、ED 0.978、CP 0.97、ZM 0.924、FF 0.948；无检索时 ED 0.112、ZM 0.0。",
+   "locator": "Table 3、§6.3 Exp-1，pp.3361–3362",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6f859c1b170a:E05",
+   "claim": "Table 5：LakeFill 检索器 Recall@100 为 0.902–1.0，高于 BM25、Contriever、DPR-scale、BERT-MLM、Sudowoodo。",
+   "locator": "Table 5、§6.4，p.3363",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6f859c1b170a:E06",
+   "claim": "清单式标注与人工一致率 >95%，二元标注 80.6%（100 个 WT 训练元组）；重排器 0.37 s/q，比 GPT-4o 提示式重排快 80 倍以上。",
+   "locator": "§6.5 Exp-9、§6.6、Table 10，pp.3364–3365",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6f859c1b170a:E07",
+   "claim": "Theorem 4.1 依赖维度条件独立与 CLT（m 足够大），而实际清单只有 3 维，定理更接近动机性论证。",
+   "locator": "§4、Theorem 4.1，p.3358",
+   "basis": "inference",
+   "basis_note": "定理条件来自原文；与实际维度数的对照为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

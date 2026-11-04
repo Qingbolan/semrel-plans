@@ -1,0 +1,72 @@
+{
+ "id": "swb_38b3af71399e7e1f",
+ "url": "https://arxiv.org/abs/2608.20391",
+ "title": "Afsharrad & Mousavi — ImmigrationReason: A Structured Dataset of U.S. Immigration Appeals for Legal Reasoning Research",
+ "version": "arXiv:2608.20391v1（预印本，页眉日期 2026-06-30），15 页（正文 9 页 + 附录 A–H）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2608.20391",
+ "retrieved_at": "2026-11-04T05:48:35.133565+00:00",
+ "fulltext": "papers/readings/fulltext/swb_38b3af71399e7e1f.pdf",
+ "sha256": "7d579c69a575426558993700ee53eb4ed9166a0ef675e73c8ac1426bdb74cea0",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "papers/readings/notes/swb_38b3af71399e7e1f",
+ "note": "papers/readings/notes/swb_38b3af71399e7e1f/README.md",
+ "read_sections": {
+  "problem": "§1–3，PDF pp.1–3",
+  "method": "§4.1–4.4、附录 A–E，PDF pp.3–5、11–13",
+  "evaluation": "§5–6、Tables 1–3、Figures 1–6，PDF pp.3–7",
+  "limitations": "§9、附录 G，PDF pp.9、13–14"
+ },
+ "evidence": [
+  {
+   "id": "swb_38b3af71399e7e1f:E01",
+   "claim": "从 USCIS 网站抓取 EB-1A 与 NIW 类非先例决定 13,520 份（2005-01 至 2026-03），过滤后得 12,375 份。",
+   "locator": "§4.1，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38b3af71399e7e1f:E02",
+   "claim": "每份决定抽取为三层记录（决定、法律问题、逐条认定）；AAO 认定用 met/not_met/reserved/waived_by_petitioner/not_addressed 五类，reserved 占 19.8%、waived 占 3.4%。",
+   "locator": "§4.3、Table 2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38b3af71399e7e1f:E03",
+   "claim": "抽取用 Claude Sonnet 4.6 做 PDF 直读和转写文本两个通道；3,401 份（27.5%）有分歧的记录交 Opus 4.7 裁决，其中 10.1% 给出新值；总成本约 1,300 美元。",
+   "locator": "§4.4、附录 D，PDF pp.4–5、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38b3af71399e7e1f:E04",
+   "claim": "三通道在签证类别、程序姿态上一致率约 97.6–99.8%，AAO 分歧字段 89.5–91.3%，五项全一致仅 71.0–73.2%；500 份专家抽查报告全部正确合理。",
+   "locator": "§6、Table 3，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38b3af71399e7e1f:E05",
+   "claim": "Dhanasar 框架切换使 1,280 份 NYSDOT 决定全部在 2016 年 12 月前、3,484 份 Dhanasar 决定全部在其后，作者建议作为分布外划分；论文未提供训练/测试划分，也没有运行下游模型基线。",
+   "locator": "§5、§8，PDF pp.6、8–9",
+   "basis": "inference",
+   "basis_note": "规则切换数字来自原文；“无划分、无基线”是阅读者对全文的判断。"
+  },
+  {
+   "id": "swb_38b3af71399e7e1f:E06",
+   "claim": "表图数字存在内部不一致：Table 2 框架行合计 14,375≠12,375；EB-1A 数在 Table 2、Figure 6、数据卡中分别为 6,486、4,440、5,394；扫描件数 6,051 与 6,048；引用中位数 10 与 11。",
+   "locator": "Table 2、Figures 1、6、附录 G，PDF pp.3–4、7、13",
+   "basis": "inference",
+   "basis_note": "各数字取自原文，求和与对照由阅读者完成。"
+  },
+  {
+   "id": "swb_38b3af71399e7e1f:E07",
+   "claim": "作者承认只覆盖职业移民上诉、存在上诉选择偏差、个人信息已删除、LLM 抽取可能有错。",
+   "locator": "§9、附录 G，PDF pp.9、14",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

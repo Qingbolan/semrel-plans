@@ -1,0 +1,77 @@
+{
+ "id": "swb_9d08755307cbfa01",
+ "url": "https://arxiv.org/abs/2604.00075",
+ "title": "Large Language Models for Variant-Centric Functional Evidence Mining",
+ "version": "arXiv 2604.00075v1（2026-03-31），9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2604.00075",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_9d08755307cbfa01.pdf",
+ "sha256": "01530d58c20b75f307f591fd1bcfe884fe4c26bcd6c1122ee4f42fff411d5847",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/swb_9d08755307cbfa01",
+ "note": "papers/readings/notes/swb_9d08755307cbfa01/README.md",
+ "read_sections": {
+  "problem": "Abstract、Introduction，PDF pp.1–2",
+  "method": "Materials and Methods，PDF pp.2–4",
+  "evaluation": "Results、Figures 2–8、附表 Tables 1–5，PDF pp.4–6、8",
+  "limitations": "Discussion（局限性段落），PDF pp.6–7"
+ },
+ "evidence": [
+  {
+   "id": "swb_9d08755307cbfa01:E01",
+   "claim": "从 11,527 个 ClinGen 变异中筛出 1,709 个 PS3/BS3 变异，得到 529 个可取 PDF 的变异—论文对，标准化后剩 466 对用于全文评测；摘要筛选集为 529 阳性 + 529 阴性。",
+   "locator": "Methods、Results，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E02",
+   "claim": "全文任务输入 PDF 与目标变异的多种标识符，输出变异匹配状态、逐实验结构化记录、PS3/BS3 方向与强度及摘要；无法确定时输出 not clear，并以覆盖率计量。",
+   "locator": "Methods，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E03",
+   "claim": "摘要筛选召回率 gpt-4o-mini 为 0.9036、o4-mini 为 0.8847，特异度为 0.5898 和 0.6484。",
+   "locator": "Results、Table 1，PDF pp.4、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E04",
+   "claim": "变异匹配成功 339（gpt-4o-mini）与 323（o4-mini）对，失败 121 与 137 对，占 26–30%。",
+   "locator": "Results、Table 2，PDF pp.4、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E05",
+   "claim": "匹配成功样本上，o4-mini 方向分类 Acc 0.9628、F1 0.9794、特异度 0.8276、覆盖率 0.9164；gpt-4o-mini 为 0.9258、0.9599、0.3714、0.9941。",
+   "locator": "Results、Table 3，PDF pp.4–5、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E06",
+   "claim": "4 类强度分级准确率约 0.34–0.36，宏 F1 约 0.18–0.21；8 类方向加强度同样困难。",
+   "locator": "Results、Tables 4–5，PDF pp.5、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E07",
+   "claim": "全部实验只用 Direct 模式，agentic 模式未定量评估；只测两个模型，主 PDF 常缺补充材料中的验证细节。",
+   "locator": "Methods、Discussion，PDF pp.3、7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_9d08755307cbfa01:E08",
+   "claim": "Table 2 每列合计 463，比正文 466 少 3；标签来自 gpt-4.1-mini 解析专家评论且未报告解析准确率；高 F1 与低特异度并存，提示 BS3 为少数类。",
+   "locator": "Methods、Table 2–3，PDF pp.2、8",
+   "basis": "inference",
+   "basis_note": "表内数值为原文；合计核算与类别不平衡推断为阅读者分析。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

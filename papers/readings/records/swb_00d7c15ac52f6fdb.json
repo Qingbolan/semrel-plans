@@ -1,0 +1,66 @@
+{
+ "id": "swb_00d7c15ac52f6fdb",
+ "url": "https://arxiv.org/abs/2509.18400",
+ "title": "ATLAS: Benchmarking and Adapting LLMs for Global Trade via Harmonized Tariff Code Classification",
+ "version": "arXiv 2509.18400v1（2025-09-22），12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2509.18400v1",
+ "retrieved_at": "2026-11-04T05:39:15.373980+00:00",
+ "fulltext": "papers/readings/fulltext/swb_00d7c15ac52f6fdb.pdf",
+ "sha256": "0151a30c65835a408d762702d16a7a102e1453fe6bd72a4f48425ffd99d17b33",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/swb_00d7c15ac52f6fdb",
+ "note": "papers/readings/notes/swb_00d7c15ac52f6fdb/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§2–§3，PDF pp.2–5",
+  "evaluation": "§4、Tables 2–5，PDF pp.5–7",
+  "limitations": "§3.3、§5，PDF pp.5、7–8（无单独局限章节）"
+ },
+ "evidence": [
+  {
+   "id": "swb_00d7c15ac52f6fdb:E01",
+   "claim": "数据集抓取自 CROSS，过滤后 18,731 条裁定、2,992 个不同 HTS 编码；随机抽 200 验证、200 测试，训练集写为 18,254。",
+   "locator": "§2.1、§2.3、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_00d7c15ac52f6fdb:E02",
+   "claim": "每条裁定由 GPT-4o-mini 读取编码与裁定全文后生成产品描述、推理路径和编码，构成问答式训练/评测样本。",
+   "locator": "§2.2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_00d7c15ac52f6fdb:E03",
+   "claim": "ATLAS 为 LLaMA-3.3-70B 的 SFT 版本：5 epoch 约 1,400 步、AdamW、初始学习率 1e-7、16×A100-80GB。",
+   "locator": "§3.2，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_00d7c15ac52f6fdb:E04",
+   "claim": "200 条测试上 ATLAS 10 位全对 80（40.0%）、6 位 115（57.5%）、平均 6.30 位；GPT-5-Thinking 为 50（25.0%）、111（55.5%）、5.61。",
+   "locator": "Tables 2–4，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_00d7c15ac52f6fdb:E05",
+   "claim": "LLaMA-3.3-70B 行 3 条对应 2.1%、29 条对应 20.7%，与 200 条分母不符；18,731−400 与训练集 18,254 相差 77。",
+   "locator": "Tables 1–3，PDF pp.4、6",
+   "basis": "inference",
+   "basis_note": "表中数字为原文；不一致之处为阅读者计算。"
+  },
+  {
+   "id": "swb_00d7c15ac52f6fdb:E06",
+   "claim": "成本按约 1k 输入/200 输出 token 估算，每千次 GPT-5-Thinking ~$3.30、Gemini ~$5.50、ATLAS ~$0.70；无置信区间与检索/少样本基线。",
+   "locator": "Table 5、§4，PDF pp.5–7",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；数字核算、口径差异或适用性判断为阅读者分析，正文已标注。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

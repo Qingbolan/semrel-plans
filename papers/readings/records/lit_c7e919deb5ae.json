@@ -1,0 +1,65 @@
+{
+ "id": "lit_c7e919deb5ae",
+ "url": "https://arxiv.org/abs/2502.17248",
+ "title": "Li, Zhang, Fan et al. — Alpha-SQL: Zero-Shot Text-to-SQL using Monte Carlo Tree Search",
+ "version": "arXiv:2502.17248v2（2025-06-15，ICML 2025 / PMLR 267），21 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2502.17248v2",
+ "retrieved_at": "2026-11-04T05:06:37.034919+00:00",
+ "fulltext": "papers/readings/fulltext/lit_c7e919deb5ae.pdf",
+ "sha256": "a9496090222c172ffa5ca73b44784318dd65d0da7aadd70d3146adeeebaa514b",
+ "format": "pdf",
+ "pages": 21,
+ "note_directory": "papers/readings/notes/lit_c7e919deb5ae",
+ "note": "papers/readings/notes/lit_c7e919deb5ae/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–3",
+  "method": "§3.2、§4、Table 1，PDF pp.3–7；附录 A.1，p.12",
+  "evaluation": "§5、Tables 2–5、Fig.4–5，PDF pp.7–9",
+  "limitations": "无独立局限章节；§5.1、Impact Statement，PDF pp.7、9"
+ },
+ "evidence": [
+  {
+   "id": "lit_c7e919deb5ae:E01",
+   "claim": "Alpha-SQL 把零样本 Text-to-SQL 表述为树搜索：节点为部分推理状态，边为 SQL 构造动作，根到终止节点的路径组成候选 SQL。",
+   "locator": "§3.1、Fig.2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c7e919deb5ae:E02",
+   "claim": "动作空间含 7 种动作（问题改写、schema 选择、列值识别、列函数识别、SQL 生成、SQL 修正、终止），Table 1 规定合法后继，每个动作在一条路径中最多出现一次。",
+   "locator": "§4.1、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c7e919deb5ae:E03",
+   "claim": "自监督奖励为候选 SQL 与 N 条采样 SQL 执行结果一致的比例；最终选择执行一致性最高的候选。超参 N_rollout=24、N_expansion=3、T=0.8、N_reward=5、T_reward=1.0。",
+   "locator": "§3.2、§4.2、§5.2，PDF pp.4、6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c7e919deb5ae:E04",
+   "claim": "BIRD dev（1,534 题）执行准确率：Alpha-SQL Qwen2.5-Coder-7B/14B/32B 为 66.8/68.7/69.7；RSL-SQL（GPT-4o）67.2；非零样本 CHASE-SQL 73.0、XiYan-SQL 73.3。",
+   "locator": "§5.1–5.2、Table 2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c7e919deb5ae:E05",
+   "claim": "Spider dev（1,034 题）上 14B 版 87.0，与 SuperSQL（GPT-4）持平；SDS（147 题）上 Qwen2.5-Coder-7B 从 47.6 提升到 64.6，Phi-4 从 43.5 到 60.0。",
+   "locator": "Table 3–4，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c7e919deb5ae:E06",
+   "claim": "动作消融各项下降 0.4–1.8 个点（去掉 SQL 修正 −1.8），仅在 147 题子集上测得，未报告方差；全文未报告 LLM 调用次数、token 或时延，与基线的比较并非等预算。",
+   "locator": "§5.5、Table 5，PDF p.9；全文",
+   "basis": "inference",
+   "basis_note": "事实及页码来自原文；口径差异、评估与项目派生建议为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "swb_3554268f202076ad",
+ "url": "https://aclanthology.org/W14-4921",
+ "title": "Situation entity annotation",
+ "version": "LAW VIII 2014（COLING 附属研讨会），pp.149–158，ACL Anthology W14-4921，10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/W14-4921.pdf",
+ "retrieved_at": "2026-11-04T05:52:18.223445+00:00",
+ "fulltext": "papers/readings/fulltext/swb_3554268f202076ad.pdf",
+ "sha256": "38a3adb8ba83ccd1bfa1c14c5bbf5e6cd7ce0ed5839ef25e009076ae83abcdbf",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "papers/readings/notes/swb_3554268f202076ad",
+ "note": "papers/readings/notes/swb_3554268f202076ad/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，pp.149–150",
+  "method": "§3.1–3.3、Table 1，pp.150–153",
+  "evaluation": "§4.1–4.4、Table 2–4、Figure 1–2，pp.153–156",
+  "limitations": "§4.3–4.4、§5，pp.154–156"
+ },
+ "evidence": [
+  {
+   "id": "swb_3554268f202076ad:E01",
+   "claim": "此前 SE 分类工作数据很少：Palmer et al. (2004) 约 200 个子句；Palmer et al. (2007) 准确率低于 50%（多数类基线 38%）且无明确指南。",
+   "locator": "§2，p.150",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3554268f202076ad:E02",
+   "claim": "方案给限定子句标 SE 类型（EVENT/REPORT、STATE、GENERALIZING、GENERIC、FACT、PROPOSITION、QUESTION、IMPERATIVE），并标主指称、基本体貌类、惯常性三项特征，Table 1 将特征组合映射为类型。",
+   "locator": "§3.1–3.3、Table 1，pp.150–153",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3554268f202076ad:E03",
+   "claim": "语料为 MASC 新闻、书信、笑话三节；3 名标注者培训 3 周，A、B 标全部，C 只标新闻；9,428 个自动片段过滤后 7,869 个用于双人一致性。",
+   "locator": "§4.1–4.2，pp.153–154",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3554268f202076ad:E04",
+   "claim": "A:B 在全部数据上 κ：主指称 0.47、体貌类 0.80、惯常性 0.77、SE 类型 0.64（REPORT 并入 EVENT 时 0.68）；笑话最高、书信最低。",
+   "locator": "Table 3，p.154",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3554268f202076ad:E05",
+   "claim": "重标注 11 篇困难文档后，SE 类型自身一致性 A1:A2 与 B1:B2 均为 0.75，高于两人间的 0.40/0.42，说明分歧部分来自个人偏好与多解样本。",
+   "locator": "§4.4、Table 4，pp.155–156",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3554268f202076ad:E06",
+   "claim": "主指称与抽象实体一致性不理想且样本稀少；作者计划利用分歧而非裁决标签训练分类器。",
+   "locator": "§5，p.156",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3554268f202076ad:E07",
+   "claim": "§4.3 将主指称标签写为 specific、dynamic、expletive，其中 dynamic 应为 generic；本文只是标注方案与试点语料，不含自动分类器。",
+   "locator": "§3.2.1，p.151；§4.3，p.154",
+   "basis": "inference",
+   "basis_note": "标签定义来自原文；笔误判断与贡献范围定性为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

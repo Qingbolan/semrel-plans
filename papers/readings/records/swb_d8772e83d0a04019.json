@@ -1,0 +1,65 @@
+{
+ "id": "swb_d8772e83d0a04019",
+ "url": "https://doi.org/10.1016/j.pec.2008.07.033",
+ "title": "Entertainment Education for Prostate Cancer Screening: A Randomized Trial among Primary Care Patients with Low Health Literacy",
+ "version": "NIH 作者手稿 NIHMS81948 / PMC2867348，JATS XML（PMC 开放数据 S3，TDM 许可），无页码；出版版本 Patient Educ Couns 73(3):482–489（2008）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2867348.1/PMC2867348.1.xml",
+ "retrieved_at": "2026-11-04T05:40:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_d8772e83d0a04019.xml",
+ "sha256": "f5d843a047bfd72482e9f3c6f174075e3c98dc91aa2d4d8ea88e71062e15a483",
+ "format": "xml",
+ "pages": null,
+ "note_directory": "papers/readings/notes/swb_d8772e83d0a04019",
+ "note": "papers/readings/notes/swb_d8772e83d0a04019/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1",
+  "method": "§2.1–2.7，Table 1、Appendix",
+  "evaluation": "§3.1–3.6，Tables 2–6",
+  "limitations": "§4.2 Limitations、§4.3"
+ },
+ "evidence": [
+  {
+   "id": "swb_d8772e83d0a04019:E01",
+   "claim": "两诊所分别随机化：低素养诊所 149 人、高素养诊所 301 人，比较娱乐教育多媒体决策辅助与内容相同的有声小册子。",
+   "locator": "Abstract；§2、§3.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d8772e83d0a04019:E02",
+   "claim": "主要结局知识在两诊所均显著提高，两种工具间无显著差异。",
+   "locator": "§3.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d8772e83d0a04019:E03",
+   "claim": "低素养诊所 2 周随访 DCS 总分娱乐组 12.0、小册子组 21.7（P=0.04），价值分量表 17.4 对 34.9（P=0.03）；高素养诊所无差异。",
+   "locator": "Table 5，§3.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d8772e83d0a04019:E04",
+   "claim": "低素养诊所 PSAS 疾病与治疗教育分量表 1.45 对 1.69（P=0.03），自信与非依从分量表无差异。",
+   "locator": "Table 6，§3.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d8772e83d0a04019:E05",
+   "claim": "娱乐工具在低素养诊所平均用时 68.4 分钟，小册子 18 分钟；设计无法分离各成分作用，素养按诊所推断而非个体测量。",
+   "locator": "Table 1；§4.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d8772e83d0a04019:E06",
+   "claim": "高素养诊所随访完成率正文为 84.1%，按 Table 2 的 263/301 计算为 87.4%；§3.1 称低素养诊所完成者更年轻，Table 2 显示更年长（55.6 对 52.2 岁）。",
+   "locator": "§3.1、§4.2，Table 2",
+   "basis": "inference",
+   "basis_note": "差异由阅读者对照正文与表格计算。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

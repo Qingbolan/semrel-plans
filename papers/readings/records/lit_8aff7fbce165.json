@@ -1,0 +1,71 @@
+{
+ "id": "lit_8aff7fbce165",
+ "url": "https://arxiv.org/abs/2501.11441",
+ "title": "Taboada et al. — Ontology Matching with Large Language Models and Prioritized Depth-First Search",
+ "version": "arXiv:2501.11441v2（2025-03-27，投稿 Elsevier 期刊的预印本），25 页；PDF 第 1 页为 Highlights，PDF 页码 = 印刷页码 + 1",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2501.11441v2",
+ "retrieved_at": "2026-11-04T05:16:20.809317+00:00",
+ "fulltext": "papers/readings/fulltext/lit_8aff7fbce165.pdf",
+ "sha256": "083ba9a1cfa636b64a5e3d613db79481fbc51c41f82e05eceb941e7bae215bf3",
+ "format": "pdf",
+ "pages": 25,
+ "note_directory": "papers/readings/notes/lit_8aff7fbce165",
+ "note": "papers/readings/notes/lit_8aff7fbce165/README.md",
+ "read_sections": {
+  "problem": "§1–3（动机、相关工作、问题形式化），PDF pp.2–6",
+  "method": "§4.1–4.4、Algorithm 1、Figures 1–4，PDF pp.6–11",
+  "evaluation": "§5.1–5.6、Tables 1–9，PDF pp.11–19",
+  "limitations": "§6、§6.1，PDF pp.19–21"
+ },
+ "evidence": [
+  {
+   "id": "lit_8aff7fbce165:E01",
+   "claim": "先检索再提示的 LLM 本体匹配虽把复杂度从 O(n²) 降到 O(n·k)，但效果有限：提示后效果最多下降 30%，生物医学领域可达 50%；对大型本体仍然很慢。",
+   "locator": "§1.1、§2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8aff7fbce165:E02",
+   "claim": "MILA 只为标签建立 SBERT 向量库；两实体互为对方首选候选时，作为 HCB 对应直接接受；其余双向候选按相似度顺序用零样本 Yes/No 提示询问 LLM，首个 Yes 即停止。",
+   "locator": "§4.1–4.3、Algorithm 1，PDF pp.6–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8aff7fbce165:E03",
+   "claim": "配置：SBERT multi-qa-distilbert-cos-v1，k=5，τ=0.75；LLaMa-3.1 70B，温度 0.7，每个实验至少运行 20 次；不做后处理过滤。",
+   "locator": "§3.3.4、§5.3，PDF pp.6、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8aff7fbce165:E04",
+   "claim": "评测使用 OAEI 2024 的 7 个任务（Bio-ML 5 个、MOUSE-HUMAN、ENVO-SWEET）；半监督测试集为参考映射的 70%；SNOMED-FMA 的目标标签有 142,984 个，参考集实体 7,256 个。",
+   "locator": "§5.2、Tables 6–7，PDF pp.12–13、18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8aff7fbce165:E05",
+   "claim": "无监督设置下，MILA 的 F 值：OMIM-ORDO 0.831、NCIT-DOID 0.948、SNOMED-FMA 0.894、Neoplasm 0.903，均为最高；Pharm 为 0.864，低于 HybridOM 的 0.902。MOUSE-HUMAN 为 0.922，次于 Matcha 的 0.941；ENVO-SWEET 为 0.837，最高。",
+   "locator": "Tables 1–2、5，PDF pp.15、17",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8aff7fbce165:E06",
+   "claim": "使用 LLaMa-3.3-8B 时，SNOMED-FMA 上 MILA 用时 0:44:59，先检索再提示的基线为 46:46:53；70B 模型因成本没有跑基线。",
+   "locator": "§5.3、Table 8，PDF pp.13、18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_8aff7fbce165:E07",
+   "claim": "不调用 LLM 的 MILA-HCB 在多数任务上已接近完整系统（如 NCIT-DOID 0.936 对 0.948），LLM 的作用主要是处理边界情况；例 2 的步骤 4 与步骤 5 对是否存在双向对应的表述自相矛盾。",
+   "locator": "Table 9、§4.4.2，PDF pp.10–11、19",
+   "basis": "inference",
+   "basis_note": "Table 9 数字与例 2 文字均来自原文；'效果主要来自 HCB 启发式''例 2 自相矛盾'是阅读者分析。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

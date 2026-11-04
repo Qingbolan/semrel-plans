@@ -8,7 +8,10 @@ from urllib.parse import urlsplit
 
 FRONTEND_FILES = ('index.html', 'migration.html')
 FRONTEND_ROOTS = ('assets', 'viewer')
-DATA_ROOTS = ('data', 'environment', 'exports', 'files', 'query', 'research', 'docs', 'Survey')
+DATA_ROOTS = ('data', 'environment', 'exports', 'files', 'query', 'docs', 'papers')
+# Paper full texts are kept for reading and hashing but never published (copyright).
+UNPUBLISHED = ('papers/readings/fulltext/', 'papers/readings/text/', 'papers/literature/2026-10-14/semantic/pdfs/',
+               'papers/literature/2026-10-14/data-agents/evidence/', 'papers/literature/2026-10-14/data-agents/publisher-evidence/')
 PUBLIC_FILES = FRONTEND_FILES
 PUBLIC_ROOTS = FRONTEND_ROOTS + DATA_ROOTS
 HIDDEN_ALLOWED = ('.chroma-biodex', '.chroma-mmqa')
@@ -49,6 +52,8 @@ class HostingPolicy:
             if any(part.startswith('.') and part not in HIDDEN_ALLOWED for part in relative.parts):
                 return None
             text = relative.as_posix()
+            if text.startswith(UNPUBLISHED):
+                return None
             if base == self.site and self.frontend(text):
                 return text
             if base == self.root and relative.parts and relative.parts[0] in DATA_ROOTS:

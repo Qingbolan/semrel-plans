@@ -1,0 +1,82 @@
+[
+  {
+    "id": "uda",
+    "url": "https://arxiv.org/pdf/2510.27119v1",
+    "path": "papers/readings/fulltext/uda.pdf",
+    "sha256": "1863e73e8e9e2124fa0e94a7348b53a91e2cac98eb1fc303675e7f2b8765c6db",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "13"
+  },
+  {
+    "id": "palimpzest",
+    "url": "https://arxiv.org/pdf/2405.14696",
+    "path": "papers/readings/fulltext/palimpzest.pdf",
+    "sha256": "f853718e273a6330aa4fde3ce79fbe23bf457d90c18d4d1f009de2adaca5deaf",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "29"
+  },
+  {
+    "id": "cuad",
+    "url": "https://arxiv.org/pdf/2103.06268",
+    "path": "papers/readings/fulltext/cuad.pdf",
+    "sha256": "5a6540d438a4af723efcdfcc2ced9f143678b612af8e2800fbd92dc25aec3d26",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "15"
+  },
+  {
+    "id": "contractnli",
+    "url": "https://aclanthology.org/2021.findings-emnlp.164.pdf",
+    "path": "papers/readings/fulltext/contractnli.pdf",
+    "sha256": "a60bfb31fb5d9b5aa7697715380e241a47704049913f0b8dd3c48401fd2bccd3",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "13"
+  },
+  {
+    "id": "maud",
+    "url": "https://aclanthology.org/2023.emnlp-main.1019.pdf",
+    "path": "papers/readings/fulltext/maud.pdf",
+    "sha256": "aa83b7630aee3ca0ab69b498985e1a35998bee3aa87f57d5d418446c77959955",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "14"
+  },
+  {
+    "id": "biodex",
+    "url": "https://arxiv.org/pdf/2305.13395",
+    "path": "papers/readings/fulltext/biodex.pdf",
+    "sha256": "8862c5e59590a56a52ca306ab97c16422aabf9df9ee313d9c32e997f7eb2d794",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "30"
+  },
+  {
+    "id": "stard",
+    "url": "https://aclanthology.org/2024.findings-emnlp.625.pdf",
+    "path": "papers/readings/fulltext/stard.pdf",
+    "sha256": "39cf437ee7ba066da7211c238587969f8ec4a8ed8a8c593b7da947d2579f3624",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "14"
+  },
+  {
+    "id": "annoctr",
+    "url": "https://aclanthology.org/2024.lrec-main.103.pdf",
+    "path": "papers/readings/fulltext/annoctr.pdf",
+    "sha256": "32123c7ea44ddee90a86cb135bf90e5dc8e886f4951a8e849670123e9c4c4ded",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "14"
+  },
+  {
+    "id": "scidtb",
+    "url": "https://aclanthology.org/P18-2071.pdf",
+    "path": "papers/readings/fulltext/scidtb.pdf",
+    "sha256": "ab168356d438a31408e4ef064675073283474d557fb93146cd076fc88be06af1",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "6"
+  },
+  {
+    "id": "medmnist",
+    "url": "https://www.nature.com/articles/s41597-022-01721-8.pdf",
+    "path": "papers/readings/fulltext/medmnist.pdf",
+    "sha256": "db5c95abc67e433c41e72980cb59d266b4cdcaf14c8c1f5bb6e4b15b8e8b2de9",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": "10"
+  }
+]

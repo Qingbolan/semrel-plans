@@ -1,0 +1,708 @@
+[
+  {
+    "folder": "A Declarative System for Optimizing AI Workloads-arXiv-2024",
+    "source": "papers/literature/2026-10-14/semantic/reviews/A Declarative System for Optimizing AI Workloads-arXiv-2024",
+    "sha256": {
+      "2405.14696v2.pdf": "f853718e273a6330aa4fde3ce79fbe23bf457d90c18d4d1f009de2adaca5deaf",
+      "Novelty分析.md": "de53621f6565ffee3d23621fa46c4f2b23330d0b5e578e4b5aa4a465155d25c3",
+      "README.md": "fe1c7e03e66a6a4919bbda2137835e43ae6a49988572e659104a7df0ab090f74",
+      "benchmark分析.md": "8c45172653ff3280552390ec3303c761d0148de302c934a5fc1478e51d2ff445",
+      "usecase分析.md": "8477d6dc0ddee678115123a7f829241207e33afe8284bb34c005adb65e6cb344",
+      "workload分析.md": "80330b6d56baf736a8b9a624d3bbe2f0450a7035136a8ddcbbe23849de093adb",
+      "出发点分析.md": "012ff3c63c3579a9162605cae5982ee0991ff04a5eb3ad46b37360371489f254",
+      "解决的问题分析.md": "6fd36bfe35864ebe3cc4c0fbc92467cdc7144e09207717ef83748dcaa9b6508a"
+    }
+  },
+  {
+    "folder": "Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
+    "source": "papers/literature/2026-10-14/semantic/reviews/Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
+    "sha256": {
+      "Novelty分析.md": "d5d2ea21db254f3f729e7ec58d10a07d296b2d2be68bb3f5ac110805939f11b3",
+      "README.md": "92d437676595a8fbc30cb1aba08616ebfe5bfb3e3d299ede84651afcd15d8888",
+      "benchmark分析.md": "99bdabc76e3f09b330e89ac092c50b23983db43ce3be807ec84feb483f150b47",
+      "usecase分析.md": "e8ff4dcd1328f94144bdadb7a1fae0ac7a12c614ae3db3f8b270065794f645b8",
+      "workload分析.md": "e0602a9ee6c1bd80b622414ef4ca91edd1ac43f84d516748004cc3c874033b4d",
+      "出发点分析.md": "3b9f80cf2bb3113bee62296335172e38ab06fd0389d6390d10a1a97ff8eee3d3",
+      "解决的问题分析.md": "5bc811d62adb8e170269e40a574179edda3fc8902ca76356aea57d08026cff7a"
+    }
+  },
+  {
+    "folder": "Adapting to Source Properties in Processing Data Integration Queries-SIGMOD-2004",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Adapting to Source Properties in Processing Data Integration Queries-SIGMOD-2004",
+    "sha256": {
+      "Novelty分析.md": "0db0c060648809172a1880f74dd6a4624df2f215f3e8768ac9bada0bcb10a4cf",
+      "README.md": "df0f0ffb9d54fcd763d3a2f11b395620c4dcfaa0db4970bab45f9e5ad0b7bb34",
+      "benchmark分析.md": "7e091b6ba114181adf8f67eff8cf6d25aca518a6825dc7858bd939ca5592c642",
+      "usecase分析.md": "be0ebfa511d1075912bbdd6ca131b0dbc3f8a82fd64c0191c0c838ef439ad34b",
+      "workload分析.md": "c782f1412a5aea7f621039502db1f7694228d280fa8694086634fa592f05d791",
+      "出发点分析.md": "976893bcd8c80485b3dc199965b4e59c7785f16a538b2294f0e8da162859cb44",
+      "解决的问题分析.md": "e54e1ed26f22b6eb63ccf94d907f8e8c7353273eaaf1e30cb1cc56dc95e00cda"
+    }
+  },
+  {
+    "folder": "Adaptive Ordering of Pipelined Stream Filters-SIGMOD-2004",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Adaptive Ordering of Pipelined Stream Filters-SIGMOD-2004",
+    "sha256": {
+      "Novelty分析.md": "58567b1b5495f930f755afb8576b890c0e2d0bea1e50d617104a4d4f25daf0f9",
+      "README.md": "f91830f5448b5ba2db78d1c2761496f1ad869b2bdb2d71531e92f97624831a1a",
+      "benchmark分析.md": "dfd38434e57e76918b75d1e59ecb7c3652c764aa84c385c622d0d7c44a6e1447",
+      "usecase分析.md": "ff67a58c15f5324a1b2f534a4623f356448b1a241b1dead29599df1d458f5390",
+      "workload分析.md": "574a0b016cdb453c499e6568e444ceaf0e8bef32378bfe360a1fc88ed162b517",
+      "出发点分析.md": "537aeed49cc9ac6357b2290259dad907226c37a07732cca173366693181bbb5a",
+      "解决的问题分析.md": "8201a00b2bb9f20731ec1fcd6350584a8e6eadf393e6ad40d91d4e5742f800e2"
+    }
+  },
+  {
+    "folder": "Aero- Adaptive Query Processing of ML Queries-PACMMOD-2025",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Aero- Adaptive Query Processing of ML Queries-PACMMOD-2025",
+    "sha256": {
+      "Novelty分析.md": "a4fe538cdbb4a7dd35934eb1673197e9eb5cee86468f62f8f6132084f9bda832",
+      "README.md": "9cf1a2997af04cebc305b63a215397ddfd31411ed1f29cf55b00aa804fcb71fd",
+      "benchmark分析.md": "5ece52ef6fc432e2f7fbba93a123e5e4ce24e18eb620bae2a26b6ddd11ae7041",
+      "usecase分析.md": "d8ee63d4a76f73206f9b80a6c84103384bd3406f9a99332a45e65e5c7d00073e",
+      "workload分析.md": "6db76386cb29d68db23f8c4134dd1eea645bb67a0fc889d2e9c0253667407e00",
+      "出发点分析.md": "3df49a4b5ea4b88edfa467a75857dcf687d5254aeaf2a6dab6fd76df9b425623",
+      "解决的问题分析.md": "a3bb61ffe999c1161ecfec4b4b6cc9cdab686139d06e39a488b88f5f51c94a26"
+    }
+  },
+  {
+    "folder": "Agent Workflow Memory-arXiv-2024",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Agent Workflow Memory-arXiv-2024",
+    "sha256": {
+      "Novelty分析.md": "d81463a703bfaae32022e2deb5df900df249b2d13926921ff6ef88f271412889",
+      "README.md": "673afb4393025eef9eb1dd49e4a626842d021e44323a590d5dd47e35d09cee3f",
+      "benchmark分析.md": "12763ac47252bb299882a426f35ffb869fa2644429d07d9f906690283cad3b61",
+      "usecase分析.md": "e8e193fcd8dafc231277985456d095522ca4c08510fd121b9846f9022ee127da",
+      "workload分析.md": "2e2bd45d4b35221538c36069d9850453305345435eff72eb4bcb19709d48d2ee",
+      "出发点分析.md": "535a075db1ee580d3ee59787157c0717b1bd9a31bb3f7144356eda32ef1e4c62",
+      "解决的问题分析.md": "606b0c723c29855df5c31969ad671ecc5f21259dc711b355cd2a8d361446d624"
+    }
+  },
+  {
+    "folder": "An Adaptive Query Execution System for Data Integration-SIGMOD-1999",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/An Adaptive Query Execution System for Data Integration-SIGMOD-1999",
+    "sha256": {
+      "Novelty分析.md": "fc28a073229b82fef9d721e5f6c2a0585cb77cb5a4c5e7850c6478bb30657a7f",
+      "README.md": "57b1f055261b8aa6e71857749bd2f6040eb50f24967ce629fc6d1af1bfc3fcfd",
+      "benchmark分析.md": "e6a85e1ecfe523e1a5288549b3f12205aa18a82cada66f0e389fee511a8e8fb4",
+      "usecase分析.md": "0825bf0ea3d5d1df54452e7fa8f1f96dbf231871f12911bb3c13c803b71537a3",
+      "workload分析.md": "ba0ab1e2729c2f114743a16c6ee36ded0b3f02d8feece91d828bdd0aa6ed92c7",
+      "出发点分析.md": "0657269b7dbfecd0a39808cc5b7607bb6f0edbf1b4068b7535dcb5f6ab162e82",
+      "解决的问题分析.md": "508928ec883347c9c0d3ef430e4064235060aee4b547509d734577ed39c15224"
+    }
+  },
+  {
+    "folder": "An LLM Compiler for Parallel Function Calling-ICML-2024",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/An LLM Compiler for Parallel Function Calling-ICML-2024",
+    "sha256": {
+      "Novelty分析.md": "e403bf3615bf183c502615fe3528226b488baf06eb2142470f350cc5ee431f2d",
+      "README.md": "a6fe8930662d16d47ed79fc44b2486d921dfa9c917127fd75cdb23db39ee52eb",
+      "benchmark分析.md": "59e2548aa00410f9267b983d09f9271be927730a5bdbe11d2927dafb1054ed38",
+      "usecase分析.md": "9a93814afdfcb4e38ca0ef82dc0e706c531a35230a3c89c3570f4f5b33b4d4eb",
+      "workload分析.md": "4994ecb5356346fb816c23503aabe7064801975d904657512c702b53506e6b7d",
+      "出发点分析.md": "98205333d3a2cb0a280fe4a21bc49b435527d3facae2b923085fa0e1451b5740",
+      "解决的问题分析.md": "b0c86fc8d9aa13081a6f5d5fa3ba1ba109e133d3fc65194098997e3a5e1d485b"
+    }
+  },
+  {
+    "folder": "BIRD-INTERACT- Re-imagining Text-to-SQL Evaluation for Large Language Models via Lens of Dynamic Interactions-ICLR-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/BIRD-INTERACT- Re-imagining Text-to-SQL Evaluation for Large Language Models via Lens of Dynamic Interactions-ICLR-2026",
+    "sha256": {
+      "Novelty分析.md": "647fca65a986c7ee34855719c32eb05ec253c3b14b371096f3475e8a9d9793b2",
+      "README.md": "b41ebf194dfb83676c22a67218368f61454789ab599d902a9d28edcf02ce15d0",
+      "benchmark分析.md": "f1977f13e65d9979fe65883a84fb3b48b7cc5f90eede9a7aacda1854f9bc7cf3",
+      "usecase分析.md": "8bb8cbe83976c697a0cfbd4f34bf289c17a6c1497fe39e43216993b05b90f4de",
+      "workload分析.md": "c851f6b7f8d0023a273852d54787b0763e07f4a4fad0708dc16f027ced41febc",
+      "出发点分析.md": "c6ce7ad2135bd3e9af1a81eebdf428381fe8c26942239d181dcf893a28050639",
+      "解决的问题分析.md": "9e08f8d359a2f4d6e0ef4c84dbb8a7b55a4d537d689eac92ebb1383de5d4954b"
+    }
+  },
+  {
+    "folder": "Batch Query Processing and Optimization for Agentic Workflows-arXiv-2026",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/Batch Query Processing and Optimization for Agentic Workflows-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "778574775cd7cd7ac739372a3aa775f5640ec148e5b11c13b79a6628e9cfc9d6",
+      "README.md": "48e0394107be5af08e65ed5f68e282c21baa5c4cb691558477ee9323b81efda9",
+      "benchmark分析.md": "29b9f5dbb79a605c58d1f9a5819cf09fcf12aacb719de9b2b3a552f89956cf48",
+      "usecase分析.md": "a99bf052bf27f91c846b9a9d399073a0959e0575d6191fabc1b8b7bde3345627",
+      "workload分析.md": "8ef60e45cadb1699d53db94718648a7a6b818bd819847ca74f97e66b863a9553",
+      "出发点分析.md": "8acd479ba3a5a7de96fe2d43b8045c91ac5423c5c80dac3ab0d5bf5a9a7f7a7d",
+      "解决的问题分析.md": "0909fecbdcb7a8d75e41ecca1492e564e63e9f2c8629b6663c6f26d85d68c8fc"
+    }
+  },
+  {
+    "folder": "Bridge the Last-Mile Gap to Semantic Analytics- Compiling Natural-Language Queries into Semantic Operator Pipelines-arXiv-2026",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/Bridge the Last-Mile Gap to Semantic Analytics- Compiling Natural-Language Queries into Semantic Operator Pipelines-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "504d285607d2966728052d3325e8e3af57ad806c4c792ad062c51ef8a0dafa29",
+      "README.md": "815f5fd631a14a5fbb4cadab688e612c474df8785e7d47df2f9834f4fc3e8e14",
+      "benchmark分析.md": "321aba900a6cd71502481a675ccaf5c49cab6ea22edf5597e6475eabdca4dbd9",
+      "usecase分析.md": "6ad383318583f000a4ba505c12dcf2ef194f1f51bca291b20d6f94c2f75b773d",
+      "workload分析.md": "6dcfa3d4955186f15fcb2adb00e8dc0eb253510e11719bc66ea85f2a018af972",
+      "出发点分析.md": "35fc591ff65ac7e05c451007fd24b704fc32d6575294cad66a9d613b4d8cc7f5",
+      "解决的问题分析.md": "f67f9983e8828392f89b6b1fce29b93afd6c6671ee2f65a4851ead582d678e0f"
+    }
+  },
+  {
+    "folder": "CADENZA- Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing-arXiv-2026",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/CADENZA- Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing-arXiv-2026",
+    "sha256": {
+      "2606.29151v3.pdf": "8a993013559c707e8cfdecd6b6a285d2f9b23161b894b87418e4269cb38465e4",
+      "Novelty分析.md": "dbe8e6b4e66d7c66f1d39f83fc63b89dd6f9d9f3dc03eb03597aaab33f42645a",
+      "README.md": "0b780660261f8d3ca4d591606b8486ec546eb7c9f4d8e4120905557b0294e9c7",
+      "benchmark分析.md": "83b1c42b4a0ea90c69bef165c3730d84a07b82b92c8349570644e4502722cf32",
+      "usecase分析.md": "50b37a1b16e0565b4c209198d9d3d45e5a7d432a0971739ae2b040a4c1bf673e",
+      "workload分析.md": "7fb23145f3361ba631b8639961cf3678ce59a77db64a29c329f10698170085fb",
+      "出发点分析.md": "da5ad73d52f3f06f194c3d92828943c03f4aad93703eb2433586aebcd2a5f05b",
+      "解决的问题分析.md": "d019067cbf06ed30e09a440f3070dc0521eac2eeb15707a7058dc95d2ff9da32"
+    }
+  },
+  {
+    "folder": "CAESURA- Language Models as Multi-Modal Query Planners-arXiv-2023",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/CAESURA- Language Models as Multi-Modal Query Planners-arXiv-2023",
+    "sha256": {
+      "Novelty分析.md": "0d4310642e3a93382d09d316d9b294ebd6783fbeedd36d97c2cb1a55f3161c6f",
+      "README.md": "c4ed126439b8004a9a6f2f1486f314b519080f35dca9d346aca7ea98b04d1354",
+      "benchmark分析.md": "b4e4ad01e6077c67264e1490b78323591a180eceb77f1de8fe60157a23464413",
+      "usecase分析.md": "53c005a91b1f0fce2525e05e3da9dd1e1512a8b79a7efa4e3ae1ce1c69ff66d1",
+      "workload分析.md": "a5a479912543847aeb78a85355c771dafa1628bcd3377d4fbadee19ab42d1186",
+      "出发点分析.md": "b2527948da2f49b6f9c37fb480f962c7c8cee5ea5717ed77a5d97fecde2135ea",
+      "解决的问题分析.md": "8df6727fdd4f945c0667bb329fbd6765501f11faf081340aae75f140e5e9706d"
+    }
+  },
+  {
+    "folder": "Combee- Scaling Parallel Prompt Learning for Self-Improving LLM Agents-COLM-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Combee- Scaling Parallel Prompt Learning for Self-Improving LLM Agents-COLM-2026",
+    "sha256": {
+      "Novelty分析.md": "072134642339cfbcf7fe49cc901c7fa0b47c31112303e496be9a0d6246545ef2",
+      "README.md": "83d74907264b369de2c5053882594dcf0d9ffbb580f5a0965debd923be652920",
+      "benchmark分析.md": "9b39cea8d1a6da48147780ac6aab8c815795bf36c1af093ff552a94289257eaa",
+      "usecase分析.md": "3522b9c73d0112c5df78b2df6ea6acf7fb216b91420e3349ba36b03e6b6f4e2a",
+      "workload分析.md": "26b2d560f887ddf6d5ee3f397ad5e972b6e5f375a51d4cd396f4a8232088cc15",
+      "出发点分析.md": "3a78ca86799811b045c9f56d54c983e6cfefbc44216f91db11c498472e88f64e",
+      "解决的问题分析.md": "41e63b28bc6ea367654a0a539c29b71f56aea26f9eb7b522ae0d072868b6dd35"
+    }
+  },
+  {
+    "folder": "Computing Complete Answers to Queries in the Presence of Limited Access Patterns-The VLDB Journal-2003",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Computing Complete Answers to Queries in the Presence of Limited Access Patterns-The VLDB Journal-2003",
+    "sha256": {
+      "Novelty分析.md": "71598334210b2f7abe2473a43438bb49fc65f181560ac2f40911f78dca9b9f94",
+      "README.md": "5f1de6774af2472f44903d7acb45578ddf83718c0edf07bd822b37caacc8d763",
+      "benchmark分析.md": "22a52acd85369ff829b808292e587314c0675f68f8dc8991b6689bd81e178812",
+      "usecase分析.md": "0e39b5e37fc44cae8d0cc20bc4ab1db47a21a6bcb591c29ac4d64d8b44bd3c21",
+      "workload分析.md": "2cc546ebbbe394ae5c835037be9409f2476f6f969149183c8217fe6c4174ce0a",
+      "出发点分析.md": "64aa36894d89ea087249803a376aad449611ed44a1c8e11fb38e9c630b8954e9",
+      "解决的问题分析.md": "64e050a497f20d77842029c7e0c70bb702216b970d4a454f8a259298637eee03"
+    }
+  },
+  {
+    "folder": "Content-Based Routing- Different Plans for Different Data-VLDB-2005",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Content-Based Routing- Different Plans for Different Data-VLDB-2005",
+    "sha256": {
+      "Novelty分析.md": "e40f1c52038fea18f3fe2185d75823204b336653092eb3a650caf81abc5720f9",
+      "README.md": "0a6d34384fa203dfd3958b74d526bbf1116e104f819a6e3cb995d9d2c5a83625",
+      "benchmark分析.md": "8dcd81a9c48468d0f4f638a810422ddb133dd43c1ff361c7680c6dc44b96e0d8",
+      "usecase分析.md": "32d505c4d8acd303d34cea6b9fccffc767bcbf6db100adb384f5067c3eb2bb2f",
+      "workload分析.md": "b1178d125459bdf3d83b5fa70e2b50f9954ff1509f627559cc0c0bc7e3c71a7a",
+      "出发点分析.md": "9d8732194dc54ab3e01bd1b3d3e744f2ffa89cfd3f176d3532edeefe905638a4",
+      "解决的问题分析.md": "220f88797e6c5809684b801bc0287db9fc70fea096eb7e34447a257a9e369d7e"
+    }
+  },
+  {
+    "folder": "Data Interpreter- An LLM Agent For Data Science-arXiv-2024",
+    "source": "papers/literature/2026-10-14/data-agents/reviews/Data Interpreter- An LLM Agent For Data Science-ACL Findings-2025",
+    "sha256": {
+      "Novelty分析.md": "0577e1e38f0ac94fd8562bffdde17e47dda05c6c2c92d3299cf4c3cf2f158ab4",
+      "README.md": "19b7fa9876f1abca59156d1a32ea8a2b55430c76a660512bb74020b90fcb12e7",
+      "benchmark分析.md": "c8aa235c85743c4a04790f47562da47d8063e8903296605a8cbfffea2c1cac7a",
+      "usecase分析.md": "a3b19a013cde5aa2ec5fe16f03ae8b6c216adb49ad773b342e7168938017dd5c",
+      "workload分析.md": "f41ddfaa63456e9e362139f9c8ee9b5c3f2983b6a4904a7ba46c4d40ff1c08b1",
+      "出发点分析.md": "c6a6fd03783417fac4a6afc0e8c8e91deaab74a16592bb65f8bf82750787b961",
+      "解决的问题分析.md": "3b29e903b9907e91029e1cba75b20bdc127b46ee8f24e897bedcfdef6eb4e8c4"
+    }
+  },
+  {
+    "folder": "Data Lakes- A Survey of Functions and Systems-TKDE-2023",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Data Lakes- A Survey of Functions and Systems-TKDE-2023",
+    "sha256": {
+      "Novelty分析.md": "40156f72660557e116a94eaecf607bda8e3e79072b4daf581d8426c9c98b9555",
+      "README.md": "8b203193fbe3e6c19cb524be872ecf0ec6794f2483dddbe47b15c43a980a62b9",
+      "benchmark分析.md": "b904fac808eed6bb3fe544eb7a4a87a1f6d19ac9849997b618ab1f1c0d125329",
+      "usecase分析.md": "1f5067b04e6aff3ec5d2d374bfb8e193032e2e04d6313d8d529a5e23773447db",
+      "workload分析.md": "0d57295faa06aec0cf3f2fd8375068fe5085823708af22384f95a51d8307c869",
+      "出发点分析.md": "25982b7bb35c5f44ee8611cb382626334ab40e2d12a21dc38e1c20a9cc8b4f87",
+      "解决的问题分析.md": "f9cdec839b6e6f14182d8caf6635343e10649b4f08558d862b87fcedf6d7654c"
+    }
+  },
+  {
+    "folder": "Deep Research is the New Analytics System- Towards Building the Runtime for AI-Driven Analytics-CIDR-2026",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/Deep Research is the New Analytics System- Towards Building the Runtime for AI-Driven Analytics-CIDR-2026",
+    "sha256": {
+      "2509.02751v1.pdf": "4a1505e6653ea774bda809c9576700ad4cfcc054953a304abc604d7fd86fe0aa",
+      "Novelty分析.md": "e0296b7ab481153f1a0e10581f1d1af079498fffef76353bc347deca3918cc68",
+      "README.md": "5f0d4a4751fa049bf1e94ee85fb443a54492b8b814429ec923cbb43bcca3e06d",
+      "benchmark分析.md": "955a54d5e674c1fb0af375f29cfaac53d195a33fb99676fca16443fb00e27830",
+      "usecase分析.md": "188db7032358ed287187c7f33edca3bc9987dbfdc0d04e1a45dc501194dd1244",
+      "workload分析.md": "16589af1c490700f04698a51433f84879924361d28407ee9b56a78408653b03f",
+      "出发点分析.md": "487a10a5e674d49478d2a8fd7dea8a34e066ef277f43e5154065588c69640b56",
+      "解决的问题分析.md": "32f5d118bcff68b9e79b74a4f47195155a1e6a8e5ba1ba17fac309f8822e5ed2"
+    }
+  },
+  {
+    "folder": "DiscoveryBench- Towards Data-Driven Discovery with Large Language Models-ICLR-2025",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/DiscoveryBench- Towards Data-Driven Discovery with Large Language Models-ICLR-2025",
+    "sha256": {
+      "Novelty分析.md": "d542f379cd49c377ab847f95bc561b9f6213014530162b42263343283686a984",
+      "README.md": "9fce4ff1d7183f9aa360619fd962542502dd85baea16bc9eadf311310d363bf2",
+      "benchmark分析.md": "bbe229cf1f1e79ad00fb3e4ce9d3a8c193137d5181157c57887b92e563ad8e8f",
+      "usecase分析.md": "7d5c4ff1414c9ed69d21cbefa2f6f86d4ba9b34626535157217dd57c06ff2fcc",
+      "workload分析.md": "e4099f5bac6f20bfb153425257a859166aa80632e1e958e4d36754fb73187b6b",
+      "出发点分析.md": "992827945615418e398aaa33411de2f7d2a5ce44e9275b2badec04e8ddf7de2c",
+      "解决的问题分析.md": "3ce88372e4661aff1ec9da9f36e356a9fe7b765542935c4a3168c7f5cb34c49e"
+    }
+  },
+  {
+    "folder": "DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
+    "source": "papers/literature/2026-10-14/semantic/reviews/DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
+    "sha256": {
+      "Novelty分析.md": "b8aabd04dc464fb9f4bfa00986390e58d7878f96bf59ccccaefafd1d2dc9fc3c",
+      "README.md": "512abffa41ca285f736585cc4d7f5c8a4d11b15c933deb3ccc220712d710b1fb",
+      "benchmark分析.md": "2eb6175e3278247f4a1ca2de7977cdafcfc30bf98e13e56c4db323e0c0a76188",
+      "usecase分析.md": "9b67ecdfe3c89e0c4485e3fedcbdf12dcffaf72a3d8e38e829421ca190e64381",
+      "workload分析.md": "3d47588b0d4ad1633577fc238fda6e4ff7c2097f5ec294191964529ade0fd619",
+      "出发点分析.md": "7a93ec2f16e94295223178bb0099142131a3eb498184691293c4c68e17d0bb4f",
+      "解决的问题分析.md": "14c7ab99a49249bdcf4e82de9a644717afc86e4d218629819e9b2787befa19e1"
+    }
+  },
+  {
+    "folder": "Dynamic Query Evaluation Plans-SIGMOD-1989",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Dynamic Query Evaluation Plans-SIGMOD-1989",
+    "sha256": {
+      "Novelty分析.md": "594cdece9da40489b55fd8b3c0c1764261527751d09f62406e147764581f2605",
+      "README.md": "94f7289a5c2157b27df80633bc236d10d0762d39c3b7d00be0035af644b4b12e",
+      "benchmark分析.md": "f5e8de5f81a754753995643a53887c1a388670db838279eda0a218fa802938ea",
+      "usecase分析.md": "87578aeb87ebe7c141748a8287ac4f352704a2d28d69aabdbc6d53a862197406",
+      "workload分析.md": "5c084d141955a1cac0139df265632396809fd59fb11ca6f5c3b2cd2f22ddbb0c",
+      "出发点分析.md": "073109e931d8d26ca1dc0a1613cc90fe2e4e224820e6e49a1c7bf7c45615656e",
+      "解决的问题分析.md": "fd2f76364239b11695f770a90ce6e32dfd5a1538d88d67ac8413e801b0fde346"
+    }
+  },
+  {
+    "folder": "Eddies- Continuously Adaptive Query Processing-SIGMOD-2000",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Eddies- Continuously Adaptive Query Processing-SIGMOD-2000",
+    "sha256": {
+      "Novelty分析.md": "ad760a4b7179e2d06cccc91e9b1d8eeb7d7928309191f7b95515a435166726a9",
+      "README.md": "c0d526f51446b11ed9d1a7dcdfe47cb253ff12b33634904a39d590e2682eed63",
+      "benchmark分析.md": "118ae0dc4ada1ab05d6d6c4bb5210d55025a927a0ba99acbf0941d5b481c6a3a",
+      "usecase分析.md": "389d20c510fe3f51806f501e66b9dc40f92eb07f05a1f1898d56fa7a7178a064",
+      "workload分析.md": "723f35face88f1ca1ed2f7e6afe53f13f09a286e1e63d516af45eca4145053ac",
+      "出发点分析.md": "c31e5366ec62688624824e0860ff83ae027f934c5d6e0b47441ce6be34c4b1b4",
+      "解决的问题分析.md": "176a40cc572891413f0c2e894e0d8c9bec328da119d97b079e0275a1845587ba"
+    }
+  },
+  {
+    "folder": "Efficient LLM Serving for Agentic Workflows- A Data Systems Perspective-arXiv-2026",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/Efficient LLM Serving for Agentic Workflows- A Data Systems Perspective-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "53b6657ec616c71e20e2a26407f7e79abbc3c90a2e1b40bd37ab42bd02980352",
+      "README.md": "9ffa8f9233b977f915c5149ebfa7b060569d504000f5305288927133059cea1f",
+      "benchmark分析.md": "bd34c5e25167401d3c540ccd9ed9562b66ef23ac8b7694164d4536beb152a364",
+      "usecase分析.md": "cebfa8165c7b76a76e3109aaf626dfbd738166b4629fe1552c82f434eb0d081e",
+      "workload分析.md": "ca7d89f0b3dad350767e981ba2649c08ed705831442e200e6ee2c3053ff5be27",
+      "出发点分析.md": "bddda82794fb7d2044429aa5c0ad91433469097c4e1d4572bb09efa5e9c0c5ff",
+      "解决的问题分析.md": "a51b84c88f0fea0da39d496ba74953c1cd8a8324111393622a31c92c75100072"
+    }
+  },
+  {
+    "folder": "EviRCA- Decoupling Evidence Extraction from Reasoning for Microservice Root-Cause Analysis-arXiv-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/EviRCA- Decoupling Evidence Extraction from Reasoning for Microservice Root-Cause Analysis-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "13d657a666984c1e09ff1a2f0654e4dc27156459e5fbf2cbbff6bdab37964407",
+      "README.md": "f3f042ea405c2fb2f7c1e1bb8bdcdcd80f380200bbaedf73a8dc1e27af014e29",
+      "benchmark分析.md": "2c5bc4a6283dca2472285b80a29c0b8d6ba3314bed71c5fd7a95db845546c813",
+      "usecase分析.md": "6085eb5061549144f796b81be848c415cf4c443a4d4626c6dde2b4c6aac72e8b",
+      "workload分析.md": "e21986148d09942abb33c48c2c8f5a9a1d6c1df1d10ba1e6f680a14f7af85af0",
+      "出发点分析.md": "9b01db53fa8a487a038b7c4b146ff91d23a12ec3ff125db0e95c3b17291d81ea",
+      "解决的问题分析.md": "52a58c31ef62476942d28b5f704952ada501056862fbed9517531d85808c602d"
+    }
+  },
+  {
+    "folder": "Executing SPARQL Queries over the Web of Linked Data-ISWC-2009",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Executing SPARQL Queries over the Web of Linked Data-ISWC-2009",
+    "sha256": {
+      "Novelty分析.md": "0fad6a4f54f2ea8673de11be80f2e53b3b22fb200470b0a99b1cc700f4cdd0b7",
+      "README.md": "52035436b3a179b5532918bdea0cf40d61813f76f1cf7c6d1d53cba734b09b2b",
+      "benchmark分析.md": "5904390bb7f48fdc155e151afb10e691316cdbb67dd48f20b8704e4f149b2e4f",
+      "usecase分析.md": "c65948a0245b0c3b5b2b4c0d85bfc6970c2fbf89031d5772f505b1a2a38cf8cd",
+      "workload分析.md": "47e59e93781841ac10e7b0387e9027d247b20a52125ef294f0555e707dc44d77",
+      "出发点分析.md": "3f018fbe50f67da540616991a55e3c898a0a24da4b2a9aad7d89420470ed516e",
+      "解决的问题分析.md": "26021c6190df8672daf2dd25aed8a88bb6811c821bbb61e22129806ab5e70574"
+    }
+  },
+  {
+    "folder": "Exploiting Correlated Attributes in Acquisitional Query Processing-ICDE-2005",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Exploiting Correlated Attributes in Acquisitional Query Processing-ICDE-2005",
+    "sha256": {
+      "Novelty分析.md": "837e87a7e8b861e6b90dd5bb278623b407c2356aaf702b1f59852715b7c7f51b",
+      "README.md": "925a4b1049602f897060a6142621c7b8b01b5458e10d53df82ead9cf10cd1e2e",
+      "benchmark分析.md": "b44367af68f29eb690a73dcacb5f88b9960eab02457841b305b900b0f4a01db8",
+      "usecase分析.md": "62eb198b1a348a31247c0af17cf85c1e0717115f93ae52c82cd6fe507f7ebd75",
+      "workload分析.md": "d9d11eb2b7b46c7170e5681c527cf05827e4cf38869581d718a27f2357890fba",
+      "出发点分析.md": "a081376697be4b0d90579f162ba4b225c71369b083731190238cc9b44aa30c6a",
+      "解决的问题分析.md": "14d16abb0c3bfbd187cdd977157e83189e3968bd69f760ea1ec31e7379a8e3a0"
+    }
+  },
+  {
+    "folder": "FlowArk- Boosting Agentic Data-flow Analysis for Android Apps via Context-Aware Knowledge Reuse-arXiv-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/FlowArk- Boosting Agentic Data-flow Analysis for Android Apps via Context-Aware Knowledge Reuse-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "2095bd40340c6884a0e4e4bc53bd094a78bde93ef09d7471b2e61f0d8470cc8f",
+      "README.md": "8e3a86fea6192917ecf730a2d2e17b0c3905143876cc86481b41dd399b4e4587",
+      "benchmark分析.md": "320b76ad5be272a30cf9380435510105314e72f5401b0e91711e2d93c3f60475",
+      "usecase分析.md": "6f1aa5d55338b851494f9d497e6854d26450d7577502a34111e426aa3b492987",
+      "workload分析.md": "13844bd86a056f0e05c62e0711508cc6bfdd292ae081470738ceb5034290965c",
+      "出发点分析.md": "928a3a021c838aa9265e75ae93b5f6f00b178c79dda21811ab8c3fc525182650",
+      "解决的问题分析.md": "812594a706a9ffb5a4c17eddd7c07ae05420fea4a811cecc8657914505dbcc60"
+    }
+  },
+  {
+    "folder": "KathDB-FAO- Synthesized Query Plans in a Multimodal DBMS-arXiv-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/KathDB-FAO- Synthesized Query Plans in a Multimodal DBMS-arXiv-2026",
+    "sha256": {
+      "2609.28761v1.pdf": "e4ea1ab6d1860c8b1c2229435aa6ea07e53b5d28ef830b51721bf3f751bd6d54",
+      "Novelty分析.md": "f60ee9eadb126e4479fe7b578298f977f9402b0128eb0f36e6086997bb2e8ab3",
+      "README.md": "50213994989c93312f6887f06924b75fe7072839c89b56b14faa7347a3b07626",
+      "benchmark分析.md": "f239c40f8781099da9ea6686cc9b10f9b567b14e26c004c95f459a9093da2dba",
+      "usecase分析.md": "d170c43648b75f61ee6b50f006de25a0c95806f972b1f62ea296c6dbe213b763",
+      "workload分析.md": "351f9a8b36d0c60aa3c8714e7ca9cc4d89a092129358187070c68fe6bf41d6c3",
+      "出发点分析.md": "a694978a933fbbfff41f0d13ebea369185dc6ca30b149012d42913aca305b48d",
+      "解决的问题分析.md": "75cc35493e1d816128f8226ca6b35062a3f9ff075436e855c8c121305a45587c"
+    }
+  },
+  {
+    "folder": "KramaBench- A Benchmark for AI Systems on Data-to-Insight Pipelines over Data Lakes-ICLR-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/KramaBench- A Benchmark for AI Systems on Data-to-Insight Pipelines over Data Lakes-ICLR-2026",
+    "sha256": {
+      "Novelty分析.md": "8d3bd92aaaa3723541dcbe6b757105354826702a4fab7c27b102aca6ee784110",
+      "README.md": "cc0188fd6ff62cd192cb20b1353e6802b4b50d861d11f9dd6d7ea02b5ee2a363",
+      "benchmark分析.md": "9a620a8d4f3c4ffb539aadaf75ac9fd03616bb0050f9a1ea6ebd84375964ac72",
+      "usecase分析.md": "5955ce5cbfba618dca8b5f4868e7322425bda0034aea3598fe22f5f4f8e4fb22",
+      "workload分析.md": "e4a2f8649304ddc19d00cbf66fc42dfedc08917f835cd27acf4d7b66514afe70",
+      "出发点分析.md": "06e294ca9e8f2049465ad6df0e1fd1fa4bbcdd1f6dc3cafff77e205e1fcbe7f0",
+      "解决的问题分析.md": "7e7d32c9bf9891c54217f6abdd3e0321021dbd22b96a83b009dd203cde890f85"
+    }
+  },
+  {
+    "folder": "Language Models Enable Simple Systems for Generating Structured Views of Heterogeneous Data Lakes-PVLDB-2023",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Language Models Enable Simple Systems for Generating Structured Views of Heterogeneous Data Lakes-PVLDB-2023",
+    "sha256": {
+      "Novelty分析.md": "9ba9b7c8a98e37a45e012fe058e8ff4fb352276bc14e96d39d5db6a2d5cc9c68",
+      "README.md": "48a46f167d5dd81651a417dd58834ae7bc4e12f26645da39d9fd4b510b23b327",
+      "benchmark分析.md": "41a34764e171d0e0840acad38056a7017fd9ca3b4cef06ccda76af983443840b",
+      "usecase分析.md": "a38f90bdf97292e90b99fc25eecad07c052d3ec2de230fba1a82f89b9dbf599d",
+      "workload分析.md": "cdf7192a7668fc8a4c4c136a43506bbffa886f3151a359d12c1e55ecd5daed8e",
+      "出发点分析.md": "70b7506c66ffbae3540c3c41a40bf3bb2025753b0c2b488f0b90765ce4de9d4a",
+      "解决的问题分析.md": "b639becfde6fb11f6d7c14f5d3a0844df2663b3640785c27604097cb4b81a7bb"
+    }
+  },
+  {
+    "folder": "Lifting the Burden of History from Adaptive Query Processing-VLDB-2004",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Lifting the Burden of History from Adaptive Query Processing-VLDB-2004",
+    "sha256": {
+      "Novelty分析.md": "2e6f19c2d3a0be492a34e5beef2daf261add4b2b33c48483dcf7645f49fc3dc7",
+      "README.md": "e01dc902bee539c9bba1878a3218ae6eb19f28a90990c06ce67e79a707c99079",
+      "benchmark分析.md": "c8a903495737a4a646b6d95fa4b3aed355aad5430e28d8364ee89c31ade41dfb",
+      "usecase分析.md": "584ade134a09c43c771d05615be3ae18f26eda9d42fce4c7388ad23eea1eb0c3",
+      "workload分析.md": "7ee3c1ab02a565ce6c16b06ca4adbde06d6d9024a29d01f7d28d2765b55ce742",
+      "出发点分析.md": "dd33f1d14f44204a2aa9c1922f64eeee55876e485b996a4b856f3fd6d486d8e7",
+      "解决的问题分析.md": "173565df18c2e3f7bff055f7d10b0928f12e3d8c73257999e1158a58d725d5ed"
+    }
+  },
+  {
+    "folder": "Model-Driven Data Acquisition in Sensor Networks-VLDB-2004",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Model-Driven Data Acquisition in Sensor Networks-VLDB-2004",
+    "sha256": {
+      "Novelty分析.md": "e1879692d0574b7351cb944bc09f0e94a62cf98a89f15cea2ce0e6bfbe65c34f",
+      "README.md": "cd62b05a3e04cfac7c9011c57e2e96b3c3440025980883dd0129574f515a96ea",
+      "benchmark分析.md": "95d27bd4fe3a9f68167625fc1dc0a9a9c2d314f1ea2b0129f9768fc31e5a1f22",
+      "usecase分析.md": "3594ffdce317a6dfd815e1183541186188884af7fc4aa8ba543fc97adb8543be",
+      "workload分析.md": "4db10d482f3b2bee4bd1538704946444c07bc849f5e8aa0705b84438314dc4e6",
+      "出发点分析.md": "9e5091537073588961d22d32d33907a028c3973c4ffedf9227d6f00be90515c4",
+      "解决的问题分析.md": "114a185b2abb221e3ef8989bd8f9df40b0bd4dc2f848f4fdee99084b9fe457bf"
+    }
+  },
+  {
+    "folder": "Multi-Modal Data Exploration via Language Agents-arXiv-2025",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Multi-Modal Data Exploration via Language Agents-arXiv-2025",
+    "sha256": {
+      "Novelty分析.md": "8aaaa641f1816adeb7eb0f4a6df26232500f9bb81410f2da6784d431598a37ba",
+      "README.md": "fdaccb19e3bf8401f2e1152513a5131afd0b69882aac9bd7019825d6a06df880",
+      "benchmark分析.md": "b4631f5e19fed630c9fec8877239aefa5b978976d05f8765fb3aa12ea5df669a",
+      "usecase分析.md": "113b5418ae494c94f726df642eda399b237cabe74f6f25710c7bca3190b37d1a",
+      "workload分析.md": "f0239924ebbff8523016cdfbecce1754d95ce59a163df53f43dd378ecf1c6c88",
+      "出发点分析.md": "d8a815d62b4a5bb5bf0f684388140d9244ed6a146c1345bdc1e92d3374d39f62",
+      "解决的问题分析.md": "ef52a904d02f7e934d4f73b7f49ed05563a55552f10085ae0ade6a9edd5ebf2f"
+    }
+  },
+  {
+    "folder": "Multi-Objective Agentic Rewrites for Unstructured Data Processing-arXiv-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Multi-Objective Agentic Rewrites for Unstructured Data Processing-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "35a8f3f5e0ba575800b1c56801b9954f20d806e1fe32d26d5ee1675abf0e252a",
+      "README.md": "fbace01f64d441e74acf0301f253213ecfff2880a99e8aa7d9a6fc6e14161f3d",
+      "benchmark分析.md": "7fde4b4fa2be3e88b40f76aa361d85e948f7195f7ffc6d7dbb0fd789673d021f",
+      "usecase分析.md": "621356fe02576945c1d1b0cc011969b920a260febed03cd091686143ac87e48b",
+      "workload分析.md": "8f3b1d55da175d17d8cbe345f0713cd8870b5ee1c97ca23049ec7bdc56562382",
+      "出发点分析.md": "8c6ee54e096f3c297d2010decf1cca567b0f4b16c2005867c38b096d71e1ec5c",
+      "解决的问题分析.md": "e47314eb7946eb2db3d68b2f2bea1c50f2ca5d4784368cc05873024934395200"
+    }
+  },
+  {
+    "folder": "OpenRCA 2.0- From Outcome Labels to Causal Process Supervision-arXiv-2026",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/OpenRCA 2.0- From Outcome Labels to Causal Process Supervision-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "3c569a02477da280b891460d6b189ee5f72961a36b523d7b6fb858920cf39955",
+      "README.md": "47cf8908bce0f3d7b074480f8934e9c4813eaa6b90480696453b671a56848b60",
+      "benchmark分析.md": "da084fde2f1be74f9185b1cd867a9d2ca5961d781048c01d5c6c201e43d59066",
+      "usecase分析.md": "ea354fa9144c9c833c4ff463da2dce6b46a1195f0d7e4b25e2793e002013e61e",
+      "workload分析.md": "20eccc2fc965ecd11563d13673fd154760216026444affc5b352b231ebb72c6e",
+      "出发点分析.md": "940340c12a0885fc8839feb32ff7ebfe540b508f0106dcc5e0a069cf6dcd034e",
+      "解决的问题分析.md": "de10d7b9d2aa0b98e20dbbc67acc1f4f3bc0d9912c4ffabd8abf5575ae01cfbe"
+    }
+  },
+  {
+    "folder": "OpenRCA- Can Large Language Models Locate the Root Cause of Software Failures-ICLR-2025",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/OpenRCA- Can Large Language Models Locate the Root Cause of Software Failures-ICLR-2025",
+    "sha256": {
+      "Novelty分析.md": "1e805d7069d4bb83ebcdd23e8a27d99570d12c94e5aed226dd87c9c0a05eebbe",
+      "README.md": "cb6f76b813b42c24852097fdd69a1a0a67ba1f5887b90ad9d79f86b36c8dfa9d",
+      "benchmark分析.md": "700bc4821f38057bff01f93f95304a58e0d5993f5a5bb6eb56dda96d8ea26258",
+      "usecase分析.md": "f8c3a448e75113ed40091e2ff44b6557c5ccda1cbb2a0bed2c74b364264c0724",
+      "workload分析.md": "ee4e49cacb858291fc12e750c5a8915e5bcad7656224f2669efb709a82fb7742",
+      "出发点分析.md": "1c21d853c274a75653fbc22928898c944bc3cf011c6062c39273492752aba45e",
+      "解决的问题分析.md": "e53c8916631c6eadab5a7278e608ef5594eb4f922384fbaf9b1556d366859690"
+    }
+  },
+  {
+    "folder": "Optimizing LLM Queries in Relational Data Analytics Workloads-MLSys-2025",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Optimizing LLM Queries in Relational Data Analytics Workloads-MLSys-2025",
+    "sha256": {
+      "Novelty分析.md": "3c3f493ca2ac73e92a99028c9beefe02a4d3e5d02d5d009818c1bb27ff7ee457",
+      "README.md": "af430f29ebb0224cd329977568ff790da9e2811d5c5220735c34a01c9d7c2e9d",
+      "benchmark分析.md": "184dd70c059bf70956fc3af52fdaf1cef2e7ef4a1ea67820e33077414c6c5f62",
+      "usecase分析.md": "a852c8046d4962b761a521bf879ddc69aa8f7576cea323b3f9bafd5c9afffb06",
+      "workload分析.md": "cf101cb84a931a82fe1f382367623efacb9de2755b9422e8e619586d31c5523d",
+      "出发点分析.md": "76ea09c98857e467e51aaa3c95fd080ae4cf1727d0190fe5adf8f6b3cfe3a8fe",
+      "解决的问题分析.md": "7b7dc3664ef7031246b486978f12cd777d13f2159d46b6374ac9cc92f8f9de70"
+    }
+  },
+  {
+    "folder": "Parametric Query Optimization-VLDB-1992",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Parametric Query Optimization-VLDB-1992",
+    "sha256": {
+      "Novelty分析.md": "c2b02d21c9e9ff15f1ed96dd5c8d87f790f28af6955a8da4cd6a367783568041",
+      "README.md": "ae08915ebc7e07bf5f7a58551a2434ecb197c80c01601f3fb17847897117aa72",
+      "benchmark分析.md": "58136e09560e9a8e945fe61c5893352e3b309e9dba9575b7aef2bf6c22a2fd3c",
+      "usecase分析.md": "b2bc87faff27ca10a0ad3f50f58dfa12c798da5196f75ab1ceaf5ddaa682d125",
+      "workload分析.md": "99baf8508fb5a9312a3a95ff841910ae7e71e713908097ef9c845b47f93a6fc4",
+      "出发点分析.md": "84fc807a25f192b3a266cd7d2288a6defe22777701412fe4d2ef6df021b8906f",
+      "解决的问题分析.md": "f9966269a0e41e77a4b010250dd28998bdcb25341033348931cccf600ebcbe49"
+    }
+  },
+  {
+    "folder": "ReAcTable- Enhancing ReAct for Table Question Answering-arXiv-2023",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/ReAcTable- Enhancing ReAct for Table Question Answering-arXiv-2023",
+    "sha256": {
+      "Novelty分析.md": "c7a0cde5a977bcdfb5a8a3e0cb2b0440b69c8206807a0f8ab012dcc51e2a1573",
+      "README.md": "cf2a7a26ef0e9ba6ebd41fb6c5cf6d95874852ed82894f245b21ef3c657447b1",
+      "benchmark分析.md": "8ae6ff44b715e85c51c8d34eb29d153e501b5f5bcf8330c19d54541724a1fe5b",
+      "usecase分析.md": "6e4ff77eed8d67df83f7c54110d81e2938965c1be5d7f8594285042c36eae0da",
+      "workload分析.md": "fd02b34d50c2dfab18934930dd5debb94f134cc936c6f82ff1177ba20bf4c822",
+      "出发点分析.md": "f4c02492f80180a535946a7608c1acfaefad0fd6e05ca2f5e1278f79fbebd91d",
+      "解决的问题分析.md": "99b4e843723060bf2a13f106a3baa84ca7b16b280f4e367d801faddbc6585034"
+    }
+  },
+  {
+    "folder": "SEED- Domain-Specific Data Curation With Large Language Models-arXiv-2024",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/SEED- Domain-Specific Data Curation With Large Language Models-arXiv-2024",
+    "sha256": {
+      "Novelty分析.md": "cdb0d11f52eee7e4aa6fd06fd065ffa2cd512a0c27419156323f9fd5fb4954d8",
+      "README.md": "9ee58a1458edf0338a51d54b4adbb574e51cff9a261989e7dbfd6d7287b9d2f8",
+      "benchmark分析.md": "d191551a576181eb1721c00b0a418e0e0efbc13fb9398b059ec170b67f89c639",
+      "usecase分析.md": "52568d04352397e2b103ce9be50a45086c66de4d026cc9391088989a6df38fc4",
+      "workload分析.md": "f783552350d0d9d0404109a34a75f3f616b3f1a723b684cae49fcd0094b891a5",
+      "出发点分析.md": "8da8daf589a8f737a78ec334028403618c9aef127c5f0d479d16110c8e9d7aa6",
+      "解决的问题分析.md": "4a5a534b7324a46077b9bcfce4658d6c179b6b0ae51e636cab08b2e96f1e05ae"
+    }
+  },
+  {
+    "folder": "SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
+    "source": "papers/literature/2026-10-14/semantic/reviews/SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
+    "sha256": {
+      "Novelty分析.md": "429c27f21ddde678a077521ddc0b1ec50b84111cfd4c56862f9a0f5df85bd5d8",
+      "README.md": "56e1ccd9d171e4997c8a7b1cbbdf0a5edfa49c579989df5348c5c2504f11e3ba",
+      "benchmark分析.md": "20492aa65395c518a0580d849c8478735a45f4fc84cc4492565e20ab42dbcd96",
+      "usecase分析.md": "24d2e5080f965ebc15e236902cf432592c25cee6e019d92de97e6ec90762fca5",
+      "workload分析.md": "335f40b6bebf1dc77c919563030c5523663a948c7c49b2244d031bf38421d355",
+      "出发点分析.md": "bd78305edeb6271b4ffa90485f762c5ff48784d3104525d724714460f5c626e2",
+      "解决的问题分析.md": "4e7f4a169247a3a5c70cd69416439a1c433fdede9d6b28ab22502c307809816e"
+    }
+  },
+  {
+    "folder": "Semantic Data Integration and Querying- A Survey and Challenges-ACM Computing Surveys-2024",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Semantic Data Integration and Querying- A Survey and Challenges-ACM Computing Surveys-2024",
+    "sha256": {
+      "Novelty分析.md": "53757f7ca77cfb989e354fae9b1e2638a786406a586bc1d71b75c04d354cd30a",
+      "README.md": "c4fbfae4e5dca021aca4976c68285b68dca64bcd30fdf871a2fc3724cbadfcc8",
+      "benchmark分析.md": "c2d6c68f4366e79550e587bf131612492a58752e48d0ce4ad6fbd7376f569c9e",
+      "usecase分析.md": "91a40420c34de1308fc5beb6af93ddac0f013842b306043582a4b7872eaa803e",
+      "workload分析.md": "9f0072def744fad6c5a2fcca4c773e5cc90d5ea7b5ec2e94478531babe085f25",
+      "出发点分析.md": "7ae4d6e3fa3f70889fc1c69df33f17b8976f1c9e79a7bd2cab5dfe2359a3f1e5",
+      "解决的问题分析.md": "c2d5e77e4020bc65984dadfe27eee0db25904efd49281c96cb3c6b2bf75686eb"
+    }
+  },
+  {
+    "folder": "Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
+    "source": "papers/literature/2026-10-14/semantic/reviews/Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
+    "sha256": {
+      "Novelty分析.md": "70d8a1dc9de16772f03cf8937768057d28b8486dcd592f2532fd94685a7ba622",
+      "README.md": "d97500024caa337db08a10ce282acb3a8419ff85edd400f81da0ac328da0276f",
+      "benchmark分析.md": "6d866366d4becc1203ab4755098bab0db2d88a0a109c065474937f413f1e2052",
+      "usecase分析.md": "0513f666d92f97fc1b382f02086850a627b0c0714773ad8fa2e81bf3d2dc20e2",
+      "workload分析.md": "ee7d77964d0d6fc769c93b9ccb048e7341e36b7f0aa89bbd58b3a814c92b1546",
+      "出发点分析.md": "8bf41b0d26385b661242d9f2c8b5d6bb01b23fe7b3af50b1701cae6da19566c0",
+      "解决的问题分析.md": "b464261994bcd25d8f7aae6e5bb7d5e50c102cb34eddc403a65937812399c602"
+    }
+  },
+  {
+    "folder": "ThalamusDB- Approximate Query Processing on Multi-Modal Data-PACMMOD-2024",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/ThalamusDB- Approximate Query Processing on Multi-Modal Data-PACMMOD-2024",
+    "sha256": {
+      "Novelty分析.md": "6d1bdb3d53ea11bfa537e1e5ea99a87928a6c0a7ddb8b434e13a55f255902a81",
+      "README.md": "4d53e6f904fea281fb539ff353a91877d1b93ea8f65e7e4c368fa837d8f38b58",
+      "benchmark分析.md": "f18a50621daba568d3c6a9dad12052b67174435908aa47a2c514440d104ef24e",
+      "usecase分析.md": "22ccf19b0c37d9c6ce2572dadb4053894d074c04ff85a189a8f7503c5c317eea",
+      "workload分析.md": "a4137b78cea244e0bf4ffefeaae57fd1f48f87b69735194a0a18f847d205c9b2",
+      "出发点分析.md": "c97ec71d68fee74acc2d46b1edb898db2e53ce07f0a3219b5893f3f24f867353",
+      "解决的问题分析.md": "41144807f7df1854969190ea7f7179e8d172304422fd7901912d44fef4b31e70"
+    }
+  },
+  {
+    "folder": "Towards Operationalizing Heterogeneous Data Discovery-arXiv-2025",
+    "source": "data/source-inputs/IntentDB-Adaptive-Semantic-Processing-over-Heterogeneous-Data-Environments/Survey/Towards Operationalizing Heterogeneous Data Discovery-arXiv-2025",
+    "sha256": {
+      "Novelty分析.md": "b5922759cbb6c33011dec23785031ad060143f40567440c645f57617e668d370",
+      "README.md": "80df516a41dc92a35ffe861e415a3674090dfe95c2cb4e4674e5df398e6ca35a",
+      "benchmark分析.md": "6b7287cab1fa6aaa13e4a94c70a2bfbe7e7298444ff6be0a2edfd57016020101",
+      "usecase分析.md": "9488eae774f51fdfb6c5d8c22df8b6a626b6741f5609ec26c8bcc614b4fbc553",
+      "workload分析.md": "f2fccf9047ff5ab70a58cb81b1d3d3ee9fb63e83efe96bfc825b919086ed2695",
+      "出发点分析.md": "d7af98fa9cc2d927ebb14925dd9a5408a3e5fb99ed2c65fa159865d0bbc5348b",
+      "解决的问题分析.md": "e529ae91ad3db163a91e52a071327f25e7bf884bae41c816d3b1bbddf9b7c711"
+    }
+  },
+  {
+    "folder": "DSBench- How Far Are Data Science Agents from Becoming Data Science Experts-arXiv-2024",
+    "source": "papers/literature/2026-10-14/data-agents/reviews/DSBench- How Far Are Data Science Agents from Becoming Data Science Experts-arXiv-2024",
+    "sha256": {
+      "Novelty分析.md": "626c77ac88e59a8fb4c1a7b671aa9b5563c3e5495d44e7ce6df298b2c91a1e21",
+      "README.md": "a62999d42b731be70e691d48c06d374d2e52b999031722831f17aba8dc58ad29",
+      "benchmark分析.md": "e04bb3e9c8f871f8b630359c2cc3d9dab642a3d5814ae6103f5dbb668fbf7d3e",
+      "usecase分析.md": "2a5d2544b6bafedda4573aeb0c386d0e94915e067546da4b89f5817be45e8074",
+      "workload分析.md": "a2d5118a648089ef74f1c170590eed96228cd9381d288fb6a59cb5a5598669ae",
+      "出发点分析.md": "4a62130fe119f9f2abb0649a629516b696800047df5d6fa204277be9592c6158",
+      "解决的问题分析.md": "d3ccaf51f3241baadde101ce0e3627c3e8ed05cf5be97fe2f707a66d88683ec6"
+    }
+  },
+  {
+    "folder": "DS-Agent- Automated Data Science by Empowering Large Language Models with Case-Based Reasoning-ICML-2024",
+    "source": "papers/literature/2026-10-14/data-agents/reviews/DS-Agent- Automated Data Science by Empowering Large Language Models with Case-Based Reasoning-ICML-2024",
+    "sha256": {
+      "Novelty分析.md": "db65de61edd4a64ef0017ab66370b69bed4f762b4b4fd6819a476027cf687154",
+      "README.md": "06bd161a467705204f565b18b35b67df5502e6e44c2513fb9ab9bbc1bdfddce5",
+      "benchmark分析.md": "41fda8a5b0755b70b794b93a33157bba30b621345e771d4906b9d14c960af8a0",
+      "usecase分析.md": "7877d43cde6148dd2590f72e3657d87ae07f6a9ea9254285e856b61b5af0de1e",
+      "workload分析.md": "9f40c731191b9258d629ae61b6571597a5d0543e6f6dc277b2f8f8e86b4e6ba9",
+      "出发点分析.md": "75811af0954239a65256b3c9cb7788f5dac3694c83fc18989387b2f7628d3888",
+      "解决的问题分析.md": "76207bba9424fa1f43ea7faa72080deb0afdd0a383b83300b4e5f9409335cc67"
+    }
+  },
+  {
+    "folder": "ScienceAgentBench- Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery-ICLR-2025",
+    "source": "papers/literature/2026-10-14/data-agents/reviews/ScienceAgentBench- Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery-ICLR-2025",
+    "sha256": {
+      "Novelty分析.md": "c76694b5c110de4845b933e531d3ead16629e4698e64aafa52eeb4edde0f4a20",
+      "README.md": "773db614269ab760ba601d48a0e9be5b1da8b8888a30baec2799de3768fb7846",
+      "benchmark分析.md": "ebd5fa5ac846f7e84732ab1a0d8fb0dc9cf917306d00126f67e5eea0ce35f345",
+      "usecase分析.md": "617ee41893d019cb66d6226f87b1133508638932f8c6c72669c17a9f4291e68c",
+      "workload分析.md": "28e00f9a7cc419ab1316a2e273810965d42515ba3f6677c0fe53153ba8280a8d",
+      "出发点分析.md": "e0e6409b5ed0ba7d709acae6a4256df112811b5a52d618b8656a097cc6cbe85e",
+      "解决的问题分析.md": "db44f8ac3fc33642d33303583d4b83545cca1bcb9dc18409741272cac7b1fff1"
+    }
+  },
+  {
+    "folder": "Data Agents- Agentic Data Systems-arXiv-2026",
+    "source": "papers/literature/2026-10-14/data-agents/reviews/Data Agents- Agentic Data Systems-arXiv-2026",
+    "sha256": {
+      "Novelty分析.md": "a3ab1070d44cbd8cb5579bff0334affbf474f8a059537a40f2bfadf015b39cfe",
+      "README.md": "920f20fd91a70324a9d81d7709daad6c133a1bc091d601782f73bad1df26ad92",
+      "benchmark分析.md": "ee3e4b6b53f005bd901b93311ac431dc752ee7c6684eb47442ed3d8705a0e2cf",
+      "usecase分析.md": "f364623f100b0b6d00e4d4e90d014d42e6fb7f448914b2134eb17ad8594c1b10",
+      "workload分析.md": "b36a33dfbb99aad034d4ba0d456c5e5a541ad055a132aaa4d42cc7cd27cf8d2a",
+      "出发点分析.md": "638f55a978b5ce4488182fabb2655f11795eb4ac8200223f00f70e195893bbda",
+      "解决的问题分析.md": "7ff1f411b9b2e0d6eecbf0f10795fcab89bf271afa760c8d20c27a7ab10c2fa0"
+    }
+  },
+  {
+    "folder": "Text2SQL is Not Enough- Unifying AI and Databases with TAG-CIDR-2025",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/Text2SQL is Not Enough- Unifying AI and Databases with TAG-CIDR-2025",
+    "sha256": {
+      "Novelty分析.md": "f69d68b43a28b712e1f9fd88e5ee7580dc682d19a7a0d9f85278be8d579ed33d",
+      "README.md": "655f8bd4b6c8934ad4e3a837f77041cba9e502b221ee959d17f9ccab4c802c88",
+      "benchmark分析.md": "c4899abb0a2b2852e9de64f5bb98b2919ac6f8d7f4e92177df2a4b8dc2df2c36",
+      "usecase分析.md": "30c80278460d83624aa631632a207795f5e493826f012b0c8f19490439cb006f",
+      "workload分析.md": "64dd0f1c9079aea4efcc5661309eaf5cf54590c200e4fa683dc1140ce9c29601",
+      "出发点分析.md": "2b82e3fef75e5f00da83ccd52ae834ec223e598a5c43031833fd0e749c5fa370",
+      "解决的问题分析.md": "8da77e46de7546153a1185ef6714cbddb3fcef12add87f2e313537e020460ccd"
+    }
+  },
+  {
+    "folder": "QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
+    "source": "papers/literature/2026-10-14/semantic/reviews/QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
+    "sha256": {
+      "Novelty分析.md": "d7a5cd7cc7628bc980a03625525995f73b06713044b4cd3e802e9e5b3aa9d65c",
+      "README.md": "082f1fe2c9ec3f125fccfb5f102e36642bb7b5b604fccc57e7f68f70f67b4013",
+      "benchmark分析.md": "e224aa4b263f4375d9dae0c1acafd6faa22a375a5df3e6627433070b5491a626",
+      "usecase分析.md": "ff976b557e758c15f735a5639fbf550911207fd8970217636eabc3b5e3c0d24c",
+      "workload分析.md": "17296ee7a08f52ff01ea1c130773f73da3cc1c991601da9fbefc1a7c45df3788",
+      "出发点分析.md": "f66c852f3728cf64e2cdc93d35a68d4f81065965ad75c4bb5cc73cd8e3db0004",
+      "解决的问题分析.md": "56f7e811f6a407d265ef3332c9dd41a352d3b0f94697645a950525357841038d"
+    }
+  },
+  {
+    "folder": "Carnot- Interpretable, Interactive, and Optimized Execution of Deep Research Queries-PVLDB-2026",
+    "source": "papers/literature/2026-10-14/agent-query/reviews/Carnot- Interpretable, Interactive, and Optimized Execution of Deep Research Queries-PVLDB-2026",
+    "sha256": {
+      "Novelty分析.md": "82bce4f8784017213c305e938287fab04426464fce24e82b233d2218bb9d8400",
+      "README.md": "92291efd7f32153aff21778cd28cf05c9073a848ac03ef3dc1ff9cfff67e6c76",
+      "benchmark分析.md": "40a206a61a222041ea52e49bda1e9886e4cd04c5d1cfd30f23f11963945c4393",
+      "usecase分析.md": "28ecb1869e6d48374dffccdd3f91656776d985a842d772d56a6798647f9fc10c",
+      "workload分析.md": "688230a2311b765e83c020485b581ba4dd43d0c140c37328ddd3fe6eb086c3be",
+      "出发点分析.md": "ccc3184efc43ad9c367bbfddfa9ec6f0edf36c685bee672794f515eee7231b30",
+      "解决的问题分析.md": "366ca4ed655f4c224312ec54748605d87ea3aa4a66d17d3d1f95cca23b86f38b"
+    }
+  },
+  {
+    "folder": "Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025",
+    "source": "papers/literature/2026-10-14/semantic/reviews/Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025",
+    "sha256": {
+      "Novelty分析.md": "9948fc3e55a1f216b3faa6a450ff9d4d9b1f3b7e00c20069b6f94e328c748386",
+      "README.md": "c8c1d48946de266a0a3a363ec982e1342f519b47b71e0b3960e3bda7c4deb4c4",
+      "benchmark分析.md": "c7a6b7e6f1071b29349e81b34d51d83a16587b56af9228bd68c11a51f30133e2",
+      "usecase分析.md": "3d7ed8a27b15b3ec5e233224a89efb5f7af8e95fd3bc0332e909b76126955863",
+      "workload分析.md": "f0bda894e2589161b747da6f6fbec23e5720e8ba1d92a557a5dbcd4bfc92a2c7",
+      "出发点分析.md": "a046cbe679ceaa5e55d766975d6204a27d3a58a5fa1b624329b09489bd8b3129",
+      "解决的问题分析.md": "c3afb7fc959d2939c623b9ccaf2dee5756d9f8e6636329ffa98c73f2993c32df"
+    }
+  }
+]

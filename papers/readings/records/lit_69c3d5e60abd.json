@@ -1,0 +1,77 @@
+{
+ "id": "lit_69c3d5e60abd",
+ "url": "https://arxiv.org/abs/2606.23537",
+ "title": "Zhu, Peng, Li, Luo — SQLConductor: Search-to-Policy Learning for Step-wise Text-to-SQL Orchestration",
+ "version": "arXiv:2606.23537v1（2026-06-22，cs.DB），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.23537v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_69c3d5e60abd.pdf",
+ "sha256": "6ce60886b22b623b95fb8ddb1e2d71447e511144d3ed04f902e7fbb2f53c0fb3",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_69c3d5e60abd",
+ "note": "papers/readings/notes/lit_69c3d5e60abd/README.md",
+ "read_sections": {
+  "problem": "§1、§2、Fig.1，PDF pp.1–3",
+  "method": "§3–4、Algorithms 1–3、Figs.2–5，PDF pp.3–9",
+  "evaluation": "§5、Tables 1–6、Figs.6–9，PDF pp.9–12",
+  "limitations": "无独立局限章节；阅读者据 §5 设置与表格整理"
+ },
+ "evidence": [
+  {
+   "id": "lit_69c3d5e60abd:E01",
+   "claim": "固定流水线依赖预定阶段顺序，早期遗漏 schema 或值会导致错误传播；先规划后执行的编排在执行开始后流程又被固定，因此需要依据中间产物逐步编排。",
+   "locator": "§1、Fig.1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E02",
+   "claim": "动作空间含问题分解、相关值抽取、操作识别、模式剪枝、SQL 生成、SQL 修正和终止七个动作，前六个由冻结 LLM 执行，策略每步输出 reasoning 与 call，T_max=10。",
+   "locator": "§4.1、§4.6、Algorithm 3，PDF pp.3–4、8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E03",
+   "claim": "离线 MCTS 每题 24 次 rollout，用执行一致性奖励引导；按工作流骨架分组，以 (s+1)/(n+2) 估计稳定性，取 top-3 并以 p̂^2 归一化加权 SFT；RL 只在 MCTS 成功率低于阈值的难题上做 GRPO，奖励 λ·r_out+(1−λ)·r_exe，λ=0.8。",
+   "locator": "§4.2–4.5、§5.1，PDF pp.4–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E04",
+   "claim": "BIRD-Dev 有 1,534 题、11 个数据库；OOD 评测用 Spider-Test、KaggleDBQA、ScienceBenchmark，且不做针对性训练。",
+   "locator": "§5.1，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E05",
+   "claim": "BIRD-Dev 上 8B 策略 + Gemma4-31B 达 73.2% EX；同用 Qwen2.5-Coder-32B 时为 71.2%，DeepEye-SQL 70.6%、CSC-SQL 70.7%、Alpha-SQL 69.7%、OmniSQL-32B 67.0%。",
+   "locator": "§5.2、Table 1，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E06",
+   "claim": "OOD 平均 72.4%（KaggleDBQA 66.0、ScienceBenchmark 62.3）；每题成本 0.012 美元（策略另加 0.001），低于 CHESS 0.109、Alpha-SQL 0.094、DeepEye-SQL 0.024。",
+   "locator": "§5.2–5.3、Tables 2–3，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E07",
+   "claim": "消融：未训练 8B 策略 68.3% 低于固定工作流 69.2%，训练后 8B 为 71.2%；最短正确工作流监督仅 67.9%，稳定性加权 top-3 为 70.7%。",
+   "locator": "§5.4–5.5、Tables 4–6，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_69c3d5e60abd:E08",
+   "claim": "73.2% 最高值依赖更换动作模型，同底座下优势 0.5–1.5 个百分点且无方差报告；成本比较不含离线 MCTS 与训练开销；论文无局限性章节，γ 与 BIRD-Train 使用量未给出。",
+   "locator": "Tables 1、3，§4.5、§5.1，PDF pp.7–10",
+   "basis": "inference",
+   "basis_note": "对比较公平性与披露缺口的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

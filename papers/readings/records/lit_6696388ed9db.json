@@ -1,0 +1,77 @@
+{
+ "id": "lit_6696388ed9db",
+ "url": "https://aclanthology.org/2024.emnlp-main.1073/",
+ "title": "Islam et al. — DataNarrative: Automated Data-Driven Storytelling with Visualizations and Texts",
+ "version": "EMNLP 2024 主会，Proceedings pp.19253–19286，34 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.emnlp-main.1073.pdf",
+ "retrieved_at": "2026-11-04T05:25:31+00:00",
+ "fulltext": "papers/readings/fulltext/lit_6696388ed9db.pdf",
+ "sha256": "46f3d8e479b1d77b08fa9c3307aad63d68dd2dc7d5d076a30c5fc343f29a870a",
+ "format": "pdf",
+ "pages": 34,
+ "note_directory": "papers/readings/notes/lit_6696388ed9db",
+ "note": "papers/readings/notes/lit_6696388ed9db/README.md",
+ "read_sections": {
+  "problem": "§1、§4.1 任务定义，PDF pp.1–2、5",
+  "method": "§3 基准构建、§4 框架、Figure 2，PDF pp.3–6；附录 A.3–A.4，p.14",
+  "evaluation": "§5、Tables 4–7，PDF pp.6–8；附录 Table 8，p.18",
+  "limitations": "§5.5、Limitations，PDF pp.8–9"
+ },
+ "evidence": [
+  {
+   "id": "lit_6696388ed9db:E01",
+   "claim": "任务输入为数据表及标题 D、用户意图 I（语料中取报告标题）与指引 G，输出多段文字加对应可视化规格组成的数据故事。",
+   "locator": "§4.1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6696388ed9db:E02",
+   "claim": "基准含 1,449 个故事：Pew 训练 1,068/测试 321，Tableau 42/13，GapMinder 仅测试 5；测试集共 339 个。",
+   "locator": "Table 1，PDF p.3；§3.2，p.4；§5.1，p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6696388ed9db:E03",
+   "claim": "Pew 图表数据由 Gemini-1.0-pro-vision 从图像抽取（100 张 ChartQA 图上 77% 正确），Pew 训练集图-文配对由 GPT-4-turbo 完成（50 个样本上 70% 正确）。",
+   "locator": "§3.2，PDF p.4；附录 A.3–A.4，p.14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6696388ed9db:E04",
+   "claim": "框架为 Generator 与 Critic 两个 LLM，依次执行反思、提纲、叙述，每步生成-审查-修订，共 9 次 LLM 调用。",
+   "locator": "§4.2–4.3，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6696388ed9db:E05",
+   "claim": "Gemini-1.5-pro 成对评审中，智能体框架相对直接提示的胜率：GPT-4o 78.17%，LLaMA-3-70b 58.70%，LLaMA-3-8b 41.59%（8B 时直接提示胜 54.57%）。",
+   "locator": "Table 4，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6696388ed9db:E06",
+   "claim": "正文所述 GPT-4o 平均胜率 75.93%、LLaMA-3-8b 40.59% 与 Table 4 的 78.17%、41.59% 不一致。",
+   "locator": "§5.2 正文对照 Table 4，PDF p.7",
+   "basis": "inference",
+   "basis_note": "阅读者对照正文与表格得出；前者或为子集平均，后者疑为笔误，原文未解释。"
+  },
+  {
+   "id": "lit_6696388ed9db:E07",
+   "claim": "人评由两名作者团队成员评 100 个 GPT-4o 样本，一致率 85.0%，智能体平均胜率 71.2%；与 LLM 评审一致 67.0%。",
+   "locator": "§5.3、Table 5，PDF pp.7–8；Ethics，p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6696388ed9db:E08",
+   "claim": "经三轮审查后生成故事仍有事实错误与幻觉（如峰值年份错误），且可视化类型有时含混难以渲染。",
+   "locator": "§5.5、Figure 3，PDF pp.7–9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

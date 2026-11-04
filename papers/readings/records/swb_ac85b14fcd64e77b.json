@@ -1,0 +1,71 @@
+{
+ "id": "swb_ac85b14fcd64e77b",
+ "url": "https://astrolavos.gatech.edu/articles/Manuscript_UDRP_final.pdf",
+ "title": "Adjibi et al. — Repairing Trust in Domain Name Disputes Practices: Insights from a Quarter-Century's Worth of Squabbles",
+ "version": "NDSS 2026，doi:10.14722/ndss.2026.230174，作者站点终稿 PDF，18 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://astrolavos.gatech.edu/articles/Manuscript_UDRP_final.pdf",
+ "retrieved_at": "2026-11-04T04:49:46+00:00",
+ "fulltext": "papers/readings/fulltext/swb_ac85b14fcd64e77b.pdf",
+ "sha256": "01d64ca2de9457df7d7b568add24d8c3c8ef1827fcaa7f9fe7a55af605949cdb",
+ "format": "pdf",
+ "pages": 18,
+ "note_directory": "papers/readings/notes/swb_ac85b14fcd64e77b",
+ "note": "papers/readings/notes/swb_ac85b14fcd64e77b/README.md",
+ "read_sections": {
+  "problem": "§I–III，PDF pp.1–3",
+  "method": "§IV、§VI 测量方法，PDF pp.4、7–11",
+  "evaluation": "Tables I–IV、§V–VI，PDF pp.4–11；Table V，PDF p.16",
+  "limitations": "§VIII、附录 B，PDF pp.13、16–18"
+ },
+ "evidence": [
+  {
+   "id": "swb_ac85b14fcd64e77b:E01",
+   "claim": "UDRP 改革停滞的原因之一是缺少大规模结构化数据，以往实证研究样本有限且结论矛盾。",
+   "locator": "§I、§III，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac85b14fcd64e77b:E02",
+   "claim": "共 116,341 件争议、99,357 件有裁决书、90,153 件英文（1999-12-01 至 2024-08-18），对应 175,269 个域名、463 个 TLD；非英文被排除，遗漏 9.07%。",
+   "locator": "§IV-A、Table I，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac85b14fcd64e77b:E03",
+   "claim": "NER（spaCy+RoBERTa）训练 229 篇、测试 61 篇，15 类实体，总平均 F 79.44%；每项行为分析只使用对应实体中位 F>75% 的机构。",
+   "locator": "§IV-B、Tables II–III，PDF pp.4、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac85b14fcd64e77b:E04",
+   "claim": "可能受 forum shopping 影响的案件 26,977 件，占有代理案件 33.98%、全部案件 29.92%；依据为 169/291 名 opportunist 代理人的选择概率与历史胜率正相关（r̄=0.35）。",
+   "locator": "§VI-A1、Table IV，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac85b14fcd64e77b:E05",
+   "claim": "转移间隔用名称服务器变化近似：均值 28.01、中位 24 个工作日；WIPO 单人/三人仲裁员指定按时率仅 11.47%/16.17%。",
+   "locator": "§VI-B2、§VI-B4，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ac85b14fcd64e77b:E06",
+   "claim": "恶意域名数前后不一致：摘要/要点框 2,751，贡献列表 2,791，正文 5,678−2,966=2,712；过早转移要点框写 172 domains，正文为 172 件案件中的 339 个域名；Fig.11 图注写中位 28 天而正文为 24。",
+   "locator": "Abstract、§I、§VI-B4、Fig.11，PDF pp.1–2、11–12",
+   "basis": "inference",
+   "basis_note": "各数字均出自原文；2,712 由阅读者相减得出，'不一致'是阅读者判断。"
+  },
+  {
+   "id": "swb_ac85b14fcd64e77b:E07",
+   "claim": "局限：只研究不合规行为，不评估裁决解释的一致性；仅英文；NER 残余错误；未控制机构营销；CZDS 数据和利益冲突数据未公开。",
+   "locator": "§VIII、附录 B，PDF pp.13、16",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

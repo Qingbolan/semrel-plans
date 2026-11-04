@@ -1,0 +1,71 @@
+{
+ "id": "lit_e80f04b54a6b",
+ "url": "https://arxiv.org/abs/2412.02205",
+ "title": "Weng et al. — DataLab: A Unified Platform for LLM-Powered Business Intelligence",
+ "version": "arXiv:2412.02205v3（2025-04-07），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2412.02205v3",
+ "retrieved_at": "2026-11-04T05:25:31+00:00",
+ "fulltext": "papers/readings/fulltext/lit_e80f04b54a6b.pdf",
+ "sha256": "a2beac5b9dbee0d6bf8cc7f9f4847161c56b7024eb287232d4037f006b633875",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_e80f04b54a6b",
+ "note": "papers/readings/notes/lit_e80f04b54a6b/README.md",
+ "read_sections": {
+  "problem": "§I 挑战 C1–C3、§II，PDF pp.1–3",
+  "method": "§III–VI、Algorithms 1–3、Figures 1–5，PDF pp.3–9",
+  "evaluation": "§VII、Tables I–IV、Figures 6–7，PDF pp.9–12；Table I 已渲染核对",
+  "limitations": "§VII-C/E 失败分析、§VIII，PDF pp.11–12；无独立局限章节"
+ },
+ "evidence": [
+  {
+   "id": "lit_e80f04b54a6b:E01",
+   "claim": "DataLab 把多智能体 LLM 框架嵌入扩展的 JupyterLab，支持 SQL、Python/PySpark、Markdown、Chart 单元，三项模块为领域知识注入、FSM 结构化通信、单元依赖 DAG 上下文管理。",
+   "locator": "§I、§III，PDF pp.1–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e80f04b54a6b:E02",
+   "claim": "知识生成从表 schema、脚本历史与血缘出发，Map 阶段逐脚本生成并以 1–5 分自评、低于阈值则重做，Reduce 阶段合并；腾讯一个月处理 2,426 库、262,041 表、2,708,884 列。",
+   "locator": "§IV-A，PDF p.5；§VII-C，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e80f04b54a6b:E03",
+   "claim": "公开基准上（GPT-4 底座）DataLab 的 Spider EX 80.70、BIRD 61.33，低于 PURPLE/CHESS；DS-1000 53.80、DSEval 80.99 为最优；DABench 75.10 低于 AgentPoirot 75.88。",
+   "locator": "Table I，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e80f04b54a6b:E04",
+   "claim": "正文称在 InsightBench 与 VisEval 上超过所有基线，但 Table I 中 InsightBench ROUGE-1（0.33 对 AgentPoirot 0.35）与 VisEval 可读性（3.73 对 CoML4VIS 3.80）并非最优。",
+   "locator": "§VII-A 正文 p.9 对照 Table I p.10",
+   "basis": "inference",
+   "basis_note": "阅读者对照正文与表格数值得出的不一致。"
+  },
+  {
+   "id": "lit_e80f04b54a6b:E05",
+   "claim": "知识注入消融：Schema Linking R@5 由 41.02 升至 79.49，NL2DSL 准确率由 32.52 升至 91.10；摘要中 58.58% 为百分点差。数据集为内部 439 个查询-表-列对与 326 个查询-DSL 对。",
+   "locator": "§VII-C、Table II，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e80f04b54a6b:E06",
+   "claim": "通信消融（100 条内部复杂问题）：去 FSM 成功率/准确率 73/56，去格式化 85/79，完整 92/84。",
+   "locator": "§VII-D、Table III，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_e80f04b54a6b:E07",
+   "claim": "DAG 上下文管理在 150 条查询上把每查询 token 从 10.69K 降到 4.10K（-61.65%），准确率从 86.67% 降到 82.00%，原因是部分关键 Markdown 单元未被召回。",
+   "locator": "§VII-E、Table IV，PDF p.12",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

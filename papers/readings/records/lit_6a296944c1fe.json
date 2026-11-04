@@ -1,0 +1,77 @@
+{
+ "id": "lit_6a296944c1fe",
+ "url": "https://arxiv.org/abs/2605.24183",
+ "title": "Kłeczek et al. — AvalancheBench: Evaluating Enterprise Data Agents Through Latent World Recovery",
+ "version": "arXiv:2605.24183v1（2026-05-22，cs.DB），VLDB 2026 Workshop DASHSys，4 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2605.24183",
+ "retrieved_at": "2026-11-04T04:45:22Z",
+ "fulltext": "papers/readings/fulltext/lit_6a296944c1fe.pdf",
+ "sha256": "270bffef5f90504d8a5b144d59dbd6cd60bccc3e42f0684bb868c50936f5e403",
+ "format": "pdf",
+ "pages": 4,
+ "note_directory": "papers/readings/notes/lit_6a296944c1fe",
+ "note": "papers/readings/notes/lit_6a296944c1fe/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3.1–3.3、Fig.1，PDF pp.1–3",
+  "evaluation": "§4.1–4.2、Table 1–2，PDF pp.2–4",
+  "limitations": "§5，PDF p.4"
+ },
+ "evidence": [
+  {
+   "id": "lit_6a296944c1fe:E01",
+   "claim": "现有基准（KramaBench、DAB、InsightBench、SemBench 等）衡量流水线执行或答案貌似合理，而非系统是否恢复了数据背后正确的分析结构；标准指标假设预测与真值表示对齐，不适合分析输出。",
+   "locator": "§1–2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E02",
+   "claim": "任务为 (Z, X, R)：潜在世界 Z、由 Z 生成的观测 X、由 Z 导出答案的评分细则 R；保真度 L 为逐条细则得分之和，允许部分得分。",
+   "locator": "§2，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E03",
+   "claim": "构建分四阶段：SME 声明式指定 Z、从 Z 推导细则、结构化生成（加权抽样人设，评分由基础分、缺陷、人设偏置与噪声组成）、LLM 依据结构参数生成评论；手工设计人设以避免 LLM 分布先验。",
+   "locator": "§3.1、§3.3，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E04",
+   "claim": "电商用例：20 个产品、23k 笔交易、10k 条评论；评论与目录无外键；细则覆盖发现、分割、排序、条件、时间、综合六类，共 18 条，每条 0–5 分。",
+   "locator": "§4.1，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E05",
+   "claim": "CoCo v1.0.80 + Claude Opus 4.7，Claude Opus 4.7 评审，三次试验：Compiled LOTUS 12.2±3.0%，Compiled AISQL 17.0±3.3%，Orchestrator 25.9±5.5%；LOTUS 的语义排序算子因无 log-prob 被禁用。",
+   "locator": "§4.1、Table 2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E06",
+   "claim": "失败模式：编译 AISQL 漏 sports_fan、编译 LOTUS 漏 patriotic；编译式 agent 依据少量样本硬编码通用客群；缺陷时间被误归到物流窗口，两个事件被合并。",
+   "locator": "§4.2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E07",
+   "claim": "局限：LLM 评审偏差未经校准，作者未声称其稳健；合成与真实数据存在差距；细则解释存在歧义。",
+   "locator": "§5，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_6a296944c1fe:E08",
+   "claim": "评审与被测 agent 同为 Claude Opus 4.7，可能存在自我偏好；单一用例、18 条细则、3 次试验使配置间差异的统计可靠性有限。",
+   "locator": "§4.1、Table 2，PDF p.3",
+   "basis": "inference",
+   "basis_note": "为阅读者对实验设计的评估，原文未讨论自我偏好问题。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

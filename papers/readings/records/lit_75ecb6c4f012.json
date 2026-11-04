@@ -1,0 +1,78 @@
+{
+ "id": "lit_75ecb6c4f012",
+ "url": "https://arxiv.org/abs/2508.09023",
+ "title": "Xu et al. — E3-Rewrite: Learning to Rewrite SQL for Executability, Equivalence, and Efficiency",
+ "version": "arXiv:2508.09023v2（2025-08-15），AAAI 2026 版权页模板，9 页（正文约 7.5 页 + 参考文献）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2508.09023v2",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_75ecb6c4f012.pdf",
+ "sha256": "abd5a44b44212fe795d426b7b01ed8b8d617e31991d9d9bc1e2a85d506d0184b",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/lit_75ecb6c4f012",
+ "note": "papers/readings/notes/lit_75ecb6c4f012/README.md",
+ "read_sections": {
+  "problem": "Introduction 与 Problem Definition，pp.1–3",
+  "method": "Methodology，Figs.1–2，pp.3–5",
+  "evaluation": "Experiments，Tables 1–4、Fig.3，pp.5–7",
+  "limitations": "无单列局限章节；阅读者据实验设置与表格补充，pp.5–7"
+ },
+ "evidence": [
+  {
+   "id": "lit_75ecb6c4f012:E01",
+   "claim": "作者认为规则式 SQL 改写受规则集覆盖面限制，难以表达 CTE、求值顺序等结构性改写，也无法从执行反馈中学习；直接用 LLM 改写又易导致性能退化或不等价。",
+   "locator": "Abstract 与 Introduction，pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E02",
+   "claim": "问题定义要求改写 q′ 可执行、对任意数据库实例与 q 等价且执行时间更短；输入为原 SQL 加线性化的执行计划（训练用 EXPLAIN ANALYZE，推理用 EXPLAIN）。",
+   "locator": "Problem Definition 与执行提示，pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E03",
+   "claim": "奖励由可执行性、等价性与基于优化器估计代价的性能项组成；等价性先用 QED-Solver，未知时退回 LLM 判断，再不确定时比较采样实例上的执行结果；训练分两阶段，先只用正确性奖励再加入性能奖励。",
+   "locator": "Methodology，pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E04",
+   "claim": "评测在 PostgreSQL 14 上使用 TPC-H（约 2,000 条，10GB）、IMDB/JOB（2,000 条）、DSB（2,000 条）；每条查询执行 5 次去极值平均，超时 300 s 记为 300 s。",
+   "locator": "Experiments，pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E05",
+   "claim": "E3-Rewrite (Qwen) 平均延迟在 TPC-H、IMDB、DSB 上为 29.67/5.01/16.93 s，均低于所有基线；TPC-H 等价率 99.6%、改进查询 210 条。",
+   "locator": "Table 1、Fig.3，p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E06",
+   "claim": "消融显示去 RL 使等价率从 99.6% 降至 90.1%，去执行提示使平均延迟升至 39.56 s，去示范检索使改进查询数降至 177。",
+   "locator": "Table 4，p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E07",
+   "claim": "正文未说明 RL 训练查询的来源及与评测集是否分离；效率奖励基于优化器估计代价而评测用真实延迟；IMDB 上 LLM-R² 改进查询数（103）高于 E3-Rewrite（98）。",
+   "locator": "pp.4–6，Fig.3",
+   "basis": "inference",
+   "basis_note": "设置与数字来自原文；对训练/测试分离风险与指标错位的判断为阅读者分析。"
+  },
+  {
+   "id": "lit_75ecb6c4f012:E08",
+   "claim": "原文存在若干不一致：vanilla 等价率正文 84.0% 与 Table 4 的 84.8%；LLM-R² 骨干分别写作 GPT-3.5 与 GPT-4o；IMDB 引用了 Maas et al. 2011 情感数据集。",
+   "locator": "p.5、p.7、参考文献 p.8",
+   "basis": "inference",
+   "basis_note": "依据原文不同位置的文字对照，属于阅读者核对结果。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_4f02949b54fd3f85",
+ "url": "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149",
+ "title": "Candito et al. — A French corpus annotated for multiword expressions and named entities",
+ "version": "Journal of Language Modelling 8(2), 2020, pp.415–479，JLM 官网 PDF，65 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149",
+ "retrieved_at": "2026-11-04T05:36:55+00:00",
+ "fulltext": "papers/readings/fulltext/swb_4f02949b54fd3f85.pdf",
+ "sha256": "8ceca4d1fc95629323b8d2b2b15e754df725b419ef4b1a980054cd332596606f",
+ "format": "pdf",
+ "pages": 65,
+ "note_directory": "papers/readings/notes/swb_4f02949b54fd3f85",
+ "note": "papers/readings/notes/swb_4f02949b54fd3f85/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，期刊 pp.415–417（PDF pp.1–3）",
+  "method": "§3、§4（Figure 2）、§5.1、§7.1/7.3、§8.1–8.2，期刊 pp.427–449（PDF pp.13–35）",
+  "evaluation": "§8.3 Table 1、§10 Tables 3–6、§10.4，期刊 pp.449–463（PDF pp.35–49）",
+  "limitations": "§8.2、§8.3、§11、§12，期刊 pp.448–466（PDF pp.34–52）；§2、§5.2–6 与附录仅浏览"
+ },
+ "evidence": [
+  {
+   "id": "swb_4f02949b54fd3f85:E01",
+   "claim": "目标是给出操作性标准，在同一框架内精确区分并标注 NE 与 MWE，且不使用预先存在的词典或预标注工具。",
+   "locator": "§1、§8.2，期刊 pp.416、448",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4f02949b54fd3f85:E02",
+   "claim": "非动词 MWE 采用 10 条充分条件（ID、PRED、CRAN、LEX、DET、ZERO、MORPHO、IRREG、SYNT、INSERT），满足任一即标注；动词 MWE 沿用 PARSEME 1.1。",
+   "locator": "§3.1、§7.1、§7.3，期刊 pp.428、443–447",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4f02949b54fd3f85:E03",
+   "claim": "Sequoia 3,099 句（约 70k token），四种子语料；全部双人标注并裁决，再用 PARSEME 工具做一致性检查。",
+   "locator": "§8.1–8.2、§10.4，期刊 pp.448–449、461",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4f02949b54fd3f85:E04",
+   "claim": "Table 1 精确匹配 F：非动词 MWE 55.3、NE 84.0、合计 71.1；医疗子语料分别为 41.7 和 56.4。",
+   "locator": "§8.3、Table 1，期刊 pp.450–451",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4f02949b54fd3f85:E05",
+   "claim": "Table 3：共 6,579 个标注，NE 3,128，MWE 3,451（动词 981、其他规则 1,783、不规则 687）。",
+   "locator": "§10、Table 3，期刊 pp.456–457",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4f02949b54fd3f85:E06",
+   "claim": "摘要/结论的 3,112 NE、3,440 MWE 与 Table 3 的 3,128、3,451 不一致，原文未解释。",
+   "locator": "摘要、§12、Table 3，期刊 pp.415–416、457、465",
+   "basis": "inference",
+   "basis_note": "各数值来自原文，差异为阅读者核算。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

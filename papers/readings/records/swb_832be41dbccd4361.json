@@ -1,0 +1,68 @@
+{
+ "id": "swb_832be41dbccd4361",
+ "url": "https://arxiv.org/abs/2608.03451",
+ "title": "Li, Liang, Xie et al. — DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces",
+ "version": "arXiv:2608.03451v1（2026-08-04），24 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2608.03451v1",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_832be41dbccd4361.pdf",
+ "sha256": "43e3decd5452b629125c15026baa0fe3dc946cae1b1aca915b93deff527ef083",
+ "format": "pdf",
+ "pages": 24,
+ "note_directory": "papers/readings/notes/swb_832be41dbccd4361",
+ "note": "papers/readings/notes/swb_832be41dbccd4361/README.md",
+ "read_sections": {
+  "problem": "§1、§3，Table 1，PDF pp.1–3",
+  "method": "§4、Figure 2，PDF pp.3–6；附录 A.1–A.6，pp.10–21（选读）",
+  "evaluation": "§5–6、Tables 2–3、Figures 3–7，PDF pp.6–8；附录 A.7–A.8，pp.21–24",
+  "limitations": "无专门局限节；§6.1 排除系统说明、§6.4 “描述性非因果”声明（PDF pp.7–8）、附录 B 竞赛协议差异（p.24）"
+ },
+ "evidence": [
+  {
+   "id": "swb_832be41dbccd4361:E01",
+   "claim": "在真实分析场景中，回答一个问题所需的证据很少放在一张干净的表或预先指定的数据库里，而是分散在数据库、结构化文件、长文档和多媒体中，还可能跨越中英两种语言，并夹杂有效但无关的文件。现有基准各管一段：Spider、BIRD、Spider 2.0 等结构化基准判分确定，但通常预先给定相关表或库；MMLongBench-Doc 等非结构化基准侧重证据检索和答案合成；KramaBench、FDABench 等数据代理基准的目标从事实型答案、流水线到报告各不相同，并依赖执行、rubric 或模型判分。作者认为三点尚未统一：(L1) 跨模态、跨语言的任务本地工作区；(L2) 要求输出完整分析结果表；(L3) 能接受等价表示、又拒绝不完整或错误答案的确定性评测。",
+   "locator": "§1–2，Table 1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_832be41dbccd4361:E02",
+   "claim": "任务 i 的公开输入是 x_i = (q_i, W_i)：q_i 是自然语言问题；工作区 W_i 由结构化/半结构化工件（CSV、JSON、SQLite）、文档（Markdown、PDF）和媒体（视频）组成。代理初始只拿到问题和工作区根目录，借助自身工具（文件系统、SQL、代码执行、文档抽取、视频理解等）逐步获取内容，最后以 CSV 提交一张表格。评测端另有参考结果 Y_i 和冻结配置 c_i，记录每列语义类型（text/number/date/datetime/Boolean）、数值精度与百分比约定，以及行序是否重要。判分为二值：形状不同即判错；表头不计分，评测器搜索参考列到预测列的一一映射；值按配置规范化后，按需比较有序行序列，否则比较保留重数的行多重集。多出或缺少行、列都判错。总体指标为 Task Accuracy。",
+   "locator": "§3.1、§4.5，Eqs.(1)–(3)、(8)–(9)，PDF pp.3、5–6；附录 A.6，pp.19–21",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_832be41dbccd4361:E03",
+   "claim": "论文声明四项贡献：异构工作区基准、执行落地的构造框架 DataSpace-Builder、语义感知的确定性表格评测器，以及跨 6 个骨干模型和 5 个 harness 的实证研究。Builder 分四步：(1) 跨语言转换——按外键、同名列或值重叠把列分组联合翻译，生成表/列/单元格三级映射，再确定性地改写数据库和 SQL，用执行等价性加 LLM 判定器校验问题与 SQL 的对齐；(2) 约束感知关系采样——从 SQL AST 中提取主外键、连接列、谓词与边界值作为保护集，按任务采样子库，并重新执行 SQL 得到候选答案；(3) 模态路由与渲染——用带种子的规则把每张表分配给 CSV/JSON/SQLite/Markdown/PDF 渲染器，由 LLM 按块生成“事实落地”的文档；视频则根据查询生成，可以把谓词条件移入视频（谓词抽象），或把答案单元格分散到多个场景；(4) 从 11 名专家中抽 2 人盲解复核，并独立编写评测配置，意见一致才收录。 阅读者分析：每个任务的底层分析逻辑始终是原 Text-to-SQL 的一条 SQL，所以金标准可以精确执行；“异构性”则来自对同一关系数据的重新渲染，是合成的而非自然产生的。源数据只有英文，中文来自翻译；88.5% 的任务来自金融类 BULL，领域分布偏向金融。",
+   "locator": "§1、§4.1–4.5，Figure 2，PDF pp.2–6；附录 A，pp.10–21",
+   "basis": "inference",
+   "basis_note": "贡献与构造步骤为原文表述；关于异构性来源与领域偏向的评价为阅读者分析。"
+  },
+  {
+   "id": "swb_832be41dbccd4361:E04",
+   "claim": "共 410 个任务，全部用于评测；论文未描述训练/开发划分（KDD Cup 采用隐藏的 A/B 榜，附录 B）。其中 363 个（88.5%）源自 BULL，47 个（11.5%）源自 EHRSQL；按领域为基金 158、股票 120、宏观经济 85、医疗 47；265 个任务跨语言，145 个单语言。工作区共 7,439 个文件、15.01 GB（每任务中位数 20 个文件、31.26 MB），含 1,088 个 PDF、25,384 页，875 个 Markdown 文件，189 个视频、5.49 小时；模态组合共 13 种。参考答案共 126,409 行，最大一个 12,962 行，最宽 6 列；92 个任务要求保持行序。“可用”与“必需”证据不同：CSV 出现在每个工作区，但已验证的解题路径只在 58 个任务中用到 CSV，SQLite 用于 177 个；长文档为 135 个任务提供必需证据；189 个带视频的任务中 97 个必须看视频；134 个任务（32.7%）要组合多种模态。操作覆盖：投影 338、过滤 321、排序 209、聚合 146、连接 113；每任务涉及 2–11 类操作，中位数 5。构造的 API 成本（Table 5）：跨语言转换约 $0.000189/任务，文档 $0.92/任务，视频约 $0.58/任务，不含专家复核。 与图谱查询的关系：本项目有两条 swb 任务关联本文，一条标为 query_source（task184），一条为项目派生的 dataset_origin（fund-v1）。论文正文没有列出具体任务编号，因此这两条的对应关系无法仅凭原文核实。",
+   "locator": "§5.1–5.3、Table 2、Figures 3–4，PDF p.6；附录 A.4 Table 5，p.17–18；附录 B，p.24",
+   "basis": "inference",
+   "basis_note": "统计数字来自原文；与本项目任务的对应关系为阅读者核对，原文不提供任务编号。"
+  },
+  {
+   "id": "swb_832be41dbccd4361:E05",
+   "claim": "Figure 1 的基金风险任务问：“哪些基金跑赢了 2023 年所属类别的基准，同时触发了视频中定义的回撤警报？返回基金、类别、收益、基准、最大回撤与严重度排名。”工作区包含 fund.csv（2,100 余行）、category.json（87 条映射）、daily_nav.sqlite（2022–2023 年日净值）、bench2023.pdf（90 余页）、risk_brief.mp4（8 分 17 秒）和 Knowledge.md（5 万余字符）。代理要从视频获得警报规则（图中标注为最大回撤阈值），从长 PDF 抽取类别基准，从 SQLite 查询日净值并计算最大回撤，对齐基金与类别实体，再过滤、排序并导出完整表格。 阅读者分析：这一用例对应“文档字段抽取 + 视频条件抽取 + 关系计算”的混合计划。抽取对象是 LLM 按源表生成的文档和视频，答案可以由原 SQL 精确复算；若在本项目中把它改写为语义算子计划，属于派生任务，不是论文直接评测的内容。",
+   "locator": "§1、§4.3，Figure 1，PDF pp.1、5",
+   "basis": "inference",
+   "basis_note": "任务内容来自 Figure 1；计划归类为阅读者分析。"
+  },
+  {
+   "id": "swb_832be41dbccd4361:E06",
+   "claim": "实验分两组受控比较。骨干比较固定 ReAct 式的 DataSpace-Agent，每任务限 60 轮模型调用、50 次工具动作、1,800 秒，资源 4 CPU/16 GiB。结果（Table 3）：Grok 4.5 272/410（66.34%）、GPT-5.6 Sol 265（64.63%）、Kimi K3 219（53.41%）、MiMo-V2.5 161（39.27%）、Claude Sonnet 5 135（32.93%）、MiniMax M3 117（28.54%）。56 个任务六个模型都能解出，76 个都解不出，并集可解 334 个（81.46%）。Harness 比较固定 MiMo-V2.5，只设 1,800 秒期限、不设统一动作上限：Grok Build 46.34%、Claude Code 44.63%、DataSpace-Agent 39.27%、Codex 34.88%、Smolagents 30.98%。效率方面，GPT-5.6 Sol 比 Grok 少用 74.2% 的 token；MiMo-V2.5 每任务只需 $0.011。分层分析显示，多模态任务比单模态低 1.8–14.0 点，需要连接的任务低 9.7–19.8 点，作者声明这些差异只是描述性的。对 Grok 4.5 的 136 个失败做人工分析：答案物化错误 71 个（52.2%），任务意图理解错误 31 个（22.8%），只有 3 个是选错证据源。 边界：论文没有局限性章节。DeepAnalyze、AgenticData 因接口或实现不可用而未评测。论文未报告重复运行次数或方差。阅读者分析：harness 比较放开了动作上限，与骨干比较的预算条件不同，两组数字不宜直接横向比较；竞赛期间的判分规则也与本文最终评测协议不同（附录 B）。",
+   "locator": "§6.1–6.5、Table 3、Figures 5–7，PDF pp.6–8；附录 A.7–A.8，pp.21–24；附录 B，p.24",
+   "basis": "inference",
+   "basis_note": "数字来自原文；关于重复次数缺失与预算不一致的提示为阅读者分析。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

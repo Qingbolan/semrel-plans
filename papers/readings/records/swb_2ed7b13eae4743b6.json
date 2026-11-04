@@ -1,0 +1,71 @@
+{
+ "id": "swb_2ed7b13eae4743b6",
+ "url": "https://aclanthology.org/2021.emnlp-main.300",
+ "title": "Chen et al. — FinQA: A Dataset of Numerical Reasoning over Financial Data",
+ "version": "EMNLP 2021 主会长文（ACL Anthology 2021.emnlp-main.300），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2021.emnlp-main.300.pdf",
+ "retrieved_at": "2026-11-04T05:40:11+00:00",
+ "fulltext": "papers/readings/fulltext/swb_2ed7b13eae4743b6.pdf",
+ "sha256": "916b3fc7eb652311914784623b8be5879b50553efff727cede70db63060b0474",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/swb_2ed7b13eae4743b6",
+ "note": "papers/readings/notes/swb_2ed7b13eae4743b6/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–3",
+  "method": "§4.1–4.2、§5，PDF pp.3–7；附录 A–B，pp.11–12",
+  "evaluation": "§4.3–4.4、§6、Tables 1–3、Figure 4，PDF pp.4–8",
+  "limitations": "§3（仅规则表格）、§6.3、§8，PDF pp.3、8–9"
+ },
+ "evidence": [
+  {
+   "id": "swb_2ed7b13eae4743b6:E01",
+   "claim": "任务输入为一页财报的文本与一张表格加问题，输出由 6 种数学运算和 4 种表格聚合组成的 DSL 程序，执行得到答案；评测执行准确率与程序（符号等价）准确率。",
+   "locator": "§3，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2ed7b13eae4743b6:E02",
+   "claim": "数据源自 FinTabNet 中 1999–2019 年 S&P 500 财报，过滤后 12,719 页供 11 名金融专家标注，每题约 2 美元、平均时薪 35 美元。",
+   "locator": "§4.1–4.2、§8，PDF pp.3–4、9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2ed7b13eae4743b6:E03",
+   "claim": "FinQA 含 8,281 例、2,789 页，按 6,251/883/1,147 切分且报表不重叠；平均输入 687.53 token；62.43% 仅需表格，14.15% 需表文结合。",
+   "locator": "§4.4、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2ed7b13eae4743b6:E04",
+   "claim": "程序 59.10% 为 1 步、32.71% 为 2 步、8.19% 为 3 步及以上；除法占 45.29%。",
+   "locator": "§4.4，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2ed7b13eae4743b6:E05",
+   "claim": "FinQANet（RoBERTa-large）测试执行/程序准确率 61.24/58.86，给定金标准事实时 70.00/68.76；人类专家 91.16/87.49，MTurk 众包 50.68/48.17。",
+   "locator": "§6.1、Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2ed7b13eae4743b6:E06",
+   "claim": "RoBERTa-large 在表文混合题上 43.80，>2 步程序 22.78，含常量程序 43.88；50 个错误中 15% 来自检索。",
+   "locator": "§6.2–6.3、Table 3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2ed7b13eae4743b6:E07",
+   "claim": "§1 称 FinQANet 执行准确率 65.05%，与 Table 2 最高值 61.24% 不一致；人类专家上限只在 200 个随机样例上测得，与模型测试集不同。",
+   "locator": "§1、§4.3、Table 2，PDF pp.2、4、7",
+   "basis": "inference",
+   "basis_note": "数字来自原文；不一致与比较口径差异为阅读者比对得出，原文未解释。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

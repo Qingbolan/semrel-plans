@@ -1,0 +1,65 @@
+{
+ "id": "swb_1d5e3032209e6232",
+ "url": "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf",
+ "title": "CSTNews - A Discourse-Annotated Corpus for Single and Multi-Document Summarization of News Texts in Brazilian Portuguese",
+ "version": "Anais do III Workshop “A RST e os Estudos do Texto”（Cuiabá，2011 年 10 月），pp.88–105，作者主页 PDF，18 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf",
+ "retrieved_at": "2026-11-04T05:38:51.427295+00:00",
+ "fulltext": "papers/readings/fulltext/swb_1d5e3032209e6232.pdf",
+ "sha256": "6006a7e627fffd3d635464945e7066764bcd191a31906341ee975ebf95cdfa9e",
+ "format": "pdf",
+ "pages": 18,
+ "note_directory": "papers/readings/notes/swb_1d5e3032209e6232",
+ "note": "papers/readings/notes/swb_1d5e3032209e6232/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–3（印刷页 88–90）",
+  "method": "§2–3，Tables 1–4、Figures 1–6，PDF pp.3–14",
+  "evaluation": "§3.1 Table 5、§3.2 Tables 7–8，PDF pp.12–15",
+  "limitations": "§2 末、§3.1–3.2 一致性讨论、§4，PDF pp.5–7、13、15–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_1d5e3032209e6232:E01",
+   "claim": "CSTNews 动机：RST 与 CST 都有助于摘要内容选择，但此前缺少同时具有可靠 RST 与 CST 标注的资源，CST 只有英文 CSTBank。",
+   "locator": "§1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1d5e3032209e6232:E02",
+   "claim": "语料为 2007 年采集的 50 个巴西葡萄牙语新闻簇，每簇 2–3 篇，共 140 篇文本、2,088 句、47,240 词。",
+   "locator": "§3，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1d5e3032209e6232:E03",
+   "claim": "RST 由 8 名标注者按 Pardo（2005）关系集与 9 条葡语切分规则标注；CST 由 4 名计算语言学者按 14 种精简关系在句对层面标注，CSTTool 以词重叠阈值 0.12 推荐候选句对但不限制标注。",
+   "locator": "§3.1–3.2、Table 4，PDF pp.8–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1d5e3032209e6232:E04",
+   "claim": "RST 一致性（RSTeval）P=R=F：简单片段 0.91、复杂片段 0.78、核心性 0.78、关系 0.66。",
+   "locator": "§3.1、Table 5，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1d5e3032209e6232:E05",
+   "claim": "CST kappa：关系 0.50、方向性 0.44、关系类型 0.61；关系的完全/部分/不一致百分比为 54/27/18，作者称高于 Zhang et al. 的 58%。",
+   "locator": "§3.2、Tables 7–8，PDF p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1d5e3032209e6232:E06",
+   "claim": "论文未训练或评测自动摘要系统，未给出附属人工/自动摘要的数量，也未给出训练/测试划分；作为评测集使用需另行定义。",
+   "locator": "全文；§1，PDF p.2；§3，PDF p.7",
+   "basis": "inference",
+   "basis_note": "数字来自原文；关于用途、粒度与缺失信息的判断为阅读者分析，正文已标注。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

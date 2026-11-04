@@ -1,0 +1,422 @@
+[
+  {
+    "title": "Semantic Operators and Their Optimization: Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS",
+    "url": "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf",
+    "year": 2025,
+    "venue": "PVLDB",
+    "topic": "semantic-operator-model",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf",
+      "papers/literature/2026-10-14/semantic/pdfs/lotus.pdf",
+      "§1–8，pp.4171–4182；表1–7、图1–7；另核对参考文献。关键实验页4179已渲染检查。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/Semantic Operators and Their Optimization- Enabling LLM-Based Data Processing with Accuracy Guarantees in LOTUS-PVLDB-2025",
+    "first_submitted": "2024/07/16",
+    "checked_on": "2026-10-14",
+    "pdf_sha256": "865382441d7ca488c4da4670f233fd1e9b78532d9a4f12cc018d4a58d40f6298"
+  },
+  {
+    "title": "A Declarative System for Optimizing AI Workloads",
+    "url": "https://arxiv.org/abs/2405.14696v2",
+    "year": 2024,
+    "venue": "arXiv",
+    "topic": "semantic operators / optimizer",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "arXiv2405.14696v2，2024-05-29；全文§1–7，pp.1–20，附录pp.27–29程序与物理计划；表2所在p.18渲染核对。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/A Declarative System for Optimizing AI Workloads-arXiv-2024",
+    "first_submitted": "2024/05/23",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing",
+    "url": "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+    "year": 2025,
+    "venue": "PVLDB",
+    "topic": "agentic-document-rewriting",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+      "papers/literature/2026-10-14/semantic/pdfs/docetl.pdf",
+      "PVLDB18(9):3035–3048；§1–7、表1–6、图1–5；实验页3043已渲染检查。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/DocETL- Agentic Query Rewriting and Evaluation for Complex Document Processing-PVLDB-2025",
+    "first_submitted": "2024/10/16",
+    "checked_on": "2026-10-14",
+    "pdf_sha256": "be1cc8f31d9dda3fbdbeda59e6d7152f8b071aa63a75baec33e359b6a8500794"
+  },
+  {
+    "title": "Abacus: A Cost-Based Optimizer for Semantic Operator Systems",
+    "url": "https://arxiv.org/abs/2505.14661v3",
+    "year": 2026,
+    "venue": "PVLDB",
+    "topic": "constrained-physical-optimization",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "https://arxiv.org/abs/2505.14661v3",
+      "papers/literature/2026-10-14/semantic/pdfs/abacus.pdf",
+      "v3，2026-02-03，PVLDB19(5):1060–1073；§1–7及表1–3、图1–8，表2所在PDF第9页已渲染检查。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/Abacus- A Cost-Based Optimizer for Semantic Operator Systems-PVLDB-2026",
+    "first_submitted": "2025/05/20",
+    "checked_on": "2026-10-14",
+    "pdf_sha256": "dfd6f4a2588c25a9ce30335f86ed32dcfd449f11ba81321b667751bac46866fb"
+  },
+  {
+    "title": "QUEST: Query Optimization in Unstructured Document Analysis",
+    "url": "https://arxiv.org/abs/2507.06515v2",
+    "year": 2025,
+    "venue": "PVLDB",
+    "topic": "instance-optimized-extraction",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "https://arxiv.org/abs/2507.06515v2",
+      "papers/literature/2026-10-14/semantic/pdfs/quest.pdf",
+      "arXiv2507.06515v2，2025-07-11；§1–6，表1–3、图1–8；表2–3所在PDF第11页已渲染检查。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/QUEST- Query Optimization in Unstructured Document Analysis-arXiv-2025",
+    "first_submitted": "2025/07/09",
+    "checked_on": "2026-10-14",
+    "pdf_sha256": "c0bf85e7ceab02ff197cec9ecf27ca685fcf37153be234364b2be383110e8bed",
+    "publication_url": "https://www.vldb.org/pvldb/vol18/p4560-chai.pdf"
+  },
+  {
+    "title": "CAESURA: Language Models as Multi-Modal Query Planners",
+    "url": "https://arxiv.org/abs/2308.03424",
+    "year": 2023,
+    "venue": "arXiv",
+    "topic": "multimodal-query-planning",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2308.03424",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2023/08/07",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Sema: A High-performance System for LLM-based Semantic Query Processing",
+    "url": "https://arxiv.org/abs/2603.11622",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "adaptive-semantic-sql",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2603.11622",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2026/03/12",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "PLOP: Cost-Based Placement of Semantic Operators in Hybrid Query Plans",
+    "url": "https://arxiv.org/abs/2604.09944",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "hybrid-operator-placement",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2604.09944",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2026/04/10",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "BlendSQL: A Scalable Dialect for Unifying Hybrid Question Answering in Relational Algebra",
+    "url": "https://arxiv.org/abs/2402.17882",
+    "year": 2024,
+    "venue": "arXiv",
+    "topic": "hybrid-question-answering",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2402.17882",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2024/02/27",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "The Design of an LLM-powered Unstructured Analytics System",
+    "url": "https://arxiv.org/abs/2409.00847",
+    "year": 2025,
+    "venue": "CIDR",
+    "topic": "unstructured-analytics-system",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2409.00847",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2024/09/01",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "UQE: A Query Engine for Unstructured Databases",
+    "url": "https://arxiv.org/abs/2407.09522",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "topic": "unstructured-query-engine",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2407.09522",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2024/06/23",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "When Plans Change Answers: Formalizing Cost-Accuracy Optimization for Semantic Queries",
+    "url": "https://arxiv.org/abs/2610.08089",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "output-quality-semantics",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2610.08089",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2026/10/06",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "From Interpretation to Compilation: A Compilation-Based Execution Engine for Semantic Operator Systems",
+    "url": "https://arxiv.org/abs/2608.06677",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "compiled-semantic-execution",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2608.06677",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2026/08/07",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Larch: Learned Query Optimization for Semantic Predicates",
+    "url": "https://arxiv.org/abs/2606.07923",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "learned-predicate-ordering",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2606.07923",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2026/06/06",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Towards Accurate and Efficient Document Analytics with Large Language Models",
+    "url": "https://arxiv.org/abs/2405.04674",
+    "year": 2024,
+    "venue": "arXiv",
+    "topic": "document-analytics",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2405.04674",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2024/05/07",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Implementing Semantic Join Operators Efficiently",
+    "url": "https://arxiv.org/abs/2510.08489",
+    "year": 2025,
+    "venue": "arXiv",
+    "topic": "batched-semantic-join",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2510.08489",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2025/10/09",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Querying Large Language Models with SQL",
+    "url": "https://arxiv.org/abs/2304.00472",
+    "year": 2023,
+    "venue": "arXiv",
+    "topic": "llm-as-database",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2304.00472",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2023/04/02",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Optimizing LLM Queries in Relational Data Analytics Workloads",
+    "url": "https://arxiv.org/abs/2403.05821",
+    "year": 2025,
+    "venue": "MLSys",
+    "topic": "kv-cache-batch-analytics",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2403.05821",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2024/03/09",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Beyond Relational: Semantic-Aware Multi-Modal Analytics with LLM-Native Query Optimization",
+    "url": "https://arxiv.org/abs/2511.19830",
+    "year": 2025,
+    "venue": "arXiv",
+    "topic": "agentic-logical-optimization",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2511.19830",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2025/11/25",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Featurized-Decomposition Join: Low-Cost Semantic Joins with Guarantees",
+    "url": "https://arxiv.org/abs/2512.05399",
+    "year": 2025,
+    "venue": "arXiv",
+    "topic": "semantic-join-decomposition",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2512.05399",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2025/12/05",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Beyond Quacking: Deep Integration of Language Models and RAG into DuckDB",
+    "url": "https://arxiv.org/abs/2504.01157",
+    "year": 2025,
+    "venue": "PVLDB",
+    "topic": "in-database-llm-functions",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2504.01157",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2025/04/01",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Language Models Enable Simple Systems for Generating Structured Views of Heterogeneous Data Lakes",
+    "url": "https://arxiv.org/abs/2304.09433",
+    "year": 2023,
+    "venue": "arXiv",
+    "topic": "schema-extraction",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2304.09433",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2023/04/19",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Multi-Objective Agentic Rewrites for Unstructured Data Processing",
+    "url": "https://arxiv.org/abs/2512.02289",
+    "year": 2025,
+    "venue": "arXiv",
+    "topic": "multiobjective-agentic-rewrites",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://arxiv.org/abs/2512.02289",
+      "papers/literature/2026-10-14/semantic/metadata.json"
+    ],
+    "review_folder": null,
+    "first_submitted": "2025/12/02",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "SemBench: A Benchmark for Semantic Query Processing Engines",
+    "url": "https://arxiv.org/abs/2511.01716v2",
+    "year": 2026,
+    "venue": "PVLDB",
+    "topic": "semantic operators / benchmark",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "arXiv2511.01716v2，2026-03-16；全文§1–6、表1–5、图1，PDF pp.1–12；p.7表2–3渲染核对。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/SemBench- A Benchmark for Semantic Query Processing Engines-PVLDB-2026",
+    "first_submitted": "2025/11/03",
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "ThalamusDB: Approximate Query Processing on Multi-Modal Data",
+    "url": "https://doi.org/10.1145/3654989",
+    "year": 2024,
+    "venue": "PACMMOD",
+    "topic": "approximate-multimodal-query-processing",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://github.com/itrummer/thalamusdb",
+      "https://par.nsf.gov/servlets/purl/10577787"
+    ],
+    "review_folder": null,
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Aero: Adaptive Query Processing of ML Queries",
+    "url": "https://doi.org/10.1145/3725408",
+    "year": 2025,
+    "venue": "PACMMOD",
+    "topic": "adaptive-ml-query-processing",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://faculty.cc.gatech.edu/~jarulraj/pages/research.html",
+      "https://faculty.cc.gatech.edu/~jarulraj/pages/code.html"
+    ],
+    "review_folder": null,
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Semantic Integrity Constraints: Declarative Guardrails for AI-Augmented Data Processing Systems",
+    "url": "https://www.vldb.org/pvldb/vol18/p4073-lee.pdf",
+    "year": 2025,
+    "venue": "PVLDB",
+    "topic": "semantic-output-constraints",
+    "reading_status": "abstract_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p4073-lee.pdf"
+    ],
+    "review_folder": null,
+    "checked_on": "2026-10-14"
+  },
+  {
+    "title": "Unstructured Data Analysis using LLMs: A Comprehensive Benchmark",
+    "url": "https://arxiv.org/abs/2510.27119v1",
+    "year": 2025,
+    "venue": "arXiv",
+    "topic": "semantic operators / benchmark",
+    "reading_status": "full_text_reviewed",
+    "evidence": [
+      "arXiv2510.27119v1，2025-10-31；全文§1–6，pp.1–13，表1–4、图1–14；p.10表3–4渲染核对。PDF提及的附录未包含在本下载版本，未声称读过。"
+    ],
+    "review_folder": "papers/literature/2026-10-14/semantic/reviews/Unstructured Data Analysis using LLMs- A Comprehensive Benchmark-arXiv-2025"
+  }
+]

@@ -1,0 +1,66 @@
+{
+ "id": "swb_06f927e345ab3cc8",
+ "url": "https://arxiv.org/abs/2602.18193",
+ "title": "BLM-Guard: Explainable Multimodal Ad Moderation with Chain-of-Thought and Policy-Aligned Rewards",
+ "version": "arXiv:2602.18193v2（2026-02-23），9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2602.18193",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_06f927e345ab3cc8.pdf",
+ "sha256": "849d209256410e544a724e8ea849126a521138f35064a398202d14e46cc70218",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/swb_06f927e345ab3cc8",
+ "note": "papers/readings/notes/swb_06f927e345ab3cc8/README.md",
+ "read_sections": {
+  "problem": "Introduction、Task Definition，PDF pp.1–2",
+  "method": "Methodology、Algorithm 1，PDF pp.2–5",
+  "evaluation": "Experiments、Tables 1–2、Figure 3，PDF pp.6–7",
+  "limitations": "原文无独立局限章节；阅读者根据 pp.2、6–7 整理"
+ },
+ "evidence": [
+  {
+   "id": "swb_06f927e345ab3cc8:E01",
+   "claim": "广告审核需按平台政策做细粒度合规检查，违规常以夸大宣传或模态不一致（如字幕与语音不符）出现；现有规则过滤与通用 VLM 在跨模态因果推理、政策漂移适应和任务化推理上不足。",
+   "locator": "Introduction，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_06f927e345ab3cc8:E02",
+   "claim": "任务：给定由画面与 ASR 组成的视频和政策集合，对每条政策判断是否违规并生成推理链（场景识别→违规类型→规则匹配→决定）；数据为 5–45 秒商业广告，标签为严重度、场景、违规类型三级。",
+   "locator": "Task Definition、Data Construction，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_06f927e345ab3cc8:E03",
+   "claim": "冷启动用 CLIP 风险提示相似度选 3 个关键帧、InternViT-6B 选显著区域、InternVL-3-78B 多步生成 ICoT 数据做规则锚定 SFT；RL 阶段奖励为规则正确性（场景、类型各 0.5）+ 格式 + SCA-R 裁判评分，采用 token 级归一化与动态采样的 GRPO。",
+   "locator": "Methodology、Algorithm 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_06f927e345ab3cc8:E04",
+   "claim": "自建基准上 BLM-Guard 的 w-Acc 0.962、s-Acc 0.914、风险类 F1 0.969、一致性 0.845，骨干 Qwen2.5-VL-7B 分别为 0.712、0.701、0.680、0.642；消融中加入 SCA-R 使 s-Acc 从 0.801 升至 0.914。",
+   "locator": "Tables 1–2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_06f927e345ab3cc8:E05",
+   "claim": "正文没有给出基准的视频数量、类别分布或训练/测试划分，仅消融提到 13k 与 5k 的 SFT 规模；外部五个数据集的结果只有热图、没有数值表。",
+   "locator": "Data Construction，p.2；Datasets，p.6；Table 2，p.7",
+   "basis": "inference",
+   "basis_note": "依据为在全文中未找到相应信息，属阅读者对缺失项的判断。"
+  },
+  {
+   "id": "swb_06f927e345ab3cc8:E06",
+   "claim": "Table 1 标题称 BLM-Guard 在所有指标上最强，但其无害类召回 NR(B)=0.781 低于 InternVL3-14B 的 0.931；基线均未在该数据上微调，比较不对等；原文没有局限章节。",
+   "locator": "Table 1，PDF p.7",
+   "basis": "inference",
+   "basis_note": "数值取自 Table 1；标题与表格不符及比较不对等为阅读者分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

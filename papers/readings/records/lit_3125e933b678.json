@@ -1,0 +1,71 @@
+{
+ "id": "lit_3125e933b678",
+ "url": "https://arxiv.org/abs/2312.00326",
+ "title": "Qiang, Wang, Taylor — Agent-OM: Leveraging LLM Agents for Ontology Matching",
+ "version": "arXiv:2312.00326v30（2026-10-19），PVLDB 18(3):516–529 正文 14 页，含附录共 35 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2312.00326v30",
+ "retrieved_at": "2026-11-04T05:33:54.502194+00:00",
+ "fulltext": "papers/readings/fulltext/lit_3125e933b678.pdf",
+ "sha256": "89a44905b5a14487c29f89dca354b38a5d198044a2cdf17457f79581f413f942",
+ "format": "pdf",
+ "pages": 35,
+ "note_directory": "papers/readings/notes/lit_3125e933b678",
+ "note": "papers/readings/notes/lit_3125e933b678/README.md",
+ "read_sections": {
+  "problem": "§1–§2，pp.1–3",
+  "method": "§3、§4（Figure 1、Tables 1–3），pp.3–7",
+  "evaluation": "§5–§6（Figures 3–12），pp.7–11；Figure 9 已渲染核对",
+  "limitations": "§7–§9，pp.11–12"
+ },
+ "evidence": [
+  {
+   "id": "lit_3125e933b678:E01",
+   "claim": "问题定义为两本体间类与属性的等价对齐，排除个体与包含关系；输入为源/目标本体，输出为实体对集合。",
+   "locator": "§1、§3，pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3125e933b678:E02",
+   "claim": "框架由检索智能体与匹配智能体组成，共享 PostgreSQL+pgvector 混合库；匹配用三路向量检索+RRF+LLM 是/否验证+双向合并。",
+   "locator": "§3–§4，Tables 2–3，pp.3–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3125e933b678:E03",
+   "claim": "主实验用 gpt-4o、threshold=0.90、top@k=3、单次运行；Conference F1 在 2022/2023 分别排 3/13、5/12，Anatomy 非平凡对应仅次于 Matcha。",
+   "locator": "§5.2，pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3125e933b678:E04",
+   "claim": "CMT-ConfOf 上 token 消耗：Agent-OM 2.7×10^5、LLM-Only 6.4×10^5、LLM-with-Context 4.7×10^6。",
+   "locator": "Figure 9，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3125e933b678:E05",
+   "claim": "验证器与合并一般提高 P 与 F1、略降 R，作者承认当前超参下验证器提升不显著；推荐 T∈[0.90,0.95]、k∈[3,5]。",
+   "locator": "§6.1.5–6.2，pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3125e933b678:E06",
+   "claim": "仅评测 TBox，未评测 ABox；提示手工编写；Agent-OM 未实际参加 OAEI 2022/2023。",
+   "locator": "§7–§8、致谢，pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_3125e933b678:E07",
+   "claim": "新意主要是已有技术（RAG、RRF、自检、双向一致）的系统组合；单次运行且主结果多为排名，'显著提升'幅度难以复核。",
+   "locator": "§4–§6，pp.4–11",
+   "basis": "inference",
+   "basis_note": "阅读者依据方法描述与评测报告方式所作评价，非原文陈述。"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

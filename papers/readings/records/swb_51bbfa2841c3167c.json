@@ -1,0 +1,65 @@
+{
+ "id": "swb_51bbfa2841c3167c",
+ "url": "https://aclanthology.org/2024.lrec-main.1054",
+ "title": "Rogers et al. — NarrativeTime: Dense Temporal Annotation on a Timeline",
+ "version": "LREC-COLING 2024，pp.12053–12073，ACL Anthology 2024.lrec-main.1054，21 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.lrec-main.1054.pdf",
+ "retrieved_at": "2026-11-04T05:52:15+00:00",
+ "fulltext": "papers/readings/fulltext/swb_51bbfa2841c3167c.pdf",
+ "sha256": "198ff53ee0eeb0b4781bcd8a2326f2926ef372b2f5953a1457d85371689bb5bd",
+ "format": "pdf",
+ "pages": 21,
+ "note_directory": "papers/readings/notes/swb_51bbfa2841c3167c",
+ "note": "papers/readings/notes/swb_51bbfa2841c3167c/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2、Table 1，PDF pp.1–3",
+  "method": "§3、附录 B，PDF pp.3–6、15–16",
+  "evaluation": "§4（Tables 3–4、Figs 7–8）、§5（Table 5）、附录 C，PDF pp.6–9、16",
+  "limitations": "§5 末、§6、附录 B–C，PDF pp.9、15–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_51bbfa2841c3167c:E01",
+   "claim": "NarrativeTime 让标注者把事件放到整篇文本的时间线上，并以有界/无界事件类型、时间线分支、事实性三种机制处理欠指定，再确定性地转换为 TimeML tlink。",
+   "locator": "§3、附录 B，PDF pp.3–6、15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51bbfa2841c3167c:E02",
+   "claim": "TimeBankNT 重标 TimeBank-Dense 的 36 篇文档（1,715 事件、289 timex），两套独立标注各含 102,313 个 tlink（不含逆关系）。",
+   "locator": "§1 脚注 2、§4，PDF pp.1、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51bbfa2841c3167c:E03",
+   "claim": "tlink/(事件+timex) 密度为 51.05，MAVEN-ERE 为 9.43，TimeBank-Dense 为 7.40。",
+   "locator": "§4、Table 4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51bbfa2841c3167c:E04",
+   "claim": "事件顺序 IAA 为 Krippendorff α 0.68，事实性 α 0.83，事件类型 α 0.62。",
+   "locator": "§4、Table 3，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51bbfa2841c3167c:E05",
+   "claim": "LongT5 XL 宏平均 F1 0.31，人类对人类 0.57；训练 30 篇、测试 6 篇。",
+   "locator": "§5、Table 5，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_51bbfa2841c3167c:E06",
+   "claim": "正文 tlink 总数（每位标注者 207,496）与脚注 2（含逆关系 204,626）不一致，分支一致率 Table 3 为 0.92 而脚注 11 为 0.98，原文均未解释。",
+   "locator": "§1 脚注 2、§4、Table 3 脚注 11，PDF pp.1、7–8",
+   "basis": "inference",
+   "basis_note": "差异由阅读者比对原文不同位置的数字得出。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

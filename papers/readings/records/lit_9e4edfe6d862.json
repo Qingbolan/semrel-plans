@@ -1,0 +1,65 @@
+{
+ "id": "lit_9e4edfe6d862",
+ "url": "https://arxiv.org/abs/2606.02497",
+ "title": "Liao et al. — Bridging the Last Mile of Time Series Forecasting with LLM Agents",
+ "version": "arXiv:2606.02497v1（2026-06-01），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.02497",
+ "retrieved_at": "2026-11-04T04:51:47.288379+00:00",
+ "fulltext": "papers/readings/fulltext/lit_9e4edfe6d862.pdf",
+ "sha256": "df81fb2800c6535a80ef91c4b20df40bf28aa5cc11a8aaa0f41bac7ef771d5e5",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_9e4edfe6d862",
+ "note": "papers/readings/notes/lit_9e4edfe6d862/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–3",
+  "method": "§4（Tables 1–2、Figs.1–2）、附录 B，PDF pp.3–5、9–11",
+  "evaluation": "§5、Tables 3–5、附录 A（Table 6）与附录 C，PDF pp.5–7、9–14",
+  "limitations": "§7，PDF p.7"
+ },
+ "evidence": [
+  {
+   "id": "lit_9e4edfe6d862:E01",
+   "claim": "运营场景中统计基线很少是最终预测，需依据节假日、促销、外部事件、历史类比与专家意见修订；作者把这一阶段定义为 last-mile forecasting，并要求修订过程可控、可审计，而不是让 LLM 直接自由输出替代序列。",
+   "locator": "Abstract、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4edfe6d862:E02",
+   "claim": "问题形式化为工作表 W_t=(X, F_base, F_t, E_t, A_t) 上的受约束序列修订：工具动作只更新证据，修订动作经有限算子（初始化、区间乘/加/截断、日期覆写、修订列表合并）改 F_t；历史与基线不可变，输出为 (F_final, 动作轨迹)。",
+   "locator": "§3 式(1)–(6)、§4.2–4.3、Tables 1–2，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4edfe6d862:E03",
+   "claim": "评估数据是一条匿名化（未公开常数线性缩放）的国内航线日票量序列，2024-01-01 至 2026-05-05 共 856 个值；三个案例分别为 23 天春节时域、126 天四节假日时域和三个 7 天非事件窗口。",
+   "locator": "§5.2、附录 A、Table 6，PDF pp.5、9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4edfe6d862:E04",
+   "claim": "春节窗口 MAE：Prophet 507.28、TimesFM 857.28、本框架 101.59；MAPE 155.95%、262.76%、32.84%。126 天长时域全程 MAPE 18.91%，MAE 185.72 与 Prophet 182.92 相当，四个节假日窗口均最低。",
+   "locator": "Tables 3–4，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9e4edfe6d862:E05",
+   "claim": "自我改进实验中 W2 有记忆 MAE 176.19 略差于无记忆 172.03，W3 有记忆 60.10 优于无记忆 92.94；全部结果来自单条序列的单次运行，文中未说明所用 LLM，因此不足以支持一般性精度结论。",
+   "locator": "§5.5、Table 5、§5.1，PDF pp.5–7",
+   "basis": "inference",
+   "basis_note": "事实及页码来自原文；阅读者对其含义、局限或项目迁移的分析已在正文中标明。"
+  },
+  {
+   "id": "lit_9e4edfe6d862:E06",
+   "claim": "原文局限：重形式化与系统设计、缺少大规模实证与专门的 last-mile 基准；目前只用结构化文本和日历情境；外部证据检索可靠性受来源限制。",
+   "locator": "§7，PDF p.7",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

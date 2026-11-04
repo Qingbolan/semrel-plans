@@ -1,0 +1,102 @@
+[
+  {
+    "id": "sharc",
+    "source_url": "https://aclanthology.org/D18-1233.pdf",
+    "final_url": "https://aclanthology.org/D18-1233.pdf",
+    "fulltext": "papers/readings/fulltext/sharc.pdf",
+    "sha256": "14771b77bc4dcedc53da34a9257807f242636b8a95e512305f4c79cda6c1cbd5",
+    "pages": 11,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:07.319139+08:00"
+  },
+  {
+    "id": "cail2018",
+    "source_url": "https://arxiv.org/pdf/1807.02478",
+    "final_url": "https://arxiv.org/pdf/1807.02478",
+    "fulltext": "papers/readings/fulltext/cail2018.pdf",
+    "sha256": "2665fdc1ec3ab33192a933480e5fe329b07b948f690d47400882772e00b2137b",
+    "pages": 4,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:06.157166+08:00"
+  },
+  {
+    "id": "cail2018-overview",
+    "source_url": "https://arxiv.org/pdf/1810.05851",
+    "final_url": "https://arxiv.org/pdf/1810.05851",
+    "fulltext": "papers/readings/fulltext/cail2018-overview.pdf",
+    "sha256": "8e3f378bfb9ced5253a754525e824b69d688c9aeaae112663959180bf2ddf3f0",
+    "pages": 6,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:06.160996+08:00"
+  },
+  {
+    "id": "casie",
+    "source_url": "https://ebiquity.umbc.edu/get/a/publication/1312.pdf",
+    "final_url": "https://ebiquity.umbc.edu/_file_directory_/papers/1312.pdf",
+    "fulltext": "papers/readings/fulltext/casie.pdf",
+    "sha256": "df8a1770b6e909f1da7eaff34f9401b3a7b011964dbf31d5c6c0acfdfb433571",
+    "pages": 9,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:14.153880+08:00"
+  },
+  {
+    "id": "chemu-ref",
+    "source_url": "https://aclanthology.org/2021.eacl-main.116.pdf",
+    "final_url": "https://aclanthology.org/2021.eacl-main.116.pdf",
+    "fulltext": "papers/readings/fulltext/chemu-ref.pdf",
+    "sha256": "f2bb7196d19dc262ee9b3d4aa00ebe6a849c3f3a37b73454a34f639e7b8f34a5",
+    "pages": 14,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:07.320830+08:00"
+  },
+  {
+    "id": "stac",
+    "source_url": "https://aclanthology.org/L16-1432.pdf",
+    "final_url": "https://aclanthology.org/L16-1432.pdf",
+    "fulltext": "papers/readings/fulltext/stac.pdf",
+    "sha256": "42e229acb95baf4503593e374b502b0afd07f252a440ee9295e9f00e73521f3a",
+    "pages": 7,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:08.383785+08:00"
+  },
+  {
+    "id": "parseme12",
+    "source_url": "https://aclanthology.org/2020.mwe-1.14.pdf",
+    "final_url": "https://aclanthology.org/2020.mwe-1.14.pdf",
+    "fulltext": "papers/readings/fulltext/parseme12.pdf",
+    "sha256": "f9a42df5bf50755051e19ee2e472da4d69056393db59094c838cf9ed2dbf5385",
+    "pages": 12,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:08.355336+08:00"
+  },
+  {
+    "id": "maven-ere",
+    "source_url": "https://arxiv.org/pdf/2211.07342",
+    "final_url": "https://arxiv.org/pdf/2211.07342",
+    "fulltext": "papers/readings/fulltext/maven-ere.pdf",
+    "sha256": "ff5a8d6e6c8b09db92a09cf205054ebc6996fafb11aa169d9aa6dee1c2ce257a",
+    "pages": 16,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:07.640073+08:00"
+  },
+  {
+    "id": "framenet",
+    "source_url": "https://aclanthology.org/P98-1013.pdf",
+    "final_url": "https://aclanthology.org/P98-1013.pdf",
+    "fulltext": "papers/readings/fulltext/framenet.pdf",
+    "sha256": "aec7d61fa76c8cde29473a00a3ce9e7af0d8116ee44834158a5186271f00c56a",
+    "pages": 5,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:09.507477+08:00"
+  },
+  {
+    "id": "deeppcb",
+    "source_url": "https://arxiv.org/pdf/1902.06197",
+    "final_url": "https://arxiv.org/pdf/1902.06197",
+    "fulltext": "papers/readings/fulltext/deeppcb.pdf",
+    "sha256": "0ccaa125d5cbfb8845ef22c1a2811275d98554ed37e64b5d819341181484fb96",
+    "pages": 5,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T13:50:08.147076+08:00"
+  }
+]

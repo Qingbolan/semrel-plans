@@ -1,0 +1,65 @@
+{
+ "id": "swb_b410a3525b400c9e",
+ "url": "https://arxiv.org/abs/2505.11613",
+ "title": "MedGUIDE: Benchmarking Clinical Decision-Making in Large Language Models",
+ "version": "arXiv:2505.11613v1（2025-05-16），28 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2505.11613",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_b410a3525b400c9e.pdf",
+ "sha256": "28ee60bd0fbd909803546d08b378059586c83fd496b75ac465ba5fef12b91532",
+ "format": "pdf",
+ "pages": 28,
+ "note_directory": "papers/readings/notes/swb_b410a3525b400c9e",
+ "note": "papers/readings/notes/swb_b410a3525b400c9e/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–4",
+  "method": "§3.2–3.3、Figure 1–2、Table 1，PDF pp.3–6；附录 E、J，PDF pp.18–20、27–28",
+  "evaluation": "§4–§5、Figures 4–6，PDF pp.6–9；附录 Table 3–4、H，PDF pp.21–24",
+  "limitations": "附录 B，PDF p.17"
+ },
+ "evidence": [
+  {
+   "id": "swb_b410a3525b400c9e:E01",
+   "claim": "MedGUIDE 由 17 种癌症的 55 棵 NCCN 决策树生成：枚举根-叶路径，多个 LLM 据路径写患者情境，选项为同树全部叶节点，正确答案为源路径叶节点，共 16,000 题。",
+   "locator": "§3.1–3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b410a3525b400c9e:E02",
+   "claim": "6 位专家按 5 项临床标准标注 500 题并训练 Qwen2.5-7B 5 头奖励模型，通用质量由 4 个 LLM 平均评分；保留 10 项最小分 >2 且平均 >3 的题，得 7,747 题。",
+   "locator": "§3.3，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b410a3525b400c9e:E03",
+   "claim": "25 个模型中 GPT-4.1 最好（准确率 0.6439、加权 0.6254），Meditron-7B 最低（0.1701/0.1458），医学专用模型普遍落后。",
+   "locator": "§4.3，PDF p.7；附录 Table 3，PDF p.21",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b410a3525b400c9e:E04",
+   "claim": "MedGUIDE 与 MMLU-ProMed 的 Spearman ρ=0.85，与 IFEval ρ=0.71。",
+   "locator": "§4.4，PDF p.8；Figure 8，PDF p.23",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b410a3525b400c9e:E05",
+   "claim": "把 JSON 指南树放入上下文后多数模型提升，如 GPT-4.1 准确率 0.6439→0.7746，Meditron-70B 加权准确率 +102%；继续预训练多数仅小幅提升。",
+   "locator": "§5，PDF pp.8–9；Table 4，PDF p.24",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b410a3525b400c9e:E06",
+   "claim": "Figure 1 称 8 开源/12 闭源而 §4.1 列 8 闭源/12 开源；公式 (4) 在已归一化权重后再除以 |D*|；Figure 2 示例题干已写出拟给三氧化二砷巩固，与正确选项重合，存在泄露风险。",
+   "locator": "Figure 1–2，PDF pp.3、5；§4.1–4.2，PDF p.7",
+   "basis": "inference",
+   "basis_note": "图文与公式内容来自原文；不一致与泄露风险判断为阅读者分析。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

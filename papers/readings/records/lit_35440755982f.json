@@ -1,0 +1,71 @@
+{
+ "id": "lit_35440755982f",
+ "url": "https://arxiv.org/abs/2607.14386",
+ "title": "Heuillet & Peddiraju — CIPHER: A Decoupled Exploration-Selection Framework for Test-Time Scaling of Data Science Agents",
+ "version": "arXiv:2607.14386v2（2026-10-26），17 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2607.14386",
+ "retrieved_at": "2026-11-04T04:51:47.288379+00:00",
+ "fulltext": "papers/readings/fulltext/lit_35440755982f.pdf",
+ "sha256": "07d6f6f84d4fc788e8e1462842f210339c37e37ee5d3ed80fb6d9292424e3d3c",
+ "format": "pdf",
+ "pages": 17,
+ "note_directory": "papers/readings/notes/lit_35440755982f",
+ "note": "papers/readings/notes/lit_35440755982f/README.md",
+ "read_sections": {
+  "problem": "§1、附录 B，PDF pp.1–2、8–9",
+  "method": "§2–3、Algorithm 1、附录 C，PDF pp.2–4、10–11",
+  "evaluation": "§4、Tables 1–3、附录 D（Tables 5–9），PDF pp.4–5、11–17",
+  "limitations": "附录 F，PDF p.14"
+ },
+ "evidence": [
+  {
+   "id": "lit_35440755982f:E01",
+   "claim": "现有分析 agent（DataWise、Agent-Poirot）只沿单一初始计划执行，易受级联错误影响；且以往 agent 只在封闭或开放任务之一上评测。",
+   "locator": "Abstract、§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_35440755982f:E02",
+   "claim": "DES 框架先生成 N 个候选计划、选 M<N 个并行执行（Feature agent、最多 3 轮的代码修复循环、Finalizer），再由 self 或 leader 聚合器汇总；生成有 ensemble/base/conditional，选择有 random/MaxEnt/clustering/goal-align。",
+   "locator": "§2–3、Algorithm 1、附录 C，PDF pp.2–4、10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_35440755982f:E03",
+   "claim": "评测在 Infi-DA-Bench 257 题（官方规则函数）与 InsightBench 100 题、428 条真值洞察（Claude Opus 4.6 评审）上进行，模型为 Claude 4.5 Haiku 与 DeepSeek-V3.2，N=10、M∈{3,5}，48 个配置点 × 3 种子。",
+   "locator": "§4、附录 B–C，PDF pp.4、8–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_35440755982f:E04",
+   "claim": "Ensemble 生成较 Base 提升 +3.36pp（CI [2.86, 3.85]），其中 Infi +6.44、InsightBench +0.29；leader 聚合 +0.46pp（p=0.018）；选择策略与随机选择无实质差别（最大为 MaxEnt +0.44pp，p=0.040）。",
+   "locator": "Table 1、§4.1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_35440755982f:E05",
+   "claim": "参考配置（Ensemble+Random、M=5、leader）与专用基线比较：Infi 上 Haiku 83.40 vs DataWise 84.18、DeepSeek 81.58 vs 82.75；InsightBench 上 Haiku 55.14 vs Agent-Poirot 54.05、DeepSeek 48.60 vs 49.84。",
+   "locator": "Table 3、§4.2，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_35440755982f:E06",
+   "claim": "实验结论表明 DES 新增的选择环节几乎无收益，增益主要来自双提示多样化生成与更大执行预算；正文所说 single-plan agent 的 76.5 与 Table 2 中 M=5 的 Base+Random 吻合，未报告 CIPHER(1,1) 准确率，口径无法确认。",
+   "locator": "§4.1–4.2、Table 2、附录 D，PDF pp.4–5、11",
+   "basis": "inference",
+   "basis_note": "事实及页码来自原文；阅读者对其含义、局限或项目迁移的分析已在正文中标明。"
+  },
+  {
+   "id": "lit_35440755982f:E07",
+   "claim": "原文局限：选择不利用 token 级概率；候选一次性生成而非按失败自适应扩充；只在数据科学任务上验证。",
+   "locator": "附录 F，PDF p.14",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "swb_4832f78592aff59a",
+ "url": "https://arxiv.org/abs/2507.14201",
+ "title": "Wu et al. — ExCyTIn-Bench: Evaluating LLM agents on Cyber Threat Investigation",
+ "version": "arXiv:2507.14201v3（2026-05-01，ICML 2026 / PMLR 306），44 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2507.14201v3",
+ "retrieved_at": "2026-11-04T05:40:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_4832f78592aff59a.pdf",
+ "sha256": "252c46e6e40ae22b9c8abe4df6d3046e0fe6bbf1f8a46947b25d7671dfe3304c",
+ "format": "pdf",
+ "pages": 44,
+ "note_directory": "papers/readings/notes/swb_4832f78592aff59a",
+ "note": "papers/readings/notes/swb_4832f78592aff59a/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–3",
+  "method": "§3.1–3.3、Algorithms 1–3，附录 C、D，PDF pp.3–5、13–17",
+  "evaluation": "§4.1–4.3、Tables 2–4，附录 E.2–E.4、Tables 5–8，PDF pp.6–8、14–19",
+  "limitations": "§4.3、Broader Impacts、C.5、E.3，PDF pp.8–9、15、19"
+ },
+ "evidence": [
+  {
+   "id": "swb_4832f78592aff59a:E01",
+   "claim": "基准来自虚构 Azure 租户 Alpine Ski House 的 57 张安全日志表与 8 条模拟攻击链，共生成 7,542 道问题，其中测试集 589 道（Table 1 各事件 11–100 道）。",
+   "locator": "§1、§3.1–3.2、Table 1，PDF pp.2–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4832f78592aff59a:E02",
+   "claim": "问题由告警—实体二部图生成：取两告警为起止点，起点告警与 k=2 个最远实体作背景，终点告警相连的一个实体作答案，最短路径用于生成分步解法。",
+   "locator": "§3.2、Algorithms 1、3，PDF pp.4–5、16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4832f78592aff59a:E03",
+   "claim": "答案正确得 1；否则按解法路径倒序以 γ=0.4 衰减累加命中中间步骤的分数；主实验用 GPT-4o 作评审，温度 0，最多 25 步。",
+   "locator": "§3.3、Algorithm 2、§4.1、E.2，PDF pp.5–6、17",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4832f78592aff59a:E04",
+   "claim": "Table 2 中 Claude-Opus-4.5 平均奖励 0.606 最高，GPT-5.1 0.582，GPT-4o 0.293，Phi-4-14B 0.085。",
+   "locator": "Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4832f78592aff59a:E05",
+   "claim": "GPT-4o 消融：每事件原始+告警 0.260、仅原始 0.213、仅告警 0.459；全历史分别为 0.248、0.184、0.382。",
+   "locator": "§4.3、Table 4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4832f78592aff59a:E06",
+   "claim": "人工核查 163 个 LLM 评审结果未见分歧，但作者表示不能据此断定评审完美。",
+   "locator": "C.5、Table 6，PDF p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4832f78592aff59a:E07",
+   "claim": "正文口径不一：引言称 59 张表，§3.1/C.4 为 57 张，Table 5 全量日志为 61 张；§3.1 称时间段 2 小时至 5 天而 Table 1 以分钟计最短 11；D.2 与 D.3 对选择重叠分数最高/最低的划分说法相反；E.3 称留出事件 28、34 但报告 34、38 的数值。",
+   "locator": "§1、§3.1、Tables 1、5、附录 C.4、D.2–D.3、E.3，PDF pp.2–4、14–17、19",
+   "basis": "inference",
+   "basis_note": "各处数字与表述均来自原文；判断其相互矛盾为阅读者比对所得。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

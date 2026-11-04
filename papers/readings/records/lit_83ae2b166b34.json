@@ -1,0 +1,65 @@
+{
+ "id": "lit_83ae2b166b34",
+ "url": "https://aclanthology.org/2024.emnlp-industry.13.pdf",
+ "title": "Saad-Falcon et al. — PDFTriage: Question Answering over Long, Structured Documents",
+ "version": "EMNLP 2024 Industry Track，pp.153–169，17 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.emnlp-industry.13.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_83ae2b166b34.pdf",
+ "sha256": "0e097ce70a849dbd4840edc79d1dd8d2607512cc0d9751243a20df0058b33f19",
+ "format": "pdf",
+ "pages": 17,
+ "note_directory": "papers/readings/notes/lit_83ae2b166b34",
+ "note": "papers/readings/notes/lit_83ae2b166b34/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1，PDF pp.1–2",
+  "method": "§3.1–3.3、Figure 1，PDF pp.3–4；附录 B.5、Tables 6–7，p.17",
+  "evaluation": "§4–6、Tables 1–2，PDF pp.4–6；附录 A–B、Figure 3，pp.9–17",
+  "limitations": "无单独局限章节；§7 Future Work & Conclusions，p.6；附录 B.2–B.3，p.14"
+ },
+ "evidence": [
+  {
+   "id": "lit_83ae2b166b34:E01",
+   "claim": "把结构化文档当纯文本块检索，与用户对页、表格、章节的认知不符，导致“总结第 5–7 页”“表 3 中哪年收入最高”这类问题失败。",
+   "locator": "Abstract、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_83ae2b166b34:E02",
+   "claim": "PDFTriage 用 Adobe PDF Extract API 生成章节、页、表、图的 JSON 元数据，再由 gpt-35-turbo-0613 通过函数调用（fetch_pages、fetch_sections、fetch_figure、fetch_table、retrieve）逐轮取回上下文并回答。",
+   "locator": "§3.1–3.3，PDF pp.3–4；附录 B.5、Table 6，p.17",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_83ae2b166b34:E03",
+   "claim": "评测集经 Mechanical Turk 按 10 类分层收集，共 82 篇文档、908 个问题（简单 393、中等 144、困难 266、不确定 105），文档平均 4,257 token；文本问题 26.2%、抽取 21.2%、结构问题 3.7%、跨页 1.1%。",
+   "locator": "§4、Table 1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_83ae2b166b34:E04",
+   "claim": "12 名 Upwork 标注者排序时，PDFTriage 被排第一占 50.8%，按页检索 27.1%，按块检索 22.1%；Table 2 中 PDFTriage 准确性 3.8、总体质量 3.9，清晰度 2.0 低于两基线。",
+   "locator": "§6.1–6.2、Table 2，PDF p.6；Figure 3，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_83ae2b166b34:E05",
+   "claim": "gpt-3.5-turbo 自动评分与人工总体质量 kappa 0.067、Pearson 0.19；PDFTriage 人工分与取回上下文长度 Pearson 0.062。",
+   "locator": "附录 B.2–B.3，PDF p.14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_83ae2b166b34:E06",
+   "claim": "论文内部不一致：文档/问题数在摘要（80/900+）、§1（90+/约 900）与 Table 1（82/908）间不同；§6.1 称偏好按块胜过按页而 Figure 3 相反；§6.3 称 PDFTriage 取回 1,568 token 却又说多于基线的 3,611/3,934；B.2 称 GPT-4 评测但实际用 gpt-3.5-turbo；§1 预告的局限章节不存在。",
+   "locator": "Abstract、§1、§6.1、§6.3、§7，PDF pp.1–6；Figure 3，p.10；附录 B.2，p.14",
+   "basis": "inference",
+   "basis_note": "各处数值与表述均取自原文，不一致由阅读者比对发现，原文未解释。"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

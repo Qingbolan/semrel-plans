@@ -10,11 +10,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class PaperTests(unittest.TestCase):
     def test_snapshot_and_usecases(self):
-        manifest = json.loads((ROOT / 'Survey/manifest.json').read_text())
+        manifest = json.loads((ROOT / 'papers/survey/manifest.json').read_text())
         self.assertTrue(manifest)
         self.assertEqual(len(manifest), len({p['folder'] for p in manifest}))
         for paper in manifest:
-            folder = ROOT / 'Survey' / paper['folder']
+            folder = ROOT / 'papers/survey' / paper['folder']
             for filename, digest in paper['sha256'].items():
                 self.assertEqual(digest, hashlib.sha256((folder / filename).read_bytes()).hexdigest())
             for filename in SECTIONS.values():
@@ -27,8 +27,8 @@ class PaperTests(unittest.TestCase):
                 self.assertIn(case, workload)
 
     def test_benchmark_retains_evaluation_evidence(self):
-        for entry in json.loads((ROOT / 'Survey/manifest.json').read_text()):
-            workload = (ROOT / 'Survey' / entry['folder'] / 'workload分析.md').read_text()
+        for entry in json.loads((ROOT / 'papers/survey/manifest.json').read_text()):
+            workload = (ROOT / 'papers/survey' / entry['folder'] / 'workload分析.md').read_text()
             benchmark = PaperExporter.benchmark(workload)
             self.assertTrue(benchmark.startswith('# Benchmark'))
             case = PaperExporter.usecase(workload)
@@ -48,7 +48,7 @@ class PaperTests(unittest.TestCase):
     def test_dedicated_reading_sections(self):
         records = PaperExporter(ROOT).export()
         eddies = next(p for p in records if p['title'].startswith('Eddies:'))
-        folder = ROOT / 'Survey' / eddies['folder']
+        folder = ROOT / 'papers/survey' / eddies['folder']
         self.assertEqual((folder / 'usecase分析.md').read_text(), eddies['usecase'])
         self.assertEqual((folder / 'benchmark分析.md').read_text(), eddies['sections']['benchmark'])
         self.assertNotEqual(eddies['sections']['benchmark'], eddies['sections']['workload'])

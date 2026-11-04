@@ -1,0 +1,65 @@
+{
+ "id": "swb_1bf94aedd5b19570",
+ "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content",
+ "title": "Fazekas, Tóth & King — An Objective Corruption Risk Index Using Public Procurement Data",
+ "version": "剑桥大学知识库作者稿（匿名化，无作者署名），65 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_1bf94aedd5b19570.pdf",
+ "sha256": "5f7593a045af72199a41b7ab1848ad9b514b4995eb4c139fb5c46be7c7da60d6",
+ "format": "pdf",
+ "pages": 65,
+ "note_directory": "papers/readings/notes/swb_1bf94aedd5b19570",
+ "note": "papers/readings/notes/swb_1bf94aedd5b19570/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，PDF pp.1–6",
+  "method": "§3、§5–6.1，Tables 1–5，PDF pp.7–38",
+  "evaluation": "§6.2，Figures 2–4，Table 6，PDF pp.39–44；附录 E，pp.56–57",
+  "limitations": "§3.2、§4、§5.1，PDF pp.10–16"
+ },
+ "evidence": [
+  {
+   "id": "swb_1bf94aedd5b19570:E01",
+   "claim": "感知调查、制度审查和个案审计都不能提供可跨国、跨时期比较的可靠腐败指标；作者希望构建只基于客观行为数据、可复制的大型腐败指标。",
+   "locator": "§1–2，PDF pp.2–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1bf94aedd5b19570:E02",
+   "claim": "数据为 2009–2012 年匈牙利依法进行的全部公共采购公告，经爬虫抓取与文本挖掘结构化，超过 53,000 份合同、超过 110 亿欧元；只覆盖法定门槛以上的采购。",
+   "locator": "§4，PDF pp.11–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1bf94aedd5b19570:E03",
+   "claim": "CRI 是合同级的加权和 Σ w_j·CI_j，取值 0–1；三个结果指标为单一投标、仅一份有效标和中标方 12 个月份额；从 30 个候选输入中保留 14 个，最终 13 个组件。",
+   "locator": "§3.2、§5，Tables 1–2、5，PDF pp.10–18、35–38",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1bf94aedd5b19570:E04",
+   "claim": "回归只用于至少 3 个中标方的市场和至少授标 3 份的发包方；样本 N=52,390/42,607/20,653，显著性用 200 次置换检验。",
+   "locator": "§6.1，Table 4，PDF pp.23–32",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1bf94aedd5b19570:E05",
+   "claim": "外部效度：高利润率企业 CRI 比低利润率企业高 0.024；价格比与 CRI 相关 0.14；政治关联企业高 0.01；避税地注册企业高约 0.02。",
+   "locator": "§6.2，Figures 2–4，PDF pp.39–44",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_1bf94aedd5b19570:E06",
+   "claim": "权重规则半主观（组件权重 1、类别按排名 1/0.75/0.5…，再除以 13 和 0.805）；正文所称 R² 0.1–0.2 与 Table 4 的 0.243 不符，招标公告修改的权重时段（2012 年 5 月前 vs 2010-05-01 前）和 CPV 层级也前后不一。",
+   "locator": "§6.1，Tables 4–5，PDF pp.28、31–38",
+   "basis": "inference",
+   "basis_note": "不一致之处由阅读者对照正文与表格发现；作者归属（Fazekas、Tóth、King）由阅读者根据自引推断。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_5b7ccb242d590dce",
+ "url": "https://arxiv.org/abs/1805.01217",
+ "title": "Lippi et al. — CLAUDETTE: an Automated Detector of Potentially Unfair Clauses in Online Terms of Service",
+ "version": "arXiv:1805.01217v2（2019-02-18，Artificial Intelligence and Law 论文预印本），18 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/1805.01217v2",
+ "retrieved_at": "2026-11-04T05:42:31.106833+00:00",
+ "fulltext": "papers/readings/fulltext/swb_5b7ccb242d590dce.pdf",
+ "sha256": "ddc1371f174cb6cd1443bf53da04acb77d16f1a4e0c654ffca83a0053cace1fc",
+ "format": "pdf",
+ "pages": 18,
+ "note_directory": "papers/readings/notes/swb_5b7ccb242d590dce",
+ "note": "papers/readings/notes/swb_5b7ccb242d590dce/README.md",
+ "read_sections": {
+  "problem": "§1–§2，PDF pp.1–4",
+  "method": "§3–§4，PDF pp.5–12",
+  "evaluation": "§5、Tables 2–4，PDF pp.9–15",
+  "limitations": "§2 p.4、§5 p.14、§8 pp.16–17"
+ },
+ "evidence": [
+  {
+   "id": "swb_5b7ccb242d590dce:E01",
+   "claim": "消费者很少阅读 ToS；欧盟 93/13 指令下的抽象公平性审查资源有限；本文自动化律师工作中的第二步（在文档中挖掘可能不公平条款）。",
+   "locator": "§1–§2，PDF pp.1–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5b7ccb242d590dce:E02",
+   "claim": "定义 8 类可能不公平条款（仲裁、单方变更、内容删除、管辖、法律选择、责任限制、单方终止、使用即同意），以 XML 标签加 1/2/3 级公平程度标注，嵌套标签表示多类。",
+   "locator": "§2 p.3；§3.1、Table 1，pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5b7ccb242d590dce:E03",
+   "claim": "50 份 ToS 共 12,011 句，1,032 句（8.6%）为正类；去掉少于 5 词的句子后实验集为 9,414 句，正类 11.0%。",
+   "locator": "§3.2 p.9；§5 p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5b7ccb242d590dce:E04",
+   "claim": "留一文档交叉验证下，集成模型 C8 的 P/R/F1=0.828/0.798/0.806，8 个类别 SVM 组合 C2 为 0.806/0.779/0.784，CNN 与 LSTM 的 F1 分别为 0.722 和 0.698。",
+   "locator": "§5、Table 3，PDF pp.12–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5b7ccb242d590dce:E05",
+   "claim": "类别分类任务中各类 F1 介于 0.745（内容删除）与 0.970（管辖）之间；网页服务部署的是 C2 而非集成模型。",
+   "locator": "Table 4 p.15；§6 p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5b7ccb242d590dce:E06",
+   "claim": "Table 2 各类条款数之和为 1,137，多于 1,032 个正类句子；结论称召回超过 80%，而集成召回为 0.798；Table 4 中仲裁与单方变更三项指标完全相同。",
+   "locator": "Tables 2–4，PDF pp.10–15；§8 p.17",
+   "basis": "inference",
+   "basis_note": "数值来自原文表格；加总与不一致之处为阅读者计算与分析。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

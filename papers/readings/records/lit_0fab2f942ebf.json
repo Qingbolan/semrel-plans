@@ -1,0 +1,71 @@
+{
+ "id": "lit_0fab2f942ebf",
+ "url": "https://arxiv.org/abs/2506.12339",
+ "title": "Chen, Cheng et al. — SheetMind: Actions Set Accuracy, Agents Set the Failure Mode",
+ "version": "arXiv 2506.12339v3（2026-09-24），5 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2506.12339v3",
+ "retrieved_at": "2026-11-04T05:18:37.696220+00:00",
+ "fulltext": "papers/readings/fulltext/lit_0fab2f942ebf.pdf",
+ "sha256": "2241f78e048326b16e056d80ffa4d350df4f6dafe1b48ef55e397807618a9dba",
+ "format": "pdf",
+ "pages": 5,
+ "note_directory": "papers/readings/notes/lit_0fab2f942ebf",
+ "note": "papers/readings/notes/lit_0fab2f942ebf/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–§2，pp.1–2",
+  "method": "§3、Algorithm 1、Fig.1，pp.1–2",
+  "evaluation": "§4–§5、Table 1–2、Fig.2–3，pp.3–4",
+  "limitations": "无独立局限章节；§4 统计功效说明与 Table 1 注释，p.3"
+ },
+ "evidence": [
+  {
+   "id": "lit_0fab2f942ebf:E01",
+   "claim": "SheetMind 由 Manager、Action Agent（每轮对约 30 个高层操作 API 发出一个类型化调用）与 Reflection Agent（按 A/B/C 判定单步）组成，工作簿每轮从磁盘重读。",
+   "locator": "§3、Algorithm 1，p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0fab2f942ebf:E02",
+   "claim": "评测使用 SCB-221 全部 221 个任务（109 单步、112 多步），Pass@1 由官方检查器的 openpyxl 移植版计算，变体间用精确 McNemar 检验。",
+   "locator": "§4，p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0fab2f942ebf:E03",
+   "claim": "GPT-5-mini 下把高层 API 换成 8 个原始操作损失 47.1 点（p<10⁻⁴），低于不做修改的 9.0% 基线；Reflection +4.5（p=0.013），Manager +1.4（p=0.678），二者合计 +3.2（p=0.118）。",
+   "locator": "§5.1–5.2、Table 2，pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0fab2f942ebf:E04",
+   "claim": "Manager 把静默错误比例从 33.0% 降到 24.9%（p=0.010），主要转为可检测失败而非通过；Pivot Table 类别上分解有害（−7.7）。",
+   "locator": "§5.2、Table 2，p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0fab2f942ebf:E05",
+   "claim": "子任务级反思在 571 次判定中 76% 为否定，导致 39% 子任务不终止；步级反思仅 4% 否定、2% 重复动作。",
+   "locator": "§5.2，p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0fab2f942ebf:E06",
+   "claim": "全系统 Pass@1：GPT-5 61.1%、GPT-5-mini 58.4%（差异 p=0.146）、GPT-3.5 42.1%、Llama-3.1-70B 29.0%；GPT-4.1 仅在 20 题子集上测试。",
+   "locator": "Table 1、Fig.2、§5.3，pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_0fab2f942ebf:E07",
+   "claim": "结论\"动作抽象层级比智能体数量更重要\"仅在 SCB-221 单基准上验证，跨系统 Table 1 因执行后端不同只是定位而非排名。",
+   "locator": "§2、§5，pp.2–3",
+   "basis": "inference",
+   "basis_note": "单基准限制为阅读者分析；\"定位而非排名\"为原文表述。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

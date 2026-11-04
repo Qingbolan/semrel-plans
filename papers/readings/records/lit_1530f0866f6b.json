@@ -1,0 +1,71 @@
+{
+ "id": "lit_1530f0866f6b",
+ "url": "https://arxiv.org/abs/2508.03404",
+ "title": "Yu, Xu et al. — Visual Document Understanding and Reasoning: A Multi-Agent Collaboration Framework with Agent-Wise Adaptive Test-Time Scaling",
+ "version": "arXiv:2508.03404v2（2025-11-14），10 页；该版本正文引用的附录 7–8 与 Tab. 8 未随 PDF 提供（v1 为 15 页含附录，未作为本次证据）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2508.03404v2",
+ "retrieved_at": "2026-11-04T05:15:47Z",
+ "fulltext": "papers/readings/fulltext/lit_1530f0866f6b.pdf",
+ "sha256": "8c5449119489a7e9b3e80b6a8e874e1283026cdc5f812d7dd4b51cbc773ec531",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "papers/readings/notes/lit_1530f0866f6b",
+ "note": "papers/readings/notes/lit_1530f0866f6b/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1，pp.1–2",
+  "method": "§2.1–2.3、Algorithm 1、Figures 2–3，pp.2–5",
+  "evaluation": "§3–4、Tables 1–5、Figure 4，pp.5–8",
+  "limitations": "无独立局限节；§4.2 关于修正次数的讨论，p.8；v2 缺附录"
+ },
+ "evidence": [
+  {
+   "id": "lit_1530f0866f6b:E01",
+   "claim": "作者认为对文档 VQA，单纯扩大 VLM 参数的“整体扩展”收益递减，原因是文档分析需要分步的过程性推理、多种技能导致“认知过载”、以及缺少自我校正使小的抽取错误层层放大。",
+   "locator": "Abstract、§1、Figure 1，pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1530f0866f6b:E02",
+   "claim": "MACT 由规划、执行、判断、作答四个智能体组成：判断智能体只判定计划或执行过程是否出错并把错误描述路由回规划或执行智能体，不自己修正；最多修正 Nc=3 次。",
+   "locator": "§2.1、Algorithm 1、Figure 3，pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1530f0866f6b:E03",
+   "claim": "智能体级自适应测试时扩展：规划智能体生成 Np 条并行计划；执行智能体每步生成 Ne 个候选并用奖励模型选最优；判断智能体用 budget forcing 强制最少思考 token；作答智能体不做扩展。训练为 SFT 加 GRPO，过程奖励用 VisualPRM，结果奖励用 Skywork-VL-Reward，并加全局奖励。",
+   "locator": "§2.2–2.3、§3.1，pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1530f0866f6b:E04",
+   "claim": "评测 15 个基准（10 个文档类：DocVQA、DUDE、SlideVQA、MMLongBench-Doc、VisualMRC、InfographicVQA、ChartQA、CharXiv、TableVQA-Bench、TableBench；5 个非文档类），使用原测试集，多数基准由 GPT-4o 作为评判模型。",
+   "locator": "§3.2–3.3，pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1530f0866f6b:E05",
+   "claim": "三个变体平均分为 MACT-Qwen2.5-VL-24B 74.8、MACT-MiMo-VL-28B 77.2、MACT-InternVL3-28B 75.3，相对各自基模型提升 10.3、9.9、11.5 点；闭源最好的 Gemini-2.0-Pro 为 71.3，InternVL3-78B 为 71.6。",
+   "locator": "§4.1、Table 1，pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1530f0866f6b:E06",
+   "claim": "消融（MACT-Qwen 变体）：完整 74.8，单体模型 66.2，单智能体统一流程 58.6，去掉自适应扩展 71.1，去掉混合奖励 71.4；自适应扩展比并行/顺序/混合/内部扩展至少高 1.8 点。",
+   "locator": "§4.2、Tables 2–4，pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1530f0866f6b:E07",
+   "claim": "比较不是算力对等的：MACT 是 4 个经 SFT+RL 训练的模型组合并在测试时多路采样（Np、Ne 最高到 16），而对比的基模型和大模型是单次推理；论文未报告 token、延迟或 GPU 成本，主实验的 Np/Ne 取值在 v2 正文中也未给出。",
+   "locator": "§2.2、§3.1、Figure 4b，pp.4–6、8",
+   "basis": "inference",
+   "basis_note": "训练与采样设置来自原文；“非算力对等”及缺少成本报告是阅读者分析。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

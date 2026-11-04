@@ -1,0 +1,71 @@
+{
+ "id": "swb_4db68a774a2144f2",
+ "url": "https://arxiv.org/abs/2608.02680",
+ "title": "El Yadouni & Li — TraceCompiler: Skill-Guided Mining and Compilation of LLM Agent Traces into Mostly Deterministic Workflows",
+ "version": "arXiv:2608.02680v1 [cs.SE]（2026-08-03），17 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2608.02680",
+ "retrieved_at": "2026-11-04T05:59:19+00:00",
+ "fulltext": "papers/readings/fulltext/swb_4db68a774a2144f2.pdf",
+ "sha256": "9b6fb98e52df81b661faf8c8f16db666f845cc57f1678699b92cbce06b982681",
+ "format": "pdf",
+ "pages": 17,
+ "note_directory": "papers/readings/notes/swb_4db68a774a2144f2",
+ "note": "papers/readings/notes/swb_4db68a774a2144f2/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–3",
+  "method": "§3.1–3.5、§4，PDF pp.3–5",
+  "evaluation": "§5–6、Tables 1–5、Figures 2–4，PDF pp.4–11",
+  "limitations": "§6.3、§6.5–6.6、§7，PDF pp.7–12"
+ },
+ "evidence": [
+  {
+   "id": "swb_4db68a774a2144f2:E01",
+   "claim": "只有当消费者参数值可追溯到生产者输出、且用户话语、静态上下文、schema 默认值和其他更早调用都被排除时，才承认硬边 a→b；每条硬边附带证据元组，存在替代来源时降级为 suspected，不施加顺序约束。",
+   "locator": "§3.3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4db68a774a2144f2:E02",
+   "claim": "T1 仅使用训练划分 3,375 段对话（15 个训练模板），共 15,775 条去重 def–use 边；机械化规则 P/R/F1 为 0.928/0.943/0.936，相邻对基线 F1 0.711，相邻候选的频次基线 F1 0.712。",
+   "locator": "§5、§6.5、Table 2，PDF pp.4–5、9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4db68a774a2144f2:E03",
+   "claim": "归因消融显示，在相同排除过滤下随机选择幸存者 P=0.403、最早幸存者 P=0.146；每个关系平均 8.2 个幸存者、零候选关系为 0。作者承认 T1 上起作用的是近因，排除过滤几乎为空操作。",
+   "locator": "§6.5、Table 3，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4db68a774a2144f2:E04",
+   "claim": "AppWorld 回放 168 条轨迹，得到 563 条 token 边，P=0.993、R=0.970；作者撤回其为“独立 ground truth”的说法，因为回放注入偏好同应用 token，与被测规则共享同一假设。",
+   "locator": "§6.6、Tables 4–5，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4db68a774a2144f2:E05",
+   "claim": "Venmo 意图三个实例的 34 次调用编译为 11 次运行时调用，留一执行通过 15/21 个状态测试（含手写参数解析脚手架）；Spotify/Todoist 意图因不可逆变更方向欠定而被拒绝编译。",
+   "locator": "§6.1、§6.3、Figures 2–4，PDF pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4db68a774a2144f2:E06",
+   "claim": "意图发现表（50 簇、纯度 0.930、ARI 0.235、NMI 0.668）不能从发布语料复现；LLM skill 盲测的 0.992 不可审计；没有报告离线编译成本和 56 个场景上的编译/拒绝率。",
+   "locator": "§6.3–6.5、§7，PDF pp.7–9、11",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_4db68a774a2144f2:E07",
+   "claim": "论文的核心实证支撑弱于其主张：真正检验排除纪律的只有一次不可复现、模型版本未记录的 LLM 运行；可复算的结果主要验证的是近因归因。",
+   "locator": "§5、§6.5，PDF pp.5、9–10",
+   "basis": "inference",
+   "basis_note": "综合原文 Table 3 消融与可复现性分层说明得出的阅读者判断。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

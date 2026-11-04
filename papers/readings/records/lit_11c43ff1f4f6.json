@@ -1,0 +1,66 @@
+{
+ "id": "lit_11c43ff1f4f6",
+ "url": "https://arxiv.org/abs/2303.16909",
+ "title": "Naeem et al. — RetClean: Retrieval-Based Data Cleaning Using LLMs and Data Lakes",
+ "version": "arXiv:2303.16909v2（2024-12-17，PVLDB 17(12) 演示论文版本），4 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2303.16909v2",
+ "retrieved_at": "2026-11-04T05:33:52.212480+00:00",
+ "fulltext": "papers/readings/fulltext/lit_11c43ff1f4f6.pdf",
+ "sha256": "3d34049da53bd1a90560717afd6f580b70953b76ee5d53b1474d3d310a6867f9",
+ "format": "pdf",
+ "pages": 4,
+ "note_directory": "papers/readings/notes/lit_11c43ff1f4f6",
+ "note": "papers/readings/notes/lit_11c43ff1f4f6/README.md",
+ "read_sections": {
+  "problem": "§1，PDF p.1",
+  "method": "§2、§4.1–4.4，PDF pp.2–4",
+  "evaluation": "§3、§4.5、Table 1，PDF pp.2–4",
+  "limitations": "无独立局限章节；§1 场景动机与 §4.5 结果讨论，PDF pp.1、4"
+ },
+ "evidence": [
+  {
+   "id": "lit_11c43ff1f4f6:E01",
+   "claim": "场景 1 用云端 LLM 依靠世界知识填补；场景 2 以用户数据湖做 RAG 并返回值来源；场景 3 用本地 3B–13B 模型处理隐私数据。",
+   "locator": "Abstract、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_11c43ff1f4f6:E02",
+   "claim": "检索模式先取 top-n（如 100）候选保证召回，再由 ColBERT 式重排得到 top-k（如 5）；Reasoner 对查询元组与每个候选成对判断是否同一实体并抽取值，m 个查询元组需 m·k 次 GPT-3.5 调用。",
+   "locator": "§2、§4.3–4.4，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_11c43ff1f4f6:E03",
+   "claim": "初步实验在 CP/AN/SM（各 100 元组）和 QP（18 元组）上评测，检索场景使用手工构建的 12 张表数据湖。",
+   "locator": "§4.5、Table 1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_11c43ff1f4f6:E04",
+   "claim": "Table 1：SM 上场景 1/2/3 为 27%/57%/74%；QP 上为 5%/94%/88%；CP 上三者为 97%/96%/97%。",
+   "locator": "Table 1，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_11c43ff1f4f6:E05",
+   "claim": "文本对语义索引实现的描述不一致（§2 为 Qdrant，§4.2 为 BERT 嵌入的 Faiss），且论文没有外部基线、模块消融和成本数据。",
+   "locator": "§2、§4.2、§4.5，PDF pp.2–4",
+   "basis": "inference",
+   "basis_note": "不一致处与缺失项为阅读者对照原文各节后的判断。"
+  },
+  {
+   "id": "lit_11c43ff1f4f6:E06",
+   "claim": "arXiv v2 的标题为 “Retrieval-Based Data Cleaning Using LLMs and Data Lakes”，与批次标题中的 “Foundation Models” 不同。",
+   "locator": "PDF p.1 标题与 arXiv 标识",
+   "basis": "inference",
+   "basis_note": "阅读者根据版本标题差异判断为同一 arXiv 条目的改名，未核对 v1。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

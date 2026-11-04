@@ -1,0 +1,71 @@
+{
+ "id": "swb_f535341f9a8ddf7c",
+ "url": "https://www.nature.com/articles/s41597-022-01521-0",
+ "title": "Dobbins et al. — The Leaf Clinical Trials Corpus: a new resource for query generation from clinical trial eligibility criteria",
+ "version": "Scientific Data 9:490（2022），15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.nature.com/articles/s41597-022-01521-0.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_f535341f9a8ddf7c.pdf",
+ "sha256": "dc6ae71363827a24ff83b23904c53e0d202fcd18be03229012f95d2bac948a0f",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "papers/readings/notes/swb_f535341f9a8ddf7c",
+ "note": "papers/readings/notes/swb_f535341f9a8ddf7c/README.md",
+ "read_sections": {
+  "problem": "摘要、Background & Summary、Table 1，PDF pp.1–2",
+  "method": "Methods（标注方案、与 Chia 比较、标注过程），PDF pp.2–9",
+  "evaluation": "Technical Validation、Tables 4–7，PDF pp.9–12",
+  "limitations": "Limitations、Future work，PDF pp.12–13"
+ },
+ "evidence": [
+  {
+   "id": "swb_f535341f9a8ddf7c:E01",
+   "claim": "招募受试者需要把自由文本入排标准转为病历库查询；已有图形化工具有学习成本且难以表达复杂时间/嵌套条件，已有语料规模小、领域窄、不公开或粒度不足。",
+   "locator": "Background & Summary，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f535341f9a8ddf7c:E02",
+   "claim": "LCT 含 1,006 份入排标准、105,816 个标注、50 类实体、51 类关系，平均每文档 105 个实体、49 个关系；对比 Chia 为 1,000 份、15/12 类、46/19。",
+   "locator": "Table 1，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f535341f9a8ddf7c:E03",
+   "claim": "文档从 ClinicalTrials.gov 随机抽取 1,020 份（2018 年起上传、文本≥50 字符），弃 14 份得 1,006 份；887 份单标注、119 份双标注，约一半由 NeuroNER 预标注后人工修正。",
+   "locator": "Annotation process，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f535341f9a8ddf7c:E04",
+   "claim": "标注者一致性（精确区间匹配 F1）实体 76.1%→78.1%、关系 60.3%→60.9%。",
+   "locator": "Technical Validation，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f535341f9a8ddf7c:E05",
+   "claim": "804/202 随机划分下，SciBERT 实体微平均 F1 81.3%，R-BERT+SciBERT 关系微平均 F1 85.2%；Death、Criteria-Count 等低频实体表现差。",
+   "locator": "Baseline prediction、Tables 5–6，PDF pp.10–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f535341f9a8ddf7c:E06",
+   "claim": "作者承认语料不含查询、也未量化语义表达能力，因此无法证明 LCT 能带来更准确的查询生成。",
+   "locator": "Limitations，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f535341f9a8ddf7c:E07",
+   "claim": "Table 6 中 Found-By 的 R-BERT 精确率 9.3 与 F1 75.4、召回 71.8 不相容，Abbrev-Of 的 F1 94.2 也与 P/R 92.3/93.1 不符，疑为排版错误。",
+   "locator": "Table 6，PDF p.12",
+   "basis": "inference",
+   "basis_note": "阅读者按 F1 公式核算原表数值得出。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "swb_b625878fd48a0f02",
+ "url": "https://arxiv.org/abs/2406.09105",
+ "title": "Lin, Lyu, Xu & Luo — INS-MMBench: A Comprehensive Benchmark for Evaluating LVLMs' Performance in Insurance",
+ "version": "arXiv:2406.09105v2（2025-08-07），12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2406.09105",
+ "retrieved_at": "2026-11-04T05:48:35.015811+00:00",
+ "fulltext": "papers/readings/fulltext/swb_b625878fd48a0f02.pdf",
+ "sha256": "bc32157f35ba612a2fe2775dca5b4ba17f542776c7b5d822b3591236a5c3a3af",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/swb_b625878fd48a0f02",
+ "note": "papers/readings/notes/swb_b625878fd48a0f02/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§3.1–3.2、Figures 2–3、Table 2，PDF pp.3–5",
+  "evaluation": "§4.1–4.4、Tables 3–7、Figure 4，PDF pp.5–8",
+  "limitations": "§5，PDF p.8"
+ },
+ "evidence": [
+  {
+   "id": "swb_b625878fd48a0f02:E01",
+   "claim": "INS-MMBench 覆盖车险、财产险、健康险、农业险，含 22 个基础任务、12 个元任务、5 个场景任务，共 12,052 张图像、10,372 个问题。",
+   "locator": "§1、§3.2、Table 2，PDF pp.2、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b625878fd48a0f02:E02",
+   "claim": "数据来自公开数据集；每任务最多抽样 500 个实例；基础任务为多选题，复杂标签用 GPT-4o 生成干扰项；场景任务为自由文本，由专家撰写分步参考答案。",
+   "locator": "§3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b625878fd48a0f02:E03",
+   "claim": "评测 11 个 LVLM（8 闭源、3 开源），GPT-4o 总体最高为 69.70；人类基线 60.45，基于 6 人回答的 220 题。",
+   "locator": "§4.1–4.2、Table 4，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b625878fd48a0f02:E04",
+   "claim": "场景任务只评前三名模型；只有农业险理赔超过 80%，事故责任认定的责任方识别仅 2.59–9.26%。",
+   "locator": "§4.2、Table 5，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b625878fd48a0f02:E05",
+   "claim": "缺乏保险知识/推理占 GPT-4o、Gemini 1.5 Flash、Qwen-VL-Max 错误的 59.5%、63.6%、57.2%；提示增强多数有效，但两个 Qwen 模型在车损严重程度上下降。",
+   "locator": "§4.3、Table 6、Figure 4，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b625878fd48a0f02:E06",
+   "claim": "文中部分概括与表格不完全一致：GPT-4o 财产险最终决定 51.00% 并非“低于 50%”；Table 7 车辆外观识别的波动超过 5 个百分点；Table 7 的原始值与 Table 3 不同。",
+   "locator": "§4.2、§4.4、Tables 3、5、7，PDF pp.6–8",
+   "basis": "inference",
+   "basis_note": "数值取自原表；差异由阅读者对照计算得出。"
+  },
+  {
+   "id": "swb_b625878fd48a0f02:E07",
+   "claim": "图像均来自公开数据集而非真实保险案例，作者在局限中承认存在偏差风险。",
+   "locator": "§5，PDF p.8",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

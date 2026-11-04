@@ -1,0 +1,65 @@
+{
+ "id": "swb_09382a48ead3f2c2",
+ "url": "https://arxiv.org/abs/2406.04687",
+ "title": "LogiCode: an LLM-Driven Framework for Logical Anomaly Detection",
+ "version": "arXiv:2406.04687v1（2024-06-07，标注为投稿 IEEE T-ASE），11 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2406.04687v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_09382a48ead3f2c2.pdf",
+ "sha256": "47be2e0f77593b1e08cbd8b2bd9f8de452bb2f429da37d83f65996e8437b2364",
+ "format": "pdf",
+ "pages": 11,
+ "note_directory": "papers/readings/notes/swb_09382a48ead3f2c2",
+ "note": "papers/readings/notes/swb_09382a48ead3f2c2/README.md",
+ "read_sections": {
+  "problem": "Abstract、§I–§II，PDF pp.1–3",
+  "method": "§III、Fig. 3、Table I，PDF pp.3–5；Table I 已渲染核对",
+  "evaluation": "§IV-A–C、Tables II–V，PDF pp.5–9；Tables III–V 已渲染核对",
+  "limitations": "§IV-D、§V，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "swb_09382a48ead3f2c2:E01",
+   "claim": "逻辑异常指各部件正常但组合违反高层语义约束；GCAD 类方法依赖全局一致性表示，难以识别顺序或规格错误，并且只输出分数而不解释原因。",
+   "locator": "§I–§II-B，Fig. 1–2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_09382a48ead3f2c2:E02",
+   "claim": "LogiCode 由 Code Prompt、Code Generation、Code Execution 三模块组成：专家从正常样本定义规则，GPT-4 将规则解析为逻辑表达式并选择 Image 类 API（find/locate/count/determin_color/size），合成可执行 Python 代码，输出布尔结果与原因。",
+   "locator": "§III、式 1–3、Table I，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_09382a48ead3f2c2:E03",
+   "claim": "LOCO-Annotations 含 2,908 张图像（训练 1,772、测试 1,136），5 个类别，测试集只标注逻辑异常，JSON 中有像素级对象分割与'异常类型：具体原因'，异常分为数量、尺寸、位置、匹配四类。",
+   "locator": "§IV-A、Fig. 5，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_09382a48ead3f2c2:E04",
+   "claim": "LogiCode 5 类平均准确率 0.989、召回率 1.000；Table III 中 EfficientAD-M 平均 0.852、GCLF 0.789。",
+   "locator": "§IV-C、Tables II–III，PDF pp.7–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_09382a48ead3f2c2:E05",
+   "claim": "GPT-4 代码生成平均成功率 0.590（错误 0.140、缺失 0.270）；推理准确率人工 0.963、GPT-4 自动 0.924，且只在成功执行的代码上统计。",
+   "locator": "§IV-C、Tables IV–V，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_09382a48ead3f2c2:E06",
+   "claim": "find() 从 LOCO-Annotations 读取对象位置且规则由专家定义，而对比方法为无监督方法，因此 Table III 不是同等条件比较；Table IV 中 screw bag 三项之和为 1.45，疑为排版错误。",
+   "locator": "Table I、§IV-C–D、Table IV，PDF pp.5、8–9",
+   "basis": "inference",
+   "basis_note": "API 依赖标注、使用额外数据和表格数值均来自原文；比较条件不对等与排版错误的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

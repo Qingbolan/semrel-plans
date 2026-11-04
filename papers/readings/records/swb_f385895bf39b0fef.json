@@ -1,0 +1,65 @@
+{
+ "id": "swb_f385895bf39b0fef",
+ "url": "https://aclanthology.org/2024.findings-naacl.172",
+ "title": "HateModerate: Testing Hate Speech Detectors against Content Moderation Policies",
+ "version": "Findings of NAACL 2024，pp.2691–2710，20 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.findings-naacl.172.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_f385895bf39b0fef.pdf",
+ "sha256": "f213003a0de90b5d711ee38ddce101c96c7cc1084cb679370a49d6e171cbb5dc",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "papers/readings/notes/swb_f385895bf39b0fef",
+ "note": "papers/readings/notes/swb_f385895bf39b0fef/README.md",
+ "read_sections": {
+  "problem": "§1、§2.2–2.3，PDF pp.1–4",
+  "method": "§3.1–3.4、Tables 1–2，PDF pp.4–6",
+  "evaluation": "§4.1–4.4、Tables 3–5、Figure 4，附录 A.5–A.8，PDF pp.6–9、15–16",
+  "limitations": "§6 Limitations、§7 Ethics，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "swb_f385895bf39b0fef:E01",
+   "claim": "HateModerate 按 Facebook 2022 年 11 月的 41 条仇恨言论准则构建，共 7,704 个样本：仇恨 4,796 个，非仇恨 2,908 个；每条政策 103–367 个样本。",
+   "locator": "§1、§3.3，PDF pp.1–2、5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f385895bf39b0fef:E02",
+   "claim": "构建分六步：人工检索、GPT-3 扩充、16 名标注者验证仇恨样本，用 ada-002 向量从 DynaHate 检索困难非仇恨样本、GPT-3 扩充、4 名标注者验证；Krippendorff's α 分别为 0.521 和 0.809。",
+   "locator": "§3.1–3.2、Table 2，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f385895bf39b0fef:E03",
+   "claim": "Table 3 显示越严重的层级仇恨失败率越低、非仇恨失败率越高；全样本平均失败率 OpenAI 0.29，Perspective 0.38，CardiffNLP 与 Facebook RoBERTa 均为 0.40。",
+   "locator": "§4.2、Table 3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f385895bf39b0fef:E04",
+   "claim": "一半数据加入 CardiffNLP 训练后，HateModerate 测试总体失败率从 .423 降至 .275，HateCheck 从 .365 降至 .199；但 HateCheck 非仇恨从 .205 升至 .229，HTPO 仇恨从 .526 升至 .661。",
+   "locator": "§4.3、Table 4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f385895bf39b0fef:E05",
+   "claim": "为防数据污染，测试折只保留不在被测模型训练数据中的新建样本，对 DynaHate 只保留第 2–4 轮扰动样本；50% 随机切分用于微调。",
+   "locator": "§4.1、附录 A.5，PDF pp.6、15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f385895bf39b0fef:E06",
+   "claim": "RQ4 中配对 t 检验 p=0.80/0.83 不显著，原文却称可以拒绝 HateModerate 引入更多偏差的零假设；不显著结果只能说明未检测到差异。另外 OpenAI 在 HateCheck 上的失败率为 .011，远低于 +HM 的 .199。",
+   "locator": "§4.4、Table 4，PDF pp.8–9",
+   "basis": "inference",
+   "basis_note": "原文已给出数值或事实；结论或对照为阅读者分析，原文未直接陈述。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

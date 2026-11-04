@@ -1,0 +1,71 @@
+{
+ "id": "lit_b169c31dd3f7",
+ "url": "https://arxiv.org/abs/2607.08093",
+ "title": "Leban, Saarinen & Sun — CausalDS: Benchmarking Causal Reasoning in Data-Science Agents",
+ "version": "arXiv:2607.08093v2（2026-10-14），74 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2607.08093v2",
+ "retrieved_at": "2026-11-04T04:52:08.877893+00:00",
+ "fulltext": "papers/readings/fulltext/lit_b169c31dd3f7.pdf",
+ "sha256": "83b730efff2ed3a1268d3cc04f995bba688ba9c46ad5b5b7e55e4ed287ec3063",
+ "format": "pdf",
+ "pages": 74,
+ "note_directory": "papers/readings/notes/lit_b169c31dd3f7",
+ "note": "papers/readings/notes/lit_b169c31dd3f7/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–2",
+  "method": "§3.1–3.8，PDF pp.3–5；App. A.9，pp.28–31",
+  "evaluation": "§4、Tables 1–2、Figs. 3–4，PDF pp.6–8；App. A.10、Table 17，pp.30–33",
+  "limitations": "App. A.17，PDF pp.60–61；App. A.18，p.61"
+ },
+ "evidence": [
+  {
+   "id": "lit_b169c31dd3f7:E01",
+   "claim": "现有基准要么是无真实数据分析的符号因果推理，要么是无因果生成结构的数据分析；基于已有数据集的基准有污染与 causal parrot 风险。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b169c31dd3f7:E02",
+   "claim": "每个 scene 包括采样的 SCM、生成的表格数据、与图一致的合成故事和任务；智能体只见公开目录，评分器用私有真值确定性评分；不可识别目标的正确答案为弃答。",
+   "locator": "§3、Fig. 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b169c31dd3f7:E03",
+   "claim": "观测层用带噪声测量束替代部分概念变量，每束只有一个概念父节点，不改变可识别性标签，只影响数值估计难度；分 clean/proxy/proxy_hard/proxy_severe。",
+   "locator": "§3.4，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b169c31dd3f7:E04",
+   "claim": "场景池 953 个；真实考试 100 题（51 题数据驱动），困难考试 200 题（167 题数据驱动，其中 88 题 proxy_severe）；困难考试抽样前剔除了 67 个触发 Claude Fable 5.1 安全拒答的场景。",
+   "locator": "§3.6、§4，PDF pp.4、6；App. A.10、Table 17，PDF pp.30、33",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b169c31dd3f7:E05",
+   "claim": "真实考试 GPT-6 Astra 以 CausalDSScore 0.2112 领先，困难考试 GLM 5.3 以 0.5591 领先，Astra 因区间估计较弱排第 4。",
+   "locator": "Tables 1–2、§4，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b169c31dd3f7:E06",
+   "claim": "结构恢复饱和但可识别性判断分化；名义 95% ATE 区间覆盖不足，约四分之三的未覆盖是中心正确但过窄；许多模型只对约一半不可识别目标弃答。",
+   "locator": "§4、§6，PDF pp.6–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b169c31dd3f7:E07",
+   "claim": "局限：场景全部合成、未做人类合理性评估；可识别性政策不认可部分识别等方法；单次考试抽样下真实考试第 2–7 名不可分；困难考试的拒答筛查可能对筛查所用模型有利。",
+   "locator": "App. A.17，PDF pp.60–61；App. A.10，p.30",
+   "basis": "inference",
+   "basis_note": "前三点为原文 A.17 所述；筛查可能对 Claude Fable 5.1 有利为阅读者推断。"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

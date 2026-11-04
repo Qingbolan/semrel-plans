@@ -12,10 +12,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 WORKSPACE = str(ROOT.parent) + '/'
-SCAN = ['config', 'query', 'backend', 'src', 'docs', 'Survey', 'research', 'environment', 'exports', 'data', 'tests', 'deploy', 'files', 'artifacts']
+SCAN = ['config', 'query', 'backend', 'src', 'docs', 'papers', 'environment', 'exports', 'data', 'tests', 'deploy', 'files', 'artifacts']
 SKIP = {'.git', 'node_modules', '__pycache__', 'source-inputs', 'eal'}
 # Verbatim upstream snapshots are hash-checked; paths inside them are historical text, never read.
-VERBATIM = ('query/imports/', 'query/source-snapshots/', 'research/2026-10-14/data-agents/evidence/', 'research/2026-10-14/data-agents/publisher-evidence/')
+VERBATIM = ('query/imports/', 'query/source-snapshots/', 'papers/literature/2026-10-14/data-agents/evidence/', 'papers/literature/2026-10-14/data-agents/publisher-evidence/')
 TEXT = {'.json', '.jsonl', '.md', '.py', '.js', '.mjs', '.cjs', '.jsx', '.txt', '.eal', '.yaml', '.yml', '.csv', '.html', '.toml', '.sql', ''}
 # Earlier localisation already placed these trees here; keep the layout so nothing is copied twice.
 ANCHORS = [('Awesome-Dymatic-Operator/chat/benchmark/8-17 data agent query and data/data/', 'data/source-inputs/8-17/'),

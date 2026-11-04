@@ -19,7 +19,7 @@ def main():
     def identity(url):
         url = canonical_url(url).replace('https://www.arxiv.org/', 'https://arxiv.org/')
         return identities['aliases'].get(url, url)
-    manifest = json.loads((ROOT/'Survey/manifest.json').read_text())
+    manifest = json.loads((ROOT/'papers/survey/manifest.json').read_text())
     types = json.loads((ROOT/'config/paper-types.json').read_text())
     existing = {}
     for entry in manifest:
@@ -78,7 +78,7 @@ def main():
     for row in rows:
         row['reading_status_label']=labels[row['reading_status']]
         types['lit_'+hashlib.sha256(identity(row['url']).encode()).hexdigest()[:12]]=row.get('kind','survey' if 'survey' in row['title'].lower() else 'benchmark' if 'bench' in row['title'].lower() else 'research')
-    for path,value in [(ROOT/'config/literature-catalog.json',rows),(ROOT/'Survey/manifest.json',manifest),(ROOT/'config/paper-types.json',types),(ROOT/'config/paper-identities.json',identities)]:
+    for path,value in [(ROOT/'config/literature-catalog.json',rows),(ROOT/'papers/survey/manifest.json',manifest),(ROOT/'config/paper-types.json',types),(ROOT/'config/paper-identities.json',identities)]:
         path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')
     report=['# Data Agent 与 Semantic Operator 文献检索','', '检索截止：2026-10-14。覆盖数据分析与数据科学 agent、数据准备和发现、数据库 agent、语义算子、查询编译与优化、相关基准及综述。按原文 URL 与已有论文身份表去重；预印本和正式版仍可能存在尚未确认的对应关系。','', '检索使用主题词、系统名、作者综述与引用链。外部清单仅用于发现，已核对条目以原始 arXiv/出版社元数据为依据；无法取得原文的线索单列。清单不声称覆盖所有尚未检索到的工作。原始查询数据不由文献摘要生成。','']
     from collections import Counter

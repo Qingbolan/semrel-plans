@@ -1,0 +1,71 @@
+{
+ "id": "lit_c4047998c6bf",
+ "url": "https://arxiv.org/abs/2506.07675",
+ "title": "Song et al. — QUITE: A Query Rewrite System Beyond Rules via LLM Agents",
+ "version": "arXiv:2506.07675v3（2026-01-02），14 页（含参考文献）；v3 标题为 “…Beyond Rules via LLM Agents”",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2506.07675v3",
+ "retrieved_at": "2026-11-04T05:18:46.234548+00:00",
+ "fulltext": "papers/readings/fulltext/lit_c4047998c6bf.pdf",
+ "sha256": "413bba4393a73621b4a91abf184366d0b8223334f0ae5c0294c3ad74fc7663f3",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_c4047998c6bf",
+ "note": "papers/readings/notes/lit_c4047998c6bf/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–4",
+  "method": "§3–6、Table 1–3、Algorithm 1，PDF pp.4–8",
+  "evaluation": "§7、Table 4–8、Fig. 6–10，PDF pp.9–12",
+  "limitations": "无独立局限章节；§1（面向长时 OLAP）、§5.2（等价回退）、§7.1（等价判定方式）、Table 8（改写开销），PDF pp.2–3、7、9、12"
+ },
+ "evidence": [
+  {
+   "id": "lit_c4047998c6bf:E01",
+   "claim": "规则式改写难以发现和验证新规则，固定规则无法覆盖新的或复杂的模式，部分策略（如用 CTE 共享子计划）不可表达为规则；直接用 LLM 则面临等价性与有效性两个挑战。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c4047998c6bf:E02",
+   "claim": "系统以 FSM 编排 MDP 推理智能体、改写智能体、助理智能体和决策智能体（推理、验证、决策、终止四阶段），迭代上限为 2；推理用 DeepSeek-R1，其余用 Claude-3.7-Sonnet，温度为 0。",
+   "locator": "§4、Table 1、§7.1，PDF pp.5–6、9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c4047998c6bf:E03",
+   "claim": "知识库从 3,432 个问答单元过滤出 241 个；混合校正器先用 SQLSolver，结果未知时再由 LLM 迭代校验，超时则退回原查询；提示库包括 HashJoin、NoNestLoop、NoMergeJoin、Rows 和新增的 NOT_MATERIALIZE。",
+   "locator": "§5–6、Table 2–3，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c4047998c6bf:E04",
+   "claim": "负载为 TPC-H 63 条（SF=10）、DSB 156 条（SF=10）、Calcite 58 条、LLM 生成的 StackOverflow-Math 43 条，运行于 PostgreSQL 14.13；超过 300 s 按 300 s 计；等价性通过比较执行结果判定。",
+   "locator": "§7.1，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c4047998c6bf:E05",
+   "claim": "QUITE★ 的平均延迟：TPC-H 25.60 s（原 69.84 s）、DSB 5.85 s（原 32.62 s）、Calcite 9.97 s（原 23.88 s）、StackOverflow 12.61 s（原 48.02 s），均低于所有基线；等价率分别为 100%、96.8%、98.3%、90.7%。",
+   "locator": "§7.2、Table 4，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c4047998c6bf:E06",
+   "claim": "TPC-H 的 63 条查询上，平均改写时间和成本为 QUITE 218.25 s / $0.200、LLM-R2 391.23 s / $0.016、R-Bot 118.33 s / $0.417。",
+   "locator": "§7.5、Table 8，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c4047998c6bf:E07",
+   "claim": "摘要的“最高 35.8%”、引言的“21.9%”与正文中相对 R-Bot 的 21.6% 口径不一致；SF=50 的 TPC-H 上 LLM-R2 降低 71.9%，略高于 QUITE 的 71.4%。",
+   "locator": "摘要、§1、§7.2，PDF pp.1–2、10",
+   "basis": "inference",
+   "basis_note": "各数字均来自原文；不一致之处由阅读者比对得出。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

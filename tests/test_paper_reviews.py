@@ -44,7 +44,7 @@ class PaperReviewTests(unittest.TestCase):
             self.publisher.apply(self.records)
 
     def test_queue_completion_matches_published_reviews(self):
-        queue = json.loads((ROOT / 'research/paper-completion/queue.json').read_text())['papers']
+        queue = json.loads((ROOT / 'papers/readings/queue.json').read_text())['papers']
         identity = self.publisher.identity
         published = {identity(e['url']) for e in self.publisher.entries}
         completed = {identity(e['url']) for e in queue if e['status'] in {'READ', 'EVIDENCE_CHECKED'}}

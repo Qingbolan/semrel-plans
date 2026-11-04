@@ -1,0 +1,71 @@
+{
+ "id": "lit_4c4d8c4c821b",
+ "url": "https://arxiv.org/abs/2312.01454",
+ "title": "Zhou et al. — D-Bot: Database Diagnosis System using Large Language Models",
+ "version": "arXiv:2312.01454v2（2023-12-06），15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2312.01454v2",
+ "retrieved_at": "2026-11-04T05:33:54.502194+00:00",
+ "fulltext": "papers/readings/fulltext/lit_4c4d8c4c821b.pdf",
+ "sha256": "8b8cf41c9d6937fb59b239d50ab195699268dc4db02306181e2800a7702bc4f3",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "papers/readings/notes/lit_4c4d8c4c821b",
+ "note": "papers/readings/notes/lit_4c4d8c4c821b/README.md",
+ "read_sections": {
+  "problem": "§1–§2（Figures 1–2），pp.1–4",
+  "method": "§3–§7（Figures 3–7、Algorithm 1），pp.4–9",
+  "evaluation": "§8（Tables 1–2、Figures 8–11），pp.9–12；Figures 8–9 与 Table 2 已渲染核对",
+  "limitations": "无专门章节；§2.2 脚注 3、§8.3–8.5，pp.3、10–12"
+ },
+ "evidence": [
+  {
+   "id": "lit_4c4d8c4c821b:E01",
+   "claim": "D-Bot 离线从文档抽取知识块并注册工具，在线用 BM25 匹配知识、微调 Sentence-BERT 匹配工具，树搜索加反思诊断，多专家异步协作与交叉评审。",
+   "locator": "§3–§7，pp.4–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c4d8c4c821b:E02",
+   "claim": "从 81 页文档抽取 188 个知识块。",
+   "locator": "§4.1.3，p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c4d8c4c821b:E03",
+   "claim": "微基准在 PostgreSQL 12.5 上覆盖 6 类应用、10 种根因、共 539 个异常；每类应用抽 10 个测试，其余训练 DNN/决策树。",
+   "locator": "Table 1、§8.1–8.3，pp.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c4d8c4c821b:E04",
+   "claim": "单根因 Acc：HumanDBA 0.955、D-Bot(GPT-4) 0.754、GPT-4 0.351；多根因 Acc：0.487、0.655、0.105。",
+   "locator": "Table 2，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c4d8c4c821b:E05",
+   "claim": "去掉知识准确率降 19.2%–64.1%，去掉树搜索降超过 35.85%；IoT 上多智能体 77.27% 对单 LLM 39.09%。",
+   "locator": "§8.4，p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c4d8c4c821b:E06",
+   "claim": "复合异常 k 诊断 5.38 分钟、约 40k token、约 1.8 美元；DBA 需 1–2 小时写报告。",
+   "locator": "§8.3，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_4c4d8c4c821b:E07",
+   "claim": "§7 称初始化 7 个专家，§8.1 称 8 个专家角色，存在不一致；测试仅 60 个模拟异常且只有一名 DBA 对照。",
+   "locator": "§7 p.8；§8.1 p.9；§8.3 p.9",
+   "basis": "inference",
+   "basis_note": "阅读者对原文两处数字及评测规模的比对。"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

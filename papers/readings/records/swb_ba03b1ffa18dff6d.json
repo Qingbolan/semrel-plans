@@ -1,0 +1,71 @@
+{
+ "id": "swb_ba03b1ffa18dff6d",
+ "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f53fd88a4340063ecd258c0ae9948b40-Abstract-Conference.html",
+ "title": "Wang et al. — Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding",
+ "version": "ICLR 2024 会议论文（proceedings 版 PDF），24 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f53fd88a4340063ecd258c0ae9948b40-Paper-Conference.pdf",
+ "retrieved_at": "2026-11-04T05:19:04+00:00",
+ "fulltext": "papers/readings/fulltext/swb_ba03b1ffa18dff6d.pdf",
+ "sha256": "662128476a8ea99d1055f437dd46e8ac7b8df8ebba19f096217b9ea42a3cc65c",
+ "format": "pdf",
+ "pages": 24,
+ "note_directory": "papers/readings/notes/swb_ba03b1ffa18dff6d",
+ "note": "papers/readings/notes/swb_ba03b1ffa18dff6d/README.md",
+ "read_sections": {
+  "problem": "§1、§3 Problem Formulation，PDF pp.1–4",
+  "method": "§3.1–3.4、Algorithm 1、Fig.2，PDF pp.4–5；附录 A.1，p.13",
+  "evaluation": "§4、Tables 1–4，PDF pp.5–9；附录 A.2、B、C、D，pp.13–16",
+  "limitations": "无独立局限章节；附录 A.1 末句、B（ROUGE 不敏感），pp.13–14"
+ },
+ "evidence": [
+  {
+   "id": "swb_ba03b1ffa18dff6d:E01",
+   "claim": "现有提示方法以自由文本或代码表示推理步骤，在复杂表格上失效；程序辅助方法只能在静态表上单次生成，Dater 的选行/选列分解是固定的。",
+   "locator": "§1–2，pp.1–4；Fig.1 p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ba03b1ffa18dff6d:E02",
+   "claim": "每个样本为 (T, Q, A)；算法循环执行 DynamicPlan 选操作、GenerateArgs 生成参数、程序执行得新表，直到生成 [E]，再由 Query(T, Q) 基于最终表作答。",
+   "locator": "§3、Algorithm 1，pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ba03b1ffa18dff6d:E03",
+   "claim": "操作池为 f_add_column、f_select_row、f_select_column、f_group_by（分组计数）、f_sort_by 五种；留一消融中去掉 f_group_by 使 WikiTQ 降 5.43 点，去掉 f_select_row 使 TabFact 降 4.40 点。",
+   "locator": "附录 A.1–A.2、Table 5，p.13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ba03b1ffa18dff6d:E04",
+   "claim": "Table 1：PaLM 2 下 TabFact 86.61、WikiTQ 67.31；GPT 3.5 下 TabFact 80.20、WikiTQ 59.94，均高于 End-to-End QA、Few-Shot QA、CoT、Text-to-SQL、Binder、Dater。",
+   "locator": "Table 1，p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ba03b1ffa18dff6d:E05",
+   "claim": "WikiTQ 按 token 数分组的小/中/大表上，Chain-of-Table 为 68.13/52.25/44.87，Dater 为 62.50/42.34/34.62，Binder 为 56.54/26.13/6.41；每题生成样本数 Binder 50、Dater 100、Chain-of-Table ≤25。",
+   "locator": "Tables 3–4，p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ba03b1ffa18dff6d:E06",
+   "claim": "原文未给出各测试集规模；Table 2 按链长统计的 PaLM 2 样本合计 WikiTQ 4,309、TabFact 2,023，只代表需要操作的样本。效率比较只计样本数，不计 token 或延迟。",
+   "locator": "Table 2 p.7；Table 4 p.8",
+   "basis": "inference",
+   "basis_note": "合计由阅读者计算；成本口径的判断为阅读者分析。"
+  },
+  {
+   "id": "swb_ba03b1ffa18dff6d:E07",
+   "claim": "FeTaQA 上 PaLM 2 的 BLEU 为 32.61（Dater 29.47），ROUGE-1/2/L 仅高 0.03；作者认为 ROUGE 对风格差异不敏感。全部 29 个示例均取自训练集。",
+   "locator": "附录 B Table 6 p.14；附录 C p.15",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

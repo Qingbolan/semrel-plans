@@ -1,0 +1,71 @@
+{
+ "id": "lit_d978a4c6ee98",
+ "url": "https://arxiv.org/abs/2406.11251",
+ "title": "Ma et al. — Unifying Multimodal Retrieval via Document Screenshot Embedding",
+ "version": "arXiv:2406.11251v2（2024-12-02），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2406.11251",
+ "retrieved_at": "2026-11-04T05:32:40.545190+00:00",
+ "fulltext": "papers/readings/fulltext/lit_d978a4c6ee98.pdf",
+ "sha256": "bfbbe4a2b08c84f678071e5c38d87239deb16e1edb2a8a3629d2c4c64029527b",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_d978a4c6ee98",
+ "note": "papers/readings/notes/lit_d978a4c6ee98/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–3",
+  "method": "§3.2、Figure 2，PDF pp.3–4；§4.3，PDF pp.5–6",
+  "evaluation": "§4–5、Tables 1–2、Figure 4，PDF pp.4–9；附录 A.1–A.2、Tables 3–4，PDF pp.13–14",
+  "limitations": "§7 Limitations，PDF pp.9–10；§5.4.3，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "lit_d978a4c6ee98:E01",
+   "claim": "现有检索依赖针对格式和模态的解析/OCR，预处理困难且破坏版式等视觉信息；DSE 改为直接编码文档截图。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d978a4c6ee98:E02",
+   "claim": "DSE 以 Phi-3-vision 为双塔编码器，截图切成 Cx×Cy 个 336×336 子图加全局图，每 4 个 patch 合并，取 </s> 隐状态为向量；InfoNCE 训练，温度 0.02；默认 (4,4)。",
+   "locator": "§3.2、§4.3，PDF pp.3–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d978a4c6ee98:E03",
+   "claim": "Wiki-SS 含 1,267,874 张 980×980 Wikipedia 截图，由对 NQ 问题加答案做 BM25 top-50 池化得到；NQ 训练 49,095 三元组、测试 3,610 问。SlideVQA-open 含 50,714 张幻灯片、10,290 个训练样例、2,136 个测试问题。",
+   "locator": "§4.1–4.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d978a4c6ee98:E04",
+   "claim": "有监督设置下 NQ top-1：BM25 29.5、Phi-3 文本 50.6、DSE 46.2；SlideVQA nDCG@10：BM25 55.8、E5 59.3、DSE 75.3。",
+   "locator": "Table 1，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d978a4c6ee98:E05",
+   "claim": "Wiki-SS 语料由带答案的 BM25 检索池化，截图只覆盖首屏、文本基线截至 500 词，因此比较的是首屏内容，且语料构造可能偏向词面可匹配页面。",
+   "locator": "§4.1，PDF pp.4–5；附录 A.1，PDF p.13",
+   "basis": "inference",
+   "basis_note": "构造事实来自原文；可能的池化偏差为阅读者分析，论文未讨论。"
+  },
+  {
+   "id": "lit_d978a4c6ee98:E06",
+   "claim": "(1,1) 到 (4,4) 时 NQ top-10 从 62.0 升至 73.7，编码速度从 12.2 降到 4.3 篇/秒（单张 H100）。",
+   "locator": "§5.3、Figure 4，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_d978a4c6ee98:E07",
+   "claim": "人工检查 50 个 DSE 判错的 NQ 问题，7 个为假阴性（答案在表格或图注中）；作者承认只评测网页和幻灯片，仅用有监督微调，低质量截图会降效。",
+   "locator": "§5.4.3、§7，PDF pp.9–10",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

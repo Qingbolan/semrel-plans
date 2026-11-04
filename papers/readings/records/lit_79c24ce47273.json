@@ -1,0 +1,65 @@
+{
+ "id": "lit_79c24ce47273",
+ "url": "https://arxiv.org/abs/2410.07331",
+ "title": "Huang et al. — DA-Code: Agent Data Science Code Generation Benchmark for Large Language Models",
+ "version": "arXiv:2410.07331v2（2024-10-11），35 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2410.07331v2",
+ "retrieved_at": "2026-11-04T05:23:53.584211+00:00",
+ "fulltext": "papers/readings/fulltext/lit_79c24ce47273.pdf",
+ "sha256": "9661deb5dba397cd8175c7fb785d659e59894ad1e866a696a827f1014337419e",
+ "format": "pdf",
+ "pages": 35,
+ "note_directory": "papers/readings/notes/lit_79c24ce47273",
+ "note": "papers/readings/notes/lit_79c24ce47273/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.2，pp.1–4",
+  "method": "§3 pp.3–5；§4 DA-Agent pp.5–6；附录 C pp.18–21",
+  "evaluation": "§5，Table 3–4，Fig. 3–6，pp.6–9",
+  "limitations": "§5.4 Error Analysis 与 Limitations，pp.8–9"
+ },
+ "evidence": [
+  {
+   "id": "lit_79c24ce47273:E01",
+   "claim": "作者认为 DS-1000、Arcade 等基准主要考察把明确指令翻译为代码，而真实数据科学需要在多源、带干扰的数据中探索、规划并组合 Python/SQL/Bash 多步调试。",
+   "locator": "§1、Table 1，pp.1–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_79c24ce47273:E02",
+   "claim": "DA-Code 含 500 个任务：DW 100、ML 100、数据操作 73、数据洞察 79、可视化 70、统计分析 78；难度 Easy 105、Medium 292、Hard 103；平均每任务 5.7 个文件，参考解平均 85 行。",
+   "locator": "§3.1–3.2，Table 1–2，p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_79c24ce47273:E03",
+   "claim": "Table 2 给出的难度百分比（22.8%/57.3%/19.9%）与 105/292/103 按 500 计算的比例（21.0%/58.4%/20.6%）不一致。",
+   "locator": "Table 2，p.4",
+   "basis": "inference",
+   "basis_note": "百分比与计数取自原表；比例为阅读者计算。"
+  },
+  {
+   "id": "lit_79c24ce47273:E04",
+   "claim": "表格与图表采用 0/1 精确匹配（只比较任务指定的列或绘图属性），ML 任务按基线下界与最佳上界归一化到 0–1。",
+   "locator": "§3.4，p.4；附录 C，pp.18–19",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_79c24ce47273:E05",
+   "claim": "DA-Agent 在全部 500 题上，GPT-4 总分 30.5（最高），GPT-4o 29.1，Claude-3-Opus 27.6，Deepseek-Coder-33B 10.8；设置为贪心解码、最多 20 步、历史 15 步、单动作 300 秒。",
+   "locator": "§5.1–5.2，Table 3，pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_79c24ce47273:E06",
+   "claim": "在随机 100 题子集上用 GPT-4，DA-Agent 得 31.5，高于 OpenDevin 26.2、AutoGen 18.6、X-Agent 6.7；加参考计划后升至 39.7，历史长度变化影响很小。",
+   "locator": "Table 4，§5.3，p.7",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

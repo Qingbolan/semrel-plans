@@ -1,0 +1,72 @@
+{
+ "id": "lit_536df9d6fe7c",
+ "url": "https://arxiv.org/abs/2412.14222",
+ "title": "Sun et al. — A Survey on Large Language Model-based Agents for Statistics and Data Science",
+ "version": "arXiv:2412.14222v2（2025-09-14），46 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2412.14222v2",
+ "retrieved_at": "2026-11-04T05:17:13+00:00",
+ "fulltext": "papers/readings/fulltext/lit_536df9d6fe7c.pdf",
+ "sha256": "a6572ceca7700e43bc2a579e90486444e5ddc8587c26700f4e009610e15ba55c",
+ "format": "pdf",
+ "pages": 46,
+ "note_directory": "papers/readings/notes/lit_536df9d6fe7c",
+ "note": "papers/readings/notes/lit_536df9d6fe7c/README.md",
+ "read_sections": {
+  "problem": "§1–§2，PDF pp.2–6",
+  "method": "§3、Table 1、Figure 3–4，PDF pp.6–17",
+  "evaluation": "§3.7，pp.15–16；§4 案例，pp.18–25；附录 Table 2，p.38",
+  "limitations": "§5–§6，PDF pp.26–30"
+ },
+ "evidence": [
+  {
+   "id": "lit_536df9d6fe7c:E01",
+   "claim": "作者把 LLM 数据智能体定义为由 LLM 驱动、能理解自然语言指令、规划并执行以数据为中心的任务、与用户或外部工具交互的自主或半自主软件系统；动机是统计训练、软件、领域知识等方面的数据分析门槛。",
+   "locator": "§1，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_536df9d6fe7c:E02",
+   "claim": "Table 1 将 23 个数据智能体按方法（Conversational / End-to-end）、界面（IDE、独立系统、CLI、OS）、规划（Basic IO、Linear、Hierarchical）以及人在回路、自纠错、可扩展性进行归类；“-”表示未提及或无法观察。",
+   "locator": "§3.3、Table 1，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_536df9d6fe7c:E03",
+   "claim": "§3.7 只简要介绍 DS-1000（1000 题、7 个库）、MLAgentBench、InfiAgent-DABench，并指出可视化输出难以直接比较。",
+   "locator": "§3.7，PDF pp.15–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_536df9d6fe7c:E04",
+   "claim": "§4 的 4 个案例（ChatGPT-ADA、LAMBDA、GPT-4o、Data Interpreter）均为定性展示，没有基线、指标或失败率；附录 Table 2 列出 Wine Quality 4898×11、Auto MPG 398×7、Salary 6750×6、Breast Cancer 569×30。",
+   "locator": "§4、附录 Table 2，PDF pp.18–25、38",
+   "basis": "inference",
+   "basis_note": "数据规模与案例描述来自原文；“无基线、无指标、无失败率”是阅读者对全文的归纳。"
+  },
+  {
+   "id": "lit_536df9d6fe7c:E05",
+   "claim": "Table 2 与 §4.1 写 Wine Quality 为 4898×11，但 Figure 5 的 ChatGPT-ADA 输出显示 6497 行、13 列（含 color 列），两处口径不一致。",
+   "locator": "§4.1、Figure 5，PDF pp.18–19；Table 2，p.38",
+   "basis": "inference",
+   "basis_note": "两个数字均来自原文；指出不一致是阅读者对照所得。"
+  },
+  {
+   "id": "lit_536df9d6fe7c:E06",
+   "claim": "作者指出，不同提示措辞会改变检验方法、图表类型和默认超参数；建议通过导出 Notebook、固定随机种子、Git 与工作流管理工具提升可复现性。",
+   "locator": "§6.1–6.2，PDF pp.29–30",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_536df9d6fe7c:E07",
+   "claim": "落地挑战包括本地部署与隐私之间的权衡、高并发下每个会话独立沙箱的资源调度，以及与 IDE 工作流的整合。",
+   "locator": "§5.3，PDF pp.27–28",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

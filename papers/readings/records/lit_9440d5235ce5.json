@@ -1,0 +1,77 @@
+{
+ "id": "lit_9440d5235ce5",
+ "url": "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf",
+ "title": "Chai et al. — Doctopus: Budget-aware Structural Table Extraction from Unstructured Documents",
+ "version": "PVLDB Vol.18 No.11，pp.3695–3707（2025），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_9440d5235ce5.pdf",
+ "sha256": "85c5c177b1924a86611aa5f142f998c60b0688fe9b28ef9c73ef26455138cc5a",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "papers/readings/notes/lit_9440d5235ce5",
+ "note": "papers/readings/notes/lit_9440d5235ce5/README.md",
+ "read_sections": {
+  "problem": "§1–§2，pp.1–4",
+  "method": "§3–§6，Algs.1–2、Fig.2，pp.4–8",
+  "evaluation": "§7，Figs.3–11，pp.8–12",
+  "limitations": "§9，p.12；§7.1 Remark，p.10"
+ },
+ "evidence": [
+  {
+   "id": "lit_9440d5235ce5:E01",
+   "claim": "LLM 抽取质量高但按 token 计费，对大规模文档集合代价过高；OpenIE、PLM、Codegen 各在不同属性上占优，没有单一方法一致最好。",
+   "locator": "§1，Fig.1，pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E02",
+   "claim": "问题定义为：给定文档集合、属性集合与 token 预算 B，为每个（文档，属性）单元格从 OpenIE/Codegen/PLM/不同块组合的 LLM 策略中选一个，使期望准确率最大且 LLM 输入 token 总和不超过 B；非 LLM 策略视为零成本。",
+   "locator": "§2，Eq.4，pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E03",
+   "claim": "策略质量估计为包含概率（由验证集上经数据增强微调的 DistilBERT 预测）与抽取概率（按属性和策略在验证集上统计）的乘积；策略选择映射为分组背包并用动态规划求解，NP-hard 证明见技术报告。",
+   "locator": "§3.2、§5–§6，pp.5–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E04",
+   "claim": "基准共 3,200 份文档：Law 600（平均 5,926 token，9 属性）、Wikiart 1,000（714 token，8 属性）、Financial 1,500（258 token，8 属性）、Sports 100（1,645 token，10 属性）；真值由 LLM 抽取后经 20 名研究生约 1,000 小时核验，验证集为 10% 抽样。",
+   "locator": "§7.1，p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E05",
+   "claim": "Law 数据集上 Doctopus、PZ、LOTUS 准确率均约 75%，PZ 与 LOTUS 分别消耗 3.8M 和 5.8M token，为 Doctopus 的 3.2× 和 4.8×；Wikiart 上 Doctopus 85% 对 FrugalGPT 77%。",
+   "locator": "§7.2，Fig.3，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E06",
+   "claim": "论文总结同成本下准确率提升 11%、同准确率下成本节省 2.7×。",
+   "locator": "Abstract p.1；§1 贡献(5)，p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E07",
+   "claim": "论文承认需随 LLM 更新重新评估、未整合多个 LLM、假设每个文档属性只有单值。",
+   "locator": "§9，p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_9440d5235ce5:E08",
+   "claim": "真值与验证集初稿均由 LLM 生成再人工核验，可能使评测偏向 LLM 输出；实验准确率以文本 F1 而非严格相等计算；多数结果仅以图示给出、无方差。",
+   "locator": "§7.1，p.9；§7.9.2，p.11",
+   "basis": "inference",
+   "basis_note": "构造流程与指标来自原文；对偏差风险和证据强度的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

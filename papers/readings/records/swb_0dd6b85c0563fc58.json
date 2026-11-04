@@ -1,0 +1,71 @@
+{
+ "id": "swb_0dd6b85c0563fc58",
+ "url": "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf",
+ "title": "Softcite Dataset: A Dataset of Software Mentions in Biomedical and Economic Research Publications",
+ "version": "作者手稿 Softcite_Dataset_Description_RC.pdf（howisonlab/softcite-dataset 提交 18522db，PDF 创建于 2020-12-12），34 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf",
+ "retrieved_at": "2026-11-04T05:54:23.213217+00:00",
+ "fulltext": "papers/readings/fulltext/swb_0dd6b85c0563fc58.pdf",
+ "sha256": "28b24536cc5900741511daef064de9473bc3dde21019db16d4ec8d4ccaa1b027",
+ "format": "pdf",
+ "pages": 34,
+ "note_directory": "papers/readings/notes/swb_0dd6b85c0563fc58",
+ "note": "papers/readings/notes/swb_0dd6b85c0563fc58/README.md",
+ "read_sections": {
+  "problem": "摘要、Introduction、Related Work，pp.2–7",
+  "method": "The Softcite dataset、Dataset creation details，pp.7–11、14–22",
+  "evaluation": "Dataset content、Dataset validation、Table 1，pp.11–15",
+  "limitations": "Agreement assessment、Discussion、Conclusion，pp.19–26"
+ },
+ "evidence": [
+  {
+   "id": "swb_0dd6b85c0563fc58:E01",
+   "claim": "科研软件在文献计量体系中不可见；正式引用不到软件提及的一半，现有人工数据集仅 40–166 篇，自举方法召回低（如 Pan et al. 2015 R=0.42）。",
+   "locator": "Introduction、Related Work，pp.3–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0dd6b85c0563fc58:E02",
+   "claim": "人工标注 4,971 篇 2000–2010 年开放获取论文（生物医学 2,521、经济学 2,450），得到 4,093 个软件提及与 2,541 个 publisher/version/URL 标注。",
+   "locator": "The Softcite dataset，p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0dd6b85c0563fc58:E03",
+   "claim": "PDF 经 GROBID 转为 TEI/XML，只发布含提及的段落；<rs> 标实体类型，resp 记录标注者或 curator，catRef 标明审核状态。",
+   "locator": "Publication as TEI/XML，pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0dd6b85c0563fc58:E04",
+   "claim": "44% 的提及带属性：publisher 31%、version 27%、URL 17%；94% 的论文提及少于 10 个，最多 152 个。",
+   "locator": "Dataset content，pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0dd6b85c0563fc58:E05",
+   "claim": "基线线性链 CRF 10 折交叉验证微平均 P/R/F 为 86.27/76.23/80.94，version 最高（F 87.98），url 最低（F 66.72）。",
+   "locator": "Dataset validation、Table 1，pp.13–15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0dd6b85c0563fc58:E06",
+   "claim": "569 篇双人标注论文的百分比一致率最初 65.4%，改用 GROBID 对齐后 75.5%；之后转为单人标注加专家审核。",
+   "locator": "Agreement assessment，pp.19–21",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0dd6b85c0563fc58:E07",
+   "claim": "原文称 71%（N=3,743）论文无软件提及，但 3,743/4,971≈75.3%；与先前方法的比较基于各自报告值，非同条件评测。",
+   "locator": "Dataset content，p.11；Discussion，p.23；Dataset validation，p.13",
+   "basis": "inference",
+   "basis_note": "计数来自原文；比例计算与可比性判断为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

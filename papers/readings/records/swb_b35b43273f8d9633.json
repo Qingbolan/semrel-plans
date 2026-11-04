@@ -1,0 +1,65 @@
+{
+ "id": "swb_b35b43273f8d9633",
+ "url": "https://arxiv.org/abs/2301.05663",
+ "title": "Jonk et al. — Natural Language Processing of Aviation Occurrence Reports for Safety Management",
+ "version": "arXiv:2301.05663v1（2023-01-13），ESREL 2022 会议论文，9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2301.05663",
+ "retrieved_at": "2026-11-04T05:52:15+00:00",
+ "fulltext": "papers/readings/fulltext/swb_b35b43273f8d9633.pdf",
+ "sha256": "b2ec8ddbb5f586a448f11617ed26944d85bc948c088efa0b55060483fc0e1395",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/swb_b35b43273f8d9633",
+ "note": "papers/readings/notes/swb_b35b43273f8d9633/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1，PDF pp.1–2",
+  "method": "§2–3，PDF pp.2–5",
+  "evaluation": "§4–5、Tables 1–4，PDF pp.5–8",
+  "limitations": "§5.2 末、§6，PDF pp.7–8"
+ },
+ "evidence": [
+  {
+   "id": "swb_b35b43273f8d9633:E01",
+   "claim": "BERT 多标签分类在 CADORS（27 类 ADREP 事件类别）上 EM 0.70，在 ASRS（12 类人因）上 EM 0.20。",
+   "locator": "§5.1、Table 1，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b35b43273f8d9633:E02",
+   "claim": "ASRS 划分 50,755/2,672/5,937，CADORS 划分 152,562/16,952/42,446。",
+   "locator": "§3.1–3.2，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b35b43273f8d9633:E03",
+   "claim": "NTSB LDA 使用 54,410 份报告、40 个主题，32 个主题被判为好；65 份抽样上 P@1/2/3 = 70.8/56.2/46.2%。",
+   "locator": "§3.3、§5.2、Table 3，PDF pp.4、6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b35b43273f8d9633:E04",
+   "claim": "BART-large 由 analysis+factual information（≤1024 token）生成 probable cause，划分 29,726/6,370/6,370，ROUGE 召回 R1/R2/RL = 49.4/32.1/43.8。",
+   "locator": "§3.3、§5.3、Table 4，PDF pp.5、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b35b43273f8d9633:E05",
+   "claim": "作者指出生成文本可能遗漏因素（如例 1 漏掉湿跑道），判断正确性与完整性需要领域专家检查。",
+   "locator": "§5.3、§6，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b35b43273f8d9633:E06",
+   "claim": "正文称 S@1/S@2/S@3 为 67/80/92%，而 Table 1 列的是 S@5=0.92；54,410−11,945=42,465 与正文 42,466 差 1。",
+   "locator": "§3.3、§5.1、Table 1，PDF pp.4–6",
+   "basis": "inference",
+   "basis_note": "差异由阅读者比对正文与表格、自行计算得出。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,71 @@
+{
+ "id": "lit_790bbcb4da69",
+ "url": "https://arxiv.org/abs/2502.14913",
+ "title": "Xie et al. — OpenSearch-SQL: Enhancing Text-to-SQL with Dynamic Few-shot and Consistency Alignment",
+ "version": "arXiv:2502.14913v1（2025-02-19，ACM 模板会议信息未填写），15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2502.14913v1",
+ "retrieved_at": "2026-11-04T05:17:20.258255+00:00",
+ "fulltext": "papers/readings/fulltext/lit_790bbcb4da69.pdf",
+ "sha256": "7d01bfd7371ff75c6da6a844f27ea4b05083dde54ac96a4d14bd91a598cb333d",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "papers/readings/notes/lit_790bbcb4da69",
+ "note": "papers/readings/notes/lit_790bbcb4da69/README.md",
+ "read_sections": {
+  "problem": "§1（L1–L3）、§2.2–2.3，PDF pp.1–3",
+  "method": "§3.1–3.7、Listings 1–6、Algorithm 1、Figure 2，PDF pp.4–8",
+  "evaluation": "§4.1–4.7、Tables 1–7、Figures 3–4，PDF pp.8–12；Tables 2、4 用 -layout 文本核对",
+  "limitations": "§3.8 Optimization，PDF pp.7–8；§4.6 执行成本，PDF p.12（无独立局限章节）"
+ },
+ "evidence": [
+  {
+   "id": "lit_790bbcb4da69:E01",
+   "claim": "作者认为 LLM Text-to-SQL 方法存在三方面不足：框架不完整（不核验值、不纠错、缺少少样本）；多智能体之间缺乏一致性，导致幻觉累积；指令与中间语言的研究不足。",
+   "locator": "§1，PDF p.1",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_790bbcb4da69:E02",
+   "claim": "OpenSearch-SQL 分为预处理、抽取、生成、精修四阶段，并加入对齐智能体（Agent、Function、Style 对齐及 Info Alignment）；生成阶段用 MQs 检索 Query-CoT-SQL 少样本，按 SQL-Like 结构化 CoT 生成多个候选；精修按执行结果纠错，再多数投票并选执行最快的 SQL。",
+   "locator": "§3.1–3.7、Listings 2、5–6、式 (3)，PDF pp.4–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_790bbcb4da69:E03",
+   "claim": "BIRD 有 9,428/1,534/1,789 条训练/开发/测试样本，95 个数据库，37 个领域；Spider 有 8,659/1,034/2,147 条，200 个数据库。作者使用清洗前的 BIRD 开发集，消融在 Mini-Dev 上进行；生成用 GPT-4o-0513，检索用 bge-large-en-v1.5，每题生成 21 个候选。",
+   "locator": "§4.1、§4.5、Table 1，PDF pp.8–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_790bbcb4da69:E04",
+   "claim": "BIRD 上开发集 EX 69.30、测试集 EX 72.28、R-VES 69.36；不用自一致性时开发集 EX 为 67.80；Distillery + 微调 GPT-4o 分别为 67.21/71.83/67.41。",
+   "locator": "Table 2，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_790bbcb4da69:E05",
+   "claim": "Mini-Dev 上完整管线最终 EX 为 70.6；去掉少样本降至 66.0，去掉对齐降至 69.6，去掉自一致性降至 68.2，去掉精修降至 67.0。",
+   "locator": "Table 4，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_790bbcb4da69:E06",
+   "claim": "每题耗时约 7–60 秒，消耗 9,000–25,000 token；生成阶段 5–15 秒，原文解释为使用 BeamSearch、生成的 token 更多。",
+   "locator": "§4.6、Table 6，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_790bbcb4da69:E07",
+   "claim": "Spider 上本文为 87.1，低于 MCS-SQL 论文自报的 89.6，且作者在 Spider 开发集上调过参；正文中少样本提升（3.0/6.4）与 Table 5 计算值（2.8/6.2）不一致，R-VES 在摘要与正文中分别写为 69.36% 和 69.3%。",
+   "locator": "Tables 3、5，§4.1、§4.4，PDF pp.1–2、8–11",
+   "basis": "inference",
+   "basis_note": "数字均来自原文表格和正文；'SOTA 说法不成立''正文与表格不一致'是阅读者的核对结论。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

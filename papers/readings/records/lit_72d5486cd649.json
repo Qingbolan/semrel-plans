@@ -1,0 +1,65 @@
+{
+ "id": "lit_72d5486cd649",
+ "url": "https://arxiv.org/abs/2601.08778",
+ "title": "Jin, Choi, Zhu, Kang — Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards",
+ "version": "arXiv:2601.08778v3（2026-01-19），18 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2601.08778v3",
+ "retrieved_at": "2026-11-04T05:01:54.325364+00:00",
+ "fulltext": "papers/readings/fulltext/lit_72d5486cd649.pdf",
+ "sha256": "01cbee7042eb4a9a9e3044eb2004b45af4e8f98c9b41d507b8f3b941cf6c9e2c",
+ "format": "pdf",
+ "pages": 18,
+ "note_directory": "papers/readings/notes/lit_72d5486cd649",
+ "note": "papers/readings/notes/lit_72d5486cd649/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–3",
+  "method": "§3、§4.1–4.2、§5.1，PDF pp.3–5、7–8；附录 A.1、A.3，PDF pp.15–16",
+  "evaluation": "§4.3–4.4、§5.2–5.5、§6、§7，Tables 1–7、Figures 6–11，PDF pp.5–12；Tables 8–9，PDF pp.17–18",
+  "limitations": "原文无局限性章节；Table 8 脚注模型替换，PDF p.17；其余由阅读者归纳"
+ },
+ "evidence": [
+  {
+   "id": "lit_72d5486cd649:E01",
+   "claim": "标注错误分四类：E1 SQL 与问题逻辑不符、E2 对数据/模式理解不足、E3 领域知识错误、E4 问题歧义或输出格式不明；任一命中即计为错误样例。",
+   "locator": "§1，PDF p.1；§4.1、§4.4，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_72d5486cd649:E02",
+   "claim": "SAR-Agent 以 o3 驱动、最多 30 轮，输入标注与数据库模式（Spider 2.0-Snow 仅金标准表），通过 execute_query 多轮执行验证查询并输出诊断报告；两位作者独立核验，分歧时四位作者讨论。",
+   "locator": "§3.1，PDF pp.3–4；§4.1–4.2，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_72d5486cd649:E03",
+   "claim": "BIRD Mini-Dev 263/498（52.8%，含 Arcwise 161 例）、Spider 2.0-Snow 76/121（62.8%）有标注错误；E2 在两者错误例中均占约 58%。",
+   "locator": "§4.3、Table 1，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_72d5486cd649:E04",
+   "claim": "BIRD Dev 随机 100 例（简单 62、中等 28、困难 10）中修正 48 例（问题 19、外部知识 17、SQL 41、模式 1、数据库修改 6）；16 个开源智能体 EX 相对变化 −7%～+31%，排名变化 −9～+9，CHESS 由 62%/第 7 升至 81%/第 1。",
+   "locator": "§5.1、§5.3、Table 4，PDF pp.7–8；Table 9，PDF p.18",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_72d5486cd649:E05",
+   "claim": "原子集排名与完整 Dev 排行榜相关 r_s=0.85（p=3.26e-5），与修正子集仅 r_s=0.32（p=0.23）；SAR-Agent 精度 83%（228/274）与 89%（70/79），Arcwise 命中率 85.7%，成本 $0.44 与 $1.11/例。",
+   "locator": "Abstract；§5.5，PDF p.10；Table 7，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_72d5486cd649:E06",
+   "claim": "只报告精度未报告召回，错误率更接近下界；修正子集仅 100 例且无置信区间；部分智能体用 GPT-4o 替代原配置模型；判定与修正由作者完成并以与 SAR-Agent 一致为终止条件，缺少独立标注者一致性统计。",
+   "locator": "§5.1，PDF p.8；§6.1，PDF p.10；Table 8 脚注，PDF p.17",
+   "basis": "inference",
+   "basis_note": "事实及页码来自原文；数字核对、口径比较或局限判断为阅读者分析，笔记中已用“阅读者分析”标明。"
+  }
+ ],
+ "batch": "r02",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

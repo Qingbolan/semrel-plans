@@ -1,0 +1,72 @@
+{
+ "id": "lit_b2a94acf722b",
+ "url": "https://aclanthology.org/2025.acl-long.853/",
+ "title": "Yu, Chen & Wang — Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning",
+ "version": "ACL 2025 Long，pp.17432–17451，PDF 20 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2025.acl-long.853.pdf",
+ "retrieved_at": "2026-11-04T05:15:47Z",
+ "fulltext": "papers/readings/fulltext/lit_b2a94acf722b.pdf",
+ "sha256": "7f2cded037db00d0837672a6cc4d17bea566ca84f51c5ff386473ba5f15913cc",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "papers/readings/notes/lit_b2a94acf722b",
+ "note": "papers/readings/notes/lit_b2a94acf722b/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1，PDF pp.1–2",
+  "method": "§3.1–3.4，PDF pp.3–5；附录 B（Algorithm 1）、附录 D，PDF pp.12–14",
+  "evaluation": "§4.1–4.6、Tables 1–3、Figures 2–3，PDF pp.5–8；附录 C、Table 4，PDF pp.12–13",
+  "limitations": "Limitations 节，PDF p.9；§4.5、附录 C 的成本讨论"
+ },
+ "evidence": [
+  {
+   "id": "lit_b2a94acf722b:E01",
+   "claim": "现有分解式表格推理方法（Binder、Dater、Chain-of-Table）缺乏批评和修正中间步骤的机制，错误会沿推理链传播；单纯让 LLM 自我反思又容易为错误辩护或过度批评正确步骤。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b2a94acf722b:E02",
+   "claim": "Table-Critic 以 Chain-of-Table 的初始推理链为输入，由 Judge 判定正误并路由模板树、Critic 定位第一个错误步并给出批评、Refiner 只接收错误步之前的部分链并重写其余步骤；循环到 Judge 判为正确或达到最大迭代 K（主实验 K=5）。",
+   "locator": "§3.2–3.3、§4.1、脚注 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b2a94acf722b:E03",
+   "claim": "自演化模板树初始只有 2 个模板（Sub-table Error、Final Query Error 两类），Curator 在 Judge 判为正确后根据整段修正历史添加模板或做纵向/横向扩展；去掉自演化后 WikiTQ 由 77.2 降到 76.1、TabFact 由 92.6 降到 90.8（Qwen2.5-72B）。",
+   "locator": "§3.4、§4.1、§4.6、Table 3、附录 D，PDF pp.4–5、8、13–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b2a94acf722b:E04",
+   "claim": "评测集为 WikiTQ 测试 4,344 例（421 张表）和 TabFact 测试 2,024 例（298 张表），指标为准确率；三种 LLM 平均下 Table-Critic 为 WikiTQ 73.7、TabFact 91.7，相对最强基线分别 +6.3、+2.2。",
+   "locator": "§4.1–4.2、Table 1，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b2a94acf722b:E05",
+   "claim": "以 Chain-of-Table 为参照，Table-Critic 在 WikiTQ 上纠正 9.6%、破坏 0.7%，净增 8.9；Critic-CoT 纠正 5.6%、破坏 4.9%，净增 0.7。",
+   "locator": "§4.3、Table 2，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_b2a94acf722b:E06",
+   "claim": "附录 C 按 0.25×输入+0.75×输出 token 计算成本，Table-Critic 约为 Chain-of-Table 的 1.87×（WikiTQ）与 2.19×（TabFact）；但 TabFact 一行的输出 20.4M 与总计 17.1M 按该公式不一致，按公式反推输出约 2.1M。",
+   "locator": "附录 C、Table 4，PDF pp.12–13",
+   "basis": "inference",
+   "basis_note": "成本数字为原文；不一致是阅读者用原文公式复算得出，原文未说明。"
+  },
+  {
+   "id": "lit_b2a94acf722b:E07",
+   "claim": "模板树在测试样本处理过程中持续更新，且主结果只有单次贪心解码、没有方差报告；这意味着样本顺序可能影响结果，且测试集经验会被沉淀进后续样本的提示中。",
+   "locator": "§4.1、§4.6，PDF pp.5、8",
+   "basis": "inference",
+   "basis_note": "原文说明模板树在推理过程中演化、温度 0.0；对顺序依赖与测试期积累的影响是阅读者分析，原文未讨论。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

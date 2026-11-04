@@ -1,0 +1,72 @@
+{
+ "id": "swb_bf0b34f8ced5d15e",
+ "url": "https://arxiv.org/abs/2408.08435",
+ "title": "Hu, Lu & Clune — Automated Design of Agentic Systems",
+ "version": "arXiv:2408.08435v2（2025-03-02），ICLR 2025 会议论文，34 页（含附录）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2408.08435",
+ "retrieved_at": "2026-11-04T05:22:39.598821+00:00",
+ "fulltext": "papers/readings/fulltext/swb_bf0b34f8ced5d15e.pdf",
+ "sha256": "32eb1c1a6888e35fae0f618e33c58698b54d9c49bc063fef91ee591719fca376",
+ "format": "pdf",
+ "pages": 34,
+ "note_directory": "papers/readings/notes/swb_bf0b34f8ced5d15e",
+ "note": "papers/readings/notes/swb_bf0b34f8ced5d15e/README.md",
+ "read_sections": {
+  "problem": "§1–§2、Figure 2，PDF pp.1–4",
+  "method": "§3、Appendix C、H，PDF pp.4–5、23–25、33",
+  "evaluation": "§4.1–4.3、Tables 1–3、Figure 3，PDF pp.5–9；Appendix D–F、I–J、Table 6，PDF pp.25–30、33–34",
+  "limitations": "§6 Safety Considerations 与 Future Work，PDF pp.10–11；Appendix J，PDF p.34"
+ },
+ "evidence": [
+  {
+   "id": "swb_bf0b34f8ced5d15e:E01",
+   "claim": "作者把 ADAS 表述为在搜索空间中用搜索算法优化评估函数，并主张以代码为搜索空间，因为它图灵完备、可读、能复用已有框架并利用 FM 的编程能力。",
+   "locator": "§2、Figure 2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_bf0b34f8ced5d15e:E02",
+   "claim": "Meta Agent Search：存档可用手工基线初始化；元智能体生成设计说明和代码，经两轮自我反思检查新颖性，评估出错时最多修复 5 次，然后连同指标加入存档。",
+   "locator": "§3，PDF pp.4–5；Appendix H，PDF p.33",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_bf0b34f8ced5d15e:E03",
+   "claim": "ARC 用网格 ≤5×5 的简单训练题，验证 20、测试 60，各评估 5 次；DROP/MGSM/MMLU 验证 128、测试 800；GPQA diamond 验证 32、测试 166。元智能体用 gpt-4o-2024-05-13，被评估的智能体用 gpt-3.5-turbo-0125。",
+   "locator": "§4.1，PDF p.6；Appendix D–E，PDF pp.26–29",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_bf0b34f8ced5d15e:E04",
+   "claim": "Table 1 中 Meta Agent Search 在 DROP/MGSM/MMLU/GPQA 达 79.4/53.4/69.6/34.6，最好的手工基线为 65.8/39.0/65.9/31.6，OPRO 为 69.1/30.6/67.6/32.9。",
+   "locator": "§4.2、Table 1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_bf0b34f8ced5d15e:E05",
+   "claim": "MGSM 搜得的智能体迁移到 GSM8K、GSM-Hard 分别为 69.5、31.2（最好基线 43.6、18.0）；ARC 上 Dynamic Memory and Refinement Agent 换用 Claude-Sonnet 后为 48.3%（最好基线 Self-Refine 39.3%），但 GPT-3.5 下最好的 Structured Feedback and Ensemble Agent 在 Claude-Haiku/Claude-Sonnet 上为 5.0/38.7，低于 Self-Refine 的 6.3/39.3。",
+   "locator": "§4.3、Tables 2–3，PDF pp.8–9",
+   "basis": "inference",
+   "basis_note": "数值来自 Table 3；“并非每个搜得智能体都领先”是阅读者对表格的比较。"
+  },
+  {
+   "id": "swb_bf0b34f8ced5d15e:E06",
+   "claim": "附录 I 中 MGSM 上空存档初始化得到 67.5，高于带基线初始化的 53.4；阅读者据此认为结果对初始化和搜索随机性较敏感。",
+   "locator": "Appendix I、Table 6，PDF pp.33–34",
+   "basis": "inference",
+   "basis_note": "数值来自原文；“对初始化敏感”是阅读者的推断。"
+  },
+  {
+   "id": "swb_bf0b34f8ced5d15e:E07",
+   "claim": "局限：只优化单一性能目标、仅评估单步问答、评估函数昂贵且信息有限；单次运行成本约 500 美元（ARC）和 300 美元（其他领域）。",
+   "locator": "§6 Future Work，PDF pp.10–11；Appendix J，PDF p.34",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

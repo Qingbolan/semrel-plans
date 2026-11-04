@@ -1,0 +1,72 @@
+{
+ "id": "lit_7225adc69207",
+ "url": "https://doi.org/10.1145/3665939.3665957",
+ "title": "Huang & Wu — Cocoon: Semantic Table Profiling Using Large Language Models",
+ "version": "arXiv:2404.12552v1（2024-04-19）预印本，7 页；ACM 出版版未取得（403）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2404.12552",
+ "retrieved_at": "2026-11-04T05:19:04+00:00",
+ "fulltext": "papers/readings/fulltext/lit_7225adc69207.pdf",
+ "sha256": "552c848eb86190cd14b42b53fbf84354b5cd0daba0bbe163f6790fe121220627",
+ "format": "pdf",
+ "pages": 7,
+ "note_directory": "papers/readings/notes/lit_7225adc69207",
+ "note": "papers/readings/notes/lit_7225adc69207/README.md",
+ "read_sections": {
+  "problem": "§1、Example 1–2，PDF pp.1–2",
+  "method": "§3.1–3.3、Table 1、Figs.2–5，PDF pp.2–6",
+  "evaluation": "§4 User Study，PDF p.6",
+  "limitations": "§5 Limitations and Future Works，PDF p.6"
+ },
+ "evidence": [
+  {
+   "id": "lit_7225adc69207:E01",
+   "claim": "纯统计画像会误报（Maiden 列 81.7% 缺失属正常）也会漏报（SSN 全以 999 开头，正则一致但整列非法），原因是缺少表格语义。",
+   "locator": "§1、Example 1，pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7225adc69207:E02",
+   "claim": "Cocoon 把画像分解为语义上下文（表摘要、列分组、列摘要，带程序校验）、语义画像（LLM 给出期望及推理）、语义复核（比较统计与语义画像并决定是否报警）三步，用户可编辑每步结果。",
+   "locator": "§1 p.2；§3.1–3.2，pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7225adc69207:E03",
+   "claim": "覆盖 8 类错误：重复、列类型、唯一键、伪装缺失值（FAHES）、缺失值、数值异常（0–4 分位数）、字符串异常（RAHA 正则）、缺失记录；高阶类型目前只分类不检错。",
+   "locator": "Table 1 p.3；§3.2，pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7225adc69207:E04",
+   "claim": "输出为带红色感叹号/绿色对勾解释的画像页面，以及供 Text-to-SQL 等下游 LLM 应用使用的 JSON 画像。",
+   "locator": "§3.3、Fig.5，pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7225adc69207:E05",
+   "claim": "评估仅为两名研究生（气候、医学）的试点出声思考访谈，画像离线生成，每个数据集 LLM 耗时约 20 分钟；参与者认可多数报警，但指出单位漂移、区间值、列错位等需领域判断的情形。",
+   "locator": "§4，p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7225adc69207:E06",
+   "claim": "论文无基线、无误报/漏报率等定量指标、未报告 LLM 型号；摘要中'高度有效'仅有定性访谈支持。",
+   "locator": "§4 p.6；全文",
+   "basis": "inference",
+   "basis_note": "缺失项基于全文通读的阅读者判断。"
+  },
+  {
+   "id": "lit_7225adc69207:E07",
+   "claim": "所读版本为 arXiv 预印本，其页脚标为 HILDA '23 与 DOI 10.1145/3597465.3605224，与条目的 HILDA 2024 DOI 10.1145/3665939.3665957 不一致；ACM 出版版返回 403 未核对。",
+   "locator": "PDF p.1 页脚",
+   "basis": "inference",
+   "basis_note": "页脚文字为原文；与条目 DOI 的比对及版本判断为阅读者分析。"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

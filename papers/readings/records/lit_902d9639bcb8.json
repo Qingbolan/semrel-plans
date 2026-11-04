@@ -1,0 +1,78 @@
+{
+ "id": "lit_902d9639bcb8",
+ "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf",
+ "title": "Duan et al. — Docopilot: Improving Multimodal Models for Document-Level Understanding",
+ "version": "CVPR 2025 CVF Open Access 版（与录用版一致，仅加水印），会议页码 4026–4033，PDF 共 12 页（正文 8 页 + 参考文献）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_902d9639bcb8.pdf",
+ "sha256": "7920dea81e14b176afd6a5a1d3ffb132d4221a5d2241c5653d086770cbcaa4f8",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/lit_902d9639bcb8",
+ "note": "papers/readings/notes/lit_902d9639bcb8/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–2",
+  "method": "§3–§4，Figs.2–4、Tables 1–3，PDF pp.3–6",
+  "evaluation": "§5，Tables 4–7，PDF pp.7–8",
+  "limitations": "§6，PDF p.8（无单列局限章节，阅读者据表格补充）"
+ },
+ "evidence": [
+  {
+   "id": "lit_902d9639bcb8:E01",
+   "claim": "作者认为 MLLM 多页文档理解不足主要因缺少高质量文档级数据，并指出 RAG 存在检索片段破碎、多阶段错误累积和额外检索延迟三个问题。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_902d9639bcb8:E02",
+   "claim": "Doc-750K 包含 758K 问题、251K 对话（87K 多轮、164K 单轮）、约 3.1M 图像、5.2B 文本 token，平均每段对话 11,245 文本 token 和 6,178 图像 token；来源为 Sci-Hub、arXiv、OpenReview。",
+   "locator": "§3.2，Tables 2–3，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_902d9639bcb8:E03",
+   "claim": "文档以 MinerU 抽取的交错图文与逐页渲染的多图两种格式提供；问答来自 OpenReview 等可靠标注、按论文结构设计的代理任务，或由 GPT-4o 生成，论文称 LLM 生成数据仅占 4.8%。",
+   "locator": "§3.1–3.2，Table 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_902d9639bcb8:E04",
+   "claim": "Docopilot 基于 InternVL2-2B/8B，以含 Doc-750K 的混合配方 SFT 1 epoch，最大序列 32K token、最多 24 tiles，并使用多模态数据打包、Ring Attention 和 Liger Kernel。",
+   "locator": "§4、§5.1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_902d9639bcb8:E05",
+   "claim": "Docopilot-8B 在 MM-NIAH 总分 61.8（InternVL2-8B 42.9，InternVL2-26B 52.8），长档 32K–64K 为 55.3；MMLongBench-Doc Acc 28.8，高于 Gemini-1.5-Pro 的 28.2。",
+   "locator": "Table 4，§5.2–5.3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_902d9639bcb8:E06",
+   "claim": "数据消融显示，在 2B 模型上逐步加入 Sci-Hub、arXiv、OpenReview 数据，使 MMLongBench-Doc Acc/F1 从 18.4/9.4 升至 21.8/16.0；RAG 使每 token 输出延迟从 35.9 ms 增至 82.9 ms。",
+   "locator": "Tables 6–7，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_902d9639bcb8:E07",
+   "claim": "Docopilot 并非全面领先：M3DocRAG 在 MP-DocVQA 上（84.4）、InternVL2-8B+RAG 在 MMLong F1 上（24.5）、InternVL2-8B 在 DocGenome 单页 Acc 上（56.0）均高于 Docopilot-8B；“提升 12.6%”为相对值（51.9 对 46.1）。",
+   "locator": "Table 4，PDF p.7；§5.2，p.8",
+   "basis": "inference",
+   "basis_note": "数值来自 Table 4；横向比较与相对/绝对提升的换算为阅读者分析。"
+  },
+  {
+   "id": "lit_902d9639bcb8:E08",
+   "claim": "延迟对比只测每 token 输出时间，未计入长上下文预填充；超过 32K 训练长度的输入如何处理正文未说明。",
+   "locator": "Table 7，PDF p.8；§5.1，p.7",
+   "basis": "inference",
+   "basis_note": "依据表注与训练设置；对评测口径缺口的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

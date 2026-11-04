@@ -1,0 +1,71 @@
+{
+ "id": "swb_2214a5f0abe2dbfc",
+ "url": "https://aclanthology.org/2022.acl-long.468",
+ "title": "Louis & Spanakis — A Statutory Article Retrieval Dataset in French",
+ "version": "ACL 2022 Long Papers，pp.6789–6803（2022.acl-long.468），15 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2022.acl-long.468.pdf",
+ "retrieved_at": "2026-11-04T05:32:28+00:00",
+ "fulltext": "papers/readings/fulltext/swb_2214a5f0abe2dbfc.pdf",
+ "sha256": "0a56a7fa0d94a59977a16b47789ee1c20e23ff679f572543f09d63e3c65f0ede",
+ "format": "pdf",
+ "pages": 15,
+ "note_directory": "papers/readings/notes/swb_2214a5f0abe2dbfc",
+ "note": "papers/readings/notes/swb_2214a5f0abe2dbfc/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–3",
+  "method": "§3.1、§4，PDF pp.3–6",
+  "evaluation": "§5、Table 2，PDF pp.7–8；附录 B，p.12",
+  "limitations": "§6.1，PDF p.8；附录 C.2–C.3，pp.12–14"
+ },
+ "evidence": [
+  {
+   "id": "swb_2214a5f0abe2dbfc:E01",
+   "claim": "BSARD 含 1,108 个法语原生法律问题（训练 886、测试 222），由 Droits Quotidiens 的法律专家标注相关法条，检索语料为 32 部比利时法典的 22,633 条法条。",
+   "locator": "§3.1、Table 4，PDF pp.3–4、14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2214a5f0abe2dbfc:E02",
+   "claim": "问题来自专家改写的\"模型问题\"：收集 3,200 多个，把情境标签拼到问题前以处理约三分之一的重复，再用正则把文本引用映射到法条 id，过滤掉引用非法典文件的问题。",
+   "locator": "§3.1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2214a5f0abe2dbfc:E03",
+   "claim": "每题相关法条数差异大：75% 少于 5 条，7% 超过 20 条，最多 109 条；22,633 条中只有 1,612 条被至少一个问题引用。",
+   "locator": "§3.2、Figure 2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2214a5f0abe2dbfc:E04",
+   "claim": "因相关法条数不固定，作者只报告 R@k、MAP@k、MRR@k（k∈{100,200,500}），不报告 precision@k。",
+   "locator": "§5.1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2214a5f0abe2dbfc:E05",
+   "claim": "测试集上 two-tower CamemBERT 的 R@100=74.78%，训练的 siamese CamemBERT 为 71.63%，BM25 为 51.33%，零样本 CamemBERT 只有 4.21%。",
+   "locator": "Table 2，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2214a5f0abe2dbfc:E06",
+   "claim": "语料只覆盖 32 部法典，引用其他法规的部分被丢弃，导致部分问题标签不完整；有些问题需要判例而非法条；数据是 2021 年 5 月的法律快照。",
+   "locator": "§6.1，PDF p.8；附录 C，pp.12–14",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_2214a5f0abe2dbfc:E07",
+   "claim": "该数据集更适合评测召回型候选生成；问题经专家改写，比原始用户提问规范，且无独立验证集（BM25 参数在训练集上调）。",
+   "locator": "§3.1、§5.1，PDF pp.3–4、7",
+   "basis": "inference",
+   "basis_note": "\"改写\"\"无验证集\"为原文事实；对适用场景和规范性的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

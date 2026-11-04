@@ -1,0 +1,71 @@
+{
+ "id": "lit_50d184b15111",
+ "url": "https://arxiv.org/abs/2511.19830",
+ "title": "Zhu et al. — Beyond Relational: Semantic-Aware Multi-Modal Analytics with LLM-Native Query Optimization",
+ "version": "arXiv:2511.19830v1（2025-11-25），20 页（正文 15 页含参考文献，附录 A–F 在 pp.16–20）",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2511.19830v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_50d184b15111.pdf",
+ "sha256": "56b3149ab248cfe22538969dae62d28655b853967c01b8571a43d74ce25fa8dd",
+ "format": "pdf",
+ "pages": 20,
+ "note_directory": "papers/readings/notes/lit_50d184b15111",
+ "note": "papers/readings/notes/lit_50d184b15111/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1–2.2、Listing 1、Table 1，PDF pp.1–5",
+  "method": "§3.1–3.3、Algorithm 1–2、§4.1–4.3、Eqs.1–8，PDF pp.5–9；附录 A，PDF p.16",
+  "evaluation": "§5.1–5.6、Tables 3–8、Figs.6–12，PDF pp.8–13；Table 4–6 页 PDF p.10 已渲染核对；附录 B–F，PDF pp.16–20",
+  "limitations": "§5.3.3、§5.6.2、§3.1 常数选择率假设、附录风险讨论，PDF pp.6、11、13、17"
+ },
+ "evidence": [
+  {
+   "id": "lit_50d184b15111:E01",
+   "claim": "Nirvana 支持 map、filter、reduce、rank 四种语义算子，非结构化字段以文件路径形式存储；优化目标是在准确率约束下最小化成本与延迟。",
+   "locator": "§2.1–2.2、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_50d184b15111:E02",
+   "claim": "逻辑优化器以随机游走（Eq.1，λ=0.2）采样候选计划，由 LLM 按自然语言规则（filter 下推、算子融合、非 LLM 替换）改写，并以 LLM-as-a-judge 在样本上的 0–10 相似度判断等价；默认选择率为常数（filter 0.5、reduce 0、其他 1）。",
+   "locator": "§3.1–3.2、Alg.1、Eq.1，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_50d184b15111:E03",
+   "claim": "物理优化为每个算子贪心选择模型，improvement score 定义为候选模型与最强模型一致而最弱模型不一致的比例；借助模型能力假设可把最强模型调用限制在 m1=m2=m3 的记录上。",
+   "locator": "§4.1–4.3、Eqs.2–8，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_50d184b15111:E04",
+   "claim": "评测使用 Movie（250 条、22 属性）、Estate（1,041 条、4 属性）、Game（18,891 条、21 属性）三个数据集，每个 12 条自建查询，分 Small/Medium/Large 三组，质量为人工标注真值下的答对比例。",
+   "locator": "§5.1.1–5.1.2、§5.2.4、Table 3、附录 F，PDF pp.8–9、17–20",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_50d184b15111:E05",
+   "claim": "Table 4 中相对 Palimpzest/Lotus 较优者，Nirvana 运行时间降低 10.16%–84.46%、成本降低 18.16%–97.96%；Palimpzest 在 Game 上超过 5.5 小时。",
+   "locator": "§5.2.2–5.2.3、Table 4，PDF pp.9–10（已渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_50d184b15111:E06",
+   "claim": "Table 5 答对比例：Nirvana 75.0%/41.7%/50.0%，Lotus 8.3%/16.7%/25.0%，Palimpzest 58.3%/25.0%/无结果；正文称完整优化与无优化变体答对数相同，但表中 Movie 与 Game 分别为 75.0% 对 66.7%、50.0% 对 41.7%，两处不一致。",
+   "locator": "§5.3.4、Table 5，PDF pp.10–11",
+   "basis": "inference",
+   "basis_note": "数值来自 Table 5；正文与表格不一致是阅读者对比发现。"
+  },
+  {
+   "id": "lit_50d184b15111:E07",
+   "claim": "逻辑优化有可观开销：q10/Estate 需 9.8s 与 $0.0082，而 Palimpzest Cascades 近零；优化时间占总时间 50.7%/6.7%/42.7%；失败案例显示生成的 UDF 对异质价格格式只部分正确且未被 judge 拦截。",
+   "locator": "§5.3.3、§5.5.1、§5.6.2、Table 6、Fig.12，PDF pp.10–13",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r04",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,77 @@
+{
+ "id": "swb_8136d37a5eaa2d2f",
+ "url": "https://arxiv.org/abs/2305.16291",
+ "title": "Wang et al. — Voyager: An Open-Ended Embodied Agent with Large Language Models",
+ "version": "arXiv:2305.16291v2（2023-10-19），42 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2305.16291",
+ "retrieved_at": "2026-11-04T06:12:27.586412+00:00",
+ "fulltext": "papers/readings/fulltext/swb_8136d37a5eaa2d2f.pdf",
+ "sha256": "769a4e33ddeeb73870849232eece49afe882c2d146362e33917ccb432ba0efb8",
+ "format": "pdf",
+ "pages": 42,
+ "note_directory": "papers/readings/notes/swb_8136d37a5eaa2d2f",
+ "note": "papers/readings/notes/swb_8136d37a5eaa2d2f/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.2–3",
+  "method": "§2.1–2.3，Figs. 2–6，PDF pp.3–6；附录 A 结构",
+  "evaluation": "§3.1–3.5，Tables 1–2，Figs. 7–10，PDF pp.6–9；附录 B，PDF pp.38–42",
+  "limitations": "§4，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "swb_8136d37a5eaa2d2f:E01",
+   "claim": "Voyager 由自动课程、可执行代码技能库和融合环境反馈、执行错误与自我验证的迭代提示机制组成，只以黑盒方式调用 GPT-4，不微调参数。",
+   "locator": "摘要、§2，PDF pp.1、3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E02",
+   "claim": "技能以程序表示，键为 GPT-3.5 生成的程序描述的嵌入，检索时返回 top-5 相关技能；4 轮代码生成仍未成功则请求新任务。",
+   "locator": "§2.2–2.3，Fig. 4，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E03",
+   "claim": "实验使用 gpt-4-0314、gpt-3.5-turbo-0301 与 text-embedding-ada-002，环境为 MineDojo + Mineflayer；基线 ReAct、Reflexion、AutoGPT 由作者重新实现，不与像素输入的底层控制方法比较。",
+   "locator": "§3.1–3.2、附录 B.1–B.2，PDF pp.6、38",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E04",
+   "claim": "160 次提示迭代内发现 63 种独特物品（3.3 倍）；Table 1 中木/石/铁工具平均迭代 6/11/21，AutoGPT 为 92/94/135，Voyager 唯一解锁钻石工具（1/3）。",
+   "locator": "§3.3，Table 1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E05",
+   "claim": "零样本泛化：新世界中 4 个未见任务、最多 50 次迭代，Voyager 全部 3/3 成功，ReAct/Reflexion/AutoGPT 均 0/3，AutoGPT 加 Voyager 技能库后部分成功。",
+   "locator": "§3.3，Table 2，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E06",
+   "claim": "消融：随机课程使发现物品数下降 93%，去自我验证下降 73%，代码生成用 GPT-4 比 GPT-3.5 多 5.7 倍独特物品；技能检索 top-5 准确率 96.5%（309 个样本）。",
+   "locator": "§3.4、附录 B.4.4，Table A.4，PDF pp.8–9、42",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E07",
+   "claim": "局限包括 GPT-4 成本（为 GPT-3.5 的 15 倍）、智能体卡住与自我验证误判、课程提出不存在物品、代码调用不存在的 API。",
+   "locator": "§4，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_8136d37a5eaa2d2f:E08",
+   "claim": "每种设置仅 3 次试验且方差大，倍数类结论依赖基线大多失败的设置；结论限于有高层代码 API 且做了环境改造（死亡保留物品栏）的场景。",
+   "locator": "Table 1、§3.2、附录 B.1，PDF pp.6–7、38",
+   "basis": "inference",
+   "basis_note": "基于原文实验设置的阅读者评价。"
+  }
+ ],
+ "batch": "r18",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

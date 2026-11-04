@@ -1,0 +1,78 @@
+{
+ "id": "lit_016f5da81f5c",
+ "url": "https://arxiv.org/abs/2406.01265",
+ "title": "Li et al. — The Dawn of Natural Language to SQL: Are We Fully Ready?",
+ "version": "arXiv:2406.01265v3（PVLDB 17(11): 3318–3331, 2024），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2406.01265v3",
+ "retrieved_at": "2026-11-04T05:25:12+00:00",
+ "fulltext": "papers/readings/fulltext/lit_016f5da81f5c.pdf",
+ "sha256": "41eac9eb9e268e9e4b0d2b1361ee9dc422daa51d680f2316835d1c753637e763",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_016f5da81f5c",
+ "note": "papers/readings/notes/lit_016f5da81f5c/README.md",
+ "read_sections": {
+  "problem": "§1（Q1–Q3、Example 1、Figure 3）、§2，PDF pp.1–4",
+  "method": "§3 NL2SQL360（Figure 4、QVT 公式）、§5.1–5.3 设计空间与 AAS，PDF pp.4–5、10–12",
+  "evaluation": "§4 Exp-1–Exp-9、Tables 2–7、Figures 5–12；§5.3 SuperSQL，PDF pp.5–12",
+  "limitations": "§2.3 现有实验局限、§6 研究机会，PDF pp.4、12"
+ },
+ "evidence": [
+  {
+   "id": "lit_016f5da81f5c:E01",
+   "claim": "Example 1：Spider 开发集 Competition 领域中 RESDSQL-3B+NatSQL 达 83.9% EX，比最好的提示方法 DAILSQL(GPT-4) 高 3.3%；仅 JOIN 子集 PLM 领先，嵌套子集 LLM 领先，说明不存在单一赢家。",
+   "locator": "§1、Figure 3，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_016f5da81f5c:E02",
+   "claim": "NL2SQL360 包含基准、模型库、数据集过滤器（SQL 复杂度、SQL 特征、数据领域、问句变体）、指标（EX、EM、VES、新提出的 QVT）、执行器与日志、评估器。",
+   "locator": "§3、Figure 4，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_016f5da81f5c:E03",
+   "claim": "实验使用 Spider 开发集 1,034 条与 BIRD 开发集 1,534 条 (nl, sql)；BIRD 开发集每库平均 6.8 表、72.5 列，Spider 开发集为 4.1 表、22.1 列；QVT 仅用 Spider 开发集中 469 条有两个以上问法的 SQL。",
+   "locator": "§4.1、Table 2、Exp-3，PDF pp.5、8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_016f5da81f5c:E04",
+   "claim": "比较 13 个 LLM 方法（4 提示、9 微调）与 7 个 PLM 方法；Spider-Dev EX：SFT CodeS-7B 85.4、DAILSQL 83.1、RESDSQL-3B+NatSQL 84.1、SuperSQL 87.0。",
+   "locator": "§4.1、Table 3，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_016f5da81f5c:E05",
+   "claim": "SuperSQL 由遗传算法 NL2SQL360-AAS 以 Spider 开发集 EX 为目标搜索得到，再在同一开发集上报告 87.0%，存在在评测集上选型的偏差；BIRD 开发集上与 SFT CodeS-15B 同为 58.5%。",
+   "locator": "§5.2–5.3、Tables 3–4，PDF pp.6、11–12",
+   "basis": "inference",
+   "basis_note": "搜索设置与表格数值为原文；选型偏差的判断为阅读者分析。"
+  },
+  {
+   "id": "lit_016f5da81f5c:E06",
+   "claim": "SuperSQL 在 Spider 测试集 EX 87.0%（第 2）、BIRD 测试集 62.66%（第 9），比 DAILSQL(SC) 在 BIRD 测试集上高 5.25%。",
+   "locator": "§5.3，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_016f5da81f5c:E07",
+   "claim": "正文称 SuperSQL 比其他 GPT-4 方法 token 和成本更少，但 Table 5 中 Spider 上 SuperSQL 942 token、$0.0354 略高于 DAILSQL 的 930 token、$0.0288。",
+   "locator": "Table 5、§5.3，PDF pp.9、12",
+   "basis": "inference",
+   "basis_note": "两组数值均来自原文 Table 5；差异为阅读者对照得出。"
+  },
+  {
+   "id": "lit_016f5da81f5c:E08",
+   "claim": "研究机会：歧义问句、脏数据和 schema 歧义、schema linking 不足导致错误 SQL；提出可信 NL2SQL、低成本方案与自适应训练数据生成三个方向。",
+   "locator": "§6，PDF p.12",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

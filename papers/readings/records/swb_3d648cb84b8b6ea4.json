@@ -1,0 +1,65 @@
+{
+ "id": "swb_3d648cb84b8b6ea4",
+ "url": "https://arxiv.org/abs/2605.10397",
+ "title": "AnomalyClaw: A Universal Visual Anomaly Detection Agent via Tool-Grounded Refutation",
+ "version": "arXiv:2605.10397v1（2026-05-11），30 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2605.10397",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_3d648cb84b8b6ea4.pdf",
+ "sha256": "53607fc246314bdb17d34dbe15c6733ceff3ff3ba6d4ccf4bf45d8954af86d89",
+ "format": "pdf",
+ "pages": 30,
+ "note_directory": "papers/readings/notes/swb_3d648cb84b8b6ea4",
+ "note": "papers/readings/notes/swb_3d648cb84b8b6ea4/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–3",
+  "method": "§3.1–3.4、Figure 2，PDF pp.4–6；附录 S，pp.28–29",
+  "evaluation": "§4.1–4.6、Tables 1–3，PDF pp.6–9；附录 A、C、R、U，pp.15–17、27–29",
+  "limitations": "§4.5 Limitations，p.9；附录 R，p.28；附录 S，p.29"
+ },
+ "evidence": [
+  {
+   "id": "swb_3d648cb84b8b6ea4:E01",
+   "claim": "单次推理的通用 VLM 更依赖先验而非正常参考样本，跨领域异常定义不同（路面裂纹是缺陷、花岗岩纹理是正常），因此作者把 VAD 视为需要与参考对比的组合式感知，并以反驳而非累积证据为核心。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d648cb84b8b6ea4:E02",
+   "claim": "每个测试项运行最多 K=5 轮的反驳轨迹：第 1 轮无工具给出至多 3 个候选特征，之后每轮从 13 个工具（L1–L7 成本阶梯）中选一个，与正常参考对照，输出 found_in_ref / not_found / inconclusive；最终分数为 0.5·Direct + 0.5·反驳分数，α 固定不调。",
+   "locator": "§3.1–3.2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d648cb84b8b6ea4:E03",
+   "claim": "CrossDomainVAD-12 含 12 个领域，每领域 20 校准 / 40 开发 / 120 测试（正负各半；D7 测试 98 项），测试总数 1,418，参考图 1–10 张。",
+   "locator": "§4.1，p.6；附录 A，p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d648cb84b8b6ea4:E04",
+   "claim": "宏平均 AUROC 相对 JSON Direct：GPT-5.5 0.751→0.814（+6.23）、Seed2.0-lite 0.688→0.767（+7.93）、Qwen3.5-VL-27B 0.713→0.748（+3.52），均在 95% 分层配对 bootstrap 下显著；最强非 VLM 基线 SubspaceAD 为 0.760。",
+   "locator": "§4.3、Table 1，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d648cb84b8b6ea4:E05",
+   "claim": "OSR 自进化扩展在 Qwen3.5 上 +2.09 pp、GPT-5.5 上 +0.90 pp，但置信区间均跨零，作者将其视为探索性扩展；在 D8 上写出偏向弱分支的规则导致 −5.0 pp。",
+   "locator": "§4.5、Table 3，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_3d648cb84b8b6ea4:E06",
+   "claim": "附录 C 称失败变体在 220 项校准集上调参，而附录 S 写校准集为 20×12=240 项；Figure 1 的 +6.53 pp 与 Table 1 三个增益的平均（约 5.89）不一致，若 Qwen 用 logit 融合则约为 6.52。",
+   "locator": "附录 C，p.16；附录 S，p.29；Figure 1，p.2；§4.3，p.6",
+   "basis": "inference",
+   "basis_note": "数字取自原文；不一致之处及可能口径为阅读者计算与推断，原文未解释。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

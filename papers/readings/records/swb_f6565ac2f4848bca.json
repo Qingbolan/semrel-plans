@@ -1,0 +1,71 @@
+{
+ "id": "swb_f6565ac2f4848bca",
+ "url": "https://arxiv.org/abs/2601.19667",
+ "title": "SynCABEL: Synthetic Contextualized Augmentation for Biomedical Entity Linking",
+ "version": "arXiv:2601.19667v3（2026-05-18），9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2601.19667v3",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_f6565ac2f4848bca.pdf",
+ "sha256": "1e842d07f0b6d35b8d73eebbfe2763d10e90bd11affe7e7499d167278c4e25c6",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/swb_f6565ac2f4848bca",
+ "note": "papers/readings/notes/swb_f6565ac2f4848bca/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–2",
+  "method": "§3.2–3.7，PDF pp.2–3",
+  "evaluation": "§4、Tables 1–6，PDF pp.3–6",
+  "limitations": "§5–6、Tables 7–8、Figure 5，PDF pp.6–7"
+ },
+ "evidence": [
+  {
+   "id": "swb_f6565ac2f4848bca:E01",
+   "claim": "上下文无关的 BEL 模型难以消歧，上下文感知模型依赖稀缺的专家标注；已有 LLM 合成方法只针对训练集已见概念。",
+   "locator": "§1–2.2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f6565ac2f4848bca:E02",
+   "claim": "任务输入为提及、左右上下文和语义组，模型以 GENRE 式自回归生成概念同义词，并用按语义组过滤的前缀树受限解码保证输出合法。",
+   "locator": "§3.1–3.2、§3.6，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f6565ac2f4848bca:E03",
+   "claim": "合成数据由 Llama-3-70B 为每个概念生成 3 条上下文句；SynthMM/SynthQUAERO/SynthSPACCC 分别为 460,878/396,914/1,813,463 个提及；UMLS 两库只覆盖有定义概念（6.5%、4.5%）。",
+   "locator": "§4.1、Table 2，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f6565ac2f4848bca:E04",
+   "claim": "Llama-3-8B+SynCABEL 在 MM-ST21pv、QUAERO-MEDLINE、QUAERO-EMEA、SPACCC 上 Recall@1 为 75.4/79.7/79.0/67.0，平均 75.3，均为表中最高。",
+   "locator": "Table 3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f6565ac2f4848bca:E05",
+   "claim": "SynCABEL 在 MM-ST21pv 与 SPACCC 用 60%、在 QUAERO 用 40% 人工数据即达到全量人工训练水平；仅合成数据训练显著低于全监督。",
+   "locator": "§5.2、Figure 5，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f6565ac2f4848bca:E06",
+   "claim": "未见概念 Recall@1 在 SPACCC 由 20.8 升至 30.2，但仍远低于已见概念 83.0。",
+   "locator": "§5.1、Table 7，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_f6565ac2f4848bca:E07",
+   "claim": "“覆盖全部候选概念”在 UMLS 两个数据集的实验中并未实现，且 LLM 评审与临床医生仅 66.2% 一致，故相关结论应视为有条件成立。",
+   "locator": "§4.1、§4.3，PDF pp.4–6",
+   "basis": "inference",
+   "basis_note": "事实来自原文；关于结论适用范围的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

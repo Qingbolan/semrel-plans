@@ -1,0 +1,71 @@
+{
+ "id": "lit_895989c07787",
+ "url": "https://arxiv.org/abs/2608.06677",
+ "title": "Dong & Wang — From Interpretation to Compilation: A Compilation-Based Execution Engine for Semantic Operator Systems",
+ "version": "arXiv:2608.06677v1（2026-08-07），6 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2608.06677v1",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_895989c07787.pdf",
+ "sha256": "a21861d449dac0e62d873a2ee51cf38bb329e5ebbbe043a25b57ae48bd03f279",
+ "format": "pdf",
+ "pages": 6,
+ "note_directory": "papers/readings/notes/lit_895989c07787",
+ "note": "papers/readings/notes/lit_895989c07787/README.md",
+ "read_sections": {
+  "problem": "§1、Figure 1，PDF pp.1–2",
+  "method": "§2.1–2.4、Figure 2，PDF pp.2–4",
+  "evaluation": "§3.1–3.4、Tables 1–3，PDF pp.4–6",
+  "limitations": "§2.2 末、§2.4、§3.1、§3.4，PDF pp.3–5"
+ },
+ "evidence": [
+  {
+   "id": "lit_895989c07787:E01",
+   "claim": "解释式执行对每个数据项调用 LLM，filter/map 调用数随行数线性增长、join 随候选对数增长；SemBaker 改为每个选中算子调用一次 LLM 生成确定性 Python 函数并本地执行，作为外挂插件通过薄适配器接入 PZ、LOTUS、Nirvana、DocETL 而不改源码。",
+   "locator": "§1–2，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_895989c07787:E02",
+   "claim": "路由规则：受支持且 n̂ ≥ n*=A/r+1 且通过词法可编码性筛查才编译；时间阈值 filter/map n*=11（编译 25s、每行 2.5s），join n*=187（28s、每对 0.15s）；费用阈值 17/14/17；选择率固定 0.5。",
+   "locator": "§2.2，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_895989c07787:E03",
+   "claim": "工作负载：ManyModalQA（100 文本+100 表格）、HybridQA 200、MMQA 四种非视觉题型各 50，均为确定性分层抽样；SemBench movie 10 条；DocETL 的 Steam 与 SMS 各 1,494 条平衡记录；排除图像题，并给含表输入附加 100 条干扰行。",
+   "locator": "§3.1，PDF p.4；Table 2 标题，p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_895989c07787:E04",
+   "claim": "端到端示例：ManyModalQA/PZ EM 0.633→0.568、时间 159.05→13.72s；HybridQA/Nirvana 661.48→50.68s；但 SemBench/LOTUS 8.20→20.42s、MMQA/LOTUS 23.97→36.12s 编译更慢，Steam/DocETL EM 0.870→0.686。",
+   "locator": "Table 2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_895989c07787:E05",
+   "claim": "Table 1 单算子结果与同作者 Vision 论文（arXiv:2607.13407）Table 2 完全相同，文中标注来自 preliminary study [3]。",
+   "locator": "§3.1–3.2、Table 1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_895989c07787:E06",
+   "claim": "Table 3 的 Shared Baseline 与 Table 2 的 Ours 在 MMQA 三行和 Steam 行数值不一致（如 MMQA/PZ 0.425 vs 0.415，时间 50.33 vs 38.20s），论文未解释；§3.1 称评测“全部四个”引擎但只列出三个。",
+   "locator": "Tables 2–3，PDF p.6；§3.1，p.4",
+   "basis": "inference",
+   "basis_note": "阅读者对两表及正文的比对结果。"
+  },
+  {
+   "id": "lit_895989c07787:E07",
+   "claim": "Refine+Validate 因额外 LLM 调用不稳定提升质量而默认关闭；Prompt v1 在 SemBench+PZ 上 F1 从 1.00 降至 0.50；强制全编译在 MMQA+PZ 上 F1 降 14.9%。",
+   "locator": "§2.4、§3.4、Table 3，PDF pp.4–6",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r02",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

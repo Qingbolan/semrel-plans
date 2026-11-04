@@ -1,0 +1,72 @@
+{
+ "id": "swb_7a97369bbf3dea1f",
+ "url": "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf",
+ "title": "Demonstrating TOFFEE: A Learned System for Synthesizing Data Agent Trajectories at Scale",
+ "version": "PVLDB 19(12): 4738–4741, 2026（doi:10.14778/3827998.3828110，演示论文），4 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf",
+ "retrieved_at": "2026-11-04T05:40:25.588565+00:00",
+ "fulltext": "papers/readings/fulltext/swb_7a97369bbf3dea1f.pdf",
+ "sha256": "01ad4c34239ff4b1be7572d073271b3e12c2f0bc68d7b231aa5c5858fadd42d6",
+ "format": "pdf",
+ "pages": 4,
+ "note_directory": "papers/readings/notes/swb_7a97369bbf3dea1f",
+ "note": "papers/readings/notes/swb_7a97369bbf3dea1f/README.md",
+ "read_sections": {
+  "problem": "§1、Figure 1，PDF pp.1–2",
+  "method": "§2、Figure 2，PDF pp.2–3",
+  "evaluation": "§3、Figure 3（300 dpi 渲染核对），PDF p.3",
+  "limitations": "无局限性章节；§3 自称初步结果，§4 演示场景，PDF pp.3–4"
+ },
+ "evidence": [
+  {
+   "id": "swb_7a97369bbf3dea1f:E01",
+   "claim": "现有数据智能体难以泛化到未见数据环境与分析流程；单次生成失败即丢弃进展，Best-of-N 在独立尝试间重复计算；作者提出 C1 任务构造、C2 轨迹搜索空间、C3 每步推理配置选择三项挑战。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7a97369bbf3dea1f:E02",
+   "claim": "任务池构建通过剖析环境、用预定义 SQL 模板发现数据依赖、再让 LLM 出题；依赖先执行，结果作为答案键，并重放验证、剔除不需访问数据即可回答的问题。",
+   "locator": "§2 Task Pool Construction，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7a97369bbf3dea1f:E03",
+   "claim": "Trajectory Explorer 用 MCTS 搜索，同环境任务共享前缀，执行错误时分出修复分支并保留；轨迹仅在确定性校验器确认证据复现与答案匹配后保存。",
+   "locator": "§2 Trajectory Explorer，PDF p.2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7a97369bbf3dea1f:E04",
+   "claim": "LCM 基于轨迹进展、schema 覆盖与错误历史特征，对算子、模型、上下文长度、推理强度配置按 μ+σ 打分，按分歧设分支宽度 K，并以岭回归在线更新 bandit 参数。",
+   "locator": "§2 Learned Cost Model，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7a97369bbf3dea1f:E05",
+   "claim": "同预算下 TOFFEE 轨迹质量始终高于 Single-Pass、Best-of-N（N=5）与 TOFFEE w/o LCM；TOFFEE-27B（SFT）在 KramaBench 和 DSBench 上分别标注为 56.4 与 57.2，KramaBench 超过零样本的两倍。",
+   "locator": "§3、Figure 3，PDF p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_7a97369bbf3dea1f:E06",
+   "claim": "Figure 3b 中零样本与 ICL 柱高约为 KramaBench 20.6/24.8、DSBench 35.4/49.2；这些数值未在原文标注。",
+   "locator": "Figure 3b，PDF p.3",
+   "basis": "inference",
+   "basis_note": "阅读者依 300 dpi 渲染图读取柱高估计，仅作近似。"
+  },
+  {
+   "id": "swb_7a97369bbf3dea1f:E07",
+   "claim": "结果为初步实验：无方差或重复次数，质量分数公式未给出，未报告 TOFFEE-9B 数值，也未与其他轨迹合成方法比较。",
+   "locator": "§3，PDF p.3",
+   "basis": "inference",
+   "basis_note": "根据 4 页正文中缺失的信息归纳，原文未列局限性。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

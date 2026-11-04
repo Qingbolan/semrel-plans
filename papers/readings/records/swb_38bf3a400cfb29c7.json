@@ -1,0 +1,77 @@
+{
+ "id": "swb_38bf3a400cfb29c7",
+ "url": "https://arxiv.org/abs/2605.29427",
+ "title": "Dou, Zhu et al. — FinGuard: Detecting Financial Regulatory Non-Compliance in LLM Interactions",
+ "version": "arXiv:2605.29427v1（2026-05-28），19 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2605.29427",
+ "retrieved_at": "2026-11-04T05:40:11+00:00",
+ "fulltext": "papers/readings/fulltext/swb_38bf3a400cfb29c7.pdf",
+ "sha256": "bc977fce2b060a429f8687cb2d06e3bb881e97d316269cd5d03b74831ae7acb8",
+ "format": "pdf",
+ "pages": 19,
+ "note_directory": "papers/readings/notes/swb_38bf3a400cfb29c7",
+ "note": "papers/readings/notes/swb_38bf3a400cfb29c7/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–2",
+  "method": "§3.2–3.4、Algorithm 1，PDF pp.3–6；附录 A–H，pp.11–13",
+  "evaluation": "§4–5、Tables 5–8、Figure 2，PDF pp.6–8；附录 I（Table 11），p.14",
+  "limitations": "Limitations、Ethics Statement，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "swb_38bf3a400cfb29c7:E01",
+   "claim": "分类体系由 3,120 份中国金融监管文件经 LLM 抽取合规要点、嵌入、HDBSCAN 聚类后归纳，并由 3 名资深金融专家审定，得 11 大类 35 子类。",
+   "locator": "§3.2.1、附录 A，PDF pp.3、11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E02",
+   "claim": "任务分查询级（输入 q+D）与回复级（输入 r+q+D），输出 Safe/Unsafe 及违反的子类集合；主指标为 unsafe 类 F1。",
+   "locator": "§3.1、§4.1，PDF pp.2、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E03",
+   "claim": "FinGuard-Bench 从 1,050 个留出样本经 3 名专家标注（初始一致率 86.9%），修改 108 个标签、丢弃 30 个，最终 1,020 对；查询级 unsafe 72.9%，回复级 30.9%。",
+   "locator": "§3.3、Table 1，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E04",
+   "claim": "训练数据规模：111,293 条查询、1,445,664 条回复，按 1:1 降采样后 495,590 个训练样本；训练标签由多个 Qwen 模型投票得出，在 50 个人工样本上 F1>0.95。",
+   "locator": "§3.2.4、§4.1，PDF pp.4、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E05",
+   "claim": "FinGuard 查询级/回复级 F1 为 90.23/85.43；最强通用基线 Qwen3.5-397B-A17B 为 78.68/64.08，GPT-5.1 为 74.26/64.09；自博弈带来 +6.10/+0.72。",
+   "locator": "§4.2、Table 5，PDF pp.6–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E06",
+   "claim": "仅凭 10 份未见政策文件在消费者权益类上自博弈，100 条专家编写的违规查询上 F1 从 68.42 升至 93.62。",
+   "locator": "§5.3、Table 8，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E07",
+   "claim": "作者承认仅覆盖中国单一法域与语言、监管快照静态、未做通用越狱鲁棒性测试。",
+   "locator": "Limitations，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_38bf3a400cfb29c7:E08",
+   "claim": "基准是同一合成流水线的留出子集，FinGuard 为分布内评测而基线为零样本；§3.2.4 的过滤阈值（低于 4 分过滤）与附录 D（只保留 5 分）不一致。",
+   "locator": "§3.2.4、§3.3、附录 D，PDF pp.4–5、11",
+   "basis": "inference",
+   "basis_note": "事实来自原文；分布内优势与阈值不一致是阅读者比对得出，原文未讨论。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,72 @@
+{
+ "id": "swb_0c557d475309f6b3",
+ "url": "https://aclanthology.org/2025.acl-long.557",
+ "title": "GuideBench: Benchmarking Domain-Oriented Guideline Following for LLM Agents",
+ "version": "ACL 2025 长文（Volume 1），pp.11361–11399，39 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2025.acl-long.557.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_0c557d475309f6b3.pdf",
+ "sha256": "f6ddf755cc74d4a92700875f6f9a8ac7aecccafdc9939132ae450240433c81e0",
+ "format": "pdf",
+ "pages": 39,
+ "note_directory": "papers/readings/notes/swb_0c557d475309f6b3",
+ "note": "papers/readings/notes/swb_0c557d475309f6b3/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，PDF pp.1–2",
+  "method": "§3、§4、Figures 2–3，PDF pp.3–6",
+  "evaluation": "§5–§6、Tables 1–3、Figures 4–5，附录 A、C，PDF pp.6–9、13、35",
+  "limitations": "Limitations、Ethics Statement，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "swb_0c557d475309f6b3:E01",
+   "claim": "GuideBench 共 1,272 个任务、7 个类别（审计算法、价格匹配、文本相关性、数学、agent 对话、摘要、幻觉检测），含 537 条指南规则；前四类为问答，后三类为多选。",
+   "locator": "§3.1–3.2、Figure 3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0c557d475309f6b3:E02",
+   "claim": "数据由人工种子指令出发，LLM 生成规则、上下文和选项，以三种方式组合指南并用 LLM 改写规则以模拟更新，再由人工修正最优选项或参考答案。",
+   "locator": "§3.2.1–3.2.5，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0c557d475309f6b3:E03",
+   "claim": "Table 1 中 DeepSeek-R1 总体准确率最高（87.26%），数学 65.38%；GPT-4o 总体 86.48%，数学仅 13.46%；去掉指南的 GPT-4o* 总体为 80.90%。",
+   "locator": "Table 1，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0c557d475309f6b3:E04",
+   "claim": "DeepSeek-R1 数学题有/无 CoT 的准确率为 65.38/42.31；把规则改写为等价数学式后升至 86.54，用 PoT 则降至 30.27。",
+   "locator": "§6、Tables 2–3，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0c557d475309f6b3:E05",
+   "claim": "主表答案经 GPT-4 解析后打分；不解析时多数模型低于 30%。数据主要基于中文指令。",
+   "locator": "§5.1–5.2、附录 C、Limitations，PDF pp.7、10、35",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_0c557d475309f6b3:E06",
+   "claim": "正文称评测 18 个 LLM，Table 1 列出 19 个；正文称 DeepSeek-R1 总体 87.11%、数学 61.54%，与表中 87.26%、65.38% 不符；正文称 DeepSeek-V3 在文本相关性上领先，表中仅 53.65%。正文也没有单独报告规则更新前后的对比结果。",
+   "locator": "§1、§5.1–5.2、Table 1，PDF pp.2、6–7",
+   "basis": "inference",
+   "basis_note": "原文已给出数值或事实；结论或对照为阅读者分析，原文未直接陈述。"
+  },
+  {
+   "id": "swb_0c557d475309f6b3:E07",
+   "claim": "各类任务数（审计 230、价格 442、文本相关 192、数学 52、对话 180、摘要 58、幻觉 118）由阅读者根据 Table 1 的准确率粒度与 Figure 3 的数值对应反推。",
+   "locator": "Figure 3、Table 1，PDF pp.4、6",
+   "basis": "inference",
+   "basis_note": "Figure 3 只给出数值，未标明与类别的对应关系；对应关系为阅读者计算。"
+  }
+ ],
+ "batch": "r13",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

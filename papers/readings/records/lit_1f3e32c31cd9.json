@@ -1,0 +1,65 @@
+{
+ "id": "lit_1f3e32c31cd9",
+ "url": "https://aclanthology.org/2024.emnlp-main.1259.pdf",
+ "title": "Zhao et al. — LongRAG: A Dual-Perspective Retrieval-Augmented Generation Paradigm for Long-Context Question Answering",
+ "version": "EMNLP 2024 main，pp.22600–22632，33 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.emnlp-main.1259.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/lit_1f3e32c31cd9.pdf",
+ "sha256": "0a5f3581f839ff96407a649f98fd32fac56e774f4f11342a83ec6a1e087e441e",
+ "format": "pdf",
+ "pages": 33,
+ "note_directory": "papers/readings/notes/lit_1f3e32c31cd9",
+ "note": "papers/readings/notes/lit_1f3e32c31cd9/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1、§3.1，PDF pp.1–3",
+  "method": "§3.2、§4.1–4.5、Figure 2，PDF pp.3–6；附录 C，pp.15–16、22",
+  "evaluation": "§5.1–5.4、Tables 1–3、Figures 3–4，PDF pp.6–9；附录 A–B，pp.14–15",
+  "limitations": "§7，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "lit_1f3e32c31cd9:E01",
+   "claim": "长上下文 LLM 存在 lost in the middle 问题；Vanilla RAG 的切块破坏全局信息，且长文档证据密度低导致检索噪声；Self-RAG、CRAG 分别可能误删有效 chunk 或忽略跨 chunk 关联。",
+   "locator": "Abstract、§1、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1f3e32c31cd9:E02",
+   "claim": "LongRAG 由混合检索器、把 chunk 映射回源段落后抽取全局信息 Ig 的 LLM 抽取器、先生成全局 CoT 再逐 chunk 输出 <support> 判定的过滤器（得到 Id）、以及综合 Ig 与 Id 的生成器组成；默认 chunk 200 词、top-k=7。",
+   "locator": "§3.1、§4.1–4.4、§5.1，公式 1–5，PDF pp.3–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1f3e32c31cd9:E03",
+   "claim": "测试使用 LongBench 中 HotpotQA、2WikiMQA、MuSiQue 各 200 题，检索语料由每题自带段落拆分去重得到（段落数 1715/1464/1877），指标为 F1。",
+   "locator": "§5.1、Table 2，PDF pp.6–7；附录 B.2，p.15",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1f3e32c31cd9:E04",
+   "claim": "微调数据 LRGinstruction 由 ChatGLM3-32B-128k 自动构造并经自评器筛选，三个多跳数据集训练集各 800 条、QASPER 200 条，合计 2,600 条。",
+   "locator": "§3.2、附录 C.5、Table 15，PDF pp.3–4、16、22",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_1f3e32c31cd9:E05",
+   "claim": "Table 1 中 LongRAG-GLM-4（无 SFT）平均 F1 52.56，为最高；微调后的 ChatGLM3-6B 版 47.93 高于 GPT-3.5-Turbo 版 46.79；摘要中的 6.94%、6.16%、17.25% 是不同骨干间的 F1 绝对点差（46.88−39.94、46.79−40.63、44.66−27.41）。",
+   "locator": "§1、§5.2、Table 1，PDF pp.2、6–7",
+   "basis": "inference",
+   "basis_note": "数字与页码来自原文；对比口径、算术核对或项目适用性为阅读者分析，正文已标注。"
+  },
+  {
+   "id": "lit_1f3e32c31cd9:E06",
+   "claim": "基线 Self-RAG、CRAG、LongLoRA、LongAlign 的输出经 GPT-3.5-Turbo 少样本改写成最终答案后再计 F1，CRAG 的网络回退改为本地语料再检索；局限为一次性检索依赖和自生成微调数据的标注偏差。",
+   "locator": "附录 B.1，PDF pp.14–15；§7，p.9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r08",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

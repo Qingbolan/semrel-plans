@@ -1,0 +1,65 @@
+{
+ "id": "lit_cc6117e713bf",
+ "url": "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf",
+ "title": "Mudiyala — Automated Metadata Generation Using Large Language Models: A GPT-4 Case Study for Enterprise Data Profiling",
+ "version": "Sarcouncil Journal of Engineering and Computer Sciences 4(7), pp.769–775（2025-07-18 出版，DOI 10.5281/zenodo.16085483），7 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf",
+ "retrieved_at": "2026-11-04T05:07:18.457550+00:00",
+ "fulltext": "papers/readings/fulltext/lit_cc6117e713bf.pdf",
+ "sha256": "8877e2534dafac45fd6d645640033b7970d702cf6a9921761699c6af1e3c951d",
+ "format": "pdf",
+ "pages": 7,
+ "note_directory": "papers/readings/notes/lit_cc6117e713bf",
+ "note": "papers/readings/notes/lit_cc6117e713bf/README.md",
+ "read_sections": {
+  "problem": "Introduction、Background，PDF pp.1–3（journal pp.769–771）",
+  "method": "Methodology、Fig.1、Table 2，PDF pp.3–4（pp.771–772）",
+  "evaluation": "Evaluation Framework、Case Study、Table 3，PDF pp.4–5（pp.772–773）",
+  "limitations": "Implementation Challenges、Table 4、Conclusion，PDF pp.5–7（pp.773–775）"
+ },
+ "evidence": [
+  {
+   "id": "lit_cc6117e713bf:E01",
+   "claim": "作者认为传统剖析只能提供类型、空值率、基数等技术元数据，无法区分如“amt”是交易金额还是修订日期这类语义，因此提出用 GPT-4 生成列级描述。",
+   "locator": "Introduction、Limitations of Current Approaches，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cc6117e713bf:E02",
+   "claim": "框架由数据抽取层（采样、脱敏）、GPT-4 处理模块（零样本、少样本、上下文增强、模板、自适应提示）和元数据注入服务（语法/语义校验）组成。",
+   "locator": "Methodology、Fig.1、Table 2，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cc6117e713bf:E03",
+   "claim": "Table 3 只给出四类数据的列数和行数区间（如 Transactional 50–200 列、百万行级），未给出任何具体数据集名称、表数或样本量。",
+   "locator": "Case Study、Table 3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cc6117e713bf:E04",
+   "claim": "全文未报告任何定量评测结果、基线数值或人工评估数据；“优于传统剖析”“显著改进”等结论只有定性陈述。",
+   "locator": "Experimental Results、Performance Analysis、Conclusion，PDF pp.5–7",
+   "basis": "inference",
+   "basis_note": "依据通读全文未见数值结果；“不能作为量化证据”的判断为阅读者分析。"
+  },
+  {
+   "id": "lit_cc6117e713bf:E05",
+   "claim": "Table 4 列出领域混淆、缩写误读、敏感数据暴露、时间不一致四类失败模式及缓解策略，频率只用 Rare/Common 等词，表头标注来源为 Luo et al. 2024。",
+   "locator": "Implementation Challenges、Table 4，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_cc6117e713bf:E06",
+   "claim": "集成设计包括新表注册或模式变化时的事件触发、通过 Unity Catalog API 写入并保留版本与血缘，以及映射到 Apache Atlas 类型体系。",
+   "locator": "Integration with Data Catalogs，PDF p.6",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

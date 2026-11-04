@@ -1,0 +1,65 @@
+{
+ "id": "swb_19417c58a6cc712f",
+ "url": "https://link.springer.com/article/10.1186/s13073-019-0687-x",
+ "title": "Standard operating procedure for curation and clinical interpretation of variants in cancer",
+ "version": "Genome Medicine 11:76（2019），PMC6883603 出版社 PDF（PMC 开放数据 S3 副本），12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6883603.1/PMC6883603.1.pdf",
+ "retrieved_at": "2026-11-04T05:40:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_19417c58a6cc712f.pdf",
+ "sha256": "77b7414099bb3b055c004b1f492dd3130bd6fa41f4723517ff1d5dcecf563db6",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/swb_19417c58a6cc712f",
+ "note": "papers/readings/notes/swb_19417c58a6cc712f/README.md",
+ "read_sections": {
+  "problem": "Abstract、Introduction，pp.1–2",
+  "method": "知识模型与各层策展规则，pp.2–10，Figs. 1–5",
+  "evaluation": "无实验；Abstract 规模与 Conclusions 采用情况，pp.1、10–11",
+  "limitations": "Conclusions pp.10–11；Evidence Rating 主观性 p.7"
+ },
+ "evidence": [
+  {
+   "id": "swb_19417c58a6cc712f:E01",
+   "claim": "CIViC 采用四层知识模型：Gene、Variant、Evidence Item、Assertion；提交内容须经 Editor 接受，策展者不能接受自己的提交。",
+   "locator": "pp.2–3，Fig. 1",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_19417c58a6cc712f:E02",
+   "claim": "Evidence Item 有 12 个必填字段；证据等级分 A–E 五级，证据类型分 Predictive、Diagnostic、Prognostic、Predisposing、Functional 五类；每条 Evidence Item 只能关联一个 Disease Ontology 疾病。",
+   "locator": "pp.6–7，Fig. 3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_19417c58a6cc712f:E03",
+   "claim": "Variant Evidence Score 为各 Evidence Item 的星级乘以等级权重（A=10、B=5、C=3、D=1、E=0.5）之和，只衡量策展量，不考虑冲突证据。",
+   "locator": "p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_19417c58a6cc712f:E04",
+   "claim": "Assertion 汇总多条已接受的 Evidence Item，体细胞类按 AMP-ASCO-CAP 给出 Tier I–IV 与 Level A–D，Predisposing 类按 ACMG-AMP 2015 五级分类。",
+   "locator": "pp.8–10，Figs. 4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_19417c58a6cc712f:E05",
+   "claim": "摘要给出规模为 6,300 余条 Evidence Item、2,300 余个变异、400 余个基因；全文无实验、无一致性或错误率测量。",
+   "locator": "Abstract p.1；全文",
+   "basis": "inference",
+   "basis_note": "规模数字为原文；'无实验/无一致性测量'是阅读者通读全文后的判断。"
+  },
+  {
+   "id": "swb_19417c58a6cc712f:E06",
+   "claim": "原文承认 Evidence Rating 仍有一定主观性，只以最佳实践表指导；FDA 认可仍在进行中。",
+   "locator": "p.7；p.11",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

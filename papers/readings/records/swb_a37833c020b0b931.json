@@ -1,0 +1,71 @@
+{
+ "id": "swb_a37833c020b0b931",
+ "url": "https://aclanthology.org/P16-1166",
+ "title": "Situation entity types: automatic classification of clause-level aspect",
+ "version": "ACL 2016 长文，pp.1757–1768，ACL Anthology P16-1166，12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/P16-1166.pdf",
+ "retrieved_at": "2026-11-04T05:53:18.213475+00:00",
+ "fulltext": "papers/readings/fulltext/swb_a37833c020b0b931.pdf",
+ "sha256": "abc7d3d98a13e713770ad494714d373ce2a7ec7ab19771a53c165dbedcc3d644",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/swb_a37833c020b0b931",
+ "note": "papers/readings/notes/swb_a37833c020b0b931/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，pp.1757–1758",
+  "method": "§4–5、Table 3，pp.1759–1761",
+  "evaluation": "§6.1–6.6、Table 5–11、Figure 3，pp.1761–1764",
+  "limitations": "§7–8，pp.1764–1765"
+ },
+ "evidence": [
+  {
+   "id": "swb_a37833c020b0b931:E01",
+   "claim": "先前唯一的 SE 分类系统 UT07 只用约 4,300 个 Brown 子句、主要依赖词与词性特征，准确率约 53%。",
+   "locator": "§1，p.1757",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_a37833c020b0b931:E02",
+   "claim": "新语料 MASC（12 个书面体裁，30,333 个 SE，Fleiss κ 0.69）与 Wikipedia（10,607 个 SE，κ 0.66），三人标注多数投票；MASC 以 STATE 为主，Wikipedia 以 GENERIC 为主。",
+   "locator": "§4、Table 1–2，p.1759",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_a37833c020b0b931:E03",
+   "claim": "模型为线性链 CRF（CRF++），特征集 A 为词性与 Brown 聚类，B 为主动词、主指称、子句句法语义特征；按 80/20 文档不重叠划分开发与留出测试。",
+   "locator": "§5、§6.2、Table 3，pp.1760–1762",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_a37833c020b0b931:E04",
+   "claim": "A+B 在开发集 10 折 CV 上准确率 76.4%、宏 F1 71.2，人类上界 79.6%；留出测试集 7,937 实例上准确率 74.7%。",
+   "locator": "Table 6–7，p.1762",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_a37833c020b0b931:E05",
+   "claim": "CRF 比 MaxEnt 准确率高（76.4 vs 74.1），GENERIC 获益最大；无同体裁训练数据时准确率降至 71.8%，GENERIC F1 降 23.5 点。",
+   "locator": "§6.5–6.6、Table 9–10，pp.1763–1764",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_a37833c020b0b931:E06",
+   "claim": "抽象实体单独用谓词表过滤器识别，估计精确率 85.8%、召回约 80%；标注者常漏标抽象实体。",
+   "locator": "§7，pp.1764–1765",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_a37833c020b0b931:E07",
+   "claim": "开发部分 32,855 与测试 7,937 之和 40,792 小于 Table 1 合计 40,940，差额来源原文未说明；GENERALIZING F1 仅 29.4 表明低频类仍未解决。",
+   "locator": "§6.2、Table 1、Table 9，pp.1759–1763",
+   "basis": "inference",
+   "basis_note": "数字来自原文；求和比较与评价为阅读者分析。"
+  }
+ ],
+ "batch": "r16",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

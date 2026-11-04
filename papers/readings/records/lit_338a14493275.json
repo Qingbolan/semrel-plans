@@ -1,0 +1,71 @@
+{
+ "id": "lit_338a14493275",
+ "url": "https://doi.org/10.1111/cgf.70110",
+ "title": "Wang et al. — VizTA: Enhancing Comprehension of Distributional Visualization with Visual-Lexical Fused Conversational Interface",
+ "version": "arXiv:2504.14507v1（2025-04-20），Computer Graphics Forum 44(3)（EuroVis 2025）开放获取版式，12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2504.14507v1",
+ "retrieved_at": "2026-11-04T05:20:55.952791+00:00",
+ "fulltext": "papers/readings/fulltext/lit_338a14493275.pdf",
+ "sha256": "e42009c954241eba340a928078f625a86eedcfba9084d26ed96adb7de97ff741",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/lit_338a14493275",
+ "note": "papers/readings/notes/lit_338a14493275/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–4",
+  "method": "§3.2、§4、Table 1、Fig.5，PDF pp.4–6",
+  "evaluation": "§5–6、Fig.7，PDF pp.6–10",
+  "limitations": "§7，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "lit_338a14493275:E01",
+   "claim": "现有 LLM 读图对话缺少针对细粒度图元的上下文解释，文字与图元之间缺少显式关联；9 人形成性研究显示，读者用指示语指代单个图元或整组数据，并希望得到带视觉引导的上下文解释。",
+   "locator": "§1、§2.2、§3.1，PDF pp.1–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_338a14493275:E02",
+   "claim": "图元定义为 {mark, identifier, data, context}，分为元素级四类（摘要、连续、离散、功能标记）和组级；读者拖放图元形成 `[tag: [id, data]]`，代理输出 `[cite: id]` 行内引用，悬停时高亮图元。",
+   "locator": "§3.2、§4.2、Table 1，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_338a14493275:E03",
+   "claim": "代理基于 gpt-4o（LLM 而非 VLM），初始化时注入图表规格、数据描述、图表知识 C、图表数据 D、SVG ID 列表 I、VLM 截图描述和引用教程 few-shot 提示。",
+   "locator": "§4.3–4.4、Fig.5，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_338a14493275:E04",
+   "claim": "被试间研究共 24 人（每组 12 人），Mini-VLAT 筛选线为 6/12；任务一为 4 场景×4 道单选题，任务二为 2 场景×2 道开放题，参与者口头陈述答案。",
+   "locator": "§6.1，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_338a14493275:E05",
+   "claim": "VizTA 单选正确率 75.5%，基线 62.5%（p=.006，r=.55）；开放题通过率 97.9% 对 75.0%（p=.001）；引用数据点 150 对 84。",
+   "locator": "§6.2.1、Fig.7，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_338a14493275:E06",
+   "claim": "基线同时去掉了融合交互和 D、C、I 三类注入信息，因此观察到的提升无法单独归因于交互设计。",
+   "locator": "§6.1.2，PDF p.8",
+   "basis": "inference",
+   "basis_note": "基线构成为原文所述；“无法单独归因”是阅读者根据实验设计作出的推断。"
+  },
+  {
+   "id": "lit_338a14493275:E07",
+   "claim": "原文局限：参与者多为研究生，未测低素养人群、AI 依赖和长期学习；LLM 依据数值继续推理时仍会出错，未定量评估数学描述和引用的准确性。",
+   "locator": "§7，PDF p.10",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,66 @@
+{
+ "id": "swb_ea28fbbdd292a25a",
+ "url": "https://aclanthology.org/L18-1257",
+ "title": "Park & Cardie — A Corpus of eRulemaking User Comments for Measuring Evaluability of Arguments",
+ "version": "LREC 2018 论文集 pp.1623–1628，ACL Anthology L18-1257 PDF，6 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/L18-1257.pdf",
+ "retrieved_at": "2026-11-04T05:36:55+00:00",
+ "fulltext": "papers/readings/fulltext/swb_ea28fbbdd292a25a.pdf",
+ "sha256": "4d5472d305b8fe439af25b69bca56b8f593bf8e09020d9397ece4cd263f7041a",
+ "format": "pdf",
+ "pages": 6,
+ "note_directory": "papers/readings/notes/swb_ea28fbbdd292a25a",
+ "note": "papers/readings/notes/swb_ea28fbbdd292a25a/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，PDF pp.1–2",
+  "method": "§3 标注方案、§4 标注研究、Table 1，PDF pp.2–4",
+  "evaluation": "§4 一致性 α、§5 Tables 2–3、Figure 2，PDF pp.4–5",
+  "limitations": "§4 分歧分析、§5 邻接偏置说明、§6 未来工作，PDF pp.4–5；无独立局限章节"
+ },
+ "evidence": [
+  {
+   "id": "swb_ea28fbbdd292a25a:E01",
+   "claim": "eRulemaking 评论常缺少理由和证据，机构无法评估其有效性与强度而忽略；可评估性指论证中每个命题都有合适类型的显式支持。",
+   "locator": "摘要、§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ea28fbbdd292a25a:E02",
+   "claim": "标注 5 类基本单元（POLICY、VALUE、FACT、TESTIMONY、REFERENCE）与 Reason/Evidence 两类支持关系；Evidence 只能由 TESTIMONY 或 REFERENCE 充当；Table 1 给出各命题类型的合适支持。",
+   "locator": "§3、Table 1，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ea28fbbdd292a25a:E03",
+   "claim": "每条评论两人用 GATE 独立标注、第三人裁决；Krippendorff α：单元类型 64.8%，支持关系 44.1%。",
+   "locator": "§4，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ea28fbbdd292a25a:E04",
+   "claim": "语料含 731 条 CFPB 债务催收规则评论、4,931 个基本单元，其中 VALUE 2,182、POLICY 815、TESTIMONY 1,117、FACT 785、REFERENCE 32。",
+   "locator": "§5、Table 2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ea28fbbdd292a25a:E05",
+   "claim": "支持关系数正文写 1,221，Table 2 为 Reason 1,174 + Evidence 46 = 1,220。",
+   "locator": "摘要、§5–6、Table 2，PDF pp.1、4–5",
+   "basis": "inference",
+   "basis_note": "数值来自原文，差异为阅读者核算。"
+  },
+  {
+   "id": "swb_ea28fbbdd292a25a:E06",
+   "claim": "约 75% 支持关系位于相邻单元，作者指出这可能部分源于标注者更易发现邻近关系；论文无自动模型实验和数据划分。",
+   "locator": "§5–6，PDF pp.4–5",
+   "basis": "inference",
+   "basis_note": "邻接偏置为原文陈述；“无模型实验与划分”为阅读者对全文的归纳。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

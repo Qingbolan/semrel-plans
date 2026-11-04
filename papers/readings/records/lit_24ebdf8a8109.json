@@ -1,0 +1,78 @@
+{
+ "id": "lit_24ebdf8a8109",
+ "url": "https://arxiv.org/abs/2605.10906",
+ "title": "Du, Yang et al. — DataMaster: Data-Centric Autonomous AI Research",
+ "version": "arXiv 2605.10906v2（2026-05-13），28 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2605.10906v2",
+ "retrieved_at": "2026-11-04T05:02:21.471704+00:00",
+ "fulltext": "papers/readings/fulltext/lit_24ebdf8a8109.pdf",
+ "sha256": "0faea57cfdfd4a0169c61985087fb416ea8f3cd2a667ace018e35b535e5a3af5",
+ "format": "pdf",
+ "pages": 28,
+ "note_directory": "papers/readings/notes/lit_24ebdf8a8109",
+ "note": "papers/readings/notes/lit_24ebdf8a8109/README.md",
+ "read_sections": {
+  "problem": "§1、§3.1，PDF pp.1–4",
+  "method": "§3.2–3.5、Fig.1，PDF pp.4–7；附录 C，pp.22–24",
+  "evaluation": "§4、Tables 1–4、Figs.2–5，PDF pp.7–12；附录 B、D，pp.16–27",
+  "limitations": "无独立章节；§4.4 泄漏分析 pp.11–12、附录 B.3 p.18、附录 D.1 pp.24–25"
+ },
+ "evidence": [
+  {
+   "id": "lit_24ebdf8a8109:E01",
+   "claim": "问题定义为任务条件下的自主数据工程：给定任务 T、固定算法 a0、初始数据状态 D0 和预算 B，在可达数据状态中搜索使下游性能 E(T,a0,D) 最大的 D*，只允许数据侧操作。",
+   "locator": "§3.1，式(1)，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E02",
+   "claim": "DataTree 用红节点做外部数据发现并写入共享 Data Pool，黑节点选择、清洗、适配数据并生成可执行 DataLoader 提交训练；Global Memory 记录节点结果；调度使用 UCB1 式分数与分阶段衰减的探索系数。",
+   "locator": "§3.3–3.5，PDF pp.5–7；附录 C，pp.22–24",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E03",
+   "claim": "MLE-Bench Lite 为 22 个 Kaggle 竞赛；PostTrainBench 在不给训练数据的条件下后训练 Qwen3-1.7B-Base，评测 AIME 2025、Arena-Hard Writing、BFCL、GPQA、GSM8K、HealthBench Easy、HumanEval 七项；所有系统以 GLM-5 为骨干、每任务 12 小时。",
+   "locator": "§4.1–4.2，PDF pp.7–8；附录 B.2，p.17",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E04",
+   "claim": "Table 1 中 DataMaster 的 MLE-Bench Lite 奖牌率 68.18%（初始 35.91%）、金牌率 45.45%，PostTrainBench 平均 31.17%（基座 8.47%），GPQA 31.02% 高于 instruct 模型 30.35%。",
+   "locator": "Table 1，PDF p.8；§4.2，p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E05",
+   "claim": "§1 称 PostTrainBench 平均分比最强非人类基线高 +19.79 点，但 Table 1 中最强非人类基线 DataFlex 为 19.09%，差值为 12.08（§4.2 亦写 12.08）；摘要的“+32.27%”实为百分点。",
+   "locator": "§1，PDF p.2；Table 1，p.8；§4.2，p.9；Table 3，p.11",
+   "basis": "inference",
+   "basis_note": "各数值来自原文；口径不一致由阅读者比对得出。"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E06",
+   "claim": "组件消融（10 个 MLE-Bench Lite 任务）中，完整系统最佳节点奖牌率 90%、金牌率 80%、超越率 69.96%；去掉 Global Memory 后超越率 28.57%、金牌率 20%。",
+   "locator": "§4.3、Table 2，PDF pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E07",
+   "claim": "GPQA 泄漏审计覆盖 7,479 条发现的训练样本与 448 条测试样本，精确与模糊匹配为 0，3–5-gram 重叠 0.08%–1.06%。",
+   "locator": "§4.4、Fig.4，PDF pp.11–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_24ebdf8a8109:E08",
+   "claim": "基线并非全部同条件端到端运行：PostTrainBench 的 Codex 结果取自原论文（GPT-5.2-Codex），DataFlex 使用 DataMaster 最佳节点的数据集，DatasetResearch 由 Claude Code 适配数据。",
+   "locator": "附录 B.3，PDF p.18",
+   "basis": "inference",
+   "basis_note": "实现细节为原文；“不同条件”为阅读者归纳。"
+  }
+ ],
+ "batch": "r02",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

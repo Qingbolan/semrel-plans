@@ -1,0 +1,606 @@
+[
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.1007/978-3-031-70362-1_22",
+    "title": "LATuner: An LLM-Enhanced Database Tuning System Based on Adaptive Surrogate Model",
+    "url": "https://doi.org/10.1007/978-3-031-70362-1_22",
+    "year": 2024,
+    "venue": "Lecture Notes in Computer Science; Machine Learning and Knowledge Discovery in Databases. Research Track",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1007%2F978-3-031-70362-1_22"
+    ],
+    "metadata_verified": true,
+    "verification_note": "Original URL incorrectly puts a Springer DOI under dl.acm.org; normalized to DOI resolver."
+  },
+  {
+    "original_url": "https://vldb.org/pvldb/vol17/p1939-tang.pdf",
+    "title": "GPTuner: A Manual-Reading Database Tuning System via GPT-Guided Bayesian Optimization",
+    "url": "https://vldb.org/pvldb/vol17/p1939-tang.pdf",
+    "year": 2024,
+    "venue": "VLDB 2024",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://vldb.org/pvldb/vol17/p1939-tang.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/1.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.1145/3709652",
+    "title": "λ-Tune: Harnessing Large Language Models for Automated Database System Tuning",
+    "url": "https://doi.org/10.1145/3709652",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3709652"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.14778/3696435.3696440",
+    "title": "LLM-R2: A Large Language Model Enhanced Rule-Based Rewrite System for Boosting Query Efficiency",
+    "url": "https://doi.org/10.14778/3696435.3696440",
+    "year": 2024,
+    "venue": "Proceedings of the VLDB Endowment",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.14778%2F3696435.3696440"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/epdf/10.1145/3769771",
+    "title": "Can Large Language Models Be Query Optimizer for Relational Databases?",
+    "url": "https://doi.org/10.1145/3769771",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3769771"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.14778/3685800.3685869",
+    "title": "DBG-PT: A Large Language Model Assisted Query Performance Regression Debugger",
+    "url": "https://doi.org/10.14778/3685800.3685869",
+    "year": 2024,
+    "venue": "Proceedings of the VLDB Endowment",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.14778%2F3685800.3685869"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.1145/3709663",
+    "title": "Automatic Database Configuration Debugging using Retrieval-Augmented Language Models",
+    "url": "https://doi.org/10.1145/3709663",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3709663"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf",
+    "title": "Data Imputation with Limited Data Redundancy Using Data Lakes",
+    "url": "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf",
+    "year": 2025,
+    "venue": "VLDB 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/7.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.1145/3665939.3665957",
+    "title": "Cocoon: Semantic Table Profiling Using Large Language Models",
+    "url": "https://doi.org/10.1145/3665939.3665957",
+    "year": 2024,
+    "venue": "Proceedings of the 2024 Workshop on Human-In-the-Loop Data Analytics",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3665939.3665957"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.1145/3725337",
+    "title": "Pneuma : Leveraging LLMs for Tabular Data Representation and Retrieval in an End-to-End System",
+    "url": "https://doi.org/10.1145/3725337",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3725337"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/10.1145/3539618.3591708",
+    "title": "Large Language Models are Versatile Decomposers: Decomposing Evidence and Questions for Table-based Reasoning",
+    "url": "https://doi.org/10.1145/3539618.3591708",
+    "year": 2023,
+    "venue": "Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145/3539618.3591708"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.1145/3616855.3635752",
+    "title": "Table Meets LLM: Can Large Language Models Understand Structured Table Data? A Benchmark and Empirical Study",
+    "url": "https://doi.org/10.1145/3616855.3635752",
+    "year": 2024,
+    "venue": "Proceedings of the 17th ACM International Conference on Web Search and Data Mining",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3616855.3635752"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/10121440",
+    "title": "Chat2VIS: Generating Data Visualizations via Natural Language Using ChatGPT, Codex and GPT-3 Large Language Models",
+    "url": "https://doi.org/10.1109/access.2023.3274199",
+    "year": 2023,
+    "venue": "IEEE Access",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/access.2023.3274199"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf",
+    "title": "Docopilot: Improving Multimodal Models for Document-Level Understanding",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf",
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/13.txt"
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/10555321",
+    "title": "Enhancing Data Literacy On-Demand: LLMs as Guides for Novices in Chart Interpretation",
+    "url": "https://doi.org/10.1109/tvcg.2024.3413195",
+    "year": 2025,
+    "venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/tvcg.2024.3413195"
+    ],
+    "metadata_verified": true,
+    "verification_note": "Journal issue publication is 2025; DOI contains 2024 early-publication year."
+  },
+  {
+    "original_url": "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70112?af=R",
+    "title": "InterChat: Enhancing Generative Visual Analytics using Multimodal Interactions",
+    "url": "https://doi.org/10.1111/cgf.70112",
+    "year": 2025,
+    "venue": "Computer Graphics Forum",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1111%2Fcgf.70112"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70110",
+    "title": "VizTA: Enhancing Comprehension of Distributional Visualization with Visual‐Lexical Fused Conversational Interface",
+    "url": "https://doi.org/10.1111/cgf.70110",
+    "year": 2025,
+    "venue": "Computer Graphics Forum",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1111%2Fcgf.70110"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/11113071",
+    "title": "Rabbit: Retrieval-Augmented Generation Enables Better Automatic Database Knob Tuning",
+    "url": "https://doi.org/10.1109/icde65448.2025.00284",
+    "year": 2025,
+    "venue": "2025 IEEE 41st International Conference on Data Engineering (ICDE)",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/icde65448.2025.00284"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/10.1145/3769758",
+    "title": "AgentTune: An Agent-Based Large Language Model Framework for Database Knob Tuning",
+    "url": "https://doi.org/10.1145/3769758",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3769758"
+    ],
+    "metadata_verified": true,
+    "verification_note": "Crossref records PACMMOD publication in 2025; discovery list uses SIGMOD 2026 presentation year."
+  },
+  {
+    "original_url": "https://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf",
+    "title": "SERAG: Self-Evolving RAG System for Query Optimization",
+    "url": "https://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf",
+    "year": 2025,
+    "venue": "aiDM 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/19.txt",
+    "verification_note": "Verified actual SERAG first page; rejected similarly titled SEFRQO Crossref candidate."
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/10.1145/3725278",
+    "title": "Cracking SQL Barriers: An LLM-based Dialect Translation System",
+    "url": "https://doi.org/10.1145/3725278",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3725278"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/cidrdb/papers/2024/p6-singh.pdf",
+    "title": "Panda: Performance Debugging for Databases using LLM Agents",
+    "url": "https://www.vldb.org/cidrdb/papers/2024/p6-singh.pdf",
+    "year": 2024,
+    "venue": "CIDR 2024",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/cidrdb/papers/2024/p6-singh.pdf",
+      "https://www.cidrdb.org/cidr2024/program.html"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/21.txt",
+    "verification_note": "PDF retains an unfilled ACM 2018 template. Year and venue verified from the official CIDR 2024 program, not that template."
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/pdf/10.1145/3674399.3674436",
+    "title": "IterClean: An Iterative Data Cleaning Framework with Large Language Models",
+    "url": "https://doi.org/10.1145/3674399.3674436",
+    "year": 2024,
+    "venue": "ACM Turing Award Celebration Conference 2024",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3674399.3674436"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/DATAI/DATAI25_8.pdf",
+    "title": "CleanAgent: Automating Data Standardization with LLM-based Agents",
+    "url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/DATAI/DATAI25_8.pdf",
+    "year": 2025,
+    "venue": "VLDB Workshop 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/DATAI/DATAI25_8.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/23.txt"
+  },
+  {
+    "original_url": "https://www.vldb.org/pvldb/vol18/p2371-tang.pdf",
+    "title": "Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation",
+    "url": "https://www.vldb.org/pvldb/vol18/p2371-tang.pdf",
+    "year": 2025,
+    "venue": "VLDB 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p2371-tang.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/24.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/abs/10.14778/3659437.3659461",
+    "title": "Chorus: Foundation Models for Unified Data Discovery and Exploration",
+    "url": "https://doi.org/10.14778/3659437.3659461",
+    "year": 2024,
+    "venue": "Proceedings of the VLDB Endowment",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.14778%2F3659437.3659461"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/abstract/document/10597732",
+    "title": "DATALORE: Can a Large Language Model Find All Lost Scrolls in a Data Repository?",
+    "url": "https://doi.org/10.1109/ICDE60146.2024.00388",
+    "year": 2024,
+    "venue": "ICDE",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://ieeexplore.ieee.org/document/10597732/"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf",
+    "title": "Automated Metadata Generation Using Large Language Models: A GPT-4 Case Study for Enterprise Data Profiling",
+    "url": "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf",
+    "year": 2025,
+    "venue": "Sarcouncil Journal of Engineering and Computer Sciences",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/27.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/10.14778/3659437.3659452",
+    "title": "ReAcTable: Enhancing ReAct for Table Question Answering",
+    "url": "https://doi.org/10.14778/3659437.3659452",
+    "year": 2024,
+    "venue": "Proceedings of the VLDB Endowment",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.14778%2F3659437.3659452"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf",
+    "title": "AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models",
+    "url": "https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf",
+    "year": 2024,
+    "venue": "VLDB 2024",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/29.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/pdf/10.14778/3749646.3749713",
+    "title": "QUEST: Query Optimization in Unstructured Document Analysis",
+    "url": "https://doi.org/10.14778/3749646.3749713",
+    "year": 2025,
+    "venue": "Proceedings of the VLDB Endowment",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.14778%2F3749646.3749713"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf",
+    "title": "Doctopus: Budget-aware Structural Table Extraction from Unstructured Documents",
+    "url": "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf",
+    "year": 2025,
+    "venue": "VLDB 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/31.txt"
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/10766492",
+    "title": "From Data to Story: Towards Automatic Animated Data Video Creation with LLM-Based Multi-Agent Systems",
+    "url": "https://doi.org/10.1109/gen4ds63889.2024.00008",
+    "year": 2024,
+    "venue": "2024 IEEE VIS Workshop on Data Storytelling in an Era of Generative AI (GEN4DS)",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/gen4ds63889.2024.00008"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/10753451",
+    "title": "LightVA: Lightweight Visual Analytics With LLM Agent-Based Task Planning and Execution",
+    "url": "https://doi.org/10.1109/tvcg.2024.3496112",
+    "year": 2025,
+    "venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/tvcg.2024.3496112"
+    ],
+    "metadata_verified": true,
+    "verification_note": "Journal issue publication is 2025; DOI contains 2024 early-publication year."
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/10988687",
+    "title": "ChartInsighter: An Approach for Mitigating Hallucination in Time-Series Chart Summary Generation With a Benchmark Dataset",
+    "url": "https://doi.org/10.1109/tvcg.2025.3567122",
+    "year": 2025,
+    "venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/tvcg.2025.3567122"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/11037292",
+    "title": "VOICE: Visual Oracle for Interaction, Conversation, and Explanation",
+    "url": "https://doi.org/10.1109/TVCG.2025.3579956",
+    "year": 2025,
+    "venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://repository.kaust.edu.sa/bitstreams/6391d3df-415d-4f76-b1e3-55c79d00eac8/download"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+    "title": "AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries",
+    "url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+    "year": 2025,
+    "venue": "CIDR 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/36.txt"
+  },
+  {
+    "original_url": "http://sites.computer.org/debull/A25mar/p57.pdf",
+    "title": "iDataLake: An LLM-Powered Analytics System on Data Lakes",
+    "url": "http://sites.computer.org/debull/A25mar/p57.pdf",
+    "year": 2025,
+    "venue": "IEEE Data Engineering Bulletin",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "http://sites.computer.org/debull/A25mar/p57.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "Publisher PDF first-page title; March 2025 issue path",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/37.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/10.14778/3750601.3750610",
+    "title": "SiriusBI: A Comprehensive LLM-Powered Solution for Data Analytics in Business Intelligence",
+    "url": "https://doi.org/10.14778/3750601.3750610",
+    "year": 2025,
+    "venue": "Proceedings of the VLDB Endowment",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.14778%2F3750601.3750610"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/11095853",
+    "title": "A Survey of Text-to-SQL in the Era of LLMs: Where Are We, and Where Are We Going?",
+    "url": "https://doi.org/10.1109/tkde.2025.3592032",
+    "year": 2025,
+    "venue": "IEEE Transactions on Knowledge and Data Engineering",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/tkde.2025.3592032"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/pvldb/vol18/p5466-luo.pdf",
+    "title": "Natural Language to SQL: State of the Art and Open Problems",
+    "url": "https://www.vldb.org/pvldb/vol18/p5466-luo.pdf",
+    "year": 2025,
+    "venue": "VLDB Tutorial 2025",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol18/p5466-luo.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/40.txt"
+  },
+  {
+    "original_url": "https://rgdoi.net/10.13140/RG.2.2.14003.75042",
+    "title": "Large Language Models for Data Science: A Survey",
+    "url": "https://www.researchgate.net/publication/392594876_Large_Language_Models_for_Data_Science_A_Survey",
+    "year": 2025,
+    "venue": "Preprint",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.researchgate.net/publication/392594876_Large_Language_Models_for_Data_Science_A_Survey"
+    ],
+    "metadata_verified": true,
+    "verification_note": "Author-uploaded preprint dated June 2025; original ResearchGate DOI is not an arXiv identifier. Crossref does not resolve this DOI."
+  },
+  {
+    "original_url": "http://sites.computer.org/debull/A25mar/p3.pdf",
+    "title": "Large Language Models for Data Discovery and Integration: Challenges and Opportunities",
+    "url": "http://sites.computer.org/debull/A25mar/p3.pdf",
+    "year": 2025,
+    "venue": "IEEE Data Engineering Bulletin",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "http://sites.computer.org/debull/A25mar/p3.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "Publisher PDF first-page title; March 2025 issue path",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/42.txt"
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/pdf/10.1145/3722212.3725641",
+    "title": "Data+AI: LLM4Data and Data4LLM",
+    "url": "https://doi.org/10.1145/3722212.3725641",
+    "year": 2025,
+    "venue": "Companion of the 2025 International Conference on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3722212.3725641"
+    ],
+    "metadata_verified": true
+  },
+  {
+    "original_url": "https://www.vldb.org/pvldb/vol17/p4213-li.pdf",
+    "title": "LLM for Data Management",
+    "url": "https://www.vldb.org/pvldb/vol17/p4213-li.pdf",
+    "year": 2024,
+    "venue": "VLDB Tutorial 2024",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://www.vldb.org/pvldb/vol17/p4213-li.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_method": "PDF first-page title and publication reference",
+    "local_evidence": "papers/literature/2026-10-14/data-agents/publisher-evidence/44.txt"
+  },
+  {
+    "original_url": "https://ieeexplore.ieee.org/document/9705125",
+    "title": "Data Management for Machine Learning: A Survey",
+    "url": "https://doi.org/10.1109/tkde.2022.3148237",
+    "year": 2023,
+    "venue": "IEEE Transactions on Knowledge and Data Engineering",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1109/tkde.2022.3148237",
+      "https://dbgroup.cs.tsinghua.edu.cn/ligl/papers/DM4ML_Survey.pdf"
+    ],
+    "metadata_verified": true,
+    "verification_note": "Published online 2022; final journal issue 35(5), May 2023. Catalog uses issue year."
+  },
+  {
+    "original_url": "https://dl.acm.org/doi/pdf/10.1145/3555041.3589406",
+    "title": "Demystifying Artificial Intelligence for Data Preparation",
+    "url": "https://doi.org/10.1145/3555041.3589406",
+    "year": 2023,
+    "venue": "Companion of the 2023 International Conference on Management of Data",
+    "reading_status": "metadata_only",
+    "evidence": [
+      "https://api.crossref.org/works/10.1145%2F3555041.3589406"
+    ],
+    "metadata_verified": true
+  }
+]

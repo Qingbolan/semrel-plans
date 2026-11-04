@@ -1,0 +1,71 @@
+{
+ "id": "lit_c71e176e845f",
+ "url": "https://arxiv.org/abs/2405.00527",
+ "title": "Lian et al. — ChatBI: Towards Natural Language to Complex Business Intelligence SQL",
+ "version": "arXiv:2405.00527v1（2024-05-01），12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2405.00527",
+ "retrieved_at": "2026-11-04T05:19:04+00:00",
+ "fulltext": "papers/readings/fulltext/lit_c71e176e845f.pdf",
+ "sha256": "6c0effc5b4ab4cbec133d7a5c1360cb43e7303bd9c6455a7c1d4bb9292d5f9e2",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/lit_c71e176e845f",
+ "note": "papers/readings/notes/lit_c71e176e845f/README.md",
+ "read_sections": {
+  "problem": "§1 C1–C3、§2，PDF pp.1–4",
+  "method": "§3–5、Algorithm 1、Figs.3–6，PDF pp.4–8",
+  "evaluation": "§6.1–6.3、Tables 2、4–6，PDF pp.7–11",
+  "limitations": "§6.4 Discussion，PDF p.11"
+ },
+ "evidence": [
+  {
+   "id": "lit_c71e176e845f:E01",
+   "claim": "NL2BI 相比 NL2SQL 面临三个挑战：多轮对话交互、BI 宽视图中的大量列与歧义列、现有流程难以处理复杂语义与同环比计算关系。",
+   "locator": "§1 C1–C3，pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c71e176e845f:E02",
+   "claim": "系统由多轮对话匹配（两个 4 层 ERNIE Tiny：分类 + 最近匹配模式改写）、单视图选择（SFT ERNIE Tiny）、分阶段流程（LLM 输出 JSON，由 Apache Superset 模板生成 SQL，虚拟列以 JnM 映射计算规则）组成。",
+   "locator": "§3–5、Alg.1、Figs.3–6，pp.4–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c71e176e845f:E03",
+   "claim": "视图选择模型用 GPT-4 生成的 3,000 余条训练数据和 500 条测试数据训练评估，准确率 SFT ERNIE 95.7%、Bert 95.2%、CNN 83.9%。",
+   "locator": "§4.2、Table 2，p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c71e176e845f:E04",
+   "claim": "SRD 与 MRD 数据集各 153 条中文 BI 查询、4 个视图、226 列，无金标准 SQL；MRD 为 51 组三轮对话，其中 19 组切换视图。",
+   "locator": "§6.1、Fig.7，pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c71e176e845f:E05",
+   "claim": "UEX：SRD 上 ChatBI 74.43%、MAC-SQL 52.29%、DIN-SQL 20.92%、w/o PF 58.17%；MRD 上分别为 67.32%、35.29%、20.26%、52.94%；ChatBI 的提示 token 也少于两种基线。",
+   "locator": "Tables 4、6，pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c71e176e845f:E06",
+   "claim": "UEX 中可执行结果由有经验的 DBA 判断是否满足意图；作者承认 153 条查询远少于 Spider/BIRD，原因是 BI 问题常无唯一金标准 SQL。",
+   "locator": "§6.1 p.9；§6.4 p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_c71e176e845f:E07",
+   "claim": "§6.2 称实验使用 GPT-4，而生产中 ChatBI 用 Erniebot-4.0，未明确表中 ChatBI 行用哪个模型；正文称 Table 6 为 SRD 结果，实际 SRD 在 Table 4；评审人数与一致性未报告。",
+   "locator": "§6.2 p.9；Tables 4、6",
+   "basis": "inference",
+   "basis_note": "引用文字为原文；不一致与缺失的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r07",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

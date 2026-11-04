@@ -1,0 +1,78 @@
+{
+ "id": "swb_163d8598115e26c7",
+ "url": "https://aclanthology.org/2026.acl-long.1258",
+ "title": "CaRL-EM: Cost-Aware Reinforcement Learning for Entity Matching with LLMs",
+ "version": "ACL 2026 Long Papers（Proceedings pp.27281–27293），ACL Anthology 2026.acl-long.1258，13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2026.acl-long.1258.pdf",
+ "retrieved_at": "2026-11-04T05:39:48.717084+00:00",
+ "fulltext": "papers/readings/fulltext/swb_163d8598115e26c7.pdf",
+ "sha256": "fb25451188f841ef8d72a499218fab7538b55323cff53261bf8b0104aebd4c4b",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "papers/readings/notes/swb_163d8598115e26c7",
+ "note": "papers/readings/notes/swb_163d8598115e26c7/README.md",
+ "read_sections": {
+  "problem": "§1、§3 开头，PDF pp.1–3",
+  "method": "§3.1–3.3、附录 A、B、D，PDF pp.3–4、11–12",
+  "evaluation": "§4–5、Tables 1–4、附录 C、E、F（Tables 6–10），PDF pp.4–9、11–13",
+  "limitations": "Limitations、Ethical Considerations，PDF p.9"
+ },
+ "evidence": [
+  {
+   "id": "swb_163d8598115e26c7:E01",
+   "claim": "现有 LLM 实体匹配多为独立逐对判断，忽略候选间交互与至多一个匹配的互斥约束；COMEM 等固定管线对所有实例执行同一算子序列，成本不随难度变化。",
+   "locator": "§1、§2.2，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E02",
+   "claim": "CaRL-EM 把每个锚的多候选 EM 建模为 episodic MDP，控制器（3 层 MLP，PPO 训练）在 MATCH/COMPARE/SELECT/DECIDE 间选择，使用两级抽象成本（ρ=2.5），Tmax=18、top-k=4。",
+   "locator": "§3.1–3.3，PDF pp.3–4；附录 A Table 5，PDF p.11",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E03",
+   "claim": "只在 Abt-Buy 训练，零样本评测 AG、DA、DS、IM、IT、TT、WA 七个基准；每个数据集 400 个锚（300 个有一个真匹配，其余无匹配），Sparkly top-10 候选，blocking recall@10 为 94.89%–99.96%。",
+   "locator": "§4，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E04",
+   "claim": "Table 2：CaRL-EM 平均 F1macro 76.09、推理成本 0.13 美元；COMEM 为 74.25、0.59 美元；在域 DITTO 为 85.64、2.22 美元；CaRL-EM 在 WA 上为 64.60，低于 COMEM 的 78.76。",
+   "locator": "Table 2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E05",
+   "claim": "附录 Table 7 计入一次性 PPO 训练成本 16.45 美元后，CaRL-EM 端到端成本为 16.59 美元，高于 DITTO 的 2.23 美元；正文“成本降低 94%”只比较 CaRL-EM 推理成本与 DITTO 训练加推理成本。",
+   "locator": "附录 F Tables 7、10，PDF pp.12–13；§1，PDF p.2",
+   "basis": "inference",
+   "basis_note": "表值来自原文；成本口径比较、表间不一致与样本合计为阅读者计算或分析，正文已标注。"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E06",
+   "claim": "Table 3 中 COMEM 的 F1macro 为 73.22，与 Table 2 的 74.25 不一致；换后端不重训时 F1macro 在 69.36（Llama-3.1）到 79.37（Qwen3）之间。",
+   "locator": "Tables 2–3，PDF pp.7–8",
+   "basis": "inference",
+   "basis_note": "表值来自原文；成本口径比较、表间不一致与样本合计为阅读者计算或分析，正文已标注。"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E07",
+   "claim": "消融显示去掉成本项 F1macro 基本不变但成本升高约 15%；去掉 MATCH 后 F1none 降至 49.86；去掉 SELECT 后 F1id 降至 75.13。",
+   "locator": "§5.6、Table 4，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_163d8598115e26c7:E08",
+   "claim": "局限：只处理 clean-clean 单匹配、top-10 小候选池，两级抽象成本不反映 token 计费、延迟、批处理等真实成本，迁移到其他成本环境可能需重新校准或重训。",
+   "locator": "Limitations，PDF p.9",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

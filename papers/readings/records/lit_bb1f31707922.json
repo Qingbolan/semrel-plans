@@ -1,0 +1,72 @@
+{
+ "id": "lit_bb1f31707922",
+ "url": "https://arxiv.org/abs/2606.22977",
+ "title": "Zhu et al. — StatABench: Dataset and Framework for Evaluating Statistical Analysis Capabilities of LLMs",
+ "version": "arXiv:2606.22977v1（2026-06-22），28 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2606.22977v1",
+ "retrieved_at": "2026-11-04T05:03:38.190903+00:00",
+ "fulltext": "papers/readings/fulltext/lit_bb1f31707922.pdf",
+ "sha256": "8f394a4b4af0f32c3d019391214bb04a04e8c533dd0857c39c7b9b487659c329",
+ "format": "pdf",
+ "pages": 28,
+ "note_directory": "papers/readings/notes/lit_bb1f31707922",
+ "note": "papers/readings/notes/lit_bb1f31707922/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1、Table 1，PDF pp.1–2",
+  "method": "§3（Tables 2、Fig.2、Algorithm 1），PDF pp.3–6；附录 E、Tables 11–12，pp.13–18",
+  "evaluation": "§4、Tables 3–5、Fig.4，PDF pp.6–9；附录 A–D、F–G、Tables 6–10，pp.12–15",
+  "limitations": "Limitations 与 Ethics 段，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "lit_bb1f31707922:E01",
+   "claim": "Stat-Closed 含 404 题、18 个统计主题、四种题型，其中 198 道实际应用题需通过 LangChain MCP 调用含 35 个函数的 SAToolKit；Stat-Open 含 30 道改编自 MCM/ICM、CUMCM、MAS 的开放式建模任务。",
+   "locator": "Abstract、§3.1–3.3、Table 2、§4.1，PDF pp.1、3–4、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb1f31707922:E02",
+   "claim": "去污染流程把 Qwen2.5-72B 与 Llama-3.1-70B 都答对的题视为可能泄漏并人工扰动，只保留至少一个模型改后答错或经专家确认的题。",
+   "locator": "§3.2、Algorithm 1，PDF pp.4、13",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb1f31707922:E03",
+   "claim": "由于去污染以 Qwen2.5-72B 是否答对为筛选条件，而该模型又是被评测的最佳开源模型，题目分布可能向其弱点偏移；原文未讨论此选择偏差。",
+   "locator": "§3.2、Table 3，PDF pp.4、8",
+   "basis": "inference",
+   "basis_note": "流程与模型列表来自原文；偏差推断为阅读者分析。"
+  },
+  {
+   "id": "lit_bb1f31707922:E04",
+   "claim": "Stat-Closed 总准确率：GPT-5.1 68.6%、Claude Sonnet 4.5 66.3%、Qwen2.5-72B 60.6%、DeepSeek-V3 57.4%、Llama3.1-8B 25.5%；Friedman 检验 p=2.87×10⁻⁹；所有模型在实际应用题上均低于基础题。",
+   "locator": "§4.1、Table 3、Fig.4，PDF pp.6–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb1f31707922:E05",
+   "claim": "在 198 道实际应用题上，CrewAI 将 DeepSeek-V3 从 53.54% 提升到 85.35%、GPT-4o-mini 从 25.76% 提升到 68.18%；Qwen2.5-72B 在 Smolagents 下下降 4.54 点。",
+   "locator": "Table 4，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb1f31707922:E06",
+   "claim": "Stat-Open 两个框架均以 DeepSeek-V3 为骨干，由 Gemini 3 Pro 评分：MathModelAgent 平均 61.86（人类 61.17），LLM-MM-Agent 54.29（人类 52.62）；LLM-人类平均 Fleiss' κ 为 0.413 与 0.509，部分维度低于 0.3。",
+   "locator": "§4.2、Table 5，PDF pp.7–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_bb1f31707922:E07",
+   "claim": "对同一组 38 个 DeepSeek-V3 失败案例，正文称 74% 为统计错误、差异主要源于统计能力，而 Table 10 表注称选择与合规错误占 76%、说明基线框架限制了 DeepSeek；两处解读方向不一致。",
+   "locator": "§4.1，PDF p.6；附录 G Table 10，PDF p.15",
+   "basis": "inference",
+   "basis_note": "两处原文表述均为明示；“方向不一致”的判断为阅读者分析。"
+  }
+ ],
+ "batch": "r03",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

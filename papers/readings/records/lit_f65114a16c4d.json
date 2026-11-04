@@ -1,0 +1,65 @@
+{
+ "id": "lit_f65114a16c4d",
+ "url": "https://aclanthology.org/2024.emnlp-industry.39/",
+ "title": "Cecchi & Babkin — ReportGPT: Human-in-the-loop Verifiable Table-to-Text Generation",
+ "version": "EMNLP 2024 Industry Track，pp.529–537，ACL Anthology 2024.emnlp-industry.39，9 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/2024.emnlp-industry.39.pdf",
+ "retrieved_at": "2026-11-04T05:21:13.846962+00:00",
+ "fulltext": "papers/readings/fulltext/lit_f65114a16c4d.pdf",
+ "sha256": "5baf8e8ec2d2fd35ca30d6966b877d4d26b2d8063e30a8263345a615d082fdb1",
+ "format": "pdf",
+ "pages": 9,
+ "note_directory": "papers/readings/notes/lit_f65114a16c4d",
+ "note": "papers/readings/notes/lit_f65114a16c4d/README.md",
+ "read_sections": {
+  "problem": "摘要、§1–2，PDF pp.1–2",
+  "method": "§3.1–3.7、Figures 1–2，PDF pp.2–4；附录 A Figures 3–5，PDF pp.8–9",
+  "evaluation": "§4.1–4.4、§5、Tables 1–2，PDF pp.4–6；p.6 Tables 1–2 已渲染核对",
+  "limitations": "无专门章节；§5 权衡讨论，PDF pp.5–6"
+ },
+ "evidence": [
+  {
+   "id": "lit_f65114a16c4d:E01",
+   "claim": "人工核验数值类表格评论时，审核者需要自己重算；作者用 DSL 程序作为证明机制，让用户无需重算即可核对相关性与事实性；只线性化标题与行列表头，将 token 从 O(行×列) 降为 O(行+列)。",
+   "locator": "摘要、§1、§3.1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f65114a16c4d:E02",
+   "claim": "DSL 含 12 个算子（get、sum、avg、max、min、argmax、argmin、std、eq、less_than、diff、proportion），操作数只能是行/列表头或其他操作结果；流水线为程序生成→Python 解释执行→GPT-4 表层实现→用户逐条接受/拒绝，接受样本作为少样本反馈。",
+   "locator": "§3、§3.2、§3.4–3.6，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f65114a16c4d:E03",
+   "claim": "程序生成有三种：PCFG（按接受/拒绝中产生式计数加一平滑再 softmax 更新）、单次 GPT-4 调用、两次链式 GPT-4 调用（先提问再写程序）；每次前向最多 4 次 API 调用，批大小为 5。",
+   "locator": "§3.3.1–3.3.3、§3.7，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f65114a16c4d:E04",
+   "claim": "评测用 HiTab（3,700 张、30 多个领域）中的表格；3 种配置×4 种设置（0/1/3-shot、20 张人工标题表）；每张表生成 5 个三元组，由 4 名研究人员标注接受/幻觉/程序错误；排名实验由 2 名研究人员各对 45 组排序。",
+   "locator": "§4.1–4.4，PDF pp.4–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f65114a16c4d:E05",
+   "claim": "PCFG 在所有设置下接受率最高（0-shot 84.0%、3-shot 95.0%、人工标题 98.0%），程序错误率 0；洞察力平均名次链式 1.71、LLM 2.06、PCFG 2.23，作者据此提出精确率与洞察力的权衡。",
+   "locator": "§5、Tables 1–2，PDF pp.5–6（已渲染核对）",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f65114a16c4d:E06",
+   "claim": "Table 1 中 0/1-shot 各行三项比率之和不为 100%（如 1-shot 链式 82%、0-shot PCFG 102.33%），各设置生成数为 75–396 不等，非配对比较；Figure 2 中“收入减支出 = 6.3B”按图示表格应为 2.3B。",
+   "locator": "Table 1、Figure 2，PDF pp.3、6",
+   "basis": "inference",
+   "basis_note": "数字来自原表与原图；求和与算术核对为阅读者计算。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_b2d5d8a0f66a4102",
+ "url": "https://aclanthology.org/P18-1018",
+ "title": "Comprehensive Supersense Disambiguation of English Prepositions and Possessives",
+ "version": "ACL 2018（Long Papers），pp.185–196，12 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/P18-1018.pdf",
+ "retrieved_at": "2026-11-04",
+ "fulltext": "papers/readings/fulltext/swb_b2d5d8a0f66a4102.pdf",
+ "sha256": "9d65145f2e3a5dd9917f0b3986d332f3764b8ff52c3a7ed5cbc36b8ea0f5da70",
+ "format": "pdf",
+ "pages": 12,
+ "note_directory": "papers/readings/notes/swb_b2d5d8a0f66a4102",
+ "note": "papers/readings/notes/swb_b2d5d8a0f66a4102/README.md",
+ "read_sections": {
+  "problem": "§1、§2，PDF pp.1–2",
+  "method": "§3、§4、§6.1–6.3，PDF pp.2–8",
+  "evaluation": "§5 Table 3、§6.4–6.5 Tables 4–6，PDF pp.6、8–9",
+  "limitations": "无单独局限节；§2、§5 脚注 12、§7，PDF pp.2、6、9"
+ },
+ "evidence": [
+  {
+   "id": "swb_b2d5d8a0f66a4102:E01",
+   "claim": "旧的 75 类介词超类存在单标签造成角色与词汇语义冲突、类别过多导致稀疏、未覆盖所有格等问题；SNACS 改为 50 类、4 层，无多重继承。",
+   "locator": "§2、§3.2，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b2d5d8a0f66a4102:E02",
+   "claim": "每个目标标注场景角色与功能两个槽位（ROLE;FUNCTION），如 works at Grunnings 为 ORGROLE;LOCUS，Put it on the door 为 GOAL;LOCUS。",
+   "locator": "§3.3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b2d5d8a0f66a4102:E03",
+   "claim": "STREUSLE 4.0 评论语料共 723 文档、3,812 句、55,579 词、5,455 个标注目标；按 UD 官方切分，训练/开发/测试目标为 4,522/453/480。",
+   "locator": "§4、Table 1，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b2d5d8a0f66a4102:E04",
+   "claim": "《小王子》第 4–5 章 216 个词例上，5 名标注者两两平均一致率 role 74.4%、function 81.3%，κ 分别为 0.733、0.799。",
+   "locator": "§5、Table 3、脚注 12，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b2d5d8a0f66a4102:E05",
+   "claim": "金标准目标与句法下，特征模型 role/function/full 准确率 73.5/81.0/70.0，神经模型 71.7/82.5/67.5，最频繁基线 40.6/53.3/37.9；自动句法降低 4–7 点，自动目标识别使 F 值再降约 10 点。",
+   "locator": "§6.4、Tables 4–5，PDF pp.8–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_b2d5d8a0f66a4102:E06",
+   "claim": "原文没有单独局限节；一致性研究规模小且标注者均为作者、主语料只有评论体裁，限制了对其他体裁和非专家标注的外推。",
+   "locator": "§5，PDF p.6；§7，PDF p.9",
+   "basis": "inference",
+   "basis_note": "规模、标注者身份与体裁来自原文；外推风险是阅读者分析。"
+  }
+ ],
+ "batch": "r12",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "swb_5c465992aad60453",
+ "url": "https://arxiv.org/abs/2410.21495",
+ "title": "RoBIn: A Transformer-Based Model For Risk Of Bias Inference With Machine Reading Comprehension",
+ "version": "arXiv:2410.21495v1（2024-10-28），16 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2410.21495v1",
+ "retrieved_at": "2026-11-04T05:54:04.992485+00:00",
+ "fulltext": "papers/readings/fulltext/swb_5c465992aad60453.pdf",
+ "sha256": "5df90d3172ebe5fdfbb84f05c922d726b2e247a44e2bb822307970de55ecc247",
+ "format": "pdf",
+ "pages": 16,
+ "note_directory": "papers/readings/notes/swb_5c465992aad60453",
+ "note": "papers/readings/notes/swb_5c465992aad60453/README.md",
+ "read_sections": {
+  "problem": "§1–2，PDF pp.1–3",
+  "method": "§4–5、Figures 1–4，PDF pp.5–10",
+  "evaluation": "§6、Tables 2–3、Figure 5，PDF pp.10–14",
+  "limitations": "§6.5、§7，PDF pp.12–14"
+ },
+ "evidence": [
+  {
+   "id": "swb_5c465992aad60453:E01",
+   "claim": "RoBIn 数据集用 CDSR 的 RoB 判断与引文对 7,334 篇 PubMed/PMC 开放获取试验论文做远程监督标注，引文与句子按余弦相似度 >0.5 取最高匹配。",
+   "locator": "§4.2，PDF p.6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5c465992aad60453:E02",
+   "claim": "校验 23,873 个实例、剔除 6,915 个后，划分为训练 13,554、测试 3,404，按偏倚类型分层。",
+   "locator": "§4.2，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5c465992aad60453:E03",
+   "claim": "每个实例含偏倚类型、信号问题、上下文（支持句前后至多 3 句）、支持句、答案偏移和二分类标签（低 vs 高/不明风险）。",
+   "locator": "§4.1–4.2，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5c465992aad60453:E04",
+   "claim": "MRC 总体：RoBIn_Ext F1 97.10、EM 87.76；RoBIn_Gen 93.81/82.09；LLM 最好的 Gemma2 few-shot 为 61.90/34.99。",
+   "locator": "Table 2，PDF p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5c465992aad60453:E05",
+   "claim": "RoB 推断总体宏 F1：RoBIn_Ext 74.18、RoBIn_Gen 72.75、SVM 71.29、LR 69.11；两种 RoBIn 的 ROC AUC 为 0.83，SVM 0.80，LR 0.78。",
+   "locator": "§6.5、Table 3、Figure 5，PDF pp.12–13",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_5c465992aad60453:E06",
+   "claim": "SVM/LR 以问题加金标答案为输入，RoBIn_Ext 分类器用金标证据训练，LLM 需自行从上下文找证据，各系统输入条件不完全对等；MRC 上下文是围绕金标句的窗口而非全文。",
+   "locator": "§5.1、§6.2、§4.2，PDF pp.7–9、11",
+   "basis": "inference",
+   "basis_note": "输入设置为原文陈述；'比较不对等'与'不等于全文检索'为阅读者分析。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

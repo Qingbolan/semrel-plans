@@ -1,0 +1,66 @@
+{
+ "id": "lit_fd97bfd93b5a",
+ "url": "https://arxiv.org/abs/2605.17831",
+ "title": "Naser Moghadasi & Ghaderi — Agentic Cost-Aware Query Planning with Knowledge Distillation for Big Data Analytics",
+ "version": "arXiv:2605.17831v1（2026-05-18），6 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2605.17831",
+ "retrieved_at": "2026-11-04T04:51:47.246607+00:00",
+ "fulltext": "papers/readings/fulltext/lit_fd97bfd93b5a.pdf",
+ "sha256": "5a4e84c83ef65b6c0bdf03bf9b06ec8a0f648f9a9afd966d84538c58a939fb4c",
+ "format": "pdf",
+ "pages": 6,
+ "note_directory": "papers/readings/notes/lit_fd97bfd93b5a",
+ "note": "papers/readings/notes/lit_fd97bfd93b5a/README.md",
+ "read_sections": {
+  "problem": "Abstract、§I、§III-A，PDF pp.1–2",
+  "method": "§III-B、§III-C，PDF pp.2–3",
+  "evaluation": "§IV、Tables II–VI、Figs 2–4，PDF pp.3–5",
+  "limitations": "§V-B，PDF p.5"
+ },
+ "evidence": [
+  {
+   "id": "lit_fd97bfd93b5a:E01",
+   "claim": "问题形式化为在内存与延迟约束均满足的前提下最小化延迟；teacher 以 6 个二值改写开关（早过滤、投影下推、预聚合、join 重排、采样、limit 下推）构成计划空间，UCB1 奖励为可行时 1−latency/baseline、否则 −1。",
+   "locator": "§III-A、§III-B，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fd97bfd93b5a:E02",
+   "claim": "评测数据为 NYC Taxi（1.3M 记录、24 个查询模板）与 IMDB（6 张表、约 2.5M 记录、16 个模板），约束 4–8GB 内存、500–1000ms 延迟，基线为 DuckDB 默认优化器。",
+   "locator": "§IV-A，PDF p.4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fd97bfd93b5a:E03",
+   "claim": "T+B+C 中位延迟 251.8ms、CSR 96.1%，DuckDB 默认 340.2ms、72.3%；student HGBC 准确率 89.1%、加速 12.3x。",
+   "locator": "Tables III、V，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_fd97bfd93b5a:E04",
+   "claim": "摘要称 23% 延迟降低与 15x 加速，但 Table III 计算约为 26.0%，Table V 为 13.6x/12.3x，Table II 与 III 完全重复；数字内部不一致。",
+   "locator": "Abstract、Tables II–V、Fig.4，PDF pp.1、3–5",
+   "basis": "inference",
+   "basis_note": "由阅读者按原文表格自行计算与比对。"
+  },
+  {
+   "id": "lit_fd97bfd93b5a:E05",
+   "claim": "原文未给出查询实例数、训练/测试划分、硬件与重复次数，且只与 DuckDB 默认比较，结论证据较弱。",
+   "locator": "§IV，PDF pp.4–5",
+   "basis": "inference",
+   "basis_note": "基于原文缺失信息的阅读者判断。"
+  },
+  {
+   "id": "lit_fd97bfd93b5a:E06",
+   "claim": "作者承认的局限：只评估中等规模 schema，缺少负载漂移适应，未扩展到分布式规划。",
+   "locator": "§V-B，PDF p.5",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r01",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

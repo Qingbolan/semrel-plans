@@ -1,0 +1,77 @@
+{
+ "id": "lit_2d941e2e3d74",
+ "url": "https://arxiv.org/abs/2407.09522",
+ "title": "Dai et al. — UQE: A Query Engine for Unstructured Databases",
+ "version": "arXiv:2407.09522v2（2024-11-17，NeurIPS 2024），32 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2407.09522v2",
+ "retrieved_at": "2026-11-04T05:25:12+00:00",
+ "fulltext": "papers/readings/fulltext/lit_2d941e2e3d74.pdf",
+ "sha256": "8471b7413a1250bd022cd65dc39328cb58fb2d8a0c0c9b273edbc38fd8a40a2e",
+ "format": "pdf",
+ "pages": 32,
+ "note_directory": "papers/readings/notes/lit_2d941e2e3d74",
+ "note": "papers/readings/notes/lit_2d941e2e3d74/README.md",
+ "read_sections": {
+  "problem": "§1、§2（术语与三类分析任务）、§3 UQL，PDF pp.1–4",
+  "method": "§4.1 抽样'索引'（Prop 1、Algorithms 1–2）、§4.2 编译与内核，PDF pp.4–6",
+  "evaluation": "§6、Tables 1–5、Figures 4–5，PDF pp.7–10；附录 C.1–C.2、Table 6，PDF pp.17–18",
+  "limitations": "§3 Assumptions、§4.1 Extension、§7 Conclusion，PDF pp.4–5、10"
+ },
+ "evidence": [
+  {
+   "id": "lit_2d941e2e3d74:E01",
+   "claim": "把 LLM 当 SQL UDF 仍需扫描整个数据库，对大规模非结构化集合代价过高；UQE 借鉴 SQL 引擎的索引与编译两点，用抽样/学习搜索避免全扫描，并编排子句以最少调用 LLM。",
+   "locator": "§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E02",
+   "claim": "UQL 在 SELECT、WHERE、GROUP BY 中允许自然语言描述，WHERE 为析取范式；FROM 只支持单表，不支持连接与嵌套；假设 LLM 能正确完成单行语义判断。",
+   "locator": "§3，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E03",
+   "claim": "聚合查询对嵌入聚类后分层抽样并归一化重要性权重做无偏估计（理想提议 p_i ∝ f）；非聚合查询用在线训练的代理 ĝ 选择下一批送 LLM 的行；MAX 等聚合无此类估计器。",
+   "locator": "§4.1、Prop 1、Algorithms 1–2，PDF pp.4–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E04",
+   "claim": "数据集由 IMDB（50K）、ABCD（10,042 条对话）、AirDialog（402,037 条对话）、Clevr val（15,000 张图）改造，隐藏标签列作真值；条件占比从 1.46%（AirDialog cancel）到 51.40%（book）。",
+   "locator": "§6.1、附录 C.1、Table 6，PDF pp.7–8、17",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E05",
+   "claim": "摘要与 §1 称'创建四个新基准数据集'，实际是对已有判别式数据集的改造；查询条件均对应原数据集已有标签。",
+   "locator": "§1、§6.1、附录 C.1，PDF pp.2、7、17",
+   "basis": "inference",
+   "basis_note": "改造方式为原文；对'新数据集'表述及条件规整性的评价为阅读者分析。"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E06",
+   "claim": "条件计数相对误差（Table 1）：IMDB 上 UQE 5.75%、UDF 13.67%、lc-gpt-4-turbo 49.02%；文本任务 UQE 每查询约 $0.01，lc 基线 $0.21–0.63。",
+   "locator": "Table 1、§6.1，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E07",
+   "claim": "语义检索 F1（Table 2）：AirDialog cancel 上 UQE 0.741、MIPS 0.066；Clevr obj_count<4 上 UQE 0.850、MIPS 0.023；ABCD account_access 上 MIPS 0.961 略高于 UQE 0.940。",
+   "locator": "Table 2、§6.1，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_2d941e2e3d74:E08",
+   "claim": "IMDB 聚合中 UQE 在 B=32 的误差 8.29% 接近 UDF 在 B=512 的 8.11%，作者据此称计算量降低 16×；局限包括不支持连接与其他聚合、未自动选择 LLM 与抽样配置、需扩展至更大数据库。",
+   "locator": "Table 5、§6.2.3、§7，PDF p.10",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r09",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

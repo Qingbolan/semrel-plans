@@ -1,0 +1,65 @@
+{
+ "id": "swb_fdbed9aacaef81aa",
+ "url": "https://aclanthology.org/P13-1023",
+ "title": "Abend & Rappoport — Universal Conceptual Cognitive Annotation (UCCA)",
+ "version": "ACL 2013 论文集 pp.228–238（ACL Anthology P13-1023），11 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://aclanthology.org/P13-1023.pdf",
+ "retrieved_at": "2026-11-04T05:59:19+00:00",
+ "fulltext": "papers/readings/fulltext/swb_fdbed9aacaef81aa.pdf",
+ "sha256": "83ddffcbff49dc03f8ef89c4bf31d4fb93f78b1281158dae12162f7a9cc1ccbe",
+ "format": "pdf",
+ "pages": 11,
+ "note_directory": "papers/readings/notes/swb_fdbed9aacaef81aa",
+ "note": "papers/readings/notes/swb_fdbed9aacaef81aa/README.md",
+ "read_sections": {
+  "problem": "摘要、§1，PDF pp.1–2",
+  "method": "§2.1–2.3、Table 1、Figure 2，PDF pp.2–5",
+  "evaluation": "§3、Table 2，PDF pp.5–7；§4，pp.7–8；§5，p.9",
+  "limitations": "§3 分歧例、§6，PDF pp.6–7、9"
+ },
+ "evidence": [
+  {
+   "id": "swb_fdbed9aacaef81aa:E01",
+   "claim": "作者指出 PTB 和 CoNLL 依存会把 “John took a shower” 与 “John took my book” 标为相同结构，因此句法表示对语义应用价值有限；UCCA 旨在脱离具体句法形式来表示语义区分。",
+   "locator": "摘要、§1、Figure 1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbed9aacaef81aa:E02",
+   "claim": "UCCA 用 DAG 表示，类别标在边上，允许多父节点和隐式单元；基础层以 Scene 为核心，共 12 个类别（P、S、A、D、C、E、N、R、H、L、G、F）。",
+   "locator": "§2.1–2.2、Table 1，PDF pp.2–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbed9aacaef81aa:E03",
+   "claim": "语料主要来自英文维基名人条目，以 300–400 token 的段落为单位标注；已完成 148 段、56,890 token，每段平均 42.2 个 Scene。",
+   "locator": "§3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbed9aacaef81aa:E04",
+   "claim": "4 名标注员（2 人无语言学背景）培训 30–40 小时；6 个培训段落中，标注员间 F 从 67.3% 升至 81.1%，对金标准 F 从 72.4% 升至 84.2%；专家修正后平均 F 为 93.7%。",
+   "locator": "§3、Table 2，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbed9aacaef81aa:E05",
+   "claim": "PropBank section 02 前 30 句经 UCCA 标注并转换后，与 PropBank 的无标签 F1 为 89.4%。",
+   "locator": "§5、脚注 11，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_fdbed9aacaef81aa:E06",
+   "claim": "UCCA 的释义/跨语言不变性只用少数手工例子论证；一致性评估需把 DAG 转成成分树并丢弃 1.9% 的边，且数据来自培训期；摘要中的跨领域可移植性在 §6 被列为未来工作。",
+   "locator": "§3 脚注 8、§4、§6，PDF pp.6–9",
+   "basis": "inference",
+   "basis_note": "依据原文的评测设计与结论部分，由阅读者归纳其证据边界。"
+  }
+ ],
+ "batch": "r17",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

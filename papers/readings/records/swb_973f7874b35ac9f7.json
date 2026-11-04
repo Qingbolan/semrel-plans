@@ -1,0 +1,65 @@
+{
+ "id": "swb_973f7874b35ac9f7",
+ "url": "https://www.scitepress.org/Papers/2026/142494/142494.pdf",
+ "title": "Retrieval-Augmented Generation for Procurement Validation",
+ "version": "ICAART 2026 第 5 卷，pp.4048–4055，DOI 10.5220/0014249400004052，8 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.scitepress.org/Papers/2026/142494/142494.pdf",
+ "retrieved_at": "2026-11-04T05:54:04.992485+00:00",
+ "fulltext": "papers/readings/fulltext/swb_973f7874b35ac9f7.pdf",
+ "sha256": "a304ef9a3db08aa2cba99a985bbb60304071cfefea1e3602084233cf5b95e10c",
+ "format": "pdf",
+ "pages": 8,
+ "note_directory": "papers/readings/notes/swb_973f7874b35ac9f7",
+ "note": "papers/readings/notes/swb_973f7874b35ac9f7/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–3",
+  "method": "§3–4、Figure 1、附录 1–4，PDF pp.2–6、8",
+  "evaluation": "§4、Tables 1–4，PDF pp.3–6",
+  "limitations": "§4.2、§4.4、§5，PDF pp.4–7"
+ },
+ "evidence": [
+  {
+   "id": "swb_973f7874b35ac9f7:E01",
+   "claim": "任务是对拉脱维亚语采购文件按检查清单逐题判定；参考答案为 yes/no/n/a，LLM 可答 yes/no/缺信息，question0 为前提条件。",
+   "locator": "§3，PDF pp.2–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_973f7874b35ac9f7:E02",
+   "claim": "评测数据集含 30 个采购项目，开发 10、测试 20；指标为总体准确率和只计 yes/no 输出的 yes/no 准确率。",
+   "locator": "§1、§3，PDF pp.1、3",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_973f7874b35ac9f7:E03",
+   "claim": "嵌入模型比较：mpnet 55.45/74.51，bge-m3 66.81/76.91，微调 bge-m3 70.73/78.46（总体/yes-no 准确率，%）。",
+   "locator": "§4.3、Table 4，PDF pp.5–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_973f7874b35ac9f7:E04",
+   "claim": "微调数据来自 7,083 个训练文件、215,971 段、430,137 条 gpt-4o 生成的陈述；验证 50 文件、1,383 段、2,758 条。",
+   "locator": "§4.3，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_973f7874b35ac9f7:E05",
+   "claim": "重排序将总体准确率由 55.45 提到 58.8，但运行时间由 3.5 小时增至 27 小时，因此未采用。",
+   "locator": "§4.4，PDF p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_973f7874b35ac9f7:E06",
+   "claim": "摘要称微调提高了检索召回，但正文没有检索层面指标；提示改造无定量结果；组件只逐个单独比较，无非 RAG 或人工基线。",
+   "locator": "Abstract、§4–5，PDF pp.1、3–7",
+   "basis": "inference",
+   "basis_note": "依据为对全文实验与表格的通读；作者在 §5 承认未研究组件交互。"
+  }
+ ],
+ "batch": "r15",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

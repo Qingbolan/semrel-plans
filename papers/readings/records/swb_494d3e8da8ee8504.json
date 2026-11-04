@@ -1,0 +1,77 @@
+{
+ "id": "swb_494d3e8da8ee8504",
+ "url": "https://arxiv.org/abs/2307.15051",
+ "title": "Jin et al. — Matching Patients to Clinical Trials with Large Language Models (TrialGPT)",
+ "version": "arXiv:2307.15051v5（2024 年 11 月 PDF；对应 Nature Communications 2024 发表版），49 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2307.15051",
+ "retrieved_at": "2026-11-04T05:48:18+00:00",
+ "fulltext": "papers/readings/fulltext/swb_494d3e8da8ee8504.pdf",
+ "sha256": "f482213f189810d39a02ec31caf8bb71e393dcb8d4bd7393306e4794dfc66c1d",
+ "format": "pdf",
+ "pages": 49,
+ "note_directory": "papers/readings/notes/swb_494d3e8da8ee8504",
+ "note": "papers/readings/notes/swb_494d3e8da8ee8504/README.md",
+ "read_sections": {
+  "problem": "摘要、Introduction，PDF pp.2–6",
+  "method": "Results 架构 pp.6–8；Methods（TrialGPT-Retrieval/Matching/Ranking、基线、评测设置），PDF pp.29–39",
+  "evaluation": "Table 1 p.9；Figure 2 pp.10–12；Figure 3 pp.12–16；Figure 4 pp.16–20；Table 2 pp.20–23；Figure 5 pp.23–26",
+  "limitations": "Discussion，PDF pp.26–29"
+ },
+ "evidence": [
+  {
+   "id": "swb_494d3e8da8ee8504:E01",
+   "claim": "已有稠密嵌入匹配需要稀缺的患者—标准配对标注且不可解释；作者聚焦患者→试验方向，用 LLM 做端到端检索、匹配与排序。",
+   "locator": "Introduction，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E02",
+   "claim": "TrialGPT-Matching 对每条标准输出解释、相关句 ID 和资格标签；入组与排除标准各用四个标签，每个患者—试验对调用两次 LLM。",
+   "locator": "Methods，PDF pp.32–33，式 (2)–(3)",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E03",
+   "claim": "三队列为 SIGIR 2016（58 名，3,621 个试验）、TREC 2021 CT（75 名，26,149 个）、TREC 2022 CT（50 名，26,581 个），以已判断试验并集作初始集合。",
+   "locator": "Table 1 p.9；pp.8–9、29–30",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E04",
+   "claim": "GPT-4 关键词检索在前 500 的平均召回为 86.2%（原始病例 50.0%），召回 90% 相关试验平均只需 5.5% 的集合。",
+   "locator": "Results、Figure 2，PDF pp.10–12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E05",
+   "claim": "1,015 个患者—标准对上，解释正确 87.8%，证据句 F1 88.6%，资格标签准确率 0.873（专家 0.887–0.900）。",
+   "locator": "Results、Figure 3，PDF pp.12–16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E06",
+   "claim": "Table 2 中 GPT-4 特征组合的 NDCG@10/P@10/AUROC 为 0.7275/0.6688/0.7979，平均 0.7314，比最佳基线 BioLinkBERT 的 0.5085 高约 43.8%。",
+   "locator": "Table 2，PDF pp.21–23",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E07",
+   "claim": "36 个患者—试验对的用户研究中，使用 TrialGPT 平均筛查时间从 61.5 s 降至 35.3 s（节省 42.6%），准确率差异不显著。",
+   "locator": "Results、Figure 5，PDF pp.23–25",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_494d3e8da8ee8504:E08",
+   "claim": "正文与表格存在小的不一致：特征组合 P@10 正文 0.6699、表格 0.6688；用户研究中两名注释者用时在正文与 Figure 5d 对调。",
+   "locator": "pp.21–22、24–25",
+   "basis": "inference",
+   "basis_note": "数值均来自原文；判断为不一致是阅读者比对的结果。"
+  }
+ ],
+ "batch": "r14",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

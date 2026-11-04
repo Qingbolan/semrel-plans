@@ -1,0 +1,65 @@
+{
+ "id": "lit_f52c7aee6aeb",
+ "url": "https://arxiv.org/abs/2505.11270",
+ "title": "Zhang et al. — TAIJI: MCP-based Multi-Modal Data Analytics on Data Lakes",
+ "version": "arXiv 2505.11270v1（2025-05-16），13 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2505.11270v1",
+ "retrieved_at": "2026-11-04T05:18:37.696220+00:00",
+ "fulltext": "papers/readings/fulltext/lit_f52c7aee6aeb.pdf",
+ "sha256": "44b46c57977f047e06e29d5e70c39a467a0175d980edb06f37889a9658708314",
+ "format": "pdf",
+ "pages": 13,
+ "note_directory": "papers/readings/notes/lit_f52c7aee6aeb",
+ "note": "papers/readings/notes/lit_f52c7aee6aeb/README.md",
+ "read_sections": {
+  "problem": "§1、§2.1，pp.1–4",
+  "method": "§3，pp.4–9",
+  "evaluation": "§4、Table 1、Fig.6–8，pp.9–11",
+  "limitations": "§5–§6，p.11"
+ },
+ "evidence": [
+  {
+   "id": "lit_f52c7aee6aeb:E01",
+   "claim": "MMQP 定义：给定 NL 查询与多模态数据集集合，计算满足谓词的结果集，结果元组可跨模态；指标为召回率、精确率与延迟。",
+   "locator": "§2.1，p.3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f52c7aee6aeb:E02",
+   "claim": "TAIJI 由 MCP Client Manager（NL2Operator、采样代价的 Query Planner、迭代算子优化）、MCP Server Manager（过滤感知向量索引、模态专用服务器）与 MCP Augmentor（数据增强、模型刷新/遗忘）组成。",
+   "locator": "§3、Fig.2，pp.4–9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f52c7aee6aeb:E03",
+   "claim": "初步实验使用 Craigslist 家具数据集 3,000 条列表（furniture 与 image 两表）和 3 条查询，关系过滤后中间结果分别为 33、126、347，查询计划固定。",
+   "locator": "§4.1、Table 1，pp.9–10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f52c7aee6aeb:E04",
+   "claim": "原型以 GPT-4.1 为客户端、Qwen2.5-VL-7B 为图像服务器、PostgreSQL 为结构化服务器；基线为纯 GPT-4.1，表过滤同样交给 PostgreSQL。",
+   "locator": "§4.1，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f52c7aee6aeb:E05",
+   "claim": "TAIJI 在 Q2 精确率 85% 对 65%，Q2/Q3 召回率 71%/94% 对 65%/89%，平均延迟降低 43%。",
+   "locator": "§4.2、Fig.6–8，p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_f52c7aee6aeb:E06",
+   "claim": "大部分组件（规划器、迭代优化、索引、增强与遗忘）未在实验中实现或评测；作者在结论中称将来完成全系统实现。",
+   "locator": "§4.1、§6，pp.9–11",
+   "basis": "inference",
+   "basis_note": "\"未评测\"由实验设置（固定计划、仅三个子任务）推断；\"未来完成实现\"为原文。"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

@@ -1,0 +1,65 @@
+{
+ "id": "lit_80cbf5e7ca3b",
+ "url": "https://arxiv.org/abs/2306.04743",
+ "title": "Zhang et al. — ScienceBenchmark: A Complex Real-World Benchmark for Evaluating Natural Language to SQL Systems",
+ "version": "arXiv:2306.04743v2（2023-12-05），14 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2306.04743v2",
+ "retrieved_at": "2026-11-04T05:33:52.212480+00:00",
+ "fulltext": "papers/readings/fulltext/lit_80cbf5e7ca3b.pdf",
+ "sha256": "928e296ec703578018ee15dfbfe433ba2a3dc77a200cc9faa1f26febe2b05bbc",
+ "format": "pdf",
+ "pages": 14,
+ "note_directory": "papers/readings/notes/lit_80cbf5e7ca3b",
+ "note": "papers/readings/notes/lit_80cbf5e7ca3b/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–3",
+  "method": "§3.1–3.4、Algorithm 1、Tables 1–2，PDF pp.3–8",
+  "evaluation": "§4–5、Tables 3–5，PDF pp.8–11",
+  "limitations": "无独立局限章节；§3.4 合成数据复杂度、§4.2 银标准不过滤、§5.4 讨论，PDF pp.7–11"
+ },
+ "evidence": [
+  {
+   "id": "lit_80cbf5e7ca3b:E01",
+   "claim": "三个库 CORDIS/SDSS/OncoMX 分别为 19/6/25 张表、82/61/106 列、1/6.1/12 GB；每库人工 200 对，合成 1,306/2,061/1,065 对。",
+   "locator": "§3.1、Table 1，PDF pp.3–4",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_80cbf5e7ca3b:E02",
+   "claim": "合成管道分为 Seeding（SemQL AST 模板）、基于增强模式的 SQL 采样（Algorithm 1）、微调 GPT-3 生成 8 个候选问题、SentenceBERT 中心选择 1–2 个问题四个阶段。",
+   "locator": "§3.3，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_80cbf5e7ca3b:E03",
+   "claim": "每库 Seed 100 条用于生成和训练，Dev 100 条用于评测，均由约 20 名领域和 SQL 专家编写；合成查询复杂度低于人工查询。",
+   "locator": "§3.2、§3.4、Table 2，PDF pp.5、7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_80cbf5e7ca3b:E04",
+   "claim": "人工抽检 100 条合成对：SQL 有意义 97%/97%/91%，NL-SQL 语义等价 83%/76%/75%；作者不过滤合成数据中的错误。",
+   "locator": "§4.2、Table 4，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_80cbf5e7ca3b:E05",
+   "claim": "执行准确率：GPT-3.5 最佳为 CORDIS 0.60、SDSS 0.33、OncoMX 0.55；T5-Large 在 OncoMX 上从零样本 0.11 升到 Spider+Seed+Synth 的 0.56。",
+   "locator": "§5.3、Table 5，PDF pp.10–11",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_80cbf5e7ca3b:E06",
+   "claim": "引言称超过 6,000 对，但按 Table 1 合计为 5,032 对；Table 5 表注称“相对提升”，括号内实际为绝对差。",
+   "locator": "§1、Table 1、Table 5，PDF pp.2、4、11",
+   "basis": "inference",
+   "basis_note": "合计与差值为阅读者按表格数值计算。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

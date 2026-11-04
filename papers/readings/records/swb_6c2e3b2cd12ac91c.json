@@ -1,0 +1,71 @@
+{
+ "id": "swb_6c2e3b2cd12ac91c",
+ "url": "https://arxiv.org/abs/2604.08552",
+ "title": "Automated Standardization of Legacy Biomedical Metadata Using an Ontology-Constrained LLM Agent",
+ "version": "arXiv:2604.08552v5，26 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2604.08552",
+ "retrieved_at": "2026-11-04T00:00:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_6c2e3b2cd12ac91c.pdf",
+ "sha256": "d0623f188329e2bd2034cce78c4fb88aae7e35a42fdea44e176be03f86686b00",
+ "format": "pdf",
+ "pages": 26,
+ "note_directory": "papers/readings/notes/swb_6c2e3b2cd12ac91c",
+ "note": "papers/readings/notes/swb_6c2e3b2cd12ac91c/README.md",
+ "read_sections": {
+  "problem": "§1，PDF pp.1–3",
+  "method": "§2.1–2.4、Figures 1–2，PDF pp.3–5",
+  "evaluation": "§2.5–2.7、§3.1–3.4，PDF pp.5–10；补充材料 A、D–F，pp.16、21–26",
+  "limitations": "§4.1，PDF p.12；§3.4，p.10"
+ },
+ "evidence": [
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E01",
+   "claim": "遗留生物医学元数据常不满足社区标准的值约束；文本形式标准只规定字段而不规定值的表示；提示工程只提供标准的固定快照并依赖模型预训练知识。",
+   "locator": "Abstract；§1，PDF pp.1–2",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E02",
+   "claim": "ARMS 输入一条遗留记录和 CEDAR 模板 ID，经 MCP 调用 get_cedar_template 和两个 BioPortal 检索工具，输出符合模板的记录及处理日志；无法确定有效值时留空，不新增断言。基线为同模型、无工具、提示中仅给字段名和词表名的提示工程方法。",
+   "locator": "§2.1–2.4、Figure 1，PDF pp.3–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E03",
+   "claim": "评测集为 12 种 assay 中每种至多随机 100 条，共 839 条记录、28,257 个字段实例，对应 1,875 个去重字段–值对（有值 1,686：本体约束 200、非本体 1,486）；模板含 23–48 个字段。",
+   "locator": "§2.5，PDF pp.5–6；Table A.1，p.16",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E04",
+   "claim": "字段级：精确率 0.56→0.93、召回率 0.51→0.85；本体约束字段精确率 0.36→0.92、召回率 0.33→0.80；非本体字段 0.70→0.94、0.63→0.88；12 种 assay 均改善。",
+   "locator": "§3.1，PDF p.7",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E05",
+   "claim": "去重后非本体字段召回无显著差异（基线 0.848 对 ARMS 0.843，p=0.6641）；消融显示模板主要提升非本体字段，术语检索主要提升本体字段，二者单独都达不到完整 ARMS 的本体字段表现。",
+   "locator": "§3.2–3.3，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E06",
+   "claim": "ARMS 的 461 个去重分歧中 66% 为遗漏，主要因有意拒绝不符合模板的遗留值（parent_sample_id 205 例）；排除 33 个参考值违规的 assay–字段组合后，ARMS 升至 P 0.95 / R 0.89。局限：只能利用记录和现有工具中的信息，参考标准非无误，仅评测单一仓库和框架。",
+   "locator": "§3.4，PDF pp.9–10；§4.1，p.12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_6c2e3b2cd12ac91c:E07",
+   "claim": "新意主要在任务设定和评测设计，方法属常见的“LLM + 领域工具”范式；基线为作者前作，未与 SPIRES 等外部系统直接比较。",
+   "locator": "§1，pp.2–3；§2.4，p.5",
+   "basis": "inference",
+   "basis_note": "基线与相关工作事实来自原文；新意评价为阅读者分析。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

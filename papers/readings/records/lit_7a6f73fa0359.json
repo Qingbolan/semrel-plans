@@ -1,0 +1,65 @@
+{
+ "id": "lit_7a6f73fa0359",
+ "url": "https://www.vldb.org/pvldb/vol18/p4073-lee.pdf",
+ "title": "Lee et al. — Semantic Integrity Constraints: Declarative Guardrails for AI-Augmented Data Processing Systems",
+ "version": "PVLDB Vol.18 No.11，pp.4073–4080（2025），doi:10.14778/3749646.3749677，8 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://www.vldb.org/pvldb/vol18/p4073-lee.pdf",
+ "retrieved_at": "2026-11-04T05:18:37.696220+00:00",
+ "fulltext": "papers/readings/fulltext/lit_7a6f73fa0359.pdf",
+ "sha256": "bc00430edde0e2e3df4606cb38fe376d8400a14cb4585b788a0a9643f083b86a",
+ "format": "pdf",
+ "pages": 8,
+ "note_directory": "papers/readings/notes/lit_7a6f73fa0359",
+ "note": "papers/readings/notes/lit_7a6f73fa0359/README.md",
+ "read_sections": {
+  "problem": "§1、Table 1，pp.4073–4074",
+  "method": "§2–§6，pp.4074–4078",
+  "evaluation": "无实验；Table 1 设计目标，p.4074",
+  "limitations": "§3、§4.2、§6 开放问题段落，pp.4074–4078"
+ },
+ "evidence": [
+  {
+   "id": "lit_7a6f73fa0359:E01",
+   "claim": "SIC 是在 pipe SQL 中用 ASSERT 声明的约束，可作用于语义算子生成的属性或算子本身，可带 RETRY 阈值与 CONTINUE/IGNORE/ABORT 失败模式。",
+   "locator": "§3.1，p.4074",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7a6f73fa0359:E02",
+   "claim": "约束分为 Domain、Inclusion/Exclusion、Grounding、Soundness、Relevance、Assertions 六类；抽取式 grounding 确定性执行，生成式 grounding 与 soundness 依赖 LLM 或事实核查模型。",
+   "locator": "§3.2、Table 2，p.4075",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7a6f73fa0359:E03",
+   "claim": "逻辑优化包括约束下推与按代价/选择率的约束重排；物理执行分反应式（生成后检测+重试）与主动式（受约束解码、部分输出核查）。",
+   "locator": "§4.1–4.2.1，pp.4075–4076",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7a6f73fa0359:E04",
+   "claim": "约束可靠性定义为检测违规的精确率与召回率；随机性约束需人工标签估计，且受上游计划与数据影响，作者仅提出历史统计、共享基础模型、置信度代理三种设想。",
+   "locator": "§4.2.2，pp.4076–4077",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_7a6f73fa0359:E05",
+   "claim": "论文没有实现评测、数据集或任何实验数字；Table 1 的五项成功标准用于组织论文结构，并未被测量。",
+   "locator": "全文 §1–§8，pp.4073–4078；Table 1，p.4074",
+   "basis": "inference",
+   "basis_note": "\"无实验\"是阅读者通读全文后的判断。"
+  },
+  {
+   "id": "lit_7a6f73fa0359:E06",
+   "claim": "相关工作中作者称 DocETL 是唯一把校验作为一等公民的 AI 增强 DPS 但方式偏命令式，LOTUS 与 Palimpzest 不支持约束，只能相对 oracle 设定质量阈值。",
+   "locator": "§7，p.4078",
+   "basis": "explicit"
+  }
+ ],
+ "batch": "r06",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

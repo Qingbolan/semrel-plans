@@ -1,0 +1,71 @@
+{
+ "id": "swb_ee6a479460e56203",
+ "url": "https://arxiv.org/abs/2407.09017",
+ "title": "Freitas, Kalajdjieski et al. — AI-Driven Guided Response for Security Operation Centers with Microsoft Copilot for Security",
+ "version": "arXiv:2407.09017v4（2024-11-26），10 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2407.09017",
+ "retrieved_at": "2026-11-04T05:32:31+00:00",
+ "fulltext": "papers/readings/fulltext/swb_ee6a479460e56203.pdf",
+ "sha256": "b2607ef076fce3eb0a9d2973602f95c975bc186f0be4a297d1a7270741194618",
+ "format": "pdf",
+ "pages": 10,
+ "note_directory": "papers/readings/notes/swb_ee6a479460e56203",
+ "note": "papers/readings/notes/swb_ee6a479460e56203/README.md",
+ "read_sections": {
+  "problem": "Abstract、§1–2，PDF pp.1–3",
+  "method": "§3–6、Algorithms 1–2，PDF pp.3–6",
+  "evaluation": "§7、Tables 2–3、Figure 3，PDF pp.6–8；附录 A–B，p.10；Table 2 已渲染核对",
+  "limitations": "§7.1 Limitations，PDF p.6；§7.3–7.5 Online results，p.8"
+ },
+ "evidence": [
+  {
+   "id": "swb_ee6a479460e56203:E01",
+   "claim": "CGR 用告警的 5 个类别特征和 67 个数值特征、独热编码、PCA（k=40）和随机森林，分别完成事件分诊、相似事件推荐和告警处置动作推荐；训练每周、推理每 15 分钟运行。",
+   "locator": "§3–5，PDF pp.3–6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ee6a479460e56203:E02",
+   "claim": "GUIDE 含 1,300 多万条证据、160 万告警、100 万事件（两周，来自第 2 区域，6.1k 组织），每个事件有 TP/BP/FP 分级，另有 2.6 万条告警的处置标签；按 70/30 划分。",
+   "locator": "§7.2、附录 A–B，PDF pp.7、10",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ee6a479460e56203:E03",
+   "claim": "12 个区域离线分诊平均宏精确率 0.87、召回 0.86、F1 0.87；在 0.9 精确率阈值下在线覆盖 41% 的事件。",
+   "locator": "§7.3、Table 2，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ee6a479460e56203:E04",
+   "claim": "第 2 区域 81.1% 的分诊错误发生在 BP 与 TP/FP 之间，TP 被误判为 BP 或 FP 的比例为 2.4%。",
+   "locator": "§7.3、Table 3，PDF pp.7–8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ee6a479460e56203:E05",
+   "claim": "专家评估 1,000 个事件的相似事件推荐，94% 相关；修复动作离线宏 F1 平均 0.99，在线覆盖 62%；部署后用户正面反馈率 89%。",
+   "locator": "§7.4–7.5、§8，PDF p.8",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ee6a479460e56203:E06",
+   "claim": "论文不与其他方法或竞品比较，只覆盖已有检测器，不处理零日攻击。",
+   "locator": "§1.1、§7.1 Limitations，PDF pp.2、6",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_ee6a479460e56203:E07",
+   "claim": "GUIDE 规模（1.6M 告警、1M 事件、9.1k 检测器）远小于 Table 2 第 2 区域两周统计（14.5M 告警、4.7M 事件、31k 检测器），应为抽样子集；论文也没有在 GUIDE 公开划分上报告 CGR 的结果。",
+   "locator": "§7.2、Table 2，PDF p.7",
+   "basis": "inference",
+   "basis_note": "两组数字来自原文；\"抽样子集\"\"未在公开划分上报告\"为阅读者比对后的判断。"
+  }
+ ],
+ "batch": "r11",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

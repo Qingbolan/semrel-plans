@@ -1,0 +1,65 @@
+{
+ "id": "lit_150345f26885",
+ "url": "https://doi.org/10.1111/cgf.70112",
+ "title": "Chen, Wu et al. — InterChat: Enhancing Generative Visual Analytics using Multimodal Interactions",
+ "version": "arXiv:2503.04110v2（2025-04-16，作者版，页眉标注 EuroVis 2025 / Computer Graphics Forum），24 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://arxiv.org/pdf/2503.04110v2",
+ "retrieved_at": "2026-11-04T05:15:27.410458+00:00",
+ "fulltext": "papers/readings/fulltext/lit_150345f26885.pdf",
+ "sha256": "3f69c8a856d3493af446485b688fb7574baefc58f0e48fb1a1a4313cc44bd271",
+ "format": "pdf",
+ "pages": 24,
+ "note_directory": "papers/readings/notes/lit_150345f26885",
+ "note": "papers/readings/notes/lit_150345f26885/README.md",
+ "read_sections": {
+  "problem": "§1、§3，PDF pp.1–4",
+  "method": "§4，Figures 2–4，PDF pp.4–7",
+  "evaluation": "§5、Figure 7、附录 III，PDF pp.7–9、21–24；p.9 已渲染核对",
+  "limitations": "§6.2 失败分析、§6.3 局限与未来工作，PDF p.10"
+ },
+ "evidence": [
+  {
+   "id": "lit_150345f26885:E01",
+   "claim": "纯自然语言难以精确表达时序波动、散点簇等视觉模式与多步分析意图；8 名研究者的头脑风暴收集 75 个用例，多模态相对纯语言的平均偏好 5.96/7（SD=1.02），作者承认用例设计可能带来偏差。",
+   "locator": "§1、§3.1，PDF pp.1–3",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_150345f26885:E02",
+   "claim": "InterChat 用两个智能体（描述符生成与上下文交互链接）推断意图，第三个智能体以思维链结构化提示生成 D3.js 代码；手绘操作由视觉 LLM（默认 GPT-4o）解释；只向模型提供数据模式，数据在本地注入。",
+   "locator": "§4.2–4.4，PDF pp.5–7",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_150345f26885:E03",
+   "claim": "用户研究 10 人，每人 10 个任务（一半简单、一半复杂；5 个仅语言、5 个可用多模态），每题限时 5 分钟，使用 Netflix Stock 与 Number of Deaths 数据集。",
+   "locator": "§5.3.1，附录 III，PDF pp.9、21",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_150345f26885:E04",
+   "claim": "多模态交互使简单任务完成时间下降 18%、复杂任务下降 15%，平均重试从 0.79 降到 0.32；简单任务的意图准确性在多模态条件下略低。",
+   "locator": "§5.3.2，Figure 7，PDF p.9",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_150345f26885:E05",
+   "claim": "100 次任务执行中 26 次意图误解、4 次代码无法执行、12 次可运行但有缺陷；局限包括 LLM 延迟与幻觉、无输出正确性校验、只提供元数据无法做复杂计算、仅覆盖 2D 屏幕交互。",
+   "locator": "§6.2–6.3，PDF p.10",
+   "basis": "explicit"
+  },
+  {
+   "id": "lit_150345f26885:E06",
+   "claim": "阅读者认为该工作是交互系统而非查询算子，证据来自小样本用户研究，未报告统计检验，也未与外部系统对照，结论应视为初步。",
+   "locator": "§5.3、§6.3，PDF pp.9–10",
+   "basis": "inference",
+   "basis_note": "事实与页码来自原文；评价、局限归纳或与项目的关联为阅读者分析，正文已用“阅读者分析”标明。"
+  }
+ ],
+ "batch": "r05",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

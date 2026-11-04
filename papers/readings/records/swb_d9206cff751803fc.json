@@ -1,0 +1,65 @@
+{
+ "id": "swb_d9206cff751803fc",
+ "url": "https://link.springer.com/article/10.1186/s13321-018-0290-y",
+ "title": "Annotation and detection of drug effects in text for pharmacovigilance",
+ "version": "Journal of Cheminformatics 10:37（2018），PMC6089860 出版社 PDF（PMC 开放数据 S3 副本），33 页",
+ "status": "READ",
+ "core": false,
+ "source_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC6089860.1/PMC6089860.1.pdf",
+ "retrieved_at": "2026-11-04T05:40:00+00:00",
+ "fulltext": "papers/readings/fulltext/swb_d9206cff751803fc.pdf",
+ "sha256": "87fd19221190e5630eeec07b6823d10def9a7bc379fa27aa5935f135b205121d",
+ "format": "pdf",
+ "pages": 33,
+ "note_directory": "papers/readings/notes/swb_d9206cff751803fc",
+ "note": "papers/readings/notes/swb_d9206cff751803fc/README.md",
+ "read_sections": {
+  "problem": "Abstract、Background，pp.1–5，Table 1",
+  "method": "Methods，pp.5–12，Tables 2–6",
+  "evaluation": "Results and discussion，pp.12–29，Tables 7–25",
+  "limitations": "跨句信息分析 pp.22–25，Table 21；Conclusions p.29"
+ },
+ "evidence": [
+  {
+   "id": "swb_d9206cff751803fc:E01",
+   "claim": "PHAEDRA 含 597 篇 MEDLINE 摘要（ADE 227、PK 125、DDI 2013 52、自行检索 193），从 2,968 篇候选中按唯一药名数选出。",
+   "locator": "Methods p.5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d9206cff751803fc:E02",
+   "claim": "标注包括 3 类实体、4 类事件（AE、PTE、Combination、DDI）、3 种事件属性、2 类关系和事件参与者共指；事件须在单句内。",
+   "locator": "pp.4–11，Tables 2–5",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d9206cff751803fc:E03",
+   "claim": "150 篇双标子集的一致性：实体宽松/精确 F 92.6/86.0，事件识别严格/宽松 F 65.0/78.4，共指 50.91。",
+   "locator": "pp.12–17，Tables 7、9、12",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d9206cff751803fc:E04",
+   "claim": "全语料 13,726 个实体、3,166 个事件、7,523 个事件参与者；随机划分训练 359、开发 120、测试 118 篇。",
+   "locator": "Table 19 p.21；p.25",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d9206cff751803fc:E05",
+   "claim": "NERSuite 测试集总体宽松 F=79.5、精确 F=72.1；EventMine 事件及主要参与者总体 F=47.2，触发词识别 F=61.6。",
+   "locator": "Tables 22–25，pp.26–29",
+   "basis": "explicit"
+  },
+  {
+   "id": "swb_d9206cff751803fc:E06",
+   "claim": "原文称选取 600 篇，但四个来源之和为 597；主语料由单一标注者完成，IAA 后指南修订，概念 ID 为未经人工核对的自动结果。",
+   "locator": "pp.5、12、29",
+   "basis": "inference",
+   "basis_note": "数字与流程来自原文；600/597 差额由阅读者计算，标签质量影响为阅读者分析。"
+  }
+ ],
+ "batch": "r10",
+ "reader": "claude-subagent",
+ "reviewer": null,
+ "checked_evidence": []
+}

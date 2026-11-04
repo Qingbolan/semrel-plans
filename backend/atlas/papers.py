@@ -23,15 +23,15 @@ class PaperExporter:
 
     def export(self, queries=()):
         records = []
-        for entry in json.loads((self.root / 'Survey/manifest.json').read_text()):
+        for entry in json.loads((self.root / 'papers/survey/manifest.json').read_text()):
             folder = entry['folder']
             title, venue, year = folder.rsplit('-', 2)
-            sections = {key: (self.root / 'Survey' / folder / name).read_text() for key, name in SECTIONS.items()}
+            sections = {key: (self.root / 'papers/survey' / folder / name).read_text() for key, name in SECTIONS.items()}
             urls = re.findall(r'\]\((https?://[^\s)]+)\)', sections['overview'])
-            local_pdf = next((self.root / 'Survey' / folder).glob('*.pdf'), None)
+            local_pdf = next((self.root / 'papers/survey' / folder).glob('*.pdf'), None)
             paper_url = urls[0] if urls else quote(local_pdf.relative_to(self.root).as_posix()) if local_pdf else ''
             for key, filename in {'usecase': 'usecase分析.md', 'benchmark': 'benchmark分析.md'}.items():
-                document = self.root / 'Survey' / folder / filename
+                document = self.root / 'papers/survey' / folder / filename
                 if document.exists():
                     sections[key] = document.read_text()
             usecase = sections.get('usecase', self.usecase(sections['workload']))
@@ -59,7 +59,7 @@ class PaperExporter:
         # Coverage may add papers, so it runs before their published reviews are attached.
         BenchmarkCoverage(self.root, self.identity).apply(records)
         # A separate reading task publishes its manifest only after notes are complete.
-        if (self.root / 'research/paper-completion/reviews.json').is_file():
+        if (self.root / 'papers/readings/reviews.json').is_file():
             PaperReviews(self.root, self.identity).apply(records)
         types = json.loads((self.root / 'config/paper-types.json').read_text())
         for paper in records:

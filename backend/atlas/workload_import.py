@@ -116,7 +116,7 @@ class WorkloadProjectImporter:
     def import_literature(self):
         existing={canonical_url(s['location']):s['source_id'] for s in self.tables['sources'] if s['source_type']=='paper'}
         # Existing reading-note papers must share the same source identity on import.
-        survey=json.loads((self.root/'Survey/manifest.json').read_text())
+        survey=json.loads((self.root/'papers/survey/manifest.json').read_text())
         for entry in survey:
             p=self.root/'Survey'/entry['folder']/'README.md'
             urls=re.findall(r'\]\((https?://[^\s)]+)\)',p.read_text())
