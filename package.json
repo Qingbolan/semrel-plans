@@ -2,10 +2,10 @@
   "name": "semrel-atlas",
   "private": true,
   "scripts": {
-    "build:viewer": "esbuild src/viewer/graph/index.jsx --bundle --minify --format=iife --global-name=SemRelGraph --outfile=assets/graph.js",
+    "build:viewer": "esbuild frontend/graph/index.jsx --bundle --minify --format=iife --global-name=SemRelGraph --outfile=dist/assets/graph.js",
     "test:viewer": "node --test tests/graph-layout.test.mjs && node tests/test_reader_state.js && node tests/test_eal_highlight.cjs && node tests/test_content_locale.cjs && node tests/test_group_state.cjs",
     "build": "npm run build:viewer && npm run build:papers && python3 backend/scripts/build.py",
-    "build:papers": "esbuild src/viewer/papers.js --bundle --minify --format=iife --global-name=SemRelPapers --outfile=assets/paper-view.js"
+    "build:papers": "esbuild frontend/papers.js --bundle --minify --format=iife --global-name=SemRelPapers --outfile=dist/assets/paper-view.js"
   },
   "dependencies": {
     "@lexical/code": "^0.49.0",

@@ -8,7 +8,7 @@
 
 UDA-Bench 已按固定版本源码完整收录 **608 个查询位置（602 种 SQL）**，覆盖六个领域、43 个 SQL 文件。论文 v1 的 5 数据集 / 240 查询与仓库扩展分开标注。详见[覆盖收据](exports/uda-source-coverage.json)和[范围说明](docs/scope.md)。
 
-展示入口：[交互图册](index.html) · [逐查询文字计划](docs/catalog.md) · [范围和限制](docs/scope.md)。
+展示入口：[交互图册](dist/index.html) · [逐查询文字计划](docs/catalog.md) · [范围和限制](docs/scope.md)。
 
 ```text
 query/
@@ -21,20 +21,17 @@ config/
   operators.json            统一算子类型与 family 字典
   catalog.json              场景索引与上游版本
 files/<scenario>/           SemBench 风格的场景组织，仅引用统一 query_id
-src/
-  scenario.py               数据加载、引用完整性与图校验
-  export.py                 CSV、SQLite、统计视图导出
-  build.py                  图册和文档生成
-  viewer/                   可视化模板与交互
-scripts/                    build.py、validate.py
-tests/                      数据完整性与统计口径测试
+backend/
+  atlas/                    后端 Python：数据加载与校验、导出、图册生成、HTTP 服务
+  scripts/                  命令入口：build、validate、serve、release、vendor_upstream、导入脚本
+frontend/                   前端源码：页面模板、交互脚本、样式、图组件
+dist/                       构建产物（不进 Git）：index.html、migration.html、assets/、viewer/
+tests/                      数据完整性、后端与前端测试
 exports/                    生成的 CSV、SQLite、汇总
-assets/                     生成的浏览器数据
-index.html                  生成的离线展示入口
 docs/                       模型契约、来源快照、收据
 ```
 
-遵循 SemBench 的 files 场景组织、src 实现、scripts 入口分工；统一数据不按场景复制，避免跨场景统计需要扫描不同格式。唯一编辑源为 query/ 五表与 config/operators.json；files 中只保存场景成员索引。展示树是生成的投影，不作为统计输入。
+前端源码在 frontend/，构建输出到 dist/；后端代码与命令统一在 backend/。统一数据不按场景复制，避免跨场景统计需要扫描不同格式。唯一编辑源为 query/ 五表与 config/operators.json；files 中只保存场景成员索引。展示树是生成的投影，不作为统计输入。
 
 Python 3.10+（服务端仅标准库），前端组件构建需要 Node.js/npm；EAL 构建和实时读取需要 PATH 中的 EasyNet CLI。浏览器资源全部本地打包，无需外网：
 
@@ -63,18 +60,18 @@ EAL 文件是保留节点和有序依赖的逻辑表示；执行仍需实现 Sem
 
 “打开 .eal”或拖入文件可预览本地 EAL；仅在当前页面保留，刷新后清除。外部修改导入文件后需要重新选择文件。目录内 EAL 的修改可直接重新加载，但再次运行 build 会从规范化数据重新生成并覆盖它们。
 
-双击 `index.html` 仍可查看构建时的离线 IR 快照，页面明确标示该模式；实时编译和导入须使用本地服务。普通 `python -m http.server` 不提供编译接口。服务仅监听 127.0.0.1，调用 `mission compile`，不会执行任务。当前图形视图支持平面 DAG，loop 控制流会明确报告不支持。
+双击 `dist/index.html` 仍可查看构建时的离线 IR 快照，页面明确标示该模式；实时编译和导入须使用本地服务。普通 `python -m http.server` 不提供编译接口。服务仅监听 127.0.0.1，调用 `mission compile`，不会执行任务。当前图形视图支持平面 DAG，loop 控制流会明确报告不支持。
 
 ### 专业计划画布
 
-计划图使用 React Flow (`@xyflow/react`) 和 ELK (`elkjs`)。`src/viewer/graph/layout.mjs` 将 Mission IR 的命名输入转换为图边并布局，`index.jsx` 负责节点、缩放平移、小地图、布局切换和详情面板。画布只改变显示位置，不修改 EAL。旧 HTML 树和分阶段卡片渲染已移除。
+计划图使用 React Flow (`@xyflow/react`) 和 ELK (`elkjs`)。`frontend/graph/layout.mjs` 将 Mission IR 的命名输入转换为图边并布局，`index.jsx` 负责节点、缩放平移、小地图、布局切换和详情面板。画布只改变显示位置，不修改 EAL。旧 HTML 树和分阶段卡片渲染已移除。
 
 - `npm ci`：安装锁定依赖。
 - `npm run build`：构建本地图组件及完整图册；修改前端组件后也可单独执行 `npm run build:viewer`。
 - `npm run test:viewer`：检查全部查询横向/纵向布局的节点身份、边方向、端口端点、节点不重叠以及线路不交叉、不重叠、不穿过节点，以及读取状态切换。
 - `python3 -m unittest discover -s tests`：数据、EAL 编译与本地服务测试。
 
-参考组件文档：[React Flow](https://reactflow.dev/learn/concepts/built-in-components)。构建产物 `assets/graph.js` / `assets/graph.css` 随离线图册分发，打开已构建页面不需要 npm 或 CDN。
+参考组件文档：[React Flow](https://reactflow.dev/learn/concepts/built-in-components)。构建产物 `dist/assets/graph.js` / `dist/assets/graph.css` 随离线图册分发，打开已构建页面不需要 npm 或 CDN。
 
 ### 布线约束
 

@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 let saved=JSON.stringify({groups:[{id:'custom',name:'My group',color:'#123456'}],memberships:{q:['custom']}});
 const context={localStorage:{getItem:()=>saved,setItem:(_,s)=>saved=s},document:{dispatchEvent:()=>{}},Event:class{}};
-vm.createContext(context);vm.runInContext(fs.readFileSync('src/viewer/paper-groups.js','utf8').replace('export class','class')+'\nthis.Groups=PaperGroups;',context);
+vm.createContext(context);vm.runInContext(fs.readFileSync('frontend/paper-groups.js','utf8').replace('export class','class')+'\nthis.Groups=PaperGroups;',context);
 const seed={version:1,groups:[{id:'sem-operator',name:'Sem-operator',color:'#123456'}],memberships:{q:['sem-operator']}};
 const groups=new context.Groups();groups.seed(seed);
 assert.deepEqual(Array.from(groups.groupsFor('q'),g=>g.id),['custom','sem-operator']);

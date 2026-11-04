@@ -71,7 +71,7 @@ class PaperExporter:
                 raise ValueError('Paper without a category: ' + paper['id'])
             paper['category'] = order[taxonomy['papers'][paper['id']]]
         records.sort(key=lambda p: (-int(p['year']), p['title']))
-        (self.root / 'assets/papers.js').write_text('window.SEMREL_PAPERS = ' + json.dumps(records, ensure_ascii=False) + ';\n')
+        (self.root / 'dist/assets/papers.js').write_text('window.SEMREL_PAPERS = ' + json.dumps(records, ensure_ascii=False) + ';\n')
         return records
 
     @staticmethod

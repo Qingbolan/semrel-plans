@@ -9,8 +9,7 @@ releases/
 data/source-inputs/
 
 # Build outputs: regenerate with `npm run build` instead of committing.
-/index.html
-/assets/
+/dist/
 /exports/eal/
 /query/tasks/
 /exports/eal.zip

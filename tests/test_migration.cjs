@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict');
-const Backup=require('../src/viewer/migration.js');
+const Backup=require('../frontend/migration.js');
 class Storage {
  constructor(entries={}){this.items=new Map(Object.entries(entries));}
  get length(){return this.items.size;}

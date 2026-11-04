@@ -15,7 +15,7 @@ def refresh():
     previous = {identity(p['url']): p for p in queue['papers']}
     reviews = {identity(p['url']): p for p in json.loads(
         (ROOT / 'research/paper-completion/reviews.json').read_text())}
-    catalog = json.loads((ROOT / 'assets/papers.js').read_text().removeprefix(
+    catalog = json.loads((ROOT / 'dist/assets/papers.js').read_text().removeprefix(
         'window.SEMREL_PAPERS = ').rstrip(';\n'))
     required = ['motivation', 'problem', 'novelty', 'workload', 'usecase', 'benchmark']
     result = []

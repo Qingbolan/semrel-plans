@@ -14,7 +14,7 @@
 
 `python3 backend/scripts/serve.py --port 8765` 提供图册与只编译接口。`GET /api/plan?query_id=...` 按生成清单读取磁盘文件并编译；`POST /api/compile` 接收 `{ "source": "..." }`，在临时目录中编译导入的 EAL，不保存到查询目录。文件最大 1 MiB，编译超时 15 秒；编译错误返回原始源码和诊断，前端清除旧图。
 
-`backend/atlas/eal_reader.py` 负责编译器边界和 IR 图投影；`backend/atlas/server.py` 负责本地 HTTP；`src/viewer/reader.js` 管理 idle/loading/ready/error 生命周期并取消过期请求。前端只读取 Mission IR，不另写 EAL 解析器。图按 phase 显示唯一调用节点，命名输入端口保留共享依赖；不支持的 loop 结构明确拒绝。来源和左侧目录统计对应规范化查询快照，右侧节点统计对应当前 EAL 编译结果。
+`backend/atlas/eal_reader.py` 负责编译器边界和 IR 图投影；`backend/atlas/server.py` 负责本地 HTTP；`frontend/reader.js` 管理 idle/loading/ready/error 生命周期并取消过期请求。前端只读取 Mission IR，不另写 EAL 解析器。图按 phase 显示唯一调用节点，命名输入端口保留共享依赖；不支持的 loop 结构明确拒绝。来源和左侧目录统计对应规范化查询快照，右侧节点统计对应当前 EAL 编译结果。
 
 reference_program 任务没有可编译依赖图，不生成 EAL，也不调用编译接口；选择这类任务会清除旧图并进入 reference 状态。
 

@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');const vm=require('node:vm');
-const code=vm.runInNewContext(fs.readFileSync('src/viewer/eal-code.js','utf8')+';EalCode');
+const code=vm.runInNewContext(fs.readFileSync('frontend/eal-code.js','utf8')+';EalCode');
 const source='// call "comment"\nmission "<img onerror=alert(1)>" {\n let x = call "a\\"b" with { input = prev.output, n = 42, enabled = true }\n}';
 const html=code.highlight(source,2);
 const decoded=html.replace(/<[^>]*>/g,'').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');

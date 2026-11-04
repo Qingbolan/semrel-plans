@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'backend' / 'atlas'))
-from hosting import HostingPolicy, PUBLIC_ROOTS, PUBLIC_FILES
+from hosting import HostingPolicy
 
 
 def digest(path):
@@ -25,15 +25,12 @@ class ReleaseBuilder:
         self.policy = HostingPolicy(self.root, 8765)
 
     def inventory(self):
-        candidates = [self.root / name for name in PUBLIC_FILES]
-        for directory in PUBLIC_ROOTS:
-            candidates.extend((self.root / directory).rglob('*'))
+        # Archive paths are URL paths, so the release is a flat site: frontend from dist/, data roots beside it.
+        self.sources = {}
         rows = []
-        for path in sorted(set(candidates)):
-            if path.is_symlink():
-                raise ValueError(f'Symlink must be materialized before release: {path}')
-            if path.is_file() and self.policy.permits_file(path):
-                rows.append({'path': path.relative_to(self.root).as_posix(), 'bytes': path.stat().st_size, 'sha256': digest(path)})
+        for url, path in self.policy.published():
+            self.sources[url] = path
+            rows.append({'path': url, 'bytes': path.stat().st_size, 'sha256': digest(path)})
         return rows
 
     @staticmethod
@@ -57,7 +54,7 @@ class ReleaseBuilder:
         output.mkdir(parents=True)
         rows = self.inventory()
         published = {row['path'] for row in rows}
-        catalog = json.loads((self.root / 'assets/plans.json').read_text())
+        catalog = json.loads(self.policy.locate('assets/plans.json').read_text())
         required = {'index.html', 'migration.html', 'assets/plans.js', 'exports/eal/manifest.json'}
         required.update(q['task_path'] for q in catalog['queries'])
         required.update(row['path'] for row in json.loads((self.root / 'exports/eal/manifest.json').read_text()))
@@ -68,7 +65,7 @@ class ReleaseBuilder:
         (output / 'release-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
         with tarfile.open(output / 'site.tar.partial', 'w') as archive:
             for row in rows:
-                archive.add(self.root / row['path'], arcname=row['path'], recursive=False, filter=self.public_metadata)
+                archive.add(self.sources[row['path']], arcname=row['path'], recursive=False, filter=self.public_metadata)
             archive.add(output / 'release-manifest.json', arcname='release-manifest.json', filter=self.public_metadata)
         (output / 'site.tar.partial').rename(output / 'site.tar')
         # Keep application code separate from the public website mount.

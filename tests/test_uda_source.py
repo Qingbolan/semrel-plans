@@ -29,7 +29,7 @@ class UdaCoverageTest(unittest.TestCase):
         commit = json.loads((ROOT / 'config/catalog.json').read_text())['source_commits']['UDA-Bench']
         cls.source = UdaSourceCatalog(ROOT, commit)
         cls.report = json.loads((ROOT / 'exports/uda-source-coverage.json').read_text())
-        cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'assets/plans.json').read_text())['queries']
+        cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'dist/assets/plans.json').read_text())['queries']
                        if q['collection_name'] == 'UDA-Bench'}
 
     def test_every_source_occurrence_has_its_own_delivered_query(self):

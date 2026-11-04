@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const pending = [];
 let networkFailure=false;
 const context = vm.createContext({AbortController, location:{protocol:'http:'}, fetch:()=>networkFailure?Promise.reject(new TypeError('Load failed')):new Promise(resolve=>pending.push(resolve))});
-vm.runInContext(fs.readFileSync(require('node:path').join(__dirname,'../src/viewer/reader.js'),'utf8')+'\nthis.Reader = EalDocument;',context);
+vm.runInContext(fs.readFileSync(require('node:path').join(__dirname,'../frontend/reader.js'),'utf8')+'\nthis.Reader = EalDocument;',context);
 const response = (name,ok=true) => ({ok,status:ok?200:422,headers:{get:()=> 'application/json'},json:async()=>ok?{source:name,graph:{name},ir:{}}:{source:name,error:'syntax error'}});
 (async()=>{
   const reader = new context.Reader(()=>{});

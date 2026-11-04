@@ -72,11 +72,18 @@ class AtlasHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         return io.BytesIO(payload)
 
+    def translate_path(self, path):
+        # The base class normalises the URL (.., %-escapes) against the repository root; map it to the publishing file.
+        relative = Path(super().translate_path(path)).relative_to(self.server.root).as_posix()
+        self.url_relative = '' if relative == '.' else relative
+        return str(self.server.hosting.locate(self.url_relative))
+
     def send_head(self):
         path = Path(self.translate_path(self.path))
-        if path == self.server.root:
+        if path.is_dir() and not self.url_relative:
             path = path / 'index.html'
-        if not self.permitted_request() or not self.server.hosting.permits_file(path):
+        published = self.server.hosting.url_path(path)
+        if not self.permitted_request() or published is None or published.strip('/') != (self.url_relative.strip('/') or 'index.html'):
             self.send_error(403, 'Not a published resource')
             return None
         return super().send_head()
@@ -87,7 +94,8 @@ class AtlasHandler(SimpleHTTPRequestHandler):
             if not self.permitted_request():
                 return self.respond(403, {'error': 'Origin is not configured'})
             # Catalog plans ship as build-time snapshots, so a missing compiler only disables EAL import.
-            ready = (self.server.root / 'index.html').is_file() and (self.server.root / 'assets/plans.js').is_file()
+            hosting = self.server.hosting
+            ready = hosting.locate('index.html').is_file() and hosting.locate('assets/plans.js').is_file()
             return self.respond(200 if ready else 503, {'status': 'ready' if ready else 'missing_catalog',
                                                         'eal_import': bool(getattr(self.server.compiler, 'executable', True))})
         if url.path != '/api/plan':

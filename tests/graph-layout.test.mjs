@@ -1,10 +1,10 @@
-import {roundedRoute,cornerRadii,penRoute,samplePath,pathConflicts} from '../src/viewer/graph/path.mjs';
+import {roundedRoute,cornerRadii,penRoute,samplePath,pathConflicts} from '../frontend/graph/path.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {routingViolations} from './route-geometry.mjs';
-import {layoutMission,dependencyScope,NODE_WIDTH,NODE_HEIGHT} from '../src/viewer/graph/layout.mjs';
-const catalog=JSON.parse(fs.readFileSync(new URL('../assets/plans.json',import.meta.url)));
+import {layoutMission,dependencyScope,NODE_WIDTH,NODE_HEIGHT} from '../frontend/graph/layout.mjs';
+const catalog=JSON.parse(fs.readFileSync(new URL('../dist/assets/plans.json',import.meta.url)));
 test('all catalog DAGs preserve node identity, port edges, and nonoverlapping layout',async()=>{
   for(const query of catalog.queries.filter(q=>q.eal)) for(const direction of ['BT','LR']) {
     const model=query.eal.snapshot.graph;

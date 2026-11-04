@@ -1,5 +1,6 @@
 """Build portable browser assets and documentation from scenario query files."""
 from pathlib import Path
+import shutil
 import hashlib
 import re
 from papers import PaperExporter
@@ -54,6 +55,19 @@ class SiteBuilder:
             index.append(light)
         return index
 
+    RUNTIME = ('.js', '.css')
+
+    def copy_frontend(self, dist):
+        """The static site is self-contained in dist/: plain viewer scripts are copied next to the bundles."""
+        viewer = dist / 'viewer'
+        shutil.rmtree(viewer, ignore_errors=True)
+        viewer.mkdir(parents=True)
+        source = self.root / 'frontend'
+        for path in source.iterdir():
+            if path.is_file() and path.suffix in self.RUNTIME:
+                shutil.copy2(path, viewer / path.name)
+        shutil.copy2(source / 'migration.html', dist / 'migration.html')
+
     def build(self):
         count = self.catalog.validate()
         StatisticsExporter(self.catalog).export()
@@ -65,8 +79,10 @@ class SiteBuilder:
         queries = [{**q, 'eal': eal.get(q['query_id'])} for q in self.catalog.queries]
         TaskRecords.export(self.root, queries)
         payload = {**self.catalog.metadata, 'count': count, 'queries': queries}
-        assets = self.root / 'assets'
-        assets.mkdir(exist_ok=True)
+        dist = self.root / 'dist'
+        assets = dist / 'assets'
+        assets.mkdir(parents=True, exist_ok=True)
+        self.copy_frontend(dist)
         PaperExporter(self.root).export(queries)
         (assets / 'collections.js').write_text('window.SEMREL_COLLECTIONS = ' + json.dumps(self.catalog.folders.export(queries), ensure_ascii=False) + ';\n')
         (assets / 'query-groups.js').write_text('window.SEMREL_QUERY_GROUPS = ' + json.dumps(query_groups(self.catalog), ensure_ascii=False) + ';\n')
@@ -76,13 +92,13 @@ class SiteBuilder:
         (assets / 'query-zh.js').write_text('window.SEMREL_QUERY_ZH = ' + json.dumps(query_translations.by_source(), ensure_ascii=False) + ';\n')
         translations = json.loads((self.root / 'config/content-en.json').read_text())
         (assets / 'content-en.js').write_text('window.SEMREL_CONTENT_EN = ' + json.dumps(translations, ensure_ascii=False) + ';\n')
-        template = (self.root / 'src/viewer/index.html').read_text()
-        resources = re.findall(r'(?:src|href)="((?:src/|assets/)[^"]+)"', template)
-        revision = hashlib.sha256(b''.join((self.root / path).read_bytes() for path in resources)).hexdigest()[:12]
+        template = (self.root / 'frontend/index.html').read_text()
+        resources = re.findall(r'(?:src|href)="((?:viewer/|assets/)[^"]+)"', template)
+        revision = hashlib.sha256(b''.join((dist / path).read_bytes() for path in resources)).hexdigest()[:12]
         template = template.replace('{{COUNT}}', str(count)).replace('{{BUILD}}', revision)
         for path in resources:
             template = template.replace(f'"{path}"', f'"{path}?v={revision}"')
-        (self.root / 'index.html').write_text(template)
+        (dist / 'index.html').write_text(template)
         sections = ['# 逐查询逻辑计划\n\n由 `python3 backend/scripts/build.py` 生成；请编辑 query/ 下的规范化数据表。\n\n[论文与数据来源](sources.md) · [范围与限制](scope.md) · [交互图册](../index.html)\n']
         bibliography = ['# 论文与数据来源\n\n原有查询代码沿用 2026-10-05 固定版本收据；本地集合于 2026-10-13 接入。各来源的核对日期与边界见条目。论文背景、提供的任务定义和分析记录分别标注。\n\n来源关系规范表：`query/query_sources.jsonl`；来源元数据：`query/sources.jsonl`。数据集链接不等于已经下载、许可审查或完整复现。\n']
         roles = {'paper': '论文', 'dataset': '数据', 'protocol': '规则协议', 'task_definition': '提供的任务定义', 'analysis': '提供的查询分析'}

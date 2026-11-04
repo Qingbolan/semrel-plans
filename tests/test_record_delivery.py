@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class RecordDeliveryTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'assets/plans.json').read_text())['queries']}
+        cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'dist/assets/plans.json').read_text())['queries']}
 
     def test_817_task_documents_preserve_every_supplied_field(self):
         for line in (ROOT / 'query/task_details.jsonl').read_text().splitlines():
@@ -39,10 +39,10 @@ class RecordDeliveryTest(unittest.TestCase):
         self.assertIn('r2',record['reference_semantic_plan'][0]['program'])
 
     def test_asset_versions_match_the_built_contents(self):
-        html = (ROOT / 'index.html').read_text()
-        resources = re.findall(r'(?:src|href)="((?:src/|assets/)[^?\"]+)\?v=([a-f0-9]+)"', html)
+        html = (ROOT / 'dist/index.html').read_text()
+        resources = re.findall(r'(?:src|href)="((?:viewer/|assets/)[^?\"]+)\?v=([a-f0-9]+)"', html)
         self.assertTrue(resources)
-        revision = hashlib.sha256(b''.join((ROOT / path).read_bytes() for path, _ in resources)).hexdigest()[:12]
+        revision = hashlib.sha256(b''.join((ROOT / 'dist' / path).read_bytes() for path, _ in resources)).hexdigest()[:12]
         self.assertEqual({version for _, version in resources}, {revision})
         self.assertIn(f'window.SEMREL_BUILD = "{revision}"', html)
 
@@ -60,7 +60,7 @@ class RecordDeliveryTest(unittest.TestCase):
 class InputContractDeliveryTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'assets/plans.json').read_text())['queries']}
+        cls.queries = {q['query_id']: q for q in json.loads((ROOT / 'dist/assets/plans.json').read_text())['queries']}
 
     def test_zebra_count_receives_images_without_context_data(self):
         contract = self.queries['sembench/animals/Q1']['input_contract']
