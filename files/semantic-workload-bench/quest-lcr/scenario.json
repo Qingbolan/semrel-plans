@@ -1,0 +1,33 @@
+{
+  "id": "swb-quest-lcr",
+  "name": "semantic-workload-bench / quest-lcr",
+  "query_ids": [
+    "swb/quest/LCR/01",
+    "swb/quest/LCR/02",
+    "swb/quest/LCR/03",
+    "swb/quest/LCR/04",
+    "swb/quest/LCR/05",
+    "swb/quest/LCR/06",
+    "swb/quest/LCR/07",
+    "swb/quest/LCR/08",
+    "swb/quest/LCR/09",
+    "swb/quest/LCR/10",
+    "swb/quest/LCR/11",
+    "swb/quest/LCR/12",
+    "swb/quest/LCR/13",
+    "swb/quest/LCR/14",
+    "swb/quest/LCR/15",
+    "swb/quest/LCR/16",
+    "swb/quest/LCR/17",
+    "swb/quest/LCR/18",
+    "swb/quest/LCR/19",
+    "swb/quest/LCR/20",
+    "swb/quest/LCR/21",
+    "swb/quest/LCR/22",
+    "swb/quest/LCR/23",
+    "swb/quest/LCR/24",
+    "swb/quest/LCR/25",
+    "swb/quest/LCR/26",
+    "swb/quest/LCR/27"
+  ]
+}

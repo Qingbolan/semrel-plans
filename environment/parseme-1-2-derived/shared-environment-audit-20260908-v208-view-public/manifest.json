@@ -1,0 +1,13 @@
+{
+  "environment_id": "parseme-1-2-derived/shared-environment-audit-20260908-v208-view-public",
+  "dataset_id": "parseme-1-2-derived/shared-environment-audit-20260908-v208-view-public",
+  "runtime_status": "unconfigured",
+  "engine": null,
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null
+}

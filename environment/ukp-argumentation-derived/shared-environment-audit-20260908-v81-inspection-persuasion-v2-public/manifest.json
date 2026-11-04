@@ -1,0 +1,13 @@
+{
+  "environment_id": "ukp-argumentation-derived/shared-environment-audit-20260908-v81-inspection-persuasion-v2-public",
+  "dataset_id": "ukp-argumentation-derived/shared-environment-audit-20260908-v81-inspection-persuasion-v2-public",
+  "runtime_status": "unconfigured",
+  "engine": null,
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null
+}

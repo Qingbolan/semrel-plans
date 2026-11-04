@@ -1,5 +1,6 @@
 """Read EAL using the EasyNet compiler; never execute missions or abilities."""
 import json
+from eal_strings import decode_arguments
 import shutil
 import subprocess
 import tempfile
@@ -55,7 +56,10 @@ class MissionGraph:
         nodes, edges = [], []
         phases = {i: phase for phase, r in enumerate(self.ir.get('phases', [])) for i in range(r['start'], r['end'])}
         for i, step in enumerate(steps):
-            args = step.get('static_arguments', {})
+            try:
+                args = decode_arguments(step.get('static_arguments', {}))
+            except (ValueError, TypeError) as exc:
+                raise CompileError(f'SemRel 参数字符串编码无效：{exc}') from exc
             family = args.get('family', 'ability')
             nodes.append({'id': step['step_id'], 'binding': step.get('output_binding'),
                           'label': args.get('label', step['ability']), 'ability': step['ability'],

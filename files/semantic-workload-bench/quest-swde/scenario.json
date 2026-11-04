@@ -1,0 +1,33 @@
+{
+  "id": "swb-quest-swde",
+  "name": "semantic-workload-bench / quest-swde",
+  "query_ids": [
+    "swb/quest/SWDE/01",
+    "swb/quest/SWDE/02",
+    "swb/quest/SWDE/03",
+    "swb/quest/SWDE/04",
+    "swb/quest/SWDE/05",
+    "swb/quest/SWDE/06",
+    "swb/quest/SWDE/07",
+    "swb/quest/SWDE/08",
+    "swb/quest/SWDE/09",
+    "swb/quest/SWDE/10",
+    "swb/quest/SWDE/11",
+    "swb/quest/SWDE/12",
+    "swb/quest/SWDE/13",
+    "swb/quest/SWDE/14",
+    "swb/quest/SWDE/15",
+    "swb/quest/SWDE/16",
+    "swb/quest/SWDE/17",
+    "swb/quest/SWDE/18",
+    "swb/quest/SWDE/19",
+    "swb/quest/SWDE/20",
+    "swb/quest/SWDE/21",
+    "swb/quest/SWDE/22",
+    "swb/quest/SWDE/23",
+    "swb/quest/SWDE/24",
+    "swb/quest/SWDE/25",
+    "swb/quest/SWDE/26",
+    "swb/quest/SWDE/27"
+  ]
+}

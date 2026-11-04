@@ -1,0 +1,26 @@
+{
+  "id": "swb-derived-five-lakes",
+  "name": "semantic-workload-bench / derived-five-lakes",
+  "query_ids": [
+    "swb/stard-Q1-v1",
+    "swb/stard-Q2-v1",
+    "swb/stard-Q3-v1",
+    "swb/stard-Q4-v1",
+    "swb/annoctr-Q1-v1",
+    "swb/annoctr-Q2-v1",
+    "swb/annoctr-Q3-v1",
+    "swb/annoctr-Q4-v1",
+    "swb/codiesp-Q1-v1",
+    "swb/codiesp-Q2-v1",
+    "swb/codiesp-Q3-v1",
+    "swb/codiesp-Q4-v1",
+    "swb/hscodecomp-Q1-v1",
+    "swb/hscodecomp-Q2-v1",
+    "swb/hscodecomp-Q3-v1",
+    "swb/hscodecomp-Q4-v1",
+    "swb/udrp-Q1-v1",
+    "swb/udrp-Q2-v1",
+    "swb/udrp-Q3-v1",
+    "swb/udrp-Q4-v1"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "dataset_id": "local-derived/TalentCLEF",
+  "source_ids": [
+    "src_12e0576a3cc13554"
+  ],
+  "availability": "not_bound",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "source_reference_only"
+}

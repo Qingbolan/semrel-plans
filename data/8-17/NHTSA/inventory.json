@@ -1,0 +1,1198 @@
+[
+  {
+    "path": "data/complaints.csv",
+    "bytes": 7367491
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_002e1bad019e63de.txt",
+    "bytes": 1514
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0035ca0a5c3b107f.txt",
+    "bytes": 2949
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0050e8880cea9c02.txt",
+    "bytes": 2186
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0117a45f066aa715.txt",
+    "bytes": 2251
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_01f32e30ee9acd46.txt",
+    "bytes": 5660
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_029c56de0e8e61b4.txt",
+    "bytes": 4402
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_034aaa1f9d92d81a.txt",
+    "bytes": 4482
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_04115027f0502369.txt",
+    "bytes": 1101
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_04d076db351e73db.txt",
+    "bytes": 2087
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_05bd17c9f6b092da.txt",
+    "bytes": 2509
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_05d6cbe9e6c0ccd2.txt",
+    "bytes": 2289
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_06eb6243a86354e7.txt",
+    "bytes": 3725
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0922bf65be805578.txt",
+    "bytes": 2108
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0adaa86fa0127f9f.txt",
+    "bytes": 2806
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0c1830bdce78aec2.txt",
+    "bytes": 1267
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0c952e49c1e7a9dd.txt",
+    "bytes": 3391
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0cee4a4b60729c91.txt",
+    "bytes": 3482
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_0dc6b216b5a52248.txt",
+    "bytes": 3060
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_112a35db33a4f8de.txt",
+    "bytes": 1195
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_143eefde9546baed.txt",
+    "bytes": 2416
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_14c7e298d3bde033.txt",
+    "bytes": 1321
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_14eed105aaac8904.txt",
+    "bytes": 3105
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_15ba420019ead973.txt",
+    "bytes": 2461
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_165e4019c438567a.txt",
+    "bytes": 1094
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_16959f40b20fb9fb.txt",
+    "bytes": 2003
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1702ff259a538318.txt",
+    "bytes": 3723
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_17f12ad76126f7ec.txt",
+    "bytes": 1659
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_189b15104776e16d.txt",
+    "bytes": 4732
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_19fac8a1f352fece.txt",
+    "bytes": 3691
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1a7dddd2f3a322af.txt",
+    "bytes": 3507
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1aba8edbfb2b2c6b.txt",
+    "bytes": 3698
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1b079ec22d532228.txt",
+    "bytes": 3202
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1b098a0985679fa0.txt",
+    "bytes": 2218
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1b86083e3e94b94e.txt",
+    "bytes": 3105
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1c0ea3efa6419f0c.txt",
+    "bytes": 2192
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1e5a6120e9225aa0.txt",
+    "bytes": 2422
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1e9d6bc3e101494d.txt",
+    "bytes": 3388
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_1fac4e5d7de1a68a.txt",
+    "bytes": 3931
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_20d331ecf7d95154.txt",
+    "bytes": 2745
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_21a87149f4bb9bcf.txt",
+    "bytes": 2018
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_224e7d1cb38aebad.txt",
+    "bytes": 3693
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2252f49f04e7538a.txt",
+    "bytes": 1780
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_23cca884e0a0a76e.txt",
+    "bytes": 3456
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_244d5b0f0be6db32.txt",
+    "bytes": 1441
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_260004ea77d91bea.txt",
+    "bytes": 3222
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_261c117f616ea9c3.txt",
+    "bytes": 1908
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2669843ee7405eda.txt",
+    "bytes": 5828
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_28f0a8464d6ab1db.txt",
+    "bytes": 1118
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_296104e62e50bc98.txt",
+    "bytes": 2305
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_296cf0066e3b3f0e.txt",
+    "bytes": 3212
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2a1363bf995ea936.txt",
+    "bytes": 1013
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2bb4ae7fbf04f022.txt",
+    "bytes": 3704
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2bf77ed0aa95c220.txt",
+    "bytes": 2302
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2eaa13dc5b946052.txt",
+    "bytes": 3186
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2fad9b440be659f1.txt",
+    "bytes": 2142
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_2fbdb70e70383260.txt",
+    "bytes": 5547
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_30789e2407e33aa2.txt",
+    "bytes": 5906
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_30f3986188602865.txt",
+    "bytes": 1268
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3593de88f2259c98.txt",
+    "bytes": 3888
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_35c6363f0571b318.txt",
+    "bytes": 2492
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3679520a8c5632a4.txt",
+    "bytes": 2183
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_37c19cad492e19cb.txt",
+    "bytes": 3492
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_389dda129915bce8.txt",
+    "bytes": 2955
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_393cb5c5afc397c7.txt",
+    "bytes": 1826
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3bbbb3e89f1dc774.txt",
+    "bytes": 3693
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3bdfcfb782a215e2.txt",
+    "bytes": 5768
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3c6068a70799e2c4.txt",
+    "bytes": 4232
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3ca0fbad9925f522.txt",
+    "bytes": 2034
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3d427c797f87a79f.txt",
+    "bytes": 2002
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3d59e5e1d5aa5367.txt",
+    "bytes": 4054
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3deaaeea84e8ed69.txt",
+    "bytes": 3670
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_3e540e709b495d53.txt",
+    "bytes": 5348
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4078106d0340d00c.txt",
+    "bytes": 3725
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_40efba00fd61b8a7.txt",
+    "bytes": 3566
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_421f53f268bd8f75.txt",
+    "bytes": 2490
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_42c3e17189d2b07b.txt",
+    "bytes": 1246
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4418ad552d1abfa8.txt",
+    "bytes": 1662
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4441c7de869cda3a.txt",
+    "bytes": 1608
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_45f8d0d299963b9c.txt",
+    "bytes": 3697
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4627c950ddeecf43.txt",
+    "bytes": 3703
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_474a0d5a0b275e80.txt",
+    "bytes": 3233
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_47fd41935c989692.txt",
+    "bytes": 5569
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4917ede093662e29.txt",
+    "bytes": 2278
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_49a5c228d609c5b2.txt",
+    "bytes": 1408
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_49e1ff012e25233c.txt",
+    "bytes": 1995
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4a0e2f4555b168e8.txt",
+    "bytes": 2028
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4adb097facfb9a53.txt",
+    "bytes": 1501
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4b216f422e10fc2e.txt",
+    "bytes": 4864
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4bc594548a0f8d58.txt",
+    "bytes": 2790
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4d837e99bf438d50.txt",
+    "bytes": 1412
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4f052d0a5f538055.txt",
+    "bytes": 3115
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_4fab4c841b715aa1.txt",
+    "bytes": 3114
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_508e98104bb5a3d2.txt",
+    "bytes": 3708
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_53ab388d9635d7da.txt",
+    "bytes": 2580
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_546753c540477aaf.txt",
+    "bytes": 2880
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_54933417c6dc47ca.txt",
+    "bytes": 1834
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_55ab3e3a07bc3e29.txt",
+    "bytes": 2308
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_56098de53ffc2422.txt",
+    "bytes": 3722
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5668aa1bc0654da2.txt",
+    "bytes": 1897
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_59594290efc7f9a8.txt",
+    "bytes": 1965
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_596ad32709068274.txt",
+    "bytes": 1007
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5a7ddb66c338acf4.txt",
+    "bytes": 2854
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5abaf6de874f592b.txt",
+    "bytes": 1648
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5d9e89bac1b4e3f6.txt",
+    "bytes": 1555
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5dca6283248d236f.txt",
+    "bytes": 3645
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5e4d914138abc5cf.txt",
+    "bytes": 2956
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5eb956aa803bfdf3.txt",
+    "bytes": 3249
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5f2c24ffe8b00042.txt",
+    "bytes": 2451
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_5fe5a38ae1231fbd.txt",
+    "bytes": 1878
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_624423853f8c9446.txt",
+    "bytes": 3407
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_62c81aa5a162e7e4.txt",
+    "bytes": 2643
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_62d483d67c6ed8cf.txt",
+    "bytes": 3463
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6309aa9aae35acbb.txt",
+    "bytes": 2986
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_638ded8941573dd0.txt",
+    "bytes": 1200
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_63931c0c54ad93ab.txt",
+    "bytes": 3365
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_64fd85325481e592.txt",
+    "bytes": 2327
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6694dd83056dc66e.txt",
+    "bytes": 1543
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_669f542084508b99.txt",
+    "bytes": 3693
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6750c38122e2f8fa.txt",
+    "bytes": 2686
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_683ca3a727707302.txt",
+    "bytes": 3719
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_685728832d7ff058.txt",
+    "bytes": 2120
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6a6b8948bfc09aad.txt",
+    "bytes": 3856
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6bb46cfa3c2aaa30.txt",
+    "bytes": 1576
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6c619374a2441ea0.txt",
+    "bytes": 1759
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6c8e95783095e3ca.txt",
+    "bytes": 3802
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6cacdb272f169a54.txt",
+    "bytes": 3672
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6cdeee1bdbccffd3.txt",
+    "bytes": 5864
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6d6bccf3eb1dd7ca.txt",
+    "bytes": 2601
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6e5ef201083ff24a.txt",
+    "bytes": 2021
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_6eb3fb394fb48072.txt",
+    "bytes": 1538
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_71256379f06f885d.txt",
+    "bytes": 3680
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_729d0ee36f89db3b.txt",
+    "bytes": 1523
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_72f5d6d3d4d27632.txt",
+    "bytes": 3457
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_74e6c7c0ae4bb88b.txt",
+    "bytes": 2167
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_75b45cc24b25760c.txt",
+    "bytes": 2358
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_769d2d84f3e5a9a2.txt",
+    "bytes": 2059
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_77da89c8ed63ed47.txt",
+    "bytes": 3879
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_782e1cdc012c5ecc.txt",
+    "bytes": 1572
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7853ee7777b08bce.txt",
+    "bytes": 2131
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_78660bb153e74ad8.txt",
+    "bytes": 1338
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_786680a446f7dee1.txt",
+    "bytes": 2658
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7a397b1421fa512b.txt",
+    "bytes": 1900
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7a5d75317b85b78a.txt",
+    "bytes": 2483
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7ac9beb7fc280c79.txt",
+    "bytes": 1903
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7b02ce96744bd2ed.txt",
+    "bytes": 2232
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7b10c70876b82275.txt",
+    "bytes": 3693
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7b1f3170b7ec4fb9.txt",
+    "bytes": 1365
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7bb9506900686b19.txt",
+    "bytes": 1835
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7bc7300cb30d318a.txt",
+    "bytes": 1670
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7bea0db4f3514cd3.txt",
+    "bytes": 3719
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7c18d5f0509af29f.txt",
+    "bytes": 2265
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_7ebb88a5d83c0702.txt",
+    "bytes": 1216
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_81a9d993d4db0119.txt",
+    "bytes": 2687
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_82e1fe17a99039ae.txt",
+    "bytes": 1985
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_83610075ae1d9edd.txt",
+    "bytes": 2833
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_847a229fc8a96f19.txt",
+    "bytes": 3446
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_850e2b36855a87b7.txt",
+    "bytes": 2183
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_88851cb7181f50c2.txt",
+    "bytes": 3696
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8be18f99e74db448.txt",
+    "bytes": 2580
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8c5157caafd1e61a.txt",
+    "bytes": 2373
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8d70d0f7dbba45b2.txt",
+    "bytes": 2125
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8dd794de1b4ea239.txt",
+    "bytes": 1604
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8e1767822ea0b28c.txt",
+    "bytes": 3723
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8e9ad5653bf294ed.txt",
+    "bytes": 2588
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_8fdfbc9eeae0e5b1.txt",
+    "bytes": 2564
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_93906080e3754fc1.txt",
+    "bytes": 3714
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_93ab6f9ddf8ca1cb.txt",
+    "bytes": 3390
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9426778129ec8377.txt",
+    "bytes": 1037
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_94536f0a8d61be3e.txt",
+    "bytes": 1085
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_94af6cff20e45733.txt",
+    "bytes": 2541
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_94dab6b93d543ea4.txt",
+    "bytes": 1940
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_963f25789a1dfa40.txt",
+    "bytes": 4576
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_975254cb7c49c7f7.txt",
+    "bytes": 1691
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9825e2d6c1a19475.txt",
+    "bytes": 2734
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_996f2f447f83f36f.txt",
+    "bytes": 3705
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_999b2fb9ba4aecf2.txt",
+    "bytes": 2008
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9aef53bb92c48c6d.txt",
+    "bytes": 1615
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9b6b42e75d848e79.txt",
+    "bytes": 1414
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9d28e2718f7bcdae.txt",
+    "bytes": 2182
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9d5728218e6f95e9.txt",
+    "bytes": 5826
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9db2ea4e5f153eba.txt",
+    "bytes": 1232
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9e55ca98621c624f.txt",
+    "bytes": 3420
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9e804a14127b2b59.txt",
+    "bytes": 1272
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9e8baf3257492b4d.txt",
+    "bytes": 2057
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_9f7934e5d65007b4.txt",
+    "bytes": 3723
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a149cfcaf422d2a4.txt",
+    "bytes": 3711
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a161df2726af9f3e.txt",
+    "bytes": 1463
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a2bbc03859794081.txt",
+    "bytes": 3703
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a353c37b4e1ee018.txt",
+    "bytes": 2244
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a36dfd2642996e8a.txt",
+    "bytes": 1342
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a4026be7b7a03795.txt",
+    "bytes": 1802
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a4ac89f52e1425e5.txt",
+    "bytes": 3480
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a51b74977fb26126.txt",
+    "bytes": 1370
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a537d998ca815ea0.txt",
+    "bytes": 5955
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a5970e672af86a77.txt",
+    "bytes": 2074
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a6116fefedb0f7c4.txt",
+    "bytes": 1996
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a6af87cc65c4685e.txt",
+    "bytes": 3896
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a6d50d6ae02372a2.txt",
+    "bytes": 3142
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a721d1064291bd8b.txt",
+    "bytes": 1794
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a73900e37dcf4a6a.txt",
+    "bytes": 3100
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a85652528a0b9c39.txt",
+    "bytes": 2991
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_a8a91c3c5ac6b4b7.txt",
+    "bytes": 4246
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_aaff8bd3a8163eb8.txt",
+    "bytes": 3742
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_adbbd4c8f56732aa.txt",
+    "bytes": 2222
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b10fd30104a71361.txt",
+    "bytes": 1782
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b1b8105af73ec4fe.txt",
+    "bytes": 1250
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b2a6c4b944a4496d.txt",
+    "bytes": 3717
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b35cf69100ea7662.txt",
+    "bytes": 3944
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b3813da54ee3dda9.txt",
+    "bytes": 3966
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b452061e4444c05f.txt",
+    "bytes": 2525
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b47da6c1e6001de4.txt",
+    "bytes": 3138
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_b8b862a9751c4144.txt",
+    "bytes": 2967
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ba344e9607f6326a.txt",
+    "bytes": 3683
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bb0ab1e97dc07331.txt",
+    "bytes": 2039
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bb2d94cf0fe41ddb.txt",
+    "bytes": 2020
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bb33ce872d92e3ef.txt",
+    "bytes": 3166
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bb491b3d9a026ff0.txt",
+    "bytes": 3086
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bbfc6db448cae094.txt",
+    "bytes": 2884
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_be32fb0dab65727b.txt",
+    "bytes": 3140
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bea8377e81c4d96a.txt",
+    "bytes": 1667
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bec5f42242222b3d.txt",
+    "bytes": 1396
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_bfbc6a86158c92e1.txt",
+    "bytes": 3253
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c0cb093f0b6ce423.txt",
+    "bytes": 1706
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c0f486cb981bac22.txt",
+    "bytes": 3729
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c11bc6940d4cf5df.txt",
+    "bytes": 3693
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c15ccd18008f907c.txt",
+    "bytes": 2260
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c3a46db658574bab.txt",
+    "bytes": 2417
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c56f72fc45a125b9.txt",
+    "bytes": 2230
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c6b1043bc66992ae.txt",
+    "bytes": 1586
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c7da10a5ac0ea6f2.txt",
+    "bytes": 3713
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c880ef3b7900797a.txt",
+    "bytes": 1733
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c98f11104a195c3d.txt",
+    "bytes": 3261
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c9bcec9b6b455621.txt",
+    "bytes": 5766
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_c9d09ab8138ce420.txt",
+    "bytes": 1742
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_cd7dcc0ff5b176ee.txt",
+    "bytes": 3530
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ce73bb5b3231a9da.txt",
+    "bytes": 2052
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ce8ff15c20e548af.txt",
+    "bytes": 2547
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_cf040948ac6bed9b.txt",
+    "bytes": 2377
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_cf5067e3ac47ef78.txt",
+    "bytes": 2273
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_d106e6c060b949dc.txt",
+    "bytes": 3195
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_d292df7e8569a1f5.txt",
+    "bytes": 2929
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_d474e3d121904e2e.txt",
+    "bytes": 2471
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_d58ed1b6bf651bf9.txt",
+    "bytes": 2526
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_d7dc58c50115c2c9.txt",
+    "bytes": 3171
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_da22923fc5523800.txt",
+    "bytes": 5948
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_da9d15fd4a5484e1.txt",
+    "bytes": 1491
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_db52160d7de36fcc.txt",
+    "bytes": 1457
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_dc8e618fda7c019d.txt",
+    "bytes": 1228
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_dd0de2bc5ded2f49.txt",
+    "bytes": 3730
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ddaa5a22b8dac784.txt",
+    "bytes": 3613
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ddef23883c226738.txt",
+    "bytes": 1710
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_de1f0bf1e029a8b2.txt",
+    "bytes": 2146
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_dea7deefd277bba5.txt",
+    "bytes": 3615
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_dec57a3b8937e851.txt",
+    "bytes": 2615
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_dfd77acc9e78ba47.txt",
+    "bytes": 1568
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e0582ed197ad5d72.txt",
+    "bytes": 2356
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e17c60c0a37bb3b2.txt",
+    "bytes": 3645
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e17d1b3ef2f845a0.txt",
+    "bytes": 1056
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e23a4bb79d52d0ae.txt",
+    "bytes": 3220
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e26f88dcff48acde.txt",
+    "bytes": 2168
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e2a999a02d08b659.txt",
+    "bytes": 2216
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e30563201433f0ba.txt",
+    "bytes": 3151
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e3856ed4f214bb8a.txt",
+    "bytes": 3781
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e505f40d3edd40f8.txt",
+    "bytes": 1684
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e619fa344b7137a1.txt",
+    "bytes": 1415
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_e8883e646b2ba0f9.txt",
+    "bytes": 2910
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_eac49ed155cf0f45.txt",
+    "bytes": 3178
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_eb6db5778ff06661.txt",
+    "bytes": 3811
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ec59145ce5780a4a.txt",
+    "bytes": 3601
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ed8007838253f1ea.txt",
+    "bytes": 3715
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ee19b8cda179bd3f.txt",
+    "bytes": 1992
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ee5d087133e2493f.txt",
+    "bytes": 3678
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_eecb33ba9f820949.txt",
+    "bytes": 1360
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ef12d2cfbf020527.txt",
+    "bytes": 3560
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ef731290c14111ae.txt",
+    "bytes": 1147
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_efec7803e2003941.txt",
+    "bytes": 2424
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f01846f35217de59.txt",
+    "bytes": 3407
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f14dc9e417fd62ac.txt",
+    "bytes": 2695
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f18cadcc9405a945.txt",
+    "bytes": 2380
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f23c5be30f9eef9c.txt",
+    "bytes": 2458
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f2875914457732e4.txt",
+    "bytes": 2818
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f35c561705200c8d.txt",
+    "bytes": 1349
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f45e16878882572f.txt",
+    "bytes": 2943
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f471802508be6b75.txt",
+    "bytes": 4264
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f5707b70ca508686.txt",
+    "bytes": 3676
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f63c9e00a2ed689c.txt",
+    "bytes": 1234
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f7eaf09bdd9deaab.txt",
+    "bytes": 1952
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_f9217e5aafe61229.txt",
+    "bytes": 3709
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fb8216f860385fc4.txt",
+    "bytes": 3715
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fbfc33bac5ffd821.txt",
+    "bytes": 1685
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fca5adff66b5638c.txt",
+    "bytes": 2493
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fd49f1482d928187.txt",
+    "bytes": 2015
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fdf7ea9da3f05ee4.txt",
+    "bytes": 3445
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fef49e889d19d5ab.txt",
+    "bytes": 2217
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_fef5f8e58998e526.txt",
+    "bytes": 2098
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ff80ac56284e6f05.txt",
+    "bytes": 3698
+  },
+  {
+    "path": "data/investigation_reports/txt_investigation_ff925f78b3e04d9f.txt",
+    "bytes": 3690
+  },
+  {
+    "path": "data/recalls.jsonl",
+    "bytes": 3232233
+  }
+]

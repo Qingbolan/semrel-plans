@@ -1,0 +1,15 @@
+{
+  "dataset_id": "craft-derived/shared-environment-audit-20260908-v94-inspection-v2-public",
+  "source_ids": [
+    "swb_b3ad42e71363a3f9"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

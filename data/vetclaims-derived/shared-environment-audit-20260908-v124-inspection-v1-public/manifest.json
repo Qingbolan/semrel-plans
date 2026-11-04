@@ -1,0 +1,15 @@
+{
+  "dataset_id": "vetclaims-derived/shared-environment-audit-20260908-v124-inspection-v1-public",
+  "source_ids": [
+    "swb_d9a89ba18f89f56a"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

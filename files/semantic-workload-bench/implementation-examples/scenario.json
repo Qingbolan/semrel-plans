@@ -1,0 +1,9 @@
+{
+  "id": "swb-implementation-examples",
+  "name": "semantic-workload-bench / implementation-examples",
+  "query_ids": [
+    "swb/palimpzest/real-estate",
+    "swb/lotus/failure-mode-discovery",
+    "swb/lotus/rag-pubmedqa"
+  ]
+}

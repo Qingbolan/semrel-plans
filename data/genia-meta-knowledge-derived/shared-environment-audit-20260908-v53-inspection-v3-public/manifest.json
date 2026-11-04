@@ -1,0 +1,15 @@
+{
+  "dataset_id": "genia-meta-knowledge-derived/shared-environment-audit-20260908-v53-inspection-v3-public",
+  "source_ids": [
+    "swb_3d018bc7a4653713"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

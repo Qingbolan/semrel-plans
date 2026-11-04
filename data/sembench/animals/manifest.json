@@ -1,0 +1,39 @@
+{
+  "dataset_id": "sembench/animals",
+  "source_ids": [
+    "src_88203b326ed5752b",
+    "src_d8cb06dca20c35e1"
+  ],
+  "availability": "local_sample",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "sample_headers_and_row_counts",
+  "samples": [
+    {
+      "path": "data/sembench/animals/image_data.sf200.csv",
+      "record_count": 200,
+      "columns": [
+        "ImagePath",
+        "Species",
+        "City",
+        "StationID"
+      ],
+      "sha256": "84edee4a16b2900362f594671c8ce9523a3bdb72ab6ad1f8bb40327e8f4a9297",
+      "contents": "media_path_index"
+    },
+    {
+      "path": "data/sembench/animals/audio_data.sf200.csv",
+      "record_count": 66,
+      "columns": [
+        "Animal",
+        "AudioPath",
+        "City",
+        "StationID"
+      ],
+      "sha256": "b096933638c1d9e9254ae532a242a16394102c57803eb02ada03e2b679b2f225",
+      "contents": "media_path_index"
+    }
+  ]
+}

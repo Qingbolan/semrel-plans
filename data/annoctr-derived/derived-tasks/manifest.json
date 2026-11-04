@@ -1,0 +1,15 @@
+{
+  "dataset_id": "annoctr-derived/derived-tasks",
+  "source_ids": [
+    "swb_351cb24d49e56402"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

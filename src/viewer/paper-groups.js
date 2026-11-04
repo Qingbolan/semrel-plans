@@ -2,7 +2,18 @@ const KEY='semrel-paper-groups';
 export class PaperGroups {
   constructor(){
     this.state={groups:[],memberships:{}};
-    try{const saved=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(saved?.groups)&&saved.memberships){this.state={groups:saved.groups.filter(g=>typeof g.id==='string'&&typeof g.name==='string'&&/^#[0-9a-f]{6}$/i.test(g.color)),memberships:saved.memberships};}}catch{}
+    try{const saved=JSON.parse(localStorage.getItem(KEY));if(Array.isArray(saved?.groups)&&saved.memberships){this.state={groups:saved.groups.filter(g=>typeof g.id==='string'&&typeof g.name==='string'&&/^#[0-9a-f]{6}$/i.test(g.color)),memberships:saved.memberships,seedVersion:saved.seedVersion};}}catch{}
+  }
+  seed(defaults){
+    const firstSeed=this.state.seedVersion!==defaults.version;
+    if(firstSeed)for(const group of defaults.groups)if(!this.state.groups.some(g=>g.id===group.id))this.state.groups.push({...group});
+    const available=new Set(this.state.groups.map(g=>g.id));
+    for(const [id,groups] of Object.entries(defaults.memberships)){
+      if(!firstSeed&&Object.hasOwn(this.state.memberships,id))continue;
+      this.state.memberships[id]=[...new Set([...(this.state.memberships[id]||[]),...groups.filter(g=>available.has(g))])];
+    }
+    this.state.seedVersion=defaults.version;
+    try{localStorage.setItem(KEY,JSON.stringify(this.state));}catch{}
   }
   groupsFor(id){const ids=this.state.memberships[id]||[];return this.state.groups.filter(g=>Array.isArray(ids)&&ids.includes(g.id));}
   save(state){localStorage.setItem(KEY,JSON.stringify(state));this.state=state;document.dispatchEvent(new Event('atlas-groups-change'));}

@@ -1,0 +1,15 @@
+{
+  "dataset_id": "cuad-derived/cuad-builder-check-v2-public",
+  "source_ids": [
+    "swb_e4249c53e6b11fc3"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

@@ -1,0 +1,15 @@
+{
+  "dataset_id": "medmnist-derived/pathology",
+  "source_ids": [
+    "swb_37bf96db6b45c836"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

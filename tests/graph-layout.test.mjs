@@ -6,7 +6,7 @@ import {routingViolations} from './route-geometry.mjs';
 import {layoutMission,dependencyScope,NODE_WIDTH,NODE_HEIGHT} from '../src/viewer/graph/layout.mjs';
 const catalog=JSON.parse(fs.readFileSync(new URL('../assets/plans.json',import.meta.url)));
 test('all catalog DAGs preserve node identity, port edges, and nonoverlapping layout',async()=>{
-  for(const query of catalog.queries) for(const direction of ['BT','LR']) {
+  for(const query of catalog.queries.filter(q=>q.eal)) for(const direction of ['BT','LR']) {
     const model=query.eal.snapshot.graph;
     const result=await layoutMission(model,direction);
     assert.equal(result.nodes.length,model.nodes.length,query.query_id);

@@ -1,0 +1,15 @@
+{
+  "dataset_id": "biodex-derived/biodex",
+  "source_ids": [
+    "swb_1528ff7c929f9409"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

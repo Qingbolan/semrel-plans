@@ -1,0 +1,33 @@
+{
+  "dataset_id": "sembench/movie",
+  "source_ids": [
+    "src_b38b1590c0b10568"
+  ],
+  "availability": "local_sample",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "sample_headers_and_row_counts",
+  "samples": [
+    {
+      "path": "data/sembench/movie/Reviews.sf2000.csv",
+      "record_count": 2000,
+      "columns": [
+        "id",
+        "reviewId",
+        "creationDate",
+        "criticName",
+        "isTopCritic",
+        "originalScore",
+        "reviewState",
+        "publicatioName",
+        "reviewText",
+        "scoreSentiment",
+        "reviewUrl"
+      ],
+      "sha256": "df231cfb189c9e169aa6afe415e4fa24533b04499179bbd61416c4c6af28ca21",
+      "contents": "review_text"
+    }
+  ]
+}

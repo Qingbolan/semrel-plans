@@ -1,0 +1,15 @@
+{
+  "dataset_id": "sembench/cars",
+  "source_ids": [
+    "src_6383dc2b6a42f0e0",
+    "src_6effd21f473aca0f",
+    "src_833d7ba5dadddd01",
+    "src_884120c47340922a"
+  ],
+  "availability": "not_bound",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "source_reference_only"
+}

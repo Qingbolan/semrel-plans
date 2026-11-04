@@ -1,0 +1,15 @@
+{
+  "dataset_id": "sentivent-derived/shared-environment-audit-20260908-v60-inspection-v1-public",
+  "source_ids": [
+    "swb_b8350c9efd2df4ad"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

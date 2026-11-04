@@ -1,0 +1,1919 @@
+[
+  {
+    "source_id": "swb_9bc1e4ebcff70569",
+    "url": "https://arxiv.org/abs/2207.11871",
+    "status": "metadata_found",
+    "title": "Towards Complex Document Understanding By Discrete Reasoning",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f70b775ef2835b7365eb16dd21cfe2136e002fa4c1fa86716c25c176a3ed1e33"
+  },
+  {
+    "source_id": "swb_c00f1ae5a609a1c7",
+    "url": "https://arxiv.org/abs/2407.11418",
+    "status": "metadata_found",
+    "title": "Semantic Operators: A Declarative Model for Rich, AI-based Data Processing",
+    "date": "",
+    "venue": "",
+    "source_sha256": "19b5db8d0ec458576f0370700e27b59726a3f9b16238d9c1059ba1d97635ef65"
+  },
+  {
+    "source_id": "swb_6f81ce3af87a2ac5",
+    "url": "https://arxiv.org/abs/2410.12189",
+    "status": "metadata_found",
+    "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing",
+    "date": "",
+    "venue": "",
+    "source_sha256": "e6f92769d1604ec378661891f7180790fc78956fa254c82df78af3276c601777"
+  },
+  {
+    "source_id": "swb_5ecc753763938cef",
+    "url": "https://arxiv.org/abs/2405.14696",
+    "status": "metadata_found",
+    "title": "A Declarative System for Optimizing AI Workloads",
+    "date": "",
+    "venue": "",
+    "source_sha256": "1cb7f4f1883b988e1e7a9b28bd484a5d1f33ba594552db23ddd7279552df550b"
+  },
+  {
+    "source_id": "swb_de7d86492ba55883",
+    "url": "https://arxiv.org/abs/2409.07429",
+    "status": "metadata_found",
+    "title": "Agent Workflow Memory",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8eda9861ea083957e31f654a929000e61eea91f5a00e43def23772c970362a22"
+  },
+  {
+    "source_id": "swb_922191dd8388f08f",
+    "url": "https://arxiv.org/abs/2606.26669",
+    "status": "metadata_found",
+    "title": "SKILL-DISCO: Distilling and Compiling Agent Traces into Reusable Procedural Skills",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b8444855eaa1ebe35d9de53e4e63acdba3318e7bf0e3ee8c61b261c6c3158d40"
+  },
+  {
+    "source_id": "swb_72d8deb91b7d8ed0",
+    "url": "https://arxiv.org/abs/2505.17612",
+    "status": "metadata_found",
+    "title": "Distilling LLM Agent into Small Models with Retrieval and Code Tools",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b3f5f3ede85114709a4a1895903fd487855b9430ac3b7c4c6fb54dcc8d43498e"
+  },
+  {
+    "source_id": "swb_3249d7335bfc1d8c",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6247444",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_3d648cb84b8b6ea4",
+    "url": "https://arxiv.org/abs/2605.10397",
+    "status": "metadata_found",
+    "title": "AnomalyClaw: A Universal Visual Anomaly Detection Agent via Tool-Grounded Refutation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "fddd85780163c27170f8444a56ad310851e1d588571be4158899f3491f3221b0"
+  },
+  {
+    "source_id": "swb_bf169fcee7a342d9",
+    "url": "https://arxiv.org/abs/2501.01767",
+    "status": "metadata_found",
+    "title": "LogicAD: Explainable Anomaly Detection via VLM-based Text Feature Extraction",
+    "date": "",
+    "venue": "",
+    "source_sha256": "eb44d30b6cefb851638453c2e48ac8f2a5cd4b7e2af8123560662cf46844596f"
+  },
+  {
+    "source_id": "swb_494d3e8da8ee8504",
+    "url": "https://arxiv.org/abs/2307.15051",
+    "status": "metadata_found",
+    "title": "Matching Patients to Clinical Trials with Large Language Models",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8b8395c559e42b8aed913d0564387136c7d2afb550bc61f77702bcaa1daba937"
+  },
+  {
+    "source_id": "swb_2ed7b13eae4743b6",
+    "url": "https://aclanthology.org/2021.emnlp-main.300",
+    "status": "metadata_found",
+    "title": "FinQA: A Dataset of Numerical Reasoning over Financial Data",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b3636dbac664eaac2e70ebfa041535021502e6a072dbf0d5d82cbc0efe57b9b2"
+  },
+  {
+    "source_id": "swb_0c557d475309f6b3",
+    "url": "https://aclanthology.org/2025.acl-long.557",
+    "status": "metadata_found",
+    "title": "GuideBench: Benchmarking Domain-Oriented Guideline Following for LLM Agents",
+    "date": "",
+    "venue": "",
+    "source_sha256": "a41f0027b79f331e232d714049ff5355f727f42549d7c9c3a65df7bc9d9b592d"
+  },
+  {
+    "source_id": "swb_b410a3525b400c9e",
+    "url": "https://arxiv.org/abs/2505.11613",
+    "status": "metadata_found",
+    "title": "MedGUIDE: Benchmarking Clinical Decision-Making in Large Language Models",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f23650d5151105cb3f5f52887dd726c28e07bf769d6611e5fc644e0cb87f326c"
+  },
+  {
+    "source_id": "swb_e1b58c6b3f256636",
+    "url": "https://arxiv.org/abs/2512.02289",
+    "status": "metadata_found",
+    "title": "Multi-Objective Agentic Rewrites for Unstructured Data Processing",
+    "date": "",
+    "venue": "",
+    "source_sha256": "96b2b9b7f4dfb47ffc073d4b592793e98196fcd5638eb10b297a049eb234b5d8"
+  },
+  {
+    "source_id": "swb_51f116bbfc6e7715",
+    "url": "https://vldb.org/pvldb/reproducibility",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_06e6bee78c14464d",
+    "url": "https://link.springer.com/article/10.1007/s11263-022-01578-9",
+    "status": "metadata_found",
+    "title": "Beyond Dents and Scratches: Logical Constraints in Unsupervised Anomaly Detection and Localization",
+    "date": "2022/04",
+    "venue": "International Journal of Computer Vision",
+    "source_sha256": "a113a6373935fb7361dc62fa17647fff0290f77247e485a6897a0a18f6f90266"
+  },
+  {
+    "source_id": "swb_f1af6da7b459b359",
+    "url": "https://arxiv.org/abs/2503.21622",
+    "status": "metadata_found",
+    "title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b2bc6c5d66df67e373760130a1c0cbcd858f1fcd77cbde3dcc68468ed2afa6e4"
+  },
+  {
+    "source_id": "swb_60eb3e86900adc8b",
+    "url": "https://aclanthology.org/2025.acl-industry.29",
+    "status": "metadata_found",
+    "title": "LogicQA: Logical Anomaly Detection with Vision Language Model Generated Questions",
+    "date": "",
+    "venue": "",
+    "source_sha256": "67bcf66d3472dec33e18852562cdbcab724d377bd2c4ddb2d116df3be01dfe23"
+  },
+  {
+    "source_id": "swb_09382a48ead3f2c2",
+    "url": "https://arxiv.org/abs/2406.04687",
+    "status": "metadata_found",
+    "title": "LogiCode: an LLM-Driven Framework for Logical Anomaly Detection",
+    "date": "",
+    "venue": "",
+    "source_sha256": "446833fb90e1ce17e954941883dfc9e541725a6963d6e765138141ed32b58313"
+  },
+  {
+    "source_id": "swb_48346cee75b5bb79",
+    "url": "https://arxiv.org/abs/1902.06197",
+    "status": "metadata_found",
+    "title": "Online PCB Defect Detector On A New PCB Defect Dataset",
+    "date": "",
+    "venue": "",
+    "source_sha256": "ed937309c7a2a7ccce49239c14ac75cce2b252a1dee68e69ee2f107008d3456d"
+  },
+  {
+    "source_id": "swb_06f927e345ab3cc8",
+    "url": "https://arxiv.org/abs/2602.18193",
+    "status": "metadata_found",
+    "title": "BLM-Guard: Explainable Multimodal Ad Moderation with Chain-of-Thought and Policy-Aligned Rewards",
+    "date": "",
+    "venue": "",
+    "source_sha256": "c1a86f887a51db9697bf65612def494ba101f77004b9b510b4fa140b95119ed2"
+  },
+  {
+    "source_id": "swb_3cae5252bdcfe210",
+    "url": "https://aclanthology.org/2024.emnlp-main.217",
+    "status": "metadata_found",
+    "title": "C3PA: An Open Dataset of Expert-Annotated and Regulation-Aware Privacy Policies to Enable Scalable Regulatory Compliance Audits",
+    "date": "",
+    "venue": "",
+    "source_sha256": "843c25d04e5f4d0dfbf01fd4be081e5af3e1e10a273f47f0db4436c22377b191"
+  },
+  {
+    "source_id": "swb_2f8dcc726b24630f",
+    "url": "https://arxiv.org/abs/2510.00311",
+    "status": "metadata_found",
+    "title": "CORTEX: Collaborative LLM Agents for High-Stakes Alert Triage",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5b5eccef6a91cf372e2767f933fbc9d05e99d3ce8d11b604960d47ea53e5dea0"
+  },
+  {
+    "source_id": "swb_00d7c15ac52f6fdb",
+    "url": "https://arxiv.org/abs/2509.18400",
+    "status": "metadata_found",
+    "title": "ATLAS: Benchmarking and Adapting LLMs for Global Trade via Harmonized Tariff Code Classification",
+    "date": "",
+    "venue": "",
+    "source_sha256": "fb89fea49bcd36c7144408e025431a2430c7145134b579fff459b8e9571b56ba"
+  },
+  {
+    "source_id": "swb_88dc3d32f1cfb076",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/4962a23916103301b27bde29a27642e8-Paper-Datasets_and_Benchmarks.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_49c0e80cf589333d",
+    "url": "https://drive.google.com/file/d/1vsu0Ns6R6AeTX4-Hf2OdYqRvHD4yNm4y/view",
+    "status": "metadata_found",
+    "title": "Health Insurance Coverage Rules Interpretation Corpus: Law, Policy, and Medical Guidance for Health Insurance Coverage Understanding.pdf",
+    "date": "",
+    "venue": "",
+    "source_sha256": "45ec83c706225e0c41a1180fc271280abf159c71af0fa06dc1dd5e8327b078f2"
+  },
+  {
+    "source_id": "swb_d8772e83d0a04019",
+    "url": "https://doi.org/10.1016/j.pec.2008.07.033",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_75951914c8e5011e",
+    "url": "https://doi.org/10.1136/bmj.323.7311.493",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_109d391e85953807",
+    "url": "https://arxiv.org/abs/2505.17654",
+    "status": "metadata_found",
+    "title": "EVADE-Bench: Multimodal Benchmark for Evaluating and Enhancing Evasive Content Detection",
+    "date": "",
+    "venue": "",
+    "source_sha256": "e5c7fc53b443ff4285e6252f2f83ff7f563c7f43ef17bedba2eafeacbe730cdc"
+  },
+  {
+    "source_id": "swb_ac85b14fcd64e77b",
+    "url": "https://astrolavos.gatech.edu/articles/Manuscript_UDRP_final.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_e0f9c1b754a2c084",
+    "url": "https://aclanthology.org/P98-1013",
+    "status": "metadata_found",
+    "title": "The Berkeley FrameNet Project",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f091b39e7a33ef05c572a5ae609cf34a0df003a0c9fbdfc90d7a2873a99bfb44"
+  },
+  {
+    "source_id": "swb_41f1c2ecf23645a0",
+    "url": "https://upcommons.upc.edu/bitstreams/4a4e2dc2-df18-4bcd-893a-ffeadc9bf2b3/download",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_315f61e3d4c2343e",
+    "url": "https://aclanthology.org/2024.lrec-main.103",
+    "status": "metadata_found",
+    "title": "AnnoCTR: A Dataset for Detecting and Linking Entities, Tactics, and Techniques in Cyber Threat Reports",
+    "date": "",
+    "venue": "",
+    "source_sha256": "089fd46341773946c1d9343bc9130ff235810159a67026c3c73fac51bdb2cd43"
+  },
+  {
+    "source_id": "swb_7af6a773c0bc5b2c",
+    "url": "https://doi.org/10.1186/1471-2105-12-393",
+    "status": "metadata_found",
+    "title": "Enriching a biomedical event corpus with meta-knowledge annotation",
+    "date": "2011/12",
+    "venue": "BMC Bioinformatics",
+    "source_sha256": "6862b93585006c0d8a497d0b89743a5185fe05a93db442da4f296726eaa9fd59"
+  },
+  {
+    "source_id": "swb_4d2a6d2cf3b548f0",
+    "url": "https://doi.org/10.1007/s10579-021-09562-4",
+    "status": "metadata_found",
+    "title": "SENTiVENT: enabling supervised information extraction of company-specific events in economic and financial news",
+    "date": "2022/03",
+    "venue": "Language Resources and Evaluation",
+    "source_sha256": "f7c770622345f354d17dedcbbf34897319dcf793a5a98c1a6a29fed200f22d2f"
+  },
+  {
+    "source_id": "swb_279bb4c403b81ba3",
+    "url": "https://ebiquity.umbc.edu/get/a/publication/1312.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_b2d5d8a0f66a4102",
+    "url": "https://aclanthology.org/P18-1018",
+    "status": "metadata_found",
+    "title": "Comprehensive Supersense Disambiguation of English Prepositions and Possessives",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b192d71fc6c3dd40d1a0717eec32af59bf5140bcacd87a16b42bb8f82e578bcb"
+  },
+  {
+    "source_id": "swb_b07911f239df86a1",
+    "url": "https://gucorpling.org/amir/pdf/GUM_paper_prepub.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_d71b9c022df6a37b",
+    "url": "https://aclanthology.org/2025.cl-1.3",
+    "status": "metadata_found",
+    "title": "eRST: A Signaled Graph Theory of Discourse Relations and Organization",
+    "date": "",
+    "venue": "",
+    "source_sha256": "6f7e95773cf3df26ef870b6694b2fda8ba0db0cb2e9d94712fa99fde87073821"
+  },
+  {
+    "source_id": "swb_8a2c1f35dc27d86a",
+    "url": "https://aclanthology.org/J17-3005",
+    "status": "metadata_found",
+    "title": "Parsing Argumentation Structures in Persuasive Essays",
+    "date": "",
+    "venue": "",
+    "source_sha256": "7e4bfd56f716476a3d125959c7908d4fb8ee02fd6a3673bfdcc226a186b32548"
+  },
+  {
+    "source_id": "swb_17fcfce4e68396c6",
+    "url": "https://aclanthology.org/J17-1004",
+    "status": "metadata_found",
+    "title": "Argumentation Mining in User-Generated Web Discourse",
+    "date": "",
+    "venue": "",
+    "source_sha256": "6a654e047d51177a424f6cd8ffa2c766696e40b60764b0741316441f716d6a6f"
+  },
+  {
+    "source_id": "swb_4d7f8c4ca19452df",
+    "url": "https://arxiv.org/abs/2106.13833",
+    "status": "metadata_found",
+    "title": "Persian Rhetorical Structure Theory",
+    "date": "",
+    "venue": "",
+    "source_sha256": "863dcb616b720ccfc9b3204f0492386c9032837d511b942e2c5c8028eccf7a75"
+  },
+  {
+    "source_id": "swb_bdb2ca21417b7e12",
+    "url": "https://aclanthology.org/2020.lrec-1.133",
+    "status": "metadata_found",
+    "title": "The Potsdam Commentary Corpus 2.2: Extending Annotations for Shallow Discourse Parsing",
+    "date": "",
+    "venue": "",
+    "source_sha256": "eebda0433ab6e130db2cc992e692533ceb8815aaeb04d78f0cabc5ddfbcb9540"
+  },
+  {
+    "source_id": "swb_af0cd6febeef5923",
+    "url": "https://arxiv.org/abs/2505.22959",
+    "status": "metadata_found",
+    "title": "LLM-based HSE Compliance Assessment: Benchmark, Performance, and Advancements",
+    "date": "",
+    "venue": "",
+    "source_sha256": "4a671792f2154e9e955d6bc2c5340f17e658bbd1b76b44857386d231d6fd9a30"
+  },
+  {
+    "source_id": "swb_6c2e3b2cd12ac91c",
+    "url": "https://arxiv.org/abs/2604.08552",
+    "status": "metadata_found",
+    "title": "Automated Standardization of Legacy Biomedical Metadata Using an Ontology-Constrained LLM Agent",
+    "date": "",
+    "venue": "",
+    "source_sha256": "88215476bec121a7de8849924f63fba3240da8c17595365953c90916c9863adb"
+  },
+  {
+    "source_id": "swb_1114bf9f9e852909",
+    "url": "https://arxiv.org/abs/2504.14904",
+    "status": "metadata_found",
+    "title": "VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform",
+    "date": "",
+    "venue": "",
+    "source_sha256": "e1e8ca532c15219a308f6e23cbd9ccb8a82a54dab72ad78647900d9aa1229135"
+  },
+  {
+    "source_id": "swb_ca7762b13d0be676",
+    "url": "https://aclanthology.org/2025.findings-acl.887",
+    "status": "metadata_found",
+    "title": "A Law Reasoning Benchmark for LLM with Tree-Organized Structures including Factum Probandum, Evidence and Experiences",
+    "date": "",
+    "venue": "",
+    "source_sha256": "0cbff908bb6d8a0ca93da5cdc477b960ba34130f082f23f421a539b08a2985ac"
+  },
+  {
+    "source_id": "swb_c4bf4a96ffdb3949",
+    "url": "https://aclanthology.org/2023.acl-long.416",
+    "status": "metadata_found",
+    "title": "MDACE: MIMIC Documents Annotated with Code Evidence",
+    "date": "",
+    "venue": "",
+    "source_sha256": "6e1e6c2fd700531e454c4668751439271e8de6fb38d161bb532f3d2cd825a4a2"
+  },
+  {
+    "source_id": "swb_4c1a140aac623fd5",
+    "url": "https://arxiv.org/abs/2605.27377",
+    "status": "metadata_found",
+    "title": "Enhancing LLM Medical Coding with Structured External Knowledge",
+    "date": "",
+    "venue": "",
+    "source_sha256": "a1db99d7efb5ac893bacec64bd606115c2ec19f41f5a80806673614c02ab5a7f"
+  },
+  {
+    "source_id": "swb_1408fdcc383f6abc",
+    "url": "https://aclanthology.org/2025.acl-long.518",
+    "status": "metadata_found",
+    "title": "PrivaCI-Bench: Evaluating Privacy with Contextual Integrity and Legal Compliance",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5aa11e353c0ee7373da63f3331170d24753f8d578d43284b0a85d195ca4bd863"
+  },
+  {
+    "source_id": "swb_ce668097d39dbea9",
+    "url": "https://aclanthology.org/2026.acl-long.294",
+    "status": "metadata_found",
+    "title": "ContextLens: Modeling Imperfect Privacy and Safety Context for Legal Compliance",
+    "date": "",
+    "venue": "",
+    "source_sha256": "df0d0dbad4c19cecde33199c052601ee8c82ce4b92f837d12aabf54610a2c55c"
+  },
+  {
+    "source_id": "swb_30a465c7a1ee8b92",
+    "url": "https://arxiv.org/abs/2601.20617",
+    "status": "metadata_found",
+    "title": "Agent Benchmarks Fail Public Sector Requirements",
+    "date": "",
+    "venue": "",
+    "source_sha256": "4fec2aa6c867c7a268cbae1ca723ef842d48fa64242fe9a749fd9458d4f861ae"
+  },
+  {
+    "source_id": "swb_5a1891ccb7592a21",
+    "url": "https://aclanthology.org/2026.eacl-demo.34",
+    "status": "metadata_found",
+    "title": "AI for Climate Finance: Agentic Retrieval and Multi-Step Reasoning for Early Warning System Investments",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f26ec78d44bca702a8b87d30f45a159490ab456b794b2fea3e512fd1686eaa64"
+  },
+  {
+    "source_id": "swb_dcf3d4b39960dc91",
+    "url": "https://aclanthology.org/P18-2071",
+    "status": "metadata_found",
+    "title": "SciDTB: Discourse Dependency TreeBank for Scientific Abstracts",
+    "date": "",
+    "venue": "",
+    "source_sha256": "83993700785b175f64bbbcd78c521a92f3636df1774aad6d7c69c89d83bd52e2"
+  },
+  {
+    "source_id": "swb_006ebf155d6acc06",
+    "url": "https://let.uvt.nl/general/people/bunt/docs/ISA-12-DR-core-revised.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_af152f5630911f25",
+    "url": "https://aclanthology.org/L16-1699",
+    "status": "metadata_found",
+    "title": "MEANTIME, the NewsReader Multilingual Event and Time Corpus",
+    "date": "",
+    "venue": "",
+    "source_sha256": "bcadd668a5e7819beb6c2c5216b339e05d3cb734ee20e32bfc249d226df63463"
+  },
+  {
+    "source_id": "swb_a31115dd5290be11",
+    "url": "https://aclanthology.org/2024.lrec-main.954",
+    "status": "metadata_found",
+    "title": "MaintIE: A Fine-Grained Annotation Schema and Benchmark for Information Extraction from Maintenance Short Texts",
+    "date": "",
+    "venue": "",
+    "source_sha256": "a5bfea1f2b3bc71cd2c1b6ebcd55904504c5f7b7b2dd805fa3e8de5c47b20915"
+  },
+  {
+    "source_id": "swb_9b22866412d6b018",
+    "url": "https://research-repository.uwa.edu.au/en/publications/automatic-knowledge-extraction-from-industrial-maintenance-short-",
+    "status": "metadata_found",
+    "title": "Automatic knowledge extraction from industrial maintenance short text using deep learning",
+    "date": "2024",
+    "venue": "",
+    "source_sha256": "83934862f328059ed715ceddd1064f9603d54d18b4392e6194ec2064dc038feb"
+  },
+  {
+    "source_id": "swb_de093b8af2af6972",
+    "url": "https://www.lrec-conf.org/proceedings/lrec2014/pdf/840_Paper.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_4f212191533404a4",
+    "url": "https://biaoyanf.github.io/files/papers/eacl2021-chemu-ref.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_dd347e9b38fa7dca",
+    "url": "https://e-archivo.uc3m.es/bitstreams/714e8ec0-6fd2-4ae1-ab3f-93c564ff5a1c/download",
+    "status": "fetch_failed",
+    "error": "URLError"
+  },
+  {
+    "source_id": "swb_da688ad6f82a66ca",
+    "url": "https://aclanthology.org/S13-2056",
+    "status": "metadata_found",
+    "title": "SemEval-2013 Task 9 : Extraction of Drug-Drug Interactions from Biomedical Texts (DDIExtraction 2013)",
+    "date": "",
+    "venue": "",
+    "source_sha256": "cb2430804b3984826e05166344769c99739c34be9bbb917cfb0a74936f4b3811"
+  },
+  {
+    "source_id": "swb_8a07d9a53b68145d",
+    "url": "https://ceur-ws.org/Vol-2696/paper_263.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_6f488a10f0fce31a",
+    "url": "https://aclanthology.org/L16-1432",
+    "status": "metadata_found",
+    "title": "Discourse Structure and Dialogue Acts in Multiparty Dialogue: the STAC Corpus",
+    "date": "",
+    "venue": "",
+    "source_sha256": "62ae1c7a412cac09b246b1180361777f65c9906d50b06a1f8c25248356d6c64e"
+  },
+  {
+    "source_id": "swb_f535341f9a8ddf7c",
+    "url": "https://www.nature.com/articles/s41597-022-01521-0",
+    "status": "metadata_found",
+    "title": "The Leaf Clinical Trials Corpus: a new resource for query generation from clinical trial eligibility criteria",
+    "date": "2022-08-11",
+    "venue": "Scientific Data",
+    "source_sha256": "f3ff7b647a0834cc59b42db6a4d0ef8f7cfdef15dde3b588427e5a4ec4409527"
+  },
+  {
+    "source_id": "swb_dbe3ef6b4d9451c7",
+    "url": "https://arxiv.org/abs/2207.13757",
+    "status": "metadata_found",
+    "title": "The Leaf Clinical Trials Corpus: a new resource for query generation from clinical trial eligibility criteria",
+    "date": "",
+    "venue": "",
+    "source_sha256": "ab4af964af3e34b03fac45f9d4f192c150f972a4c5f2c5330f86fe76d9e9fd66"
+  },
+  {
+    "source_id": "swb_96f59b64c48c85ff",
+    "url": "https://arxiv.org/abs/2208.06178",
+    "status": "metadata_found",
+    "title": "Mining Legal Arguments in Court Decisions",
+    "date": "",
+    "venue": "",
+    "source_sha256": "9e1e28d1db827f9d1e8ab95ed833479ce4267bd7ca65c8b221352ea340ff2157"
+  },
+  {
+    "source_id": "swb_f7ded85665b4916e",
+    "url": "https://arxiv.org/abs/2112.14731",
+    "status": "metadata_found",
+    "title": "LeSICiN: A Heterogeneous Graph-based Approach for Automatic Legal Statute Identification from Indian Legal Documents",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8f46040106bcc8397cc118311bf263337fcf18030904955ee6bc9649e4eea4df"
+  },
+  {
+    "source_id": "swb_561a653983f0f575",
+    "url": "https://ceur-ws.org/Vol-2385/paper1.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_c5bd25a2b757290f",
+    "url": "https://www.nature.com/articles/s41597-019-0342-9",
+    "status": "metadata_found",
+    "title": "PGxCorpus, a manually annotated corpus for pharmacogenomics",
+    "date": "2020-01-02",
+    "venue": "Scientific Data",
+    "source_sha256": "eb200d20d6a8b1171b9ece814e15111b17eb242200b7d0c3b8f1825794fb1d3e"
+  },
+  {
+    "source_id": "swb_51bbfa2841c3167c",
+    "url": "https://aclanthology.org/2024.lrec-main.1054",
+    "status": "metadata_found",
+    "title": "NarrativeTime: Dense Temporal Annotation on a Timeline",
+    "date": "",
+    "venue": "",
+    "source_sha256": "70b3730772d65df69ea0c6e43c5104f147edcb40b460fc5e76bc101e4faf0894"
+  },
+  {
+    "source_id": "swb_601c5308e31d4538",
+    "url": "https://aclanthology.org/W17-2711",
+    "status": "metadata_found",
+    "title": "The Event StoryLine Corpus: A New Benchmark for Causal and Temporal Relation Extraction",
+    "date": "",
+    "venue": "",
+    "source_sha256": "fc19664ae1cca8014ad130ca84591bdb8dc35789e95b7e0bc4c834ad447e029e"
+  },
+  {
+    "source_id": "swb_c0c15db490aa1302",
+    "url": "https://aclanthology.org/2022.acl-long.303",
+    "status": "metadata_found",
+    "title": "FiNER: Financial Numeric Entity Recognition for XBRL Tagging",
+    "date": "",
+    "venue": "",
+    "source_sha256": "d00a5200947fe4cc3fafc0320566974912c8a54dcc72b38fe3fcd9ddca89100a"
+  },
+  {
+    "source_id": "swb_07c0c4e2b91f854d",
+    "url": "https://arxiv.org/abs/2511.07979",
+    "status": "metadata_found",
+    "title": "Benchmarking Multi-Step Legal Reasoning and Analyzing Chain-of-Thought Effects in Large Language Models",
+    "date": "",
+    "venue": "",
+    "source_sha256": "621508f930b82f7ae6336c5bffcfdd917ec3e64b740ebbe0161527bb2917e0a7"
+  },
+  {
+    "source_id": "src_3c12a77f2e968514",
+    "url": "https://ceur-ws.org/Vol-2380/paper_250.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_6cee056ba74ca704",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22230112",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_b73f20a87218b658",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15733405",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_38b3af71399e7e1f",
+    "url": "https://arxiv.org/abs/2608.20391",
+    "status": "metadata_found",
+    "title": "ImmigrationReason: A Structured Dataset of U.S. Immigration Appeals for Legal Reasoning Research",
+    "date": "",
+    "venue": "",
+    "source_sha256": "06136f9e25b94e25f58b606963bbf4cbeba8c5d0f2d4742ef1335ff8c5a95b4f"
+  },
+  {
+    "source_id": "swb_b625878fd48a0f02",
+    "url": "https://arxiv.org/abs/2406.09105",
+    "status": "metadata_found",
+    "title": "INS-MMBench: A Comprehensive Benchmark for Evaluating LVLMs' Performance in Insurance",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5aba5c5eb292484238242a625de753215beff45960262024509de65c04307d27"
+  },
+  {
+    "source_id": "src_0783e2f41e3d01a0",
+    "url": "https://aclanthology.org/2023.emnlp-main.1019/",
+    "status": "metadata_found",
+    "title": "MAUD: An Expert-Annotated Legal NLP Dataset for Merger Agreement Understanding",
+    "date": "",
+    "venue": "",
+    "source_sha256": "54b6f86ceacf6a3dd88116dff05ce1cb4e38d722a98fea2e05f92d67d0dfab12"
+  },
+  {
+    "source_id": "swb_973f7874b35ac9f7",
+    "url": "https://www.scitepress.org/Papers/2026/142494/142494.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_ee2f9eaaa97a583f",
+    "url": "https://arxiv.org/abs/2603.13933",
+    "status": "metadata_found",
+    "title": "OmniCompliance-100K: A Multi-Domain, Rule-Grounded, Real-World Safety Compliance Dataset",
+    "date": "",
+    "venue": "",
+    "source_sha256": "ca52fe7d04da75a9bccfeb669f58686f6e66b3fd4d43aa06020be6ad4441ca39"
+  },
+  {
+    "source_id": "swb_653ef2352fa54377",
+    "url": "https://www.nature.com/articles/s41597-025-05664-8",
+    "status": "metadata_found",
+    "title": "Addressing data gaps in sustainability reporting: A benchmark dataset for greenhouse gas emission extraction",
+    "date": "2025-08-27",
+    "venue": "Scientific Data",
+    "source_sha256": "2fc421e17b0e85936629d9ac67a5b53e6c5e357fb09c8eb483e85c85a73ad229"
+  },
+  {
+    "source_id": "swb_2d55ff7a1b315f1d",
+    "url": "https://link.springer.com/article/10.1007/s10506-024-09415-9",
+    "status": "metadata_found",
+    "title": "Classifying proportionality - identification of a legal argument",
+    "date": "2025/12",
+    "venue": "Artificial Intelligence and Law",
+    "source_sha256": "0a5a58ac18c551531bc860fcf9fcbe7913535bf7c9890f055729bfc124cc9e92"
+  },
+  {
+    "source_id": "swb_1d2a82c028488d38",
+    "url": "https://aclanthology.org/2024.clicit-1.124",
+    "status": "metadata_found",
+    "title": "AMELIA - Argument Mining Evaluation on Legal documents in ItAlian: A CALAMITA Challenge",
+    "date": "",
+    "venue": "",
+    "source_sha256": "9ea80ac8ae2b948264566b90a8b72c26757b24f732834c566d606ee90a5d3c5e"
+  },
+  {
+    "source_id": "swb_7209f8c85fd21e7e",
+    "url": "https://arxiv.org/abs/2510.11985",
+    "status": "metadata_found",
+    "title": "CGBench: Benchmarking Language Model Scientific Reasoning for Clinical Genetics Research",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8597772174139f54688ba36fc54df79f292f13b4f1948b4cda16676ee323cf13"
+  },
+  {
+    "source_id": "swb_b4623de588deb9c3",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19060901",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_2fd412beff975b13",
+    "url": "https://aclanthology.org/2024.lrec-main.229",
+    "status": "metadata_found",
+    "title": "Building a Broad Infrastructure for Uniform Meaning Representations",
+    "date": "",
+    "venue": "",
+    "source_sha256": "39f9aa0c2af97b48170fd381c1ee30301009a84ec20adb40d4aadbbecadc35c0"
+  },
+  {
+    "source_id": "swb_0dd6b85c0563fc58",
+    "url": "https://raw.githubusercontent.com/howisonlab/softcite-dataset/18522db3b8642eef2c0ac57a5ffd043a97824cff/docs/papers/Softcite_Dataset_Description_RC.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_a37833c020b0b931",
+    "url": "https://aclanthology.org/P16-1166",
+    "status": "metadata_found",
+    "title": "Situation entity types: automatic classification of clause-level aspect",
+    "date": "",
+    "venue": "",
+    "source_sha256": "54083a660bf388cd4bc86ab836158924c4d563fb538697e24b0abbd752fb357d"
+  },
+  {
+    "source_id": "swb_3554268f202076ad",
+    "url": "https://aclanthology.org/W14-4921",
+    "status": "metadata_found",
+    "title": "Situation Entity Annotation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "0214f324d96a21a958218caf463172e508562bf21392148d0fa24e680514294d"
+  },
+  {
+    "source_id": "swb_7a1bf4852afcc31a",
+    "url": "https://aclanthology.org/2020.acl-main.116",
+    "status": "metadata_found",
+    "title": "The SOFC-Exp Corpus and Neural Approaches to Information Extraction in the Materials Science Domain",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5702bead9391bea74e4db2a26f28087e919e58abae087ed230945b155f96dd8d"
+  },
+  {
+    "source_id": "swb_e9390aaf60d6f809",
+    "url": "https://aclanthology.org/2021.naacl-main.69",
+    "status": "metadata_found",
+    "title": "Document-Level Event Argument Extraction by Conditional Generation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "6928f43da1f8cf6c2b5f59ab1a4fe72219d2e25571dbe31b149ea5cc9abc3481"
+  },
+  {
+    "source_id": "swb_d6b98c91634c2133",
+    "url": "https://aclanthology.org/2023.wiesp-1.11",
+    "status": "metadata_found",
+    "title": "MuLMS: A Multi-Layer Annotated Text Corpus for Information Extraction in the Materials Science Domain",
+    "date": "",
+    "venue": "",
+    "source_sha256": "576132c6c5ecc5f7478038a1b44f2724a16c0c153236095c6a5cf9df41ebd6cb"
+  },
+  {
+    "source_id": "swb_657c3760f3ee944f",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21464130",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_5c465992aad60453",
+    "url": "https://arxiv.org/abs/2410.21495",
+    "status": "metadata_found",
+    "title": "RoBIn: A Transformer-Based Model For Risk Of Bias Inference With Machine Reading Comprehension",
+    "date": "",
+    "venue": "",
+    "source_sha256": "56b7ab24234404df0b0b97c70ec7513db126bf1d28bde2121aa12d2a122dcf73"
+  },
+  {
+    "source_id": "swb_b05589475dc4ae8e",
+    "url": "https://aclanthology.org/2026.eacl-long.377",
+    "status": "metadata_found",
+    "title": "COMPACT: Building Compliance Paralegals via Clause Graph Reasoning over Contracts",
+    "date": "",
+    "venue": "",
+    "source_sha256": "39203b31f37d4f275502515408efc96ab006bec2e09d1929e4a2cac2347cc553"
+  },
+  {
+    "source_id": "swb_ec5d40251cde1595",
+    "url": "https://www.nature.com/articles/s41598-024-62665-0",
+    "status": "metadata_found",
+    "title": "Collaborative artificial intelligence system for investigation of healthcare claims compliance",
+    "date": "2024-05-24",
+    "venue": "Scientific Reports",
+    "source_sha256": "09f4c826493818ddaccb40536a2e3299bf6bfebeec28614a8a601c23e9c8ddc7"
+  },
+  {
+    "source_id": "swb_69c2f0a1dae1fa77",
+    "url": "https://ceur-ws.org/Vol-3497/paper-002.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_f6565ac2f4848bca",
+    "url": "https://arxiv.org/abs/2601.19667",
+    "status": "metadata_found",
+    "title": "SynCABEL: Synthetic Contextualized Augmentation for Biomedical Entity Linking",
+    "date": "",
+    "venue": "",
+    "source_sha256": "7ceb6fa8aa08788d762388be7364a4d7194bc0b1e2c2ae3101b0df99a8dd4cd3"
+  },
+  {
+    "source_id": "swb_fdbed9aacaef81aa",
+    "url": "https://aclanthology.org/P13-1023",
+    "status": "metadata_found",
+    "title": "Universal Conceptual Cognitive Annotation (UCCA)",
+    "date": "",
+    "venue": "",
+    "source_sha256": "112c27f2fc7eb4ad580a67ad3c53f3d017fb4aaf8c32706abcec1b8c0ab580bc"
+  },
+  {
+    "source_id": "swb_386f1dadfa3554e4",
+    "url": "https://aclanthology.org/2026.acl-long.1760",
+    "status": "metadata_found",
+    "title": "Refining and Reusing Annotation Guidelines for LLM Annotation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8cb653a771de4cfb76f8e4f6e314b2069b3ad1d9e028d9f7efd732924eb51777"
+  },
+  {
+    "source_id": "swb_b307befbb8de1a36",
+    "url": "https://arxiv.org/abs/2503.03261",
+    "status": "metadata_found",
+    "title": "Can Frontier LLMs Replace Annotators in Biomedical Text Mining? Analyzing Challenges and Exploring Solutions",
+    "date": "",
+    "venue": "",
+    "source_sha256": "69091a4235e5befb09fc6cea8c3ea76e2f08463bb6a7d3dce92a569f870f26de"
+  },
+  {
+    "source_id": "swb_3d46ec996ef72eb3",
+    "url": "https://aclanthology.org/2024.tacl-1.34",
+    "status": "metadata_found",
+    "title": "The Thai Discourse Treebank: Annotating and Classifying Thai Discourse Connectives",
+    "date": "",
+    "venue": "",
+    "source_sha256": "2d280fdc345b81bf290571cada30cba30379d0a44643b36842f14c4d94f146d2"
+  },
+  {
+    "source_id": "swb_36e0988f4d1f7d17",
+    "url": "https://dialogue-conf.org/media/3938/pisarevskayadetal.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_703b1e63eb91038a",
+    "url": "https://www.mdpi.com/2504-446X/9/10/704",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_19417c58a6cc712f",
+    "url": "https://link.springer.com/article/10.1186/s13073-019-0687-x",
+    "status": "metadata_found",
+    "title": "Standard operating procedure for curation and clinical interpretation of variants in cancer",
+    "date": "2019/12",
+    "venue": "Genome Medicine",
+    "source_sha256": "26638d7a4e6c6a9d3827419642a2fc96b1f20b45e9513dababcd9b843c799093"
+  },
+  {
+    "source_id": "swb_ec5511e26e070d30",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18955451",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_fdbd8864e8865d0a",
+    "url": "https://aclanthology.org/2022.coling-1.63",
+    "status": "metadata_found",
+    "title": "Extractive Summarisation for German-language Data: A Text-level Approach with Discourse Features",
+    "date": "",
+    "venue": "",
+    "source_sha256": "53e8ca3e93983b97beefb82b308b856d143dab64248a8d4b9264e4f069d0abec"
+  },
+  {
+    "source_id": "swb_de04d2a208ec9768",
+    "url": "https://aclanthology.org/2020.law-1.16",
+    "status": "metadata_found",
+    "title": "pyMMAX2: Deep Access to MMAX2 Projects from Python",
+    "date": "",
+    "venue": "",
+    "source_sha256": "d945b903c07921027df6f9a9e5248f93ff925142d944b795df1d9b605f00fb32"
+  },
+  {
+    "source_id": "swb_89830d01cf2a6c79",
+    "url": "https://aclanthology.org/2024.emnlp-main.726",
+    "status": "metadata_found",
+    "title": "SciER: An Entity and Relation Extraction Dataset for Datasets, Methods, and Tasks in Scientific Documents",
+    "date": "",
+    "venue": "",
+    "source_sha256": "daf6027e8adc879c87f9151712222e343a2178d5b64e0bde9a3788eac47377a1"
+  },
+  {
+    "source_id": "swb_ea28fbbdd292a25a",
+    "url": "https://aclanthology.org/L18-1257",
+    "status": "metadata_found",
+    "title": "A Corpus of eRulemaking User Comments for Measuring Evaluability of Arguments",
+    "date": "",
+    "venue": "",
+    "source_sha256": "62b2adb615150e3989579f4d9627d35f08c05758444095dce8fdb0d8dd2ed3a0"
+  },
+  {
+    "source_id": "swb_49eedaa56605f814",
+    "url": "https://facultystaff.richmond.edu/~jpark/papers/jpark_icail15.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_1d5e3032209e6232",
+    "url": "https://sites.icmc.usp.br/taspardo/RST2011-CardosoEtAl1.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_fa6ea9ed97333fbb",
+    "url": "https://sites.icmc.usp.br/taspardo/Thesis2014-Cardoso.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_ab69f2b6fe9ae535",
+    "url": "https://aclanthology.org/N15-1146",
+    "status": "metadata_found",
+    "title": "MPQA 3.0: An Entity/Event-Level Sentiment Corpus",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b2f7e8050215a6a9463f5c4231dcd050aa2444c8356e456a16dcdc13dcff9621"
+  },
+  {
+    "source_id": "swb_4b67cb87476a2fd8",
+    "url": "https://aclanthology.org/W06-1651",
+    "status": "metadata_found",
+    "title": "Joint Extraction of Entities and Relations for Opinion Recognition",
+    "date": "",
+    "venue": "",
+    "source_sha256": "54d7864637a813356f5ae3dd23bec7bf7cf19fd8154751e1a73bcf7d55f692ce"
+  },
+  {
+    "source_id": "swb_6a3be73ff52f493f",
+    "url": "https://people.cs.pitt.edu/~wiebe/pubs/papers/lre05.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_414a5d084cd87393",
+    "url": "https://aclanthology.org/2024.lrec-main.1093",
+    "status": "metadata_found",
+    "title": "Opinion Mining Using Pre-Trained Large Language Models: Identifying the Type, Polarity, Intensity, Expression, and Source of Private States",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8f0b02735727f3625d9c004b54b48525de156fba70e18b02c0e7d83b627439cf"
+  },
+  {
+    "source_id": "swb_27f33d6e470eaca9",
+    "url": "https://arxiv.org/abs/1805.00195",
+    "status": "metadata_found",
+    "title": "An Annotated Corpus for Machine Reading of Instructions in Wet Lab Protocols",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5070795bb9d8b878ab72b8eeb23c5719c11196626c997cf86a1ee2755dc62f5d"
+  },
+  {
+    "source_id": "swb_51405a28ae12c407",
+    "url": "https://aclanthology.org/2021.eacl-main.187",
+    "status": "metadata_found",
+    "title": "Process-Level Representation of Scientific Protocols with Interactive Annotation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "8333b8a93e8851863842d0d1d0596a89ab5bca046377bc82b5a9319ffac166b5"
+  },
+  {
+    "source_id": "swb_0e8300b2b4902c9a",
+    "url": "https://aclanthology.org/W16-5706",
+    "status": "metadata_found",
+    "title": "Richer Event Description: Integrating event coreference with temporal, causal and bridging annotation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "230e078065c27974b87d17854c029e773b5202cbcaf3e71512ca57600220c5b3"
+  },
+  {
+    "source_id": "swb_874f7c28daa199e1",
+    "url": "https://aclanthology.org/W13-2322",
+    "status": "metadata_found",
+    "title": "Abstract Meaning Representation for Sembanking",
+    "date": "",
+    "venue": "",
+    "source_sha256": "2ded9caa831d180c773fa5078a434619597edcb24ba17eb986ee0f31d5110973"
+  },
+  {
+    "source_id": "swb_a44d1b532326f3f0",
+    "url": "https://aclanthology.org/D17-2001",
+    "status": "metadata_found",
+    "title": "The NLTK FrameNet API: Designing for Discoverability with a Rich Linguistic Resource",
+    "date": "",
+    "venue": "",
+    "source_sha256": "3fb2566a06f195ab0092725bbd98661e5bcf0d286699f2bae2253bf5fedbe036"
+  },
+  {
+    "source_id": "swb_057033191e270616",
+    "url": "https://doi.org/10.1093/insilicoplants/diad021",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_a3a10f2f7ac4ad3a",
+    "url": "https://clic.ub.edu/corpus/sites/default/files/inline-files/ancora-corpus.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_49d541f5d426e976",
+    "url": "https://aclanthology.org/2023.mwe-1.6",
+    "status": "metadata_found",
+    "title": "PARSEME corpus release 1.3",
+    "date": "",
+    "venue": "",
+    "source_sha256": "7f62b06e00afc44a9987be885c28f89db6607fbf9df36b7480d9fc2463961b11"
+  },
+  {
+    "source_id": "swb_345bdbdf33da6aaf",
+    "url": "https://aclanthology.org/2020.mwe-1.14",
+    "status": "metadata_found",
+    "title": "Edition 1.2 of the PARSEME Shared Task on Semi-supervised Identification of Verbal Multiword Expressions",
+    "date": "",
+    "venue": "",
+    "source_sha256": "6697552bc2e7eac3baab3880762fd49e59cd6a6f1b656c53b45b1ed83bd49658"
+  },
+  {
+    "source_id": "swb_2214a5f0abe2dbfc",
+    "url": "https://aclanthology.org/2022.acl-long.468",
+    "status": "metadata_found",
+    "title": "A Statutory Article Retrieval Dataset in French",
+    "date": "",
+    "venue": "",
+    "source_sha256": "0fcef73d7eb9556fb114411987bb5380ffcd42b7dfdee0d5cbea54a1dbec3caf"
+  },
+  {
+    "source_id": "swb_cd3ae3fc74a1d848",
+    "url": "https://aclanthology.org/W18-4925",
+    "status": "metadata_found",
+    "title": "Edition 1.1 of the PARSEME Shared Task on Automatic Identification of Verbal Multiword Expressions",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f76c2fab0cf55a3bc291891fb99881e645c41d9efdae89c40fccdff645474d16"
+  },
+  {
+    "source_id": "swb_4f02949b54fd3f85",
+    "url": "https://jlm.ipipan.waw.pl/index.php/JLM/article/download/265/249/2149",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_f3cf6b93c83f23ac",
+    "url": "https://aclanthology.org/2023.nllp-1.24",
+    "status": "metadata_found",
+    "title": "AsyLex: A Dataset for Legal Language Processing of Refugee Claims",
+    "date": "",
+    "venue": "",
+    "source_sha256": "1f11019526f0d3fcd1b847c0beec1d222d1fe5e43c0c85b2d345ab62b2f61cfc"
+  },
+  {
+    "source_id": "swb_bdf2bdf0063a84d6",
+    "url": "https://arxiv.org/abs/2211.00582",
+    "status": "metadata_found",
+    "title": "ClassActionPrediction: A Challenging Benchmark for Legal Judgment Prediction of Class Action Cases in the US",
+    "date": "",
+    "venue": "",
+    "source_sha256": "4270a4649fbab793dd75fde92088a0d3c5baa9a5c92238c498d123a146cc8fd4"
+  },
+  {
+    "source_id": "swb_c68b4b2c6e624ec4",
+    "url": "https://arxiv.org/abs/2604.04443",
+    "status": "metadata_found",
+    "title": "DeonticBench: A Benchmark for Reasoning over Rules",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5217eb40632605db9d7a70a014560db2b6f3217394eccc5d307cdca267fe39f1"
+  },
+  {
+    "source_id": "swb_b4b13fb3f1bea6ef",
+    "url": "https://aclanthology.org/2021.naacl-main.22",
+    "status": "metadata_found",
+    "title": "Paragraph-level Rationale Extraction through Regularization: A case study on European Court of Human Rights Cases",
+    "date": "",
+    "venue": "",
+    "source_sha256": "0b6c207c197dceb51df5d758ea02559c15791cffaa2738b0d609878519a0402a"
+  },
+  {
+    "source_id": "swb_bf09840107a4fde2",
+    "url": "https://papers.neurips.cc/paper_files/paper/2025/file/4aab82c8d6b77c0b6b010145c1bfcdd3-Paper-Datasets_and_Benchmarks_Track.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_7bf3f63af5fcf88b",
+    "url": "https://www.nature.com/articles/s41467-026-75160-z",
+    "status": "metadata_found",
+    "title": "Assessing corporate sustainability with large language models: evidence from Europe",
+    "date": "2026-07-07",
+    "venue": "Nature Communications",
+    "source_sha256": "c3a39026e5bb639fc9191c1222176031ef68d0163e0c200e9f39392588202c84"
+  },
+  {
+    "source_id": "swb_e29f37a968796840",
+    "url": "https://arxiv.org/abs/2503.03444",
+    "status": "metadata_found",
+    "title": "Taxation Perspectives from Large Language Models: A Case Study on Additional Tax Penalties",
+    "date": "",
+    "venue": "",
+    "source_sha256": "d42aba12a37ccaa14e6f4de31685487faaf84684a3f2a37915954630c0a7f9ab"
+  },
+  {
+    "source_id": "swb_f385895bf39b0fef",
+    "url": "https://aclanthology.org/2024.findings-naacl.172",
+    "status": "metadata_found",
+    "title": "HateModerate: Testing Hate Speech Detectors against Content Moderation Policies",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f8f73a0cf77d0c6cb66be69ee9cb78e494661299968767051a540ce4d6c77959"
+  },
+  {
+    "source_id": "swb_baffe3cbb93b19b4",
+    "url": "https://aclanthology.org/2021.acl-long.132",
+    "status": "metadata_found",
+    "title": "Learning from the Worst: Dynamically Generated Datasets to Improve Online Hate Detection",
+    "date": "",
+    "venue": "",
+    "source_sha256": "23f9843585ccd9f98f8b3f95a17c945b9502351819c5cb18b15a5f00f92e5f02"
+  },
+  {
+    "source_id": "swb_96934869cba8e4d3",
+    "url": "https://arxiv.org/abs/2507.20162",
+    "status": "metadata_found",
+    "title": "Modeling Insider Filing Delays in Financial Markets with an Interpretable XGBoost Framework",
+    "date": "",
+    "venue": "",
+    "source_sha256": "c9dfd1d0a13357bfe4d54d9b6283288131c684850c59101d1075740fa3c23077"
+  },
+  {
+    "source_id": "swb_ff28e5185fed4c22",
+    "url": "https://arxiv.org/abs/2608.07796",
+    "status": "metadata_found",
+    "title": "CliniCARE-Bench: Clinical Calibrated Audit of Medical Reasoning in EHR",
+    "date": "",
+    "venue": "",
+    "source_sha256": "eec39633a449e3b2f2a25e5dde65b2f91837b761e6e977f1b54e296bbfd733b4"
+  },
+  {
+    "source_id": "swb_c1cdf2403c8db1d8",
+    "url": "https://doi.org/10.1145/3799682.3840202",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_59fa88912bffc0a1",
+    "url": "https://aclanthology.org/2024.nllp-1.7",
+    "status": "metadata_found",
+    "title": "The CLC-UKET Dataset: Benchmarking Case Outcome Prediction for the UK Employment Tribunal",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5568be77981e9f68720ad108009a457e3ca093f8f3449c77576aaf841b951915"
+  },
+  {
+    "source_id": "swb_f234be861a99115d",
+    "url": "https://arxiv.org/abs/2607.04261",
+    "status": "metadata_found",
+    "title": "Shortcut Learning in Legal Judgment Prediction: Empirical Evidence from the UK Employment Tribunal",
+    "date": "",
+    "venue": "",
+    "source_sha256": "e23ca55b6127344d6fbf3fd79ded73b954582385216871a7fd3473d6c5042d98"
+  },
+  {
+    "source_id": "swb_672fb3079a45a845",
+    "url": "https://aclanthology.org/2024.lrec-main.486",
+    "status": "metadata_found",
+    "title": "ECtHR-PCR: A Dataset for Precedent Understanding and Prior Case Retrieval in the European Court of Human Rights",
+    "date": "",
+    "venue": "",
+    "source_sha256": "86dc47f27d28fdd2bf041d5b14848459291c587aa11f02275e1b418e21ee0a92"
+  },
+  {
+    "source_id": "swb_9f542271257024d7",
+    "url": "https://aclanthology.org/2025.emnlp-main.160",
+    "status": "metadata_found",
+    "title": "Measuring Risk of Bias in Biomedical Reports: The RoBBR Benchmark",
+    "date": "",
+    "venue": "",
+    "source_sha256": "cda94808cffa96d705e03f5dbe76be4c07807470bd5270c7ad2d200724297755"
+  },
+  {
+    "source_id": "swb_fe1a4ba1d1a91bd9",
+    "url": "https://orbi.uliege.be/bitstream/2268/322890/1/ICAIL2023.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_9d08755307cbfa01",
+    "url": "https://arxiv.org/abs/2604.00075",
+    "status": "metadata_found",
+    "title": "Large Language Models for Variant-Centric Functional Evidence Mining",
+    "date": "",
+    "venue": "",
+    "source_sha256": "fb879f9bfef69462199f64e550610d5689a65afcccf442755be8eda99a54f293"
+  },
+  {
+    "source_id": "swb_8cf00edb7a537c63",
+    "url": "https://arxiv.org/abs/2505.20650",
+    "status": "metadata_found",
+    "title": "FinTagging: Benchmarking LLMs for Extracting and Structuring Financial Information",
+    "date": "",
+    "venue": "",
+    "source_sha256": "116528f353eb45f88e1ec7d0e22d897ecd848e7a0e0f523b450468eac992f662"
+  },
+  {
+    "source_id": "swb_9830b4b52e0e9dab",
+    "url": "https://arxiv.org/abs/2510.00694",
+    "status": "metadata_found",
+    "title": "ALARB: An Arabic Legal Argument Reasoning Benchmark",
+    "date": "",
+    "venue": "",
+    "source_sha256": "4eabf7b3fd972bc5fd2afe71ad1708dbe7007bdb20c74a297dd8d609d6c45e8a"
+  },
+  {
+    "source_id": "swb_14a900008039bf2e",
+    "url": "https://arxiv.org/abs/1807.02478",
+    "status": "metadata_found",
+    "title": "CAIL2018: A Large-Scale Legal Dataset for Judgment Prediction",
+    "date": "",
+    "venue": "",
+    "source_sha256": "065425764730bf1c30dc99163b3446fed6c3343048ba8ef2cad18d44acf2f780"
+  },
+  {
+    "source_id": "swb_d70676b0c74215d9",
+    "url": "https://arxiv.org/abs/1810.05851",
+    "status": "metadata_found",
+    "title": "Overview of CAIL2018: Legal Judgment Prediction Competition",
+    "date": "",
+    "venue": "",
+    "source_sha256": "3df01e447a207dbba93ad893a84e19adeeb3439d2a51e28c21bcd6d4411e72f0"
+  },
+  {
+    "source_id": "swb_7e7b7a0c39916ca1",
+    "url": "https://aclanthology.org/2022.acl-long.297",
+    "status": "metadata_found",
+    "title": "LexGLUE: A Benchmark Dataset for Legal Language Understanding in English",
+    "date": "",
+    "venue": "",
+    "source_sha256": "1b6e7b5d0bb99d4e95a490f2c6486ae4dbdd906a730e67a10be360eda377ff3f"
+  },
+  {
+    "source_id": "swb_5b7ccb242d590dce",
+    "url": "https://arxiv.org/abs/1805.01217",
+    "status": "metadata_found",
+    "title": "CLAUDETTE: an Automated Detector of Potentially Unfair Clauses in Online Terms of Service",
+    "date": "",
+    "venue": "",
+    "source_sha256": "4fb9904d21e708c28ae82a62b6ac95838ae66276244da5fd647f8c56bd7981ec"
+  },
+  {
+    "source_id": "swb_69e94bb974d31775",
+    "url": "https://doi.org/10.1007/s10506-021-09288-2",
+    "status": "metadata_found",
+    "title": "Detecting and explaining unfairness in consumer contracts through memory networks",
+    "date": "2022/03",
+    "venue": "Artificial Intelligence and Law",
+    "source_sha256": "7554bcb1a3a8a6e544d06cfb14acd9a4d6566ffde74e3d3a49889e97a2641335"
+  },
+  {
+    "source_id": "swb_424aa6e41cf69cd2",
+    "url": "https://doi.org/10.1186/1758-2946-7-S1-S2",
+    "status": "metadata_found",
+    "title": "The CHEMDNER corpus of chemicals and drugs and its annotation principles",
+    "date": "2015/12",
+    "venue": "Journal of Cheminformatics",
+    "source_sha256": "d69176e69b929a1ec59f134428ea6467cfa08074019aa0b0d7fe7df97aa0a21f"
+  },
+  {
+    "source_id": "swb_1309d8848b583154",
+    "url": "https://doi.org/10.1186/1471-2105-13-161",
+    "status": "metadata_found",
+    "title": "Concept annotation in the CRAFT corpus",
+    "date": "2012/12",
+    "venue": "BMC Bioinformatics",
+    "source_sha256": "b52cdfe75f9d4dff3e4e6eed883741b8f20d0463000ab1af71b515ca433a3755"
+  },
+  {
+    "source_id": "swb_7ad02a7082a23a7b",
+    "url": "https://aclanthology.org/2020.fnp-1.36",
+    "status": "metadata_found",
+    "title": "Extracting Fine-Grained Economic Events from Business News",
+    "date": "",
+    "venue": "",
+    "source_sha256": "90667e99260713d18a6e3c12a1646078e2a773740f78fc6456ee8aaa9ea0efbf"
+  },
+  {
+    "source_id": "swb_502371d81d01baa4",
+    "url": "https://usableprivacy.org/static/files/swilson_acl_2016.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_5dbdf1553c881f43",
+    "url": "https://www.nature.com/articles/s41597-021-00875-1",
+    "status": "metadata_found",
+    "title": "NLM-Chem, a new resource for chemical entity recognition in PubMed full text literature",
+    "date": "2021-03-25",
+    "venue": "Scientific Data",
+    "source_sha256": "282b069e6366dc5d608ad2c8bf72d397b3dd2bd24d97413fa3b19a4d7822a29d"
+  },
+  {
+    "source_id": "swb_84eff4e7a337b2ae",
+    "url": "https://aclanthology.org/2020.emnlp-main.129",
+    "status": "metadata_found",
+    "title": "MAVEN: A Massive General Domain Event Detection Dataset",
+    "date": "",
+    "venue": "",
+    "source_sha256": "a64612ecf92e09d06d00245d17c8a6e3b0db574952454d6ce68737cbcb71a361"
+  },
+  {
+    "source_id": "swb_80c610592c1704c1",
+    "url": "https://arxiv.org/abs/2211.07342",
+    "status": "metadata_found",
+    "title": "MAVEN-ERE: A Unified Large-scale Dataset for Event Coreference, Temporal, Causal, and Subevent Relation Extraction",
+    "date": "",
+    "venue": "",
+    "source_sha256": "0d71eaa66c61315dbf0ce109c669b411e47ca6e35489ef5928bb4d055378ea11"
+  },
+  {
+    "source_id": "swb_5671808a4988ad6b",
+    "url": "https://arxiv.org/abs/2311.09105",
+    "status": "metadata_found",
+    "title": "MAVEN-Arg: Completing the Puzzle of All-in-One Event Understanding Dataset with Event Argument Annotation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b89161e806fef48eb9e0189b066ccabe3971707b7499ffd9d3efe1936842fccb"
+  },
+  {
+    "source_id": "swb_5847fa0407ea8101",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/6401",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_0948f1e420ed5019",
+    "url": "https://ebiquity.umbc.edu/get/a/publication/1144.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_edf28529d9a981e9",
+    "url": "https://aclanthology.org/2023.argmining-1.8",
+    "status": "metadata_found",
+    "title": "Towards Fine-Grained Argumentation Strategy Analysis in Persuasive Essays",
+    "date": "",
+    "venue": "",
+    "source_sha256": "471e543495b168da299c0da241b776cbef670c03a11ba265ae6325a48ccda60a"
+  },
+  {
+    "source_id": "swb_c5b2d7ad0d069a81",
+    "url": "https://aclanthology.org/D15-1255",
+    "status": "metadata_found",
+    "title": "Exploiting Debate Portals for Semi-Supervised Argumentation Mining in User-Generated Web Discourse",
+    "date": "",
+    "venue": "",
+    "source_sha256": "51a1ee1a4dec01e91dd00c2af46a8021ef5eaebe411f7cfb72e3d42e95000259"
+  },
+  {
+    "source_id": "swb_34e95253a99eb5fc",
+    "url": "https://arxiv.org/abs/2510.19631",
+    "status": "metadata_found",
+    "title": "HSCodeComp: A Realistic and Expert-level Benchmark for Deep Search Agents in Hierarchical Rule Application",
+    "date": "",
+    "venue": "",
+    "source_sha256": "237d817ae1433f49fe5e80eb3036248fb50175669258abcc8d2c40a3047c3943"
+  },
+  {
+    "source_id": "swb_de48df5420114284",
+    "url": "https://aclanthology.org/2020.clicit-1.30",
+    "status": "metadata_found",
+    "title": "The E3C Project:Collection and Annotation of a Multilingual Corpus of Clinical Cases",
+    "date": "",
+    "venue": "",
+    "source_sha256": "ca3187f9284bdb38cffcf1230c7166f06db50ec46c81ac2497c29cadbc881989"
+  },
+  {
+    "source_id": "swb_efcb437ac47ee48a",
+    "url": "https://ceur-ws.org/Vol-2968/paper5.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_4135baf6b3ba7a19",
+    "url": "https://doi.org/10.1093/bioinformatics/bts407",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_1541a238149429a4",
+    "url": "https://www.nature.com/articles/s41598-023-32915-8",
+    "status": "metadata_found",
+    "title": "A novel corpus of molecular to higher-order events that facilitates the understanding of the pathogenic mechanisms of idiopathic pulmonary fibrosis",
+    "date": "2023-04-12",
+    "venue": "Scientific Reports",
+    "source_sha256": "29676d5ea759d86aa4aedfbf47df0b1ad2704097399b5dcbb036bdcea4664edb"
+  },
+  {
+    "source_id": "swb_d9206cff751803fc",
+    "url": "https://link.springer.com/article/10.1186/s13321-018-0290-y",
+    "status": "metadata_found",
+    "title": "Annotation and detection of drug effects in text for pharmacovigilance",
+    "date": "2018/12",
+    "venue": "Journal of Cheminformatics",
+    "source_sha256": "77db82cf0850e4150889a201351ebc30cdcea08f0d4a11a36f840a8cea5d16a5"
+  },
+  {
+    "source_id": "swb_af33f04d26bcf483",
+    "url": "https://arxiv.org/abs/2512.11374",
+    "status": "metadata_found",
+    "title": "Mining Legal Arguments to Study Judicial Formalism",
+    "date": "",
+    "venue": "",
+    "source_sha256": "dd1baa761c617472bf0e0d41b67a33b77a9c405a3ce09f36f74744f61db96f35"
+  },
+  {
+    "source_id": "swb_dad28ff447a91bac",
+    "url": "https://link.springer.com/article/10.1007/s10506-026-09524-7",
+    "status": "metadata_found",
+    "title": "Mining legal arguments to study judicial formalism",
+    "date": "2026-07-07",
+    "venue": "Artificial Intelligence and Law",
+    "source_sha256": "90dec0ec0c6246da2fc649d75e70905604e39345a1bbcdfb3046ce38c1d32ba9"
+  },
+  {
+    "source_id": "swb_d93bc8e0b8843785",
+    "url": "https://aclanthology.org/2022.coling-1.293",
+    "status": "metadata_found",
+    "title": "Curating a Large-Scale Motivational Interviewing Dataset Using Peer Support Forums",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5ec493a816b9214c61b84f7c877402b518f7a62072bb7ac5a7fc0d1d431988cb"
+  },
+  {
+    "source_id": "swb_63abf63fd6a4ba3b",
+    "url": "https://aclanthology.org/2021.tacl-1.87",
+    "status": "metadata_found",
+    "title": "Experts, Errors, and Context: A Large-Scale Study of Human Evaluation for Machine Translation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "7cc07033e37a875f24ac0dc5a983539aa44c3647c40ab976714c52efa1e846ac"
+  },
+  {
+    "source_id": "swb_2f43cf3ce591807b",
+    "url": "https://arxiv.org/abs/2204.04263",
+    "status": "metadata_found",
+    "title": "BioRED: A Rich Biomedical Relation Extraction Dataset",
+    "date": "",
+    "venue": "",
+    "source_sha256": "985feca536162b9162b61ec9dd01e79915cb741b711201c50034245286820fcd"
+  },
+  {
+    "source_id": "swb_beab2970681c9cd7",
+    "url": "https://oro.open.ac.uk/102450/1/NeurIPS-2023-csmed-bridging-the-dataset-gap-in-automated-citation-screening-for-systematic-literature-reviews-Paper-Datasets_and_Benchmarks.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_e15d70343986c7ed",
+    "url": "https://aclanthology.org/2026.acl-long.1035",
+    "status": "metadata_found",
+    "title": "InsLogicBench: An Argumentation Logic Grounded Benchmark for Complex Insurance Claims Adjudication",
+    "date": "",
+    "venue": "",
+    "source_sha256": "2398f95c0343836538318316806f19613aeb7423094695d0986c463956b53730"
+  },
+  {
+    "source_id": "swb_600c071c0f881eb9",
+    "url": "https://www.cs.cmu.edu/~awb/papers/2019_Mayfield_CSCW.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_5d204e142d4766e7",
+    "url": "https://arxiv.org/abs/2510.01474",
+    "status": "metadata_found",
+    "title": "AIReg-Bench: Benchmarking Language Models That Assess AI Regulation Compliance",
+    "date": "",
+    "venue": "",
+    "source_sha256": "a4fd0747540199f66188e11f0cfacdbbbb52e3a35e9e09bd0959826fac54ba64"
+  },
+  {
+    "source_id": "swb_b35b43273f8d9633",
+    "url": "https://arxiv.org/abs/2301.05663",
+    "status": "metadata_found",
+    "title": "Natural Language Processing of Aviation Occurrence Reports for Safety Management",
+    "date": "",
+    "venue": "",
+    "source_sha256": "3a8d0c7c74b975264c9894b20c2152099080aab8bdd1691b05e7c5c09c32d25a"
+  },
+  {
+    "source_id": "swb_368e28bb28373f55",
+    "url": "https://doi.org/10.1016/j.dib.2024.111202",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_d8a7a2c815cad5bb",
+    "url": "https://arxiv.org/abs/1910.04906",
+    "status": "metadata_found",
+    "title": "Hindsight Analysis of the Chicago Food Inspection Forecasting Model",
+    "date": "",
+    "venue": "",
+    "source_sha256": "bc8249215a79da72f70a0570815e76b82a9826cc09f9b0ab2854ac1d32d70d94"
+  },
+  {
+    "source_id": "swb_f31b3a2d540db173",
+    "url": "https://arxiv.org/abs/2403.02231",
+    "status": "metadata_found",
+    "title": "CODE-ACCORD: A Corpus of building regulatory data for rule generation towards automatic compliance checking",
+    "date": "",
+    "venue": "",
+    "source_sha256": "dc2027867424598b7ee3afd3d6935938335287e447e772904bd6414e3a5111bb"
+  },
+  {
+    "source_id": "swb_2b0983a2b2168159",
+    "url": "https://arxiv.org/abs/2604.17153",
+    "status": "metadata_found",
+    "title": "From Legal Text to Executable Decision Models: Evaluating Structured Representations for Legal Decision Model Generation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "cfb0bb9bcfda3d47ee193ed5d67eb5d4956b855804989f33d4dabd1913bad7cf"
+  },
+  {
+    "source_id": "swb_38bf3a400cfb29c7",
+    "url": "https://arxiv.org/abs/2605.29427",
+    "status": "metadata_found",
+    "title": "FinGuard: Detecting Financial Regulatory Non-Compliance in LLM Interactions",
+    "date": "",
+    "venue": "",
+    "source_sha256": "33f39bd4c748f5e5c6e457fd7a106f72e18e078c079eb1edacc6d9ed2c391cb9"
+  },
+  {
+    "source_id": "swb_53ca521ed4554ba7",
+    "url": "https://lawfulcomputing.org/papers/pets2023.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_ee6a479460e56203",
+    "url": "https://arxiv.org/abs/2407.09017",
+    "status": "metadata_found",
+    "title": "AI-Driven Guided Response for Security Operation Centers with Microsoft Copilot for Security",
+    "date": "",
+    "venue": "",
+    "source_sha256": "50d89a3d91dd01a7fa15b0b12c575b73d1413b7aa1ff8b8825d0c9eed1cbe31b"
+  },
+  {
+    "source_id": "swb_44bb85d2bfc523ae",
+    "url": "https://www.nature.com/articles/s43856-025-01256-0",
+    "status": "metadata_found",
+    "title": "Real-world validation of a multimodal LLM-powered pipeline for high-accuracy clinical trial patient matching",
+    "date": "2025-11-22",
+    "venue": "Communications Medicine",
+    "source_sha256": "95d839f8b5fda6c59e17d69f8561d868657299652b51548d0ec01f45969fbc86"
+  },
+  {
+    "source_id": "swb_121af327241de97b",
+    "url": "https://arxiv.org/abs/2412.17228",
+    "status": "metadata_found",
+    "title": "MatchMiner-AI: Open-source, Privacy-preserving Cancer Clinical Trial Matching using Artificial Intelligence",
+    "date": "",
+    "venue": "",
+    "source_sha256": "16e24c13bcb03c34290f363b0b43c193f82427544e4e0e638f21ff69c8e12f7f"
+  },
+  {
+    "source_id": "swb_3c1147625f2901d3",
+    "url": "https://aclanthology.org/2026.findings-acl.115",
+    "status": "metadata_found",
+    "title": "OmniCompliance-100K: A Multi-Domain, Rule-Grounded, Real-World Safety Compliance Dataset",
+    "date": "",
+    "venue": "",
+    "source_sha256": "fb266ee41a607419eabcb86d9861e0f3800ab4d14240621f0d3916e23d8a8edc"
+  },
+  {
+    "source_id": "swb_1bf94aedd5b19570",
+    "url": "https://api.repository.cam.ac.uk/server/api/core/bitstreams/9220033b-23bb-4ea1-9d0e-6f5847ddd93f/content",
+    "status": "metadata_unavailable"
+  },
+  {
+    "source_id": "swb_1cf51e3ac7d10088",
+    "url": "https://www.procurementintegrity.org/assets/about/ProACT_Market_structure_and_efficiency_20210630.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_50bbbdf5f266fd47",
+    "url": "https://arxiv.org/abs/2509.23291",
+    "status": "metadata_found",
+    "title": "Scaling Policy Compliance Assessment in Language Models with Policy Reasoning Traces",
+    "date": "",
+    "venue": "",
+    "source_sha256": "c2233c702a1a752e8da5352f240e94bd91e14944b8d37daa27c16b722fb3e62c"
+  },
+  {
+    "source_id": "swb_b86c94b4f954c37c",
+    "url": "https://arxiv.org/abs/2605.29742",
+    "status": "metadata_found",
+    "title": "Citation-Closure Retrieval and Per-Rule Attribution for Real-World Regulatory Compliance Question Answering",
+    "date": "",
+    "venue": "",
+    "source_sha256": "66bbdb4fe08362ed2261a7bf54cd7644d15e6e6ed7841f6bb66d2446a89c1e59"
+  },
+  {
+    "source_id": "swb_23422ddeb78a2f5c",
+    "url": "https://ceur-ws.org/Vol-2645/paper5.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_4832f78592aff59a",
+    "url": "https://arxiv.org/abs/2507.14201",
+    "status": "metadata_found",
+    "title": "ExCyTIn-Bench: Evaluating LLM agents on Cyber Threat Investigation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "377ac0666d3ecf5db0fe01a431933f1f369185f03514081953c86977f19faba9"
+  },
+  {
+    "source_id": "swb_8566ef0045fcf87c",
+    "url": "https://arxiv.org/abs/2604.12040",
+    "status": "metadata_found",
+    "title": "SIR-Bench: Evaluating Investigation Depth in Security Incident Response Agents",
+    "date": "",
+    "venue": "",
+    "source_sha256": "468b4db5e44713e94041d38a33a24421b15b8b026935a52c560c5b09519a8639"
+  },
+  {
+    "source_id": "swb_8ee1c19c89bafd70",
+    "url": "https://aclanthology.org/2024.findings-emnlp.625",
+    "status": "metadata_found",
+    "title": "STARD: A Chinese Statute Retrieval Dataset Derived from Real-life Queries by Non-professionals",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f6eab4eb9e42b18ddc1a6d31b514ef74be4f3c8e6f72a288489db6130d98ddd4"
+  },
+  {
+    "source_id": "swb_ac3a36eb2b2cb80d",
+    "url": "https://arxiv.org/abs/2609.01202",
+    "status": "metadata_found",
+    "title": "Towards AI-Assisted Clinical Trial Matching: Practical Considerations, Multicenter Evaluation, and Real-World Deployment",
+    "date": "",
+    "venue": "",
+    "source_sha256": "0f77334794bc569996ca3c7de84d17cc8c5b73037fa47bcb1d273c978ffa5d74"
+  },
+  {
+    "source_id": "swb_7a97369bbf3dea1f",
+    "url": "https://www.vldb.org/pvldb/vol19/p4738-cong.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_ac04e5b30d6e3431",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bbdd9525c5ecd3a03fee43d8fd64bd83-Abstract-Conference.html",
+    "status": "metadata_found",
+    "title": "Tool-Augmented Spatiotemporal Reasoning for Streamlining Video Question Answering Task",
+    "date": "2026-04-23",
+    "venue": "Advances in Neural Information Processing Systems",
+    "source_sha256": "15ca152cadc0c776c89ae3d0de28404a2197446767509dc0e91a4f2ffbf29fc7"
+  },
+  {
+    "source_id": "swb_8f6f9adf24baf3f7",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/bbdd9525c5ecd3a03fee43d8fd64bd83-Paper-Conference.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_d31b97e3fe52ae26",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/2b76873e897f3de3069b2f360c65e0c2-Abstract-Datasets_and_Benchmarks_Track.html",
+    "status": "metadata_found",
+    "title": "BLINK-Twice: You see, but do you observe?  A Reasoning Benchmark on Visual Perception",
+    "date": "2026-04-23",
+    "venue": "Advances in Neural Information Processing Systems",
+    "source_sha256": "25d0c55f96f016ebc8e76fba27c31d66918f6f2f3abb39571a4af37d9da5c6f0"
+  },
+  {
+    "source_id": "swb_afc8abaedb79a59a",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/1fdee6bdc130776e489719d25d422073-Abstract-Datasets_and_Benchmarks_Track.html",
+    "status": "metadata_found",
+    "title": "MIRAGE: A Benchmark for Multimodal Information-Seeking and Reasoning in Agricultural Expert-Guided Conversations",
+    "date": "2026-04-23",
+    "venue": "Advances in Neural Information Processing Systems",
+    "source_sha256": "b990f97297fe50d0cc71acd3b3122afef214b3ee66b64b1541a6ae7faa052979"
+  },
+  {
+    "source_id": "swb_d51a694744819cc6",
+    "url": "https://aclanthology.org/2025.acl-long.27",
+    "status": "metadata_found",
+    "title": "RuleArena: A Benchmark for Rule-Guided Reasoning with LLMs in Real-World Scenarios",
+    "date": "",
+    "venue": "",
+    "source_sha256": "05d8ea4d6495b71c0eb874a669f92953b9bc5ddfee8704af82e88bca7a951518"
+  },
+  {
+    "source_id": "swb_2579c72e98cf1af3",
+    "url": "https://www.vldb.org/pvldb/vol18/p2681-freire.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_e870fb5b0473fb2c",
+    "url": "https://www.vldb.org/pvldb/vol19/p196-bodensohn.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_b28d778e560a376d",
+    "url": "https://www.vldb.org/pvldb/vol19/p1754-trummer.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_ca45da11093fd209",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/89e44582fd28ddfea1ea4dcb0ebbf4b0-Abstract-Datasets_and_Benchmarks.html",
+    "status": "metadata_found",
+    "title": "LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models",
+    "date": "2023-12-15",
+    "venue": "Advances in Neural Information Processing Systems",
+    "source_sha256": "d7be8470c04d605750b93962a8335672d455470037a878e20929bb2667e7dcdf"
+  },
+  {
+    "source_id": "swb_c45984a1b32dd527",
+    "url": "https://arxiv.org/abs/2606.02994",
+    "status": "metadata_found",
+    "title": "Inducing Reasoning Primitives from Agent Traces",
+    "date": "",
+    "venue": "",
+    "source_sha256": "2f004254f72973c33c6c9335e19b05b5d9cab33f9f611a8ec2579bc95323660f"
+  },
+  {
+    "source_id": "swb_ac11f9d76ed1b073",
+    "url": "https://aclanthology.org/2025.coling-main.8",
+    "status": "metadata_found",
+    "title": "Match, Compare, or Select? An Investigation of Large Language Models for Entity Matching",
+    "date": "",
+    "venue": "",
+    "source_sha256": "e36a0bcb83fe368904b3b7cd4fa28b7f3b9ebbbaffceb5ea0f79ec33b823c2ee"
+  },
+  {
+    "source_id": "swb_163d8598115e26c7",
+    "url": "https://aclanthology.org/2026.acl-long.1258",
+    "status": "metadata_found",
+    "title": "CaRL-EM: Cost-Aware Reinforcement Learning for Entity Matching with LLMs",
+    "date": "",
+    "venue": "",
+    "source_sha256": "d1d7d0ef33efa9262e02ae382b22ca6146c98ed6fd5d47dec8bb4fac3088306c"
+  },
+  {
+    "source_id": "swb_7c63c7bd39a3938e",
+    "url": "https://aclanthology.org/2024.emnlp-main.352",
+    "status": "metadata_found",
+    "title": "Learning from Natural Language Explanations for Generalizable Entity Matching",
+    "date": "",
+    "venue": "",
+    "source_sha256": "f30cd73dcdb61657bbc5585d84653d361fac516d97681885d6b290bf81280373"
+  },
+  {
+    "source_id": "swb_302fffb141cd9c0d",
+    "url": "https://openreview.net/pdf?id=rkeJRhNYDH",
+    "status": "fetch_failed",
+    "error": "HTTPError"
+  },
+  {
+    "source_id": "swb_ed70b4ebfee785e8",
+    "url": "https://aclanthology.org/2024.tacl-1.89",
+    "status": "metadata_found",
+    "title": "TabVer: Tabular Fact Verification with Natural Logic",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5af88ef316980a8452151d63de85a0383186032ec4d3e0025e8418c2a832b60a"
+  },
+  {
+    "source_id": "swb_7d74ee97e00524d1",
+    "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Fucka_SALAD_--_Semantics-Aware_Logical_Anomaly_Detection_ICCV_2025_paper.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_ba03b1ffa18dff6d",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f53fd88a4340063ecd258c0ae9948b40-Abstract-Conference.html",
+    "status": "metadata_found",
+    "title": "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding",
+    "date": "2024-05-31",
+    "venue": "International Conference on Learning Representations",
+    "source_sha256": "03f750ad528f219e342ffe0043bf6f2fa4fc0757063c249ae7e85b2d3a5b306f"
+  },
+  {
+    "source_id": "swb_c70d6ad6e6d3ee63",
+    "url": "https://arxiv.org/abs/2406.13352",
+    "status": "metadata_found",
+    "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+    "date": "",
+    "venue": "",
+    "source_sha256": "142602756ade99b34922167e3be4c95eeaeea5252bd7b24a41776edcd70ec58c"
+  },
+  {
+    "source_id": "swb_08a59033f25f86e1",
+    "url": "https://arxiv.org/abs/2506.01055",
+    "status": "metadata_found",
+    "title": "Simple Prompt Injection Attacks Can Leak Personal Data Observed by LLM Agents During Task Execution",
+    "date": "",
+    "venue": "",
+    "source_sha256": "34f5ac416f56d424ed8fdd05297fc102dc63d48a00b0716ef285127ea114c528"
+  },
+  {
+    "source_id": "swb_e8d5ef645048f145",
+    "url": "https://arxiv.org/abs/2604.21308",
+    "status": "metadata_found",
+    "title": "CI-Work: Benchmarking Contextual Integrity in Enterprise LLM Agents",
+    "date": "",
+    "venue": "",
+    "source_sha256": "1b2c81ed1526938c49f28873c75e2e4b580b9bc2965f2ebb139164d5bb508785"
+  },
+  {
+    "source_id": "swb_7cbe658a758b8cab",
+    "url": "https://www.nature.com/articles/s41597-022-01721-8",
+    "status": "metadata_found",
+    "title": "MedMNIST v2 - A large-scale lightweight benchmark for 2D and 3D biomedical image classification",
+    "date": "2023-01-19",
+    "venue": "Scientific Data",
+    "source_sha256": "e40feed12d103613a343410498a61700e2028a468fbcef1254298bb889d0669c"
+  },
+  {
+    "source_id": "swb_4db68a774a2144f2",
+    "url": "https://arxiv.org/abs/2608.02680",
+    "status": "metadata_found",
+    "title": "TraceCompiler: Skill-Guided Mining and Compilation of LLM Agent Traces into Mostly Deterministic Workflows",
+    "date": "",
+    "venue": "",
+    "source_sha256": "5d3ceb0c52145e08acfe5f114600ef726f4861b36a52865d1652ca91b8c02894"
+  },
+  {
+    "source_id": "swb_b1202c532256e177",
+    "url": "https://arxiv.org/abs/2603.25158",
+    "status": "metadata_found",
+    "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills",
+    "date": "",
+    "venue": "",
+    "source_sha256": "96b05e051a44e8d7f6d8935f3520efea1f385ec9e1ae67d98aeda5d1d8aa4583"
+  },
+  {
+    "source_id": "swb_bf0b34f8ced5d15e",
+    "url": "https://arxiv.org/abs/2408.08435",
+    "status": "metadata_found",
+    "title": "Automated Design of Agentic Systems",
+    "date": "",
+    "venue": "",
+    "source_sha256": "e4d12a91c518da9194636426a5884a3e7fd815ac09cb7317af3459981acf7a79"
+  },
+  {
+    "source_id": "swb_f1688da02e2baf51",
+    "url": "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf",
+    "status": "pdf_source"
+  },
+  {
+    "source_id": "swb_e9bdafce4f8d9bd3",
+    "url": "https://arxiv.org/abs/2606.04455",
+    "status": "metadata_found",
+    "title": "The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?",
+    "date": "",
+    "venue": "",
+    "source_sha256": "a851e3133457f2021c0ec207657b7e86bdb7779058c2d07d757e0831972a8132"
+  },
+  {
+    "source_id": "swb_4addcadecf805619",
+    "url": "https://arxiv.org/abs/2406.14991",
+    "status": "metadata_found",
+    "title": "SpreadsheetBench: Towards Challenging Real World Spreadsheet Manipulation",
+    "date": "",
+    "venue": "",
+    "source_sha256": "35919783f3ba830d2690e4cb7fd2eafc89bf852aae4d61f48257de4a0f1474c5"
+  },
+  {
+    "source_id": "swb_1ad1457f02ffac91",
+    "url": "https://arxiv.org/abs/2305.13395",
+    "status": "metadata_found",
+    "title": "BioDEX: Large-Scale Biomedical Adverse Drug Event Extraction for Real-World Pharmacovigilance",
+    "date": "",
+    "venue": "",
+    "source_sha256": "b17aa28a1ac0c6d93a940d5a68ff67a12e69633a4a0f61e91409ef33451a5776"
+  },
+  {
+    "source_id": "swb_8136d37a5eaa2d2f",
+    "url": "https://arxiv.org/abs/2305.16291",
+    "status": "metadata_found",
+    "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "date": "",
+    "venue": "",
+    "source_sha256": "623da6dcf7bdc4c5fd8ec06df5fb3222e93df8529e058d8f44d3188253e961f6"
+  },
+  {
+    "source_id": "swb_5840f364e6feb416",
+    "url": "https://arxiv.org/abs/2103.06268",
+    "status": "metadata_found",
+    "title": "CUAD: An Expert-Annotated NLP Dataset for Legal Contract Review",
+    "date": "",
+    "venue": "",
+    "source_sha256": "396b627e045afa9a2bea12d19a20ac143507ed5fdf8f4fa2d3c5b45ee85223f1"
+  },
+  {
+    "source_id": "swb_832be41dbccd4361",
+    "url": "https://arxiv.org/abs/2608.03451",
+    "status": "metadata_found",
+    "title": "DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces",
+    "date": "",
+    "venue": "",
+    "source_sha256": "cebdc7eb7b7d36f10d98b1d187c1479bd45062e0f10700c6c3201184b2184167"
+  },
+  {
+    "source_id": "swb_27cb7bda5b7a86a8",
+    "url": "https://doi.org/10.1038/s41597-022-01721-8",
+    "status": "metadata_found",
+    "title": "MedMNIST v2 - A large-scale lightweight benchmark for 2D and 3D biomedical image classification",
+    "date": "2023-01-19",
+    "venue": "Scientific Data",
+    "source_sha256": "fc94baafdb2a5058ec09bfd86f7184b8ecda6fc2a35e9e6dc35d616026fb279b"
+  }
+]

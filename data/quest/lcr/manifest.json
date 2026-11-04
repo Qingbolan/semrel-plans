@@ -1,0 +1,15 @@
+{
+  "dataset_id": "quest/lcr",
+  "source_ids": [
+    "swb_e73040bfa395838c"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

@@ -1,0 +1,15 @@
+{
+  "dataset_id": "udrp-derived/shared-environment-audit-20260908-v26-public",
+  "source_ids": [
+    "swb_2f0eb10f4a961b2a"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

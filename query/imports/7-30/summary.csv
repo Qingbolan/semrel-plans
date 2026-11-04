@@ -1,0 +1,6 @@
+benchmark,tasks,sem_extract,sem_filter,sem_join,sem_group_by,sem_aggregate,total_semops,avg_semops,tasks_with_semops,high_confidence,medium_confidence
+FDABench,2007,20,0,0,0,668,688,0.342800,688,1831,176
+DAB,54,2,4,7,3,0,16,0.296296,16,54,0
+LongDA,505,505,0,0,0,0,505,1.000000,505,505,0
+DABstep,450,368,0,0,0,0,368,0.817778,368,450,0
+KramaBench,104,0,0,0,0,0,0,0.000000,0,95,9

@@ -1,0 +1,15 @@
+{
+  "dataset_id": "maven-ere-derived/shared-environment-audit-20260908-v67-inspection-v1-public",
+  "source_ids": [
+    "swb_3ee86806a3e7c7bf"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

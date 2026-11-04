@@ -1,0 +1,12 @@
+{
+  "dataset_id": "uda-bench/Legal",
+  "source_ids": [
+    "src_78d6a8a726414e68"
+  ],
+  "availability": "not_bound",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "source_reference_only"
+}

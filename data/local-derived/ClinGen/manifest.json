@@ -1,0 +1,10 @@
+{
+  "dataset_id": "local-derived/ClinGen",
+  "source_ids": [],
+  "availability": "not_bound",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "source_reference_only"
+}

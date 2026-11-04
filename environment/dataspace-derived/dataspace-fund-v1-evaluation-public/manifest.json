@@ -1,0 +1,13 @@
+{
+  "environment_id": "dataspace-derived/dataspace-fund-v1-evaluation-public",
+  "dataset_id": "dataspace-derived/dataspace-fund-v1-evaluation-public",
+  "runtime_status": "unconfigured",
+  "engine": null,
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null
+}

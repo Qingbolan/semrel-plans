@@ -1,0 +1,15 @@
+{
+  "dataset_id": "parseme-1-2-derived/shared-environment-audit-20260908-v208-view-public",
+  "source_ids": [
+    "swb_d68bdde7a10aed30"
+  ],
+  "availability": "source_definition",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": "Imported project snapshot",
+  "file_count": null,
+  "total_bytes": null,
+  "inventory_path": null,
+  "verification": "Source definitions retained"
+}

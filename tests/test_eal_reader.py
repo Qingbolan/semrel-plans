@@ -38,6 +38,12 @@ class ReaderTest(unittest.TestCase):
         with self.assertRaisesRegex(CompileError, '无法启动'):
             EalCompiler('/nonexistent/semrel-test-easynet').compile('mission "x" {}')
 
+    def test_invalid_declared_encoding_is_compile_error(self):
+        with self.assertRaisesRegex(CompileError, '字符串编码无效'):
+            EalCompiler().compile(r'''mission "bad" {
+                let a = call "scan" on "worker" with {string_encoding = "json-string-content-v1", label = "\q"}
+            }''')
+
     def test_live_reload_import_and_error_recovery(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -66,6 +72,26 @@ class ReaderTest(unittest.TestCase):
                 error.exception.close()
                 path.write_text(source)
                 self.assertEqual(get()['graph']['name'], 'first')
+                # A running server must observe additions, removals and repaired manifests.
+                manifest_path = root / 'exports/eal/manifest.json'
+                manifest_path.write_text('[]')
+                with self.assertRaises(HTTPError) as error:
+                    get()
+                self.assertEqual(error.exception.code, 404)
+                self.assertEqual(json.load(error.exception)['error_kind'], 'catalog')
+                error.exception.close()
+                manifest_path.write_text('{broken')
+                with self.assertRaises(HTTPError) as error:
+                    get()
+                self.assertEqual(error.exception.code, 503)
+                error.exception.close()
+                manifest_path.write_text(json.dumps(manifest))
+                self.assertEqual(get()['graph']['name'], 'first')
+                (root / 'exports/eal/new.eal').write_text(source)
+                manifest_path.write_text(json.dumps(manifest + [{'query_id':'new', 'path':'exports/eal/new.eal'}]))
+                with urlopen(base + '/api/plan?query_id=new') as response:
+                    self.assertEqual(json.load(response)['graph']['name'], 'first')
+
                 request = Request(base + '/api/compile', data=json.dumps({'source': source}).encode(), headers={'Content-Type': 'application/json'})
                 with urlopen(request) as response:
                     self.assertEqual(json.load(response)['graph']['name'], 'first')

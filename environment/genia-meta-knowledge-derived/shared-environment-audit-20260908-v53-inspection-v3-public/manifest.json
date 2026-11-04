@@ -1,0 +1,13 @@
+{
+  "environment_id": "genia-meta-knowledge-derived/shared-environment-audit-20260908-v53-inspection-v3-public",
+  "dataset_id": "genia-meta-knowledge-derived/shared-environment-audit-20260908-v53-inspection-v3-public",
+  "runtime_status": "unconfigured",
+  "engine": null,
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null
+}

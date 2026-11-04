@@ -4,7 +4,7 @@ const entries = {
   JOIN:['⋈','join'], LEFT_JOIN:['⟕','join'], SEMI_JOIN:['⋉','join'], ANTI_JOIN:['▷','join'], CROSS_JOIN:['×','cross'],
   AGGREGATE:['γ','aggregate'], DISTINCT:['δ','distinct'], SORT:['τ','sort'],
   UNION_ALL:['⊎','union'], UNION_DISTINCT:['∪','union'], INTERSECT:['∩','intersect'],
-  SEM_FILTER:['σ','filter'], SEM_JOIN:['⋈','join'], SEM_LEFT_JOIN:['⟕','join'], SEM_AGG:['γ','aggregate'],
+  SEM_FILTER:['σ','filter'], SEM_JOIN:['⋈','join'], SEM_LEFT_JOIN:['⟕','join'], SEM_AGG:['γ','aggregate'], SEM_GROUP_BY:['γ','aggregate'],
   SCAN:['','scan'], LIMIT:['','limit'], TAKE_FIRST:['','limit'], ARGMIN:['','sort'],
   COMPUTE:['','compute'], CTE:['','reference'], CTE_REF:['','reference'], UNNEST:['','unnest'],
   SEM_MAP:['','compute'], SEM_CLASSIFY:['','classify'], SEM_TOPK:['','sort']

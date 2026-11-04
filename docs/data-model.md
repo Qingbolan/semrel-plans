@@ -1,6 +1,6 @@
 # 统一数据模型 v1
 
-`data/*.jsonl` 是唯一事实来源；一行一条记录，UTF-8。场景索引、CSV、SQLite、图册均引用或派生自这些表。查询 ID 不依赖展示顺序，节点 ID 在查询内唯一。当前所有树按原图逐节点迁移，没有根据相同标签擅自合并节点。
+`query/*.jsonl` 是唯一事实来源；一行一条记录，UTF-8。场景索引、CSV、SQLite、图册均引用或派生自这些表。查询 ID 不依赖展示顺序，节点 ID 在查询内唯一。当前所有树按原图逐节点迁移，没有根据相同标签擅自合并节点。
 
 | 表 | 粒度与主键 | 关键字段 |
 |---|---|---|
@@ -68,3 +68,46 @@ GROUP BY q.benchmark_id,n.operator_type;
 `sources` 统一保存 title、version、verification、checked_on。外部数据链接可能仅由论文参考文献确认，此状态明确保留，不等同原始数据下载验证。元数据与关系一起导出 CSV/SQLite，查看器和文字计划从同一关系表生成。
 
 论文来源的 `publication_label` 保存会议/论坛简称与年份（如 `VLDB2026`），`publication_url` 指向发表信息依据；二者与被引用的 `version` 独立，会议年份不替换 arXiv 版本年份。Findings 单独注明。非论文来源为空。
+
+## 环境与数据契约
+
+规范化查询表已迁移到 `query/`，不保留旧路径副本。`queries.environment_id` 必须引用 `environment/` 中存在的 manifest；环境的 `dataset_id` 必须引用 `data/` 中存在的 manifest。manifest ID 必须与所在相对目录一致。数据来源 ID 必须存在于 sources 表。
+
+数据 schema、版本、记录数与文件路径尚未核验时为 null；环境 engine、model、hardware 尚未配置时为 null。导出同时包含 environments 与 datasets 表，集合字段在 SQLite / CSV 中编码为 JSON。浏览器 inputs 是输入节点的逻辑投影，不冒充物理绑定。
+
+## 参考任务与逻辑 DAG
+
+`queries.plan_format` 为 logical_dag 或 reference_program。前者要求完整根节点和无环依赖；后者要求 root_node_id=null、无 nodes/edges，且具有 task_details 记录。`plan_origin` 新增 supplied_reference / supplied_analysis，分别表示提供的参考程序和最小计划分析，不表示论文原始 DAG。
+
+`task_details` 保存 inputs、reference_programs、output、evaluation、gold、annotation、original_record；original_record 原样保留。参考答案是提供文件中的答案，不是本项目运行结果。sources 中的副本与 SHA256 支持逐条追溯；7-30 的 source_file 与 source_locator 只作为原始分析内容保留。
+
+environment 与 data 仍按集合／领域共享。8-17 的 availability=local_external，local_path 指向给定语料；inventory.json 列出文件相对路径和字节数。7-30 的 availability=not_provided。记录数、batch size 和并发度没有证据则保留 null。query_statistics 覆盖全部任务，但未规范化为 DAG 的节点统计为 NULL，而非零。
+
+提供的 JSON 任务使用来源角色 task_definition，CSV 查询分析使用 analysis；它们是本地证据角色，不冒充论文或规则协议。
+
+查询页的“数据环境”指查询所需的辅助资料，不是运行机器、模型或引擎配置。
+`query/input_contracts.jsonl` 保存经来源核对的逐查询输入契约：`environment.requirement`
+取 `none`（无）、`required`（需要）或 `unspecified`（未说明）；`tables` 描述输入关系、
+列类型以及传入语义算子的 `passed_columns`。列定义不代表已经绑定实际数据行。
+每条查询均有独立契约与来源定位，构建时要求覆盖全部 query ID。详见 [逐查询核对说明](input-audit.md)。
+运行配置 manifest 仍供原始记录和导出使用，不再作为查询的辅助环境资料显示。
+
+8-17 与 7-30 现均已由 `src/reference_plans.py` 将参考描述转换为 logical_dag，保留 supplied_reference / supplied_analysis 来源类型。可通过 `scripts/lower_reference_plans.py` 重建；task_details 与 imports 中的原始参考描述不改写。粗粒度 COMPUTE 节点不声称包含已经推导出的执行步骤。
+
+## 统一任务 JSON（8-17 格式）
+
+查询页的“原始 JSON”展示按 8-17 任务结构整理的记录。统一字段为：
+`task_id`、`datasets`、`query`、`tags`、`inputs`、`reference_semantic_plan`、`gold`、`evaluation`。
+8-17 原记录完整保留；其他集合由 TaskRecords 根据逐查询输入契约、参考计划和来源记录生成。
+缺少 gold、评估指标或分析标签时使用 null，不生成参考答案。
+原始源文件仍保存在 query/imports 和 query/source-snapshots 中。
+
+输入延续 source_id/dataset/source_type/role，额外的 columns 和 semantic_columns 记录已核对的列定义；
+辅助环境资料作为 role=context 的输入登记。原有 8-17 输入不添加或改写字段。
+逐条下载文件位于 query/tasks/<问题集合>/<顺序编号>.json，全量文件为 exports/tasks.jsonl。
+
+### Query 原文与显示标题
+
+`query/original_queries.jsonl` 为每条查询保存原文、来源文件、字段选择器和 SHA-256。`query/queries.jsonl` 的 `title` 只作为显示标题；英文查询页面以及按 8-17 格式整理的 JSON `query` 均使用来源原文，不能由标题翻译生成。中文显示独立管理。
+
+SemBench 采用固定版本的 natural-language 文件，TAG 采用原始 pipeline 的 query 字符串；UDA 采用源 SQL。10 条本地定义保留本地 SQL 或原有标题，不声称来自论文的英文题目。8-17 和 7-30 保留用户提供文件中的 query 字段。7-30 另逐条比较上游快照；版本不同仍保留提供版本，差异记入 `upstream_comparison`。逐条审计表见 `exports/query_text_audit.csv`，可运行 `python3 scripts/audit/query_originals.py` 重新核验生成。

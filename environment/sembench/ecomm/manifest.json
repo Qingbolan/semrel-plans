@@ -1,0 +1,13 @@
+{
+  "environment_id": "sembench/ecomm",
+  "dataset_id": "sembench/ecomm",
+  "runtime_status": "unconfigured",
+  "engine": null,
+  "model": null,
+  "hardware": null,
+  "execution_status": "not_executed",
+  "record_batch_size": null,
+  "query_batch": null,
+  "model_batch_size": null,
+  "concurrency": null
+}

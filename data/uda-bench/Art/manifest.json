@@ -1,0 +1,12 @@
+{
+  "dataset_id": "uda-bench/Art",
+  "source_ids": [
+    "src_499b59b30adc7452"
+  ],
+  "availability": "not_bound",
+  "local_path": null,
+  "schema": null,
+  "record_count": null,
+  "version": null,
+  "verification": "source_reference_only"
+}
