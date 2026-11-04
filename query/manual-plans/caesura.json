@@ -1,0 +1,122 @@
+[
+ {
+  "query_id": "caesura/artwork/L115",
+  "plan": "SCAN(paintings_metadata) -> FILTER({religious_artwork}: genre/movement match, no filter for 'painting') -> SORT(inception {oldest}) -> LIMIT(1) -> PROJECT(title)",
+  "basis": "纯关系查询：paintings_metadata 上按 genre/movement 过滤 {religious_artwork}（如 genre='religious art'、movement='Renaissance'），按 inception 排序取第一，输出 title；无语义步骤。{religious_artwork} 到具体列的映射（genre 还是 movement）随取值不同，是模板歧义点。"
+ },
+ {
+  "query_id": "caesura/artwork/L116",
+  "plan": "SCAN(paintings_metadata) -> SORT(inception {oldest}) -> LIMIT(1) -> COMPUTE(derive {genre_slash_century}: century/year from inception, or use genre/movement column) -> PROJECT({genre_slash_century})",
+  "basis": "纯关系查询：按 inception 取最老/最新的画，genre/movement 直接取列，century/year 由 inception 计算（表中无 century/year 列）；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/artwork/L119",
+  "plan": "SCAN(paintings_metadata) -> AGGREGATE(group by {genre}; row with {oldest} inception) -> COMPUTE({century} of inception) -> PROJECT({genre}, {century})",
+  "basis": "纯关系查询：paintings_metadata 按 genre/movement 分组取 inception 最早/最晚的画，再由 inception 计算 century/year；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/artwork/L120",
+  "plan": "SCAN(paintings_metadata) -> FILTER({religious_artwork}: genre/movement match, no filter for 'painting') -> COMPUTE({century} of inception) -> AGGREGATE(group by {century}; count(*))",
+  "basis": "纯关系查询：按 genre/movement 过滤 {religious_artwork}，从 inception 推出 century/year 后分组计数；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/artwork/L123",
+  "plan": "SCAN(paintings_metadata) -> AGGREGATE(group by {genre}; row with {oldest} inception) -> COMPUTE({century} of inception) -> COMPUTE(plot {century} per {genre})",
+  "basis": "与 L119 相同的关系计划，最后接 COMPUTE(plot) 绘图；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/artwork/L124",
+  "plan": "SCAN(paintings_metadata) -> FILTER({religious_artwork}: genre/movement match, no filter for 'painting') -> COMPUTE({century} of inception) -> AGGREGATE(group by {century}; count(*)) -> COMPUTE(plot count per {century})",
+  "basis": "与 L120 相同的关系计划加 COMPUTE(plot)；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/artwork/L128",
+  "plan": "meta = SCAN(paintings_metadata) -> FILTER({religious_artwork}: genre/movement match, no filter for 'painting') -> SORT(inception {oldest}) -> LIMIT(1)\nimgs = SCAN(painting_images)\nJOIN(left=meta, right=imgs, on meta.img_path = imgs.img_path) -> SEM_MAP(painting_images: \"What is depicted on this painting?\") -> PROJECT(title, depiction)",
+  "basis": "先在 paintings_metadata 关系地选出最老的 {religious_artwork}，经 img_path 关联 painting_images，再用 Visual QA（SEM_MAP）描述画面内容；画面内容只存在于图像中，故需语义步骤。"
+ },
+ {
+  "query_id": "caesura/artwork/L129",
+  "plan": "meta = SCAN(paintings_metadata)\nimgs = SCAN(painting_images)\nJOIN(left=meta, right=imgs, on meta.img_path = imgs.img_path) -> SEM_MAP(painting_images: \"How many {animals} are depicted?\" -> num_{animals}) -> SORT(num_{animals} {highest}) -> LIMIT(1) -> COMPUTE(derive {genre_slash_century}: century/year from inception, or use genre/movement column) -> PROJECT({genre_slash_century})",
+  "basis": "关联 paintings_metadata 与 painting_images（img_path），用 Visual QA（SEM_MAP）对每幅图计数 {animals}，排序取最大/最小，再取 genre/movement 列或由 inception 算 century/year；计数只能从图像得到。"
+ },
+ {
+  "query_id": "caesura/artwork/L132",
+  "plan": "meta = SCAN(paintings_metadata)\nimgs = SCAN(painting_images)\nJOIN(left=meta, right=imgs, on meta.img_path = imgs.img_path) -> SEM_MAP(painting_images: \"How many {animals} are depicted?\" -> num_{animals}) -> COMPUTE(derive {genre_slash_century}: century/year from inception, or use genre/movement column) -> AGGREGATE(group by {genre_slash_century}; {highest}(num_{animals}))",
+  "basis": "Visual QA（SEM_MAP）在 painting_images 上逐图计数 {animals}，之后按 genre/movement 或由 inception 推出的 century/year 分组取 max/min；计数只能来自图像。"
+ },
+ {
+  "query_id": "caesura/artwork/L133",
+  "plan": "meta = SCAN(paintings_metadata)\nimgs = SCAN(painting_images)\nJOIN(left=meta, right=imgs, on meta.img_path = imgs.img_path) -> SEM_FILTER(painting_images: \"Does the painting depict {madonna_and_child}?\") -> COMPUTE(derive {genre_slash_century}: century/year from inception, or use genre/movement column) -> AGGREGATE(group by {genre_slash_century}; count(*))",
+  "basis": "Visual QA（SEM_FILTER）判断每幅图是否描绘 {madonna_and_child}，然后按 genre/movement 或 century/year（由 inception 计算）分组计数；判断只能来自图像。也可建模为 SEM_MAP 产出 yes/no 列再 FILTER，CAESURA 原系统即如此。"
+ },
+ {
+  "query_id": "caesura/artwork/L136",
+  "plan": "meta = SCAN(paintings_metadata)\nimgs = SCAN(painting_images)\nJOIN(left=meta, right=imgs, on meta.img_path = imgs.img_path) -> SEM_MAP(painting_images: \"How many {animals} are depicted?\" -> num_{animals}) -> COMPUTE(derive {genre_slash_century}: century/year from inception, or use genre/movement column) -> AGGREGATE(group by {genre_slash_century}; {highest}(num_{animals})) -> COMPUTE(plot {highest} num_{animals} per {genre_slash_century})",
+  "basis": "与 L132 相同（Visual QA 计数 + 分组取极值），末尾 COMPUTE(plot)；语义步骤为图像上的 SEM_MAP。"
+ },
+ {
+  "query_id": "caesura/artwork/L137",
+  "plan": "meta = SCAN(paintings_metadata)\nimgs = SCAN(painting_images)\nJOIN(left=meta, right=imgs, on meta.img_path = imgs.img_path) -> SEM_FILTER(painting_images: \"Does the painting depict {madonna_and_child}?\") -> COMPUTE(derive {genre_slash_century}: century/year from inception, or use genre/movement column) -> AGGREGATE(group by {genre_slash_century}; count(*)) -> COMPUTE(plot count per {genre_slash_century})",
+  "basis": "与 L133 相同（图像 SEM_FILTER + 分组计数），末尾 COMPUTE(plot)。"
+ },
+ {
+  "query_id": "caesura/rotowire/L162",
+  "plan": "SCAN(players) -> FILTER(position = {small_forward}) -> SORT({tallest}: height or birth_date) -> LIMIT(1) -> PROJECT(name)",
+  "basis": "纯关系查询：players 表按 position 过滤，{tallest} 映射到 height（tallest/smallest）或 birth_date（oldest/youngest）排序取第一，输出 name；无语义步骤。position 为多值字符串，实际可能需 LIKE 匹配。"
+ },
+ {
+  "query_id": "caesura/rotowire/L163",
+  "plan": "SCAN(teams) -> FILTER(conference/division = {eastern_conference}) -> SORT(founded {oldest}) -> LIMIT(1) -> PROJECT(name)",
+  "basis": "纯关系查询：teams 表按 conference 或 division 过滤（取决于取值是 conference 还是 Division），按 founded 排序取第一；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/rotowire/L165",
+  "plan": "SCAN(players) -> AGGREGATE(group by {position}; row with {tallest} height/birth_date) -> PROJECT({position}, name)",
+  "basis": "纯关系查询：players 按 position 或 nationality 分组，取 height 或 birth_date 极值的球员；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/rotowire/L166",
+  "plan": "SCAN(teams) -> AGGREGATE(group by {division}; row with {oldest} founded) -> PROJECT({division}, name)",
+  "basis": "纯关系查询：teams 按 division/conference 分组取 founded 最早/最晚的球队；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/rotowire/L169",
+  "plan": "SCAN(players) -> AGGREGATE(group by {position}; row with {oldest} birth_date) -> COMPUTE({age_player}: age from birth_date, or height) -> COMPUTE(plot {age_player} per {position})",
+  "basis": "纯关系查询：players 按 position/nationality 分组取 birth_date 极值的球员，age 由 birth_date 计算（height 直接取列），最后绘图；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/rotowire/L170",
+  "plan": "SCAN(teams) -> AGGREGATE(group by {division}; row with {oldest} founded) -> COMPUTE({age_team}: age from founded) -> COMPUTE(plot {age_team} per {division})",
+  "basis": "纯关系查询：teams 按 division/conference 分组取 founded 极值的球队，由 founded 计算 age 后绘图；无语义步骤。"
+ },
+ {
+  "query_id": "caesura/rotowire/L175",
+  "plan": "p2g = SCAN(players_to_games)\nreports = SCAN(game_reports)\nJOIN(left=p2g, right=reports, on p2g.game_id = reports.game_id) -> SEM_MAP(game_reports: \"How many {points} did <player name> make?\" -> num_{points}) -> SORT(num_{points} {highest}) -> LIMIT(1) -> PROJECT(name)",
+  "basis": "players_to_games 经 game_id 关联 game_reports，用 Text QA（SEM_MAP）从报道中抽取每个球员每场的 {points}，再排序取极值输出 name；统计数据只存在于文本中。"
+ },
+ {
+  "query_id": "caesura/rotowire/L176",
+  "plan": "t2g = SCAN(teams_to_games)\nreports = SCAN(game_reports)\nJOIN(left=t2g, right=reports, on t2g.game_id = reports.game_id) -> SEM_MAP(game_reports: \"What is the {number_of_total_points} of <team name>?\" -> value) -> SORT(value {highest}) -> LIMIT(1) -> PROJECT(name)",
+  "basis": "teams_to_games 关联 game_reports（game_id），Text QA（SEM_MAP）抽取每队每场的 {number_of_total_points}，排序取极值输出队名；数据只在文本中。"
+ },
+ {
+  "query_id": "caesura/rotowire/L179",
+  "plan": "p2g = SCAN(players_to_games)\nreports = SCAN(game_reports)\nJOIN(left=p2g, right=reports, on p2g.game_id = reports.game_id) -> SEM_MAP(game_reports: \"How many {points} did <player name> make?\" -> num_{points}) -> AGGREGATE(group by name; {highest}(num_{points}))",
+  "basis": "Text QA（SEM_MAP）从 game_reports 抽取每个球员每场 {points}，再按 players_to_games.name 分组取 max/min；统计只在文本中。"
+ },
+ {
+  "query_id": "caesura/rotowire/L180",
+  "plan": "t2g = SCAN(teams_to_games)\nreports = SCAN(game_reports)\nJOIN(left=t2g, right=reports, on t2g.game_id = reports.game_id) -> SEM_MAP(game_reports: \"Did <team name> {win} the game?\" -> outcome) -> FILTER(outcome = yes) -> AGGREGATE(group by name; count(*))",
+  "basis": "Text QA（SEM_MAP）从报道判断每队每场是否 {win}（胜/负），过滤后按队名计数；胜负信息只在文本中（也可抽取双方比分再比较）。注意 count 后未出现的队伍应为 0，模板未要求补零。"
+ },
+ {
+  "query_id": "caesura/rotowire/L183",
+  "plan": "p2g = SCAN(players_to_games)\nreports = SCAN(game_reports)\nplayers = SCAN(players)\nstats = JOIN(left=p2g, right=reports, on p2g.game_id = reports.game_id) -> SEM_MAP(game_reports: \"How many {points} did <player name> make?\" -> num_{points})\nJOIN(left=stats, right=players, on stats.name = players.name) -> AGGREGATE(group by {position}; {highest}(num_{points})) -> COMPUTE(plot {highest} num_{points} per {position})",
+  "basis": "Text QA（SEM_MAP）抽取球员每场 {points}，再与 players 按 name 关联取 position/nationality，分组取极值并绘图；统计只在文本中。"
+ },
+ {
+  "query_id": "caesura/rotowire/L184",
+  "plan": "t2g = SCAN(teams_to_games)\nreports = SCAN(game_reports)\nteams = SCAN(teams)\nstats = JOIN(left=t2g, right=reports, on t2g.game_id = reports.game_id) -> SEM_MAP(game_reports: \"What is the {number_of_total_points} of <team name>?\" -> value)\nJOIN(left=stats, right=teams, on stats.name = teams.name) -> AGGREGATE(group by {division}; {highest}(value)) -> COMPUTE(plot {highest} {number_of_total_points} per {division})",
+  "basis": "Text QA（SEM_MAP）抽取每队每场 {number_of_total_points}，与 teams 按 name 关联取 division/conference，分组取极值并绘图；统计只在文本中。"
+ }
+]

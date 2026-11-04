@@ -1,0 +1,202 @@
+[
+ {
+  "query_id": "sema-sql/tag-plus/1001",
+  "plan": "d = SCAN_TABLE(drivers) -> FILTER(dob > '1994-01-01')\nr = SCAN_TABLE(races) -> FILTER(year = 2015)\nc = SCAN_TABLE(circuits)\nres = SCAN_TABLE(results)\nrc = JOIN(left=r, right=c, on r.circuitId = c.circuitId)\nx = JOIN(left=res, right=rc, on res.raceId = rc.raceId)\nJOIN(left=d, right=x, on d.driverId = x.driverId) -> DISTINCT(driverId, forename, surname, nationality, country) -> SEM_FILTER(\"the circuit country is the home country of a driver with this nationality\") -> DISTINCT(forename, surname)",
+  "basis": "drivers.dob/races.year 为确定性过滤，经 results 连接 races、circuits；唯一语义步是 SEM_FILTER 判断 circuits.country 是否为 drivers.nationality 对应的祖国（库中只有国籍形容词，无国家映射），在去重后的(车手,国家)对上执行。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1002",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(year = 2015)\ncr = SCAN_TABLE(constructorResults)\nk = SCAN_TABLE(constructors)\np = JOIN(left=cr, right=r, on cr.raceId = r.raceId)\npart = JOIN(left=k, right=p, on k.constructorId = p.constructorId) -> DISTINCT(constructorId, name, nationality)\ncc = SCAN_TABLE(circuits) -> DISTINCT(country)\nSEM_JOIN(left=part, right=cc, \"the constructor's nationality corresponds to the circuit country\") -> DISTINCT(constructorId) -> AGGREGATE(COUNT(constructorId) AS n)",
+  "basis": "2015 年参赛车队由 constructorResults+races(year=2015) 确定；SEM_JOIN 将 constructors.nationality（形容词）与 circuits 的去重国家匹配，属世界知识。歧义：赛道范围取整张 circuits 表（含历史赛道）而非仅 2015 年赛历，按 gold=10 推断前者。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1003",
+  "plan": "p = SCAN_TABLE(posts) -> SORT(ViewCount DESC) -> LIMIT(10)\nt = SCAN_TABLE(tags) -> SORT(Count DESC) -> LIMIT(3)\nSEM_JOIN(left=p, right=t, \"the post Title is closely related to the tag name TagName\") -> DISTINCT(Id) -> AGGREGATE(COUNT(Id) AS n)",
+  "basis": "posts.ViewCount 取前 10、tags.Count 取前 3 为确定性步骤；标题与标签名的语义相关性用 SEM_JOIN（文本理解），按帖子去重后计数。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1004",
+  "plan": "p = SCAN_TABLE(posts) -> SORT(ViewCount DESC) -> LIMIT(10)\nc = SCAN_TABLE(comments) -> SORT(Score DESC) -> LIMIT(10)\nSEM_JOIN(left=p, right=c, \"the post (Title and Body) is relevant to the content of the comment Text\") -> DISTINCT(Id) -> PROJECT(Id)",
+  "basis": "popular 按 posts.ViewCount（schema 注释称其表示热度），comments.Score 取前 10；帖子与评论内容相关性为 SEM_JOIN，按 posts.Id 去重输出。歧义：是否与评论自身所属帖子无关，此处按内容相关处理。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1005",
+  "plan": "c = SCAN_TABLE(comments) -> SORT(Score DESC) -> LIMIT(5)\nt = SCAN_TABLE(tags) -> FILTER(TagName LIKE 'm%')\nSEM_JOIN(left=c, right=t, \"the comment Text contains a phrase similar to the tag name TagName\") -> DISTINCT(Id) -> PROJECT(Id)",
+  "basis": "comments.Score 前 5、tags.TagName 以 M 开头（标签为小写，用 LIKE 'm%'）为确定性步骤；评论文本含与标签名相似短语的判断为 SEM_JOIN，输出 comments.Id。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1006",
+  "plan": "p = SCAN_TABLE(posts) -> SORT(Score DESC) -> LIMIT(20)\nb = SCAN_TABLE(badges) -> DISTINCT(Name) -> SORT(Name DESC) -> LIMIT(10)\nSEM_JOIN(left=p, right=b, \"the displayed post content (Title and Body) is similar to the badge Name\") -> DISTINCT(Id) -> AGGREGATE(COUNT(Id) AS n)",
+  "basis": "posts.Score 前 20、badges.Name 去重后按字母降序取前 10 为确定性；帖子展示内容与徽章名相似为 SEM_JOIN，再按帖子计数。歧义：display content 取 Title+Body；徽章名是否先去重未说明，此处去重。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1007",
+  "plan": "l = SCAN_TABLE(League)\nc = SCAN_TABLE(Country)\nSEM_JOIN(left=l, right=c, \"the league name contains or is similar to the country name\") -> DISTINCT(l.name) -> PROJECT(l.name)",
+  "basis": "League.name 与 Country.name 的相似性用 SEM_JOIN（名称语义/字符串相似），输出联赛名。歧义：country name 可理解为任意国家（则改为对 League 做 SEM_FILTER），此处用库内 Country 表。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1008",
+  "plan": "SCAN_TABLE(Team) -> SORT(team_long_name ASC) -> LIMIT(10) -> SEM_MAP(\"the country name the team name most closely resembles or is associated with, or NULL if none\" AS similar_country) -> FILTER(similar_country IS NOT NULL) -> PROJECT(team_long_name, similar_country)",
+  "basis": "Team.team_long_name 字母序前 10 为确定性；判断队名是否像某国名并给出最相似国家需要世界知识（如 Nürnberg→Germany），用 SEM_MAP 生成 similar_country 后过滤空值。歧义：国家范围为任意国家而非仅 Country 表。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1009",
+  "plan": "h = SCAN_TABLE(superhero) -> SORT(superhero_name ASC) -> LIMIT(5)\nsp = SCAN_TABLE(superpower)\nSEM_JOIN(left=h, right=sp, \"the superhero name is closely relevant to the superpower power_name\") -> DISTINCT(superhero_name) -> PROJECT(superhero_name)",
+  "basis": "superhero.superhero_name 字母序前 5 为确定性；名字与 superpower.power_name 的语义相关性为 SEM_JOIN，按英雄名去重。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1010",
+  "plan": "a = SCAN_TABLE(attribute)\nsp = SCAN_TABLE(superpower)\nrel = SEM_JOIN(left=a, right=sp, \"the attribute name closely relates to the superpower power_name\") -> DISTINCT(a.id)\nha = SCAN_TABLE(hero_attribute)\nJOIN(left=ha, right=rel, on ha.attribute_id = rel.id) -> AGGREGATE(COUNT(DISTINCT hero_id) AS n)",
+  "basis": "语义判断放在粒度最粗的 attribute×superpower 上（SEM_JOIN，attribute 仅少量行），得到相关属性后经 hero_attribute 确定性连接并计数去重的 hero_id。歧义：也可理解为英雄自身属性与其自身超能力相关（需再连 hero_power）。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1011",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(year = 2016)\nc = SCAN_TABLE(circuits)\nJOIN(left=r, right=c, on r.circuitId = c.circuitId) -> DISTINCT(circuitId, country) -> SEM_CLASSIFY(country, [\"Asia\", \"Europe\", \"North America\", \"South America\", \"Africa\", \"Oceania\"] AS continent) -> AGGREGATE(continent; COUNT(circuitId) AS n)",
+  "basis": "races(year=2016)+circuits 确定性取得 2016 赛道；circuits 无大洲列，用 SEM_CLASSIFY 由 country 判定大洲，再按大洲计数。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1012",
+  "plan": "c = SCAN_TABLE(circuits) -> SEM_FILTER(\"the circuit country is located in Asia\")\nr = SCAN_TABLE(races) -> FILTER(year = 2016)\nrc = JOIN(left=r, right=c, on r.circuitId = c.circuitId)\nres = SCAN_TABLE(results)\nx = JOIN(left=res, right=rc, on res.raceId = rc.raceId)\nd = SCAN_TABLE(drivers) -> FILTER(dob >= '1997-01-01')\nJOIN(left=d, right=x, on d.driverId = x.driverId) -> DISTINCT(forename, surname) -> PROJECT(forename, surname)",
+  "basis": "是否位于亚洲在 circuits 层用 SEM_FILTER（无大洲列）；Gen-Z 按常用定义 1997 年起出生，作为常量写入 drivers.dob 确定性过滤（定义本身属常识，可能有 1995/1996 起的分歧）。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1013",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(year > 2008)\nres = SCAN_TABLE(results)\nrr = JOIN(left=res, right=r, on res.raceId = r.raceId)\nd = SCAN_TABLE(drivers)\ndd = JOIN(left=d, right=rr, on d.driverId = rr.driverId) -> DISTINCT(driverId, nationality)\nn = SCAN_TABLE(drivers) -> DISTINCT(nationality) -> SEM_CLASSIFY(nationality, [\"Asia\", \"Europe\", \"North America\", \"South America\", \"Africa\", \"Oceania\"] AS continent)\nJOIN(left=dd, right=n, on dd.nationality = n.nationality) -> AGGREGATE(continent; COUNT(DISTINCT driverId) AS n)",
+  "basis": "北京奥运=2008 年这一常识作为常量写入 races.year > 2008；车手所属大洲由 drivers.nationality 推断，用 SEM_CLASSIFY 在去重国籍上执行后连回，再按大洲统计去重车手数。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1014",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(date > '2017-01-20')\nc = SCAN_TABLE(circuits)\nJOIN(left=r, right=c, on r.circuitId = c.circuitId) -> DISTINCT(circuitId, name, location, country, lat, lng, alt) -> SEM_FILTER(\"the circuit location is a coastal city\") -> SEM_AGG(\"summarize the common characteristics of these circuits\")",
+  "basis": "奥巴马第二任期于 2017-01-20 结束，作为常量过滤 races.date；circuits.location 是否沿海城市需地理知识用 SEM_FILTER（在去重赛道上），最后 SEM_AGG 汇总赛道特征。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1015",
+  "plan": "sp = SCAN_TABLE(superpower) -> SEM_FILTER(\"the power is related to healing or recovery\")\nhp = SCAN_TABLE(hero_power)\nhps = JOIN(left=hp, right=sp, on hp.power_id = sp.id)\ng = SCAN_TABLE(gender) -> FILTER(gender = 'Male')\npub = SCAN_TABLE(publisher) -> FILTER(publisher_name = 'Marvel Comics')\nh = SCAN_TABLE(superhero)\nhg = JOIN(left=h, right=g, on h.gender_id = g.id)\nhgp = JOIN(left=hg, right=pub, on hg.publisher_id = pub.id)\nJOIN(left=hgp, right=hps, on hgp.id = hps.hero_id) -> AGGREGATE(COUNT(DISTINCT hgp.id) AS n)",
+  "basis": "性别、出版商为 gender/publisher 表上的确定性过滤；超能力是否与治愈/恢复相关用 SEM_FILTER 作用于 superpower 表（最粗粒度），经 hero_power 连接后计数去重英雄。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1016",
+  "plan": "c = SCAN_TABLE(Country) -> SEM_FILTER(\"the country is landlocked (inland, no sea coast)\")\nm = SCAN_TABLE(Match) -> FILTER(CAST(strftime('%m', date) AS INTEGER) IN (6, 7, 8))\nJOIN(left=m, right=c, on m.country_id = c.id) -> AGGREGATE(COUNT(m.id) AS n)",
+  "basis": "内陆国判断需地理知识，在 Country 表上 SEM_FILTER；夏季按北半球 6-8 月对 Match.date 确定性过滤（夏季月份定义为常识常量，存在 6-9 月等歧义），连接后计数。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1017",
+  "plan": "p = SCAN_TABLE(Player) -> FILTER(birthday >= '1955-11-01' AND birthday <= '1975-04-30')\npa = SCAN_TABLE(Player_Attributes)\nJOIN(left=p, right=pa, on p.player_api_id = pa.player_api_id) -> AGGREGATE(player_api_id, player_name; AVG(finishing) AS finishing, AVG(shot_power) AS shot_power, AVG(volleys) AS volleys, AVG(long_shots) AS long_shots, AVG(positioning) AS positioning, AVG(dribbling) AS dribbling) -> SEM_FILTER(\"the player is good at attacking based on these attacking skill ratings\") -> PROJECT(player_name)",
+  "basis": "越战时间 1955-11-01 至 1975-04-30 为常识常量，对 Player.birthday 确定性过滤；good at attacking 无库内定义，按球员聚合 Player_Attributes 进攻类属性后用 SEM_FILTER 判断。歧义：也可用 attacking_work_rate='high' 或某数值阈值替代。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1018",
+  "plan": "col = SCAN_TABLE(colour) -> FILTER(colour = 'Grey')\npub = SCAN_TABLE(publisher) -> FILTER(publisher_name = 'Marvel Comics')\nsp = SCAN_TABLE(superpower) -> SEM_FILTER(\"the power allows travelling across time\")\nhp = SCAN_TABLE(hero_power)\nhps = JOIN(left=hp, right=sp, on hp.power_id = sp.id)\nh = SCAN_TABLE(superhero)\nhe = JOIN(left=h, right=col, on h.eye_colour_id = col.id)\nhep = JOIN(left=he, right=pub, on he.publisher_id = pub.id)\nJOIN(left=hep, right=hps, on hep.id = hps.hero_id) -> DISTINCT(superhero_name) -> PROJECT(superhero_name)",
+  "basis": "眼睛颜色(colour 经 eye_colour_id)、出版商为确定性过滤；能否穿越时间在 superpower 表上用 SEM_FILTER 判断（可能匹配 Time Travel 等多项能力名），再经 hero_power 连接。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1019",
+  "plan": "col = SCAN_TABLE(colour) -> SEM_FILTER(\"the colour resembles a typical East Asian skin appearance\")\nh = SCAN_TABLE(superhero)\nhc = JOIN(left=h, right=col, on h.skin_colour_id = col.id)\nhp = SCAN_TABLE(hero_power)\nJOIN(left=hc, right=hp, on hc.id = hp.hero_id) -> AGGREGATE(COUNT(DISTINCT power_id) AS n)",
+  "basis": "Asian like color 需常识判断，在 colour 表上 SEM_FILTER，并假定指肤色（superhero.skin_colour_id）；之后经 hero_power 统计去重 power_id。歧义：也可能包括发色/眼色。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1020",
+  "plan": "SCAN_TABLE(satscores) -> FILTER(rtype = 'S') -> COMPUTE(AvgScrRead + AvgScrMath + AvgScrWrite AS total) -> SORT(total DESC) -> LIMIT(10) -> SEM_FILTER(\"the school name sname is named after a person (contains a human name)\") -> PROJECT(sname)",
+  "basis": "satscores 学校级(rtype='S')三科平均分之和排序取前 10 为确定性；校名是否以人名命名需文本理解，用 SEM_FILTER 作用于 sname。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1021",
+  "plan": "cty = SCAN_TABLE(schools) -> DISTINCT(County) -> SEM_FILTER(\"the county has a population over 2 million\")\ns = SCAN_TABLE(schools) -> FILTER(OpenDate <= date('now', '-100 years'))\nJOIN(left=s, right=cty, on s.County = cty.County) -> AGGREGATE(COUNT(CDSCode) AS n)",
+  "basis": "开办超过 100 年由 schools.OpenDate 相对当前日期确定性过滤；县人口不在库中，在去重 County 上用 SEM_FILTER。歧义：参照日期（当前或数据年份）及是否仅计 Active 学校未说明。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1022",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(name = 'Singapore Grand Prix')\nres = SCAN_TABLE(results)\nrr = JOIN(left=res, right=r, on res.raceId = r.raceId)\nd = SCAN_TABLE(drivers)\nJOIN(left=d, right=rr, on d.driverId = rr.driverId) -> COMPUTE((julianday(date) - julianday(dob)) / 365.25 AS age_at_race) -> FILTER(age_at_race > 42) -> DISTINCT(forename, surname) -> PROJECT(forename, surname)",
+  "basis": "全部确定性：races.name 过滤新加坡大奖赛，经 results 连 drivers，用 races.date 与 drivers.dob 计算比赛时年龄并过滤 >42；无需语义算子。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1023",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(year = 2009 AND name = 'European Grand Prix')\nres = SCAN_TABLE(results) -> FILTER(position <= 3)\nrr = JOIN(left=res, right=r, on res.raceId = r.raceId)\nd = SCAN_TABLE(drivers)\npod = JOIN(left=d, right=rr, on d.driverId = rr.driverId) -> COMPUTE((julianday(date) - julianday(dob)) / 365.25 AS age_at_race) -> FILTER(age_at_race > 25)\nlastr = SCAN_TABLE(races) -> AGGREGATE(year; MAX(round) AS last_round)\nr2 = SCAN_TABLE(races)\nfin = JOIN(left=r2, right=lastr, on r2.year = lastr.year AND r2.round = lastr.last_round)\nds = SCAN_TABLE(driverStandings) -> FILTER(position = 1)\nchamp = JOIN(left=ds, right=fin, on ds.raceId = fin.raceId)\nd2 = SCAN_TABLE(drivers)\ncn = JOIN(left=d2, right=champ, on d2.driverId = champ.driverId) -> DISTINCT(nationality)\nJOIN(left=pod, right=cn, on pod.nationality = cn.nationality) -> PROJECT(forename, surname, position) -> SORT(position ASC)",
+  "basis": "全部确定性：领奖台=results.position<=3，比赛时年龄由 races.date-drivers.dob 计算；产生过世界冠军的国家由每年最后一站 driverStandings.position=1 的车手国籍推得（库中有历年积分榜），以国籍等值连接代替语义判断。若赛季数据不完整则可改为 SEM_FILTER 世界知识。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1024",
+  "plan": "cty = SCAN_TABLE(schools) -> DISTINCT(County) -> SEM_FILTER(\"the county is in Southern California\")\ns = SCAN_TABLE(schools) -> FILTER(Charter = 1 AND Magnet = 1)\nsc = JOIN(left=s, right=cty, on s.County = cty.County)\nsat = SCAN_TABLE(satscores)\nJOIN(left=sc, right=sat, on sc.CDSCode = sat.cds) -> COMPUTE(ROUND(CAST(NumGE1500 AS REAL) / NumTstTakr, 3) AS excellence_rate) -> PROJECT(School, excellence_rate)",
+  "basis": "Charter/Magnet 为 schools 上确定性过滤；南加州归属需地理知识，在去重 County 上 SEM_FILTER；SAT 优秀率按 satscores.NumGE1500/NumTstTakr 计算并保留三位。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1025",
+  "plan": "d = SCAN_TABLE(drivers) -> FILTER(forename = 'Lewis' AND surname = 'Hamilton')\nc = SCAN_TABLE(circuits) -> SEM_FILTER(\"the circuit country is located in Asia\")\nr = SCAN_TABLE(races) -> FILTER(year = 2016)\nrc = JOIN(left=r, right=c, on r.circuitId = c.circuitId)\nres = SCAN_TABLE(results) -> FILTER(position = 1)\nw = JOIN(left=res, right=d, on res.driverId = d.driverId)\nwr = JOIN(left=w, right=rc, on w.raceId = rc.raceId)\nlt = SCAN_TABLE(lapTimes)\nJOIN(left=lt, right=wr, on lt.raceId = wr.raceId AND lt.driverId = wr.driverId) -> AGGREGATE(country; AVG(lt.milliseconds) AS avg_lap_ms)",
+  "basis": "车手、年份、获胜(results.position=1)、圈速均值(lapTimes.milliseconds)为确定性；赛道是否位于亚洲用 SEM_FILTER 作用于 circuits。按 circuits.country 分组（gold 以国家为键）。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1026",
+  "plan": "d = SCAN_TABLE(drivers) -> FILTER(nationality = 'Indian')\nres = SCAN_TABLE(results)\nJOIN(left=d, right=res, on d.driverId = res.driverId) -> COMPUTE(CASE WHEN position = 1 THEN points ELSE 0 END AS won_points, CASE WHEN position = 1 THEN 0 ELSE points END AS other_points) -> AGGREGATE(driverId, forename, surname; SUM(points) AS total_points, SUM(won_points) AS won_points, SUM(other_points) AS other_points) -> PROJECT(forename, surname, total_points, won_points, other_points)",
+  "basis": "全部确定性：drivers.nationality='Indian'，连 results 用 position=1 区分获胜场次并分别汇总 points；无需语义算子。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1027",
+  "plan": "s = SCAN_TABLE(schools) -> FILTER(Virtual IS NOT NULL)\nsat = SCAN_TABLE(satscores)\nJOIN(left=s, right=sat, on s.CDSCode = sat.cds) -> AGGREGATE(Virtual; ROUND(AVG(AvgScrRead), 2) AS avg_read, ROUND(AVG(AvgScrMath), 2) AS avg_math, ROUND(AVG(AvgScrWrite), 2) AS avg_write) -> SORT(Virtual ASC)",
+  "basis": "全部确定性：按 schools.Virtual 类型分组计算 satscores 三科平均分并保留两位；“分析关系”即该分组对比表（gold 为表格），未加 SEM_AGG 叙述。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1028",
+  "plan": "cty = SCAN_TABLE(schools) -> DISTINCT(County) -> SEM_CLASSIFY(County, [\"Low-Income\", \"High-Income\"] AS income_level)\ns = SCAN_TABLE(schools)\nsc = JOIN(left=s, right=cty, on s.County = cty.County)\nsat = SCAN_TABLE(satscores)\nJOIN(left=sc, right=sat, on sc.CDSCode = sat.cds) -> AGGREGATE(income_level; ROUND(AVG(AvgScrRead), 2) AS avg_read, ROUND(AVG(AvgScrMath), 2) AS avg_math, ROUND(AVG(AvgScrWrite), 2) AS avg_write)",
+  "basis": "地区收入水平库中无直接列，用 SEM_CLASSIFY 在去重 County 上判定高/低收入，再按类别求 satscores 三科均分。歧义较大：也可用 frpm 免费餐比例阈值定义低收入，或在 City 粒度判定；gold 中高收入分数更低，提示并非 FRPM 定义。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1029",
+  "plan": "r = SCAN_TABLE(races) -> FILTER(year = 2016 AND name = 'British Grand Prix')\nres = SCAN_TABLE(results)\nJOIN(left=res, right=r, on res.raceId = r.raceId) -> COMPUTE(CASE WHEN grid > 10 AND points > 0 THEN 1 ELSE 0 END AS hit) -> AGGREGATE(ROUND(100.0 * SUM(hit) / COUNT(resultId), 2) AS pct)",
+  "basis": "全部确定性：races 定位 2016 英国大奖赛，results.grid>10 且 points>0 计数除以参赛总数。歧义：grid=0（维修区起步）是否算前十之外，此处不算。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1030",
+  "plan": "SCAN_TABLE(satscores) -> COMPUTE(AvgScrRead + AvgScrMath + AvgScrWrite AS total) -> FILTER(total >= 960) -> AGGREGATE(COUNT(cds) AS n)",
+  "basis": "新 SAT 满分 1600、60% 即 960 为常识常量，写入确定性过滤；总分取 satscores 三科平均分之和。歧义：数据为旧三科制，是否仅计学校级(rtype='S')未说明，此处不按 rtype 过滤。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1031",
+  "plan": "d = SCAN_TABLE(drivers) -> FILTER(forename = 'Lewis' AND surname = 'Hamilton')\nr = SCAN_TABLE(races) -> FILTER(year IN (2014, 2016))\nres = SCAN_TABLE(results)\nrr = JOIN(left=res, right=r, on res.raceId = r.raceId)\nJOIN(left=d, right=rr, on d.driverId = rr.driverId) -> COMPUTE(CASE WHEN position = 1 THEN 1 ELSE 0 END AS win, CASE WHEN position <= 3 THEN 1 ELSE 0 END AS podium) -> AGGREGATE(year; COUNT(resultId) AS races, SUM(points) AS points, SUM(win) AS wins, SUM(podium) AS podiums, AVG(positionOrder) AS avg_finish) -> SEM_MAP(\"write a short description of the driver's performance in this season from the statistics\" AS description) -> PROJECT(year, description)",
+  "basis": "按赛季汇总 results 中的场次、积分、胜场、领奖台、平均名次为确定性；“描述表现”为生成文本，用 SEM_MAP 对每个赛季汇总行生成描述。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1032",
+  "plan": "SCAN_TABLE(comments) -> FILTER(Score > 30) -> SEM_MAP(\"extract the technical terms mentioned in the comment Text\" AS technical_terms) -> PROJECT(Id, technical_terms)",
+  "basis": "comments.Score>30 为确定性过滤；从 Text 抽取技术术语需文本理解，用 SEM_MAP。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1033",
+  "plan": "u = SCAN_TABLE(users) -> FILTER(DisplayName = 'rcs')\np = SCAN_TABLE(posts)\nJOIN(left=p, right=u, on p.OwnerUserId = u.Id) -> SEM_MAP(\"identify the technical terms in the post Body and write supplementary explanations for them\" AS supplementary) -> PROJECT(p.Id, Body, supplementary)",
+  "basis": "users.DisplayName='rcs' 并经 posts.OwnerUserId 取帖子为确定性；识别术语并生成补充说明为 SEM_MAP。歧义：post contents 取 Body（也可含 Title）。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1034",
+  "plan": "SCAN_TABLE(comments) -> FILTER(Score > 40) -> SEM_CLASSIFY(Text, [\"Positive\", \"Negative\", \"Neutral\"] AS stance) -> PROJECT(Id, stance)",
+  "basis": "comments.Score>40 为确定性过滤；立场三分类用 SEM_CLASSIFY 作用于 Text。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1035",
+  "plan": "SCAN_TABLE(badges) -> AGGREGATE(Name; COUNT(Id) AS cnt) -> SORT(cnt DESC) -> LIMIT(3) -> SEM_MAP(\"a more creative version of the badge Name\" AS creative_name) -> PROJECT(Name, creative_name)",
+  "basis": "徽章热度按 badges 中同名颁发次数统计取前 3 为确定性；改写为更有创意的名称为 SEM_MAP。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1036",
+  "plan": "SCAN_TABLE(users) -> FILTER(AboutMe IS NOT NULL) -> SORT(DisplayName DESC) -> LIMIT(3) -> SEM_FILTER(\"the AboutMe text contains contact details such as Twitter, website or email\") -> SEM_MAP(\"extract the contact details from AboutMe\" AS contact_details) -> PROJECT(contact_details)",
+  "basis": "按 users.DisplayName 字母序取最后 3 位为确定性；判断 AboutMe 是否含联系方式并抽取为 SEM_FILTER+SEM_MAP。歧义：排序键可能是 AboutMe 本身而非 DisplayName，且是否先排除空 AboutMe 未说明。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1037",
+  "plan": "c = SCAN_TABLE(Country) -> FILTER(name = 'Spain')\nl = SCAN_TABLE(League)\nlc = JOIN(left=l, right=c, on l.country_id = c.id)\nm = SCAN_TABLE(Match) -> FILTER(season = '2015/2016')\nml = JOIN(left=m, right=lc, on m.league_id = lc.id) -> DISTINCT(home_team_api_id)\nt = SCAN_TABLE(Team)\nJOIN(left=t, right=ml, on t.team_api_id = ml.home_team_api_id) -> SEM_CLASSIFY(team_long_name, [\"TRUE\", \"FALSE\"] AS has_city) -> AGGREGATE(has_city; COUNT(team_api_id) AS n)",
+  "basis": "西班牙联赛经 Country/League 连接、Match.season='2015/2016' 取参赛队（主队去重即全部球队）为确定性；队名是否含城市名需地理知识，用 SEM_CLASSIFY 输出 TRUE/FALSE 后计数。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1038",
+  "plan": "d = SCAN_TABLE(drivers) -> FILTER(forename = 'Lewis' AND surname = 'Hamilton')\nr = SCAN_TABLE(races) -> FILTER(year = 2016)\nres = SCAN_TABLE(results)\nrr = JOIN(left=res, right=r, on res.raceId = r.raceId)\nteam = JOIN(left=rr, right=d, on rr.driverId = d.driverId) -> DISTINCT(constructorId)\nres2 = SCAN_TABLE(results)\nr2 = SCAN_TABLE(races) -> FILTER(year = 2016)\nrr2 = JOIN(left=res2, right=r2, on res2.raceId = r2.raceId)\nmates = JOIN(left=rr2, right=team, on rr2.constructorId = team.constructorId) -> DISTINCT(driverId)\nd2 = SCAN_TABLE(drivers) -> FILTER(NOT (forename = 'Lewis' AND surname = 'Hamilton'))\nJOIN(left=d2, right=mates, on d2.driverId = mates.driverId) -> SEM_MAP(\"describe the family background of this driver\" AS family_background) -> PROJECT(forename, surname, family_background)",
+  "basis": "通过 results+races(2016) 确定性找到 Hamilton 所在 constructorId 及同队其他车手；家庭背景不在库中，需外部知识，用 SEM_MAP 生成描述。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1039",
+  "plan": "sat = SCAN_TABLE(satscores) -> FILTER(rtype = 'S') -> COMPUTE(AvgScrRead + AvgScrMath + AvgScrWrite AS total) -> SORT(total DESC) -> LIMIT(1)\ns = SCAN_TABLE(schools)\nJOIN(left=sat, right=s, on sat.cds = s.CDSCode) -> COMPUTE(MailStrAbr || ', ' || MailCity || ', ' || MailState || ' ' || MailZip AS mail_address) -> PROJECT(mail_address)",
+  "basis": "全部确定性：satscores 三科和最高的学校连 schools，用缩写邮寄地址列 MailStrAbr/MailCity/MailState/MailZip 拼成标准地址（与 gold 格式一致）。若要求改写规范化格式，可将最后的 COMPUTE 换成 SEM_MAP。"
+ },
+ {
+  "query_id": "sema-sql/tag-plus/1040",
+  "plan": "SCAN_TABLE(Player) -> SORT(height DESC) -> LIMIT(5) -> SEM_MAP(\"the country the player name most likely originates from\" AS origin_country) -> PROJECT(player_name, origin_country)",
+  "basis": "highest 理解为身高（Player.height）取前 5 为确定性；姓名来源国需语言/文化知识，用 SEM_MAP。歧义：并列身高时前 5 不唯一，highest 也可能指评分。"
+ }
+]

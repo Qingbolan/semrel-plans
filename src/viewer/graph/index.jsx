@@ -18,7 +18,7 @@ const OperatorNode = memo(function OperatorNode({data,selected}) {
   const horizontal = data.direction === 'LR';
   const appearance=operatorAppearance(data.arguments?.operator_type);
   const name = data.arguments?.operator_type?.replaceAll('_',' ') || data.ability;
-  const description = t(data.label).replace(new RegExp('^'+(data.arguments?.operator_type || '__none__')+'\\s*'), '').trim();
+  const description = t(data.label).replace(new RegExp('^'+(data.arguments?.operator_type || '__none__')+'\\b\\s*'), '').trim();
   const redundant = data.label.replaceAll('_',' ').toUpperCase() === name.toUpperCase();
   return <div className={`operator-card pattern-${appearance.pattern} ${appearance.symbol?'has-algebra-symbol':''} family-${data.family} ${selected?'is-selected':''}`} title={t(data.label)} style={{height:data.height}}>
     {appearance.symbol&&<span className="operator-watermark" aria-hidden="true">{appearance.symbol}</span>}
@@ -104,8 +104,11 @@ function MissionCanvas({model,onSource}) {
       labelStyle:{fill:'#202b30',fontSize:'var(--text-small)'},labelBgStyle:{fill:'#fff',fillOpacity:1},labelBgPadding:[6,4],
     };
   }),[layout,selected,scope]);
+  // Vertical plans grow with their depth so deep pipelines are not shrunk below readable size.
+  const layers = 1+Math.max(0,...model.nodes.map(n=>n.phase||0));
+  const stageStyle = expanded||direction!=='BT' ? undefined : {height:`min(${Math.max(360,layers*150+100)}px, 78vh)`};
   return <div className={`mission-canvas ${expanded?'is-expanded':''}`}>
-    <div className={`flow-workspace ${selectedNode?'has-inspector':''}`}><div className="flow-stage">
+    <div className={`flow-workspace ${selectedNode?'has-inspector':''}`}><div className="flow-stage" style={stageStyle}>
       <ReactFlow nodes={displayNodes} edges={edges} nodeTypes={nodeTypes} edgeTypes={edgeTypes} nodesDraggable={false} onNodesChange={onNodesChange}
         onNodeClick={(_,node)=>select(node.id)} onPaneClick={()=>select(null)}
         fitView fitViewOptions={fitOptions} minZoom={0.08} maxZoom={2.5}

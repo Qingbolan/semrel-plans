@@ -1,0 +1,616 @@
+[
+  {
+    "key": "sembench",
+    "arxiv": "2511.01716",
+    "arxiv_url": "https://arxiv.org/abs/2511.01716",
+    "title": "SemBench: A Benchmark for Semantic Query Processing Engines",
+    "first_submitted": "2025/11/03",
+    "abstract": "We present a benchmark targeting a novel class of systems: semantic query processing engines. Those systems rely inherently on generative and reasoning capabilities of state-of-the-art large language models (LLMs). They extend SQL with semantic operators, configured by natural language instructions, that are evaluated via LLMs and enable users to perform various operations on multimodal data.\nOur benchmark introduces diversity across three key dimensions: scenarios, modalities, and operators. Included are scenarios ranging from movie review analysis to car damage detection. Within these scenarios, we cover different data modalities, including images, audio, and text. Finally, the queries involve a diverse set of operators, including semantic filters, joins, mappings, ranking, and classification operators.\nWe evaluated our benchmark on three academic systems (LOTUS, Palimpzest, and ThalamusDB) and one industrial system, Google BigQuery. Although these results reflect a snapshot of systems under continuous development, our study offers crucial insights into their current strengths and weaknesses, illuminating promising directions for future research.",
+    "abs_page_sha256": "f6e588714bbeca5a30778af05b6ab9db24e45a97e29cb2e96bb5da9658325c3e",
+    "repositories": [
+      {
+        "url": "https://github.com/SemBench/SemBench",
+        "commit": "c4b2bcff3a5907148f504cfb6faea4c6d3f90e8f",
+        "link_source": "官方仓库；图册查询按旧 commit 8c2cac89 固定"
+      }
+    ]
+  },
+  {
+    "key": "uda-bench",
+    "arxiv": "2510.27119",
+    "arxiv_url": "https://arxiv.org/abs/2510.27119",
+    "title": "Unstructured Data Analysis using LLMs: A Comprehensive Benchmark",
+    "first_submitted": "2025/10/31",
+    "abstract": "Nowadays, the explosion of unstructured data presents immense analytical value. Leveraging the remarkable capability of large language models (LLMs) in extracting attributes of structured tables from unstructured data, researchers are developing LLM-powered data systems for users to analyze unstructured documents as working with a database. These unstructured data analysis (UDA) systems differ significantly in all aspects, including query interfaces, query optimization strategies, and operator implementations, making it unclear which performs best in which scenario. Unfortunately, there does not exist a comprehensive benchmark that offers high-quality, large-volume, and diverse datasets as well as rich query workload to thoroughly evaluate such systems. To fill this gap, we present UDA-Bench, the first benchmark for unstructured data analysis that meets all the above requirements. Specifically, we organize a team with 30 graduate students that spends over in total 10,000 hours on curating 5 datasets from various domains and constructing a relational database view from these datasets by manual annotation. These relational databases can be used as ground truth to evaluate any of these UDA systems despite their differences in programming interfaces. Moreover, we design diverse queries to analyze the attributes defined in the database schema, covering different types of analytical operators with varying selectivities and complexities. We conduct in-depth analysis of the key building blocks of existing UDA systems: query interface, query optimization, operator design, and data processing. We run exhaustive experiments over the benchmark to fully evaluate these systems and different techniques w.r.t. the above building blocks.",
+    "abs_page_sha256": "f9571b61e96f9e2838c765aa39dddc5b2bcf7ddd67c60c977455951160dc91df",
+    "repositories": [
+      {
+        "url": "https://github.com/unimib-datAI/UDA-Bench",
+        "commit": "50039a527f156eeb9cad80118637da47db94b976",
+        "link_source": "官方仓库；与图册固定版本一致"
+      }
+    ]
+  },
+  {
+    "key": "tag-bench",
+    "arxiv": "2408.14717",
+    "arxiv_url": "https://arxiv.org/abs/2408.14717",
+    "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG",
+    "first_submitted": "2024/08/27",
+    "abstract": "AI systems that serve natural language questions over databases promise to unlock tremendous value. Such systems would allow users to leverage the powerful reasoning and knowledge capabilities of language models (LMs) alongside the scalable computational power of data management systems. These combined capabilities would empower users to ask arbitrary natural language questions over custom data sources. However, existing methods and benchmarks insufficiently explore this setting. Text2SQL methods focus solely on natural language questions that can be expressed in relational algebra, representing a small subset of the questions real users wish to ask. Likewise, Retrieval-Augmented Generation (RAG) considers the limited subset of queries that can be answered with point lookups to one or a few data records within the database. We propose Table-Augmented Generation (TAG), a unified and general-purpose paradigm for answering natural language questions over databases. The TAG model represents a wide range of interactions between the LM and database that have been previously unexplored and creates exciting research opportunities for leveraging the world knowledge and reasoning capabilities of LMs over data. We systematically develop benchmarks to study the TAG problem and find that standard methods answer no more than 20% of queries correctly, confirming the need for further research in this area. We release code for the benchmark at this https URL.",
+    "abs_page_sha256": "7656d787a3e006a5eabf6ea12f42954106a3decae0c255ddd98aec5754b7d292",
+    "repositories": [
+      {
+        "url": "https://github.com/TAG-Research/TAG-Bench",
+        "commit": "f97b0b5ca211573837cf3236224ac658b4a959bc",
+        "link_source": "论文原文；与图册固定版本一致"
+      }
+    ]
+  },
+  {
+    "key": "quest",
+    "arxiv": "2507.06515",
+    "arxiv_url": "https://arxiv.org/abs/2507.06515",
+    "title": "QUEST: Query Optimization in Unstructured Document Analysis",
+    "first_submitted": "2025/07/09",
+    "abstract": "Most recently, researchers have started building large language models (LLMs) powered data systems that allow users to analyze unstructured text documents like working with a database because LLMs are very effective in extracting attributes from documents. In such systems, LLM-based extraction operations constitute the performance bottleneck of query execution due to the high monetary cost and slow LLM inference. Existing systems typically borrow the query optimization principles popular in relational databases to produce query execution plans, which unfortunately are ineffective in minimizing LLM cost. To fill this gap, we propose QUEST, which features a bunch of novel optimization strategies for unstructured document analysis. First, we introduce an index-based strategy to minimize the cost of each extraction operation. With this index, QUEST quickly retrieves the text segments relevant to the target attributes and only feeds them to LLMs. Furthermore, we design an evidence-augmented retrieval strategy to reduce the possibility of missing relevant segments. Moreover, we develop an instance-optimized query execution strategy: because the attribute extraction cost could vary significantly document by document, QUEST produces different plans for different documents. For each document, QUEST produces a plan to minimize the frequency of attribute extraction. The innovations include LLM cost-aware operator ordering strategies and an optimized join execution approach that transforms joins into filters. Extensive experiments on 3 real-world datasets demonstrate the superiority of QUEST, achieving 30%-6x cost savings while improving the F1 score by 10% -27% compared with state-of-the-art baselines.",
+    "abs_page_sha256": "ca6f4d85f18a1e6de1fcf3263391cd5c79f0a1c7a3dc395244ca6b6e60f42479",
+    "repositories": [
+      {
+        "url": "https://anonymous.4open.science/r/QUEST",
+        "commit": null,
+        "link_source": "论文原文（匿名仓库，无 git commit）"
+      }
+    ]
+  },
+  {
+    "key": "swan",
+    "arxiv": "2408.00884",
+    "arxiv_url": "https://arxiv.org/abs/2408.00884",
+    "title": "Hybrid Querying Over Relational Databases and Large Language Models",
+    "first_submitted": "2024/08/01",
+    "abstract": "Database queries traditionally operate under the closed-world assumption, providing no answers to questions that require information beyond the data stored in the database. Hybrid querying using SQL offers an alternative by integrating relational databases with large language models (LLMs) to answer beyond-database questions. In this paper, we present the first cross-domain benchmark, SWAN, containing 120 beyond-database questions over four real-world databases. To leverage state-of-the-art language models in addressing these complex questions in SWAN, we present two solutions: one based on schema expansion and the other based on user defined functions. We also discuss optimization opportunities and potential future directions. Our evaluation demonstrates that using GPT-4 Turbo with few-shot prompts, one can achieves up to 40.0\\% in execution accuracy and 48.2\\% in data factuality. These results highlights both the potential and challenges for hybrid querying. We believe that our work will inspire further research in creating more efficient and accurate data systems that seamlessly integrate relational databases and large language models to address beyond-database questions.",
+    "abs_page_sha256": "e570f67b42879d9335a805d638fb00607c583393575a7a93dea7c46014928d04",
+    "repositories": [
+      {
+        "url": "https://github.com/ZhaoFuheng/SWAN",
+        "commit": "0ba4c936ae3a087a66037656894633081f880aa5",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "coresemdb",
+    "arxiv": null,
+    "openreview_id": "ZtR4q390OK",
+    "venue": "COLM 2026",
+    "authors": [
+      "Yuchen Tian",
+      "Jianxiong Guo",
+      "Hao Zhang",
+      "Jing Ma",
+      "Congli Gao"
+    ],
+    "repositories": [
+      {
+        "url": "https://openreview.net/forum?id=ZtR4q390OK",
+        "commit": null,
+        "link_source": "OpenReview 附有 supplementary zip；未找到公开代码仓库"
+      }
+    ]
+  },
+  {
+    "key": "semceb",
+    "arxiv": "2606.23081",
+    "arxiv_url": "https://arxiv.org/abs/2606.23081",
+    "title": "SemCEB: A Cardinality Estimation Benchmark for Semantic Operators",
+    "first_submitted": "2026/06/22",
+    "abstract": "Modern data systems increasingly expose multi-modal large language models as semantic operators: SQL operators, including filters and joins, whose predicates are defined by a natural-language instruction. Query optimization in these systems still rests on the same foundations as in traditional databases$\\unicode{x2013}$plan enumeration and cost models$\\unicode{x2013}$yet faces new challenges, e.g., a larger plan space and the lack of efficient cardinality estimates. The elevated per-tuple costs of semantic operators make bad plan choices worse by orders of magnitude. Therefore, precise$\\unicode{x2013}$but also fast and cheap$\\unicode{x2013}$cardinality estimates for semantic filters and joins are of high importance for optimizing query plans that include semantic operators.\nIn this paper, we introduce SemCEB, the first benchmark for cardinality estimation over semantic operators, based on a real-world dataset of (semi-)structured text and images with 102 hand-curated, diverse queries spanning a wide range of selectivities, assessing cardinality estimation for semantic filters and joins in isolation. We evaluate sampling-based algorithms and Semantic Histograms, a state-of-the-art cardinality estimation algorithm for semantic operators, with respect to their accuracy, cost, latency, and memory overhead. We show that, while sampling is robust across different predicate categories, it does not scale and comes with high costs. Our adaptation of Semantic Histograms, on the other hand, is limited in its applicability, and its performance appears sensitive to the predicate category.",
+    "abs_page_sha256": "20b91c915861114d5ded50c2697c9f18a2aed303ee2fa7d6ec86d0eb2311e472",
+    "repositories": [
+      {
+        "url": "https://github.com/utndatasystems/SemCEB",
+        "commit": "fec6bde7d1b23fc751f8701872fafda777a63942",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "plop",
+    "arxiv": "2604.09944",
+    "arxiv_url": "https://arxiv.org/abs/2604.09944",
+    "title": "PLOP: Cost-Based Placement of Semantic Operators in Hybrid Query Plans",
+    "first_submitted": "2026/04/10",
+    "abstract": "Recent database systems have introduced semantic operators that leverage large language models (LLMs) to filter, join, and project over structured data using natural language predicates. In practice, these operators are combined with traditional relational operators, e.g., equi-joins, producing hybrid query plans whose execution cost depends on both expensive LLM calls and conventional database processing. A key optimization question is where to place each semantic operator relative to the relational operators in the plan: placing them earlier reduces the data that subsequent operators process, but requires more LLM calls; placing them later reduces LLM calls through deduplication, but forces relational operators to process larger intermediate data. Existing systems either ignore this placement question or apply simple heuristics without considering the full cost trade-off. We present PLOP, a plan-level optimizer for hybrid semantic-relational queries. PLOP reduces hybrid query planning to semantic filter placement via two equivalence-preserving rewrites. We prove that deferring all semantic filters to the latest possible position minimizes LLM invocations under function caching, but show that this can cause relational processing costs to dominate on complex multi-table queries. To balance LLM cost against relational cost, PLOP uses a dynamic-programming-based cost model that finds the placement minimizing their weighted sum. On 44 semantic SQL queries across five schemas and two benchmarks, PLOP achieves up to 1.5$\\times$ speedup and 4.29$\\times$ cost reduction while maintaining high output quality: an average F1 of 0.85 against the unoptimized baseline and 0.84 against human-annotated ground truth on SemBench. Overall, PLOP achieves a significant cost reduction while preserving the highest accuracy among six publicly available systems.",
+    "abs_page_sha256": "a81262ffce1221529f489617c9635439f7e7223125611b15d9240ed8cf6fac88",
+    "repositories": []
+  },
+  {
+    "key": "sema",
+    "arxiv": "2603.11622",
+    "arxiv_url": "https://arxiv.org/abs/2603.11622",
+    "title": "Sema: A High-performance System for LLM-based Semantic Query Processing",
+    "first_submitted": "2026/03/12",
+    "abstract": "The integration of Large Language Models (LLMs) into data analytics has unlocked powerful capabilities for reasoning over bulk structured and unstructured data. However, existing systems typically rely on either DataFrame primitives, which lack the efficient execution infrastructure of modern DBMSs, or SQL User-Defined Functions (UDFs), which isolate semantic logic from the query optimizer and burden users with implementation complexities. The LLM-powered semantic operators also bring new challenges due to the high cost and non-deterministic nature of LLM invocation, where conventional optimization rules and cost models are inapplicable for their optimization.\nTo bridge these gaps, we present Sema, a high-performance semantic query engine built on DuckDB that treats LLM-powered semantic operators as first-class citizens. Sema introduces SemaSQL, a declarative dialect that allows users seamlessly inject natural language expressions into standard SQL clauses, enabling end-to-end optimization and execution. At the logical level, the optimizer of Sema compresses natural language expressions and deduces relational constraints from semantic operators. At runtime, Sema employs Adaptive Query Execution (AQE) to dynamically reorder operators, fuse semantic operations, and apply prompt batching. This approach seeks a Pareto-optimal execution path balancing token consumption and latency under accuracy constraints. We evaluate Sema on 20 semantic queries across classification, summarization, and extraction tasks. Experimental results demonstrate that Sema achieves $2-10 \\times$ speedup against three baseline systems while achieving competitive result quality.",
+    "abs_page_sha256": "c1494acda471bed5175275bc02347f1aa8a734ca5b5ee5b3b4b6919bad1e3bdd",
+    "repositories": [
+      {
+        "url": "https://github.com/BITQiKangK/SemaSystem",
+        "commit": null,
+        "link_source": "论文原文；2026-11-03 无法访问"
+      }
+    ]
+  },
+  {
+    "key": "sema-sql",
+    "arxiv": "2604.23477",
+    "arxiv_url": "https://arxiv.org/abs/2604.23477",
+    "title": "SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models",
+    "first_submitted": "2026/04/26",
+    "abstract": "Relational databases excel at structured data analysis, but real-world queries increasingly require capabilities beyond standard SQL, such as semantically matching entities across inconsistent names, extracting information not explicitly stored in schemas, and analyzing unstructured text. While text-to-SQL systems enable natural language querying, they remain limited to relational operations and cannot leverage the semantic reasoning capabilities of modern large language models (LLMs). Conversely, recent semantic operator systems extend relational algebra with LLM-powered operations (e.g., semantic joins, mappings, aggregations), but require users to manually construct complex query pipelines.\nTo address this gap, we present SEMA-SQL, a system that automatically answers natural language questions by generating efficient queries that combine relational operations with LLM semantic reasoning. We formalize Hybrid Relational Algebra (HRA), a declarative abstraction unifying traditional relational operators with LLM user-defined functions (UDFs). The system automates three critical aspects: (1) query generation via in-context learning that produces HRA queries with precise natural language specifications for LLM UDFs, (2) query optimization via cost-based transformations and UDF rewriting, and (3) efficient execution algorithms that reduce LLM invocations by an average of 93% in semantic joins through intelligent batching. Extensive experiments with known benchmarks, and extensions thereof, demonstrate the significant query capability improvements possible with our design.",
+    "abs_page_sha256": "0fd0ade2597f3153c6041f5bf9991faebcc1cbce34acd03a200a0093cef1fa06",
+    "repositories": [
+      {
+        "url": "https://github.com/semasql/SEMA-SQL",
+        "commit": "b4866921ad0843c73a6966aca0cdd89082da1cf1",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "lotus",
+    "arxiv": "2407.11418",
+    "arxiv_url": "https://arxiv.org/abs/2407.11418",
+    "title": "Semantic Operators: A Declarative Model for Rich, AI-based Data Processing",
+    "first_submitted": "2024/07/16",
+    "abstract": "The semantic capabilities of large language models (LLMs) have the potential to enable rich analytics and reasoning over vast knowledge corpora. Unfortunately, existing systems either empirically optimize expensive LLM-powered operations with no performance guarantees, or serve a limited set of row-wise LLM operations, providing limited robustness, expressiveness and usability. We introduce semantic operators, the first formalism for declarative and general-purpose AI-based transformations based on natural language specifications (e.g., filtering, sorting, joining or aggregating records using natural language criteria). Each operator opens a rich space for execution plans, similar to relational operators. Our model specifies the expected behavior of each operator with a high-quality gold algorithm, and we develop an optimization framework that reduces cost, while providing accuracy guarantees with respect to a gold algorithm. Using this approach, we propose several novel optimizations to accelerate semantic filtering, joining, group-by and top-k operations by up to $1,000\\times$. We implement semantic operators in the LOTUS system and demonstrate LOTUS' effectiveness on real, bulk-semantic processing applications, including fact-checking, biomedical multi-label classification, search, and topic analysis. We show that the semantic operator model is expressive, capturing state-of-the-art AI pipelines in a few operator calls, and making it easy to express new pipelines that match or exceed quality of recent LLM-based analytic systems by up to $170\\%$, while offering accuracy guarantees. Overall, LOTUS programs match or exceed the accuracy of state-of-the-art AI pipelines for each task while running up to $3.6\\times$ faster than the highest-quality baselines. LOTUS is publicly available at this https URL.",
+    "abs_page_sha256": "19b5db8d0ec458576f0370700e27b59726a3f9b16238d9c1059ba1d97635ef65",
+    "repositories": [
+      {
+        "url": "https://github.com/lotus-data/lotus",
+        "commit": "136ae4f4a344a2f75d89f811e516dfcb0de30e46",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "palimpzest",
+    "arxiv": "2405.14696",
+    "arxiv_url": "https://arxiv.org/abs/2405.14696",
+    "title": "A Declarative System for Optimizing AI Workloads",
+    "first_submitted": "2024/05/23",
+    "abstract": "A long-standing goal of data management systems has been to build systems which can compute quantitative insights over large corpora of unstructured data in a cost-effective manner. Until recently, it was difficult and expensive to extract facts from company documents, data from scientific papers, or metrics from image and video corpora. Today's models can accomplish these tasks with high accuracy. However, a programmer who wants to answer a substantive AI-powered query must orchestrate large numbers of models, prompts, and data operations. For even a single query, the programmer has to make a vast number of decisions such as the choice of model, the right inference method, the most cost-effective inference hardware, the ideal prompt design, and so on. The optimal set of decisions can change as the query changes and as the rapidly-evolving technical landscape shifts. In this paper we present Palimpzest, a system that enables anyone to process AI-powered analytical queries simply by defining them in a declarative language. The system uses its cost optimization framework to implement the query plan with the best trade-offs between runtime, financial cost, and output data quality. We describe the workload of AI-powered analytics tasks, the optimization methods that Palimpzest uses, and the prototype system itself. We evaluate Palimpzest on tasks in Legal Discovery, Real Estate Search, and Medical Schema Matching. We show that even our simple prototype offers a range of appealing plans, including one that is 3.3x faster and 2.9x cheaper than the baseline method, while also offering better data quality. With parallelism enabled, Palimpzest can produce plans with up to a 90.3x speedup at 9.1x lower cost relative to a single-threaded GPT-4 baseline, while obtaining an F1-score within 83.5% of the baseline. These require no additional work by the user.",
+    "abs_page_sha256": "1cb7f4f1883b988e1e7a9b28bd484a5d1f33ba594552db23ddd7279552df550b",
+    "repositories": [
+      {
+        "url": "https://github.com/mitdbg/palimpzest",
+        "commit": "807ed301c4d2457ef304647e6095184556bd1e83",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "abacus",
+    "arxiv": "2505.14661",
+    "arxiv_url": "https://arxiv.org/abs/2505.14661",
+    "title": "Abacus: A Cost-Based Optimizer for Semantic Operator Systems",
+    "first_submitted": "2025/05/20",
+    "abstract": "LLMs enable an exciting new class of data processing applications over large collections of unstructured documents. Several new programming frameworks have enabled developers to build these applications by composing them out of semantic operators: a declarative set of AI-powered data transformations with natural language specifications. These include LLM-powered maps, filters, joins, etc. used for document processing tasks such as information extraction, summarization, and more. While systems of semantic operators have achieved strong performance on benchmarks, they can be difficult to optimize. An optimizer for this setting must determine how to physically implement each semantic operator in a way that optimizes the system globally. Existing optimizers are limited in the number of optimizations they can apply, and most (if not all) cannot optimize system quality, cost, or latency subject to constraint(s) on the other dimensions. In this paper we present Abacus, an extensible, cost-based optimizer which searches for the best implementation of a semantic operator system given a (possibly constrained) optimization objective. Abacus estimates operator performance by leveraging a minimal set of validation examples, prior beliefs about operator performance, and/or an LLM judge. We evaluate Abacus on document processing workloads in the biomedical and legal domains (BioDEX; CUAD) and multi-modal question answering (MMQA). We demonstrate that, on-average, systems optimized by Abacus achieve 6.7%-39.4% better quality and are 10.8x cheaper and 3.4x faster than the next best system.",
+    "abs_page_sha256": "83ec814f8e7a9f464febeee06bd882e7006c38f93c409ab2c085e75dc334a820",
+    "repositories": [
+      {
+        "url": "https://github.com/mitdbg/palimpzest/tree/807ed301c4d2457ef304647e6095184556bd1e83/abacus-research",
+        "commit": "807ed301c4d2457ef304647e6095184556bd1e83",
+        "link_source": "官方 artifact"
+      }
+    ]
+  },
+  {
+    "key": "docetl",
+    "arxiv": "2410.12189",
+    "arxiv_url": "https://arxiv.org/abs/2410.12189",
+    "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing",
+    "first_submitted": "2024/10/16",
+    "abstract": "Analyzing unstructured data has been a persistent challenge in data processing. Large Language Models (LLMs) have shown promise in this regard, leading to recent proposals for declarative frameworks for LLM-powered processing of unstructured data. However, these frameworks focus on reducing cost when executing user-specified operations using LLMs, rather than improving accuracy, executing most operations as-is (in a single LLM call). This is problematic for complex tasks and data, where LLM outputs for user-defined operations are often inaccurate, even with optimized prompts. For example, an LLM may struggle to identify {\\em all} instances of specific clauses, like force majeure or indemnification, in lengthy legal documents, requiring decomposition of the data, the task, or both.\nWe present DocETL, a system that optimizes complex document processing pipelines, while accounting for LLM shortcomings. DocETL offers a declarative interface for users to define such pipelines and uses an agent-based approach to automatically optimize them, leveraging novel agent-based rewrites (that we call rewrite directives), as well as an optimization and evaluation framework. We introduce (i) logical rewriting of pipelines, tailored for LLM-based tasks, (ii) an agent-guided plan evaluation mechanism that synthesizes and orchestrates task-specific validation prompts, and (iii) an optimization algorithm that efficiently finds promising plans, considering the latencies of agent-based plan generation and evaluation. Our evaluation on four different unstructured document analysis tasks demonstrates that DocETL finds plans with outputs that are 25 to 80% more accurate than well-engineered baselines, addressing a critical gap in unstructured data analysis. DocETL is open-source at this http URL, and as of March 2025, has amassed over 1.7k GitHub Stars, with users spanning a variety of domains.",
+    "abs_page_sha256": "e6f92769d1604ec378661891f7180790fc78956fa254c82df78af3276c601777",
+    "repositories": [
+      {
+        "url": "https://github.com/ucbepic/docetl",
+        "commit": "53d292e0b0a4a3e2bf290760998a4fa3a4c2fdc8",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "moar",
+    "arxiv": "2512.02289",
+    "arxiv_url": "https://arxiv.org/abs/2512.02289",
+    "title": "Multi-Objective Agentic Rewrites for Unstructured Data Processing",
+    "first_submitted": "2025/12/02",
+    "abstract": "One year ago, we open-sourced DocETL, a declarative system for LLM-powered data processing that, as of March 2026, has 3.7K GitHub stars and users across domains (e.g., journalism, law, medicine, policy, finance, and urban planning). In DocETL, users build pipelines by composing operators described in natural language, also known as semantic operators, with an LLM executing each operator's logic. However, due to complexity in the operator or the data it operates on, LLMs often give inaccurate results. To address this challenge, DocETL introduced rewrite directives, or abstract rules that guide LLM agents in rewriting pipelines by decomposing operators or data. For example, decomposing a single filter(\"is this email sent from an executive and discussing fraud?\") into the conjunction of two separate semantic filters may improve accuracy. However, DocETL only optimizes for accuracy, not cost. How do we optimize for both?\nWe present MOAR (Multi-Objective Agentic Rewrites), a new optimizer for DocETL. To target cost optimization, we introduce two new categories of directives and extend all three existing categories with new ones, bringing the total to over 30 directives -- more than doubling what DocETL originally had. Moreover, since operators can interact with each other unpredictably due to LLM behavior, optimizing operators or sub-pipelines individually can yield suboptimal overall plans. Recognizing this, we design a new global search algorithm that explores rewrites in the context of entire pipelines. Since the space of rewrites is infinite -- pipelines can be rewritten in many ways, and each rewritten pipeline can itself be rewritten -- our algorithm adapts a multi-armed bandit framework to prioritize which pipelines to rewrite. Across six workloads, MOAR achieves 27% higher accuracy than ABACUS, the next-best optimizer, while matching its best accuracy at 55% of its cost.",
+    "abs_page_sha256": "048067a0a78b0145c58dd080a25cabdae5b16dae902ac21129daaa4be5cd46bc",
+    "repositories": [
+      {
+        "url": "https://github.com/ucbepic/docetl",
+        "commit": "53d292e0b0a4a3e2bf290760998a4fa3a4c2fdc8",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "thalamusdb",
+    "arxiv": null,
+    "repositories": [
+      {
+        "url": "https://github.com/itrummer/thalamusdb",
+        "commit": "9e0e2f08959691133627cb922d534941d7098b32",
+        "link_source": "按系统名检索到的作者仓库；论文中未逐条核对"
+      }
+    ]
+  },
+  {
+    "key": "caesura",
+    "arxiv": "2308.03424",
+    "arxiv_url": "https://arxiv.org/abs/2308.03424",
+    "title": "CAESURA: Language Models as Multi-Modal Query Planners",
+    "first_submitted": "2023/08/07",
+    "abstract": "Traditional query planners translate SQL queries into query plans to be executed over relational data. However, it is impossible to query other data modalities, such as images, text, or video stored in modern data systems such as data lakes using these query planners. In this paper, we propose Language-Model-Driven Query Planning, a new paradigm of query planning that uses Language Models to translate natural language queries into executable query plans. Different from relational query planners, the resulting query plans can contain complex operators that are able to process arbitrary modalities. As part of this paper, we present a first GPT-4 based prototype called CEASURA and show the general feasibility of this idea on two datasets. Finally, we discuss several ideas to improve the query planning capabilities of today's Language Models.",
+    "abs_page_sha256": "16faa4ec8647a7d3cb7f8ed8d59d9c8cab73b28e748c5519158516716b3db7dc",
+    "repositories": [
+      {
+        "url": "https://github.com/DataManagementLab/caesura",
+        "commit": "00ebb188bf9e83c36ad06e9504594a74f169a23c",
+        "link_source": "按系统名检索到的作者机构仓库；论文未给链接"
+      }
+    ]
+  },
+  {
+    "key": "llm-sql-mlsys",
+    "arxiv": "2403.05821",
+    "arxiv_url": "https://arxiv.org/abs/2403.05821",
+    "title": "Optimizing LLM Queries in Relational Data Analytics Workloads",
+    "first_submitted": "2024/03/09",
+    "abstract": "Batch data analytics is a growing application for Large Language Models (LLMs). LLMs enable users to perform a wide range of natural language tasks, such as classification, entity extraction, and translation, over large datasets. However, LLM inference is highly costly and slow: for example, an NVIDIA L4 GPU running Llama3-8B can only process 6 KB of text per second, taking about a day to handle 15 GB of data; processing a similar amount of data costs around $10K on OpenAI's GPT-4o. In this paper, we propose novel techniques that can significantly reduce the cost of LLM calls for relational data analytics workloads. Our key contribution is developing efficient algorithms for reordering the rows and the fields within each row of an input table to maximize key-value (KV) cache reuse when performing LLM serving. As such, our approach can be easily applied to existing analytics systems and serving platforms. Our evaluation shows that our solution can yield up to 3.4x improvement in job completion time on a benchmark of diverse LLM-based queries using Llama 3 models. Our solution also achieves a 32% cost savings under OpenAI and Anthropic pricing models.",
+    "abs_page_sha256": "4138012c6d6037be05ff8b947be336ec9d3fa1f9d8a1a571b39e02fd083c017a",
+    "repositories": []
+  },
+  {
+    "key": "kathdb-fao",
+    "arxiv": "2609.28761",
+    "arxiv_url": "https://arxiv.org/abs/2609.28761",
+    "title": "KathDB-FAO: Optimizing Multimodal Queries through Operator Grouping and Code Reuse",
+    "first_submitted": "2026/09/23",
+    "abstract": "Advances in multimodal large language models (multimodal LLMs) allow data systems to answer analytical queries over text and images alongside relational tables, but at a significant cost for large-scale data. Existing systems reduce this cost through rewrite rules written in advance, which cannot use the logic of an individual query or the semantics of the data it processes. To address this challenge, we design, implement, and evaluate KathDB-FAO, a query evaluation system over multimodal data. KathDB-FAO decomposes a complex query into an execution plan of fine-grained steps, which we call Function-as-Operators (FAOs). To reduce execution cost, it searches for subsets of these FAOs to implement together as one function, enabling query-specific optimizations that make fewer model calls. Synthesizing these functions with a frontier model has its own cost, yet we observe that synthesized FAOs often recur across queries. To further reduce plan generation cost, KathDB-FAO uses pre-built functions and reuses functions synthesized for earlier queries. On SemBench and an additional workload, KathDB-FAO achieves quality comparable to the strongest competing system while reducing end-to-end cost per query by 76% on average.",
+    "abs_page_sha256": "7c601220b9b7a0fd4e2e65e8414fe3ee83a978323d2a6ff5c3e9083072354adb",
+    "repositories": [
+      {
+        "url": "https://github.com/xertxiao/KathDB",
+        "commit": "4b1d46e05f7ae5fd0c9a9e2a938daede0f67a5ee",
+        "link_source": "按系统名检索到的作者仓库；论文中未逐条核对"
+      }
+    ]
+  },
+  {
+    "key": "cadenza",
+    "arxiv": "2606.29151",
+    "arxiv_url": "https://arxiv.org/abs/2606.29151",
+    "title": "CADENZA: Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing",
+    "first_submitted": "2026/06/28",
+    "abstract": "Semantic query processing engines (SQPEs) extend relational query processing with semantic operators that are executed via model inference over unstructured data. Optimizing such queries is inherently multi-objective: model inference dominates latency and monetary cost, and outputs are stochastic and backend-dependent, so quality must be optimized alongside efficiency. Existing SQPE optimizers do not expose each semantic operator instance's intermediate task outputs as a relational optimization object, leaving optimization unable to filter, reorder, route, threshold, or jointly tune them. We present CADENZA, which compiles each semantic operator instance--a template bound to a natural-language intent--into an intent-specific plan space of typed task DAGs and selects an executable plan under user-specified quality-latency-cost trade-offs. CADENZA introduces task-extended relational algebra (TxRA), a conservative extension of relational algebra with task-specific operators. The logical planner synthesizes seed TxRA plans, applies structural rewrites whose safety conditions are checked from operator dependencies, and enumerates semantics-guided alternatives from alternative-generation templates. The physical planner compiles each task-specific operator into a router over heterogeneous backends and jointly tunes routing cutpoints, backend parameters, and relational thresholds with Bayesian optimization. On SemBench, CADENZA improves the scenario-level averages of quality, latency, and cost by up to +0.49, 165.7x, and 310.3x, respectively, relative to state-of-the-art.",
+    "abs_page_sha256": "c9981c630029ef467011ab76be58e93ad92aa8afc2da154db07239e99ff7915f",
+    "repositories": [
+      {
+        "url": "https://github.com/SemBench/SemBench",
+        "commit": "c4b2bcff3a5907148f504cfb6faea4c6d3f90e8f",
+        "link_source": "论文引用的数据仓库"
+      }
+    ]
+  },
+  {
+    "key": "nl2pipe",
+    "arxiv": "2606.04641",
+    "arxiv_url": "https://arxiv.org/abs/2606.04641",
+    "title": "Bridge the Last-Mile Gap to Semantic Analytics: Compiling Natural-Language Queries into Semantic Operator Pipelines",
+    "first_submitted": "2026/06/03",
+    "abstract": "Automated AI workflows increasingly rely on natural-language reasoning over heterogeneous data, but lack a practical way to execute it through optimized semantic data systems. Recent semantic operator systems, such as Palimpzest and LOTUS, expose declarative operators for filtering, joining, mapping, and aggregating over tables, text, and images using natural-language predicates. However, these systems require users to manually choose operators, order them, write predicates, and adapt the pipeline to backend-specific APIs. This is difficult for non-experts, brittle across backends, and infeasible for automated workflows where queries and data vary at runtime. We present NL2Pipe, a middleware system that compiles natural-language questions into executable semantic operator pipelines, treating this as a three-phase compilation problem. First, a Query-Data Linker grounds question entities against the actual data and discovers implicit bridge entities needed to connect tables, text, and images. Second, a Semantic Planner produces a backend-agnostic action plan of semantic operators and natural-language predicates. Third, a Code Generator translates the plan into executable code for a target backend using an auto-generated reference document capturing operator signatures, example pipelines, and backend constraints. This separates data-aware reasoning from backend-specific code generation, letting the same planning logic support multiple backends. Evaluation shows NL2Pipe substantially outperforms baselines on complex cross-source workloads (e.g., up to 60% higher F1) while maintaining bounded cost and competitive latency. This demonstrates that automatic compilation from natural language to semantic operator pipelines is both practical and effective for bringing semantic analytics to non-expert users and automated AI workflows.",
+    "abs_page_sha256": "8df8f3bfaa37fa12f2c7dc4a15d8e68a988ea9cf0488ec32b65cbaaaf9e74252",
+    "repositories": [
+      {
+        "url": "https://github.com/dongw-netize/NL2Pipe-Compiling-Natural-Language-Questions-into-Semantic-Operator-Pipelines",
+        "commit": "9abf5cbfe98654453bb1073cc80a9750f78c02e5",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "aero",
+    "arxiv": null,
+    "repositories": []
+  },
+  {
+    "key": "eleet",
+    "arxiv": "2410.22522",
+    "arxiv_url": "https://arxiv.org/abs/2410.22522",
+    "title": "Efficient Learned Query Execution over Text and Tables [Technical Report]",
+    "first_submitted": "2024/10/29",
+    "abstract": "In this paper, we present ELEET, a novel execution engine that allows one to seamlessly query and process text as a first-class citizen along with tables. To enable such a seamless integration of text and tables, ELEET leverages learned multi-modal operators (MMOps) such as joins and unions that seamlessly combine structured with unstructured textual data. While large language models (LLM) such as GPT-4 are interesting candidates to enable such learned multimodal operations, we deliberately do not follow this trend to enable MMOps, since it would result in high overhead at query runtime. Instead, to enable MMOps, ELEET comes with a more efficient small language model (SLM) that is targeted to extract structured data from text. Thanks to our novel architecture and pre-training procedure, the ELEET-model enables high-accuracy extraction with low overheads. In our evaluation, we compare query execution based on ELEET to baselines leveraging LLMs such as GPT-4 and show that ELEET can speed up multi-modal queries over tables and text by up to 575x without sacrificing accuracy.",
+    "abs_page_sha256": "d3d58bcaf60befa1386197d6aa500ae6578e2a7cb3ca3b671e2eea4b2bb98f7e",
+    "repositories": [
+      {
+        "url": "https://github.com/DataManagementLab/eleet",
+        "commit": "4c2c70ae70fb91bd0899c2d79cb4cb141b0f503a",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "suql",
+    "arxiv": "2311.09818",
+    "arxiv_url": "https://arxiv.org/abs/2311.09818",
+    "title": "SUQL: Conversational Search over Structured and Unstructured Data with Large Language Models",
+    "first_submitted": "2023/11/16",
+    "abstract": "While most conversational agents are grounded on either free-text or structured knowledge, many knowledge corpora consist of hybrid sources. This paper presents the first conversational agent that supports the full generality of hybrid data access for large knowledge corpora, through a language we developed called SUQL (Structured and Unstructured Query Language). Specifically, SUQL extends SQL with free-text primitives (summary and answer), so information retrieval can be composed with structured data accesses arbitrarily in a formal, succinct, precise, and interpretable notation. With SUQL, we propose the first semantic parser, an LLM with in-context learning, that can handle hybrid data sources.\nOur in-context learning-based approach, when applied to the HybridQA dataset, comes within 8.9% exact match and 7.1% F1 of the SOTA, which was trained on 62K data samples. More significantly, unlike previous approaches, our technique is applicable to large databases and free-text corpora. We introduce a dataset consisting of crowdsourced questions and conversations on Yelp, a large, real restaurant knowledge base with structured and unstructured data. We show that our few-shot conversational agent based on SUQL finds an entity satisfying all user requirements 90.3% of the time, compared to 63.4% for a baseline based on linearization.",
+    "abs_page_sha256": "9d2455010f6dc21885a113d4eaa378fa90a55d3e3cfb40b968a0913b03d38942",
+    "repositories": [
+      {
+        "url": "https://github.com/stanford-oval/suql",
+        "commit": "03829c0e34155bc5574327b1e663fa5e3ca45a52",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "blendsql",
+    "arxiv": "2402.17882",
+    "arxiv_url": "https://arxiv.org/abs/2402.17882",
+    "title": "BlendSQL: A Scalable Dialect for Unifying Hybrid Question Answering in Relational Algebra",
+    "first_submitted": "2024/02/27",
+    "abstract": "Many existing end-to-end systems for hybrid question answering tasks can often be boiled down to a \"prompt-and-pray\" paradigm, where the user has limited control and insight into the intermediate reasoning steps used to achieve the final result. Additionally, due to the context size limitation of many transformer-based LLMs, it is often not reasonable to expect that the full structured and unstructured context will fit into a given prompt in a zero-shot setting, let alone a few-shot setting. We introduce BlendSQL, a superset of SQLite to act as a unified dialect for orchestrating reasoning across both unstructured and structured data. For hybrid question answering tasks involving multi-hop reasoning, we encode the full decomposed reasoning roadmap into a single interpretable BlendSQL query. Notably, we show that BlendSQL can scale to massive datasets and improve the performance of end-to-end systems while using 35% fewer tokens. Our code is available and installable as a package at this https URL.",
+    "abs_page_sha256": "4bf751dbf95bbf69e7ac818b6a9bfbf04f5080710d8829c9517a66e97e4a8d6c",
+    "repositories": [
+      {
+        "url": "https://github.com/parkervg/blendsql",
+        "commit": "8a75abeca64b662aa8d1d7b5fdb52d3e31b052db",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "flockmtl",
+    "arxiv": "2504.01157",
+    "arxiv_url": "https://arxiv.org/abs/2504.01157",
+    "title": "Beyond Quacking: Deep Integration of Language Models and RAG into DuckDB",
+    "first_submitted": "2025/04/01",
+    "abstract": "Knowledge-intensive analytical applications retrieve context from both structured tabular data and unstructured, text-free documents for effective decision-making. Large language models (LLMs) have made it significantly easier to prototype such retrieval and reasoning data pipelines. However, implementing these pipelines efficiently still demands significant effort and has several challenges. This often involves orchestrating heterogeneous data systems, managing data movement, and handling low-level implementation details, e.g., LLM context management.\nTo address these challenges, we introduce FlockMTL: an extension for DBMSs that deeply integrates LLM capabilities and retrieval-augmented generation (RAG). FlockMTL includes model-driven scalar and aggregate functions, enabling chained predictions through tuple-level mappings and reductions. Drawing inspiration from the relational model, FlockMTL incorporates: (i) cost-based optimizations, which seamlessly apply techniques such as batching and caching; and (ii) resource independence, enabled through novel SQL DDL abstractions: PROMPT and MODEL, introduced as first-class schema objects alongside TABLE. FlockMTL streamlines the development of knowledge-intensive analytical applications, and its optimizations ease the implementation burden.",
+    "abs_page_sha256": "19211c48f72a963b482acd4cb1710b574e57f77b97683e04de28618eceab2cb7",
+    "repositories": [
+      {
+        "url": "https://github.com/dsg-polymtl/flockmtl",
+        "commit": "832f351fd7776b69cb4498ff0f4870a47e89810b",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "uqe",
+    "arxiv": "2407.09522",
+    "arxiv_url": "https://arxiv.org/abs/2407.09522",
+    "title": "UQE: A Query Engine for Unstructured Databases",
+    "first_submitted": "2024/06/23",
+    "abstract": "Analytics on structured data is a mature field with many successful methods. However, most real world data exists in unstructured form, such as images and conversations. We investigate the potential of Large Language Models (LLMs) to enable unstructured data analytics. In particular, we propose a new Universal Query Engine (UQE) that directly interrogates and draws insights from unstructured data collections. This engine accepts queries in a Universal Query Language (UQL), a dialect of SQL that provides full natural language flexibility in specifying conditions and operators. The new engine leverages the ability of LLMs to conduct analysis of unstructured data, while also allowing us to exploit advances in sampling and optimization techniques to achieve efficient and accurate query execution. In addition, we borrow techniques from classical compiler theory to better orchestrate the workflow between sampling methods and foundation model calls. We demonstrate the efficiency of UQE on data analytics across different modalities, including images, dialogs and reviews, across a range of useful query types, including conditional aggregation, semantic retrieval and abstraction aggregation.",
+    "abs_page_sha256": "a1e7accf27a1fd2386b7c95b30948ff03f5b4e8219a3f483ca3efdcc4cc9b5be",
+    "repositories": []
+  },
+  {
+    "key": "zendb",
+    "arxiv": "2405.04674",
+    "arxiv_url": "https://arxiv.org/abs/2405.04674",
+    "title": "Towards Accurate and Efficient Document Analytics with Large Language Models",
+    "first_submitted": "2024/05/07",
+    "abstract": "Unstructured data formats account for over 80% of the data currently stored, and extracting value from such formats remains a considerable challenge. In particular, current approaches for managing unstructured documents do not support ad-hoc analytical queries on document collections. Moreover, Large Language Models (LLMs) directly applied to the documents themselves, or on portions of documents through a process of Retrieval-Augmented Generation (RAG), fail to provide high accuracy query results, and in the LLM-only case, additionally incur high costs. Since many unstructured documents in a collection often follow similar templates that impart a common semantic structure, we introduce ZenDB, a document analytics system that leverages this semantic structure, coupled with LLMs, to answer ad-hoc SQL queries on document collections. ZenDB efficiently extracts semantic hierarchical structures from such templatized documents, and introduces a novel query engine that leverages these structures for accurate and cost-effective query execution. Users can impose a schema on their documents, and query it, all via SQL. Extensive experiments on three real-world document collections demonstrate ZenDB's benefits, achieving up to 30% cost savings compared to LLM-based baselines, while maintaining or improving accuracy, and surpassing RAG-based baselines by up to 61% in precision and 80% in recall, at a marginally higher cost.",
+    "abs_page_sha256": "7254083d90a00046c4e6792a750d8f18adbd5d3eb4bcbefe68087af44c920e7a",
+    "repositories": []
+  },
+  {
+    "key": "luna",
+    "arxiv": "2409.00847",
+    "arxiv_url": "https://arxiv.org/abs/2409.00847",
+    "title": "The Design of an LLM-powered Unstructured Analytics System",
+    "first_submitted": "2024/09/01",
+    "abstract": "LLMs demonstrate an uncanny ability to process unstructured data, and as such, have the potential to go beyond search and run complex, semantic analyses at scale. We describe the design of an unstructured analytics system, Aryn, and the tenets and use cases that motivate its design. With Aryn, users specify queries in natural language and the system automatically determines a semantic plan and executes it to compute an answer from a large collection of unstructured documents. At the core of Aryn is Sycamore, a declarative document processing engine, that provides a reliable distributed abstraction called DocSets. Sycamore allows users to analyze, enrich, and transform complex documents at scale. Aryn includes Luna, a query planner that translates natural language queries to Sycamore scripts, and DocParse, which takes raw PDFs and document images, and converts them to DocSets for downstream processing. We show how these pieces come together to achieve better accuracy than RAG on analytics queries over real world reports from the National Transportation Safety Board (NTSB). Also, given current limitations of LLMs, we argue that an analytics system must provide explainability to be practical, and show how Aryn's user interface does this to help build trust.",
+    "abs_page_sha256": "34e27cdc3ee2862cbd458075f2eb0669865521a82d2b39c213a608bd01bf5b5f",
+    "repositories": [
+      {
+        "url": "https://github.com/aryn-ai/sycamore",
+        "commit": "377d432bc612406c88e9b6d4fbbd39986676b4fc",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "galois",
+    "arxiv": "2304.00472",
+    "arxiv_url": "https://arxiv.org/abs/2304.00472",
+    "title": "Querying Large Language Models with SQL",
+    "first_submitted": "2023/04/02",
+    "abstract": "In many use-cases, information is stored in text but not available in structured data. However, extracting data from natural language text to precisely fit a schema, and thus enable querying, is a challenging task. With the rise of pre-trained Large Language Models (LLMs), there is now an effective solution to store and use information extracted from massive corpora of text documents. Thus, we envision the use of SQL queries to cover a broad range of data that is not captured by traditional databases by tapping the information in LLMs. To ground this vision, we present Galois, a prototype based on a traditional database architecture, but with new physical operators for querying the underlying LLM. The main idea is to execute some operators of the the query plan with prompts that retrieve data from the LLM. For a large class of SQL queries, querying LLMs returns well structured relations, with encouraging qualitative results. Preliminary experimental results make pre-trained LLMs a promising addition to the field of database systems, introducing a new direction for hybrid query processing. However, we pinpoint several research challenges that must be addressed to build a DBMS that exploits LLMs. While some of these challenges necessitate integrating concepts from the NLP literature, others offer novel research avenues for the DB community.",
+    "abs_page_sha256": "fd9023b832baca6e855f21be7dd37d7b18b103895448317b56199905aaf38725",
+    "repositories": []
+  },
+  {
+    "key": "nirvana",
+    "arxiv": "2511.19830",
+    "arxiv_url": "https://arxiv.org/abs/2511.19830",
+    "title": "Beyond Relational: Semantic-Aware Multi-Modal Analytics with LLM-Native Query Optimization",
+    "first_submitted": "2025/11/25",
+    "abstract": "Multi-modal analytical processing has the potential to transform applications in e-commerce, healthcare, entertainment, and beyond. However, real-world adoption remains elusive due to the limited ability of traditional relational query operators to capture query semantics. The emergence of foundation models, particularly the large language models (LLMs), opens up new opportunities to develop flexible, semantic-aware data analytics systems that transcend the relational paradigm.\nWe present Nirvana, a multi-modal data analytics framework that incorporates programmable semantic operators while leveraging both logical and physical query optimization strategies, tailored for LLM-driven semantic query processing. Nirvana addresses two key challenges. First, it features an agentic logical optimizer that uses natural language-specified transformation rules and random-walk-based search to explore vast spaces of semantically equivalent query plans -- far beyond the capabilities of conventional optimizers. Second, it introduces a cost-aware physical optimizer that selects the most effective LLM backend for each operator using a novel improvement-score metric. To further enhance efficiency, Nirvana incorporates computation reuse and evaluation pushdown techniques guided by model capability hypotheses. Experimental evaluations on three real-world benchmarks demonstrate that Nirvana is able to reduce end-to-end runtime by 10%--85% and reduces system processing costs by 76% on average, outperforming state-of-the-art systems at both efficiency and scalability.",
+    "abs_page_sha256": "fe15f48f04b8a8dbc3552bb9f5ed6c1512ea285f002a9138570100d70d847caa",
+    "repositories": [
+      {
+        "url": "https://github.com/JunHao-Zhu/nirvana",
+        "commit": "7ef95e614a97836c37899a23db7f94e4fa836a35",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "binder",
+    "arxiv": "2210.02875",
+    "arxiv_url": "https://arxiv.org/abs/2210.02875",
+    "title": "Binding Language Models in Symbolic Languages",
+    "first_submitted": "2022/10/06",
+    "abstract": "Though end-to-end neural approaches have recently been dominating NLP tasks in both performance and ease-of-use, they lack interpretability and robustness. We propose Binder, a training-free neural-symbolic framework that maps the task input to a program, which (1) allows binding a unified API of language model (LM) functionalities to a programming language (e.g., SQL, Python) to extend its grammar coverage and thus tackle more diverse questions, (2) adopts an LM as both the program parser and the underlying model called by the API during execution, and (3) requires only a few in-context exemplar annotations. Specifically, we employ GPT-3 Codex as the LM. In the parsing stage, with only a few in-context exemplars, Codex is able to identify the part of the task input that cannot be answerable by the original programming language, correctly generate API calls to prompt Codex to solve the unanswerable part, and identify where to place the API calls while being compatible with the original grammar. In the execution stage, Codex can perform versatile functionalities (e.g., commonsense QA, information extraction) given proper prompts in the API calls. Binder achieves state-of-the-art results on WikiTableQuestions and TabFact datasets, with explicit output programs that benefit human debugging. Note that previous best systems are all finetuned on tens of thousands of task-specific samples, while Binder only uses dozens of annotations as in-context exemplars without any training. Our code is available at this https URL .",
+    "abs_page_sha256": "db8a8c5d6f23e01e53ab1b5b55ed978b9d8693b467b8a788dafbfbe2d50adf24",
+    "repositories": [
+      {
+        "url": "https://github.com/HKUNLP/Binder",
+        "commit": "287ab979506a1294c1c7cd6a1f34776f9dc832cf",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "weaver",
+    "arxiv": "2505.18961",
+    "arxiv_url": "https://arxiv.org/abs/2505.18961",
+    "title": "Weaver: Interweaving SQL and LLM for Table Reasoning",
+    "first_submitted": "2025/05/25",
+    "abstract": "Querying tables with unstructured data is challenging due to the presence of text (or image), either embedded in the table or in external paragraphs, which traditional SQL struggles to process, especially for tasks requiring semantic reasoning. While Large Language Models (LLMs) excel at understanding context, they face limitations with long input sequences. Existing approaches that combine SQL and LLMs typically rely on rigid, predefined work-flows, limiting their adaptability to complex queries. To address these issues, we introduce Weaver , a modular pipeline that dynamically integrates SQL and LLMs for table-based question answering (TableQA). Weaver generates a flexible, step-by-step plan that combines SQL for structured data retrieval with LLMs for semantic processing. By decomposing complex queries into manageable subtasks, Weaver improves accuracy and generalization. Our experiments show that Weaver consistently outperforms state-of-the-art methods across four TableQA datasets, reducing both API calls and error rates. The code, along with other associated scripts, are available at this https URL.",
+    "abs_page_sha256": "c85c6519d8cd985e6cf748d997390cb3907c58df286af0abfcfbe0729c3e325e",
+    "repositories": [
+      {
+        "url": "https://coral-lab-asu.github.io/weaver",
+        "commit": null,
+        "link_source": "论文给出的项目页"
+      }
+    ]
+  },
+  {
+    "key": "larch",
+    "arxiv": "2606.07923",
+    "arxiv_url": "https://arxiv.org/abs/2606.07923",
+    "title": "Larch: Learned Query Optimization for Semantic Predicates",
+    "first_submitted": "2026/06/06",
+    "abstract": "With the advent of Large Language Models (LLMs), many database systems introduced semantic operators that enabled analytical queries over unstructured data (e.g. text, images, videos). Semantic operators typically incur high inference costs and latencies making semantic (AI) SQL queries challenging to apply on large scale datasets. At the same time, their semantic nature leads database engines to treat them as black boxes, making AISQL queries difficult to optimize. In this paper, we introduce Larch, a framework for optimizing the execution of semantic filters in AI SQL queries. Larch was inspired by two key observations: i) the high latency of semantic operators leaves significant room for computationally-heavy runtime optimization techniques, ii) unstructured data are typically accompanied by semantic information in the form of embeddings allowing for efficient semantic comparisons between AI_FILTER prompts and data values. Based on these two key observations, we present two Larch variants: Larch-A2C and Larch-Sel. Larch-A2C encodes arbitrary semantic filters expression tree using an embedding-augmented Gated Graph Neural Network and formulates the filter evaluation order as a Markov decision process. In contrast, Larch-Sel leverages a supervised learning model to predict filter selectivities, subsequently applying dynamic programming to find a near-optimal evaluation order for each input row. Evaluated across diverse real-world datasets and comprehensive synthetic workloads, both Larch variants always outperform existing semantic filter optimization techniques in terms of token usage. Our results demonstrate that Larch is robust across diverse workloads, reducing total token cost overhead by 3x-19x compared to Palimpzest and Quest.",
+    "abs_page_sha256": "d41d3fc7d2d78e612e70291554f4004802fb0ae2e84568b0cac679b7b325638a",
+    "repositories": []
+  },
+  {
+    "key": "llmjoins",
+    "arxiv": "2510.08489",
+    "arxiv_url": "https://arxiv.org/abs/2510.08489",
+    "title": "Implementing Semantic Join Operators Efficiently",
+    "first_submitted": "2025/10/09",
+    "abstract": "Semantic query processing engines often support semantic joins, enabling users to match rows that satisfy conditions specified in natural language. Such join conditions can be evaluated using large language models (LLMs) that solve novel tasks without task-specific training.\nCurrently, many semantic query processing engines implement semantic joins via nested loops, invoking the LLM to evaluate the join condition on row pairs. Instead, this paper proposes a novel algorithm, inspired by the block nested loops join operator implementation in traditional database systems. The proposed algorithm integrates batches of rows from both input tables into a single prompt. The goal of the LLM invocation is to identify all matching row pairs in the current input. The paper introduces formulas that can be used to optimize the size of the row batches, taking into account constraints on the size of the LLM context window (limiting both input and output size). An adaptive variant of the proposed algorithm refers to cases in which the size of the output is difficult to estimate. A formal analysis of asymptotic processing costs, as well as empirical results, demonstrates that the proposed approach reduces costs significantly and performs well compared to join implementations used by recent semantic query processing engines.",
+    "abs_page_sha256": "cb0e323a0dd407c3f32d70240f3585854c29e78ba3f256c0e64ee8688b977f16",
+    "repositories": [
+      {
+        "url": "https://github.com/itrummer/llmjoins",
+        "commit": "8511485ed88e43c2b99de8fbd2976d4316c16373",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "fdj",
+    "arxiv": "2512.05399",
+    "arxiv_url": "https://arxiv.org/abs/2512.05399",
+    "title": "Featurized-Decomposition Join: Low-Cost Semantic Joins with Guarantees",
+    "first_submitted": "2025/12/05",
+    "abstract": "Large Language Models (LLMs) are being increasingly used within data systems to process large datasets with text fields. A broad class of such tasks involves a semantic join-joining two tables based on a natural language predicate per pair of tuples, evaluated using an LLM. Semantic joins generalize tasks such as entity matching and record categorization, as well as more complex text understanding tasks. A naive implementation is expensive as it requires invoking an LLM for every pair of rows in the cross product. Existing approaches mitigate this cost by first applying embedding-based semantic similarity to filter candidate pairs, deferring to an LLM only when similarity scores are deemed inconclusive. However, these methods yield limited gains in practice, since semantic similarity may not reliably predict the join outcome. We propose Featurized-Decomposition Join (FDJ for short), a novel approach for performing semantic joins that significantly reduces cost while preserving quality. FDJ automatically extracts features and combines them into a logical expression in conjunctive normal form that we call a featurized decomposition to effectively prune out non-matching pairs. A featurized decomposition extracts key information from text records and performs inexpensive comparisons on the extracted features. We show how to use LLMs to automatically extract reliable features and compose them into logical expressions while providing statistical guarantees on the output result-an inherently challenging problem due to dependencies among features. Experiments on real-world datasets show up to 10 times reduction in cost compared with the state-of-the-art while providing the same quality guarantees.",
+    "abs_page_sha256": "b5867d79f38084640f828968b8ab3b339b6397802c20a716721989cf958a2152",
+    "repositories": []
+  },
+  {
+    "key": "sembaker",
+    "arxiv": "2608.06677",
+    "arxiv_url": "https://arxiv.org/abs/2608.06677",
+    "title": "From Interpretation to Compilation: A Compilation-Based Execution Engine for Semantic Operator Systems",
+    "first_submitted": "2026/08/07",
+    "abstract": "Semantic operators extend data processing with natural-language predicates. Existing semantic operator systems commonly execute these operators through interpretation-based execution: for every data item, an LLM interprets the operator predicate and directly produces the corresponding result. Although expressive, this design places expensive model invocations inside the data-processing loop, causing latency and monetary cost to scale with input cardinality.\nWe present SemBaker, a compilation-based execution engine for semantic operator systems. SemBaker acts as an external plugin rather than replacing a backend's native execution. For selected semantic filters, maps, and joins, it invokes an LLM once to generate a deterministic Python function and executes that function locally without per-item LLM calls. A cost-based optimizer routes each operator to native or compiled execution, while compilation overlaps pipeline execution. SemBaker supports Palimpzest, LOTUS, Nirvana, and DocETL through thin adapters. Across three 200-query QA workloads, SemBaker achieves average speedups of 4.8 to 6.3 times and average cost reductions of 5.4 to 10.7 times, with competitive processing quality.",
+    "abs_page_sha256": "0bdeda225818c364d102907ad63c0c9d28ffb742abc4ecb227643e98fff2ce3c",
+    "repositories": [
+      {
+        "url": "https://github.com/iDB-Research-Group/SemBaker",
+        "commit": "f15bcaafdcb94c2f52def18ef7889810313e8194",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "compilation-vision",
+    "arxiv": "2607.13407",
+    "arxiv_url": "https://arxiv.org/abs/2607.13407",
+    "title": "From Interpretation to Compilation: Compilation-Based Execution of Semantic Operators [Vision]",
+    "first_submitted": "2026/07/15",
+    "abstract": "Semantic operator systems extend data processing with natural-language interfaces, supporting operations such as semantic filtering, mapping, and joining. Existing systems commonly execute these operators through interpretation-based execution: for each row, record, or candidate pair, an LLM is invoked to interpret the semantic intent and produce an output. Although expressive, this places expensive LLM calls inside the data-processing loop, causing high latency, monetary cost, and limited scalability.\nWe propose compilation-based execution of semantic operators. Instead of using an LLM as a runtime interpreter for every data item, we invoke it once during compilation to translate a semantic operator specification into deterministic executable code. The generated code serves as a compiled physical operator that approximates the behavior of the original LLM-based operator and runs locally over the dataset without per-row or per-pair LLM calls.\nWe instantiate this approach for semantic filter, semantic map, and semantic join operators, compare it with LLM-based interpreted execution, and integrate it into an existing semantic operator system. Preliminary results show that compilation-based execution substantially reduces execution time and LLM calls while preserving much of the output quality. More broadly, we argue that semantic operator systems should treat LLMs not only as runtime executors, but also as semantic compilers that generate efficient executable plans, opening new research opportunities at the intersection of database query processing, program synthesis, and LLM-powered data systems.",
+    "abs_page_sha256": "f59ec38ba7e4969c1ac0e735d495cb806c0489b4086d8e99a060db4c368f3554",
+    "repositories": []
+  },
+  {
+    "key": "kalypso",
+    "arxiv": "2607.23815",
+    "arxiv_url": "https://arxiv.org/abs/2607.23815",
+    "title": "Kalypso: Relational LLM Serving",
+    "first_submitted": "2026/07/26",
+    "abstract": "Large language models are increasingly used as semantic operators for filtering, extracting, ranking, joining, and transforming unstructured data. Existing semantic query processing systems invoke request-centric LLM serving systems that are unaware of the query plan, leaving substantial performance opportunities unused. This paper introduces relational LLM serving, an abstraction that makes LLM serving aware of semantic query structure while preserving query semantics and output accuracy. The key opportunity is pipelined execution across semantic operators: when intermediate tuples flow directly from one operator to the next, their KV-cache state can be reused instead of recomputed.\nWe present Kalypso, a relational LLM serving system that exposes an API for semantic query plans and executes them using an adaptive, memory-aware scheduling algorithm. Kalypso addresses a new online scheduling problem in which pipelined operator execution is coupled with GPU memory pressure management to reuse KV-cache state in the serving engine before eviction. Its scheduler continuously adjusts memory allocations to balance upstream parallelism, downstream progress, and GPU utilization. Our evaluation shows that Kalypso improves query completion time over baselines using request-centric LLM serving, with speedups up to 4.57x across diverse workloads, demonstrating that query-aware LLM serving can substantially improve the efficiency of semantic query execution.",
+    "abs_page_sha256": "95e4c5d6bc41e45555e71d3aa4f7a0decc885b11df089773d77f7caf5ff3ff1d",
+    "repositories": []
+  },
+  {
+    "key": "plans-change-answers",
+    "arxiv": "2610.08089",
+    "arxiv_url": "https://arxiv.org/abs/2610.08089",
+    "title": "When Plans Change Answers: Formalizing Cost-Accuracy Optimization for Semantic Queries",
+    "first_submitted": "2026/10/06",
+    "abstract": "In semantic query engines, predicates are evaluated by machine-learned models, and the choice of a query plan affects not only the cost of a query but also its result. Existing systems either apply a fixed threshold to each semantic operator or tune accuracy per operator, without accounting for how errors propagate through joins. We give a formal problem definition for cost-accuracy optimization of such queries. Our starting point is the calibrated confidence that decision models such as Jev attach to each decision. It yields an expected error for every decision; weighting these errors by each decision's contribution to the output (in the simplest case, its fan-out) gives the expected output quality of a plan without any labeled data, and the same computation in reverse turns an output-level accuracy target into a price on each base or intermediate tuple. Building on this, we define an oracle semantics for relational algebra with semantic operators, physical plans as pairs of a logical plan and a decision policy, declarative output-level targets, and a hierarchy of plan equivalence. We show that accuracy is plan-invariant under pointwise-deterministic policies, and that selection pushdown is not quality-sound when escalation bands are calibrated on the plan's own candidates. Expected quality can be computed in polynomial time under bag semantics; under set semantics it follows the dichotomy of tuple-independent probabilistic databases when every relation carries a semantic predicate. Choosing which tuples to drop is NP-hard, while the optimization problem decomposes into per-tuple decisions through two Lagrange multipliers, and, with what we call confidence-centric skipping, tuples that can no longer affect the target are skipped without being scored. Simulations on a synthetic workload illustrate these effects; an evaluation on real engines is left for future work.",
+    "abs_page_sha256": "b7b6f023b0af79f128d81bd6d41330fdfa4501650bbdafb0befacf6e95e14974",
+    "repositories": []
+  },
+  {
+    "key": "sic",
+    "arxiv": null,
+    "repositories": []
+  },
+  {
+    "key": "evaporate",
+    "arxiv": "2304.09433",
+    "arxiv_url": "https://arxiv.org/abs/2304.09433",
+    "title": "Language Models Enable Simple Systems for Generating Structured Views of Heterogeneous Data Lakes",
+    "first_submitted": "2023/04/19",
+    "abstract": "A long standing goal of the data management community is to develop general, automated systems that ingest semi-structured documents and output queryable tables without human effort or domain specific customization. Given the sheer variety of potential documents, state-of-the art systems make simplifying assumptions and use domain specific training. In this work, we ask whether we can maintain generality by using large language models (LLMs). LLMs, which are pretrained on broad data, can perform diverse downstream tasks simply conditioned on natural language task descriptions.\nWe propose and evaluate EVAPORATE, a simple, prototype system powered by LLMs. We identify two fundamentally different strategies for implementing this system: prompt the LLM to directly extract values from documents or prompt the LLM to synthesize code that performs the extraction. Our evaluations show a cost-quality tradeoff between these two approaches. Code synthesis is cheap, but far less accurate than directly processing each document with the LLM. To improve quality while maintaining low cost, we propose an extended code synthesis implementation, EVAPORATE-CODE+, which achieves better quality than direct extraction. Our key insight is to generate many candidate functions and ensemble their extractions using weak supervision. EVAPORATE-CODE+ not only outperforms the state-of-the art systems, but does so using a sublinear pass over the documents with the LLM. This equates to a 110x reduction in the number of tokens the LLM needs to process, averaged across 16 real-world evaluation settings of 10k documents each.",
+    "abs_page_sha256": "ea659d539d567f2f827125939a5a91161c9bbffb296452b930ca46a44cedd258",
+    "repositories": []
+  },
+  {
+    "key": "dataagentbench",
+    "arxiv": "2603.20576",
+    "arxiv_url": "https://arxiv.org/abs/2603.20576",
+    "title": "Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents",
+    "first_submitted": "2026/03/21",
+    "abstract": "However, building reliable data agents remains difficult because real enterprise data is fragmented across many heterogeneous database systems, with duplicated and inconsistent data, and key information often buried in unstructured text, requiring agents to go beyond just writing SQL or data science scripts to answer questions. Existing benchmarks tackle only individual pieces of this end-to-end workflow (e.g., text-to-SQL over a single database) and are increasingly saturated and contaminated. We present a new benchmark for LLM agents, the Data Agent Benchmark (DAB), grounded in a study of enterprises building production data agents across six industries. DAB comprises 104 queries across 17 datasets and 4 database management systems. On DAB, the best state-of-the-art agent achieves only 57% pass@1. We analyze agent failure modes and distill takeaways for future data-agent development. Our benchmark and experiment code are published at this http URL.",
+    "abs_page_sha256": "997412f566dedff7a53075d309d31988724b04b18534a4144ce5ec3000ec52f2",
+    "repositories": [
+      {
+        "url": "https://github.com/ucbepic/DataAgentBench",
+        "commit": "ac11ab6854dec9e1add75720850b0c891e2ff6b5",
+        "link_source": "论文原文"
+      }
+    ]
+  },
+  {
+    "key": "kramabench",
+    "arxiv": "2506.06541",
+    "arxiv_url": "https://arxiv.org/abs/2506.06541",
+    "title": "KramaBench: A Benchmark for AI Systems on Data-to-Insight Pipelines over Data Lakes",
+    "first_submitted": "2025/06/06",
+    "abstract": "Discovering insights from a real-world data lake potentially containing unclean, semi-structured, and unstructured data requires a variety of data processing tasks, ranging from extraction and cleaning to integration, analysis, and modeling. This process often also demands domain knowledge and project-specific insight. While AI models have shown remarkable results in reasoning and code generation, their abilities to design and execute complex pipelines that solve these data-lake-to-insight challenges remain unclear. We introduce KramaBench which consists of 104 manually curated and solved challenges spanning 1700 files, 24 data sources, and 6 domains. KramaBench focuses on testing the end-to-end capabilities of AI systems to solve challenges which require automated orchestration of different data tasks. KramaBench also features a comprehensive evaluation framework assessing the pipeline design and individual data task implementation abilities of AI systems. We evaluate 8 LLMs using our single-agent reference framework DS-Guru, alongside both open- and closed-source single- and multi-agent systems, and find that while current agentic systems may handle isolated data-science tasks and generate plausible draft pipelines, they struggle with producing working end-to-end pipelines. On KramaBench, the best system reaches only 55% end-to-end accuracy in the full data-lake setting. Even with perfect retrieval, the accuracy tops out at 62%. Leading LLMs can identify up to 42% of important data tasks but can only fully implement 20% of individual data tasks. Our code, reference framework, and data are available at this https URL.",
+    "abs_page_sha256": "4447ba0b5fedba2f5361d20f8a33d5fd8777725cf5d31cfe0127b9de7b28474d",
+    "repositories": []
+  },
+  {
+    "key": "carnot",
+    "arxiv": null,
+    "repositories": []
+  }
+]
