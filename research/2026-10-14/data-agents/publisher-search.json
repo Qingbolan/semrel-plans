@@ -1,0 +1,188 @@
+[
+  {
+    "index": 10,
+    "original": "Large Language Models are Versatile Decomposers: Decomposing Evidence and Questions for Table-based Reasoning",
+    "candidates": [
+      {
+        "title": "Large Language Models are Versatile Decomposers: Decomposing Evidence and Questions for Table-based Reasoning",
+        "doi": "10.1145/3539618.3591708",
+        "year": 2023,
+        "venue": [
+          "Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval"
+        ]
+      },
+      {
+        "title": "IdealGPT: Iteratively Decomposing Vision and Language Reasoning via Large Language Models",
+        "doi": "10.18653/v1/2023.findings-emnlp.755",
+        "year": 2023,
+        "venue": [
+          "Findings of the Association for Computational Linguistics: EMNLP 2023"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 12,
+    "original": "Chat2VIS: Generating Data Visualizations via Natural Language Using ChatGPT, Codex and GPT-3 Large Language Models",
+    "candidates": [
+      {
+        "title": "Chat2VIS: Generating Data Visualizations via Natural Language Using ChatGPT, Codex and GPT-3 Large Language Models",
+        "doi": "10.1109/access.2023.3274199",
+        "year": 2023,
+        "venue": [
+          "IEEE Access"
+        ]
+      },
+      {
+        "title": "NLSQL: Generating and Executing SQL Queries via Natural Language Using Large Language Models",
+        "doi": "10.1109/icacta58201.2023.10392861",
+        "year": 2023,
+        "venue": [
+          "2023 International Conference on Advanced Computing Technologies and Applications (ICACTA)"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 14,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 17,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 19,
+    "original": "SERAG: Self-Evolving RAG System for Query Optimization",
+    "candidates": [
+      {
+        "title": "SEFRQO: A Self-Evolving Fine-Tuned RAG-Based Query Optimizer",
+        "doi": "10.1145/3769826",
+        "year": 2025,
+        "venue": [
+          "Proceedings of the ACM on Management of Data"
+        ]
+      },
+      {
+        "title": "Legal Query RAG",
+        "doi": "10.1109/access.2025.3542125",
+        "year": 2025,
+        "venue": [
+          "IEEE Access"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 26,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 32,
+    "original": "From Data to Story: Towards Automatic Animated Data Video Creation with LLM-based Multi-Agent Systems",
+    "candidates": [
+      {
+        "title": "From Data to Story: Towards Automatic Animated Data Video Creation with LLM-Based Multi-Agent Systems",
+        "doi": "10.1109/gen4ds63889.2024.00008",
+        "year": 2024,
+        "venue": [
+          "2024 IEEE VIS Workshop on Data Storytelling in an Era of Generative AI (GEN4DS)"
+        ]
+      },
+      {
+        "title": "Automatic Creation of Visualizations with a Multi-Agent LLM Approach",
+        "doi": "10.1007/978-981-96-6429-0_16",
+        "year": 2025,
+        "venue": [
+          "Lecture Notes in Networks and Systems",
+          "Proceedings of Tenth International Congress on Information and Communication Technology"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 33,
+    "original": "LightVA: Lightweight Visual Analytics with LLM Agent-Based Task Planning and Execution",
+    "candidates": [
+      {
+        "title": "LightVA: Lightweight Visual Analytics With LLM Agent-Based Task Planning and Execution",
+        "doi": "10.1109/tvcg.2024.3496112",
+        "year": 2025,
+        "venue": [
+          "IEEE Transactions on Visualization and Computer Graphics"
+        ]
+      },
+      {
+        "title": "LightVA: Lightweight Visual Analytics with LLM Agent-Based Task Planning and Execution_supp2-3496112.mp4",
+        "doi": "10.1109/tvcg.2024.3496112/mm2",
+        "year": null,
+        "venue": []
+      }
+    ]
+  },
+  {
+    "index": 34,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 35,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 37,
+    "original": "iDataLake: An LLM-Powered Analytics System on Data Lakes",
+    "candidates": [
+      {
+        "title": "LLM-powered Heterogeneous Information Network Analytics",
+        "doi": "10.1145/3701716.3715450",
+        "year": 2025,
+        "venue": [
+          "Companion Proceedings of the ACM on Web Conference 2025"
+        ]
+      },
+      {
+        "title": "AI Powered Smart Data Analytics System",
+        "doi": "10.26643/ijr/30",
+        "year": 2026,
+        "venue": [
+          "International Journal of Research"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 39,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 41,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "index": 42,
+    "original": "Large Language Models for Data Discovery and Integration: Challenges and Opportunities",
+    "candidates": [
+      {
+        "title": "Strategic Integration of Large Language Models: Challenges, Opportunities, and Organizational Impact",
+        "doi": "10.5465/amproc.2025.11297symposium",
+        "year": 2025,
+        "venue": [
+          "Academy of Management Proceedings"
+        ]
+      },
+      {
+        "title": "Benchmarking Large Language Models: Opportunities and Challenges",
+        "doi": "10.1007/978-3-031-68031-1_6",
+        "year": 2024,
+        "venue": [
+          "Lecture Notes in Computer Science",
+          "Performance Evaluation and Benchmarking"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 45,
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+]

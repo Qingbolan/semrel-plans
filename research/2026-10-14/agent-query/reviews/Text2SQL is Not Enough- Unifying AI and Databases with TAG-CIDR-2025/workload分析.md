@@ -1,0 +1,7 @@
+# 工作负载与输入
+
+§4.1包含80条从BIRD修改的查询：40条依赖常识、40条依赖推理；match/comparison/ranking/aggregation各20条。数据来自california_schools、debit_card_specializing、formula_1、codebase_community、european_football_2五个关系数据库。
+
+每条问题的输入是相应数据库表及所需列。城市问题读取学校City/Longitude/GSoffered列；评论总结读取posts.Id/Title和comments.PostId/Text并连接。环境需要SQLite数据库或等价DataFrame，以及schema信息；这些不是额外外部网页环境。
+
+RAG取10行是检索候选数，不是整个数据库规模或模型批量。论文未给统一记录batch size；当前图册中的子集数量也不等于正式论文80条。

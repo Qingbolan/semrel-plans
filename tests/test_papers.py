@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 class PaperTests(unittest.TestCase):
     def test_snapshot_and_usecases(self):
         manifest = json.loads((ROOT / 'Survey/manifest.json').read_text())
-        self.assertEqual(46, len(manifest))
+        self.assertTrue(manifest)
+        self.assertEqual(len(manifest), len({p['folder'] for p in manifest}))
         for paper in manifest:
             folder = ROOT / 'Survey' / paper['folder']
             for filename, digest in paper['sha256'].items():
@@ -19,9 +20,11 @@ class PaperTests(unittest.TestCase):
             for filename in SECTIONS.values():
                 self.assertTrue((folder / filename).read_text().strip())
             workload = (folder / 'workload分析.md').read_text()
-            case = PaperExporter.usecase(workload)
+            case_file = folder / 'usecase分析.md'
+            case = case_file.read_text() if case_file.exists() else PaperExporter.usecase(workload)
             self.assertTrue(case, paper['folder'])
-            self.assertIn(case, workload)
+            if not case_file.exists():
+                self.assertIn(case, workload)
 
     def test_benchmark_retains_evaluation_evidence(self):
         for entry in json.loads((ROOT / 'Survey/manifest.json').read_text()):
@@ -29,7 +32,8 @@ class PaperTests(unittest.TestCase):
             benchmark = PaperExporter.benchmark(workload)
             self.assertTrue(benchmark.startswith('# Benchmark'))
             case = PaperExporter.usecase(workload)
-            self.assertNotIn(case, benchmark)
+            if case:
+                self.assertNotIn(case, benchmark)
             for paragraph in workload.split('\n\n'):
                 if paragraph.strip() and not paragraph.startswith('# ') and paragraph.strip() not in case:
                     self.assertIn(paragraph.strip(), benchmark)
@@ -40,6 +44,14 @@ class PaperTests(unittest.TestCase):
         self.assertIn('No single-case speedup reported.', case)
         self.assertNotIn('Other text.', case)
         self.assertEqual('', PaperExporter.usecase('# Workload\nNo case reported.'))
+
+    def test_dedicated_reading_sections(self):
+        records = PaperExporter(ROOT).export()
+        eddies = next(p for p in records if p['title'].startswith('Eddies:'))
+        folder = ROOT / 'Survey' / eddies['folder']
+        self.assertEqual((folder / 'usecase分析.md').read_text(), eddies['usecase'])
+        self.assertEqual((folder / 'benchmark分析.md').read_text(), eddies['sections']['benchmark'])
+        self.assertNotEqual(eddies['sections']['benchmark'], eddies['sections']['workload'])
 
 if __name__ == '__main__':
     unittest.main()

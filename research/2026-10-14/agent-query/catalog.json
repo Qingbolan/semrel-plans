@@ -1,0 +1,324 @@
+[
+  {
+    "title": "Deep Research is the New Analytics System: Towards Building the Runtime for AI-Driven Analytics",
+    "url": "https://www.vldb.org/cidrdb/papers/2026/p30-russo.pdf",
+    "year": 2026,
+    "venue": "CIDR",
+    "topic": "agentic analytics runtime",
+    "reading_status": "full_text_reviewed",
+    "evidence": "正式会议PDF正文§1–7，图1–2，表1–2（p5视觉核对）；132 CSV/HTML文件与250邮件，2个query各3次。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/Deep Research is the New Analytics System- Towards Building the Runtime for AI-Driven Analytics-CIDR-2026",
+    "aliases": [
+      "https://arxiv.org/abs/2509.02751"
+    ],
+    "searched_at": "2026-10-14",
+    "evidence_pdf_sha256": "a390d99abeb66a3311abc9ef6a9e8f6a3e07abfc5615e82ebcb5ac10e6164f96",
+    "read_version": "CIDR 2026 final PDF",
+    "search_strategy": {
+      "date": "2026-10-14",
+      "sources": [
+        "arXiv",
+        "CIDR official proceedings",
+        "PMLR",
+        "USENIX",
+        "OpenReview",
+        "author publication pages"
+      ],
+      "queries": [
+        "exact titles of eight existing Survey entries",
+        "agentic query optimization workflow data systems Carnot AFlow ADAS paper",
+        "data lake agent query arxiv 2026 system",
+        "Table-Augmented Generation language models databases paper",
+        "AgenticData",
+        "AOP Orchestration",
+        "KVFlow",
+        "Parrot LLM",
+        "AFlow Automating Agentic Workflow Generation",
+        "Automated Design of Agentic Systems",
+        "CAESURA Language Models",
+        "SGLang Efficient Execution"
+      ],
+      "inclusion": "Concrete links to data analytics, semantic pipeline compilation, data-lake orchestration, workflow optimization or serving; generic workflow works retained as adjacent references and labeled accordingly. Exact paper identity checked on primary sources; full reviews use downloaded PDFs.",
+      "scope_limit": "Discovery record as of search date, not proof of exhaustive global coverage; abstract-only papers remain explicitly unread."
+    }
+  },
+  {
+    "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG",
+    "url": "https://vldb.org/cidrdb/papers/2025/p11-biswal.pdf",
+    "year": 2025,
+    "venue": "CIDR",
+    "topic": "semantic query paradigm / benchmark",
+    "reading_status": "full_text_reviewed",
+    "evidence": "正式会议PDF正文§1–6、附录A–C，表1–2；80 modified BIRD questions，60非聚合题计exact match。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/Text2SQL is Not Enough- Unifying AI and Databases with TAG-CIDR-2025",
+    "aliases": [
+      "https://arxiv.org/abs/2408.14717"
+    ],
+    "searched_at": "2026-10-14",
+    "evidence_pdf_sha256": "7b72b431ea7f8c5c0f2eb6905cce70afd02de77687e02d21ad1d86b50decd00a",
+    "read_version": "CIDR 2025 PDF"
+  },
+  {
+    "title": "Bridge the Last-Mile Gap to Semantic Analytics: Compiling Natural-Language Queries into Semantic Operator Pipelines",
+    "url": "https://arxiv.org/abs/2606.04641",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "NL-to-semantic pipeline compilation",
+    "reading_status": "full_text_reviewed",
+    "evidence": "已读v1正文§1–5、表1–7，p9表1–3视觉核对；首页PVLDB占位字段不作为录用证据。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/Bridge the Last-Mile Gap to Semantic Analytics- Compiling Natural-Language Queries into Semantic Operator Pipelines-arXiv-2026",
+    "aliases": [],
+    "searched_at": "2026-10-14",
+    "evidence_pdf_sha256": "a56e99a4d217f273a213104608f45320f81820e7456c8a846a7d86253cb35a0d",
+    "read_version": "arXiv v1"
+  },
+  {
+    "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective",
+    "url": "https://arxiv.org/abs/2603.16104",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "workflow-aware LLM serving",
+    "reading_status": "full_text_reviewed",
+    "evidence": "已读v1 Extended正文§1–10、算法1、表1–5、附录A–D；实际全工作流Trading相对KVFlow最高1.34倍，微基准1.56倍。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/Efficient LLM Serving for Agentic Workflows- A Data Systems Perspective-arXiv-2026",
+    "aliases": [],
+    "searched_at": "2026-10-14",
+    "evidence_pdf_sha256": "61a1e4b087685fa976a96d1b6a9abf035716bd1534fbaad5a576a1ada863f60a",
+    "read_version": "arXiv v1 Extended"
+  },
+  {
+    "title": "Batch Query Processing and Optimization for Agentic Workflows",
+    "url": "https://arxiv.org/abs/2509.02121",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "batch workflow optimization",
+    "reading_status": "full_text_reviewed",
+    "evidence": "完整阅读§1–8、表3–5、图6–11；视觉核对第9页表4。v2为固定异构DAG、1024-query主实验，最高3.6×batch/2.6×online；不能混用v1结果。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/Batch Query Processing and Optimization for Agentic Workflows-arXiv-2026",
+    "aliases": [],
+    "searched_at": "2026-10-14",
+    "read_version": "arXiv v2 2026-01-19",
+    "evidence_pdf_sha256": "ad409e26dac13648c89263c82d616c1e107d8668627991679c9823826cc45e2d"
+  },
+  {
+    "title": "CADENZA: Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing",
+    "url": "https://arxiv.org/abs/2606.29151",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "semantic operator compilation / multi-objective optimization",
+    "reading_status": "full_text_reviewed",
+    "evidence": "完整阅读27页正文§1–9、附录A–J；表1–20、算法1；附录J提供55条SemBench与1条BioDEX意图。存在正文/附录query描述冲突，已在分析列出。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/CADENZA- Compiling Natural-Language Intent into Task-Specific Operator DAGs for Semantic Query Processing-arXiv-2026",
+    "aliases": [],
+    "searched_at": "2026-10-14",
+    "read_version": "arXiv v3 2026-07-13",
+    "query_source_notes": "Appendix J contains author-version intents and abbreviated pipelines, not a replacement for original SemBench repository queries.",
+    "evidence_pdf_sha256": "8a993013559c707e8cfdecd6b6a285d2f9b23161b894b87418e4269cb38465e4"
+  },
+  {
+    "title": "Multi-Objective Agentic Rewrites for Unstructured Data Processing",
+    "url": "https://arxiv.org/abs/2512.02289",
+    "year": 2026,
+    "venue": "PVLDB",
+    "topic": "semantic pipeline rewrite optimization",
+    "reading_status": "abstract_only",
+    "evidence": "arXiv与Google Research正式publication页确认同文；v4 PDF已取得，本轮核对摘要和发表信息，未重读全部方法实验。Google publication统计与早期arXiv摘要不同，不能混用版本结果。",
+    "review_folder": null,
+    "aliases": [
+      "https://research.google/pubs/multi-objective-agentic-rewrites-for-unstructured-data-processing/"
+    ],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "An LLM Compiler for Parallel Function Calling",
+    "url": "https://proceedings.mlr.press/v235/kim24y.html",
+    "year": 2024,
+    "venue": "ICML",
+    "topic": "tool-call DAG compilation",
+    "reading_status": "abstract_only",
+    "evidence": "PMLR235:24370–24391官方书目与摘要；本轮未阅读全文。",
+    "review_folder": null,
+    "aliases": [
+      "https://arxiv.org/abs/2312.04511",
+      "https://www.stat.berkeley.edu/~mmahoney/pubs/icml2024_kim24y.pdf"
+    ],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "Agent Workflow Memory",
+    "url": "https://arxiv.org/abs/2409.07429",
+    "year": 2024,
+    "venue": "arXiv",
+    "topic": "agent procedural memory",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv标题作者与摘要确认；离线/在线归纳可复用web操作流程，Mind2Web/WebArena；下载v1未重读正文，不确认会议。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "Carnot: Interpretable, Interactive, and Optimized Execution of Deep Research Queries",
+    "url": "https://www.vldb.org/pvldb/vol19/p4642-russo.pdf",
+    "year": 2026,
+    "venue": "PVLDB",
+    "topic": "interactive deep research analytics",
+    "reading_status": "full_text_reviewed",
+    "evidence": "全文4页§1–4、图1–2，PVLDB官方PDF确认19(12):4642–4645。演示论文无性能/准确率benchmark，web search/general tools尚为未来工作。",
+    "review_folder": "research/2026-10-14/agent-query/reviews/Carnot- Interpretable, Interactive, and Optimized Execution of Deep Research Queries-PVLDB-2026",
+    "aliases": [
+      "https://arxiv.org/abs/2608.09532",
+      "https://doi.org/10.14778/3827998.3828086"
+    ],
+    "searched_at": "2026-10-14",
+    "read_version": "arXiv v1, checked against PVLDB final publication",
+    "evidence_pdf_sha256": "ed4f3f1bcff3db840463b5e52d881ce41ed3df5b1c9104d4a1c3a8363aa5578d"
+  },
+  {
+    "title": "Cost-Aware Optimization for Agentic Query Execution",
+    "url": "https://arxiv.org/abs/2606.03152",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "agentic query planning",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要：EnumGRPO，执行范式/算子/位置/投影宽度等计划枚举后提炼规划启发，SWAN四数据库；未全文核对结果条件。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "AgenticData: An Agentic Data Analytics System for Heterogeneous Data",
+    "url": "https://arxiv.org/abs/2508.05002",
+    "year": 2025,
+    "venue": "arXiv",
+    "topic": "heterogeneous analytics agent",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv作者Ji Sun、Guoliang Li等；数据profiling、交叉验证、memory及语义计划；三benchmark摘要声明未全文验证。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries",
+    "url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+    "year": 2025,
+    "venue": "CIDR",
+    "topic": "data-lake pipeline orchestration",
+    "reading_status": "abstract_only",
+    "evidence": "CIDR官方PDF来源，检索结果读取图3与贡献/架构片段；尚未全文精读。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "CAESURA: Language Models as Multi-Modal Query Planners",
+    "url": "https://arxiv.org/abs/2308.03424",
+    "year": 2023,
+    "venue": "arXiv",
+    "topic": "multimodal query planning",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要，Matthias Urban/Carsten Binnig；GPT-4生成多模态算子计划，两数据集原型；本轮未全文阅读，会议需另核。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
+    "url": "https://www.usenix.org/conference/osdi24/presentation/lin-chaofan",
+    "year": 2024,
+    "venue": "OSDI",
+    "topic": "application-aware LLM serving",
+    "reading_status": "abstract_only",
+    "evidence": "USENIX正式会议页、官方PDF摘要；Semantic Variable暴露请求间数据流；本轮未全文阅读。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows",
+    "url": "https://arxiv.org/abs/2507.07400",
+    "year": 2025,
+    "venue": "NeurIPS",
+    "topic": "workflow KV-cache management",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要，作者仓库PanZaifeng/KVFlow公告NeurIPS25录用；Agent Step Graph、steps-to-execution、异步预取；未阅读全文。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management",
+    "url": "https://arxiv.org/abs/2605.06472",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "dynamic workflow serving",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要：PBKV预测未来agent调用、保守驱逐预取；本轮未阅读全文。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+    "url": "https://arxiv.org/abs/2312.07104",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "topic": "structured LM program runtime",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要及OpenReview论文原文片段；frontend原语、RadixAttention、结构输出；未全文审读。",
+    "review_folder": null,
+    "aliases": [
+      "https://openreview.net/attachment?id=VqkAKQibpq&name=pdf"
+    ],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "AFlow: Automating Agentic Workflow Generation",
+    "url": "https://arxiv.org/abs/2410.10762",
+    "year": 2025,
+    "venue": "ICLR",
+    "topic": "automatic agent workflow search",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要与OpenReview z5uVAKwmjf PDF确认ICLR2025；MCTS代码表示workflow搜索；未全文审读。",
+    "review_folder": null,
+    "aliases": [
+      "https://openreview.net/forum?id=z5uVAKwmjf"
+    ],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "Automated Design of Agentic Systems",
+    "url": "https://arxiv.org/abs/2408.08435",
+    "year": 2024,
+    "venue": "arXiv",
+    "topic": "meta agent program search",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv标题与摘要；Meta Agent Search通过代码设计agent；仅作为通用workflow优化近邻，不冒充数据分析专用系统。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "When should I search more: Adaptive Complex Query Optimization with Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2601.21208",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "adaptive retrieval query planning",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要：复杂RAG查询分解、rank-score融合与课程RL；属于检索规划邻近工作，非关系查询优化。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  },
+  {
+    "title": "Agentic Cost-Aware Query Planning with Knowledge Distillation for Big Data Analytics",
+    "url": "https://arxiv.org/abs/2605.17831",
+    "year": 2026,
+    "venue": "arXiv",
+    "topic": "agentic relational planning",
+    "reading_status": "abstract_only",
+    "evidence": "官方arXiv摘要：规则teacher、bandit、代价模型、student蒸馏，NYC Taxi/IMDB；仅初筛，未阅读全文或验证实现。",
+    "review_folder": null,
+    "aliases": [],
+    "searched_at": "2026-10-14"
+  }
+]

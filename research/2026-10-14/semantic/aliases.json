@@ -1,0 +1,59 @@
+[
+  {
+    "urls": [
+      "https://arxiv.org/abs/2407.11418",
+      "https://www.vldb.org/pvldb/vol18/p4171-patel.pdf"
+    ],
+    "relation": "preprint_and_published_version",
+    "evidence": "PVLDB LOTUS paper §6 and reference54; same authors/system. Titles differ."
+  },
+  {
+    "urls": [
+      "https://arxiv.org/abs/2410.12189",
+      "https://www.vldb.org/pvldb/vol18/p3035-shankar.pdf"
+    ],
+    "relation": "preprint_and_published_version",
+    "evidence": "Same title/authors, published PDF first page."
+  },
+  {
+    "urls": [
+      "https://arxiv.org/abs/2505.14661",
+      "https://arxiv.org/abs/2505.14661v3",
+      "https://www.vldb.org/pvldb/vol19/p1060-russo.pdf"
+    ],
+    "relation": "preprint_and_published_version",
+    "evidence": "arXiv v3 first page gives PVLDB19(5):1060–1073."
+  },
+  {
+    "urls": [
+      "https://arxiv.org/abs/2507.06515",
+      "https://arxiv.org/abs/2507.06515v2",
+      "https://www.vldb.org/pvldb/vol18/p4560-chai.pdf"
+    ],
+    "relation": "preprint_and_published_version",
+    "evidence": "Same title/authors, official PDF first page gives PVLDB18(11):4560–4573."
+  },
+  {
+    "urls": [
+      "https://arxiv.org/abs/2405.14696",
+      "https://www.vldb.org/cidrdb/papers/2025/p12-liu.pdf"
+    ],
+    "relation": "technical_report_and_conference_paper",
+    "evidence": "CIDR paper refers to comprehensive workload technical report; distinct version and title, do not overwrite version-specific evaluations."
+  },
+  {
+    "urls": [
+      "https://arxiv.org/abs/2504.01157",
+      "https://www.vldb.org/pvldb/vol18/p5415-mhedhbi.pdf"
+    ],
+    "relation": "preprint_and_published_version",
+    "evidence": "Official DuckDB publication page links paper at VLDB2025."
+  },
+  {
+    "urls": [
+      "https://arxiv.org/abs/2604.09944"
+    ],
+    "relation": "title_changed_same_arxiv_id",
+    "evidence": "Old search index title Horrila; primary arXiv current title PLOP. Keep one entry."
+  }
+]

@@ -1,0 +1,7 @@
+# 具体共享与执行例子
+
+收入调查中多名agent可能请求同一周、同一SKU的收入SQL或相同新闻页面。相同type+参数请求合并后，一次工具结果可流向多个逻辑节点；相同SQL模板但参数不同只能共享prepared statement等准备工作，不能冒充完全相同查询。
+
+TPCH-Fanout在两阶段向多个agent广播参数，再汇总分析指标。冗余I/O较多时request coalescing收益大；它与把每条query的多个agent顺序跑完相比，不仅提高GPU利用，也减少实际工具执行次数。
+
+记录当前数据契约时应分别放：环境目录里的DB schema/索引/装载数据；输入目录里的query参数批与workflow定义。内部epoch切分、模型驻留和worker数属于执行配置，不是用户查询的数据列。

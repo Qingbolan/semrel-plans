@@ -1,0 +1,28 @@
+[
+  {
+    "id": "trec2021",
+    "source_url": "https://trec.nist.gov/pubs/trec30/papers/Overview-2021.pdf",
+    "retrieved_at": "2026-10-14T07:20:20.801015+00:00",
+    "status": "ACQUISITION_FAILED",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "clef2019-tar",
+    "source_url": "https://ceur-ws.org/Vol-2380/paper_250.pdf",
+    "retrieved_at": "2026-10-14T07:20:23.097919+00:00",
+    "status": "FULLTEXT_ACQUIRED",
+    "fulltext": "research/paper-completion/papers/clef2019-tar.pdf",
+    "sha256": "04a7247f276c84abad0511636d25d35ec0e8c8ed90de6b208d6d87929702268c",
+    "pages": 31
+  },
+  {
+    "id": "trec2021",
+    "source_url": "https://trec.nist.gov/pubs/trec30/papers/Overview-2021.pdf",
+    "attempt": "Browser User-Agent",
+    "retrieved_at": "2026-10-14T07:21:09.610235+00:00",
+    "status": "FULLTEXT_ACQUIRED",
+    "fulltext": "research/paper-completion/papers/trec2021.pdf",
+    "sha256": "aff357b868faf8e534a2c67af63c053752e6ff6af136ee0f80a7d008ecd94ac2",
+    "pages": 17
+  }
+]

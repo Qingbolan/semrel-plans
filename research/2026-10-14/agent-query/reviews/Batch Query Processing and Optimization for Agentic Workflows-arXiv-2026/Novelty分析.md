@@ -1,0 +1,9 @@
+# 贡献与边界
+
+最直接的能力是多workflow批内共享相同工具调用，并把推理内部状态和CPU准备成本纳入放置/调度。它补足了关系式逻辑优化之外的执行层问题。
+
+§6.8明确单机多GPU和固定DAG范围，不支持在执行时任意改变workflow结构；主实验每workflow最多三种模型是为基线部署可行性设定。DP最坏状态空间仍指数级，受topological frontier约束可在实验中减少搜索，但不能称普遍线性。
+
+相同工具签名的请求合并依赖结果可共享的前提。论文规定strict semantic equivalence，本轮未用代码验证涉及外部状态、非确定性和有副作用API的全部边界，不能由“HTTP节点”扩展为任意工具都可合并。
+
+论文里的workflow是synthetic yet representative；数据集是公开真实来源，二者必须分别标注。

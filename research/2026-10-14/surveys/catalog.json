@@ -1,0 +1,2190 @@
+[
+  {
+    "title": "E2ETune: End-to-End Knob Tuning via Fine-tuned Generative Language Model",
+    "url": "https://arxiv.org/abs/2404.11581",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Configuration Tuning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2404.11581"
+    ],
+    "review_folder": null,
+    "discovered_title": "LLMTune: Accelerate Database Knob Tuning with Large Language Models",
+    "metadata_file": "metadata/2404.11581.html"
+  },
+  {
+    "title": "LATuner: An LLM-Enhanced Database Tuning System Based on Adaptive Surrogate Model",
+    "url": "https://dl.acm.org/doi/abs/10.1007/978-3-031-70362-1_22",
+    "year": "2024",
+    "venue": "ECML PKDD 2024",
+    "topic": "Configuration Tuning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "GPTuner: A Manual-Reading Database Tuning System via GPT-Guided Bayesian Optimization",
+    "url": "https://vldb.org/pvldb/vol17/p1939-tang.pdf",
+    "year": "2024",
+    "venue": "VLDB 2024",
+    "topic": "Configuration Tuning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "λ-Tune: Harnessing Large Language Models for Automated Database System Tuning",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3709652",
+    "year": "2025",
+    "venue": "SIGMOD 2025",
+    "topic": "Configuration Tuning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "E2ETune: End-to-End Knob Tuning via Fine-tuned Generative Language Model",
+    "url": "https://arxiv.org/abs/2404.11581",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Configuration Tuning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2404.11581"
+    ],
+    "review_folder": null,
+    "discovered_title": "E2ETune: End-to-End Knob Tuning via Fine-tuned Generative Language Model",
+    "metadata_file": "metadata/2404.11581.html"
+  },
+  {
+    "title": "DB-GPT: Large Language Model Meets Database",
+    "url": "https://link.springer.com/article/10.1007/s41019-023-00235-6",
+    "year": "2024",
+    "venue": "Data Science and Engineering 2024",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://link.springer.com/article/10.1007/s41019-023-00235-6"
+    ],
+    "review_folder": null,
+    "discovered_title": "DB-GPT: Large Language Model Meets Database",
+    "metadata_file": "metadata/c9f3c6090697.html"
+  },
+  {
+    "title": "LLM-R2: A Large Language Model Enhanced Rule-Based Rewrite System for Boosting Query Efficiency",
+    "url": "https://dl.acm.org/doi/abs/10.14778/3696435.3696440",
+    "year": "2024",
+    "venue": "VLDB 2024",
+    "topic": "Query Optimization",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "GenRewrite: Query Rewriting via Large Language Models",
+    "url": "https://arxiv.org/abs/2403.09060",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2403.09060"
+    ],
+    "review_folder": null,
+    "discovered_title": "Query Rewriting via Large Language Models",
+    "metadata_file": "metadata/2403.09060.html"
+  },
+  {
+    "title": "Query Rewriting via LLMs",
+    "url": "https://arxiv.org/abs/2502.12918",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.12918"
+    ],
+    "review_folder": null,
+    "discovered_title": "Query Rewriting via LLMs",
+    "metadata_file": "metadata/2502.12918.html"
+  },
+  {
+    "title": "Can Large Language Models Be Query Optimizer for Relational Databases?",
+    "url": "https://dl.acm.org/doi/epdf/10.1145/3769771",
+    "year": "2025",
+    "venue": "SIGMOD 2025",
+    "topic": "Query Optimization",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "A Query Optimization Method Utilizing Large Language Models",
+    "url": "https://arxiv.org/abs/2503.06902",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2503.06902"
+    ],
+    "review_folder": null,
+    "discovered_title": "A Query Optimization Method Utilizing Large Language Models",
+    "metadata_file": "metadata/2503.06902.html"
+  },
+  {
+    "title": "E3-Rewrite: Learning to Rewrite SQL for Executability, Equivalence,and Efficiency",
+    "url": "https://arxiv.org/abs/2508.09023",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.09023"
+    ],
+    "review_folder": null,
+    "discovered_title": "E3-Rewrite: Learning to Rewrite SQL for Executability, Equivalence, and Efficiency",
+    "metadata_file": "metadata/2508.09023.html"
+  },
+  {
+    "title": "DBG-PT: A Large Language Model Assisted Query Performance Regression Debugger",
+    "url": "https://dl.acm.org/doi/abs/10.14778/3685800.3685869",
+    "year": "2024",
+    "venue": "VLDB 2024",
+    "topic": "System Diagnosis",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Automatic Database Configuration Debugging using Retrieval-Augmented Language Models",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3709663",
+    "year": "2025",
+    "venue": "SIGMOD 2025",
+    "topic": "System Diagnosis",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Can Foundation Models Wrangle Your Data?",
+    "url": "https://arxiv.org/abs/2205.09911",
+    "year": "2022",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2205.09911"
+    ],
+    "review_folder": null,
+    "discovered_title": "Can Foundation Models Wrangle Your Data?",
+    "metadata_file": "metadata/2205.09911.html"
+  },
+  {
+    "title": "RetClean: Retrieval-Based Data Cleaning Using Foundation Models and Data Lakes",
+    "url": "https://arxiv.org/abs/2303.16909",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2303.16909"
+    ],
+    "review_folder": null,
+    "discovered_title": "RetClean: Retrieval-Based Data Cleaning Using LLMs and Data Lakes",
+    "metadata_file": "metadata/2303.16909.html"
+  },
+  {
+    "title": "Data Imputation with Limited Data Redundancy Using Data Lakes",
+    "url": "https://www.vldb.org/pvldb/vol18/p3354-tang.pdf",
+    "year": "2025",
+    "venue": "VLDB 2025",
+    "topic": "Data Cleaning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "UniDM: A Unified Framework for Data Manipulation with Large Language Models",
+    "url": "https://arxiv.org/abs/2405.06510",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2405.06510"
+    ],
+    "review_folder": null,
+    "discovered_title": "Unidm: A unified framework for data manipulation with large language models",
+    "metadata_file": "metadata/2405.06510.html"
+  },
+  {
+    "title": "LLMClean: Context-Aware Tabular Data Cleaning via LLM-Generated OFDs",
+    "url": "https://arxiv.org/abs/2404.18681",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2404.18681"
+    ],
+    "review_folder": null,
+    "discovered_title": "LLMClean: Context-Aware Tabular Data Cleaning via LLM-Generated OFDs",
+    "metadata_file": "metadata/2404.18681.html"
+  },
+  {
+    "title": "Table-GPT: Table-tuned GPT for Diverse Table Tasks",
+    "url": "https://arxiv.org/abs/2310.09263",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Data Integration",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2310.09263"
+    ],
+    "review_folder": null,
+    "discovered_title": "Table-GPT: Table-tuned GPT for Diverse Table Tasks",
+    "metadata_file": "metadata/2310.09263.html"
+  },
+  {
+    "title": "Cost-Effective In-Context Learning for Entity Resolution: A Design Space Exploration",
+    "url": "https://arxiv.org/abs/2312.03987",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Data Integration",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2312.03987"
+    ],
+    "review_folder": null,
+    "discovered_title": "Cost-Effective In-Context Learning for Entity Resolution: A Design Space Exploration",
+    "metadata_file": "metadata/2312.03987.html"
+  },
+  {
+    "title": "Jellyfish: Instruction-Tuning Local Large Language Models for Data Preprocessing",
+    "url": "https://aclanthology.org/2024.emnlp-main.497/",
+    "year": "2024",
+    "venue": "EMNLP 2024",
+    "topic": "Data Integration",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-main.497//"
+    ],
+    "review_folder": null,
+    "discovered_title": "Jellyfish: Instruction-Tuning Local Large Language Models for Data Preprocessing",
+    "metadata_file": "metadata/d6b3edbb1cb4.html"
+  },
+  {
+    "title": "ArcheType: A Novel Framework for Open-Source Column Type Annotation using Large Language Models",
+    "url": "https://arxiv.org/abs/2310.18208",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2310.18208"
+    ],
+    "review_folder": null,
+    "discovered_title": "ArcheType: A Novel Framework for Open-Source Column Type Annotation using Large Language Models",
+    "metadata_file": "metadata/2310.18208.html"
+  },
+  {
+    "title": "RACOON: An LLM-based Framework for Retrieval-Augmented Column Type Annotation with a Knowledge Graph",
+    "url": "https://arxiv.org/abs/2409.14556",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2409.14556"
+    ],
+    "review_folder": null,
+    "discovered_title": "RACOON: An LLM-based Framework for Retrieval-Augmented Column Type Annotation with a Knowledge Graph",
+    "metadata_file": "metadata/2409.14556.html"
+  },
+  {
+    "title": "Cocoon: Semantic table profiling using large language model",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3665939.3665957",
+    "year": "2024",
+    "venue": "HILDA 2024",
+    "topic": "Data Discovery",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "AutoDDG: Automated Dataset Description Generation using Large Language Models",
+    "url": "https://arxiv.org/abs/2502.01050",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.01050"
+    ],
+    "review_folder": null,
+    "discovered_title": "Autoddg: Automated dataset description generation using large language models",
+    "metadata_file": "metadata/2502.01050.html"
+  },
+  {
+    "title": "Pneuma: Leveraging llms for tabular data representation and retrieval in an end-to-end system",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3725337",
+    "year": "2025",
+    "venue": "SIGMOD 2025",
+    "topic": "Data Discovery",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Evaluating Knowledge Generation and Self-refinement Strategies for LLM-Based Column Type Annotation",
+    "url": "https://link.springer.com/chapter/10.1007/978-3-032-05281-0_8",
+    "year": "2025",
+    "venue": "ADBIS 2025",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://link.springer.com/chapter/10.1007/978-3-032-05281-0_8"
+    ],
+    "review_folder": null,
+    "discovered_title": "Evaluating Knowledge Generation and Self-refinement Strategies for LLM-Based Column Type Annotation",
+    "metadata_file": "metadata/936a1f24d404.html"
+  },
+  {
+    "title": "Columbo: Expanding Abbreviated Column Names for Tabular Data Using Large Language Models",
+    "url": "https://arxiv.org/abs/2508.09403",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.09403"
+    ],
+    "review_folder": null,
+    "discovered_title": "Columbo: Expanding Abbreviated Column Names for Tabular Data Using Large Language Models",
+    "metadata_file": "metadata/2508.09403.html"
+  },
+  {
+    "title": "Large Language Models are Versatile Decomposers: Decomposing Evidence and Questions for Table-based Reasoning",
+    "url": "https://dl.acm.org/doi/10.1145/3539618.3591708",
+    "year": "2023",
+    "venue": "SIGIR 2023",
+    "topic": "TableQA",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Binding Language Models in Symbolic Languages",
+    "url": "https://arxiv.org/abs/2210.02875",
+    "year": "2022",
+    "venue": "arXiv",
+    "topic": "TableQA",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2210.02875"
+    ],
+    "review_folder": null,
+    "discovered_title": "Binding Language Models in Symbolic Languages",
+    "metadata_file": "metadata/2210.02875.html"
+  },
+  {
+    "title": "Table Meets LLM: Can Large Language Models Understand Structured Table Data? A Benchmark and Empirical Study",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3616855.3635752",
+    "year": "2024",
+    "venue": "WSDM 2024",
+    "topic": "TableQA",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "TableLlama: Towards Open Large Generalist Models for Tables",
+    "url": "https://aclanthology.org/2024.naacl-long.335/",
+    "year": "2024",
+    "venue": "NAACL 2024",
+    "topic": "TableQA",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.naacl-long.335//"
+    ],
+    "review_folder": null,
+    "discovered_title": "TableLlama: Towards Open Large Generalist Models for Tables",
+    "metadata_file": "metadata/d3070b57a3a7.html"
+  },
+  {
+    "title": "DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction",
+    "url": "https://arxiv.org/abs/2304.11015",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2304.11015"
+    ],
+    "review_folder": null,
+    "discovered_title": "DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction.",
+    "metadata_file": "metadata/2304.11015.html"
+  },
+  {
+    "title": "Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation",
+    "url": "https://arxiv.org/abs/2308.15363",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2308.15363"
+    ],
+    "review_folder": null,
+    "discovered_title": "Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation",
+    "metadata_file": "metadata/2308.15363.html"
+  },
+  {
+    "title": "ACT-SQL: In-Context Learning for Text-to-SQL with Automatically-Generated Chain-of-Thought",
+    "url": "https://arxiv.org/abs/2310.17342",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2310.17342"
+    ],
+    "review_folder": null,
+    "discovered_title": "ACT-SQL: In-Context Learning for Text-to-SQL with Automatically-Generated Chain-of-Thought",
+    "metadata_file": "metadata/2310.17342.html"
+  },
+  {
+    "title": "The Dawn of Natural Language to SQL: Are We Fully Ready?",
+    "url": "https://arxiv.org/abs/2406.01265",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2406.01265"
+    ],
+    "review_folder": null,
+    "discovered_title": "The Dawn of Natural Language to SQL: Are We Fully Ready?",
+    "metadata_file": "metadata/2406.01265.html"
+  },
+  {
+    "title": "Chat2VIS: Generating Data Visualizations via Natural Language Using ChatGPT, Codex and GPT-3 Large Language Models",
+    "url": "https://ieeexplore.ieee.org/document/10121440",
+    "year": "2023",
+    "venue": "IEEE Access 2023",
+    "topic": "NL2VIS",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Generating Analytic Specifications for Data Visualization from Natural Language Queries using Large Language Models",
+    "url": "https://arxiv.org/abs/2408.13391",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2408.13391"
+    ],
+    "review_folder": null,
+    "discovered_title": "Generating Analytic Specifications for Data Visualization from Natural Language Queries using Large Language Models",
+    "metadata_file": "metadata/2408.13391.html"
+  },
+  {
+    "title": "prompt4vis: prompting large language models with example mining for tabular data visualization",
+    "url": "https://link.springer.com/article/10.1007/s00778-025-00912-0",
+    "year": "2025",
+    "venue": "VLDBJ 2025",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://link.springer.com/article/10.1007/s00778-025-00912-0"
+    ],
+    "review_folder": null,
+    "discovered_title": "Prompt4Vis: Prompting Large Language Models with Example Mining for Tabular Data Visualization",
+    "metadata_file": "metadata/48a9ee5323a8.html"
+  },
+  {
+    "title": "nvBench 2.0: Resolving Ambiguity in Text-to-Visualization through Stepwise Reasoning",
+    "url": "https://arxiv.org/abs/2503.12880",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2503.12880"
+    ],
+    "review_folder": null,
+    "discovered_title": "nvBench 2.0: Resolving Ambiguity in Text-to-Visualization through Stepwise Reasoning",
+    "metadata_file": "metadata/2503.12880.html"
+  },
+  {
+    "title": "LongRAG: A Dual-Perspective Retrieval-Augmented Generation Paradigm for Long-Context Question Answering",
+    "url": "https://aclanthology.org/2024.emnlp-main.1259.pdf",
+    "year": "2024",
+    "venue": "EMNLP 2024",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-main.1259/"
+    ],
+    "review_folder": null,
+    "discovered_title": "LongRAG: A Dual-Perspective Retrieval-Augmented Generation Paradigm for Long-Context Question Answering",
+    "metadata_file": "metadata/020743d6aa2f.html"
+  },
+  {
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "url": "https://arxiv.org/abs/2401.18059",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2401.18059"
+    ],
+    "review_folder": null,
+    "discovered_title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "metadata_file": "metadata/2401.18059.html"
+  },
+  {
+    "title": "PDFTriage: Question Answering over Long, Structured Documents",
+    "url": "https://aclanthology.org/2024.emnlp-industry.13.pdf",
+    "year": "2024",
+    "venue": "EMNLP 2024",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-industry.13/"
+    ],
+    "review_folder": null,
+    "discovered_title": "PDFTriage: Question Answering over Long, Structured Documents",
+    "metadata_file": "metadata/c7e36fcce96d.html"
+  },
+  {
+    "title": "Unifying Multimodal Retrieval via Document Screenshot Embedding",
+    "url": "https://arxiv.org/abs/2406.11251",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2406.11251"
+    ],
+    "review_folder": null,
+    "discovered_title": "Unifying Multimodal Retrieval via Document Screenshot Embedding",
+    "metadata_file": "metadata/2406.11251.html"
+  },
+  {
+    "title": "VisDoM: Multi-Document QA with Visually Rich Elements Using Multimodal Retrieval-Augmented Generation",
+    "url": "https://aclanthology.org/2025.naacl-long.310.pdf",
+    "year": "2025",
+    "venue": "NAACL 2025",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2025.naacl-long.310/"
+    ],
+    "review_folder": null,
+    "discovered_title": "VisDoM: Multi-Document QA with Visually Rich Elements Using Multimodal Retrieval-Augmented Generation",
+    "metadata_file": "metadata/8538a5fd61cd.html"
+  },
+  {
+    "title": "Docopilot: Improving Multimodal Models for Document-Level Understanding",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Duan_Docopilot_Improving_Multimodal_Models_for_Document-Level_Understanding_CVPR_2025_paper.pdf",
+    "year": "2025",
+    "venue": "CVPR 2025",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "DataTales: Investigating the use of Large Language Models for Authoring Data-Driven Articles",
+    "url": "https://arxiv.org/abs/2308.04076",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2308.04076"
+    ],
+    "review_folder": null,
+    "discovered_title": "DataTales: Investigating the use of Large Language Models for Authoring Data-Driven Articles",
+    "metadata_file": "metadata/2308.04076.html"
+  },
+  {
+    "title": "Enhancing Data Literacy On-demand: LLMs as Guides for Novices in Chart Interpretation",
+    "url": "https://ieeexplore.ieee.org/document/10555321",
+    "year": "2024",
+    "venue": "TVCG 2024",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "ReportGPT: Human-in-the-loop Verifiable Table-to-Text Generation",
+    "url": "https://aclanthology.org/2024.emnlp-industry.39/",
+    "year": "2025",
+    "venue": "EMNLP Industry 2025",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-industry.39//"
+    ],
+    "review_folder": null,
+    "discovered_title": "ReportGPT: Human‑in‑the‑Loop Verifiable Table‑to‑Text Generation",
+    "metadata_file": "metadata/fb225e1da6a5.html"
+  },
+  {
+    "title": "InterChat: Enhancing Generative Visual Analytics using Multimodal Interactions",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/cgf.70112?af=R",
+    "year": "2025",
+    "venue": "EuroVis 2025",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "VizTA: Enhancing Comprehension of Distributional Visualization with Visual-Lexical Fused Conversational Interface",
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.70110",
+    "year": "2025",
+    "venue": "EuroVis 2025",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "ChartLens: Fine-grained Visual Attribution in Charts",
+    "url": "https://aclanthology.org/2025.acl-long.1094/",
+    "year": "2025",
+    "venue": "ACL 2025",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2025.acl-long.1094//"
+    ],
+    "review_folder": null,
+    "discovered_title": "ChartLens: Fine-grained Visual Attribution in Charts",
+    "metadata_file": "metadata/4ec4da169f01.html"
+  },
+  {
+    "title": "Is Large Language Model Good at Database Knob Tuning? A Comprehensive Experimental Evaluation",
+    "url": "https://arxiv.org/abs/2408.02213",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Configuration Tuning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2408.02213"
+    ],
+    "review_folder": null,
+    "discovered_title": "Is Large Language Model Good at Database Knob Tuning? A Comprehensive Experimental Evaluation",
+    "metadata_file": "metadata/2408.02213.html"
+  },
+  {
+    "title": "LLMIA: An Out-of-the-Box Index Advisor via In-Context Learning with LLMs",
+    "url": "https://arxiv.org/abs/2503.07884",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Configuration Tuning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2503.07884"
+    ],
+    "review_folder": null,
+    "discovered_title": "LLMIdxAdvis: Resource-Efficient Index Advisor Utilizing Large Language Model",
+    "metadata_file": "metadata/2503.07884.html"
+  },
+  {
+    "title": "Rabbit: Retrieval-Augmented Generation Enables Better Automatic Database Knob Tuning",
+    "url": "https://ieeexplore.ieee.org/document/11113071",
+    "year": "2025",
+    "venue": "ICDE 2025",
+    "topic": "Configuration Tuning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "MCTuner: Spatial Decomposition-Enhanced Database Tuning via LLM-Guided Exploration",
+    "url": "https://arxiv.org/abs/2509.06298",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Configuration Tuning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2509.06298"
+    ],
+    "review_folder": null,
+    "discovered_title": "MCTuner: Spatial Decomposition-Enhanced Database Tuning via LLM-Guided Exploration",
+    "metadata_file": "metadata/2509.06298.html"
+  },
+  {
+    "title": "AgentTune: An Agent-Based Large Language Model Framework for Database Knob Tuning",
+    "url": "https://dl.acm.org/doi/10.1145/3769758",
+    "year": "2026",
+    "venue": "SIGMOD 2026",
+    "topic": "Configuration Tuning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "SERAG: Self-Evolving RAG System for Query Optimization",
+    "url": "https://viterbi-web.usc.edu/~sabek/pdf/25_workshop_serag.pdf",
+    "year": "2025",
+    "venue": "SIGMOD Workshop 2025",
+    "topic": "Query Optimization",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "QUITE: A Query Rewrite System Beyond Rules with LLM Agents",
+    "url": "https://arxiv.org/abs/2506.07675",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2506.07675"
+    ],
+    "review_folder": null,
+    "discovered_title": "QUITE: A Query Rewrite System Beyond Rules with LLM Agents",
+    "metadata_file": "metadata/2506.07675.html"
+  },
+  {
+    "title": "R-Bot: An LLM-based Query Rewrite System",
+    "url": "https://arxiv.org/abs/2412.01661",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Query Optimization",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2412.01661"
+    ],
+    "review_folder": null,
+    "discovered_title": "R-Bot: An LLM-Based Query Rewrite System",
+    "metadata_file": "metadata/2412.01661.html"
+  },
+  {
+    "title": "Cracking SQL Barriers: An LLM-based Dialect Translation System",
+    "url": "https://dl.acm.org/doi/10.1145/3725278",
+    "year": "2025",
+    "venue": "SIGMOD 2025",
+    "topic": "Query Optimization",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Panda: Performance Debugging for Databases using LLM Agents",
+    "url": "https://www.vldb.org/cidrdb/papers/2024/p6-singh.pdf",
+    "year": "2024",
+    "venue": "CIDR 2024",
+    "topic": "System Diagnosis",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "D-Bot: Database Diagnosis System using Large Language Models",
+    "url": "https://arxiv.org/abs/2312.01454",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "System Diagnosis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2312.01454"
+    ],
+    "review_folder": null,
+    "discovered_title": "D-Bot: Database Diagnosis System using Large Language Models",
+    "metadata_file": "metadata/2312.01454.html"
+  },
+  {
+    "title": "DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs",
+    "url": "https://arxiv.org/abs/2508.01136",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "System Diagnosis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.01136"
+    ],
+    "review_folder": null,
+    "discovered_title": "DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs",
+    "metadata_file": "metadata/2508.01136.html"
+  },
+  {
+    "title": "SketchFill: Sketch-Guided Code Generation for Imputing Derived Missing Values",
+    "url": "https://arxiv.org/abs/2412.19113",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2412.19113"
+    ],
+    "review_folder": null,
+    "discovered_title": "SketchFill: Sketch-Guided Code Generation for Imputing Derived Missing Values",
+    "metadata_file": "metadata/2412.19113.html"
+  },
+  {
+    "title": "IterClean: An Iterative Data Cleaning Framework with Large Language Models",
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3674399.3674436",
+    "year": "2024",
+    "venue": "ACM-TURC 2024",
+    "topic": "Data Cleaning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework",
+    "url": "https://arxiv.org/abs/2412.10422",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2412.10422"
+    ],
+    "review_folder": null,
+    "discovered_title": "AutoPrep: Natural Language Question-Aware Data Preparation with a Multi-Agent Framework",
+    "metadata_file": "metadata/2412.10422.html"
+  },
+  {
+    "title": "AutoDCWorkflow: LLM-based Data Cleaning Workflow Auto-Generation and Benchmark",
+    "url": "https://arxiv.org/abs/2412.06724",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2412.06724"
+    ],
+    "review_folder": null,
+    "discovered_title": "AutoDCWorkflow: LLM-based Data Cleaning Workflow Auto-Generation and Benchmark",
+    "metadata_file": "metadata/2412.06724.html"
+  },
+  {
+    "title": "CleanAgent: Automating Data Standardization with LLM-based Agents",
+    "url": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/DATAI/DATAI25_8.pdf",
+    "year": "2025",
+    "venue": "VLDB Workshop 2025",
+    "topic": "Data Cleaning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Exploring LLM Agents for Cleaning Tabular Machine Learning Datasets",
+    "url": "https://arxiv.org/abs/2503.06664",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2503.06664"
+    ],
+    "review_folder": null,
+    "discovered_title": "Exploring LLM Agents for Cleaning Tabular Machine Learning Datasets",
+    "metadata_file": "metadata/2503.06664.html"
+  },
+  {
+    "title": "Weak-to-Strong Prompts with Lightweight-to-Powerful LLMs for High-Accuracy, Low-Cost, and Explainable Data Transformation",
+    "url": "https://www.vldb.org/pvldb/vol18/p2371-tang.pdf",
+    "year": "2025",
+    "venue": "VLDB 2025",
+    "topic": "Data Cleaning",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "DeepPrep: An LLM-Powered Agentic System for Autonomous Data Preparation",
+    "url": "https://arxiv.org/abs/2602.07371",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "Data Cleaning",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2602.07371"
+    ],
+    "review_folder": null,
+    "discovered_title": "DeepPrep: An LLM-Powered Agentic System for Autonomous Data Preparation",
+    "metadata_file": "metadata/2602.07371.html"
+  },
+  {
+    "title": "Agent-OM: Leveraging LLM Agents for Ontology Matching",
+    "url": "https://arxiv.org/abs/2312.00326",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Data Integration",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2312.00326"
+    ],
+    "review_folder": null,
+    "discovered_title": "Agent-OM: Leveraging LLM Agents for Ontology Matching",
+    "metadata_file": "metadata/2312.00326.html"
+  },
+  {
+    "title": "Ontology Matching with Large Language Models and Prioritized Depth-First Search",
+    "url": "https://arxiv.org/abs/2501.11441",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Integration",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2501.11441"
+    ],
+    "review_folder": null,
+    "discovered_title": "Ontology Matching with Large Language Models and Prioritized Depth-First Search",
+    "metadata_file": "metadata/2501.11441.html"
+  },
+  {
+    "title": "Match, Compare, or Select? An Investigation of Large Language Models for Entity Matching",
+    "url": "https://arxiv.org/abs/2405.16884",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Integration",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2405.16884"
+    ],
+    "review_folder": null,
+    "discovered_title": "Match, Compare, or Select? An Investigation of Large Language Models for Entity Matching",
+    "metadata_file": "metadata/2405.16884.html"
+  },
+  {
+    "title": "Chorus: Foundation Models for Unified Data Discovery and Exploration",
+    "url": "https://dl.acm.org/doi/abs/10.14778/3659437.3659461",
+    "year": "2024",
+    "venue": "VLDB 2024",
+    "topic": "Data Discovery",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Data-driven Discovery with Large Generative Models",
+    "url": "https://arxiv.org/abs/2402.13610",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2402.13610"
+    ],
+    "review_folder": null,
+    "discovered_title": "Data-driven Discovery with Large Generative Models",
+    "metadata_file": "metadata/2402.13610.html"
+  },
+  {
+    "title": "DATALORE: Can a Large Language Model Find All Lost Scrolls in a Data Repository?",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10597732",
+    "year": "2024",
+    "venue": "ICDE 2024",
+    "topic": "Data Discovery",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "LEDD: Large Language Model-Empowered Data Discovery in Data Lakes",
+    "url": "https://arxiv.org/abs/2502.15182",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.15182"
+    ],
+    "review_folder": null,
+    "discovered_title": "LEDD: Large Language Model-Empowered Data Discovery in Data Lakes",
+    "metadata_file": "metadata/2502.15182.html"
+  },
+  {
+    "title": "Automated Metadata Generation Using Large Language Models: A GPT-4 Case Study for Enterprise Data Profiling",
+    "url": "https://sarcouncil.com/download-article/SJECS-221-2025-769-775.pdf",
+    "year": "2025",
+    "venue": "Journal for Engineering and Computer Science 2025",
+    "topic": "Data Discovery",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Automatic database description generation for Text-to-SQL",
+    "url": "https://arxiv.org/abs/2502.20657",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.20657"
+    ],
+    "review_folder": null,
+    "discovered_title": "Automatic database description generation for Text-to-SQL",
+    "metadata_file": "metadata/2502.20657.html"
+  },
+  {
+    "title": "Towards Operationalizing Heterogeneous Data Discovery",
+    "url": "https://arxiv.org/abs/2504.02059",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Data Discovery",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2504.02059"
+    ],
+    "review_folder": null,
+    "discovered_title": "Towards Operationalizing Heterogeneous Data Discovery",
+    "metadata_file": "metadata/2504.02059.html"
+  },
+  {
+    "title": "StructGPT: A General Framework for Large Language Model to Reason over Structured Data",
+    "url": "https://aclanthology.org/2023.emnlp-main.574/",
+    "year": "2023",
+    "venue": "EMNLP 2023",
+    "topic": "TableQA",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2023.emnlp-main.574//"
+    ],
+    "review_folder": null,
+    "discovered_title": "StructGPT: A General Framework for Large Language Model to Reason over Structured Data",
+    "metadata_file": "metadata/69f3c00c980a.html"
+  },
+  {
+    "title": "ReAcTable: Enhancing ReAct for Table Question Answering",
+    "url": "https://dl.acm.org/doi/10.14778/3659437.3659452",
+    "year": "2024",
+    "venue": "VLDB 2024",
+    "topic": "TableQA",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding",
+    "url": "https://arxiv.org/abs/2401.04398",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "TableQA",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2401.04398"
+    ],
+    "review_folder": null,
+    "discovered_title": "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding",
+    "metadata_file": "metadata/2401.04398.html"
+  },
+  {
+    "title": "AutoTQA: Towards Autonomous Tabular Question Answering through Multi-Agent Large Language Models",
+    "url": "https://www.vldb.org/pvldb/vol17/p3920-zhu.pdf",
+    "year": "2024",
+    "venue": "VLDB 2024",
+    "topic": "TableQA",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning",
+    "url": "https://aclanthology.org/2025.acl-long.853/",
+    "year": "2025",
+    "venue": "ACL 2025",
+    "topic": "TableQA",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2025.acl-long.853//"
+    ],
+    "review_folder": null,
+    "discovered_title": "Table-Critic: A Multi-Agent Framework for Collaborative Criticism and Refinement in Table Reasoning",
+    "metadata_file": "metadata/02104aa4b21c.html"
+  },
+  {
+    "title": "ST-Raptor: LLM-Powered Semi-Structured Table Question Answering",
+    "url": "https://arxiv.org/abs/2508.18190",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "TableQA",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.18190"
+    ],
+    "review_folder": null,
+    "discovered_title": "ST-Raptor: LLM-Powered Semi-Structured Table Question Answering",
+    "metadata_file": "metadata/2508.18190.html"
+  },
+  {
+    "title": "MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL",
+    "url": "https://arxiv.org/abs/2312.11242",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2312.11242"
+    ],
+    "review_folder": null,
+    "discovered_title": "MAC-SQL: A Multi-Agent Collaborative Framework for Text-to-SQL",
+    "metadata_file": "metadata/2312.11242.html"
+  },
+  {
+    "title": "ChatBI: Towards Natural Language to Complex Business Intelligence SQL",
+    "url": "https://arxiv.org/abs/2405.00527",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2405.00527"
+    ],
+    "review_folder": null,
+    "discovered_title": "Chatbi: Towards natural language to complex business",
+    "metadata_file": "metadata/2405.00527.html"
+  },
+  {
+    "title": "CHASE-SQL: Multi-Path Reasoning and Preference Optimized Candidate Selection in Text-to-SQL",
+    "url": "https://arxiv.org/abs/2410.01943",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2410.01943"
+    ],
+    "review_folder": null,
+    "discovered_title": "CHASE-SQL: Multi-Path Reasoning and Preference Optimized Candidate Selection in Text-to-SQL",
+    "metadata_file": "metadata/2410.01943.html"
+  },
+  {
+    "title": "Alpha-SQL: Zero-Shot Text-to-SQL using Monte Carlo Tree Search",
+    "url": "https://arxiv.org/abs/2502.17248",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.17248"
+    ],
+    "review_folder": null,
+    "discovered_title": "Alpha-SQL: Zero-Shot Text-to-SQL using Monte Carlo Tree Search",
+    "metadata_file": "metadata/2502.17248.html"
+  },
+  {
+    "title": "OpenSearch-SQL: Enhancing Text-to-SQL with Dynamic Few-shot and Consistency Alignment",
+    "url": "https://arxiv.org/abs/2502.14913",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.14913"
+    ],
+    "review_folder": null,
+    "discovered_title": "OpenSearch-SQL: Enhancing Text-to-SQL with Dynamic Few-shot and Consistency Alignment.",
+    "metadata_file": "metadata/2502.14913.html"
+  },
+  {
+    "title": "ReFoRCE: A Text-to-SQL Agent with Self-Refinement, Consensus Enforcement, and Column Exploration",
+    "url": "https://arxiv.org/abs/2502.00675",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.00675"
+    ],
+    "review_folder": null,
+    "discovered_title": "ReFoRCE: A Text-to-SQL Agent with Self-Refinement, Consensus Enforcement, and Column Exploration",
+    "metadata_file": "metadata/2502.00675.html"
+  },
+  {
+    "title": "DeepEye-SQL: A Software-Engineering-Inspired Text-to-SQL Framework",
+    "url": "https://arxiv.org/abs/2510.17586",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2510.17586"
+    ],
+    "review_folder": null,
+    "discovered_title": "DeepEye-SQL: A Software-Engineering-Inspired Text-to-SQL Framework",
+    "metadata_file": "metadata/2510.17586.html"
+  },
+  {
+    "title": "SQLConductor: Search-to-Policy Learning for Step-wise Text-to-SQL Orchestration",
+    "url": "https://arxiv.org/abs/2606.23537",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "NL2SQL",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2606.23537"
+    ],
+    "review_folder": null,
+    "discovered_title": "SQLConductor: Search-to-Policy Learning for Step-wise Text-to-SQL Orchestration",
+    "metadata_file": "metadata/2606.23537.html"
+  },
+  {
+    "title": "MatPlotAgent: Method and Evaluation for LLM-Based Agentic Scientific Data Visualization",
+    "url": "https://arxiv.org/abs/2402.11453",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2402.11453"
+    ],
+    "review_folder": null,
+    "discovered_title": "MatPlotAgent: Method and Evaluation for LLM-Based Agentic Scientific Data Visualization",
+    "metadata_file": "metadata/2402.11453.html"
+  },
+  {
+    "title": "Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback",
+    "url": "https://arxiv.org/abs/2410.04064",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2410.04064"
+    ],
+    "review_folder": null,
+    "discovered_title": "Text2Chart31: Instruction Tuning for Chart Generation with Automatic Feedback",
+    "metadata_file": "metadata/2410.04064.html"
+  },
+  {
+    "title": "nvAgent: Automated Data Visualization from Natural Language via Collaborative Agent Workflow",
+    "url": "https://arxiv.org/abs/2502.05036",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2502.05036"
+    ],
+    "review_folder": null,
+    "discovered_title": "NVAGENT: Automated Data Visualization from Natural Language via Collaborative Agent Workflow",
+    "metadata_file": "metadata/2502.05036.html"
+  },
+  {
+    "title": "DeepVIS: Bridging Natural Language and Data Visualization Through Step-wise Reasoning",
+    "url": "https://arxiv.org/abs/2508.01700",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.01700"
+    ],
+    "review_folder": null,
+    "discovered_title": "DeepVIS: Bridging Natural Language and Data Visualization Through Step-wise Reasoning",
+    "metadata_file": "metadata/2508.01700.html"
+  },
+  {
+    "title": "MultiVis-Agent: A Multi-Agent Framework with Logic Rules for Reliable and Comprehensive Cross-Modal Data Visualization",
+    "url": "https://arxiv.org/abs/2601.18320",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "NL2VIS",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2601.18320"
+    ],
+    "review_folder": null,
+    "discovered_title": "Multi-Agent Framework with Logic Rules for Reliable and Comprehensive Cross-Modal Data Visualization",
+    "metadata_file": "metadata/2601.18320.html"
+  },
+  {
+    "title": "Active Retrieval Augmented Generation",
+    "url": "https://arxiv.org/abs/2305.06983",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2305.06983"
+    ],
+    "review_folder": null,
+    "discovered_title": "Active Retrieval Augmented Generation",
+    "metadata_file": "metadata/2305.06983.html"
+  },
+  {
+    "title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts",
+    "url": "https://arxiv.org/abs/2402.09727",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2402.09727"
+    ],
+    "review_folder": null,
+    "discovered_title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts",
+    "metadata_file": "metadata/2402.09727.html"
+  },
+  {
+    "title": "GraphReader: Building Graph-based Agent to Enhance Long-Context Abilities of Large Language Models",
+    "url": "https://arxiv.org/abs/2406.14550",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2406.14550"
+    ],
+    "review_folder": null,
+    "discovered_title": "GraphReader: Building Graph-based Agent to Enhance Long-Context Abilities of Large Language Models",
+    "metadata_file": "metadata/2406.14550.html"
+  },
+  {
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "url": "https://arxiv.org/abs/2310.11511",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2310.11511"
+    ],
+    "review_folder": null,
+    "discovered_title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "metadata_file": "metadata/2310.11511.html"
+  },
+  {
+    "title": "REAR: A Relevance-Aware Retrieval-Augmented Framework for Open-Domain Question Answering",
+    "url": "https://aclanthology.org/2024.emnlp-main.321.pdf",
+    "year": "2024",
+    "venue": "EMNLP 2024",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-main.321/"
+    ],
+    "review_folder": null,
+    "discovered_title": "REAR: A Relevance-Aware Retrieval-Augmented Framework for Open-Domain Question Answering",
+    "metadata_file": "metadata/90f37fb5716a.html"
+  },
+  {
+    "title": "QUEST: Query Optimization in Unstructured Document Analysis",
+    "url": "https://dl.acm.org/doi/pdf/10.14778/3749646.3749713",
+    "year": "2025",
+    "venue": "VLDB 2025",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Doctopus: Budget-aware Structural Table Extraction from Unstructured Documents",
+    "url": "https://www.vldb.org/pvldb/vol18/p3695-chai.pdf",
+    "year": "2025",
+    "venue": "VLDB 2025",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Visual Document Understanding and Reasoning: A Multi-Agent Collaboration Framework with Agent-Wise Adaptive Test-Time Scaling",
+    "url": "https://arxiv.org/abs/2508.03404",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.03404"
+    ],
+    "review_folder": null,
+    "discovered_title": "Visual Document Understanding and Question Answering: A Multi-Agent Collaboration Framework with Test-Time Scaling",
+    "metadata_file": "metadata/2508.03404.html"
+  },
+  {
+    "title": "DataPuzzle: Breaking Free from the Hallucinated Promise of LLMs in Data Analysis",
+    "url": "https://arxiv.org/abs/2504.10036",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Unstructured Data Analysis",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2504.10036"
+    ],
+    "review_folder": null,
+    "discovered_title": "DataPuzzle: Breaking Free from the Hallucinated Promise of LLMs in Data Analysis",
+    "metadata_file": "metadata/2504.10036.html"
+  },
+  {
+    "title": "DataNarrative: Automated Data-Driven Storytelling with Visualizations and Texts",
+    "url": "https://aclanthology.org/2024.emnlp-main.1073/",
+    "year": "2024",
+    "venue": "EMNLP 2024",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-main.1073//"
+    ],
+    "review_folder": null,
+    "discovered_title": "DataNarrative: Automated Data-Driven Storytelling with Visualizations and Texts",
+    "metadata_file": "metadata/14b2a0e83dd6.html"
+  },
+  {
+    "title": "From Data to Story: Towards Automatic Animated Data Video Creation with LLM-based Multi-Agent Systems",
+    "url": "https://ieeexplore.ieee.org/document/10766492",
+    "year": "2024",
+    "venue": "VIS  workshop 2024",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "LightVA: Lightweight Visual Analytics with LLM Agent-Based Task Planning and Execution",
+    "url": "https://ieeexplore.ieee.org/document/10753451",
+    "year": "2024",
+    "venue": "TVCG 2024",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Multimodal DeepResearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework",
+    "url": "https://arxiv.org/abs/2506.02454",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2506.02454"
+    ],
+    "review_folder": null,
+    "discovered_title": "Multimodal DeepResearcher: Generating Text–Chart Interleaved Reports with an Agentic Framework",
+    "metadata_file": "metadata/2506.02454.html"
+  },
+  {
+    "title": "DAgent: A Relational Database-Driven Data Analysis Report Generation Agent",
+    "url": "https://arxiv.org/abs/2503.13269",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2503.13269"
+    ],
+    "review_folder": null,
+    "discovered_title": "DAgent: A Relational Database-Driven Data Analysis Report Generation Agent",
+    "metadata_file": "metadata/2503.13269.html"
+  },
+  {
+    "title": "ChartInsighter: An Approach for Mitigating Hallucination in Time-Series Chart Summary Generation With a Benchmark Dataset",
+    "url": "https://ieeexplore.ieee.org/document/10988687",
+    "year": "2025",
+    "venue": "TVCG 2025",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "ProactiveVA: Proactive Visual Analytics with LLM-Based UI Agent",
+    "url": "https://arxiv.org/abs/2507.18165",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2507.18165"
+    ],
+    "review_folder": null,
+    "discovered_title": "ProactiveVA: Proactive Visual Analytics with LLM-Based UI Agent",
+    "metadata_file": "metadata/2507.18165.html"
+  },
+  {
+    "title": "VOICE: Visual Oracle for Interaction, Conversation, and Explanation",
+    "url": "https://ieeexplore.ieee.org/document/11037292",
+    "year": "2025",
+    "venue": "TVCG 2025",
+    "topic": "Report Generation",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "NLI4VolVis: Natural Language Interaction for Volume Visualization via LLM Multi-Agents and Editable 3D Gaussian Splatting",
+    "url": "https://arxiv.org/abs/2507.12621",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Report Generation",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2507.12621"
+    ],
+    "review_folder": null,
+    "discovered_title": "NLI4VolVis: Natural Language Interaction for Volume Visualization  via LLM Multi-Agents and Editable 3D Gaussian Splatting (VIS'25)",
+    "metadata_file": "metadata/2507.12621.html"
+  },
+  {
+    "title": "DeepEye: A Steerable Self-driving Data Agent System",
+    "url": "https://arxiv.org/abs/2603.28889",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2603.28889"
+    ],
+    "review_folder": null,
+    "discovered_title": "DeepEye: A Steerable Self-driving Data Agent System",
+    "metadata_file": "metadata/2603.28889.html"
+  },
+  {
+    "title": "DeepAnalyze: Agentic Large Language Models for Autonomous Data Science",
+    "url": "https://arxiv.org/abs/2510.16872",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2510.16872"
+    ],
+    "review_folder": null,
+    "discovered_title": "DeepAnalyze: Agentic Large Language Models for Autonomous Data Science",
+    "metadata_file": "metadata/2510.16872.html"
+  },
+  {
+    "title": "DataEvolver: Automatic Data Preparation for Large Language Models through Multi-Level Self-Evolving",
+    "url": "https://arxiv.org/abs/2606.07001",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2606.07001"
+    ],
+    "review_folder": null,
+    "discovered_title": "DataEvolver: Automatic Data Preparation for Large Language Models through Multi-Level Self-Evolving",
+    "metadata_file": "metadata/2606.07001.html"
+  },
+  {
+    "title": "AgenticData: An Agentic Data Analytics System for Heterogeneous Data",
+    "url": "https://arxiv.org/abs/2508.05002",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.05002"
+    ],
+    "review_folder": null,
+    "discovered_title": "AgenticData: A Multi-Agent based Data Analytics System for Heterogeneous Data",
+    "metadata_file": "metadata/2508.05002.html"
+  },
+  {
+    "title": "EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management",
+    "url": "https://arxiv.org/abs/2606.03841",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2606.03841"
+    ],
+    "review_folder": null,
+    "discovered_title": "EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management",
+    "metadata_file": "metadata/2606.03841.html"
+  },
+  {
+    "title": "Scaling Generalist Data-Analytic Agents",
+    "url": "https://arxiv.org/abs/2509.25084",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2509.25084"
+    ],
+    "review_folder": null,
+    "discovered_title": "Scaling Generalist Data-Analytic Agents",
+    "metadata_file": "metadata/2509.25084.html"
+  },
+  {
+    "title": "AOP: Automated and Interactive LLM Pipeline Orchestration for Answering Complex Queries",
+    "url": "https://www.vldb.org/cidrdb/papers/2025/p32-wang.pdf",
+    "year": "2025",
+    "venue": "CIDR 2025",
+    "topic": "Academia Research",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "iDataLake: An LLM-Powered Analytics System on Data Lakes",
+    "url": "http://sites.computer.org/debull/A25mar/p57.pdf",
+    "year": "2025",
+    "venue": "IEEE Data Engineering Bulletin 2025",
+    "topic": "Academia Research",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "SiriusBI: A Comprehensive LLM-Powered Solution for Data Analytics in Business Intelligence",
+    "url": "https://dl.acm.org/doi/10.14778/3750601.3750610",
+    "year": "2025",
+    "venue": "VLDB 2025",
+    "topic": "Academia Research",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "Data Interpreter: An LLM Agent For Data Science",
+    "url": "https://arxiv.org/abs/2402.18679",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "Academia Research",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2402.18679"
+    ],
+    "review_folder": null,
+    "discovered_title": "Data Interpreter: An LLM Agent For Data Science",
+    "metadata_file": "metadata/2402.18679.html"
+  },
+  {
+    "title": "DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces",
+    "url": "https://arxiv.org/abs/2608.03451",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2608.03451"
+    ],
+    "review_folder": null,
+    "discovered_title": "DataSpace: Benchmarking Data Agents for Verifiable Analytics over Heterogeneous Workspaces",
+    "metadata_file": "metadata/2608.03451.html"
+  },
+  {
+    "title": "AgenticDataBench: A Comprehensive Benchmark for Data Agents",
+    "url": "https://arxiv.org/abs/2607.01647",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2607.01647"
+    ],
+    "review_folder": null,
+    "discovered_title": "AgenticDataBench: A Comprehensive Benchmark for Data Agents",
+    "metadata_file": "metadata/2607.01647.html"
+  },
+  {
+    "title": "Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents",
+    "url": "https://arxiv.org/abs/2603.20576",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2603.20576"
+    ],
+    "review_folder": null,
+    "discovered_title": "Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents",
+    "metadata_file": "metadata/2603.20576.html"
+  },
+  {
+    "title": "CODA-BENCH: Can Code Agents Handle Data-Intensive Tasks?",
+    "url": "https://arxiv.org/abs/2606.15300",
+    "year": "2026",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2606.15300"
+    ],
+    "review_folder": null,
+    "discovered_title": "CoDA-Bench: Can Code Agents Handle Data-Intensive Tasks?",
+    "metadata_file": "metadata/2606.15300.html"
+  },
+  {
+    "title": "FDABench: A Benchmark for Data Agents on Analytical Queries over Heterogeneous Data",
+    "url": "https://arxiv.org/abs/2509.02473",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2509.02473"
+    ],
+    "review_folder": null,
+    "discovered_title": "FDABench: A Benchmark for Data Agents on Analytical Queries over Heterogeneous Data",
+    "metadata_file": "metadata/2509.02473.html"
+  },
+  {
+    "title": "DAComp: Benchmarking Data Agents across the Full Data Intelligence Lifecycle",
+    "url": "https://arxiv.org/abs/2512.04324",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2512.04324"
+    ],
+    "review_folder": null,
+    "discovered_title": "DAComp: Benchmarking Data Agents across the Full Data Intelligence Lifecycle",
+    "metadata_file": "metadata/2512.04324.html"
+  },
+  {
+    "title": "KramaBench: A Benchmark for AI Systems on Data-to-Insight Pipelines over Data Lakes",
+    "url": "https://arxiv.org/abs/2506.06541",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2506.06541"
+    ],
+    "review_folder": null,
+    "discovered_title": "KramaBench: A Benchmark for AI Systems on Data-to-Insight Pipelines over Data Lakes",
+    "metadata_file": "metadata/2506.06541.html"
+  },
+  {
+    "title": "DABstep: Data Agent Benchmark for Multi-step Reasoning",
+    "url": "https://arxiv.org/abs/2506.23719",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📦 Data Agent Benchmarks",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2506.23719"
+    ],
+    "review_folder": null,
+    "discovered_title": "DABstep: Data Agent Benchmark for Multi-step Reasoning",
+    "metadata_file": "metadata/2506.23719.html"
+  },
+  {
+    "title": "A Survey of Text-to-SQL in the Era of LLMs: Where are we, and where are we going?",
+    "url": "https://ieeexplore.ieee.org/document/11095853",
+    "year": "2025",
+    "venue": "TKDE 2025",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Natural Language to SQL: State of the Art and Open Problems",
+    "url": "https://www.vldb.org/pvldb/vol18/p5466-luo.pdf",
+    "year": "2025",
+    "venue": "VLDB Tutorial 2025",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "A Survey of LLM $\\times$ DATA",
+    "url": "https://arxiv.org/abs/2505.18458",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2505.18458"
+    ],
+    "review_folder": null,
+    "discovered_title": "A Survey of LLM × DATA",
+    "metadata_file": "metadata/2505.18458.html"
+  },
+  {
+    "title": "LLM/Agent-as-Data-Analyst: A Survey",
+    "url": "https://arxiv.org/abs/2509.23988",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2509.23988"
+    ],
+    "review_folder": null,
+    "discovered_title": "LLM/Agent-as-Data-Analyst: A Survey",
+    "metadata_file": "metadata/2509.23988.html"
+  },
+  {
+    "title": "Large Language Model-based Data Science Agent: A Survey",
+    "url": "https://arxiv.org/abs/2508.02744",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2508.02744"
+    ],
+    "review_folder": null,
+    "discovered_title": "Large Language Model-based Data Science Agent: A Survey",
+    "metadata_file": "metadata/2508.02744.html"
+  },
+  {
+    "title": "LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, and Future Directions",
+    "url": "https://arxiv.org/abs/2510.04023",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2510.04023"
+    ],
+    "review_folder": null,
+    "discovered_title": "LLM-Based Data Science Agents: A Survey of Capabilities, Challenges, and Future Directions",
+    "metadata_file": "metadata/2510.04023.html"
+  },
+  {
+    "title": "Large Language Models for Data Science: A Survey",
+    "url": "https://rgdoi.net/10.13140/RG.2.2.14003.75042",
+    "year": "2025",
+    "venue": "arXiv 2025",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "A Survey on Large Language Model-based Agents for Statistics and Data Science",
+    "url": "https://arxiv.org/abs/2412.14222",
+    "year": "2024",
+    "venue": "arXiv",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2412.14222"
+    ],
+    "review_folder": null,
+    "discovered_title": "A Survey on Large Language Model-based Agents for Statistics and Data Science",
+    "metadata_file": "metadata/2412.14222.html"
+  },
+  {
+    "title": "Large Language Models for Data Discovery and Integration: Challenges and Opportunities",
+    "url": "http://sites.computer.org/debull/A25mar/p3.pdf",
+    "year": "2025",
+    "venue": "IEEE Data Eng. Bull. 2025",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Data+AI: LLM4Data and Data4LLM",
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3722212.3725641",
+    "year": "2025",
+    "venue": "SIGMOD Tutorial 2025",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "LLM for Data Management",
+    "url": "https://www.vldb.org/pvldb/vol17/p4213-li.pdf",
+    "year": "2024",
+    "venue": "VLDB Tutorial 2024",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "Large Language Models for Data Annotation and Synthesis: A Survey",
+    "url": "https://aclanthology.org/2024.emnlp-main.54.pdf",
+    "year": "2024",
+    "venue": "ACL 2024",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://aclanthology.org/2024.emnlp-main.54/"
+    ],
+    "review_folder": null,
+    "discovered_title": "Large Language Models for Data Annotation and Synthesis: A Survey",
+    "metadata_file": "metadata/0f956c3256b4.html"
+  },
+  {
+    "title": "Data Management for Machine Learning: A Survey",
+    "url": "https://ieeexplore.ieee.org/document/9705125",
+    "year": "2023",
+    "venue": "TKDE 2023",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null
+  },
+  {
+    "title": "LLM As DBA",
+    "url": "https://arxiv.org/abs/2308.05481",
+    "year": "2023",
+    "venue": "arXiv",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2308.05481"
+    ],
+    "review_folder": null,
+    "discovered_title": "LLM As DBA",
+    "metadata_file": "metadata/2308.05481.html"
+  },
+  {
+    "title": "Demystifying Artificial Intelligence for Data Preparation",
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3555041.3589406",
+    "year": "2023",
+    "venue": "SIGMOD Tutorial 2023",
+    "topic": "📖 Surveys and Tutorials",
+    "reading_status": "discovered",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "review_folder": null,
+    "verification_error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+    "url": "https://arxiv.org/abs/2510.23587",
+    "year": "2025",
+    "venue": "arXiv",
+    "topic": "Surveys",
+    "reading_status": "metadata_verified",
+    "evidence": [
+      "https://github.com/HKUSTDial/awesome-data-agents",
+      "https://arxiv.org/abs/2510.23587"
+    ],
+    "review_folder": null,
+    "discovered_title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+    "metadata_file": "metadata/2510.23587.html"
+  }
+]

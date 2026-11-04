@@ -1,0 +1,5 @@
+# 具体用例
+
+附录C学校流水线先从schools取不同City，在城市表上做语义过滤判断是否属于硅谷，再回表保留学校，按Longitude绝对值降序取1行，返回GSoffered。由此可见传入语义算子的是城市列，不是所有学校字段。
+
+帖子排名先按ViewCount取5篇，再按Title的技术程度语义排序。这里5是候选/结果限制。评论总结先按Title定位post，再按Id=PostId连接comments，传入Text等字段进行语义聚合。这些可直接指导逐query输入列的记录。

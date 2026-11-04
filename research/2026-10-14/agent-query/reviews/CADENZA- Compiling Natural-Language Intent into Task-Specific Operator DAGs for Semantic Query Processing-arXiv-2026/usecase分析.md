@@ -1,0 +1,9 @@
+# 具体查询与输入列
+
+附录J Wildlife Q1统计斑马照片：ImageData的Image列为语义输入，计数即可；没有额外环境证据需求。Q3要按城市计数，因此还需City。Q10按City和StationID分组。Q5/Q6/Q8/Q9涉及音频时，Audio列也加入输入；图片数不能代替录音数。
+
+Movie Q7是同一电影、不同reviewId的异情感评论对，无LIMIT。输入为两份Reviews别名的id/reviewId/reviewText，关联键和排除自身条件都要保留；模型处理的是评论文本，输出是匹配对。
+
+附录F同品牌产品连接比较三种证据路径：先拆JSON描述再抽取品牌；先图像区域对齐再抽取品牌；文本提出品牌候选后以图像验证。ProductDescriptors是包含多种键的长JSON字符串，不是已经整理好的brand列，不能在输入schema里凭空添加已知品牌。
+
+这些均为CADENZA论文的query版本，应与SemBench仓库的原始query通过明确来源关系连接，而不是把作者简写代码充当原仓库原文。

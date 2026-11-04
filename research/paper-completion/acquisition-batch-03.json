@@ -1,0 +1,49 @@
+[
+  {
+    "id": "veterans",
+    "source_url": "https://ceur-ws.org/Vol-2385/paper1.pdf",
+    "fulltext": "research/paper-completion/papers/veterans.pdf",
+    "sha256": "1144ca28c0bd71c651ae442a98eabc81551c918fb95eeccee477157aafe5c4d9",
+    "pages": 10,
+    "status": "REJECTED_IDENTITY_MISMATCH",
+    "retrieved_at": "2026-10-14T14:25:38.484188+08:00",
+    "actual_title": "Automatic Classification of Rhetorical Roles for Sentences: Comparing Rule-Based Scripts with Machine Learning",
+    "reason": "Existing catalog URL resolves to 2019 paper, not requested Semantic Types ICAIL 2017 paper."
+  },
+  {
+    "id": "codiesp",
+    "source_url": "https://ceur-ws.org/Vol-2696/paper_263.pdf",
+    "fulltext": "research/paper-completion/papers/codiesp.pdf",
+    "sha256": "122282d185cf1ad946b571b9d8e113354e86662bbd25a244071dde1670989e57",
+    "pages": 29,
+    "status": "FULLTEXT_ACQUIRED",
+    "retrieved_at": "2026-10-14T14:25:38.842720+08:00"
+  },
+  {
+    "id": "drugprot",
+    "source_url": "https://upcommons.upc.edu/bitstreams/4a4e2dc2-df18-4bcd-893a-ffeadc9bf2b3/download",
+    "error": "HTTP Error 418: I'm a teapot"
+  },
+  {
+    "id": "veterans-semantic-types",
+    "source_url": "https://raw.githubusercontent.com/LLTLab/VetClaims/master/WalkerEtAl-ConnectivesSentenceRoles-ICAIL2017-PrePubCopy.pdf",
+    "retrieved_at": "2026-10-14T14:29:12.661849+08:00",
+    "fulltext": "research/paper-completion/papers/veterans-semantic-types.pdf",
+    "sha256": "245487b177f044e0944806f2eb3d7a295eab30c3c179454577508effde0e37e3",
+    "status": "FULLTEXT_ACQUIRED",
+    "pages": 10
+  },
+  {
+    "id": "drugprot",
+    "source_url": "https://biocreative.bioinformatics.udel.edu/media/store/files/2021/Track1_pos_1_BC7_overview.pdf",
+    "retrieved_at": "2026-10-14T14:29:13.324804+08:00",
+    "status": "ACQUISITION_FAILED",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "veterans-semantic-types",
+    "source_url": "https://sites.hofstra.edu/vern-walker/wp-content/uploads/sites/69/2019/12/WalkerEtAl-ConnectivesSentenceRoles-ICAIL2017-PrePubCopy.pdf",
+    "status": "ACQUISITION_FAILED",
+    "error": "HTTP 403 Forbidden"
+  }
+]
