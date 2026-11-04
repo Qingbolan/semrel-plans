@@ -35,8 +35,9 @@ STATIC_GUIDE = '''# SemRel 图册：静态部署
 
 
 class ReleaseBuilder:
-    def __init__(self, root, checksums=True, static=False):
+    def __init__(self, root, checksums=True, static=False, exclude=()):
         self.root = root.resolve()
+        self.exclude = tuple(exclude)
         self.checksums = checksums
         self.static = static
         self.policy = HostingPolicy(self.root, 8765)
@@ -46,6 +47,8 @@ class ReleaseBuilder:
         self.sources = {}
         rows = []
         for url, path in self.policy.published():
+            if url.startswith(self.exclude):
+                continue
             self.sources[url] = path
             rows.append({'path': url, 'bytes': path.stat().st_size, **({'sha256': digest(path)} if self.checksums else {})})
         return rows
@@ -75,7 +78,7 @@ class ReleaseBuilder:
         required = {'index.html', 'migration.html', 'assets/plans.js', 'exports/eal/manifest.json'}
         required.update(q['task_path'] for q in catalog['queries'])
         required.update(row['path'] for row in json.loads((self.root / 'exports/eal/manifest.json').read_text()))
-        missing = sorted(required - published)
+        missing = sorted(r for r in required - published if not r.startswith(self.exclude))
         if missing:
             raise ValueError(f'Missing required release files: {missing[:20]}')
         manifest = {'schema_version': 1, 'created_at': datetime.now(timezone.utc).isoformat(), 'query_count': catalog['count'], 'total_bytes': sum(r['bytes'] for r in rows), 'files': rows}
@@ -106,5 +109,6 @@ if __name__ == '__main__':
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--no-checksums', action='store_true', help='skip SHA256 of every file and of site.tar (much faster)')
     parser.add_argument('--static', action='store_true', help='package for plain nginx hosting (no application server)')
+    parser.add_argument('--exclude', action='append', default=[], help='URL path prefix to leave out, e.g. data/source-inputs/ (repeatable)')
     args = parser.parse_args()
-    ReleaseBuilder(ROOT, checksums=not args.no_checksums, static=args.static).prepare(args.output.resolve())
+    ReleaseBuilder(ROOT, checksums=not args.no_checksums, static=args.static, exclude=args.exclude).prepare(args.output.resolve())
